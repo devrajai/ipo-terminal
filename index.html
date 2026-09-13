@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5.0"><meta http-equiv="refresh" content="900"><title>IPO Terminal - Auto</title><style>
+:root{--bg:#0a0e17;--card:#131a2a;--card2:#1a2333;--bd:#2a3a5c;--tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;--gn:#22c55e;--rd:#ef4444;--yl:#eab308;--bl:#3b82f6;--or:#f97316;--pp:#a855f7}
+.light{--bg:#f0f4f8;--card:#ffffff;--card2:#f8fafc;--bd:#e2e8f0;--tx:#0f172a;--tx2:#475569;--tx3:#94a3b8;--gn:#16a34a;--rd:#dc2626;--yl:#ca8a04;--bl:#2563eb;--or:#ea580c;--pp:#9333ea}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px;line-height:1.5;padding:8px}
+.hdr{background:var(--card);border-radius:12px;padding:12px 16px;margin-bottom:8px;border:1px solid var(--bd)}
+.hdr h1{font-size:18px;font-weight:800;background:linear-gradient(90deg,var(--gn),var(--bl),var(--pp));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.tm{font-size:10px;color:var(--tx2);margin-top:3px;line-height:1.4}
+.hbtns{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.hb{padding:7px 12px;border-radius:20px;border:1px solid var(--bd);background:var(--card2);color:var(--tx2);font-size:12px;font-weight:600;cursor:pointer;transition:all .2s;white-space:nowrap}
+.hb:hover{border-color:var(--bl);color:var(--bl)}
+.hb.active{background:linear-gradient(135deg,var(--bl),var(--pp));color:#fff;border-color:transparent}
+.theme-btn{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;border:1px solid var(--bd);background:var(--card2);color:var(--tx);font-size:14px;cursor:pointer;vertical-align:middle;margin-left:4px;padding:0;flex-shrink:0}
+.theme-btn:hover{border-color:var(--bl)}
+.panel{display:none;background:var(--card);border:1px solid var(--bd);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.panel.show{display:block}
+.panel-title{background:var(--card2);padding:10px 14px;font-weight:700;font-size:14px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center}
+.close-x{background:var(--rd);color:#fff;border:none;padding:4px 12px;border-radius:6px;font-size:11px;cursor:pointer;font-weight:600}
+.close-x:hover{opacity:.8}
+.ipo-table{width:100%;border-collapse:collapse;font-size:11px}
+.ipo-table th{background:var(--card2);padding:8px 6px;text-align:left;font-weight:700;color:var(--tx2);border-bottom:2px solid var(--bd);position:sticky;top:0;white-space:nowrap}
+.ipo-table td{padding:6px;border-bottom:1px solid var(--bd);vertical-align:top}
+.ipo-table tr:hover{background:var(--card2)}
+.gn{color:var(--gn)}.rd{color:var(--rd)}.yl{color:var(--yl)}.bl{color:var(--bl)}.tx3{color:var(--tx3)}
+.badge{padding:2px 8px;border-radius:10px;font-size:9px;font-weight:700}
+.badge.mb{background:rgba(59,130,246,.2);color:var(--bl)}
+.badge.sme{background:rgba(168,85,247,.2);color:var(--pp)}
+.badge.fut{background:rgba(249,115,22,.2);color:var(--or)}
+.news-list{padding:8px}
+.news-item{background:var(--card2);border-radius:10px;padding:10px;margin-bottom:8px;border-left:4px solid var(--bl)}
+.news-date{font-size:10px;color:var(--tx3);font-weight:600}
+.news-tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700;margin:4px 0}
+.news-tag.rd{background:rgba(239,68,68,.2);color:var(--rd)}
+.news-tag.gn{background:rgba(34,197,94,.2);color:var(--gn)}
+.news-tag.yl{background:rgba(234,179,8,.2);color:var(--yl)}
+.news-tag.bl{background:rgba(59,130,246,.2);color:var(--bl)}
+.news-tag.pp{background:rgba(168,85,247,.2);color:var(--pp)}
+.news-title{font-size:13px;font-weight:600;margin:4px 0}
+.news-source{font-size:10px;color:var(--tx3)}
+.news-link{color:var(--bl);text-decoration:none;font-weight:600}
+.news-link:hover{text-decoration:underline}
+.dl-btn{display:inline-block;padding:4px 10px;border-radius:6px;background:rgba(34,197,94,.2);color:var(--gn);text-decoration:none;font-size:11px;font-weight:700}
+.dl-btn:hover{background:rgba(34,197,94,.3)}
+.kpi-row{display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.kpi-card{flex:1;min-width:80px;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:8px;text-align:center}
+.kpi-label{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:.5px}
+.kpi-value{font-size:16px;font-weight:800;margin-top:2px}
+.live-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gn);margin-right:3px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.auto-badge{font-size:9px;padding:2px 6px;border-radius:4px;background:rgba(34,197,94,.2);color:var(--gn);font-weight:700;margin-left:6px}
+.score-bar{height:4px;border-radius:2px;margin-top:2px}
+</style></head><body><div class="hdr"><div><h1>IPO TERMINAL - AUTO</h1><div class="tm" id="liveClock">Loading...</div><div style="display:flex;align-items:center;gap:6px;margin-top:2px"><span id="marketStatus" style="font-size:9px;font-weight:700">Market</span><span id="dataStatus" style="font-size:9px;color:var(--tx3);font-weight:600">Data: loading</span><span style="font-size:9px;color:var(--gn);font-weight:700"><span class="live-dot"></span>AUTO</span><button class="theme-btn" id="themeToggle" onclick="toggleTheme()">&#127769;</button></div><div class="hbtns"><button class="hb" id="b-open" onclick="tg('p-open',this)">Open IPOs</button><button class="hb" id="b-upc" onclick="tg('p-upc',this)">Upcoming</button><button class="hb" id="b-pipe" onclick="tg('p-pipe',this)">DRHP Filed</button><button class="hb" id="b-list" onclick="tg('p-list',this)">Listed G/L</button><button class="hb" id="b-comp" onclick="tg('p-comp',this)">Comparison</button><button class="hb" id="b-allot" onclick="tg('p-allot',this)">Allotment</button><button class="hb" id="b-news" onclick="tg('p-news',this)">IPO News</button><button class="hb" id="b-doc" onclick="tg('p-doc',this)">RHP/DRHP</button><button class="hb" id="b-tips" onclick="tg('p-tips',this)">Tips & Tricks</button><button class="hb" id="b-brk" onclick="tg('p-brk',this)">Brokers</button><button class="hb" id="b-gloss" onclick="tg('p-gloss',this)">Glossary</button><button class="hb" id="b-why" onclick="tg('p-why',this)">Why Apply</button></div></div></div><div class="kpi-row"><div class="kpi-card"><div class="kpi-label">Open Now</div><div class="kpi-value" style="color:var(--gn)" id="kpi-open">—</div></div><div class="kpi-card"><div class="kpi-label">Upcoming</div><div class="kpi-value" style="color:var(--bl)" id="kpi-upc">—</div></div><div class="kpi-card"><div class="kpi-label">Closed</div><div class="kpi-value" style="color:var(--or)" id="kpi-closed">—</div></div></div><div class="panel" id="p-open"><div class="panel-title">Open IPOs <span class="auto-badge"><span class="live-dot"></span>AUTO</span><button class="close-x" onclick="cl('p-open','b-open')">Close</button></div><div id="open-container"></div></div><div class="panel" id="p-upc"><div class="panel-title">Upcoming IPOs<button class="close-x" onclick="cl('p-upc','b-upc')">Close</button></div><div id="upc-container"></div></div><div class="panel" id="p-pipe"><div class="panel-title">DRHP Filed - Future Pipeline<button class="close-x" onclick="cl('p-pipe','b-pipe')">Close</button></div><div id="pipe-container"></div></div><div class="panel" id="p-allot"><div class="panel-title">IPO Allotment Check<button class="close-x" onclick="cl('p-allot','b-allot')">Close</button></div><div id="allot-container"></div></div><div class="panel" id="p-list"><div class="panel-title">Recently Listed - Gain/Loss<button class="close-x" onclick="cl('p-list','b-list')">Close</button></div><div id="list-container"></div></div><div class="panel" id="p-comp"><div class="panel-title">IPO Comparison - Fundamentals<button class="close-x" onclick="cl('p-comp','b-comp')">Close</button></div><div id="comp-container"></div></div><div class="panel" id="p-news"><div class="panel-title">IPO News & Updates<button class="close-x" onclick="cl('p-news','b-news')">Close</button></div><div id="news-container"></div></div><div class="panel" id="p-doc"><div class="panel-title">RHP / DRHP Documents<button class="close-x" onclick="cl('p-doc','b-doc')">Close</button></div><div id="doc-container"></div></div><div class="panel" id="p-tips"><div class="panel-title">Tips, Tricks & Pro Strategies<button class="close-x" onclick="cl('p-tips','b-tips')">Close</button></div>
+<div class="news-list">
+<div class="news-item" style="border-left-color:var(--gn)"><b style="color:var(--gn);font-size:13px">&#9989; DO's</b><ul style="margin:6px 0 0 16px;font-size:11px;line-height:1.8">
+<li>Read the DRHP/RHP - business overview, risk factors, financials</li>
+<li>Check revenue growth - look for 15-25%+ YoY growth over 3 years</li>
+<li>Verify profitability - profitable in 2 of last 3 years</li>
+<li>Compare P/E with listed peers - avoid if 2x peers with no justification</li>
+<li>Check ROE & ROCE - both above 15% for quality companies</li>
+<li>Examine debt - D/E below 0.5 is comfortable, above 1 is risky</li>
+<li>Verify cash flow - operating CF should be close to PAT</li>
+<li>Check promoter holding - above 50% post-IPO shows skin in game</li>
+<li>Use cut-off price - maximizes allotment chances</li>
+<li>Approve UPI mandate immediately - within 30 min</li>
+<li>Apply 24-48 hrs before close - avoid last-minute congestion</li>
+<li>Use family accounts - different PANs = more lottery chances</li>
+</ul></div>
+<div class="news-item" style="border-left-color:var(--rd)"><b style="color:var(--rd);font-size:13px">&#10060; DON'Ts</b><ul style="margin:6px 0 0 16px;font-size:11px;line-height:1.8">
+<li>Don't rely only on GMP - unofficial, unregulated, can be wrong</li>
+<li>Don't apply for every IPO blindly - subscription != value</li>
+<li>Don't bid below cut-off - reduces allotment probability</li>
+<li>Don't use third-party UPI ID - PAN must match demat holder</li>
+<li>Don't apply multiple times with same PAN - all rejected</li>
+<li>Don't ignore valuation - good company at wrong price = bad investment</li>
+<li>Don't confuse hype with quality - social media buzz != fundamentals</li>
+<li>Don't invest money you need in 7-10 days - funds stay blocked</li>
+<li>Don't skip risk factors - they contain the most important warnings</li>
+<li>Don't forget 20% STCG tax - selling within 12 months = 20% tax</li>
+</ul></div>
+<div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--bl);font-size:13px">&#128161; PRO TIPS</b><ul style="margin:6px 0 0 16px;font-size:11px;line-height:1.8">
+<li>Multiple family Demat accounts - multiply allotment chances</li>
+<li>GMP trend matters more than absolute GMP - rising = strengthening</li>
+<li>Check anchor investor quality - which MFs/institutions invested</li>
+<li>Sell on listing day for momentum plays - book profits if GMP high</li>
+<li>Hold quality IPOs 1+ year for LTCG (12.5% tax, Rs 1.25L exempt)</li>
+<li>Pre-apply feature - apply before IPO officially opens</li>
+<li>Check HNI subscription - if >10x, expect strong listing</li>
+<li>Market sentiment check - bear markets = even good IPOs list at discount</li>
+<li>Use ASBA for large bids - UPI cap is Rs 5L</li>
+<li>Watch promoter selling - large OFS = question why they're exiting</li>
+</ul></div>
+<div class="news-item" style="border-left-color:var(--yl)"><b style="color:var(--yl);font-size:13px">&#9888; RED FLAGS - AVOID</b><ul style="margin:6px 0 0 16px;font-size:11px;line-height:1.8">
+<li>Revenue growth below 5% or declining</li>
+<li>Profits but negative operating cash flow consistently</li>
+<li>P/E 2x+ above peers with no justification</li>
+<li>Promoter holding post-IPO below 30%</li>
+<li>Large OFS (>80%) - promoters cashing out</li>
+<li>D/E above 1.0 with IPO proceeds going to debt repayment</li>
+<li>ROE and ROCE both below 10%</li>
+<li>Heavy related-party transactions with promoter entities</li>
+<li>GMP falling rapidly during subscription period</li>
+</ul></div>
+</div></div><div class="panel" id="p-brk"><div class="panel-title">Where to Apply - Broker Comparison<button class="close-x" onclick="cl('p-brk','b-brk')">Close</button></div><div style="overflow-x:auto"><table class="ipo-table"><thead><tr><th>Broker</th><th>Charges</th><th>AMC</th><th>UPI</th><th>SME</th><th>Rating</th><th>Speed</th><th>Pros</th><th>Cons</th></tr></thead><tbody><tr><td><b>Zerodha (Kite)</b></td><td>Free</td><td>₹300/yr</td><td class="gn">Yes</td><td class="gn">Yes</td><td>4.3/5</td><td>1-2 min</td><td style="font-size:10px">Highly reliable, stable during peak load</td><td style="font-size:10px">Basic research, AMC</td></tr><tr><td><b>Groww</b></td><td>Free</td><td>₹0</td><td class="gn">Yes</td><td class="gn">Yes</td><td>4.5/5</td><td>1-3 min</td><td style="font-size:10px">Zero AMC, beginner-friendly, best notifications</td><td style="font-size:10px">Limited tools</td></tr><tr><td><b>Upstox</b></td><td>Free</td><td>₹300/yr</td><td class="gn">Yes</td><td class="gn">Yes</td><td>4.3/5</td><td>1-2 min</td><td style="font-size:10px">Smooth UPI flow, good data depth</td><td style="font-size:10px">Occasional issues</td></tr><tr><td><b>Angel One</b></td><td>Free</td><td>₹0</td><td class="gn">Yes</td><td class="gn">Yes</td><td>4.4/5</td><td>1-2 min</td><td style="font-size:10px">ARQ research, no delivery charges</td><td style="font-size:10px">Promotional calls</td></tr><tr><td><b>Paytm Money</b></td><td>Free</td><td>₹0</td><td class="gn">Yes</td><td class="rd">No</td><td>4.2/5</td><td>1-2 min</td><td style="font-size:10px">Zero AMC, simple interface</td><td style="font-size:10px">SME not supported</td></tr><tr><td><b>Bank ASBA</b></td><td>Free</td><td>N/A</td><td class="rd">No</td><td class="gn">Yes</td><td>—</td><td>5-10 min</td><td style="font-size:10px">No UPI cap, no app dependency</td><td style="font-size:10px">More steps, slower</td></tr></tbody></table></div><div style="padding:10px;font-size:11px;color:var(--tx3)"><b style="color:var(--gn)">Beginners:</b> Groww &middot; <b style="color:var(--gn)">Reliability:</b> Zerodha &middot; <b style="color:var(--gn)">Large Bids:</b> Bank ASBA &middot; All brokers charge ZERO for IPO application. Allotment is by lottery - broker does NOT affect chances.</div></div><div class="panel" id="p-gloss"><div class="panel-title">IPO Glossary<button class="close-x" onclick="cl('p-gloss','b-gloss')">Close</button></div><div class="news-list"><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">GMP</b><div style="font-size:11px;margin-top:4px">Grey Market Premium - unofficial price at which IPO shares trade before listing. Unregulated, not guaranteed.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">P/E Ratio</b><div style="font-size:11px;margin-top:4px">Price-to-Earnings ratio. Compare with listed peers to judge if IPO is expensive.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">ROE</b><div style="font-size:11px;margin-top:4px">Return on Equity. Net profit / shareholder&#x27;s equity. Above 15% is good.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">ROCE</b><div style="font-size:11px;margin-top:4px">Return on Capital Employed. Above 15% is good.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">EBITDA</b><div style="font-size:11px;margin-top:4px">Earnings Before Interest, Tax, Depreciation &amp; Amortisation.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">D/E Ratio</b><div style="font-size:11px;margin-top:4px">Debt-to-Equity. Below 0.5 is comfortable, above 1.0 is risky.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">Fresh Issue</b><div style="font-size:11px;margin-top:4px">Company issues NEW shares. Money goes TO the company.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">OFS</b><div style="font-size:11px;margin-top:4px">Offer for Sale. Existing shareholders sell. Company gets NOTHING.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">Lot Size</b><div style="font-size:11px;margin-top:4px">Minimum shares you must apply for.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">Cut-off Price</b><div style="font-size:11px;margin-top:4px">Agree to buy at final price. Always choose for retail.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">ASBA</b><div style="font-size:11px;margin-top:4px">Application Supported by Blocked Amount. Money stays in bank, blocked.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">DRHP</b><div style="font-size:11px;margin-top:4px">Draft Red Herring Prospectus. Preliminary document filed with SEBI.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">RHP</b><div style="font-size:11px;margin-top:4px">Red Herring Prospectus. Final document with price band, dates.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">STCG Tax</b><div style="font-size:11px;margin-top:4px">Selling within 12 months = 20% tax on profit.</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">LTCG Tax</b><div style="font-size:11px;margin-top:4px">Holding 12+ months = 12.5% tax (Rs 1.25L exempt).</div></div><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--gn);font-size:12px">Anchor Investors</b><div style="font-size:11px;margin-top:4px">Institutional investors who invest Rs 10+ crore before IPO opens.</div></div></div></div><div class="panel" id="p-why"><div class="panel-title">Why Apply This IPO? - Auto Analysis<button class="close-x" onclick="cl('p-why','b-why')">Close</button></div><div id="why-container"></div></div><script>
+// === ALL IPO DATA EMBEDDED (no API needed) ===
+var ALL_IPOS = [{"name": "Karamtara Engineering", "type": "Mainboard", "price": "₹241-254", "lot": 59, "size": "₹875 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "1.84x", "gmp": "₹75", "gmp_pct": "+29.5%", "est_list": "₹329", "sector": "Renewable Energy Equipment", "fresh": "77%", "ofs": "23%", "pe": "—", "roe": "18.5%", "roce": "21.3%", "rev": "₹612 Cr", "pat": "₹78 Cr", "ebitda": "₹115 Cr", "de": "0.15", "growth": "28%", "prom": "52%"}, {"name": "Rentomojo", "type": "Mainboard", "price": "₹384-404", "lot": 37, "size": "₹1,256 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "—", "gmp": "₹130", "gmp_pct": "+32.2%", "est_list": "₹534", "sector": "Furniture Rental", "fresh": "67%", "ofs": "33%", "pe": "45x", "roe": "12.8%", "roce": "15.2%", "rev": "₹445 Cr", "pat": "₹22 Cr", "ebitda": "₹95 Cr", "de": "0.38", "growth": "35%", "prom": "38%"}, {"name": "Steamhouse India", "type": "Mainboard", "price": "₹77-81", "lot": 185, "size": "₹414 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "0.42x", "gmp": "₹20", "gmp_pct": "+24.7%", "est_list": "₹101", "sector": "Industrial Steam", "fresh": "85%", "ofs": "15%", "pe": "38x", "roe": "11.2%", "roce": "14.8%", "rev": "₹298 Cr", "pat": "₹18 Cr", "ebitda": "₹35 Cr", "de": "0.35", "growth": "15%", "prom": "45%"}, {"name": "Asset Reconstruction (ARCIL)", "type": "Mainboard", "price": "₹132-139", "lot": 107, "size": "₹733 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "—", "gmp": "₹30", "gmp_pct": "+21.6%", "est_list": "₹169", "sector": "Financial Services", "fresh": "0%", "ofs": "100%", "pe": "65x", "roe": "6.2%", "roce": "8.8%", "rev": "₹180 Cr", "pat": "₹5 Cr", "ebitda": "₹12 Cr", "de": "0.85", "growth": "5%", "prom": "35%"}, {"name": "LCC Projects", "type": "Mainboard", "price": "₹139-146", "lot": 102, "size": "₹427 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "1.32x", "gmp": "₹45", "gmp_pct": "+30.8%", "est_list": "₹191", "sector": "Construction", "fresh": "60%", "ofs": "40%", "pe": "30x", "roe": "16.8%", "roce": "19.5%", "rev": "₹340 Cr", "pat": "₹32 Cr", "ebitda": "₹52 Cr", "de": "0.22", "growth": "25%", "prom": "50%"}, {"name": "Manipal Payment & Identity", "type": "Mainboard", "price": "₹322-339", "lot": 44, "size": "₹805 Cr", "open": "09/09/26", "close": "11/09/26", "listing": "17/09/26", "sub": "0.17x", "gmp": "₹8", "gmp_pct": "+2.4%", "est_list": "₹347", "sector": "Payment Solutions", "fresh": "40%", "ofs": "60%", "pe": "52x", "roe": "8.5%", "roce": "11.2%", "rev": "₹225 Cr", "pat": "₹8 Cr", "ebitda": "₹20 Cr", "de": "0.08", "growth": "12%", "prom": "42%"}, {"name": "Kanohar Electricals", "type": "Mainboard", "price": "₹601-632", "lot": 23, "size": "₹1,056 Cr", "open": "08/09/26", "close": "10/09/26", "listing": "16/09/26", "sub": "10.22x", "gmp": "₹223", "gmp_pct": "+35.3%", "est_list": "₹855", "sector": "Electric Equipments", "fresh": "28%", "ofs": "72%", "pe": "28x", "roe": "22.1%", "roce": "25.6%", "rev": "₹845 Cr", "pat": "₹70 Cr", "ebitda": "₹120 Cr", "de": "0.10", "growth": "18%", "prom": "55%"}, {"name": "Glass Wall Systems (India)", "type": "Mainboard", "price": "₹172-182", "lot": 82, "size": "₹428 Cr", "open": "08/09/26", "close": "10/09/26", "listing": "16/09/26", "sub": "10.67x", "gmp": "₹65", "gmp_pct": "+35.7%", "est_list": "₹247", "sector": "Construction", "fresh": "14%", "ofs": "86%", "pe": "24x", "roe": "19.2%", "roce": "22.8%", "rev": "₹520 Cr", "pat": "₹48 Cr", "ebitda": "₹72 Cr", "de": "0.12", "growth": "26%", "prom": "58%"}, {"name": "Prasol Chemicals", "type": "Mainboard", "price": "₹643-676", "lot": 22, "size": "₹500 Cr", "open": "08/09/26", "close": "10/09/26", "listing": "16/09/26", "sub": "0.76x", "gmp": "₹0", "gmp_pct": "0%", "est_list": "₹676", "sector": "Chemicals", "fresh": "16%", "ofs": "84%", "pe": "35x", "roe": "9.8%", "roce": "12.5%", "rev": "₹195 Cr", "pat": "₹12 Cr", "ebitda": "₹28 Cr", "de": "0.28", "growth": "8%", "prom": "48%"}, {"name": "Pranav Constructions", "type": "Mainboard", "price": "₹118-124", "lot": 120, "size": "₹351 Cr", "open": "07/09/26", "close": "09/09/26", "listing": "15/09/26", "sub": "18.20x", "gmp": "₹41", "gmp_pct": "+33.1%", "est_list": "₹165", "sector": "Construction", "fresh": "57%", "ofs": "43%", "pe": "32x", "roe": "15.4%", "roce": "18.2%", "rev": "₹285 Cr", "pat": "₹28 Cr", "ebitda": "₹45 Cr", "de": "0.25", "growth": "22%", "prom": "48%"}, {"name": "Apana Logistics", "type": "BSE SME", "price": "₹60", "lot": 2000, "size": "₹34 Cr", "open": "07/09/26", "close": "09/09/26", "listing": "15/09/26", "sub": "0.58x", "gmp": "₹7.5", "gmp_pct": "+12.5%", "est_list": "₹68", "sector": "Logistics", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹45 Cr", "pat": "₹3 Cr", "ebitda": "₹6 Cr", "de": "0.20", "growth": "18%", "prom": "60%"}, {"name": "Qualiance International", "type": "BSE SME", "price": "₹120-127", "lot": 1000, "size": "₹45 Cr", "open": "04/09/26", "close": "08/09/26", "listing": "11/09/26", "sub": "426.78x", "gmp": "₹65", "gmp_pct": "+51.2%", "est_list": "₹192", "sector": "Services", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹28 Cr", "pat": "₹2 Cr", "ebitda": "₹4 Cr", "de": "0.10", "growth": "30%", "prom": "65%"}, {"name": "Maharaja & Speedex India", "type": "BSE SME", "price": "₹177-186", "lot": 600, "size": "₹80 Cr", "open": "10/09/26", "close": "15/09/26", "listing": "18/09/26", "sub": "—", "gmp": "₹30", "gmp_pct": "+16.1%", "est_list": "₹216", "sector": "Textiles", "fresh": "80%", "ofs": "20%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹95 Cr", "pat": "₹7 Cr", "ebitda": "₹12 Cr", "de": "0.30", "growth": "20%", "prom": "55%"}, {"name": "Raksan Transformers", "type": "BSE SME", "price": "₹258-273", "lot": 400, "size": "₹151 Cr", "open": "10/09/26", "close": "15/09/26", "listing": "18/09/26", "sub": "—", "gmp": "₹25", "gmp_pct": "+9.2%", "est_list": "₹298", "sector": "Transformers", "fresh": "80%", "ofs": "20%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹180 Cr", "pat": "₹12 Cr", "ebitda": "₹18 Cr", "de": "0.25", "growth": "15%", "prom": "58%"}, {"name": "Panchatv Bharat", "type": "BSE SME", "price": "₹140", "lot": 1000, "size": "₹25 Cr", "open": "10/09/26", "close": "15/09/26", "listing": "18/09/26", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "FMCG", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹15 Cr", "pat": "₹1 Cr", "ebitda": "₹2 Cr", "de": "0.15", "growth": "10%", "prom": "62%"}, {"name": "Om Galaxy", "type": "BSE SME", "price": "₹85-90", "lot": 1600, "size": "₹105 Cr", "open": "10/09/26", "close": "15/09/26", "listing": "18/09/26", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Chemicals", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹65 Cr", "pat": "₹5 Cr", "ebitda": "₹8 Cr", "de": "0.18", "growth": "12%", "prom": "60%"}, {"name": "Veegaland Developers", "type": "Mainboard", "price": "₹130-140", "lot": 107, "size": "₹210 Cr", "open": "10/09/26", "close": "15/09/26", "listing": "—", "sub": "—", "gmp": "₹30", "gmp_pct": "+21.4%", "est_list": "₹170", "sector": "Real Estate", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹320 Cr", "pat": "₹25 Cr", "ebitda": "₹40 Cr", "de": "0.40", "growth": "20%", "prom": "70%"}, {"name": "Manika Plastech", "type": "Mainboard", "price": "₹40-43", "lot": 348, "size": "₹126 Cr", "open": "11/09/26", "close": "16/09/26", "listing": "—", "sub": "—", "gmp": "₹17", "gmp_pct": "+39.5%", "est_list": "₹60", "sector": "Plastics", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹85 Cr", "pat": "₹6 Cr", "ebitda": "₹10 Cr", "de": "0.20", "growth": "25%", "prom": "58%"}, {"name": "Injecto Polymers", "type": "BSE SME", "price": "₹90-100", "lot": 1200, "size": "₹56 Cr", "open": "11/09/26", "close": "16/09/26", "listing": "—", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Plastics", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹40 Cr", "pat": "₹3 Cr", "ebitda": "₹5 Cr", "de": "0.22", "growth": "15%", "prom": "60%"}, {"name": "Century Business Media", "type": "BSE SME", "price": "₹70-74", "lot": 1600, "size": "₹17 Cr", "open": "11/09/26", "close": "16/09/26", "listing": "—", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Media", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹12 Cr", "pat": "₹1 Cr", "ebitda": "₹2 Cr", "de": "0.10", "growth": "8%", "prom": "65%"}, {"name": "Jindal Supreme (India)", "type": "Mainboard", "price": "₹88-93", "lot": 161, "size": "₹TBA", "open": "16/09/26", "close": "18/09/26", "listing": "—", "sub": "—", "gmp": "₹8", "gmp_pct": "+8.6%", "est_list": "₹101", "sector": "Iron & Steel", "fresh": "80%", "ofs": "20%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹450 Cr", "pat": "₹22 Cr", "ebitda": "₹35 Cr", "de": "0.18", "growth": "15%", "prom": "55%"}, {"name": "NSE (National Stock Exchange)", "type": "Mainboard", "price": "₹1,700-1,785*", "lot": "TBA", "size": "₹23,000 Cr", "open": "TBA", "close": "TBA", "listing": "~25/09/26", "sub": "—", "gmp": "₹255", "gmp_pct": "+14.3%*", "est_list": "₹2,040*", "sector": "Stock Exchange", "fresh": "0%", "ofs": "100%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹15,000 Cr", "pat": "₹3,500 Cr", "ebitda": "₹5,200 Cr", "de": "0.05", "growth": "20%", "prom": "0%"}, {"name": "Jio Platforms", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹37,800 Cr", "open": "~Oct/Nov 26", "close": "TBA", "listing": "~Nov 26", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Telecom/Digital", "fresh": "100%", "ofs": "0%", "pe": "—", "roe": "—", "roce": "—", "rev": "₹45,000 Cr", "pat": "₹8,000 Cr", "ebitda": "₹18,000 Cr", "de": "0.15", "growth": "25%", "prom": "97%"}, {"name": "PhonePe", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹12,000 Cr", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "FinTech", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹2,500 Cr", "pat": "₹500 Cr", "ebitda": "₹800 Cr", "de": "0.20", "growth": "40%", "prom": "—"}, {"name": "Zepto", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹TBA", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Quick Commerce", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹4,500 Cr", "pat": "₹-800 Cr", "ebitda": "₹-200 Cr", "de": "0.30", "growth": "100%", "prom": "—"}, {"name": "Shiprocket", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹2,342 Cr", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Logistics SaaS", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹1,200 Cr", "pat": "₹80 Cr", "ebitda": "₹150 Cr", "de": "0.10", "growth": "35%", "prom": "—"}, {"name": "Cult.Fit", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹TBA", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Fitness/Health", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹800 Cr", "pat": "₹-100 Cr", "ebitda": "₹50 Cr", "de": "0.25", "growth": "30%", "prom": "—"}, {"name": "OYO (Oravel Stays)", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹6,650 Cr", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Hospitality", "fresh": "₹6,650 Cr", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹5,000 Cr", "pat": "₹100 Cr", "ebitda": "₹500 Cr", "de": "0.50", "growth": "15%", "prom": "—"}, {"name": "CarDekho", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹TBA", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Auto Portal", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹2,000 Cr", "pat": "₹50 Cr", "ebitda": "₹120 Cr", "de": "0.20", "growth": "25%", "prom": "—"}, {"name": "Haldiram's Snacks Foods", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹TBA", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "FMCG", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹12,000 Cr", "pat": "₹1,500 Cr", "ebitda": "₹2,000 Cr", "de": "0.10", "growth": "20%", "prom": "—"}, {"name": "Avaada Electro", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹TBA", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Solar Energy", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹1,500 Cr", "pat": "₹100 Cr", "ebitda": "₹200 Cr", "de": "0.60", "growth": "50%", "prom": "—"}, {"name": "Sembcorp Green Infra", "type": "Mainboard", "price": "TBA", "lot": "TBA", "size": "₹3,750 Cr", "open": "TBA", "close": "TBA", "listing": "TBA", "sub": "—", "gmp": "—", "gmp_pct": "—", "est_list": "—", "sector": "Renewable Energy", "fresh": "—", "ofs": "—", "pe": "—", "roe": "—", "roce": "—", "rev": "₹2,200 Cr", "pat": "₹300 Cr", "ebitda": "₹500 Cr", "de": "0.45", "growth": "35%", "prom": "—"}];
+var LISTED_IPOS = [{"name": "ESDS Software Solution", "issue_price": "₹429", "listing_price": "₹895", "listing_gain": "+108.7%", "current": "₹1,560", "current_gain": "+264%", "date": "04/09/26", "sector": "IT/Cloud"}, {"name": "Augmont Enterprises", "issue_price": "₹788", "listing_price": "₹788", "listing_gain": "0%", "current": "₹908", "current_gain": "+15.3%", "date": "31/08/26", "sector": "Gold Refinery"}, {"name": "Tempsens Instruments", "issue_price": "₹300", "listing_price": "₹634", "listing_gain": "+111.3%", "current": "₹564", "current_gain": "+87.9%", "date": "28/08/26", "sector": "Sensors"}, {"name": "Gaja Alternative Asset Mgmt", "issue_price": "₹160", "listing_price": "₹102", "listing_gain": "-36.3%", "current": "₹151", "current_gain": "-5.6%", "date": "26/08/26", "sector": "Asset Mgmt"}, {"name": "Shankesh Jewellers", "issue_price": "₹93", "listing_price": "₹100", "listing_gain": "+7.5%", "current": "₹93", "current_gain": "+0.2%", "date": "25/08/26", "sector": "Jewellery"}, {"name": "Lumino Industries", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "+34.5%", "current": "₹—", "current_gain": "+40%", "date": "07/09/26", "sector": "Industrial"}, {"name": "Purple Style Labs", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "-1.1%", "current": "₹—", "current_gain": "-1.2%", "date": "07/09/26", "sector": "Lifestyle"}, {"name": "Priority Jewels", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "+20.8%", "current": "₹—", "current_gain": "+13.3%", "date": "04/09/26", "sector": "Jewellery"}, {"name": "Indo-MIM", "issue_price": "₹485", "listing_price": "₹742", "listing_gain": "+52.9%", "current": "₹948", "current_gain": "+95.4%", "date": "30/07/26", "sector": "Manufacturing"}, {"name": "Shiprocket", "issue_price": "₹97", "listing_price": "₹144", "listing_gain": "+47.9%", "current": "₹136", "current_gain": "+40%", "date": "19/08/26", "sector": "Logistics SaaS"}, {"name": "Milky Mist Dairy", "issue_price": "₹140", "listing_price": "₹182", "listing_gain": "+29.6%", "current": "₹277", "current_gain": "+97.4%", "date": "18/08/26", "sector": "Dairy"}, {"name": "Bharat Coking Coal", "issue_price": "₹23", "listing_price": "₹41", "listing_gain": "+76.4%", "current": "₹34", "current_gain": "+46.8%", "date": "—", "sector": "Mining"}, {"name": "Omnitech Engineering", "issue_price": "₹227", "listing_price": "₹205", "listing_gain": "-9.7%", "current": "₹733", "current_gain": "+223%", "date": "Mar 2026", "sector": "Engineering"}, {"name": "SEDEMAC Mechatronics", "issue_price": "₹1,352", "listing_price": "₹1,451", "listing_gain": "+7.3%", "current": "₹2,846", "current_gain": "+111%", "date": "Mar 2026", "sector": "Automotive Tech"}, {"name": "Shadowfax Technologies", "issue_price": "₹124", "listing_price": "₹110", "listing_gain": "-11.3%", "current": "₹244", "current_gain": "+96%", "date": "Jan 2026", "sector": "Logistics"}, {"name": "Amagi Media Labs", "issue_price": "₹361", "listing_price": "₹348", "listing_gain": "-3.5%", "current": "₹674", "current_gain": "+87%", "date": "Jan 2026", "sector": "Media Tech"}, {"name": "Innovision", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "-27.9%", "current": "₹—", "current_gain": "-50.7%", "date": "—", "sector": "—"}, {"name": "Shree Ram Twistex", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "-31.4%", "current": "₹—", "current_gain": "-63.6%", "date": "—", "sector": "Textiles"}, {"name": "Waterways Leisure Tourism", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "-17.3%", "current": "₹—", "current_gain": "-86.5%", "date": "—", "sector": "Tourism"}, {"name": "Alpine Texworld", "issue_price": "₹—", "listing_price": "₹—", "listing_gain": "-5%", "current": "₹—", "current_gain": "-40.2%", "date": "—", "sector": "Textiles"}];
+var NEWS_ITEMS = [{"date": "10/09/26", "title": "NSE slashes IPO size to Rs 23,500 crore in revised Sebi filing", "source": "Economic Times", "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/nse-slashes-ipo-size-to-rs-23500-crore-in-revised-sebi-filing/articleshow/133988238.cms", "tag": "BREAKING", "tc": "rd"}, {"date": "10/09/26", "title": "ESDS Software soars 264% in 5 sessions, best-performing IPO of 2026", "source": "Fortune India", "url": "https://www.fortuneindia.com/markets/from-429-to-1560-esds-share-price-zooms-260-in-five-sessions-become-best-performing-ipo-of-2026/158452", "tag": "LISTING", "tc": "gn"}, {"date": "10/09/26", "title": "Glass Wall, Prasol, Kanohar IPOs close today: GMP trends sharply different", "source": "Fortune India", "url": "https://www.fortuneindia.com/markets/ipo/glass-wall-systems-prasol-chemicals-kanohar-electricals-ipos-close-today-heres-what-gmp-trends-indicate/158449", "tag": "CLOSING", "tc": "yl"}, {"date": "10/09/26", "title": "6 mainboard IPOs enter Day 2: Karamtara, Steamhouse, LCC Projects", "source": "ET Markets", "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/6-mainboard-ipos-enter-day-2-karamtara-engineering-steamhouse-india-lcc-projects-more-check-gmp-subscription-status/articleshow/133993631.cms", "tag": "SUBSCRIPTION", "tc": "bl"}, {"date": "10/09/26", "title": "4 SME IPOs open today: Maharaja Speedex, Raksan, Panchatv, Om Galaxy", "source": "ET Markets", "url": "https://economictimes.indiatimes.com/markets/ipos/fpos/four-sme-ipos-open-today-maharaja-speedex-india-leads-gmp-at-16-raksan-transformers-at-9/articleshow/133993302.cms", "tag": "OPENING", "tc": "gn"}, {"date": "09/09/26", "title": "NSE IPO GMP at Rs 255; price band likely Rs 1,700-1,785", "source": "Fortune India", "url": "https://www.fortuneindia.com/markets/ipo/nse-files-udrhp-with-sebi-ipo-size-likely-to-be-cut-to-23000-cr-as-shareholders-trim-ofs-sources/158440", "tag": "MEGA IPO", "tc": "pp"}, {"date": "09/09/26", "title": "Rentomojo, LCC, Karamtara IPOs open - 6 IPOs on same day, first in 30 years", "source": "Livemint", "url": "https://www.livemint.com/market/ipo/ipo-gmps-rentomojo-lcc-projects-to-karamtara-engineering-what-grey-market-signals-about-upcoming-ipos-11788851795888.html", "tag": "OPENING", "tc": "gn"}, {"date": "04/09/26", "title": "Jio Platforms IPO: $4B (Rs 37,800 Cr) launch targeting Navratri-Diwali", "source": "GetFinanceBrief", "url": "https://getfinancebrief.com/story/jio-4b-ipo-navratri-diwali-finance", "tag": "MEGA IPO", "tc": "pp"}, {"date": "03/09/26", "title": "India IPO pipeline at Rs 4.66 lakh crore across 238 companies", "source": "Financial Express", "url": "https://www.financialexpress.com/market/rs-4-66-lakh-crore-ipo-pipeline-jio-nse-top-238-company-new-issue-queue-4331284/", "tag": "PIPELINE", "tc": "bl"}, {"date": "10/09/26", "title": "Rentomojo files RHP: fresh issue up to Rs 150 crore, OFS of 2.74 cr shares", "source": "ET Now", "url": "https://www.etnownews.com/markets/rentomojo-files-rhp-for-ipo-fresh-issue-worth-up-to-rs-150-crore-ofs-of-2-74-crore-shares-article-156038572", "tag": "FILING", "tc": "bl"}];
+var RHP_LINKS = [{"name": "Kanohar Electricals", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html", "date": "03/09/26"}, {"name": "Glass Wall Systems (India)", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html", "date": "03/09/26"}, {"name": "Rentomojo", "type": "DRHP", "url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf", "date": "06/04/26"}, {"name": "Karamtara Engineering", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "Steamhouse India", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "LCC Projects", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "Manipal Payment & Identity", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "Asset Reconstruction (ARCIL)", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "Veegaland Developers", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "—"}, {"name": "NSE", "type": "UDRHP", "url": "https://www.sebi.gov.in/filings/public-issues/", "date": "09/09/26"}, {"name": "Prasol Chemicals", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "03/09/26"}, {"name": "Pranav Constructions", "type": "RHP", "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/", "date": "02/09/26"}, {"name": "Jio Platforms", "type": "DRHP", "url": "https://www.sebi.gov.in/filings/public-issues/", "date": "19/06/26"}];
+
+// === DATE PARSER (dd/mm/yy or dd/mm/yyyy or yyyy-mm-dd) ===
+function parseDate(str) {
+  if (!str || str === '—' || str === '-' || str === 'TBA' || str === 'tba') return null;
+  str = String(str).trim();
+  var m = str.match(/^(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (m) { var dd=parseInt(m[1]), mm=parseInt(m[2])-1, yy=parseInt(m[3]); if(yy<100)yy+=2000; return new Date(yy,mm,dd); }
+  m = str.match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (m) return new Date(parseInt(m[1]), parseInt(m[2])-1, parseInt(m[3]));
+  // "~Oct/Nov 26" or "~25/09/26" - try to extract dd/mm/yy
+  m = str.match(/~?(\d{1,2})\/(\d{1,2})\/(\d{2,4})/);
+  if (m) { var dd=parseInt(m[1]), mm=parseInt(m[2])-1, yy=parseInt(m[3]); if(yy<100)yy+=2000; return new Date(yy,mm,dd); }
+  return null;
+}
+
+// === AUTO-CATEGORIZE by comparing dates with today ===
+function categorize(ipo) {
+  // If listing date has passed -> listed
+  // If close date has passed and no listing yet -> closed
+  // If open date <= today <= close date -> open
+  // If open date > today -> upcoming
+  // If dates are TBA -> future pipeline
+  var today = new Date(); today.setHours(0,0,0,0);
+  var openD = parseDate(ipo.open);
+  var closeD = parseDate(ipo.close);
+  var listD = parseDate(ipo.listing);
+  
+  if (!openD && !closeD) return 'future';
+  if (listD && listD < today) return 'listed';
+  if (closeD && closeD < today) return 'closed';
+  if (openD && closeD && openD <= today && closeD >= today) return 'open';
+  if (openD && openD > today) return 'upcoming';
+  if (openD && openD <= today && (!closeD || closeD >= today)) return 'open';
+  return 'future';
+}
+
+// === AUTO-SCORE (0-100) ===
+function autoScore(ipo) {
+  var score = 40;
+  // GMP % (up to 25 pts)
+  var gmpPct = parseFloat(String(ipo.gmp_pct).replace(/[^0-9.-]/g,''))||0;
+  if (gmpPct>30){score+=25;} else if(gmpPct>15){score+=20;} else if(gmpPct>5){score+=12;} else if(gmpPct>0){score+=6;} else {score-=5;}
+  // Subscription (up to 20 pts)
+  var sub = parseFloat(String(ipo.sub).replace(/[^0-9.]/g,''))||0;
+  if (sub>10){score+=20;} else if(sub>3){score+=15;} else if(sub>1){score+=10;} else if(sub>0){score+=3;}
+  // Type: Mainboard bonus (5 pts)
+  if (ipo.type==='Mainboard') score+=5;
+  // Issue size (5 pts)
+  var sz = parseFloat(String(ipo.size).replace(/[^0-9.]/g,''))||0;
+  if (sz>500){score+=5;} else if(sz>100){score+=3;}
+  // Fresh issue % (5 pts)
+  var fp = parseFloat(String(ipo.fresh).replace(/[^0-9.]/g,''))||0;
+  if (fp>70){score+=5;} else if(fp>40){score+=3;}
+  score = Math.max(0, Math.min(100, Math.round(score)));
+  var verdict = score>=75?'STRONG APPLY':(score>=65?'APPLY':(score>=55?'SELECTIVE':'AVOID'));
+  return {score:score, verdict:verdict};
+}
+
+// === RENDER TABLE ===
+function renderTable(containerId, ipos, showSub, showScore) {
+  var c = document.getElementById(containerId);
+  if (!c) return;
+  if (!ipos || ipos.length===0) { c.innerHTML='<div style="padding:12px;text-align:center;color:var(--tx3)">No IPOs in this category</div>'; return; }
+  
+  var h='<div style="overflow-x:auto"><table class="ipo-table"><thead><tr><th>IPO</th><th>Type</th><th>Price</th><th>Lot</th><th>Size</th><th>Open</th><th>Close</th>';
+  if(showSub) h+='<th>Sub</th>';
+  h+='<th>GMP</th><th>GMP%</th><th>Est List</th>';
+  if(showScore) h+='<th>Score</th><th>Verdict</th>';
+  h+='</tr></thead><tbody>';
+  
+  ipos.forEach(function(ipo) {
+    var gmpPct=String(ipo.gmp_pct||'');
+    var gmpC=gmpPct.indexOf('+')>=0?'gn':(gmpPct.indexOf('-')>=0?'rd':'tx3');
+    var arrow=gmpPct.indexOf('+')>=0?'&#9650;':(gmpPct.indexOf('-')>=0?'&#9660;':'&#8212;');
+    var sc=autoScore(ipo);
+    var scC=sc.score>=75?'gn':(sc.score>=65?'yl':'rd');
+    var vc=sc.verdict.indexOf('STRONG')>=0||sc.verdict==='APPLY'?'gn':(sc.verdict==='SELECTIVE'?'yl':'rd');
+    var tc=ipo.type==='Mainboard'?'mb':(ipo.type.indexOf('SME')>=0?'sme':'fut');
+    h+='<tr><td><b>'+esc(ipo.name)+'</b><br><span class="tx3" style="font-size:9px">'+esc(ipo.sector)+'</span></td>';
+    h+='<td><span class="badge '+tc+'">'+esc(ipo.type)+'</span></td>';
+    h+='<td>'+esc(ipo.price)+'</td><td>'+esc(ipo.lot)+'</td><td>'+esc(ipo.size)+'</td>';
+    h+='<td>'+esc(ipo.open)+'</td><td>'+esc(ipo.close)+'</td>';
+    if(showSub) h+='<td><b>'+esc(ipo.sub)+'</b></td>';
+    h+='<td class="'+gmpC+'">'+arrow+' '+esc(ipo.gmp)+'</td>';
+    h+='<td class="'+gmpC+'">'+esc(ipo.gmp_pct)+'</td>';
+    h+='<td class="gn">'+esc(ipo.est_list)+'</td>';
+    if(showScore) {
+      h+='<td class="'+scC+'" style="font-weight:700">'+sc.score+'/100</td>';
+      h+='<td class="'+vc+'" style="font-weight:700">'+sc.verdict+'</td>';
+    }
+    h+='</tr>';
+  });
+  h+='</tbody></table></div>';
+  c.innerHTML=h;
+}
+
+function esc(s) {
+  if(!s) return '';
+  var d=document.createElement('div');d.appendChild(document.createTextNode(s));return d.innerHTML;
+}
+
+// === RENDER COMPARISON ===
+function renderComp(containerId, ipos) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var h='<div style="overflow-x:auto"><table class="ipo-table"><thead><tr><th>IPO</th><th>Price</th><th>Size</th><th>Fresh</th><th>OFS</th><th>P/E</th><th>ROE</th><th>ROCE</th><th>Rev</th><th>PAT</th><th>EBITDA</th><th>D/E</th><th>Growth</th><th>Prom</th><th>Score</th><th>Verdict</th></tr></thead><tbody>';
+  ipos.forEach(function(ipo) {
+    var sc=autoScore(ipo);
+    var scC=sc.score>=75?'gn':(sc.score>=65?'yl':'rd');
+    var vc=sc.verdict.indexOf('STRONG')>=0||sc.verdict==='APPLY'?'gn':(sc.verdict==='SELECTIVE'?'yl':'rd');
+    var roeV=parseFloat(String(ipo.roe).replace(/[^0-9.]/g,''))||0;
+    var roeC=roeV>=15?'gn':(roeV>=10?'yl':'rd');
+    var deV=parseFloat(ipo.de)||0;
+    var deC=deV<=0.2?'gn':(deV<=0.5?'yl':'rd');
+    h+='<tr><td><b>'+esc(ipo.name)+'</b></td><td>'+esc(ipo.price)+'</td><td>'+esc(ipo.size)+'</td>';
+    h+='<td>'+esc(ipo.fresh)+'</td><td>'+esc(ipo.ofs)+'</td><td>'+esc(ipo.pe)+'</td>';
+    h+='<td class="'+roeC+'">'+esc(ipo.roe)+'</td><td class="'+roeC+'">'+esc(ipo.roce)+'</td>';
+    h+='<td>'+esc(ipo.rev)+'</td><td>'+esc(ipo.pat)+'</td><td>'+esc(ipo.ebitda)+'</td>';
+    h+='<td class="'+deC+'">'+esc(ipo.de)+'</td><td>'+esc(ipo.growth)+'</td><td>'+esc(ipo.prom)+'</td>';
+    h+='<td class="'+scC+'" style="font-weight:700;font-size:16px">'+sc.score+'/100</td>';
+    h+='<td class="'+vc+'" style="font-weight:700">'+sc.verdict+'</td></tr>';
+  });
+  h+='</tbody></table></div>';
+  c.innerHTML=h;
+}
+
+// === RENDER LISTED ===
+function renderListed(containerId, ipos) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var h='<div style="overflow-x:auto"><table class="ipo-table"><thead><tr><th>IPO</th><th>Sector</th><th>Listed</th><th>Issue ₹</th><th>List ₹</th><th>Listing Gain</th><th>Current ₹</th><th>Current Gain</th></tr></thead><tbody>';
+  ipos.forEach(function(ipo) {
+    var lg=String(ipo.listing_gain||'').replace(/[^0-9.-]/g,'');
+    var lgV=parseFloat(lg)||0;
+    var lgC=lgV>0?'gn':(lgV<0?'rd':'tx3');
+    var lgA=lgV>0?'&#9650;':(lgV<0?'&#9660;':'&#8212;');
+    var cg=String(ipo.current_gain||'').replace(/[^0-9.-]/g,'');
+    var cgV=parseFloat(cg)||0;
+    var cgC=cgV>0?'gn':(cgV<0?'rd':'tx3');
+    var cgA=cgV>0?'&#9650;':(cgV<0?'&#9660;':'&#8212;');
+    h+='<tr><td><b>'+esc(ipo.name)+'</b></td><td class="tx3" style="font-size:10px">'+esc(ipo.sector)+'</td><td>'+esc(ipo.date)+'</td>';
+    h+='<td>'+esc(ipo.issue_price)+'</td><td>'+esc(ipo.listing_price)+'</td>';
+    h+='<td class="'+lgC+'"><b>'+lgA+' '+esc(ipo.listing_gain)+'</b></td>';
+    h+='<td>'+esc(ipo.current)+'</td><td class="'+cgC+'"><b>'+cgA+' '+esc(ipo.current_gain)+'</b></td></tr>';
+  });
+  h+='</tbody></table></div>';
+  c.innerHTML=h;
+}
+
+// === RENDER PIPELINE (name only) ===
+function renderPipeline(containerId, ipos) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  if(!ipos||ipos.length===0){c.innerHTML='<div style="padding:12px;text-align:center;color:var(--tx3)">No pipeline IPOs</div>';return;}
+  var h='<div style="padding:8px;font-size:11px;color:var(--tx3);margin-bottom:8px">These companies have filed DRHP with SEBI or received approval. Dates and price bands not yet announced.</div>';
+  h+='<div class="news-list">';
+  ipos.forEach(function(ipo) {
+    h+='<div class="news-item" style="border-left-color:var(--or)"><b style="color:var(--or);font-size:13px">'+esc(ipo.name)+'</b> <span class="badge fut" style="background:rgba(249,115,22,.2);color:var(--or)">UPCOMING</span><div style="font-size:10px;color:var(--tx3);margin-top:2px">Sector: '+esc(ipo.sector)+' &middot; Est. Size: '+esc(ipo.size)+'</div></div>';
+  });
+  h+='</div>';
+  c.innerHTML=h;
+}
+
+// === RENDER ALLOTMENT ===
+function renderAllotment(containerId) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var h='<div class="news-list">';
+  h+='<div class="news-item" style="border-left-color:var(--gn)"><b style="color:var(--gn);font-size:13px">Check IPO Allotment Status</b><div style="font-size:11px;margin-top:6px">Select your registrar to check if shares have been allotted to you:</div>';
+  h+='<div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:6px">';
+  h+='<a href="https://www.bseindia.com/investors/appli_check.aspx" target="_blank" rel="noopener" class="dl-btn">BSE Allotment &rarr;</a>';
+  h+='<a href="https://www.nseindia.com/market-data/all-upcoming-issues-ipo" target="_blank" rel="noopener" class="dl-btn" style="background:rgba(249,115,22,.2);color:var(--or)">NSE IPO Status &rarr;</a>';
+  h+='</div></div>';
+  // Allotment news
+  var allotNews=[
+    {date:'11/09/26',title:'Kanohar Electricals, Glass Wall, Prasol - allotment expected today (Sep 11)',registrar:'BSE / NSE',url:'https://www.bseindia.com/investors/appli_check.aspx'},
+    {date:'15/09/26',title:'Karamtara, Rentomojo, Steamhouse, ARCIL, LCC, Manipal - allotment expected Sep 15',registrar:'BSE / NSE',url:'https://www.bseindia.com/investors/appli_check.aspx'},
+    {date:'16/09/26',title:'Maharaja Speedex, Raksan, Panchatv, Om Galaxy - allotment expected Sep 16',registrar:'BSE / NSE',url:'https://www.bseindia.com/investors/appli_check.aspx'},
+    {date:'10/09/26',title:'ESDS Software Solution - allotment complete, shares credited (listed Sep 4)',registrar:'BSE',url:'https://www.bseindia.com/investors/appli_check.aspx'},
+  ];
+  allotNews.forEach(function(n) {
+    h+='<div class="news-item"><div class="news-date">'+esc(n.date)+'</div><span class="news-tag gn">ALLOTMENT</span><div class="news-title">'+esc(n.title)+'</div><div class="news-source">Registrar: '+esc(n.registrar)+' &middot; <a href="'+esc(n.url)+'" target="_blank" rel="noopener" class="news-link">Check Status &rarr;</a></div></div>';
+  });
+  h+='<div class="news-item" style="border-left-color:var(--bl);font-size:11px"><b style="color:var(--bl)">How to check allotment:</b><br>1. Click BSE Allotment or NSE IPO Status link above<br>2. Select the IPO name from dropdown<br>3. Enter your PAN card number or Application Number<br>4. Submit to see if shares are allotted<br><br><b style="color:var(--gn)">If allotted:</b> Shares credited to Demat account next day, listing on exchange within 24 hours<br><b style="color:var(--rd)">If not allotted:</b> Blocked amount released to bank account same day</div>';
+  h+='</div>';
+  c.innerHTML=h;
+}
+
+// === RENDER NEWS ===
+function renderNews(containerId, items) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var h='<div class="news-list">';
+  items.forEach(function(n) {
+    h+='<div class="news-item"><div class="news-date">'+esc(n.date)+'</div><span class="news-tag '+n.tc+'">'+esc(n.tag)+'</span><div class="news-title">'+esc(n.title)+'</div><div class="news-source">Source: '+esc(n.source)+' &middot; <a href="'+esc(n.url)+'" target="_blank" rel="noopener" class="news-link">Open &rarr;</a></div></div>';
+  });
+  h+='</div>';
+  c.innerHTML=h;
+}
+
+// === RENDER DOCS ===
+function renderDocs(containerId, items) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var h='<div style="overflow-x:auto"><table class="ipo-table"><thead><tr><th>IPO Name</th><th>Type</th><th>Date</th><th>Download</th></tr></thead><tbody>';
+  items.forEach(function(d) {
+    var tc=d.type==='RHP'?'bl':(d.type==='DRHP'?'pp':'');
+    var bs=d.type==='UDRHP'?'background:rgba(249,115,22,.2);color:var(--or)':'';
+    h+='<tr><td><b>'+esc(d.name)+'</b></td><td><span class="badge '+tc+'" style="'+bs+'">'+esc(d.type)+'</span></td><td>'+esc(d.date)+'</td><td><a href="'+esc(d.url)+'" target="_blank" rel="noopener" class="dl-btn">Download &rarr;</a></td></tr>';
+  });
+  h+='</tbody></table></div>';
+  h+='<div style="padding:8px;font-size:11px;color:var(--tx3)"><b style="color:var(--bl)">RHP</b>=Red Herring Prospectus &middot; <b style="color:var(--pp)">DRHP</b>=Draft RHP &middot; <b style="color:var(--or)">UDRHP</b>=Updated DRHP<br>Source: <a href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&smid=11&ssid=15" target="_blank" rel="noopener" class="news-link">SEBI Filings &rarr;</a></div>';
+  c.innerHTML=h;
+}
+
+// === RENDER WHY APPLY (auto analysis for open IPOs) ===
+function renderWhyApply(containerId) {
+  var c=document.getElementById(containerId);
+  if(!c) return;
+  var openIpos=ALL_IPOS.filter(function(ipo){return categorize(ipo)==='open';});
+  if(openIpos.length===0){c.innerHTML='<div style="padding:12px;text-align:center;color:var(--tx3)">No open IPOs to analyze</div>';return;}
+  var h='<div style="padding:8px;font-size:11px;color:var(--tx3)">Auto-analysis based on GMP, subscription, fundamentals & issue structure. Score 0-100.</div>';
+  h+='<div class="news-list">';
+  openIpos.forEach(function(ipo) {
+    var sc=autoScore(ipo);
+    var scC=sc.score>=75?'gn':(sc.score>=65?'yl':'rd');
+    var vc=sc.verdict.indexOf('STRONG')>=0||sc.verdict==='APPLY'?'gn':(sc.verdict==='SELECTIVE'?'yl':'rd');
+    var reasons=[];
+    var concerns=[];
+    // GMP analysis
+    var gmpPct=parseFloat(String(ipo.gmp_pct).replace(/[^0-9.-]/g,''))||0;
+    if(gmpPct>30){reasons.push('Strong GMP of '+ipo.gmp_pct+' indicates heavy grey market demand');}
+    else if(gmpPct>15){reasons.push('Healthy GMP of '+ipo.gmp_pct+' shows positive market sentiment');}
+    else if(gmpPct>5){reasons.push('Moderate GMP of '+ipo.gmp_pct+' - lukewarm sentiment');}
+    else if(gmpPct<=0){concerns.push('No/low GMP - weak grey market interest');}
+    // Subscription
+    var sub=parseFloat(String(ipo.sub).replace(/[^0-9.]/g,''))||0;
+    if(sub>10){reasons.push('Oversubscribed '+ipo.sub+' - massive retail & institutional demand');}
+    else if(sub>3){reasons.push('Good subscription of '+ipo.sub+' - solid demand');}
+    else if(sub>1){reasons.push('Moderate subscription of '+ipo.sub+' - decent interest');}
+    else if(sub>0&&sub<=1){concerns.push('Low subscription of '+ipo.sub+' - undersubscribed, weak demand');}
+    // Type
+    if(ipo.type==='Mainboard'){reasons.push('Mainboard IPO - SEBI verified, stricter compliance norms');}
+    else if(ipo.type.indexOf('SME')>=0){concerns.push('SME IPO - higher risk, lower liquidity, wider spreads');}
+    // Issue size
+    var sz=parseFloat(String(ipo.size).replace(/[^0-9.]/g,''))||0;
+    if(sz>500){reasons.push('Large issue size ('+ipo.size+') - established company');}
+    // Fresh issue
+    var fp=parseFloat(String(ipo.fresh).replace(/[^0-9.]/g,''))||0;
+    if(fp>70){reasons.push('High fresh issue ('+ipo.fresh+') - funds go to company for growth');}
+    else if(fp<30){concerns.push('Low fresh issue ('+ipo.fresh+') - mostly OFS, promoters exiting');}
+    // Fundamentals
+    var roeV=parseFloat(String(ipo.roe).replace(/[^0-9.]/g,''))||0;
+    if(roeV>=15){reasons.push('ROE '+ipo.roe+' - efficient use of shareholder capital');}
+    else if(roeV<10&&roeV>0){concerns.push('ROE '+ipo.roe+' - below average profitability');}
+    var roceV=parseFloat(String(ipo.roce).replace(/[^0-9.]/g,''))||0;
+    if(roceV>=15){reasons.push('ROCE '+ipo.roce+' - strong capital efficiency');}
+    var deV=parseFloat(ipo.de)||0;
+    if(deV<=0.2){reasons.push('Low debt (D/E '+ipo.de+') - financially stable');}
+    else if(deV>0.5){concerns.push('High debt (D/E '+ipo.de+') - leverage risk');}
+    if(ipo.growth&&ipo.growth.indexOf('—')<0){
+      var gV=parseFloat(String(ipo.growth).replace(/[^0-9.]/g,''))||0;
+      if(gV>=20){reasons.push('Revenue growth '+ipo.growth+' - fast growing');}
+      else if(gV<10){concerns.push('Revenue growth '+ipo.growth+' - slow growth');}
+    }
+    var promV=parseFloat(String(ipo.prom).replace(/[^0-9.]/g,''))||0;
+    if(promV>=50){reasons.push('Promoter holding '+ipo.prom+' - high skin in game');}
+    else if(promV<30){concerns.push('Promoter holding '+ipo.prom+' - low, less confidence');}
+    // Build HTML
+    h+='<div class="news-item" style="border-left-color:var(--'+scC+')"><b style="color:var(--'+scC+');font-size:13px">'+esc(ipo.name)+'</b> <span style="color:var(--'+scC+');font-weight:700;font-size:14px">'+sc.score+'/100</span> <span style="color:var(--'+vc+');font-weight:700;font-size:11px">'+sc.verdict+'</span>';
+    h+='<div style="font-size:10px;color:var(--tx3);margin-top:2px">'+esc(ipo.sector)+' &middot; '+esc(ipo.type)+' &middot; Price: '+esc(ipo.price)+' &middot; GMP: '+esc(ipo.gmp)+'</div>';
+    if(reasons.length>0){
+      h+='<div style="margin-top:6px"><b style="color:var(--gn);font-size:11px">&#9989; Reasons to Apply:</b><ul style="margin:4px 0 0 16px;font-size:11px;line-height:1.7">';
+      reasons.forEach(function(r){h+='<li style="color:var(--gn)">'+esc(r)+'</li>';});
+      h+='</ul></div>';
+    }
+    if(concerns.length>0){
+      h+='<div style="margin-top:4px"><b style="color:var(--rd);font-size:11px">&#9888; Concerns:</b><ul style="margin:4px 0 0 16px;font-size:11px;line-height:1.7">';
+      concerns.forEach(function(r){h+='<li style="color:var(--rd)">'+esc(r)+'</li>';});
+      h+='</ul></div>';
+    }
+    if(reasons.length===0&&concerns.length===0){
+      h+='<div style="font-size:11px;color:var(--tx3);margin-top:4px">Limited data available for analysis.</div>';
+    }
+    h+='</div>';
+  });
+  h+='</div>';
+  c.innerHTML=h;
+}
+
+// === MAIN RENDER (runs immediately on page load, no API calls) ===
+function renderAll() {
+  // Categorize all IPOs by date
+  var open=[], upcoming=[], closed=[], future=[];
+  ALL_IPOS.forEach(function(ipo) {
+    var cat = categorize(ipo);
+    if(cat==='open') open.push(ipo);
+    else if(cat==='upcoming') upcoming.push(ipo);
+    else if(cat==='closed') closed.push(ipo);
+    else if(cat==='future') future.push(ipo);
+    else if(cat==='listed') {/* skip - already in LISTED_IPOS */}
+  });
+  
+  // Render Open IPOs
+  renderTable('open-container', open, true, true);
+  // Render Upcoming
+  // Render Upcoming (confirmed dates)
+  renderTable('upc-container', upcoming, false, true);
+  // Render Future Pipeline (name only)
+  renderPipeline('pipe-container', future);
+  // Render Listed
+  renderListed('list-container', LISTED_IPOS);
+  // Render Allotment
+  renderAllotment('allot-container');
+  // Render Comparison
+  renderComp('comp-container', ALL_IPOS.filter(function(i){return i.roe && i.roe!=='—';}));
+  // Render News
+  renderNews('news-container', NEWS_ITEMS);
+  // Render Docs
+  renderDocs('doc-container', RHP_LINKS);
+  // Render Why Apply
+  renderWhyApply('why-container');
+  
+  // Update KPIs (3 cards: Open, Upcoming+Pipeline, Closed+Listed)
+  document.getElementById('kpi-open').textContent = open.length;
+  document.getElementById('kpi-upc').textContent = upcoming.length + future.length;
+  document.getElementById('kpi-closed').textContent = closed.length + LISTED_IPOS.length;
+}
+
+// === TOGGLE FUNCTIONS ===
+function tg(id, btn) {
+  var p=document.getElementById(id);
+  if(p.classList.contains('show')){p.classList.remove('show');btn.classList.remove('active');localStorage.setItem(id,'0');}
+  else{p.classList.add('show');btn.classList.add('active');localStorage.setItem(id,'1');}
+}
+function cl(id,btnId) {
+  document.getElementById(id).classList.remove('show');
+  var b=document.getElementById(btnId); if(b)b.classList.remove('active');
+  localStorage.setItem(id,'0');
+}
+function toggleTheme() {
+  var c=document.body.classList.contains('light')?'dark':'light';
+  localStorage.setItem('theme',c);
+  location.reload();
+}
+
+// === IST TIME HELPER (always uses Asia/Kolkata regardless of phone timezone) ===
+function getISTParts() {
+  var fmt=new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',second:'2-digit',day:'2-digit',month:'2-digit',year:'2-digit',hour12:false,weekday:'short'});
+  var parts={};
+  fmt.formatToParts(new Date()).forEach(function(p){parts[p.type]=p.value;});
+  parts.hour24=parseInt(parts.hour,10);
+  parts.timeMin=parts.hour24*60+parseInt(parts.minute,10);
+  parts.dayNum=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(parts.weekday);
+  parts.monthNum=parseInt(parts.month,10);
+  parts.dayOfMonth=parseInt(parts.day,10);
+  return parts;
+}
+
+// === MARKET STATUS (auto: 2026 NSE/BSE calendar with holidays, muhurat, budget) ===
+function updateMarketStatus() {
+  var ist=getISTParts();
+  var day=ist.dayNum;
+  var time=ist.timeMin;
+  var el=document.getElementById('marketStatus');
+  if(!el) return;
+  var todayStr=ist.day+'/'+ist.month;
+  var curMonth=ist.monthNum;
+  var todayDay=ist.dayOfMonth;
+  // 2026 NSE/BSE official holidays with names (weekday + weekend holidays)
+  var holidays2026=[
+    {date:'15/01',day:15,mon:1,name:'MCGM Election Day'},
+    {date:'26/01',day:26,mon:1,name:'Republic Day'},
+    {date:'01/02',day:1,mon:2,name:'Budget Day',budget:true},
+    {date:'15/02',day:15,mon:2,name:'Mahashivratri'},
+    {date:'03/03',day:3,mon:3,name:'Holi'},
+    {date:'21/03',day:21,mon:3,name:'Eid-Ul-Fitr'},
+    {date:'26/03',day:26,mon:3,name:'Ram Navami'},
+    {date:'31/03',day:31,mon:3,name:'Mahavir Jayanti'},
+    {date:'03/04',day:3,mon:4,name:'Good Friday'},
+    {date:'14/04',day:14,mon:4,name:'Ambedkar Jayanti'},
+    {date:'01/05',day:1,mon:5,name:'Maharashtra Day'},
+    {date:'28/05',day:28,mon:5,name:'Bakri Id'},
+    {date:'26/06',day:26,mon:6,name:'Muharram'},
+    {date:'15/08',day:15,mon:8,name:'Independence Day'},
+    {date:'14/09',day:14,mon:9,name:'Ganesh Chaturthi'},
+    {date:'02/10',day:2,mon:10,name:'Gandhi Jayanti'},
+    {date:'20/10',day:20,mon:10,name:'Dussehra'},
+    {date:'08/11',day:8,mon:11,name:'Diwali Laxmi Pujan',muhurat:true},
+    {date:'10/11',day:10,mon:11,name:'Diwali-Balipratipada'},
+    {date:'24/11',day:24,mon:11,name:'Guru Nanak Jayanti'},
+    {date:'25/12',day:25,mon:12,name:'Christmas'}
+  ];
+  // Find today's event
+  var todayEvent=null;
+  holidays2026.forEach(function(ev){if(ev.date===todayStr)todayEvent=ev;});
+  // Find upcoming events in current month (after today)
+  var upcoming=[];
+  holidays2026.forEach(function(ev){
+    if(ev.mon===curMonth && ev.day>todayDay) upcoming.push(ev);
+  });
+  var statusHtml='';
+  var statusColor='';
+  // Priority: Budget Day > Muhurat Trading > Holiday > Weekend > Market Open/Closed
+  if(todayEvent && todayEvent.budget) {
+    if(time>=555 && time<930) {statusHtml='Budget Day &#128202; Market Open';statusColor='var(--gn)';}
+    else {statusHtml='Budget Day &#128202;';statusColor='var(--bl)';}
+  } else if(todayEvent && todayEvent.muhurat) {
+    statusHtml='Muhurat Trading &#129684;';statusColor='var(--or)';
+  } else if(todayEvent) {
+    statusHtml='Holiday - '+todayEvent.name+' &#127881;';statusColor='var(--rd)';
+  } else if(day===0||day===6) {
+    statusHtml='Happy Weekend &#128516;';statusColor='var(--pp)';
+  } else if(time>=555 && time<930) {
+    statusHtml='Market Open';statusColor='var(--gn)';
+  } else {
+    statusHtml='Market Closed';statusColor='var(--rd)';
+  }
+  // Show upcoming events in current month (only if not today and event is this month)
+  if(upcoming.length>0 && !todayEvent) {
+    var parts=upcoming.map(function(ev){
+      var nm=ev.budget?'Budget Day':(ev.muhurat?'Muhurat Trading':ev.name);
+      return nm+' '+ev.date;
+    });
+    statusHtml+=' &middot; '+parts.join(', ');
+  }
+  el.innerHTML=statusHtml;
+  el.style.color=statusColor;
+}
+
+// === CLOCK (uses IST explicitly) ===
+function updateClock() {
+  var ist=getISTParts();
+  var h24=ist.hour24,m=ist.minute,s=ist.second;
+  var ampm=h24>=12?'PM':'AM';
+  var h=h24%12||12;
+  var greet=h24<12?'Good Morning &#9728;&#65039;':(h24<16?'Good Afternoon &#9728;&#65039;':(h24<20?'Good Evening &#127769;':'Good Night &#127769;'));
+  var el=document.getElementById('liveClock');
+  if(el) el.innerHTML=greet+' &middot; '+ist.day+'/'+ist.month+'/'+ist.year+' '+String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0')+' '+ampm;
+  updateMarketStatus();
+}
+setInterval(updateClock,1000);
+
+
+// === INIT ===
+document.addEventListener('DOMContentLoaded', function() {
+  var theme=localStorage.getItem('theme');
+  if(theme==='light'){document.body.classList.add('light');document.getElementById('themeToggle').innerHTML='&#9728;&#65039;';}
+  
+  // Restore panels
+  document.querySelectorAll('.hb').forEach(function(b) {
+    var pid='p-'+b.id.replace('b-','');
+    if(localStorage.getItem(pid)==='1'){b.classList.add('active');document.getElementById(pid).classList.add('show');}
+  });
+  
+  // RENDER EVERYTHING IMMEDIATELY - no API, no fetch, no waiting
+  renderAll();
+  updateClock();
+  loadLiveData();
+});
+
+// === DATA STATUS ===
+function setDataStatus(){
+  var el=document.getElementById('dataStatus');
+  if(!el) return;
+  var t=DATA_META && DATA_META.updated_at ? new Date(DATA_META.updated_at) : null;
+  var stamp=t && !isNaN(t.getTime()) ? t.toLocaleString('en-IN',{day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:true,timeZone:'Asia/Kolkata'})+' IST' : 'fallback';
+  el.textContent=(DATA_META && DATA_META.live ? 'Data: LIVE' : 'Data: FALLBACK')+' · '+stamp;
+  el.style.color=(DATA_META && DATA_META.live)?'var(--gn)':'var(--yl)';
+}
+
+// === FREE AUTO DATA LOADER ===
+// GitHub Actions generates data/ipo-data.json. If unavailable, the built-in
+// dataset remains visible, so the website never breaks.
+async function loadLiveData(){
+  try{
+    var r=await fetch('data/ipo-data.json?ts='+Date.now(),{cache:'no-store'});
+    if(!r.ok) throw new Error('data unavailable');
+    var d=await r.json();
+    if(Array.isArray(d.ipos) && d.ipos.length) ALL_IPOS=d.ipos;
+    if(Array.isArray(d.listed) && d.listed.length) LISTED_IPOS=d.listed;
+    if(Array.isArray(d.news) && d.news.length) NEWS_ITEMS=d.news;
+    if(Array.isArray(d.documents)) RHP_LINKS=d.documents;
+    DATA_META={source:d.source||'Automatic sources',updated_at:d.updated_at||null,live:true};
+    renderAll(); setDataStatus();
+  }catch(e){
+    DATA_META={source:'Embedded fallback',updated_at:null,live:false};
+    renderAll(); setDataStatus();
+  }
+}
+
+// Refresh live dataset periodically; page itself refreshes every 15 minutes.
+setInterval(loadLiveData,300000);
+</script></body></html>
