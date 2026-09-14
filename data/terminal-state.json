@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-14T14:55:43.008437+00:00",
+  "generated_at": "2026-09-14T15:06:30.965119+00:00",
   "today_ist": "2026-09-14",
-  "data_updated_at": "2026-09-14T14:55:42.886490+00:00",
+  "data_updated_at": "2026-09-14T15:06:30.889537+00:00",
   "ipo_count": 12,
-  "field_coverage_pct": 21.4,
+  "field_coverage_pct": 27.0,
   "sources": {
     "NSE": {
       "ok": true,
@@ -39,7 +39,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T14:55:04.038918+00:00",
+      "checked_at": "2026-09-14T15:06:21.038958+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,18 +77,25 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T14:55:07.191460+00:00"
+      "checked_at": "2026-09-14T15:06:23.776910+00:00"
+    },
+    "SeedFallback": {
+      "ok": true,
+      "records": 3,
+      "checked_at": "2026-09-14T15:06:30.889535+00:00",
+      "seed_fundamentals": 32,
+      "seed_documents": 13
     }
   },
   "ipos": [
     {
       "id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
-      "fingerprint": "56da834bfc517d35",
+      "fingerprint": "63387ad19d07af42",
       "fields": {
         "price": "₹40-43",
-        "size": "₹0 Cr",
-        "lot": "—",
+        "size": "₹126 Cr",
+        "lot": 348,
         "open": "11/09/26",
         "close": "16/09/26",
         "allotment": null,
@@ -103,20 +110,20 @@
         "pe": "—",
         "roe": "—",
         "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
+        "growth": "25%",
+        "de": "0.20",
+        "fresh": "100%",
+        "ofs": "0%"
       }
     },
     {
       "id": "veegaland-developers-limited",
       "name": "Veegaland Developers Limited",
-      "fingerprint": "8f900ef13291d8d0",
+      "fingerprint": "a3161073d4ac0bb0",
       "fields": {
         "price": "₹130-140",
-        "size": "₹0 Cr",
-        "lot": "—",
+        "size": "₹210 Cr",
+        "lot": 107,
         "open": "10/09/26",
         "close": "15/09/26",
         "allotment": null,
@@ -131,10 +138,10 @@
         "pe": "—",
         "roe": "—",
         "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
+        "growth": "20%",
+        "de": "0.40",
+        "fresh": "100%",
+        "ofs": "0%"
       }
     },
     {
@@ -168,7 +175,7 @@
     {
       "id": "jindal-supreme-india-limited",
       "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "0be97e91d9bd94e7",
+      "fingerprint": "9f21b8dd16e7ff16",
       "fields": {
         "price": "₹88 – ₹93",
         "size": "₹124.88 Cr",
@@ -187,10 +194,10 @@
         "pe": "—",
         "roe": "—",
         "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
+        "growth": "15%",
+        "de": "0.18",
+        "fresh": "80%",
+        "ofs": "20%"
       }
     },
     {
@@ -519,6 +526,46 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-14T15:06:30.965119+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
+      "fields": [
+        "size",
+        "lot",
+        "growth",
+        "de",
+        "fresh",
+        "ofs"
+      ]
+    },
+    {
+      "at": "2026-09-14T15:06:30.965119+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "veegaland-developers-limited",
+      "name": "Veegaland Developers Limited",
+      "fields": [
+        "size",
+        "lot",
+        "growth",
+        "de",
+        "fresh",
+        "ofs"
+      ]
+    },
+    {
+      "at": "2026-09-14T15:06:30.965119+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "growth",
+        "de",
+        "fresh",
+        "ofs"
+      ]
+    },
     {
       "at": "2026-09-14T14:03:50.302442+00:00",
       "type": "NEW_EVENT",
