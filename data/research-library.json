@@ -1,0 +1,23 @@
+{
+  "version": "1.0.0",
+  "purpose": "Attributed research memory for the IPO Terminal Evidence Engine.",
+  "ingestion_mode": "retrieval_augmented_evidence",
+  "priority": ["official_facts", "primary_filings", "verified_public_sources", "attributed_analyst_material"],
+  "materials": [],
+  "schema": {
+    "id": "stable-source-id",
+    "title": "material title",
+    "type": "video | podcast | transcript | pdf | note | url",
+    "creator": "creator or publisher",
+    "source_url": "public URL when available",
+    "published_at": "ISO date when known",
+    "text": "transcript or extracted text",
+    "topics": ["valuation", "gmp", "subscription"],
+    "ipo_references": ["ipo id or company name"],
+    "principles": ["attributed principle extracted from the material"],
+    "evidence_notes": ["claims that require verification"],
+    "attribution": "where the material came from",
+    "review_status": "pending | reviewed | rejected"
+  },
+  "policy": "Educational material can improve research reasoning and explanations, but cannot overwrite official company facts. Conflicting claims must remain attributed and visible."
+}
