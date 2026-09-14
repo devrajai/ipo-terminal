@@ -47,7 +47,8 @@ jobs:
               '<script src="scripts/ipo-dna.js"></script>',
               '<script src="scripts/ipo-fixes.js"></script>',
               '<script src="scripts/ipo-final.js"></script>',
-              '<script src="scripts/ipo-subscription-values.js"></script>'
+              '<script src="scripts/ipo-subscription-values.js"></script>',
+              '<script src="scripts/ipo-gmp-hidden.js"></script>'
           ]
           for tag in tags:
               if tag not in s:
