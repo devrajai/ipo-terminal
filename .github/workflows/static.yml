@@ -35,7 +35,11 @@ jobs:
           from pathlib import Path
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
-          tags=['<script src="scripts/ui-enhancements.js"></script>','<script src="scripts/ipo-calendar.js"></script>']
+          tags=[
+              '<script src="scripts/ui-enhancements.js"></script>',
+              '<script src="scripts/ipo-calendar.js"></script>',
+              '<script src="scripts/ipo-articles.js"></script>'
+          ]
           for tag in tags:
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
