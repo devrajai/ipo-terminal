@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-14T14:41:22.605794+00:00",
+  "updated_at": "2026-09-14T14:55:42.886490+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -35,7 +35,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T14:41:19.524161+00:00",
+      "checked_at": "2026-09-14T14:55:04.038918+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -67,6 +67,13 @@
         }
       },
       "ok": true
+    },
+    "ProspectusResearch": {
+      "ok": false,
+      "records": 12,
+      "matched": 0,
+      "errors": [],
+      "checked_at": "2026-09-14T14:55:07.191460+00:00"
     }
   },
   "ipos": [
