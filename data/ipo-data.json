@@ -1,10 +1,15 @@
 {
-  "source": "NSE",
-  "updated_at": "2026-09-14T12:30:37.895533+00:00",
+  "source": "multi-source",
+  "updated_at": "2026-09-14T12:55:14.432344+00:00",
   "sources": {
     "NSE": {
       "ok": true,
       "records": 6,
+      "errors": []
+    },
+    "BSE": {
+      "ok": true,
+      "records": 0,
       "errors": []
     },
     "SEBI": {
@@ -14,11 +19,13 @@
         "HTTP Error 403: Forbidden"
       ]
     },
-    "BSE": {
-      "ok": false,
-      "records": 0,
+    "GMP": {
+      "ok": true,
+      "records": 2,
       "errors": [
-        "Phase 1B"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found"
       ]
     }
   },
@@ -98,7 +105,7 @@
       "close": "21/09/26",
       "listing": "—",
       "sub": "—",
-      "gmp": "—",
+      "gmp": "₹21",
       "gmp_pct": "—",
       "est_list": "—",
       "sector": "—",
@@ -117,7 +124,9 @@
       "exchange": "NSE",
       "symbol": "SONA",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "gmp_source": "Chittorgarh",
+      "gmp_updated_at": "2026-09-14T12:55:22.532383+00:00"
     },
     {
       "id": "jindal-supreme-india-limited",
@@ -162,7 +171,7 @@
       "close": "18/09/26",
       "listing": "—",
       "sub": "—",
-      "gmp": "—",
+      "gmp": "₹21",
       "gmp_pct": "—",
       "est_list": "—",
       "sector": "—",
@@ -181,7 +190,9 @@
       "exchange": "NSE",
       "symbol": "SSRETAIL",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "gmp_source": "Chittorgarh",
+      "gmp_updated_at": "2026-09-14T12:55:24.115251+00:00"
     },
     {
       "id": "hero-motors-limited",
