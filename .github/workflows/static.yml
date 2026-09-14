@@ -41,7 +41,8 @@ jobs:
               '<script src="scripts/ipo-articles.js"></script>',
               '<script src="scripts/ipo-intelligence.js"></script>',
               '<script src="scripts/ipo-analyst.js"></script>',
-              '<script src="scripts/ipo-radar.js"></script>'
+              '<script src="scripts/ipo-radar.js"></script>',
+              '<script src="scripts/ipo-shell.js"></script>'
           ]
           for tag in tags:
               if tag not in s:
