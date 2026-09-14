@@ -29,6 +29,9 @@ jobs:
       - name: Enrich fundamentals and public RHP/DRHP evidence
         run: python scripts/enrich_fundamentals.py
 
+      - name: Preserve embedded fundamentals and filing fallback
+        run: python scripts/enrich_seed_fallback.py
+
       - name: Enrich GMP from IPOGuru when API key is available
         env:
           IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
