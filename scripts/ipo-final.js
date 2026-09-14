@@ -12,7 +12,7 @@ function removeBroker(){var b=document.getElementById('b-brk'),p=document.getEle
 function mergeKnowledge(k){
  if(!Array.isArray(window.ALL_IPOS)||!k||!Array.isArray(k.ipo_overrides))return;
  var map={};k.ipo_overrides.forEach(function(x){map[norm(x.name)]=x;(x.aliases||[]).forEach(function(a){map[norm(a)]=x;});});
- window.ALL_IPOS.forEach(function(i){var x=map[norm(i.name)];if(!x)return;['sector','fresh','ofs','pe','roe','roce','rev','pat','ebitda','de','growth','prom','size','lot','pb','eps','assets','borrowings','retail','min_investment','allotment','refund','shares','listing','use_of_proceeds'].forEach(function(f){if(!good(i[f])&&good(x[f]))i[f]=x[f];});if(!good(i.subscription)&&good(x.subscription)){i.sub=x.subscription;i.subscription_source=x.subscription_source||'video transcript';}i.knowledge_source='user-provided video transcript';});
+ window.ALL_IPOS.forEach(function(i){var x=map[norm(i.name)];if(!x)return;['sector','fresh','ofs','pe','roe','roce','rev','pat','ebitda','de','growth','prom','size','lot','pb','eps','assets','borrowings','retail','min_investment','allotment','refund','shares','listing','use_of_proceeds','gmp','gmp_pct','est_list','gmp_source','gmp_updated_at'].forEach(function(f){if(!good(i[f])&&good(x[f]))i[f]=x[f];});if(!good(i.subscription)&&good(x.subscription)){i.sub=x.subscription;i.subscription_source=x.subscription_source||'video transcript';}i.knowledge_source='user-provided video transcript';});
  if(typeof window.renderAll==='function')window.renderAll();renderComparison();renderAllotment();
 }
 function weekPair(){var names=['veegalanddevelopers','manikaplastech'];return (window.ALL_IPOS||[]).filter(function(i){var n=norm(i.name);return names.some(function(x){return n.indexOf(x)>=0||x.indexOf(n)>=0;});});}
