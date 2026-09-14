@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-14T15:06:30.965119+00:00",
+  "generated_at": "2026-09-14T15:13:42.234650+00:00",
   "today_ist": "2026-09-14",
-  "data_updated_at": "2026-09-14T15:06:30.889537+00:00",
+  "data_updated_at": "2026-09-14T15:13:42.107699+00:00",
   "ipo_count": 12,
-  "field_coverage_pct": 27.0,
+  "field_coverage_pct": 32.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -31,15 +31,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T15:06:21.038958+00:00",
+      "checked_at": "2026-09-14T15:13:28.563756+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,37 +72,44 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T15:06:23.776910+00:00"
+      "checked_at": "2026-09-14T15:13:31.250029+00:00"
     },
     "SeedFallback": {
       "ok": true,
-      "records": 3,
-      "checked_at": "2026-09-14T15:06:30.889535+00:00",
+      "records": 2,
+      "checked_at": "2026-09-14T15:13:41.450056+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
+    },
+    "VideoKnowledge": {
+      "ok": true,
+      "records": 2,
+      "changed_fields": 25,
+      "live_gmp_records": 2,
+      "checked_at": "2026-09-14T15:13:42.107693+00:00"
     }
   },
   "ipos": [
     {
       "id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
-      "fingerprint": "63387ad19d07af42",
+      "fingerprint": "03869f829a44994d",
       "fields": {
         "price": "₹40-43",
         "size": "₹126 Cr",
         "lot": 348,
         "open": "11/09/26",
         "close": "16/09/26",
-        "allotment": null,
-        "listing": "—",
+        "allotment": "17/09/26",
+        "listing": "21/09/26",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
         "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
+        "gmp": "₹8211",
+        "gmp_pct": "+19095.3%",
+        "est_list": "₹8254",
+        "pe": "18x pre-issue; ~9x post-issue shown in the video (data-consistency warning)",
         "roe": "—",
         "roce": "—",
         "growth": "25%",
@@ -119,25 +121,25 @@
     {
       "id": "veegaland-developers-limited",
       "name": "Veegaland Developers Limited",
-      "fingerprint": "a3161073d4ac0bb0",
+      "fingerprint": "af0315a8515043bf",
       "fields": {
         "price": "₹130-140",
         "size": "₹210 Cr",
         "lot": 107,
         "open": "10/09/26",
         "close": "15/09/26",
-        "allotment": null,
-        "listing": "—",
+        "allotment": "16/09/26",
+        "listing": "18/09/26",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
         "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
+        "gmp": "₹8211",
+        "gmp_pct": "+5865.0%",
+        "est_list": "₹8351",
+        "pe": "17x",
+        "roe": "16%",
+        "roce": "11%",
         "growth": "20%",
         "de": "0.40",
         "fresh": "100%",
@@ -463,6 +465,13 @@
     },
     {
       "date": "2026-09-16",
+      "type": "ALLOTMENT",
+      "ipo_id": "veegaland-developers-limited",
+      "name": "Veegaland Developers Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-16",
       "type": "CLOSE",
       "ipo_id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
@@ -487,6 +496,13 @@
       "type": "OPEN",
       "ipo_id": "ss-retail-limited",
       "name": "SS Retail Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-17",
+      "type": "ALLOTMENT",
+      "ipo_id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
       "source": "NSE"
     },
     {
@@ -519,13 +535,101 @@
     },
     {
       "date": "2026-09-18",
+      "type": "LISTING",
+      "ipo_id": "veegaland-developers-limited",
+      "name": "Veegaland Developers Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-18",
       "type": "OPEN",
       "ipo_id": "axiom-gas-engineering-ltd-sme",
       "name": "Axiom Gas Engineering Ltd. SME",
       "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "LISTING",
+      "ipo_id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
+      "source": "NSE"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
+      "fields": [
+        "allotment",
+        "listing",
+        "gmp",
+        "gmp_pct",
+        "est_list",
+        "pe"
+      ]
+    },
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "veegaland-developers-limited",
+      "name": "Veegaland Developers Limited",
+      "fields": [
+        "allotment",
+        "listing",
+        "gmp",
+        "gmp_pct",
+        "est_list",
+        "pe",
+        "roe",
+        "roce"
+      ]
+    },
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-16",
+        "type": "ALLOTMENT",
+        "ipo_id": "veegaland-developers-limited",
+        "name": "Veegaland Developers Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-17",
+        "type": "ALLOTMENT",
+        "ipo_id": "manika-plastech-limited",
+        "name": "Manika Plastech Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-18",
+        "type": "LISTING",
+        "ipo_id": "veegaland-developers-limited",
+        "name": "Veegaland Developers Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-14T15:13:42.234650+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "LISTING",
+        "ipo_id": "manika-plastech-limited",
+        "name": "Manika Plastech Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-14T15:06:30.965119+00:00",
       "type": "DATA_CHANGE",

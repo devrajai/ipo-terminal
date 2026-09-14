@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-14T15:06:30.889537+00:00",
+  "updated_at": "2026-09-14T15:13:42.107699+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -27,15 +27,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T15:06:21.038958+00:00",
+      "checked_at": "2026-09-14T15:13:28.563756+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -73,14 +68,21 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T15:06:23.776910+00:00"
+      "checked_at": "2026-09-14T15:13:31.250029+00:00"
     },
     "SeedFallback": {
       "ok": true,
-      "records": 3,
-      "checked_at": "2026-09-14T15:06:30.889535+00:00",
+      "records": 2,
+      "checked_at": "2026-09-14T15:13:41.450056+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
+    },
+    "VideoKnowledge": {
+      "ok": true,
+      "records": 2,
+      "changed_fields": 25,
+      "live_gmp_records": 2,
+      "checked_at": "2026-09-14T15:13:42.107693+00:00"
     }
   },
   "ipos": [
@@ -93,15 +95,15 @@
       "size": "₹126 Cr",
       "open": "11/09/26",
       "close": "16/09/26",
-      "listing": "—",
+      "listing": "21/09/26",
       "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
+      "gmp": "₹8211",
+      "gmp_pct": "+19095.3%",
+      "est_list": "₹8254",
       "sector": "Plastics",
       "fresh": "100%",
       "ofs": "0%",
-      "pe": "—",
+      "pe": "18x pre-issue; ~9x post-issue shown in the video (data-consistency warning)",
       "roe": "—",
       "roce": "—",
       "rev": "₹85 Cr",
@@ -116,7 +118,21 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-14T15:06:30.889451+00:00"
+      "fundamentals_updated_at": "2026-09-14T15:13:41.449899+00:00",
+      "pb": "2.6x",
+      "eps": "₹2.3 pre-issue; ₹4 post-issue shown in the video (data-consistency warning)",
+      "assets": "₹252→₹320→₹323→₹317 Cr",
+      "borrowings": "₹93→₹97→₹88→₹92 Cr",
+      "retail": "35%",
+      "min_investment": "₹14,964",
+      "allotment": "17/09/26",
+      "refund": "18/09/26",
+      "shares": "18/09/26",
+      "use_of_proceeds": "~₹54 Cr capex; ~₹15 Cr borrowing reduction",
+      "knowledge_source": "user-provided video transcript",
+      "gmp_source": "IPO Central",
+      "gmp_source_url": "https://ipocentral.in/manika-plastech-ipo-gmp-price-date-allotment/",
+      "gmp_updated_at": "2026-09-14T15:13:41.835145+00:00"
     },
     {
       "id": "veegaland-developers-limited",
@@ -127,17 +143,17 @@
       "size": "₹210 Cr",
       "open": "10/09/26",
       "close": "15/09/26",
-      "listing": "—",
+      "listing": "18/09/26",
       "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
+      "gmp": "₹8211",
+      "gmp_pct": "+5865.0%",
+      "est_list": "₹8351",
       "sector": "Real Estate",
       "fresh": "100%",
       "ofs": "0%",
-      "pe": "—",
-      "roe": "—",
-      "roce": "—",
+      "pe": "17x",
+      "roe": "16%",
+      "roce": "11%",
       "rev": "₹320 Cr",
       "pat": "₹25 Cr",
       "ebitda": "₹40 Cr",
@@ -150,7 +166,20 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-14T15:06:30.889468+00:00"
+      "fundamentals_updated_at": "2026-09-14T15:13:41.449924+00:00",
+      "pb": "1.7x",
+      "eps": "₹7.8 pre-issue; ~₹5 post-issue",
+      "assets": "₹221→₹326→₹480 Cr",
+      "borrowings": "₹120→₹170→₹100→₹90 Cr",
+      "retail": "35%",
+      "min_investment": "₹14,980",
+      "allotment": "16/09/26",
+      "refund": "17/09/26",
+      "use_of_proceeds": "~₹119 Cr toward development of ongoing projects",
+      "knowledge_source": "user-provided video transcript",
+      "gmp_source": "IPO Central",
+      "gmp_source_url": "https://ipocentral.in/veegaland-developers-ipo-gmp-price-allotment/",
+      "gmp_updated_at": "2026-09-14T15:13:42.107591+00:00"
     },
     {
       "id": "sonaselection-india-limited",
@@ -220,9 +249,7 @@
       "symbol": "JSIPL",
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "min_investment": "₹14,973",
-      "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-14T15:06:30.889479+00:00"
+      "min_investment": "₹14,973"
     },
     {
       "id": "ss-retail-limited",
