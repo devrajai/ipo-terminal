@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-14T18:27:15.040355+00:00",
+  "generated_at": "2026-09-14T18:43:12.515886+00:00",
   "events": [
     {
       "date": "2026-09-15",
@@ -8,20 +8,6 @@
       "ipo_id": "veegaland-developers-limited",
       "name": "Veegaland Developers Limited",
       "source": "NSE"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "OPEN",
-      "ipo_id": "quanto-agroworld-ltd-sme",
-      "name": "Quanto Agroworld Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "OPEN",
-      "ipo_id": "vama-wovenfab-ltd-sme",
-      "name": "Vama Wovenfab Ltd. SME",
-      "source": "Economic Times"
     },
     {
       "date": "2026-09-16",

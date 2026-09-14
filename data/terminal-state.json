@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-14T18:27:15.040355+00:00",
-  "today_ist": "2026-09-14",
-  "data_updated_at": "2026-09-14T18:27:14.928377+00:00",
-  "ipo_count": 12,
-  "field_coverage_pct": 32.5,
+  "generated_at": "2026-09-14T18:43:12.515886+00:00",
+  "today_ist": "2026-09-15",
+  "data_updated_at": "2026-09-14T18:43:12.412762+00:00",
+  "ipo_count": 10,
+  "field_coverage_pct": 35.2,
   "sources": {
     "NSE": {
       "ok": true,
@@ -37,7 +37,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T18:26:56.321167+00:00",
+      "checked_at": "2026-09-14T18:42:39.454463+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -55,9 +55,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 10,
+          "records": 8,
           "matched": 4,
-          "added": 6,
+          "added": 4,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -72,15 +72,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 12,
+      "records": 10,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T18:27:02.988937+00:00"
+      "checked_at": "2026-09-14T18:42:41.871473+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-14T18:27:14.153827+00:00",
+      "checked_at": "2026-09-14T18:43:11.651061+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -89,7 +89,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-14T18:27:14.928371+00:00"
+      "checked_at": "2026-09-14T18:43:12.412756+00:00"
     }
   },
   "ipos": [
@@ -372,62 +372,6 @@
         "fresh": "—",
         "ofs": "—"
       }
-    },
-    {
-      "id": "vama-wovenfab-ltd-sme",
-      "name": "Vama Wovenfab Ltd. SME",
-      "fingerprint": "b6ce61f338dc0d11",
-      "fields": {
-        "price": "₹324 – ₹341",
-        "size": "₹49.54 Cr",
-        "lot": "400",
-        "open": "15/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "quanto-agroworld-ltd-sme",
-      "name": "Quanto Agroworld Ltd. SME",
-      "fingerprint": "fbafcd746ae8ece0",
-      "fields": {
-        "price": "₹67",
-        "size": "₹31.02 Cr",
-        "lot": "2000",
-        "open": "15/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
     }
   ],
   "events": [
@@ -451,20 +395,6 @@
       "ipo_id": "veegaland-developers-limited",
       "name": "Veegaland Developers Limited",
       "source": "NSE"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "OPEN",
-      "ipo_id": "quanto-agroworld-ltd-sme",
-      "name": "Quanto Agroworld Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-15",
-      "type": "OPEN",
-      "ipo_id": "vama-wovenfab-ltd-sme",
-      "name": "Vama Wovenfab Ltd. SME",
-      "source": "Economic Times"
     },
     {
       "date": "2026-09-16",
