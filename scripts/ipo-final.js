@@ -6,7 +6,7 @@ var MUFG='https://in.mpms.mufg.com/Initial_Offer/public-issues.html';
 function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x];});}
 function good(v){return v!==undefined&&v!==null&&v!==''&&v!=='—'&&v!=='-'&&v!=='TBA';}
 function norm(v){return String(v||'').toLowerCase().replace(/\b(limited|ltd|india|ind|ipo|mainboard|sme|nse|bse)\b/g,' ').replace(/[^a-z0-9]+/g,'');}
-function num(v){var m=String(v==null?'').replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
+function num(v){var m=String(v==null?'':v).replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
 function closePanel(id,bid){var p=document.getElementById(id),b=document.getElementById(bid);if(p)p.classList.remove('show');if(b)b.classList.remove('active');}
 function removeBroker(){var b=document.getElementById('b-brk'),p=document.getElementById('p-brk');if(b)b.remove();if(p)p.remove();}
 function mergeKnowledge(k){
