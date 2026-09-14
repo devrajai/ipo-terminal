@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-14T14:27:19.576633+00:00",
+  "updated_at": "2026-09-14T14:41:22.605794+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -35,7 +35,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T14:27:16.835689+00:00",
+      "checked_at": "2026-09-14T14:41:19.524161+00:00",
       "sources": {
         "Groww": {
           "ok": false,
