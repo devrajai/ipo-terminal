@@ -26,6 +26,9 @@ jobs:
       - name: Enrich free public IPO sources
         run: python scripts/enrich_public_sources.py
 
+      - name: Enrich fundamentals and public RHP/DRHP evidence
+        run: python scripts/enrich_fundamentals.py
+
       - name: Enrich GMP from IPOGuru when API key is available
         env:
           IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
