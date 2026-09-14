@@ -24,7 +24,10 @@ jobs:
       - name: Collect IPO data
         run: python scripts/update_data.py
 
-      - name: Enrich GMP from IPOGuru
+      - name: Enrich free public IPO sources
+        run: python scripts/enrich_public_sources.py
+
+      - name: Enrich GMP from IPOGuru when API key is available
         env:
           IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
         run: python scripts/enrich_gmp_ipoguru.py
