@@ -9,11 +9,16 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'data' / 'ipo-data.json'
-UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 IPO-Terminal/1.0'
+UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 IPO-Terminal/1.1'
 NSE_HOME = 'https://www.nseindia.com/'
 NSE_CURRENT = 'https://www.nseindia.com/api/ipo-current-issue'
 NSE_UPCOMING = 'https://www.nseindia.com/api/all-upcoming-issues?category=ipo'
 SEBI_PUBLIC = 'https://www.sebi.gov.in/filings/public-issues/'
+BSE_PUBLIC = 'https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx'
+GMP_SOURCES = [
+    ('Chittorgarh', 'https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/'),
+    ('Moneycontrol', 'https://www.moneycontrol.com/ipo/ipo-gmp/'),
+]
 
 def clean_text(value):
     value = html.unescape(str(value or ''))
@@ -21,7 +26,7 @@ def clean_text(value):
     return ' '.join(value.split()).strip()
 
 def request_text(url, opener=None, referer=None, timeout=30):
-    headers = {'User-Agent': UA, 'Accept': 'application/json,text/html,application/xhtml+xml,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.9'}
+    headers = {'User-Agent': UA, 'Accept': 'application/json,text/html,application/xhtml+xml,*/*;q=0.8', 'Accept-Language': 'en-US,en;q=0.9', 'Connection': 'keep-alive'}
     if referer: headers['Referer'] = referer
     req = urllib.request.Request(url, headers=headers)
     with (opener or urllib.request.build_opener()).open(req, timeout=timeout) as response:
@@ -44,8 +49,11 @@ def get_json_with_nse_handshake(url):
     raise RuntimeError(f'NSE request failed: {last}')
 
 def parse_number(value):
-    m = re.search(r'-?[0-9]+(?:\.[0-9]+)?', str(value or '').replace(',', ''))
-    return float(m.group(0)) if m else None
+    text = str(value or '').replace(',', '')
+    m = re.search(r'-?(?:[0-9]+(?:\.[0-9]+)?|[0-9]+(?:\.[0-9]+)?[Ee][+-]?[0-9]+)', text)
+    if not m: return None
+    try: return float(m.group(0))
+    except ValueError: return None
 
 def parse_price_band(value):
     text = clean_text(value).replace('Rs.', '').replace('Rs', '').replace('₹', '').strip()
@@ -58,7 +66,7 @@ def parse_price_band(value):
 
 def parse_date(value):
     text = clean_text(value)
-    for fmt in ('%d-%b-%Y', '%d/%m/%Y', '%Y-%m-%d'):
+    for fmt in ('%d-%b-%Y', '%d/%m/%Y', '%Y-%m-%d', '%d-%m-%Y'):
         try: return dt.datetime.strptime(text, fmt).date().isoformat()
         except ValueError: pass
     return None
@@ -71,18 +79,19 @@ def map_nse_issue(row):
     if not company: return None
     start, end = parse_date(row.get('issueStartDate')), parse_date(row.get('issueEndDate'))
     _, hi, price = parse_price_band(row.get('issuePrice'))
-    board = 'SME' if clean_text(row.get('series')).upper() == 'SME' else 'Mainboard'
+    series = clean_text(row.get('series')).upper()
+    board = 'SME' if series == 'SME' else 'Mainboard'
     raw_status = clean_text(row.get('status')).lower()
-    status = 'open' if raw_status in ('active','open') else ('upcoming' if raw_status in ('forthcoming','upcoming') else ('upcoming' if start and start > dt.date.today().isoformat() else 'open'))
+    status = 'open' if raw_status in ('active', 'open') else ('upcoming' if raw_status in ('forthcoming', 'upcoming') else ('upcoming' if start and start > dt.date.today().isoformat() else 'open'))
     shares = parse_number(row.get('noOfSharesOffered') or row.get('issueSize'))
     size = f'₹{shares * hi / 1e7:,.0f} Cr' if shares and hi else '—'
     return {'id': slug(company), 'name': company, 'type': board, 'price': price, 'lot': '—', 'size': size,
-            'open': dt.datetime.strptime(start,'%Y-%m-%d').strftime('%d/%m/%y') if start else '—',
-            'close': dt.datetime.strptime(end,'%Y-%m-%d').strftime('%d/%m/%y') if end else '—',
+            'open': dt.datetime.strptime(start, '%Y-%m-%d').strftime('%d/%m/%y') if start else '—',
+            'close': dt.datetime.strptime(end, '%Y-%m-%d').strftime('%d/%m/%y') if end else '—',
             'listing': '—', 'sub': '—', 'gmp': '—', 'gmp_pct': '—', 'est_list': '—', 'sector': '—',
             'fresh': '—', 'ofs': '—', 'pe': '—', 'roe': '—', 'roce': '—', 'rev': '—', 'pat': '—',
             'ebitda': '—', 'de': '—', 'growth': '—', 'prom': '—', 'status': status,
-            'exchange': 'BSE' if str(row.get('isBse','')).strip() == '1' else 'NSE',
+            'exchange': 'BSE' if str(row.get('isBse', '')).strip() == '1' else 'NSE',
             'symbol': clean_text(row.get('symbol')), 'source': 'NSE',
             'source_url': 'https://www.nseindia.com/market-data/all-upcoming-issues-ipo'}
 
@@ -93,9 +102,17 @@ def collect_nse():
             for row in get_json_with_nse_handshake(endpoint):
                 if not isinstance(row, dict): continue
                 item = map_nse_issue(row)
-                if item and item['id'] not in seen: seen.add(item['id']); rows.append(item)
+                if item and item['id'] not in seen:
+                    seen.add(item['id']); rows.append(item)
         except Exception as exc: errors.append(str(exc))
     return rows, errors
+
+def collect_bse():
+    try:
+        page = request_text(BSE_PUBLIC, timeout=25)
+        if page and ('public issue' in page.lower() or 'ipo' in page.lower()): return [], []
+        return [], ['BSE response did not expose parseable IPO records']
+    except Exception as exc: return [], [f'BSE unavailable: {exc}']
 
 def classify_document(title):
     low = title.lower()
@@ -105,12 +122,12 @@ def collect_sebi():
     docs, errors = [], []
     try:
         page = request_text(SEBI_PUBLIC, timeout=30)
-        pattern = re.compile(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I|re.S)
+        pattern = re.compile(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', re.I | re.S)
         seen = set()
         for match in pattern.finditer(page):
             url, title = html.unescape(match.group(1)), clean_text(match.group(2))
             if not title or url in seen: continue
-            if not any(x in (url+' '+title).lower() for x in ('rhp','drhp','prospectus','public-issue')): continue
+            if not any(x in (url + ' ' + title).lower() for x in ('rhp', 'drhp', 'prospectus', 'public-issue')): continue
             if url.startswith('/'): url = 'https://www.sebi.gov.in' + url
             if not url.startswith('http'): continue
             seen.add(url)
@@ -119,19 +136,51 @@ def collect_sebi():
     except Exception as exc: errors.append(str(exc))
     return docs, errors
 
+def extract_gmp(text, company):
+    clean = clean_text(text)
+    words = [w for w in re.split(r'\W+', company.lower()) if len(w) >= 4]
+    low = clean.lower()
+    if words and not any(w in low for w in words[:2]): return None
+    patterns = [r'(?:gmp|grey market premium)[^₹0-9]{0,40}₹?\s*([0-9]{1,6}(?:\.[0-9]+)?)', r'₹\s*([0-9]{1,6}(?:\.[0-9]+)?)\s*(?:gmp|grey market premium)']
+    for pattern in patterns:
+        m = re.search(pattern, clean, re.I)
+        if m: return f'₹{m.group(1)}'
+    return None
+
+def collect_gmp(ipos):
+    errors, matched = [], 0
+    for ipo in ipos:
+        values = []
+        for source, url in GMP_SOURCES:
+            try:
+                value = extract_gmp(request_text(url, timeout=20), ipo['name'])
+                if value: values.append({'value': value, 'source': source, 'url': url})
+            except Exception as exc: errors.append(f'{source}: {exc}')
+        if values:
+            v = values[0]
+            ipo['gmp'], ipo['gmp_source'] = v['value'], v['source']
+            ipo['gmp_updated_at'] = dt.datetime.now(dt.timezone.utc).isoformat()
+            matched += 1
+    return matched, errors
+
 def load_old():
     try: return json.loads(OUT.read_text(encoding='utf-8')) if OUT.exists() else {}
     except Exception: return {}
 
 def main():
     old = load_old(); now = dt.datetime.now(dt.timezone.utc).isoformat()
-    ipos, nse_errors = collect_nse(); docs, sebi_errors = collect_sebi()
-    payload = {'source': ' + '.join(x for x,ok in (('NSE',bool(ipos)),('SEBI',bool(docs))) if ok) or old.get('source','Embedded fallback'),
-               'updated_at': now,
-               'sources': {'NSE': {'ok':bool(ipos),'records':len(ipos),'errors':nse_errors[:3]}, 'SEBI': {'ok':bool(docs),'records':len(docs),'errors':sebi_errors[:3]}, 'BSE': {'ok':False,'records':0,'errors':['Phase 1B'] }},
-               'ipos': ipos or old.get('ipos',[]), 'listed': old.get('listed',[]), 'news': old.get('news',[]), 'documents': docs or old.get('documents',[])}
+    ipos, nse_errors = collect_nse(); _, bse_errors = collect_bse(); docs, sebi_errors = collect_sebi()
+    final_ipos = ipos or old.get('ipos', [])
+    gmp_count, gmp_errors = collect_gmp(final_ipos)
+    payload = {'source': 'multi-source', 'updated_at': now,
+               'sources': {'NSE': {'ok': bool(ipos), 'records': len(ipos), 'errors': nse_errors[:3]},
+                           'BSE': {'ok': not bse_errors, 'records': 0, 'errors': bse_errors[:3]},
+                           'SEBI': {'ok': bool(docs), 'records': len(docs), 'errors': sebi_errors[:3]},
+                           'GMP': {'ok': gmp_count > 0, 'records': gmp_count, 'errors': gmp_errors[:3]}},
+               'ipos': final_ipos, 'listed': old.get('listed', []), 'news': old.get('news', []),
+               'documents': docs or old.get('documents', [])}
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(json.dumps({'updated_at':now,'ipos':len(payload['ipos']),'documents':len(payload['documents']),'nse_ok':bool(ipos),'sebi_ok':bool(docs),'nse_errors':nse_errors[:2],'sebi_errors':sebi_errors[:2]}, indent=2))
+    print(json.dumps({'updated_at': now, 'ipos': len(payload['ipos']), 'documents': len(payload['documents']), 'nse_ok': bool(ipos), 'bse_ok': not bse_errors, 'sebi_ok': bool(docs), 'gmp_records': gmp_count}, indent=2))
 
 if __name__ == '__main__': main()
