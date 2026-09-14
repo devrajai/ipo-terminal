@@ -32,6 +32,9 @@ jobs:
       - name: Preserve embedded fundamentals and filing fallback
         run: python scripts/enrich_seed_fallback.py
 
+      - name: Apply transcript knowledge and current-week GMP fallback
+        run: python scripts/apply_video_knowledge.py
+
       - name: Enrich GMP from IPOGuru when API key is available
         env:
           IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
