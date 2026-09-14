@@ -24,6 +24,11 @@ jobs:
       - name: Collect IPO data
         run: python scripts/update_data.py
 
+      - name: Enrich GMP from IPOGuru
+        env:
+          IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
+        run: python scripts/enrich_gmp_ipoguru.py
+
       - name: Commit updated data
         run: |
           git config user.name 'github-actions[bot]'
