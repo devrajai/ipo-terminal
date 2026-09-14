@@ -46,10 +46,13 @@ jobs:
       - name: Build future-proof terminal state and event stream
         run: python scripts/build_terminal_state.py
 
-      - name: Commit updated terminal data
+      - name: Validate IPO source and filing links
+        run: python scripts/validate_links.py
+
+      - name: Commit updated terminal data and link health
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ipo-data.json data/terminal-state.json data/terminal-events.json
-          git diff --cached --quiet || git commit -m 'chore: update IPO terminal state'
+          git add data/ipo-data.json data/terminal-state.json data/terminal-events.json data/ipo-link-health.json
+          git diff --cached --quiet || git commit -m 'chore: update IPO terminal state and link health'
           git push
