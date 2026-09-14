@@ -1,0 +1,25 @@
+/* Research Lens v2: evidence-transparent score breakdown and source links. */
+(function(){
+'use strict';
+function e(v){return String(v==null?'':v).replace(/[&<>\"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[x];});}
+function n(v){var m=String(v==null?'':v).replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
+function ok(v){return v!=null&&v!==''&&v!=='—'&&v!=='-';}
+function upper(v){var m=String(v||'').replace(/,/g,'').match(/(\d+(?:\.\d+)?)\s*(?:-|–|—)\s*(\d+(?:\.\d+)?)/);return m?parseFloat(m[2]):n(v);}
+function gmpOK(i){var g=n(i.gmp),p=upper(i.price);return g!=null&&p!=null&&g<=p*2;}
+function src(i,k){if(k==='gmp')return i.gmp_source_url||i.gmp_source||'';if(['price','size','lot','open','close','listing','sub'].indexOf(k)>=0)return i.source_url||'';return i.knowledge_source||i.fundamentals_source||i.source||'';}
+function calc(i){var s=50,p=[],r=[],g=n(i.growth),roe=n(i.roe),roce=n(i.roce),de=n(i.de),pe=n(i.pe),sub=n(i.sub),gp=n(i.gmp_pct),ofs=n(i.ofs),goodG=gmpOK(i);
+if(g!=null){var a=g>=20?14:g>=12?9:g>=5?4:-5;s+=a;p.push(['Growth',a,g+'%',src(i,'growth')]);}
+if(roe!=null&&roce!=null){var a2=roe>=15&&roce>=15?14:roe>=10&&roce>=10?6:-5;s+=a2;p.push(['ROE / ROCE',a2,roe+'% / '+roce+'%',src(i,'roe')]);}
+if(de!=null){var a3=de<=.3?8:de<=.6?4:de<=1?0:-8;s+=a3;p.push(['Debt / D-E',a3,String(i.de),src(i,'de')]);if(de>1)r.push('high debt');}
+if(pe!=null){var a4=pe<=15?8:pe<=25?5:pe<=35?1:pe<=50?-4:-8;s+=a4;p.push(['P/E valuation',a4,String(i.pe),src(i,'pe')]);if(pe>35)r.push('high P/E');}
+if(ofs!=null&&ofs>50){p.push(['OFS mix',0,String(i.ofs),src(i,'ofs')]);r.push('high OFS mix');}
+if(sub!=null){var a5=sub>=50?8:sub>=20?6:sub>=10?4:sub>=3?2:sub<1?-4:0;s+=a5;p.push(['Subscription',a5,String(i.sub),src(i,'sub')]);}
+if(goodG&&gp!=null){var a6=gp>=20?8:gp>=10?5:gp>=0?2:-5;s+=a6;p.push(['GMP sentiment',a6,String(i.gmp_pct),src(i,'gmp')]);}else if(ok(i.gmp)){p.push(['GMP sanity',0,'excluded: price inconsistency',src(i,'gmp')]);r.push('GMP failed price-consistency check');}
+if(!ok(i.pe))r.push('peer valuation unavailable');
+var cov=['price','size','lot','open','close','sub','gmp','fresh','ofs','pe','roe','roce','rev','pat','ebitda','de','growth','prom'].filter(function(k){return ok(i[k]);}).length;
+return {score:Math.max(0,Math.min(100,Math.round(s))),conf:Math.min(100,45+cov*3),parts:p,risk:r,cov:cov};}
+function link(u){return /^https?:\/\//i.test(String(u||''))?'<a class="evidence-link" target="_blank" rel="noopener" href="'+e(u)+'">source ↗</a>':'<span class="tx3">source unavailable</span>';}
+function render(){var p=document.getElementById('ipo-research-lens'),c=document.getElementById('research-lens-content');if(!p||!c||!Array.isArray(window.ALL_IPOS))return;var list=window.ALL_IPOS.filter(function(i){return i&&i.name;}).map(function(i){return {i:i,s:calc(i)};}).sort(function(a,b){return b.s.score-a.s.score;}).slice(0,12);var h='<div class="panel-title">IPO Research Lens <button class="close-x" id="research-lens-close-v2">Close</button></div><div class="research-intro-v2"><b>Evidence-weighted research signals</b><div class="tx3">Base 50 + transparent parameter impacts. Every used parameter shows its source link. Invalid/anomalous GMP is excluded.</div></div><div class="news-list">';list.forEach(function(x){var a=x.s,cl=a.score>=75?'gn':a.score>=60?'yl':'rd';h+='<div class="news-item" style="border-left-color:var(--'+cl+')"><div class="rl-top"><div><b style="font-size:14px">'+e(x.i.name)+'</b><div class="tx3" style="font-size:9px">'+e(x.i.type||'IPO')+' · '+e(x.i.sector||'Sector unavailable')+'</div></div><div><b class="'+cl+'" style="font-size:22px">'+a.score+'</b><span class="tx3" style="font-size:8px"> /100</span></div></div><div class="tx3" style="font-size:8px;margin:4px 0">Confidence '+a.conf+'% · Evidence coverage '+a.cov+' fields</div><div class="rl-table"><div class="rl-row rl-head"><span>Parameter</span><span>Impact</span><span>Observed</span><span>Link</span></div>'+a.parts.map(function(q){return '<div class="rl-row"><span><b>'+e(q[0])+'</b></span><span class="'+(q[1]>0?'gn':q[1]<0?'rd':'tx3')+'">'+(q[1]>0?'+':'')+q[1]+'</span><span>'+e(q[2])+'</span><span>'+link(q[3])+'</span></div>';}).join('')+'</div><div style="font-size:9px;margin-top:7px"><b>Check next:</b> '+e(a.risk.length?a.risk.join(' · '):'No major warning in available fields')+'</div></div>';});h+='</div>';c.innerHTML=h;p.classList.add('show');var b=document.getElementById('b-research-lens');if(b)b.classList.add('active');var close=document.getElementById('research-lens-close-v2');if(close)close.onclick=function(){p.classList.remove('show');if(b)b.classList.remove('active');};}
+function init(){var b=document.getElementById('b-research-lens');if(!b)return;b.onclick=function(){var p=document.getElementById('ipo-research-lens');if(p&&p.classList.contains('show')){p.classList.remove('show');b.classList.remove('active');}else render();};}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,900);});else setTimeout(init,900);
+})();
