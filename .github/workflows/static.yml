@@ -38,7 +38,8 @@ jobs:
           tags=[
               '<script src="scripts/ui-enhancements.js"></script>',
               '<script src="scripts/ipo-calendar.js"></script>',
-              '<script src="scripts/ipo-articles.js"></script>'
+              '<script src="scripts/ipo-articles.js"></script>',
+              '<script src="scripts/ipo-intelligence.js"></script>'
           ]
           for tag in tags:
               if tag not in s:
