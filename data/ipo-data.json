@@ -1,6 +1,6 @@
 {
-  "source": "multi-source",
-  "updated_at": "2026-09-14T12:55:14.432344+00:00",
+  "source": "multi-source-live-gmp",
+  "updated_at": "2026-09-14T13:27:32.578241+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -20,9 +20,15 @@
       ]
     },
     "GMP": {
-      "ok": true,
-      "records": 2,
+      "ok": false,
+      "records": 0,
+      "sources": [
+        "InvestorGain",
+        "Chittorgarh",
+        "Moneycontrol"
+      ],
       "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found"
@@ -126,7 +132,9 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "Chittorgarh",
-      "gmp_updated_at": "2026-09-14T12:55:22.532383+00:00"
+      "gmp_source_url": "",
+      "gmp_updated_at": "2026-09-14T12:55:22.532383+00:00",
+      "gmp_source_updated_at": null
     },
     {
       "id": "jindal-supreme-india-limited",
@@ -192,7 +200,9 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "Chittorgarh",
-      "gmp_updated_at": "2026-09-14T12:55:24.115251+00:00"
+      "gmp_source_url": "",
+      "gmp_updated_at": "2026-09-14T12:55:24.115251+00:00",
+      "gmp_source_updated_at": null
     },
     {
       "id": "hero-motors-limited",
