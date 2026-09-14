@@ -35,10 +35,11 @@ jobs:
           from pathlib import Path
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
-          tag='<script src="scripts/ui-enhancements.js"></script>'
-          if tag not in s:
-              s=s.replace('</body>',tag+'</body>',1)
-              p.write_text(s,encoding='utf-8')
+          tags=['<script src="scripts/ui-enhancements.js"></script>','<script src="scripts/ipo-calendar.js"></script>']
+          for tag in tags:
+              if tag not in s:
+                  s=s.replace('</body>',tag+'</body>',1)
+          p.write_text(s,encoding='utf-8')
           PY
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
