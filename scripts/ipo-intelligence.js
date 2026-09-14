@@ -23,10 +23,14 @@ function render(){
   p.innerHTML=h;p.classList.add('show');document.getElementById('ipi-btn').classList.add('active');
   document.getElementById('ipi-close').onclick=function(){p.classList.remove('show');document.getElementById('ipi-btn').classList.remove('active');};
 }
+function refreshSourceHealth(){
+  if(window.__IPO_DATA__)return;
+  fetch('data/ipo-data.json?ts='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){if(d){window.__IPO_DATA__=d;if(document.getElementById('ipo-intelligence-panel').classList.contains('show'))render();}}).catch(function(){});
+}
 function init(){
   if(document.getElementById('ipi-btn'))return;
   var box=document.querySelector('.hbtns');if(!box)return;
-  var b=document.createElement('button');b.className='hb';b.id='ipi-btn';b.textContent='IPO Intelligence';b.onclick=render;box.appendChild(b);
+  var b=document.createElement('button');b.className='hb';b.id='ipi-btn';b.textContent='IPO Intelligence';b.onclick=function(){refreshSourceHealth();render();};box.appendChild(b);
   var p=document.createElement('div');p.className='panel';p.id='ipo-intelligence-panel';document.body.appendChild(p);
 }
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,150);});else setTimeout(init,150);
