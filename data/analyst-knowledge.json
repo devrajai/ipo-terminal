@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "name": "IPO Terminal Evidence Engine",
+  "purpose": "Evidence-first IPO analysis framework. This file is a knowledge/configuration layer, not copied editorial content.",
+  "principles": [
+    "Official exchange and regulatory records outrank aggregators.",
+    "GMP is unofficial and must never be the sole reason for an IPO decision.",
+    "Missing data reduces confidence; it does not become a guessed value.",
+    "Separate listing-pop signals from long-term business quality.",
+    "Every positive or negative conclusion should be traceable to an available field or source.",
+    "A strong score with weak evidence should be shown as low confidence.",
+    "IPO Terminal should explain why an IPO fits a strategy rather than simply saying Apply or Avoid."
+  ],
+  "modes": {
+    "balanced": {"label": "Balanced", "weights": {"fundamentals": 30, "valuation": 20, "structure": 12, "demand": 12, "gmp": 8, "timing": 8, "data": 10}},
+    "listing": {"label": "Listing gain", "weights": {"fundamentals": 15, "valuation": 15, "structure": 10, "demand": 22, "gmp": 20, "timing": 8, "data": 10}},
+    "longterm": {"label": "Long term", "weights": {"fundamentals": 38, "valuation": 25, "structure": 12, "demand": 5, "gmp": 3, "timing": 7, "data": 10}},
+    "riskfirst": {"label": "Risk first", "weights": {"fundamentals": 32, "valuation": 20, "structure": 18, "demand": 5, "gmp": 2, "timing": 3, "data": 20}}
+  },
+  "future_evidence": [
+    "DRHP/RHP extracted risk factors and issue-objective text",
+    "Peer valuation from listed companies",
+    "Anchor investor quality and allocation",
+    "Registrar and allotment data",
+    "GMP daily history and source consensus",
+    "Subscription day-by-day trajectory",
+    "Listing price and post-listing returns",
+    "Promoter pledge and related-party indicators when available",
+    "Market regime and sector momentum",
+    "User-supplied analyst videos, podcasts and transcripts"
+  ],
+  "training_policy": {
+    "recommended_first_step": "retrieval_augmented_evidence",
+    "accepted_materials": ["transcripts", "podcast_transcripts", "video_transcripts", "PDF research notes", "user-authored checklists", "public source URLs"],
+    "rule": "User-supplied educational material should influence the framework only after attribution and evidence review; it should not overwrite official company facts."
+  }
+}
