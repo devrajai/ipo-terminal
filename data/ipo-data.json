@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-14T22:50:56.529358+00:00",
+  "updated_at": "2026-09-14T23:03:43.829254+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -33,7 +33,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T22:50:43.623110+00:00",
+      "checked_at": "2026-09-14T23:03:28.716049+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -71,12 +71,12 @@
       "records": 10,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T22:50:46.322632+00:00"
+      "checked_at": "2026-09-14T23:03:31.976432+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-14T22:50:56.276895+00:00",
+      "checked_at": "2026-09-14T23:03:42.823605+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -85,7 +85,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-14T22:50:56.529344+00:00"
+      "checked_at": "2026-09-14T23:03:43.829248+00:00"
     }
   },
   "ipos": [
@@ -122,10 +122,10 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "IPO Central",
       "gmp_source_url": "https://ipocentral.in/manika-plastech-ipo-gmp-price-date-allotment/",
-      "gmp_updated_at": "2026-09-14T22:50:56.445937+00:00",
+      "gmp_updated_at": "2026-09-14T23:03:43.385132+00:00",
       "gmp_source_updated_at": null,
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-14T22:50:56.276753+00:00",
+      "fundamentals_updated_at": "2026-09-14T23:03:42.823525+00:00",
       "pb": "2.6x",
       "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
       "assets": "₹252→₹320→₹323→₹317 Cr",
@@ -171,10 +171,10 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "IPO Central",
       "gmp_source_url": "https://ipocentral.in/veegaland-developers-ipo-gmp-price-allotment/",
-      "gmp_updated_at": "2026-09-14T22:50:56.529210+00:00",
+      "gmp_updated_at": "2026-09-14T23:03:43.829177+00:00",
       "gmp_source_updated_at": null,
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-14T22:50:56.276778+00:00",
+      "fundamentals_updated_at": "2026-09-14T23:03:42.823542+00:00",
       "pb": "1.7x",
       "eps": "₹7.8 pre-issue; ~₹5 post-issue",
       "assets": "₹221→₹326→₹480 Cr",
