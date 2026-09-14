@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-14T15:13:42.234650+00:00",
+  "generated_at": "2026-09-14T15:15:10.835849+00:00",
   "today_ist": "2026-09-14",
-  "data_updated_at": "2026-09-14T15:13:42.107699+00:00",
+  "data_updated_at": "2026-09-14T15:15:10.706583+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 32.5,
   "sources": {
@@ -31,10 +31,13 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-14T15:13:28.563756+00:00",
+      "checked_at": "2026-09-14T15:14:54.190989+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -72,21 +75,21 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-14T15:13:31.250029+00:00"
+      "checked_at": "2026-09-14T15:14:56.709271+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-14T15:13:41.450056+00:00",
+      "checked_at": "2026-09-14T15:15:09.955142+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
     "VideoKnowledge": {
       "ok": true,
       "records": 2,
-      "changed_fields": 25,
+      "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-14T15:13:42.107693+00:00"
+      "checked_at": "2026-09-14T15:15:10.706576+00:00"
     }
   },
   "ipos": [
