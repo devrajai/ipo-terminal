@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T13:37:48.103632+00:00",
+  "generated_at": "2026-09-15T13:52:39.282264+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T13:37:47.980115+00:00",
+  "data_updated_at": "2026-09-15T13:52:39.169095+00:00",
   "ipo_count": 12,
-  "field_coverage_pct": 34.5,
+  "field_coverage_pct": 34.9,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 8,
+      "records": 9,
       "errors": []
     },
     "BSE": {
@@ -20,7 +20,7 @@
       "ok": false,
       "records": 0,
       "errors": [
-        "HTTP Error 403: Forbidden"
+        "<urlopen error _ssl.c:1064: The handshake operation timed out>"
       ]
     },
     "GMP": {
@@ -34,11 +34,12 @@
       "errors": [
         "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found"
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T13:37:44.361513+00:00",
+      "checked_at": "2026-09-15T13:52:22.303095+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -50,15 +51,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 6,
+          "matched": 7,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
           "records": 10,
-          "matched": 6,
-          "added": 4,
+          "matched": 7,
+          "added": 3,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -76,12 +77,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T13:37:45.872118+00:00"
+      "checked_at": "2026-09-15T13:52:25.188698+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T13:37:47.740362+00:00",
+      "checked_at": "2026-09-15T13:52:38.390317+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -90,7 +91,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T13:37:47.980110+00:00"
+      "checked_at": "2026-09-15T13:52:39.169089+00:00"
     }
   },
   "ipos": [
@@ -291,6 +292,34 @@
       }
     },
     {
+      "id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fingerprint": "04c748f7366e6e81",
+      "fields": {
+        "price": "₹112 – ₹118",
+        "size": "₹42.52 Cr",
+        "lot": "1200",
+        "open": "17/09/26",
+        "close": "Sep 21, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
       "fingerprint": "08fc5a43c703e9a0",
@@ -401,34 +430,6 @@
         "fresh": "—",
         "ofs": "—"
       }
-    },
-    {
-      "id": "spectraa-technology-solutions-ltd-sme",
-      "name": "SpectraA Technology Solutions Ltd. SME",
-      "fingerprint": "c102058e4f3d07ca",
-      "fields": {
-        "price": "₹112 – ₹118",
-        "size": "₹42.52 Cr",
-        "lot": "1200",
-        "open": "17/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
     }
   ],
   "events": [
@@ -519,9 +520,9 @@
     {
       "date": "2026-09-17",
       "type": "OPEN",
-      "ipo_id": "spectraa-technology-solutions-ltd-sme",
-      "name": "SpectraA Technology Solutions Ltd. SME",
-      "source": "Economic Times"
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-18",
@@ -560,6 +561,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-15T13:52:39.282264+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-17",
+        "type": "OPEN",
+        "ipo_id": "spectraa-technology-solutions-limited",
+        "name": "SpectraA Technology Solutions Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-15T08:27:29.195961+00:00",
       "type": "NEW_EVENT",
