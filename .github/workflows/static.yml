@@ -25,10 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
       - name: Validate feature JavaScript
         run: |
           node --check scripts/ipo-fundamentals.js
@@ -36,7 +34,6 @@ jobs:
           node --check scripts/ipo-radar.js
           node --check scripts/ipo-analyst.js
           node --check scripts/ipo-nav.js
-
       - name: Prepare site with UI enhancements
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -50,75 +47,28 @@ jobs:
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
           q=os.environ.get('BUILD_SHA','build')[:12]
-
-          # Remove the legacy Brokers button from the generated navigation.
           s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
-
-          # Hard-wire the new feature buttons into the actual HTML.
           marker='</div></div><div class="kpi-row">'
-          feature_buttons=(
-              '<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
-              '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
-              '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
-              '<button class="hb" id="b-research-lens" type="button">1-Lot Decision</button>'
-          )
+          feature_buttons=('<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
+                           '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
+                           '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
+                           '<button class="hb" id="b-research-lens" type="button">1-Lot Decision</button>')
           if 'id="ipf-btn"' not in s:
-              s=s.replace(marker, feature_buttons+marker, 1)
-
-          # Load every feature explicitly with a build-version query string.
-          tags=[
-              'scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js',
-              'scripts/ipo-intelligence.js','scripts/ipo-analyst.js','scripts/ipo-radar.js',
-              'scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js',
-              'scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js',
-              'scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js'
-          ]
+              s=s.replace(marker,feature_buttons+marker,1)
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-analyst.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
               s=s.replace(f'<script src="{src}"></script>','')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
-
-          # The feature modules normally create their own buttons. Because the
-          # buttons above are now hard-wired, this fallback removes a button and
-          # re-loads its module on first click so the module can create/bind its
-          # panel and button normally. This is deliberately self-healing.
-          fallback=f'''<script>
-(function(){{
-  var defs={{
-    'ipf-btn':['ipo-fundamentals-panel','scripts/ipo-fundamentals.js'],
-    'dna-btn':['ipo-dna-panel','scripts/ipo-dna.js'],
-    'radar-btn':['ipo-radar-panel','scripts/ipo-radar.js'],
-    'b-research-lens':['ipo-research-lens','scripts/ipo-analyst.js']
-  }};
-  function boot(id){{
-    var d=defs[id],b=document.getElementById(id);if(!d||!b)return;
-    var p=document.getElementById(d[0]);
-    if(p){{p.classList.toggle('show');b.classList.toggle('active');return;}}
-    b.remove();
-    var s=document.createElement('script');s.src=d[1]+'?fallback='+Date.now();s.onload=function(){{
-      setTimeout(function(){{var nb=document.getElementById(id);if(nb)nb.click();}},500);
-    }};document.body.appendChild(s);
-  }}
-  function wire(){{
-    Object.keys(defs).forEach(function(id){{
-      var b=document.getElementById(id);if(!b||b.dataset.fallbackWired==='1')return;
-      b.dataset.fallbackWired='1';b.onclick=function(){{boot(id);}};
-    }});
-  }}
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){{setTimeout(wire,800);}});else setTimeout(wire,800);
-  setInterval(wire,1500);
-}})();
-</script>'''
+          fallback="<script>(function(){var d={'ipf-btn':['ipo-fundamentals-panel','scripts/ipo-fundamentals.js'],'dna-btn':['ipo-dna-panel','scripts/ipo-dna.js'],'radar-btn':['ipo-radar-panel','scripts/ipo-radar.js'],'b-research-lens':['ipo-research-lens','scripts/ipo-analyst.js']};function boot(id){var x=d[id],b=document.getElementById(id);if(!x||!b)return;var p=document.getElementById(x[0]);if(p){p.classList.toggle('show');b.classList.toggle('active');return;}b.remove();var s=document.createElement('script');s.src=x[1]+'?fallback='+Date.now();s.onload=function(){setTimeout(function(){var nb=document.getElementById(id);if(nb)nb.click();},500)};document.body.appendChild(s)}function wire(){Object.keys(d).forEach(function(id){var b=document.getElementById(id);if(!b||b.dataset.fallbackWired==='1')return;b.dataset.fallbackWired='1';b.onclick=function(){boot(id)}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,800)});else setTimeout(wire,800);setInterval(wire,1500)})();</script>"
           s=s.replace('</body>',fallback+'</body>',1)
           p.write_text(s,encoding='utf-8')
           PY
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: '_site'
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
