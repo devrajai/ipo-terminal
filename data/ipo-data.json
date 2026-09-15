@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-15T23:03:28.959644+00:00",
+  "updated_at": "2026-09-15T23:22:15.192341+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -35,7 +35,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T23:03:23.875108+00:00",
+      "checked_at": "2026-09-15T23:21:37.473430+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -73,12 +73,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T23:03:26.547994+00:00"
+      "checked_at": "2026-09-15T23:21:41.109577+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-15T23:03:28.513867+00:00",
+      "checked_at": "2026-09-15T23:22:14.177487+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -87,17 +87,17 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T23:03:28.767411+00:00"
+      "checked_at": "2026-09-15T23:22:15.048345+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-15T23:03:28.815620+00:00"
+      "checked_at": "2026-09-15T23:22:15.085763+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-15T23:03:28.959644+00:00",
+      "checked_at": "2026-09-15T23:22:15.192341+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -125,7 +125,7 @@
       "ok": true,
       "records": 13,
       "verified": 3,
-      "checked_at": "2026-09-15T23:03:28.959644+00:00"
+      "checked_at": "2026-09-15T23:22:15.192341+00:00"
     }
   },
   "ipos": [
@@ -262,10 +262,10 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "IPO Central",
       "gmp_source_url": "https://ipocentral.in/manika-plastech-ipo-gmp-price-date-allotment/",
-      "gmp_updated_at": "2026-09-15T23:03:28.682037+00:00",
+      "gmp_updated_at": "2026-09-15T23:22:14.627738+00:00",
       "gmp_source_updated_at": null,
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-15T23:03:28.513746+00:00",
+      "fundamentals_updated_at": "2026-09-15T23:22:14.177407+00:00",
       "pb": "2.6x",
       "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
       "assets": "₹252→₹320→₹323→₹317 Cr",
@@ -311,7 +311,7 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_source": "IPO Central",
       "gmp_source_url": "https://ipocentral.in/veegaland-developers-ipo-gmp-price-allotment/",
-      "gmp_updated_at": "2026-09-15T23:03:28.767335+00:00",
+      "gmp_updated_at": "2026-09-15T23:22:15.048280+00:00",
       "gmp_source_updated_at": null,
       "pb": "1.7x",
       "eps": "₹7.8 pre-issue; ~₹5 post-issue",
@@ -399,7 +399,7 @@
       "min_investment": "₹14,280",
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-15T23:03:28.815605+00:00",
+      "video_evidence_updated_at": "2026-09-15T23:22:15.085749+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
