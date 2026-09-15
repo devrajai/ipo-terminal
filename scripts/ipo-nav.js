@@ -5,14 +5,15 @@ var wanted=['b-open','b-upc','b-pipe','b-list','b-comp','b-allot','b-news','b-do
 var labels={'ipc-btn':'IPO Calendar','ipf-btn':'IPO Fundamentals','dna-btn':'IPO DNA','radar-btn':'IPO Radar','lot1-btn':'Lot Decision'};
 var modules={ipf:['ipf-btn','scripts/ipo-fundamentals.js'],dna:['dna-btn','scripts/ipo-dna.js'],radar:['radar-btn','scripts/ipo-radar.js']};
 function loadScript(src){var s=document.createElement('script');s.src=src+'?navclick='+Date.now();s.async=false;document.body.appendChild(s);}
-function showActive(id){document.querySelectorAll('.lot-decision-btn,.hb').forEach(function(x){if(x.id&&/^(ipf-btn|dna-btn|radar-btn|lot1-btn)$/.test(x.id))x.classList.remove('active');});var b=document.getElementById(id);if(b)b.classList.add('active');}
-function rebootFeature(key){var spec=modules[key],id=spec[0],pId=key==='ipf'?'ipo-fundamentals-panel':key==='dna'?'ipo-dna-panel':'ipo-radar-panel';var old=document.getElementById(id);if(old)old.remove();var p=document.getElementById(pId);if(p)p.remove();loadScript(spec[1]);setTimeout(function(){var b=document.getElementById(id);if(b){showActive(id);b.click();}},500);}
-function featureClick(key){var id=modules[key][0],pId=key==='ipf'?'ipo-fundamentals-panel':key==='dna'?'ipo-dna-panel':'ipo-radar-panel',p=document.getElementById(pId);if(p){if(p.classList.contains('show')){p.classList.remove('show');var b=document.getElementById(id);if(b)b.classList.remove('active');}else{p.classList.add('show');showActive(id);}}else rebootFeature(key);}
+function showActive(id){document.querySelectorAll('.hb').forEach(function(x){if(x.id&&/^(ipf-btn|dna-btn|radar-btn|lot1-btn)$/.test(x.id))x.classList.remove('active');});var b=document.getElementById(id);if(b)b.classList.add('active');}
+function rebootFeature(key){var spec=modules[key],id=spec[0],pId=key==='ipf'?'ipo-fundamentals-panel':key==='dna'?'ipo-dna-panel':'ipo-radar-panel';var old=document.getElementById(id);if(old)old.remove();var p=document.getElementById(pId);if(p)p.remove();loadScript(spec[1]);setTimeout(function(){var b=document.getElementById(id);if(b){b.onclick=b.onclick;showActive(id);b.click();setTimeout(function(){showActive(id);},80);}},500);}
+function featureClick(key){var id=modules[key][0],pId=key==='ipf'?'ipo-fundamentals-panel':key==='dna'?'ipo-dna-panel':'ipo-radar-panel',p=document.getElementById(pId),b=document.getElementById(id);showActive(id);if(p){if(p.classList.contains('show')){p.classList.remove('show');if(b)b.classList.remove('active');}else{p.classList.add('show');showActive(id);}}else rebootFeature(key);}
 function openPlanner(lots){
  var p=document.getElementById('ipo-fundamentals-panel');
- if(!p){rebootFeature('ipf');setTimeout(function(){openPlanner(lots);},750);return;}
+ if(!p){rebootFeature('ipf');setTimeout(function(){openPlanner(lots);},850);return;}
  var b=document.getElementById('ipf-btn');
- /* Lot Decision is intentionally an alias: clicking it automatically opens IPO Fundamentals. */
+ /* Lot Decision is an alias: always open the IPO Fundamentals planner. */
+ showActive('ipf-btn');
  if(!p.classList.contains('show')){if(b)b.click();else p.classList.add('show');}
  setTimeout(function(){
    p=document.getElementById('ipo-fundamentals-panel');
@@ -20,10 +21,9 @@ function openPlanner(lots){
    p.classList.add('show');
    var t=document.querySelector('.lot-tabs .planner-tab[data-lots="'+lots+'"]');
    if(t)t.click();
-   /* Keep IPO Fundamentals highlighted because Lot Decision has opened that panel. */
    showActive('ipf-btn');
    p.scrollIntoView({behavior:'smooth',block:'start'});
- },350);
+ },500);
 }
 function wire(){
  var nav=document.querySelector('.hbtns');if(!nav)return;
