@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T12:39:13.731709+00:00",
+  "generated_at": "2026-09-15T12:42:53.010454+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T12:39:13.650884+00:00",
+  "data_updated_at": "2026-09-15T12:42:52.883125+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 34.5,
   "sources": {
@@ -20,7 +20,7 @@
       "ok": false,
       "records": 0,
       "errors": [
-        "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+        "HTTP Error 403: Forbidden"
       ]
     },
     "GMP": {
@@ -38,7 +38,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T12:38:59.415167+00:00",
+      "checked_at": "2026-09-15T12:42:35.232139+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -76,12 +76,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T12:39:02.283743+00:00"
+      "checked_at": "2026-09-15T12:42:38.307927+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T12:39:12.954483+00:00",
+      "checked_at": "2026-09-15T12:42:51.885302+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -90,7 +90,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T12:39:13.650879+00:00"
+      "checked_at": "2026-09-15T12:42:52.883118+00:00"
     }
   },
   "ipos": [
