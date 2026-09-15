@@ -21,7 +21,7 @@ function transcriptPlan(list,lots){
  var out=[];
  if(lots===1){if(v)out.push({i:v,s:100,alloc:1,reason:'Transcript #1: one-lot money goes to Veegaland.'});}
  if(lots===2){if(v)out.push({i:v,s:100,alloc:1,reason:'Transcript: first lot to Veegaland.'});if(m)out.push({i:m,s:99,alloc:1,reason:'Transcript: second lot to Manika.'});}
- if(lots===3){if(m)out.push({i:m,s:100,alloc:1,reason:'Transcript: first lot to Manika.'});if(v)out.push({i:v,s:99,alloc:2,reason:'Transcript: second lot to Veegaland; third lot also Veegaland, with multiple-account application suggested by the source.');}
+ if(lots===3){if(m)out.push({i:m,s:100,alloc:1,reason:'Transcript: first lot to Manika.'});if(v)out.push({i:v,s:99,alloc:2,reason:'Transcript: second lot to Veegaland; third lot also Veegaland, with multiple-account application suggested by the source.'});}
  return out.length?out:null;
 }
 function buildRows(list,type,lots){
