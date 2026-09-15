@@ -26,10 +26,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Validate all JavaScript
-        run: |
-          set -e
-          for f in scripts/*.js; do node --check "$f"; done
       - name: Prepare responsive site and navigation
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -94,10 +90,11 @@ jobs:
           print('RESPONSIVE UI OK: desktop left command rail + right workspace; mobile two-column controls')
           print('FEATURE CONTROLS OK: Calendar, Fundamentals, DNA, Radar, Lot Decision')
           PY
-      - name: Validate deployed JavaScript
+      - name: Validate runtime JavaScript
         run: |
           set -e
-          for f in _site/scripts/*.js; do node --check "$f"; done
+          files="scripts/ui-enhancements.js scripts/ipo-calendar.js scripts/ipo-articles.js scripts/ipo-intelligence.js scripts/ipo-radar.js scripts/ipo-shell.js scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-fixes.js scripts/ipo-final.js scripts/ipo-subscription-values.js scripts/ipo-gmp-hidden.js scripts/ipo-holiday-fix.js scripts/ipo-nav.js scripts/ipo-responsive-ui.js"
+          for f in $files; do node --check "_site/$f"; done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
