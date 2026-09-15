@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T06:39:30.662109+00:00",
+  "generated_at": "2026-09-15T06:44:58.271856+00:00",
   "events": [
     {
       "date": "2026-09-15",
@@ -54,9 +54,9 @@
     {
       "date": "2026-09-17",
       "type": "OPEN",
-      "ipo_id": "kheria-autocomp-ltd-sme",
-      "name": "Kheria Autocomp Ltd. SME",
-      "source": "Economic Times"
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-17",
