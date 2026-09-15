@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-# Stable feature navigation: IPO Fundamentals + IPO DNA + IPO Radar + single Lot Decision
+# Stable feature navigation + premium responsive two-column UI
 name: Deploy static content to Pages
 
 on:
@@ -29,7 +29,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Repair feature JavaScript syntax
         run: |
-          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js; do
+          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js scripts/ui-redesign.js; do
             sed -i "s/String(v==null?'')/String(v==null?'':v)/g" "$f"
           done
       - name: Validate feature JavaScript
@@ -38,6 +38,7 @@ jobs:
           node --check scripts/ipo-dna.js
           node --check scripts/ipo-radar.js
           node --check scripts/ipo-nav.js
+          node --check scripts/ui-redesign.js
       - name: Prepare site with UI enhancements
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -61,7 +62,7 @@ jobs:
           if 'id="ipf-btn"' not in s:
               s=s.replace(marker,feature_buttons+marker,1)
           s=s.replace('</style>','</style><style>.hbtns .lot-decision-btn{flex:0 0 calc(50% - 3px);width:calc(50% - 3px);text-align:center}.hbtns .lot-decision-btn:nth-last-child(-n+4){min-width:0}@media(max-width:700px){.hbtns .lot-decision-btn{flex-basis:calc(50% - 3px);width:calc(50% - 3px);padding:8px 5px;font-size:11px;white-space:normal;min-height:38px}}</style>',1)
-          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ui-redesign.js']
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
               s=s.replace(f'<script src="{src}"></script>','')
