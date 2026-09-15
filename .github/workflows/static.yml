@@ -54,8 +54,7 @@ jobs:
           # Remove the legacy Brokers button from the generated navigation.
           s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
 
-          # Hard-wire the new feature buttons into the actual HTML. This makes them
-          # visible even if a browser/CDN has an older JS execution state.
+          # Hard-wire the new feature buttons into the actual HTML.
           marker='</div></div><div class="kpi-row">'
           feature_buttons=(
               '<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
@@ -68,52 +67,46 @@ jobs:
 
           # Load every feature explicitly with a build-version query string.
           tags=[
-              'scripts/ui-enhancements.js',
-              'scripts/ipo-calendar.js',
-              'scripts/ipo-articles.js',
-              'scripts/ipo-intelligence.js',
-              'scripts/ipo-analyst.js',
-              'scripts/ipo-radar.js',
-              'scripts/ipo-shell.js',
-              'scripts/ipo-fundamentals.js',
-              'scripts/ipo-dna.js',
-              'scripts/ipo-fixes.js',
-              'scripts/ipo-final.js',
-              'scripts/ipo-subscription-values.js',
-              'scripts/ipo-gmp-hidden.js',
-              'scripts/ipo-holiday-fix.js',
-              'scripts/ipo-nav.js'
+              'scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js',
+              'scripts/ipo-intelligence.js','scripts/ipo-analyst.js','scripts/ipo-radar.js',
+              'scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js',
+              'scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js',
+              'scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js'
           ]
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
-              base=f'<script src="{src}"></script>'
-              s=s.replace(base,'')
+              s=s.replace(f'<script src="{src}"></script>','')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
 
-          # Bind the hard-wired buttons to the feature modules after all scripts load.
+          # The feature modules normally create their own buttons. Because the
+          # buttons above are now hard-wired, this fallback removes a button and
+          # re-loads its module on first click so the module can create/bind its
+          # panel and button normally. This is deliberately self-healing.
           fallback=f'''<script>
 (function(){{
+  var defs={{
+    'ipf-btn':['ipo-fundamentals-panel','scripts/ipo-fundamentals.js'],
+    'dna-btn':['ipo-dna-panel','scripts/ipo-dna.js'],
+    'radar-btn':['ipo-radar-panel','scripts/ipo-radar.js'],
+    'b-research-lens':['ipo-research-lens','scripts/ipo-analyst.js']
+  }};
+  function boot(id){{
+    var d=defs[id],b=document.getElementById(id);if(!d||!b)return;
+    var p=document.getElementById(d[0]);
+    if(p){{p.classList.toggle('show');b.classList.toggle('active');return;}}
+    b.remove();
+    var s=document.createElement('script');s.src=d[1]+'?fallback='+Date.now();s.onload=function(){{
+      setTimeout(function(){{var nb=document.getElementById(id);if(nb)nb.click();}},500);
+    }};document.body.appendChild(s);
+  }}
   function wire(){{
-    var A=window.ALL_IPOS||[];
-    var map=[
-      ['ipf-btn','ipo-fundamentals-panel',function(){{window.ipoFundamentalsOpen&&window.ipoFundamentalsOpen(A);}}],
-      ['dna-btn','ipo-dna-panel',function(){{window.ipoDnaOpen&&window.ipoDnaOpen(A);}}],
-      ['radar-btn','ipo-radar-panel',function(){{window.ipoRadarOpen&&window.ipoRadarOpen(A);}}],
-      ['b-research-lens','ipo-research-lens',function(){{window.ipoResearchLensOpen&&window.ipoResearchLensOpen(A);}}]
-    ];
-    map.forEach(function(x){{
-      var b=document.getElementById(x[0]); if(!b||b.dataset.wired==='1') return;
-      b.dataset.wired='1';
-      b.onclick=function(){{
-        var p=document.getElementById(x[1]);
-        if(p&&p.classList.contains('show')){{p.classList.remove('show');b.classList.remove('active');}}
-        else if(x[2]) x[2]();
-      }};
+    Object.keys(defs).forEach(function(id){{
+      var b=document.getElementById(id);if(!b||b.dataset.fallbackWired==='1')return;
+      b.dataset.fallbackWired='1';b.onclick=function(){{boot(id);}};
     }});
   }}
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){{setTimeout(wire,700);}});
-  else setTimeout(wire,700);
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){{setTimeout(wire,800);}});else setTimeout(wire,800);
   setInterval(wire,1500);
 }})();
 </script>'''
@@ -122,7 +115,7 @@ jobs:
           PY
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '_site'
 
