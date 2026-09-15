@@ -1,8 +1,8 @@
-/* IPO Terminal navigation — single owner for Calendar, Fundamentals, DNA and Radar. */
+/* IPO Terminal navigation — single owner for Calendar, Decision, DNA and Radar. */
 (function(){
 'use strict';
 var wanted=['b-open','b-upc','b-pipe','b-list','b-comp','b-allot','b-news','b-doc','b-tips','b-gloss','b-why','ipc-btn','ipf-btn','dna-btn','radar-btn'];
-var labels={'ipc-btn':'IPO Calendar','ipf-btn':'IPO Fundamentals','dna-btn':'IPO DNA','radar-btn':'IPO Radar'};
+var labels={'ipc-btn':'IPO Calendar','ipf-btn':'Decision','dna-btn':'IPO DNA','radar-btn':'IPO Radar'};
 var modules={
  calendar:['ipc-btn','scripts/ipo-calendar.js','ipo-calendar-panel'],
  fundamentals:['ipf-btn','scripts/ipo-fundamentals.js','ipo-fundamentals-panel'],
