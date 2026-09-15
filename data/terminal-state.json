@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T08:05:12.544846+00:00",
+  "generated_at": "2026-09-15T08:27:29.195961+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T08:05:12.413190+00:00",
-  "ipo_count": 10,
-  "field_coverage_pct": 37.6,
+  "data_updated_at": "2026-09-15T08:27:29.082310+00:00",
+  "ipo_count": 12,
+  "field_coverage_pct": 34.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -38,7 +38,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T08:05:01.072194+00:00",
+      "checked_at": "2026-09-15T08:27:19.055737+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -56,9 +56,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 8,
+          "records": 10,
           "matched": 6,
-          "added": 2,
+          "added": 4,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -73,15 +73,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 10,
+      "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T08:05:03.326513+00:00"
+      "checked_at": "2026-09-15T08:27:21.446716+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T08:05:12.173753+00:00",
+      "checked_at": "2026-09-15T08:27:28.807870+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -90,7 +90,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T08:05:12.413183+00:00"
+      "checked_at": "2026-09-15T08:27:29.082304+00:00"
     }
   },
   "ipos": [
@@ -319,6 +319,62 @@
       }
     },
     {
+      "id": "s-k-offset-ltd-sme",
+      "name": "S. K. Offset Ltd. SME",
+      "fingerprint": "0f8e4e8668f9d31a",
+      "fields": {
+        "price": "₹119 – ₹125",
+        "size": "₹29.06 Cr",
+        "lot": "1000",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "robokidz-eduventures-ltd-sme",
+      "name": "Robokidz Eduventures Ltd. SME",
+      "fingerprint": "e829c10cfae3b731",
+      "fields": {
+        "price": "₹100 – ₹106",
+        "size": "₹31.09 Cr",
+        "lot": "1200",
+        "open": "21/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "axiom-gas-engineering-ltd-sme",
       "name": "Axiom Gas Engineering Ltd. SME",
       "fingerprint": "fa2638698ec84a3d",
@@ -487,9 +543,45 @@
       "ipo_id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "OPEN",
+      "ipo_id": "robokidz-eduventures-ltd-sme",
+      "name": "Robokidz Eduventures Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "s-k-offset-ltd-sme",
+      "name": "S. K. Offset Ltd. SME",
+      "source": "Economic Times"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-15T08:27:29.195961+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "OPEN",
+        "ipo_id": "robokidz-eduventures-ltd-sme",
+        "name": "Robokidz Eduventures Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-15T08:27:29.195961+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "s-k-offset-ltd-sme",
+        "name": "S. K. Offset Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-15T06:44:58.271856+00:00",
       "type": "NEW_EVENT",
