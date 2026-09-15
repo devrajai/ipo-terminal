@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T05:32:50.831577+00:00",
+  "generated_at": "2026-09-15T05:33:29.734025+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T05:32:50.706107+00:00",
+  "data_updated_at": "2026-09-15T05:33:29.632207+00:00",
   "ipo_count": 10,
   "field_coverage_pct": 37.1,
   "sources": {
@@ -37,7 +37,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T05:32:40.320883+00:00",
+      "checked_at": "2026-09-15T05:33:17.824341+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -75,12 +75,12 @@
       "records": 10,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T05:32:42.124227+00:00"
+      "checked_at": "2026-09-15T05:33:19.844205+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T05:32:50.528634+00:00",
+      "checked_at": "2026-09-15T05:33:28.886461+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -89,7 +89,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T05:32:50.706095+00:00"
+      "checked_at": "2026-09-15T05:33:29.632201+00:00"
     }
   },
   "ipos": [
