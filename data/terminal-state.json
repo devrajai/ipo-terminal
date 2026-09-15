@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T14:03:57.682554+00:00",
+  "generated_at": "2026-09-15T14:27:16.535402+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T14:03:57.554312+00:00",
+  "data_updated_at": "2026-09-15T14:26:53.477728+00:00",
   "ipo_count": 12,
-  "field_coverage_pct": 34.9,
+  "field_coverage_pct": 35.7,
   "sources": {
     "NSE": {
       "ok": true,
@@ -39,7 +39,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T14:03:52.826197+00:00",
+      "checked_at": "2026-09-15T14:26:50.135110+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,12 +77,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T14:03:54.851413+00:00"
+      "checked_at": "2026-09-15T14:26:51.181505+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T14:03:57.334533+00:00",
+      "checked_at": "2026-09-15T14:26:53.154854+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -91,7 +91,45 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T14:03:57.554305+00:00"
+      "checked_at": "2026-09-15T14:26:53.426851+00:00"
+    },
+    "TranscriptEvidence": {
+      "ok": true,
+      "records": 1,
+      "checked_at": "2026-09-15T14:26:53.477724+00:00"
+    },
+    "LiveNews": {
+      "ok": true,
+      "records": 200,
+      "checked_at": "2026-09-15T14:26:53.631067+00:00",
+      "feeds": {
+        "Google News · IPO India": {
+          "ok": true,
+          "records": 93,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+        },
+        "Google News · IPO allotment": {
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+        },
+        "Google News · IPO upcoming/listing": {
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+        },
+        "Google News · RHP DRHP": {
+          "ok": true,
+          "records": 71,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+        }
+      }
+    },
+    "FilingVerification": {
+      "ok": true,
+      "records": 13,
+      "verified": 3,
+      "checked_at": "2026-09-15T14:26:53.631067+00:00"
     }
   },
   "ipos": [
@@ -182,15 +220,15 @@
     {
       "id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
-      "fingerprint": "dfe5d7053ddf56f3",
+      "fingerprint": "51cd4beb6bcca656",
       "fields": {
         "price": "₹1,700 – ₹1,785",
         "size": "₹22,561 Cr",
         "lot": "8",
         "open": "17/09/26",
         "close": "Sep 21, 2026",
-        "allotment": null,
-        "listing": "—",
+        "allotment": "22/09/26",
+        "listing": "24/09/26",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
@@ -553,14 +591,60 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-22",
+      "type": "ALLOTMENT",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
+    },
+    {
       "date": "2026-09-23",
       "type": "OPEN",
       "ipo_id": "s-k-offset-ltd-sme",
       "name": "S. K. Offset Ltd. SME",
       "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "LISTING",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-15T14:27:16.535402+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fields": [
+        "allotment",
+        "listing"
+      ]
+    },
+    {
+      "at": "2026-09-15T14:27:16.535402+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-22",
+        "type": "ALLOTMENT",
+        "ipo_id": "national-stock-exchange-of-india-limited",
+        "name": "National Stock Exchange of India Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-15T14:27:16.535402+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "LISTING",
+        "ipo_id": "national-stock-exchange-of-india-limited",
+        "name": "National Stock Exchange of India Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-15T13:52:39.282264+00:00",
       "type": "NEW_EVENT",

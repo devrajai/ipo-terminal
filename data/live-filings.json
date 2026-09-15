@@ -1,0 +1,150 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-09-15T14:26:53.631067+00:00",
+  "documents": [
+    {
+      "name": "Kanohar Electricals",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html"
+    },
+    {
+      "name": "Glass Wall Systems (India)",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html"
+    },
+    {
+      "name": "Rentomojo",
+      "type": "DRHP",
+      "url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf",
+      "date": "06/04/26",
+      "source": "SEBI",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf"
+    },
+    {
+      "name": "Karamtara Engineering",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Steamhouse India",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "LCC Projects",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Manipal Payment & Identity",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Asset Reconstruction (ARCIL)",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Veegaland Developers",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "—",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "NSE",
+      "type": "UDRHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/",
+      "date": "09/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/"
+    },
+    {
+      "name": "Prasol Chemicals",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Pranav Constructions",
+      "type": "RHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
+      "date": "02/09/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
+    },
+    {
+      "name": "Jio Platforms",
+      "type": "DRHP",
+      "url": "https://www.sebi.gov.in/filings/public-issues/",
+      "date": "19/06/26",
+      "source": "SEBI",
+      "verified": false,
+      "http_status": null,
+      "verified_at": "2026-09-15T14:26:53.631067+00:00",
+      "verified_url": "https://www.sebi.gov.in/filings/public-issues/"
+    }
+  ],
+  "verified_count": 3
+}
