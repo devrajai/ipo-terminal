@@ -1,4 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
+# Feature deployment refresh: IPO Fundamentals + IPO DNA + IPO Radar + 1-Lot Decision
 name: Deploy static content to Pages
 
 on:
