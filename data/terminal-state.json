@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T15:37:25.920915+00:00",
+  "generated_at": "2026-09-15T15:51:52.558377+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T15:37:10.970448+00:00",
+  "data_updated_at": "2026-09-15T15:51:38.924077+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 35.7,
   "sources": {
@@ -39,7 +39,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T15:36:54.772690+00:00",
+      "checked_at": "2026-09-15T15:51:20.418984+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,12 +77,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T15:36:56.994302+00:00"
+      "checked_at": "2026-09-15T15:51:23.491297+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T15:37:10.291692+00:00",
+      "checked_at": "2026-09-15T15:51:37.722295+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -91,21 +91,21 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T15:37:10.781381+00:00"
+      "checked_at": "2026-09-15T15:51:38.724372+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-15T15:37:10.828537+00:00"
+      "checked_at": "2026-09-15T15:51:38.773757+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-15T15:37:10.970448+00:00",
+      "checked_at": "2026-09-15T15:51:38.924077+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 93,
+          "records": 100,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -129,7 +129,7 @@
       "ok": true,
       "records": 13,
       "verified": 3,
-      "checked_at": "2026-09-15T15:37:10.970448+00:00"
+      "checked_at": "2026-09-15T15:51:38.924077+00:00"
     }
   },
   "ipos": [
