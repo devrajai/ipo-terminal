@@ -27,6 +27,11 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
+      - name: Repair feature JavaScript syntax
+        run: |
+          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-analyst.js scripts/ipo-nav.js; do
+            sed -i "s/String(v==null?'')/String(v==null?'':v)/g" "$f"
+          done
       - name: Validate feature JavaScript
         run: |
           node --check scripts/ipo-fundamentals.js
