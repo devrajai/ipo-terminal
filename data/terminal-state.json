@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T16:53:11.838595+00:00",
+  "generated_at": "2026-09-15T16:58:00.979446+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T16:52:58.109070+00:00",
+  "data_updated_at": "2026-09-15T16:57:45.536161+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 35.7,
   "sources": {
@@ -39,7 +39,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T16:52:53.435465+00:00",
+      "checked_at": "2026-09-15T16:57:30.771477+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,12 +77,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T16:52:55.862392+00:00"
+      "checked_at": "2026-09-15T16:57:33.773718+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T16:52:57.703744+00:00",
+      "checked_at": "2026-09-15T16:57:44.700030+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -91,17 +91,17 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T16:52:57.912583+00:00"
+      "checked_at": "2026-09-15T16:57:45.405313+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-15T16:52:57.961948+00:00"
+      "checked_at": "2026-09-15T16:57:45.441683+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-15T16:52:58.109070+00:00",
+      "checked_at": "2026-09-15T16:57:45.536161+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -129,7 +129,7 @@
       "ok": true,
       "records": 13,
       "verified": 3,
-      "checked_at": "2026-09-15T16:52:58.109070+00:00"
+      "checked_at": "2026-09-15T16:57:45.536161+00:00"
     }
   },
   "ipos": [
