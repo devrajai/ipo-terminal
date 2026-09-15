@@ -67,8 +67,6 @@ jobs:
               s=s.replace(f'<script src="{src}"></script>','')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
-          fallback="<script>(function(){function openPlanner(lots,id){var p=document.getElementById('ipo-fundamentals-panel'),b=document.getElementById(id);if(!p){var ib=document.getElementById('ipf-btn');if(ib)ib.click();setTimeout(function(){openPlanner(lots,id)},650);return}p.classList.add('show');var t=document.querySelector('.lot-tabs .planner-tab[data-lots=\"'+lots+'\"]');if(t)t.click();document.querySelectorAll('.lot-decision-btn').forEach(function(x){x.classList.remove('active')});if(b)b.classList.add('active');p.scrollIntoView({behavior:'smooth',block:'start'});}function wire(){var b=document.getElementById('lot1-btn');if(!b||b.dataset.lotWired==='1')return;b.dataset.lotWired='1';b.onclick=function(){openPlanner(1,'lot1-btn')}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,900)});else setTimeout(wire,900);setInterval(wire,1500)})();</script>"
-          s=s.replace('</body>',fallback+'</body>',1)
           p.write_text(s,encoding='utf-8')
           PY
       - name: Upload artifact
