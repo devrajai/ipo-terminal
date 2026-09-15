@@ -2,7 +2,7 @@
 (function(){
   'use strict';
   function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x];});}
-  var EMPTY={'',null,'—','-','NA','N/A'};
+  var EMPTY=['',null,'—','-','NA','N/A'];
   function num(v){
     if(v==null)return null;
     var s=String(v).replace(/,/g,'').replace(/₹/g,'').trim();
@@ -18,7 +18,7 @@
     return n;
   }
   function valueFromReported(v){
-    if(EMPTY.has(String(v)))return null;
+    if(EMPTY.indexOf(v)>=0||EMPTY.indexOf(String(v))>=0)return null;
     return cr(v);
   }
   function sizeCr(i){return valueFromReported(i.size);}
