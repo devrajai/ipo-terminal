@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "source": "user-provided NSE IPO transcript",
+  "created_at": "2026-09-15",
+  "records": [
+    {
+      "aliases": ["National Stock Exchange of India Limited", "NSE IPO"],
+      "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
+      "facts": {
+        "price": "₹1,700 – ₹1,785",
+        "lot": 8,
+        "size": "₹22,561 Cr",
+        "open": "17/09/26",
+        "close": "21/09/26",
+        "allotment": "22/09/26",
+        "refund": "23/09/26",
+        "shares": "23/09/26",
+        "listing": "24/09/26",
+        "retail": "35%",
+        "qib": "50%",
+        "hni": "15%",
+        "listing_gain_view": "10–20% transcript estimate",
+        "long_term_view": "Apply / positive long-term view"
+      }
+    }
+  ]
+}
