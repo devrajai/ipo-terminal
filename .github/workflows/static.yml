@@ -45,7 +45,7 @@ jobs:
           s=re.sub(r'<button[^>]*id=["\']b-research-lens["\'][^>]*>.*?</button>','',s,flags=re.S)
           s=re.sub(r'<button[^>]*id=["\']lot1-btn["\'][^>]*>.*?</button>','',s,flags=re.S)
           feature_buttons=('''<button class="hb" id="ipc-btn" type="button">IPO Calendar</button>
-          <button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>
+          <button class="hb" id="ipf-btn" type="button">Decision</button>
           <button class="hb" id="dna-btn" type="button">IPO DNA</button>
           <button class="hb" id="radar-btn" type="button">IPO Radar</button>''')
           if 'id="ipc-btn"' not in s:
@@ -88,8 +88,8 @@ jobs:
           if 'lot1-btn' in ns: raise SystemExit('Duplicate Lot Decision control is still wired in navigation')
           print('SITE HEALTH OK:',len(refs),'script references checked')
           print('RESPONSIVE UI OK: desktop left command rail + right workspace; mobile two-column controls')
-          print('FEATURE CONTROLS OK: Calendar, Fundamentals, DNA, Radar')
-          print('DUPLICATE CONTROL REMOVED: Lot Decision; lot planning remains inside Fundamentals')
+          print('FEATURE CONTROLS OK: Calendar, Decision, DNA, Radar')
+          print('DUPLICATE CONTROL REMOVED: Lot Decision; lot planning remains inside Decision')
           PY
       - name: Validate runtime JavaScript
         run: |
