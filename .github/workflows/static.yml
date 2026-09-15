@@ -29,7 +29,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Repair feature JavaScript syntax
         run: |
-          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-analyst.js scripts/ipo-nav.js; do
+          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js; do
             sed -i "s/String(v==null?'')/String(v==null?'':v)/g" "$f"
           done
       - name: Validate feature JavaScript
@@ -37,7 +37,6 @@ jobs:
           node --check scripts/ipo-fundamentals.js
           node --check scripts/ipo-dna.js
           node --check scripts/ipo-radar.js
-          node --check scripts/ipo-analyst.js
           node --check scripts/ipo-nav.js
       - name: Prepare site with UI enhancements
         env:
@@ -70,7 +69,7 @@ jobs:
               s=s.replace(f'<script src="{src}"></script>','')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
-          fallback="<script>(function(){function openPlanner(lots,id){var p=document.getElementById('ipo-fundamentals-panel'),b=document.getElementById(id);if(!p){var ib=document.getElementById('ipf-btn');if(ib)ib.click();setTimeout(function(){openPlanner(lots,id)},650);return}p.classList.add('show');document.querySelectorAll('.lot-tabs .planner-tab').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-lots')===String(lots));});var t=document.querySelector('.lot-tabs .planner-tab[data-lots="'+lots+'"]');if(t)t.click();document.querySelectorAll('.lot-decision-btn').forEach(function(x){x.classList.remove('active')});if(b)b.classList.add('active');p.scrollIntoView({behavior:'smooth',block:'start'});}function wire(){[['lot1-btn',1],['lot2-btn',2],['lot3-btn',3]].forEach(function(x){var b=document.getElementById(x[0]);if(!b||b.dataset.lotWired==='1')return;b.dataset.lotWired='1';b.onclick=function(){openPlanner(x[1],x[0])}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,900)});else setTimeout(wire,900);setInterval(wire,1500)})();</script>"
+          fallback="<script>(function(){function openPlanner(lots,id){var p=document.getElementById('ipo-fundamentals-panel'),b=document.getElementById(id);if(!p){var ib=document.getElementById('ipf-btn');if(ib)ib.click();setTimeout(function(){openPlanner(lots,id)},650);return}p.classList.add('show');var t=document.querySelector('.lot-tabs .planner-tab[data-lots=\"'+lots+'\"]');if(t)t.click();document.querySelectorAll('.lot-decision-btn').forEach(function(x){x.classList.remove('active')});if(b)b.classList.add('active');p.scrollIntoView({behavior:'smooth',block:'start'});}function wire(){[['lot1-btn',1],['lot2-btn',2],['lot3-btn',3]].forEach(function(x){var b=document.getElementById(x[0]);if(!b||b.dataset.lotWired==='1')return;b.dataset.lotWired='1';b.onclick=function(){openPlanner(x[1],x[0])}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,900)});else setTimeout(wire,900);setInterval(wire,1500)})();</script>"
           s=s.replace('</body>',fallback+'</body>',1)
           p.write_text(s,encoding='utf-8')
           PY
