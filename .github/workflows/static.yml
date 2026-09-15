@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-# Hard-wired feature navigation: IPO Fundamentals + IPO DNA + IPO Radar + 1-Lot Decision
+# Hard-wired feature navigation: IPO Fundamentals + IPO DNA + IPO Radar + 1/2/3-Lot Decision
 name: Deploy static content to Pages
 
 on:
@@ -53,20 +53,24 @@ jobs:
           s=p.read_text(encoding='utf-8')
           q=os.environ.get('BUILD_SHA','build')[:12]
           s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
+          s=re.sub(r'<button[^>]*id=["\']b-research-lens["\'][^>]*>.*?</button>', '', s, flags=re.S)
           marker='</div></div><div class="kpi-row">'
-          feature_buttons=('<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
-                           '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
-                           '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
-                           '<button class="hb" id="b-research-lens" type="button">1-Lot Decision</button>')
+          feature_buttons=('<button class="hb lot-decision-btn" id="ipf-btn" type="button">IPO Fundamentals</button>'
+                           '<button class="hb lot-decision-btn" id="dna-btn" type="button">IPO DNA</button>'
+                           '<button class="hb lot-decision-btn" id="radar-btn" type="button">IPO Radar</button>'
+                           '<button class="hb lot-decision-btn" id="lot1-btn" type="button">1-Lot Decision</button>'
+                           '<button class="hb lot-decision-btn" id="lot2-btn" type="button">2-Lot Decision</button>'
+                           '<button class="hb lot-decision-btn" id="lot3-btn" type="button">3-Lot Decision</button>')
           if 'id="ipf-btn"' not in s:
               s=s.replace(marker,feature_buttons+marker,1)
-          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-analyst.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
+          s=s.replace('</style>','</style><style>.hbtns .lot-decision-btn{flex:0 0 calc(50% - 3px);width:calc(50% - 3px);text-align:center}.hbtns .lot-decision-btn:nth-last-child(-n+6){min-width:0}@media(max-width:700px){.hbtns .lot-decision-btn{flex-basis:calc(50% - 3px);width:calc(50% - 3px);padding:8px 5px;font-size:11px;white-space:normal;min-height:38px}}</style>',1)
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
               s=s.replace(f'<script src="{src}"></script>','')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
-          fallback="<script>(function(){var d={'ipf-btn':['ipo-fundamentals-panel','scripts/ipo-fundamentals.js'],'dna-btn':['ipo-dna-panel','scripts/ipo-dna.js'],'radar-btn':['ipo-radar-panel','scripts/ipo-radar.js'],'b-research-lens':['ipo-research-lens','scripts/ipo-analyst.js']};function boot(id){var x=d[id],b=document.getElementById(id);if(!x||!b)return;var p=document.getElementById(x[0]);if(p){p.classList.toggle('show');b.classList.toggle('active');return;}b.remove();var s=document.createElement('script');s.src=x[1]+'?fallback='+Date.now();s.onload=function(){setTimeout(function(){var nb=document.getElementById(id);if(nb)nb.click();},500)};document.body.appendChild(s)}function wire(){Object.keys(d).forEach(function(id){var b=document.getElementById(id);if(!b||b.dataset.fallbackWired==='1')return;b.dataset.fallbackWired='1';b.onclick=function(){boot(id)}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,800)});else setTimeout(wire,800);setInterval(wire,1500)})();</script>"
+          fallback="<script>(function(){function openPlanner(lots,id){var p=document.getElementById('ipo-fundamentals-panel'),b=document.getElementById(id);if(!p){var ib=document.getElementById('ipf-btn');if(ib)ib.click();setTimeout(function(){openPlanner(lots,id)},650);return}p.classList.add('show');document.querySelectorAll('.lot-tabs .planner-tab').forEach(function(x){x.classList.toggle('active',x.getAttribute('data-lots')===String(lots));});var t=document.querySelector('.lot-tabs .planner-tab[data-lots="'+lots+'"]');if(t)t.click();document.querySelectorAll('.lot-decision-btn').forEach(function(x){x.classList.remove('active')});if(b)b.classList.add('active');p.scrollIntoView({behavior:'smooth',block:'start'});}function wire(){[['lot1-btn',1],['lot2-btn',2],['lot3-btn',3]].forEach(function(x){var b=document.getElementById(x[0]);if(!b||b.dataset.lotWired==='1')return;b.dataset.lotWired='1';b.onclick=function(){openPlanner(x[1],x[0])}})}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(wire,900)});else setTimeout(wire,900);setInterval(wire,1500)})();</script>"
           s=s.replace('</body>',fallback+'</body>',1)
           p.write_text(s,encoding='utf-8')
           PY
