@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T18:25:29.554016+00:00",
-  "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T18:25:15.676346+00:00",
+  "generated_at": "2026-09-15T18:39:10.778822+00:00",
+  "today_ist": "2026-09-16",
+  "data_updated_at": "2026-09-15T18:38:53.788727+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 35.7,
   "sources": {
@@ -31,10 +31,15 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T18:24:34.698621+00:00",
+      "checked_at": "2026-09-15T18:38:39.103656+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -52,8 +57,8 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 10,
-          "matched": 7,
+          "records": 7,
+          "matched": 4,
           "added": 3,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
@@ -72,12 +77,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T18:24:38.576635+00:00"
+      "checked_at": "2026-09-15T18:38:41.636369+00:00"
     },
     "SeedFallback": {
       "ok": true,
-      "records": 2,
-      "checked_at": "2026-09-15T18:25:14.751860+00:00",
+      "records": 1,
+      "checked_at": "2026-09-15T18:38:52.865719+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -86,17 +91,17 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T18:25:15.481947+00:00"
+      "checked_at": "2026-09-15T18:38:53.628236+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-15T18:25:15.531140+00:00"
+      "checked_at": "2026-09-15T18:38:53.669835+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-15T18:25:15.676346+00:00",
+      "checked_at": "2026-09-15T18:38:53.788727+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -115,7 +120,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 71,
+          "records": 72,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -124,10 +129,94 @@
       "ok": true,
       "records": 13,
       "verified": 3,
-      "checked_at": "2026-09-15T18:25:15.676346+00:00"
+      "checked_at": "2026-09-15T18:38:53.788727+00:00"
     }
   },
   "ipos": [
+    {
+      "id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fingerprint": "926c1f8e883bfb9a",
+      "fields": {
+        "price": "₹88-93",
+        "size": "124.88",
+        "lot": "161",
+        "open": "16/09/26",
+        "close": "Sep 18, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "15%",
+        "de": "0.18",
+        "fresh": "80%",
+        "ofs": "20%"
+      }
+    },
+    {
+      "id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fingerprint": "1e0f8ea89c4d556c",
+      "fields": {
+        "price": "₹79-84",
+        "size": "1000.00",
+        "lot": "178",
+        "open": "16/09/26",
+        "close": "Sep 18, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fingerprint": "20d6da4f731b4721",
+      "fields": {
+        "price": "₹403-424",
+        "size": "500.00",
+        "lot": "35",
+        "open": "16/09/26",
+        "close": "Sep 18, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹21",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
     {
       "id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
@@ -159,10 +248,10 @@
     {
       "id": "veegaland-developers-limited",
       "name": "Veegaland Developers Limited",
-      "fingerprint": "af0315a8515043bf",
+      "fingerprint": "cc73e1929e777c58",
       "fields": {
         "price": "₹130-140",
-        "size": "₹210 Cr",
+        "size": "₹158 Cr",
         "lot": 107,
         "open": "10/09/26",
         "close": "15/09/26",
@@ -238,90 +327,6 @@
         "de": "—",
         "fresh": "—",
         "ofs": "—"
-      }
-    },
-    {
-      "id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "fingerprint": "2d0d0eae74288914",
-      "fields": {
-        "price": "₹403 – ₹424",
-        "size": "500.00",
-        "lot": "35",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹21",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "fingerprint": "d46313f79df45c15",
-      "fields": {
-        "price": "₹79 – ₹84",
-        "size": "₹1,000 Cr",
-        "lot": "178",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "9f21b8dd16e7ff16",
-      "fields": {
-        "price": "₹88 – ₹93",
-        "size": "₹124.88 Cr",
-        "lot": "161",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "15%",
-        "de": "0.18",
-        "fresh": "80%",
-        "ofs": "20%"
       }
     },
     {
@@ -608,6 +613,44 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-15T18:39:10.778822+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-15T18:39:10.778822+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-15T18:39:10.778822+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fields": [
+        "price"
+      ]
+    },
+    {
+      "at": "2026-09-15T18:39:10.778822+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "veegaland-developers-limited",
+      "name": "Veegaland Developers Limited",
+      "fields": [
+        "size"
+      ]
+    },
     {
       "at": "2026-09-15T14:27:16.535402+00:00",
       "type": "DATA_CHANGE",
