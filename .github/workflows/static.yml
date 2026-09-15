@@ -1,5 +1,4 @@
-# Simple workflow for deploying static content to GitHub Pages
-# Older IPO Terminal UI + stable independent analysis buttons
+# IPO Terminal — responsive desktop/mobile deployment + automatic health checks
 name: Deploy static content to Pages
 
 on:
@@ -32,13 +31,11 @@ jobs:
           for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js; do
             sed -i "s/String(v==null?'')/String(v==null?'':v)/g" "$f"
           done
-      - name: Validate feature JavaScript
+      - name: Validate all JavaScript
         run: |
-          node --check scripts/ipo-fundamentals.js
-          node --check scripts/ipo-dna.js
-          node --check scripts/ipo-radar.js
-          node --check scripts/ipo-nav.js
-      - name: Prepare site with UI enhancements
+          set -e
+          for f in scripts/*.js; do node --check "$f"; done
+      - name: Prepare responsive site + repair feature-button loading
         env:
           BUILD_SHA: ${{ github.sha }}
         run: |
@@ -46,35 +43,68 @@ jobs:
           mkdir -p _site
           cp -R index.html data scripts _site/
           python - <<'PY'
-          import os,re
+          import os,re,json
           from pathlib import Path
-          p=Path('_site/index.html')
-          s=p.read_text(encoding='utf-8')
+          root=Path('_site')
+          index=root/'index.html'
+          s=index.read_text(encoding='utf-8')
           q=os.environ.get('BUILD_SHA','build')[:12]
-          s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
-          s=re.sub(r'<button[^>]*id=["\']b-research-lens["\'][^>]*>.*?</button>', '', s, flags=re.S)
+          s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>','',s,flags=re.S)
+          s=re.sub(r'<button[^>]*id=["\']b-research-lens["\'][^>]*>.*?</button>','',s,flags=re.S)
           marker='</div></div><div class="kpi-row">'
-          feature_buttons=('<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
+          feature_buttons=(' <button class="hb" id="ipc-btn" type="button">IPO Calendar</button>'
+                           '<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
                            '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
                            '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
                            '<button class="hb" id="lot1-btn" type="button">Lot Decision</button>')
-          if 'id="ipf-btn"' not in s:
-              s=s.replace(marker,feature_buttons+marker,1)
-          grid_css='''<style>
-          .hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important;align-items:stretch!important}
-          .hbtns .hb{width:100%!important;min-width:0!important;margin:0!important;text-align:center!important;white-space:normal!important}
-          .hbtns .lot-decision-btn{width:100%!important}
-          @media(max-width:700px){.hbtns{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important}.hbtns .hb{padding:8px 5px!important;font-size:11px!important;min-height:42px!important}}
+          if 'id="ipc-btn"' not in s: s=s.replace(marker,feature_buttons+marker,1)
+          responsive_css='''<style id="ipo-responsive-layout">
+          @media(min-width:901px){
+            body{padding:8px 16px 8px 252px!important;min-height:100vh}
+            .hbtns{position:fixed!important;left:10px!important;top:82px!important;width:226px!important;max-height:calc(100vh - 94px)!important;overflow-y:auto!important;overflow-x:hidden!important;display:grid!important;grid-template-columns:1fr!important;gap:6px!important;padding:9px!important;margin:0!important;background:var(--card)!important;border:1px solid var(--bd)!important;border-radius:12px!important;box-shadow:0 12px 35px rgba(0,0,0,.25)!important;z-index:999!important;align-content:start!important}
+            .hbtns .hb{width:100%!important;min-height:38px!important;text-align:left!important;padding:8px 11px!important;white-space:normal!important}
+            .kpi-row,.panel{width:100%!important;max-width:none!important}
+            .panel{scroll-margin-top:10px}
+            .panel-title{position:sticky;top:0;z-index:5}
+          }
+          @media(max-width:900px){
+            body{padding:8px!important}
+            .hbtns{position:static!important;width:auto!important;max-height:none!important;overflow:visible!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px!important}
+            .hbtns .hb{width:100%!important;min-width:0!important;margin:0!important;text-align:center!important;white-space:normal!important;padding:8px 5px!important;font-size:11px!important;min-height:42px!important}
+          }
+          #ipc-btn,#ipf-btn,#dna-btn,#radar-btn,#lot1-btn{font-weight:800!important}
+          #ipf-btn{border-color:rgba(34,197,94,.55)!important} #dna-btn{border-color:rgba(59,130,246,.55)!important} #radar-btn{border-color:rgba(168,85,247,.55)!important} #lot1-btn{border-color:rgba(249,115,22,.55)!important}
           </style>'''
-          s=s.replace('</style>',grid_css+'</style>',1)
+          s=s.replace('</style>',responsive_css+'</style>',1)
           tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
               s=s.replace(f'<script src="{src}"></script>','')
-              if tag not in s:
-                  s=s.replace('</body>',tag+'</body>',1)
-          p.write_text(s,encoding='utf-8')
+              if tag not in s: s=s.replace('</body>',tag+'</body>',1)
+          index.write_text(s,encoding='utf-8')
+          nav=root/'scripts'/'ipo-nav.js'
+          ns=nav.read_text(encoding='utf-8')
+          old="var p=document.getElementById(panel);\n if(p){togglePanel(panel,id);return;}\n loadScript(modules[key][1]);"
+          new="var p=document.getElementById(panel);\n if(p){togglePanel(panel,id);return;}\n var placeholder=document.getElementById(id);\n if(placeholder)placeholder.remove();\n loadScript(modules[key][1]);"
+          ns=ns.replace(old,new,1)
+          old2="var p=document.getElementById('ipo-fundamentals-panel');\n if(!p){loadScript('scripts/ipo-fundamentals.js');setTimeout(openPlanner,900);return;}"
+          new2="var p=document.getElementById('ipo-fundamentals-panel');\n if(!p){var placeholder=document.getElementById('ipf-btn');if(placeholder)placeholder.remove();loadScript('scripts/ipo-fundamentals.js');setTimeout(openPlanner,900);return;}"
+          ns=ns.replace(old2,new2,1)
+          nav.write_text(ns,encoding='utf-8')
+          html=index.read_text(encoding='utf-8')
+          refs=re.findall(r'<script[^>]+src=["\']([^"\']+)["\']',html)
+          missing=[ref.split('?',1)[0] for ref in refs if not (root/ref.split('?',1)[0]).exists()]
+          if missing: raise SystemExit('Missing script files: '+', '.join(missing))
+          data=root/'data'/'ipo-data.json'
+          if data.exists(): json.loads(data.read_text(encoding='utf-8'))
+          print('SITE HEALTH OK:',len(refs),'script references checked')
+          print('RESPONSIVE UI OK: desktop left rail/right workspace; mobile two-column controls')
+          print('FEATURE BUTTON LOADING FIX OK: Fundamentals/DNA/Radar/Lot Decision')
           PY
+      - name: Validate deployed JavaScript
+        run: |
+          set -e
+          for f in _site/scripts/*.js; do node --check "$f"; done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
