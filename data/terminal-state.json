@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T04:26:11.233307+00:00",
+  "generated_at": "2026-09-15T04:35:58.963524+00:00",
   "today_ist": "2026-09-15",
-  "data_updated_at": "2026-09-15T04:26:11.101782+00:00",
+  "data_updated_at": "2026-09-15T04:35:58.839366+00:00",
   "ipo_count": 10,
   "field_coverage_pct": 37.1,
   "sources": {
@@ -24,8 +24,8 @@
       ]
     },
     "GMP": {
-      "ok": true,
-      "records": 1,
+      "ok": false,
+      "records": 0,
       "sources": [
         "InvestorGain",
         "Chittorgarh",
@@ -37,7 +37,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-15T04:25:37.604209+00:00",
+      "checked_at": "2026-09-15T04:35:45.887030+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -75,12 +75,12 @@
       "records": 10,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-15T04:25:40.614931+00:00"
+      "checked_at": "2026-09-15T04:35:48.505792+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 2,
-      "checked_at": "2026-09-15T04:26:10.300576+00:00",
+      "checked_at": "2026-09-15T04:35:58.153557+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -89,7 +89,7 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-15T04:26:11.101776+00:00"
+      "checked_at": "2026-09-15T04:35:58.839360+00:00"
     }
   },
   "ipos": [
