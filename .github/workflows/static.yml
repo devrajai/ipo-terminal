@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-# Stable feature navigation + premium responsive two-column UI
+# Older IPO Terminal UI + stable independent analysis buttons
 name: Deploy static content to Pages
 
 on:
@@ -29,7 +29,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Repair feature JavaScript syntax
         run: |
-          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js scripts/ui-redesign.js; do
+          for f in scripts/ipo-fundamentals.js scripts/ipo-dna.js scripts/ipo-radar.js scripts/ipo-nav.js; do
             sed -i "s/String(v==null?'')/String(v==null?'':v)/g" "$f"
           done
       - name: Validate feature JavaScript
@@ -38,7 +38,6 @@ jobs:
           node --check scripts/ipo-dna.js
           node --check scripts/ipo-radar.js
           node --check scripts/ipo-nav.js
-          node --check scripts/ui-redesign.js
       - name: Prepare site with UI enhancements
         env:
           BUILD_SHA: ${{ github.sha }}
@@ -55,14 +54,20 @@ jobs:
           s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
           s=re.sub(r'<button[^>]*id=["\']b-research-lens["\'][^>]*>.*?</button>', '', s, flags=re.S)
           marker='</div></div><div class="kpi-row">'
-          feature_buttons=('<button class="hb lot-decision-btn" id="ipf-btn" type="button">IPO Fundamentals</button>'
-                           '<button class="hb lot-decision-btn" id="dna-btn" type="button">IPO DNA</button>'
-                           '<button class="hb lot-decision-btn" id="radar-btn" type="button">IPO Radar</button>'
-                           '<button class="hb lot-decision-btn" id="lot1-btn" type="button">Lot Decision</button>')
+          feature_buttons=('<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
+                           '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
+                           '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
+                           '<button class="hb" id="lot1-btn" type="button">Lot Decision</button>')
           if 'id="ipf-btn"' not in s:
               s=s.replace(marker,feature_buttons+marker,1)
-          s=s.replace('</style>','</style><style>.hbtns .lot-decision-btn{flex:0 0 calc(50% - 3px);width:calc(50% - 3px);text-align:center}.hbtns .lot-decision-btn:nth-last-child(-n+4){min-width:0}@media(max-width:700px){.hbtns .lot-decision-btn{flex-basis:calc(50% - 3px);width:calc(50% - 3px);padding:8px 5px;font-size:11px;white-space:normal;min-height:38px}}</style>',1)
-          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ui-redesign.js']
+          grid_css='''<style>
+          .hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important;align-items:stretch!important}
+          .hbtns .hb{width:100%!important;min-width:0!important;margin:0!important;text-align:center!important;white-space:normal!important}
+          .hbtns .lot-decision-btn{width:100%!important}
+          @media(max-width:700px){.hbtns{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px!important}.hbtns .hb{padding:8px 5px!important;font-size:11px!important;min-height:42px!important}}
+          </style>'''
+          s=s.replace('</style>',grid_css+'</style>',1)
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-intelligence.js','scripts/ipo-radar.js','scripts/ipo-shell.js','scripts/ipo-fundamentals.js','scripts/ipo-dna.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js']
           for src in tags:
               tag=f'<script src="{src}?v={q}"></script>'
               s=s.replace(f'<script src="{src}"></script>','')
