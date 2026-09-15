@@ -43,6 +43,9 @@ jobs:
           IPOGURU_API_KEY: ${{ secrets.IPOGURU_API_KEY }}
         run: python scripts/enrich_gmp_ipoguru.py
 
+      - name: Refresh multi-source IPO news and verify RHP/DRHP links
+        run: python scripts/refresh_live_content.py
+
       - name: Build future-proof terminal state and event stream
         run: python scripts/build_terminal_state.py
 
@@ -50,6 +53,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ipo-data.json data/terminal-state.json data/terminal-events.json
+          git add data/ipo-data.json data/terminal-state.json data/terminal-events.json data/live-news.json data/live-filings.json
           git diff --cached --quiet || git commit -m 'chore: update IPO terminal state'
           git push
