@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-# Feature deployment refresh: IPO Fundamentals + IPO DNA + IPO Radar + 1-Lot Decision
+# Hard-wired feature navigation: IPO Fundamentals + IPO DNA + IPO Radar + 1-Lot Decision
 name: Deploy static content to Pages
 
 on:
@@ -25,43 +25,107 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Validate feature JavaScript
+        run: |
+          node --check scripts/ipo-fundamentals.js
+          node --check scripts/ipo-dna.js
+          node --check scripts/ipo-radar.js
+          node --check scripts/ipo-analyst.js
+          node --check scripts/ipo-nav.js
+
       - name: Prepare site with UI enhancements
+        env:
+          BUILD_SHA: ${{ github.sha }}
         run: |
           rm -rf _site
           mkdir -p _site
           cp -R index.html data scripts _site/
           python - <<'PY'
+          import os,re
           from pathlib import Path
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
+          q=os.environ.get('BUILD_SHA','build')[:12]
+
+          # Remove the legacy Brokers button from the generated navigation.
+          s=re.sub(r'<button[^>]*id=["\']b-brk["\'][^>]*>.*?</button>', '', s, flags=re.S)
+
+          # Hard-wire the new feature buttons into the actual HTML. This makes them
+          # visible even if a browser/CDN has an older JS execution state.
+          marker='</div></div><div class="kpi-row">'
+          feature_buttons=(
+              '<button class="hb" id="ipf-btn" type="button">IPO Fundamentals</button>'
+              '<button class="hb" id="dna-btn" type="button">IPO DNA</button>'
+              '<button class="hb" id="radar-btn" type="button">IPO Radar</button>'
+              '<button class="hb" id="b-research-lens" type="button">1-Lot Decision</button>'
+          )
+          if 'id="ipf-btn"' not in s:
+              s=s.replace(marker, feature_buttons+marker, 1)
+
+          # Load every feature explicitly with a build-version query string.
           tags=[
-              '<script src="scripts/ui-enhancements.js"></script>',
-              '<script src="scripts/ipo-calendar.js"></script>',
-              '<script src="scripts/ipo-articles.js"></script>',
-              '<script src="scripts/ipo-intelligence.js"></script>',
-              '<script src="scripts/ipo-analyst.js"></script>',
-              '<script src="scripts/ipo-radar.js"></script>',
-              '<script src="scripts/ipo-shell.js"></script>',
-              '<script src="scripts/ipo-fundamentals.js"></script>',
-              '<script src="scripts/ipo-dna.js"></script>',
-              '<script src="scripts/ipo-fixes.js"></script>',
-              '<script src="scripts/ipo-final.js"></script>',
-              '<script src="scripts/ipo-subscription-values.js"></script>',
-              '<script src="scripts/ipo-gmp-hidden.js"></script>',
-              '<script src="scripts/ipo-holiday-fix.js"></script>',
-              '<script src="scripts/ipo-nav.js"></script>'
+              'scripts/ui-enhancements.js',
+              'scripts/ipo-calendar.js',
+              'scripts/ipo-articles.js',
+              'scripts/ipo-intelligence.js',
+              'scripts/ipo-analyst.js',
+              'scripts/ipo-radar.js',
+              'scripts/ipo-shell.js',
+              'scripts/ipo-fundamentals.js',
+              'scripts/ipo-dna.js',
+              'scripts/ipo-fixes.js',
+              'scripts/ipo-final.js',
+              'scripts/ipo-subscription-values.js',
+              'scripts/ipo-gmp-hidden.js',
+              'scripts/ipo-holiday-fix.js',
+              'scripts/ipo-nav.js'
           ]
-          for tag in tags:
+          for src in tags:
+              tag=f'<script src="{src}?v={q}"></script>'
+              base=f'<script src="{src}"></script>'
+              s=s.replace(base,'')
               if tag not in s:
                   s=s.replace('</body>',tag+'</body>',1)
+
+          # Bind the hard-wired buttons to the feature modules after all scripts load.
+          fallback=f'''<script>
+(function(){{
+  function wire(){{
+    var A=window.ALL_IPOS||[];
+    var map=[
+      ['ipf-btn','ipo-fundamentals-panel',function(){{window.ipoFundamentalsOpen&&window.ipoFundamentalsOpen(A);}}],
+      ['dna-btn','ipo-dna-panel',function(){{window.ipoDnaOpen&&window.ipoDnaOpen(A);}}],
+      ['radar-btn','ipo-radar-panel',function(){{window.ipoRadarOpen&&window.ipoRadarOpen(A);}}],
+      ['b-research-lens','ipo-research-lens',function(){{window.ipoResearchLensOpen&&window.ipoResearchLensOpen(A);}}]
+    ];
+    map.forEach(function(x){{
+      var b=document.getElementById(x[0]); if(!b||b.dataset.wired==='1') return;
+      b.dataset.wired='1';
+      b.onclick=function(){{
+        var p=document.getElementById(x[1]);
+        if(p&&p.classList.contains('show')){{p.classList.remove('show');b.classList.remove('active');}}
+        else if(x[2]) x[2]();
+      }};
+    }});
+  }}
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',function(){{setTimeout(wire,700);}});
+  else setTimeout(wire,700);
+  setInterval(wire,1500);
+}})();
+</script>'''
+          s=s.replace('</body>',fallback+'</body>',1)
           p.write_text(s,encoding='utf-8')
           PY
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
