@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T19:29:49.212564+05:30",
+  "generated_at": "2026-09-16T19:50:37.576973+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 8,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "Sonaselection India Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "SpectraA Technology Solutions Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "Kheria Autocomp Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "FX Multitech Ltd. SME",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "Robokidz Eduventures Ltd. SME",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     },
     {
       "ipo_name": "Axiom Gas Engineering Ltd. SME",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T19:29:49.212564+05:30"
+      "checked_at": "2026-09-16T19:50:37.576973+05:30"
     }
   ]
 }
