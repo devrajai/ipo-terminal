@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T21:46:36.977868+00:00",
+  "generated_at": "2026-09-16T21:55:40.741803+00:00",
   "events": [
     {
       "date": "2026-09-16",
@@ -63,6 +63,13 @@
       "type": "OPEN",
       "ipo_id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "CLOSE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
       "source": "NSE"
     },
     {

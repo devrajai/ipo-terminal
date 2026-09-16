@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T21:46:36.977868+00:00",
+  "generated_at": "2026-09-16T21:55:40.741803+00:00",
   "today_ist": "2026-09-17",
-  "data_updated_at": "2026-09-17T03:16:14.551095+05:30",
+  "data_updated_at": "2026-09-17T03:25:16.440615+05:30",
   "ipo_count": 12,
-  "field_coverage_pct": 32.1,
+  "field_coverage_pct": 31.0,
   "sources": {
     "NSE": {
       "ok": true,
@@ -31,16 +31,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T21:45:58.524834+00:00",
+      "checked_at": "2026-09-16T21:54:49.337712+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -52,7 +46,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 7,
+          "matched": 6,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -78,12 +72,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T21:46:00.880701+00:00"
+      "checked_at": "2026-09-16T21:54:52.280586+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-16T21:46:02.721315+00:00",
+      "checked_at": "2026-09-16T21:55:02.676353+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +87,17 @@
       "changed_fields": 10,
       "live_gmp_records": 0,
       "rejected_gmp_records": 1,
-      "checked_at": "2026-09-16T21:46:02.846388+00:00"
+      "checked_at": "2026-09-16T21:55:03.073109+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T21:46:02.888645+00:00"
+      "checked_at": "2026-09-16T21:55:03.129335+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T21:46:03.012177+00:00",
+      "checked_at": "2026-09-16T21:55:03.315629+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,11 +125,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T21:46:03.012177+00:00"
+      "checked_at": "2026-09-16T21:55:03.315629+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-17T03:16:14.551095+05:30",
+      "checked_at": "2026-09-17T03:25:16.440615+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -264,19 +258,19 @@
     {
       "id": "jindal-supreme-india-limited",
       "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "a10383b6e39159d4",
+      "fingerprint": "552db01f03a2c458",
       "fields": {
         "price": "₹88-93",
-        "size": "124.88",
+        "size": "₹87 Cr",
         "lot": "161",
         "open": "16/09/26",
-        "close": "Sep 18, 2026",
+        "close": "18/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "1.02",
-        "sub_nii": "6.75",
-        "sub_retail": "11.63",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -559,6 +553,13 @@
     },
     {
       "date": "2026-09-18",
+      "type": "CLOSE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-18",
       "type": "OPEN",
       "ipo_id": "axiom-gas-engineering-ltd-sme",
       "name": "Axiom Gas Engineering Ltd. SME",
@@ -608,6 +609,30 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-16T21:55:40.741803+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "size",
+        "close",
+        "sub_qib",
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-16T21:55:40.741803+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-18",
+        "type": "CLOSE",
+        "ipo_id": "jindal-supreme-india-limited",
+        "name": "Jindal Supreme (India) Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-16T19:42:23.645967+00:00",
       "type": "DATA_CHANGE",
