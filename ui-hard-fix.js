@@ -14,7 +14,7 @@ function boot(){
       .hbtns{position:sticky!important;top:0!important;z-index:900!important;display:flex!important;align-items:center!important;gap:8px!important;transition:transform .24s ease,opacity .24s ease,max-height .24s ease,padding .24s ease!important;will-change:transform!important;background:color-mix(in srgb,var(--bg) 62%,transparent)!important;backdrop-filter:blur(28px) saturate(170%)!important;-webkit-backdrop-filter:blur(28px) saturate(170%)!important}
       .hbtns.nav-hidden{transform:translateY(-115%)!important;opacity:0!important;pointer-events:none!important}
       .hbtns.nav-collapsed:not(.nav-hidden){max-height:14px!important;min-height:14px!important;height:14px!important;padding:0 12px!important;overflow:hidden!important;opacity:.78!important;pointer-events:auto!important}
-      .hbtns.nav-collapsed:not(.nav-hidden) .hb{transform:translateY(-40px)!important;pointer-events:none!important}
+      .hbtns.nav-collapsed:not(.nav-hidden) .hb{transform:translateY(-40px)!important;pointer-events:none!important;opacity:0!important}
       .hbtns.nav-collapsed:not(.nav-hidden)::after{content:'⌄';position:absolute;left:50%;top:0;transform:translateX(-50%);width:44px;height:12px;text-align:center;line-height:10px;border:1px solid var(--bd);border-top:0;border-radius:0 0 10px 10px;background:color-mix(in srgb,var(--bg) 55%,transparent);color:var(--tx3);font-size:10px;pointer-events:none}
       .panel{position:relative;z-index:1;background:color-mix(in srgb,var(--card) 88%,transparent)!important;backdrop-filter:blur(28px) saturate(165%)!important;-webkit-backdrop-filter:blur(28px) saturate(165%)!important}
       .panel.show{animation:ipoPanelIn .18s ease both}
@@ -36,6 +36,8 @@ function boot(){
   var theme=document.getElementById('themeToggle');
   if(theme){
     theme.style.setProperty('position','fixed','important');
+    theme.style.setProperty('right','12px','important');
+    theme.style.setProperty('top','12px','important');
     theme.style.setProperty('z-index','100000','important');
     theme.style.setProperty('touch-action','manipulation','important');
   }
@@ -72,11 +74,23 @@ function boot(){
   replace('.hbtns .hb');
   replace('.panel .close-x');
   theme=document.getElementById('themeToggle');
+  if(theme){
+    theme.style.setProperty('position','fixed','important');
+    theme.style.setProperty('right','12px','important');
+    theme.style.setProperty('top','12px','important');
+    theme.style.setProperty('z-index','100000','important');
+  }
   syncTheme();
 
   function closeAll(except){
     document.querySelectorAll('.panel.show').forEach(function(p){if(p!==except)p.classList.remove('show');});
     document.querySelectorAll('.hbtns .hb.active').forEach(function(b){b.classList.remove('active');});
+  }
+  function setNavCollapsed(value){
+    var n=document.querySelector('.hbtns');
+    if(!n)return;
+    if(value)n.classList.add('nav-collapsed');
+    else n.classList.remove('nav-collapsed');
   }
   function togglePanel(btn){
     var id=btn.getAttribute('data-panel'), panel=id&&document.getElementById(id);
@@ -85,10 +99,10 @@ function boot(){
     closeAll(was?null:panel);
     if(!was){
       panel.classList.add('show'); btn.classList.add('active'); body.classList.add('panel-open');
-      var nav=document.querySelector('.hbtns'); if(nav) nav.classList.add('nav-collapsed');
+      setNavCollapsed(true);
     }else{
       body.classList.remove('panel-open');
-      var nav2=document.querySelector('.hbtns'); if(nav2) nav2.classList.remove('nav-collapsed');
+      setNavCollapsed(false);
     }
   }
 
@@ -102,7 +116,7 @@ function boot(){
       var p=btn.closest('.panel'); if(p)p.classList.remove('show');
       document.querySelectorAll('.hbtns .hb.active').forEach(function(b){b.classList.remove('active');});
       body.classList.remove('panel-open');
-      var nav=document.querySelector('.hbtns'); if(nav)nav.classList.remove('nav-collapsed');
+      setNavCollapsed(false);
     });
   });
 
@@ -111,9 +125,19 @@ function boot(){
   function scrollNav(){
     raf=0;if(!nav)return;
     var y=window.scrollY||document.documentElement.scrollTop||0;
-    if(y<=8){nav.classList.remove('nav-hidden');if(!body.classList.contains('panel-open'))nav.classList.remove('nav-collapsed');}
-    else if(y>lastY+3){nav.classList.add('nav-hidden');}
-    else if(y<lastY-3){nav.classList.remove('nav-hidden');nav.classList.remove('nav-collapsed');}
+    var panelOpen=body.classList.contains('panel-open');
+    if(y<=8){
+      nav.classList.remove('nav-hidden');
+      if(panelOpen) nav.classList.add('nav-collapsed');
+      else nav.classList.remove('nav-collapsed');
+    }else if(y>lastY+3){
+      nav.classList.add('nav-hidden');
+    }else if(y<lastY-3){
+      nav.classList.remove('nav-hidden');
+      /* Never expand over an open panel. Reveal only the small glass strip. */
+      if(panelOpen) nav.classList.add('nav-collapsed');
+      else nav.classList.remove('nav-collapsed');
+    }
     lastY=y;
   }
   window.addEventListener('scroll',function(){if(!raf)raf=requestAnimationFrame(scrollNav);},{passive:true});
