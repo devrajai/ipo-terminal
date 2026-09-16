@@ -1,28 +1,89 @@
-/* IPO Terminal final UX + transcript-knowledge layer. Loaded last on purpose. */
+/* IPO Terminal final UX layer. Keeps data engines intact and only improves presentation. */
 (function(){
 'use strict';
-var KNOW='data/video-knowledge-001.json?ts='+Date.now();
-var MUFG='https://in.mpms.mufg.com/Initial_Offer/public-issues.html';
 function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x];});}
 function good(v){return v!==undefined&&v!==null&&v!==''&&v!=='—'&&v!=='-'&&v!=='TBA';}
 function norm(v){return String(v||'').toLowerCase().replace(/\b(limited|ltd|india|ind|ipo|mainboard|sme|nse|bse)\b/g,' ').replace(/[^a-z0-9]+/g,'');}
-function num(v){var m=String(v==null?'':v).replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
-function closePanel(id,bid){var p=document.getElementById(id),b=document.getElementById(bid);if(p)p.classList.remove('show');if(b)b.classList.remove('active');}
-function removeBroker(){var b=document.getElementById('b-brk'),p=document.getElementById('p-brk');if(b)b.remove();if(p)p.remove();}
-function mergeKnowledge(k){
- if(!Array.isArray(window.ALL_IPOS)||!k||!Array.isArray(k.ipo_overrides))return;
- var map={};k.ipo_overrides.forEach(function(x){map[norm(x.name)]=x;(x.aliases||[]).forEach(function(a){map[norm(a)]=x;});});
- window.ALL_IPOS.forEach(function(i){var x=map[norm(i.name)];if(!x)return;['sector','fresh','ofs','pe','roe','roce','rev','pat','ebitda','de','growth','prom','size','lot','pb','eps','assets','borrowings','retail','min_investment','allotment','refund','shares','listing','use_of_proceeds','gmp','gmp_pct','est_list','gmp_source','gmp_updated_at'].forEach(function(f){if(!good(i[f])&&good(x[f]))i[f]=x[f];});if(!good(i.subscription)&&good(x.subscription)){i.sub=x.subscription;i.subscription_source=x.subscription_source||'video transcript';}i.knowledge_source='user-provided video transcript';});
- if(typeof window.renderAll==='function')window.renderAll();renderComparison();renderAllotment();
+function date(v){
+ if(!v)return null;var s=String(v).trim(),m;
+ m=s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2,4})$/);
+ if(m){var y=+m[3];if(y<100)y+=2000;var d=new Date(y,+m[2]-1,+m[1]);return isNaN(d.getTime())?null:d;}
+ var d2=new Date(s);return isNaN(d2.getTime())?null:d2;
 }
-function weekPair(){var names=['veegalanddevelopers','manikaplastech'];return (window.ALL_IPOS||[]).filter(function(i){var n=norm(i.name);return names.some(function(x){return n.indexOf(x)>=0||x.indexOf(n)>=0;});});}
-function renderComparison(){var c=document.getElementById('comp-container');if(!c)return;var list=weekPair();if(!list.length)return;var h='<div style="padding:8px;font-size:10px;color:var(--tx3)">This week comparison is transcript-backed for Veegaland Developers and Manika Plastech. Live subscription/GMP fields override transcript values when newer sources are available.</div><div style="overflow:auto"><table class="ipo-table"><thead><tr><th>Parameter</th>'+list.map(function(i){return '<th>'+esc(i.name)+'</th>';}).join('')+'</tr></thead><tbody>';var rows=[['Issue size','size'],['Price','price'],['Lot','lot'],['Fresh','fresh'],['OFS','ofs'],['P/E','pe'],['ROE','roe'],['ROCE','roce'],['Revenue','rev'],['PAT','pat'],['EBITDA','ebitda'],['D/E','de'],['Growth','growth'],['Promoter','prom'],['P/B','pb'],['EPS','eps'],['Assets','assets'],['Borrowings','borrowings'],['Retail quota','retail'],['GMP','gmp'],['GMP %','gmp_pct'],['Subscription','sub'],['Open','open'],['Close','close'],['Allotment','allotment'],['Listing','listing']];rows.forEach(function(r){h+='<tr><td><b>'+esc(r[0])+'</b></td>'+list.map(function(i){return '<td>'+esc(i[r[1]]||'—')+(r[1]==='gmp'&&i.gmp_source?'<br><span class="tx3" style="font-size:8px">'+esc(i.gmp_source)+' · '+esc(i.gmp_updated_at||'')+'</span>':'')+'</td>';}).join('')+'</tr>';});h+='</tbody></table></div><div class="news-list"><div class="news-item" style="border-left-color:var(--gn)"><b>Transcript comparison takeaway</b><ul style="margin:5px 0 0 16px;font-size:10px;line-height:1.7"><li>Veegaland: stronger fresh-issue structure and lower D/E in the supplied video.</li><li>Manika: smaller issue, meaningful fresh capex and debt reduction, but margins and leverage need monitoring.</li><li>Valuation is near a tie on the transcript\'s pre-issue P/E figures.</li><li>GMP is unofficial; live GMP is shown separately and can change quickly.</li></ul></div></div>';c.innerHTML=h;}
-function renderAllotment(){var c=document.getElementById('allot-container');if(!c)return;var list=weekPair();var h='<div class="news-list"><div class="news-item" style="border-left-color:var(--gn)"><b style="font-size:13px;color:var(--gn)">Direct IPO allotment check</b><div class="tx3" style="font-size:10px;margin-top:4px">Both current transcript-covered IPOs use MUFG Intime as registrar. Open the official registrar portal and select the company.</div><div style="display:grid;gap:7px;margin-top:8px">';list.forEach(function(i){h+='<div style="padding:8px;border:1px solid var(--bd);border-radius:8px"><b>'+esc(i.name)+'</b><div class="tx3" style="font-size:9px">Allotment: '+esc(i.allotment||'—')+' · Listing: '+esc(i.listing||'—')+'</div><a class="dl-btn" target="_blank" rel="noopener" href="'+MUFG+'">Check allotment directly →</a></div>';});h+='</div></div></div>';c.innerHTML=h;}
-function deepWhy(){var p=document.getElementById('p-why'),c=document.getElementById('why-container'),b=document.getElementById('b-why');if(!p||!c||!b)return;b.onclick=function(){if(p.classList.contains('show')){closePanel('p-why','b-why');return;}var list=weekPair();if(!list.length){c.innerHTML='<div class="news-item">No current open IPO evidence yet.</div>';p.classList.add('show');b.classList.add('active');return;}var h='<div class="news-list"><div class="news-item" style="border-left-color:var(--pp)"><b>Why Apply — deeper evidence view</b><div class="tx3" style="font-size:10px;margin-top:4px">This is a decision framework, not a blind Apply/Avoid button. It combines business, valuation, profitability, leverage, issue structure, promoter alignment, demand and GMP.</div></div>';list.forEach(function(i){var de=num(i.de),pe=num(i.pe),fresh=num(i.fresh),prom=num(i.prom),g=num(i.gmp_pct),plus=[],risk=[];if(fresh!=null)plus.push(fresh>=70?'High fresh-issue contribution: most money goes to the company.':'Mixed/OFS structure: check why selling shareholders are exiting.');if(de!=null)plus.push(de<=.3?'Debt is low/comfortable.':de<=.6?'Debt is manageable but deserves monitoring.':'Leverage is high.');if(pe!=null)plus.push(pe<=20?'P/E is around or below 20x.':'P/E needs peer comparison.');if(prom!=null)plus.push(prom>=50?'Promoter holding remains meaningful.':'Promoter holding is lower; check alignment.');if(g!=null)plus.push(g>=20?'GMP sentiment is strong, but unofficial.':g>=5?'GMP is positive, but secondary.':'GMP is weak/negative.');if(!good(i.roe)||!good(i.roce))risk.push('ROE/ROCE are not available from the current evidence layer; do not invent them.');if(i.growth&&String(i.growth).indexOf('→')>=0)plus.push('Multi-period revenue/profit trend is visible in transcript evidence.');if(i.use_of_proceeds)plus.push('Use of proceeds is visible: '+i.use_of_proceeds+'.');h+='<div class="news-item"><b style="font-size:13px">'+esc(i.name)+'</b><div class="tx3">'+esc(i.sector||'')+' · '+esc(i.size||'')+' · P/E '+esc(i.pe||'—')+' · D/E '+esc(i.de||'—')+'</div><div style="margin-top:6px"><b class="gn">Positive evidence</b><ul style="margin:3px 0 0 16px;font-size:10px;line-height:1.7">'+plus.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div><div style="margin-top:5px"><b class="rd">Check before applying</b><ul style="margin:3px 0 0 16px;font-size:10px;line-height:1.7">'+(risk.length?risk:['Read RHP risk factors and verify the latest subscription/GMP before applying.']).map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></div></div>';});h+='</div>';c.innerHTML=h;p.classList.add('show');b.classList.add('active');};}
-function selectSummary(){var b=document.getElementById('b-select'),p=document.getElementById('p-select');if(!b||!p)return;b.onclick=function(){if(p.classList.contains('show')){closePanel('p-select','b-select');return;}p.innerHTML='<div class="panel-title">How to Select Better IPO <button class="close-x" id="select-close-final">Close</button></div><div class="news-list"><div class="news-item" style="border-left-color:var(--bl)"><b style="color:var(--bl)">Video summary — no external video/link</b><ol style="margin:6px 0 0 18px;font-size:11px;line-height:1.9"><li>Start with the business model and customer base.</li><li>Compare valuation with listed peers, not just the IPO price.</li><li>Look for consistent revenue, PAT and margin quality.</li><li>Check ROE/ROCE and D/E together.</li><li>Understand fresh issue vs OFS and exactly where the money goes.</li><li>Check promoter holding after dilution.</li><li>Use QIB/NII/retail subscription as demand evidence.</li><li>Use GMP only as an unofficial sentiment check.</li><li>Read DRHP/RHP risk factors before deciding.</li><li>Final decision = business quality + valuation + financial strength + issue structure + demand.</li></ol></div><div class="news-item" style="border-left-color:var(--gn)"><b style="color:var(--gn)">Tip & trick</b><div style="font-size:11px;margin-top:5px;line-height:1.8">A small IPO can be attractive but also difficult to get allotted when demand is high. For retail, multiple valid PANs can create more separate lottery applications, while increasing the number of lots in one PAN does not create extra retail lottery tickets.</div></div></div>';p.classList.add('show');b.classList.add('active');document.getElementById('select-close-final').onclick=function(){closePanel('p-select','b-select');};};}
-function calendarFix(){var b=document.getElementById('ipc-btn'),p=document.getElementById('ipo-calendar-panel');if(!b||!p)return;var orig=b.onclick;if(b.__finalBound)return;b.__finalBound=true;b.onclick=function(){if(p.classList.contains('show')){closePanel('ipo-calendar-panel','ipc-btn');return;}var has=(window.ALL_IPOS||[]).some(function(i){return i&&((i.open&&i.open!=='—')||(i.close&&i.close!=='—')||(i.allotment&&i.allotment!=='—')||(i.listing&&i.listing!=='—'));});if(!has){p.innerHTML='<div class="panel-title">IPO Calendar <button class="close-x" id="ipc-final-close">Close</button></div><div class="news-item">No dated IPO events are available yet. The calendar will not show a blank month.</div>';p.classList.add('show');b.classList.add('active');document.getElementById('ipc-final-close').onclick=function(){closePanel('ipo-calendar-panel','ipc-btn');};return;}if(typeof orig==='function')orig.call(b);p.classList.add('show');b.classList.add('active');};}
-function articleIntelligenceFix(){[['b-articles','p-articles'],['ipi-btn','ipo-intelligence-panel'],['dna-btn','ipo-dna-panel'],['radar-btn','ipo-radar-panel']].forEach(function(x){var b=document.getElementById(x[0]),p=document.getElementById(x[1]);if(!b||!p||b.__finalBound)return;var orig=b.onclick;b.__finalBound=true;b.onclick=function(){if(p.classList.contains('show')){closePanel(x[1],x[0]);return;}if(typeof orig==='function')orig.call(b);p.classList.add('show');b.classList.add('active');};});}
-function mobile(){var st=document.createElement('style');st.textContent='@media(max-width:700px){body{padding:4px}.hdr{padding:9px}.hbtns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.hb{width:100%;padding:7px 5px;font-size:10px}.panel{margin-bottom:6px}.panel-title{font-size:12px}.ipo-table{font-size:9px}.ipo-table th,.ipo-table td{padding:5px 4px}.news-item{padding:8px}}@media(min-width:701px){.ipo-table{min-width:850px}}';document.head.appendChild(st);}
-function init(){removeBroker();mobile();selectSummary();deepWhy();calendarFix();articleIntelligenceFix();renderAllotment();renderComparison();fetch(KNOW,{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(k){mergeKnowledge(k);}).catch(function(){});setTimeout(function(){removeBroker();renderAllotment();renderComparison();deepWhy();calendarFix();articleIntelligenceFix();},900);setTimeout(function(){removeBroker();renderAllotment();renderComparison();calendarFix();articleIntelligenceFix();},1800);}
+function removeSection(id,buttonText){var p=document.getElementById(id);if(p)p.remove();document.querySelectorAll('.hbtns .hb').forEach(function(b){if(String(b.textContent||'').toLowerCase().indexOf(buttonText.toLowerCase())>=0||b.getAttribute('data-panel')===id)b.remove();});}
+function removeCompareAndDocs(){removeSection('p-comp','compare');removeSection('p-doc','docs');}
+function listedItems(){
+ var all=Array.isArray(window.ALL_IPOS)?window.ALL_IPOS:[];
+ var now=new Date();
+ return all.filter(function(i){
+   if(!i||!i.name)return false;
+   var st=String(i.status||'').toLowerCase();
+   var ld=date(i.listing||i.listing_date||i.listed_on);
+   return st==='listed'||st.indexOf('listed')>=0||(ld&&ld<=now);
+ }).sort(function(a,b){
+   var da=date(a.listing||a.listing_date||a.listed_on),db=date(b.listing||b.listing_date||b.listed_on);
+   return (db?db.getTime():0)-(da?da.getTime():0);
+ }).slice(0,5);
+}
+function renderLastFiveListed(){
+ var c=document.getElementById('list-container');if(!c)return;
+ var list=listedItems();
+ if(!list.length){c.innerHTML='<div class="news-item">No listed IPO records are available yet. The automatic data engine will populate this section.</div>';return;}
+ var h='';
+ list.forEach(function(i){
+   var price=i.price||i.issue_price||'—',lp=i.listing_price||i.listed_price||i.listingPrice||i.list_price||'—';
+   var pct=i.listing_gain_pct||i.gain_pct||i.listing_gain||i.gain||'—';
+   var pnum=parseFloat(String(pct).replace(/[^0-9.\-]/g,''));
+   var cls=isNaN(pnum)?'zero':pnum>0?'gain':pnum<0?'loss':'zero';
+   var ld=i.listing||i.listing_date||i.listed_on||'—';
+   h+='<div class="gl-card '+cls+'"><div class="ipo-name">'+esc(i.name)+'</div><div class="ipo-meta"><span>Listed: '+esc(ld)+'</span><span>Issue: '+esc(price)+'</span><span>Listing: '+esc(lp)+'</span></div><div class="gl-pct">'+esc(pct)+'</div></div>';
+ });
+ c.innerHTML='<div class="news-item"><b>Latest 5 listed IPOs</b><div class="tx3" style="font-size:10px">Automatically sorted by latest listing date. Refreshed with the terminal data.</div></div>'+h;
+}
+function fixAllotment(){
+ var w=document.querySelector('#p-allot .allot-wrap');if(!w)return;
+ w.innerHTML='<a class="big-link" href="https://www.nseindia.com/invest/check-trades-bids-verify-ipo-bids" target="_blank" rel="noopener">Check IPO Allotment / Bid on NSE →</a><a class="big-link" href="https://bseindia.com/investors/appli_check.aspx" target="_blank" rel="noopener">Check IPO Allotment on BSE →</a><div class="small-note">Official exchange pages. For final allotment, the registrar for the individual IPO may also provide the status. PAN/application details are entered on the official site and are not stored here.</div>';
+}
+function addGlossary(){
+ var g=document.querySelector('.gloss-grid');if(!g||g.dataset.extraAdded==='1')return;
+ var terms=[
+ ['ASBA','Application Supported by Blocked Amount — funds remain blocked in your bank account until the IPO process is completed.'],
+ ['UPI Mandate','The payment authorization used for many retail IPO applications. Approve it within the required time.'],
+ ['QIB','Qualified Institutional Buyers, such as eligible mutual funds, insurers and other institutions.'],
+ ['NII / HNI','Non-Institutional Investors, generally investors applying above the retail category limit.'],
+ ['OFS','Offer for Sale — existing shareholders sell shares; the company does not receive those proceeds.'],
+ ['Fresh Issue','New shares issued by the company, with the proceeds going to the company subject to the offer terms.'],
+ ['Anchor Investor','Eligible institutional investor receiving an allocation before the public issue opens, subject to applicable rules.'],
+ ['Cut-off Price','For eligible retail bids, choosing cut-off means accepting the final issue price within the disclosed price band.'],
+ ['Lot Size','The minimum number of shares in one IPO application lot.'],
+ ['Price Band','The disclosed lower and upper price limits within which investors can bid.'],
+ ['Basis of Allotment','The final method/document determining how shares are distributed among valid applicants.'],
+ ['Registrar / RTA','The registrar and transfer agent handling application, allotment and related investor records for the issue.'],
+ ['Listing Price','The first traded market price when the IPO shares begin trading on the exchange.'],
+ ['Subscription','Demand received in each investor category compared with shares offered in that category.'],
+ ['GMP','Grey Market Premium — unofficial market indication and not an exchange-set or guaranteed price.'],
+ ['DRHP','Draft Red Herring Prospectus — draft offer document filed before the final public issue document.'],
+ ['RHP','Red Herring Prospectus — the offer document used for the public issue before final pricing/allotment details.'],
+ ['UDRHP','Updated Draft Red Herring Prospectus — an updated version of the draft offer document.'],
+ ['P/E','Price-to-Earnings ratio, commonly used as one valuation measure.'],
+ ['ROE','Return on Equity — a profitability measure relative to shareholders’ equity.'],
+ ['ROCE','Return on Capital Employed — a measure of operating return relative to capital employed.'],
+ ['D/E','Debt-to-Equity ratio, a common measure of financial leverage.'],
+ ['OFS vs Fresh','A mixed issue can contain both shares sold by existing holders and newly issued shares; read the offer document for the exact split.'],
+ ['Allotment Date','The date on which the basis of allotment is finalized and shares are allocated according to the issue process.'],
+ ['Refund Date','The date on which blocked funds for unsuccessful or excess applications are released according to the issue schedule.'],
+ ['Demat Credit','Electronic credit of allotted shares into the investor’s demat account after the allotment process.']
+ ];
+ terms.forEach(function(t){var card=document.createElement('div');card.className='gloss-card';card.innerHTML='<div class="gloss-term">'+esc(t[0])+'</div><div class="gloss-def">'+esc(t[1])+'</div>';g.appendChild(card);});
+ g.dataset.extraAdded='1';
+}
+function removeLegacyComparisonFunctions(){
+ var b=document.getElementById('b-brk'),p=document.getElementById('p-brk');if(b)b.remove();if(p)p.remove();
+}
+function init(){
+ removeCompareAndDocs();removeLegacyComparisonFunctions();fixAllotment();addGlossary();renderLastFiveListed();
+ setInterval(function(){removeCompareAndDocs();fixAllotment();addGlossary();renderLastFiveListed();},15*60*1000);
+ setTimeout(function(){renderLastFiveListed();fixAllotment();addGlossary();},1200);
+}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,900);});else setTimeout(init,900);
 })();
