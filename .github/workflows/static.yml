@@ -64,7 +64,7 @@ jobs:
           #ipc-btn,#ipf-btn,#radar-btn,#sme-btn{font-weight:800!important}#ipf-btn{border-color:rgba(34,197,94,.55)!important}#radar-btn{border-color:rgba(168,85,247,.55)!important}#sme-btn{border-color:rgba(168,85,247,.55)!important}
           </style>'''
           s=s.replace('</style>',responsive_css+'</style>',1)
-          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-shell.js','scripts/ipo-radar.js','scripts/ipo-decision.js','scripts/ipo-radar-proof.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ipo-responsive-ui.js','scripts/ipo-live-content.js','scripts/ipo-upgrade.js','scripts/ipo-live-only-fix.js']
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-shell.js','scripts/ipo-radar.js','scripts/ipo-decision.js','scripts/ipo-radar-proof.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ipo-responsive-ui.js','scripts/ipo-live-content.js','scripts/ipo-upgrade.js','scripts/ipo-live-only-fix.js','scripts/ipo-self-heal.js']
           for src in tags:
               s=s.replace(f'<script src="{src}"></script>','')
               tag=f'<script src="{src}?v={q}"></script>'
@@ -81,12 +81,12 @@ jobs:
           print('ALLOTMENT CONTROL: Check Allotment')
           print('SEO: description + theme-color + Open Graph tags + canonical domain')
           print('UPGRADE: search, subscriptions, SME, anchors, UPI copy, timestamp, disclaimer')
-          print('CLEANUP: stale closed IPOs removed from Comparison/Radar/Why Apply; unreliable GMP UI removed')
+          print('SELF-HEAL: live/upcoming filtering, stale UI cleanup, dead-control protection')
           PY
       - name: Validate runtime JavaScript
         run: |
           set -e
-          files="scripts/ui-enhancements.js scripts/ipo-calendar.js scripts/ipo-articles.js scripts/ipo-radar.js scripts/ipo-decision.js scripts/ipo-radar-proof.js scripts/ipo-shell.js scripts/ipo-fixes.js scripts/ipo-final.js scripts/ipo-subscription-values.js scripts/ipo-gmp-hidden.js scripts/ipo-holiday-fix.js scripts/ipo-nav.js scripts/ipo-responsive-ui.js scripts/ipo-live-content.js scripts/ipo-upgrade.js scripts/ipo-live-only-fix.js"
+          files="scripts/ui-enhancements.js scripts/ipo-calendar.js scripts/ipo-articles.js scripts/ipo-radar.js scripts/ipo-decision.js scripts/ipo-radar-proof.js scripts/ipo-shell.js scripts/ipo-fixes.js scripts/ipo-final.js scripts/ipo-subscription-values.js scripts/ipo-gmp-hidden.js scripts/ipo-holiday-fix.js scripts/ipo-nav.js scripts/ipo-responsive-ui.js scripts/ipo-live-content.js scripts/ipo-upgrade.js scripts/ipo-live-only-fix.js scripts/ipo-self-heal.js"
           for f in $files; do node --check "_site/$f"; done
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
