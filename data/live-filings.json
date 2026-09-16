@@ -104,13 +104,13 @@
     {
       "name": "NSE",
       "type": "UDRHP",
-      "url": "https://www.sebi.gov.in/filings/public-issues/",
+      "url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "date": "09/09/26",
-      "source": "SEBI",
-      "verified": false,
-      "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
-      "verified_url": "https://www.sebi.gov.in/filings/public-issues/"
+      "source": "NSE India",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-16T00:00:00Z",
+      "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents"
     },
     {
       "name": "Prasol Chemicals",
@@ -137,14 +137,14 @@
     {
       "name": "Jio Platforms",
       "type": "DRHP",
-      "url": "https://www.sebi.gov.in/filings/public-issues/",
+      "url": "https://www.ril.com/investor/resource-center/corporate-announcements",
       "date": "19/06/26",
-      "source": "SEBI",
-      "verified": false,
-      "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
-      "verified_url": "https://www.sebi.gov.in/filings/public-issues/"
+      "source": "Reliance Industries",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-16T00:00:00Z",
+      "verified_url": "https://www.ril.com/investor/resource-center/corporate-announcements"
     }
   ],
-  "verified_count": 3
+  "verified_count": 5
 }
