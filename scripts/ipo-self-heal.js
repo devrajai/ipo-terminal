@@ -43,20 +43,21 @@ function cleanGmp(){
   ['gmp-btn','gmp-panel','ipo-gmp-panel','p-gmp'].forEach(function(id){var x=document.getElementById(id);if(x)x.remove();});
 }
 function cleanVideo(){
-  var phrase=/^Video summary\s*-\s*no external video\/link$/i;
-  var text=/Video summary\s*-\s*no external video\/link/i;
-  var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[],n;
-  while(n=w.nextNode())a.push(n);
-  a.forEach(function(t){
+  /* Remove the fallback sentence wherever it is rendered, including mobile/lazy-loaded panels. */
+  var re=/Video\s*summary\s*-\s*no\s*external\s*video\s*\/\s*link/ig;
+  var nodes=[],w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n;
+  while(n=w.nextNode())nodes.push(n);
+  nodes.forEach(function(t){
     var v=String(t.nodeValue||'');
-    if(text.test(v)){
-      var p=t.parentElement;
-      if(p && phrase.test(String(p.textContent||'').trim())) p.remove();
-      else t.nodeValue=v.replace(text,'');
-    }
+    if(!re.test(v))return;
+    re.lastIndex=0;
+    var p=t.parentElement;
+    var cleaned=v.replace(re,'').replace(/[ \t]+\n/g,'\n').trim();
+    if(p && p.children.length===0 && !cleaned) p.remove();
+    else t.nodeValue=cleaned;
   });
   document.querySelectorAll('body *').forEach(function(el){
-    if(el.children.length===0 && phrase.test(String(el.textContent||'').trim())) el.remove();
+    if(el.children.length===0 && /Video\s*summary\s*-\s*no\s*external\s*video\s*\/\s*link/i.test(String(el.textContent||'')))el.remove();
   });
 }
 function wrapOpenOnly(){
