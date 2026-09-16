@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T17:22:00.433983+05:30",
+  "updated_at": "2026-09-16T17:35:08.866049+05:30",
   "data": [
     {
       "name": "SS Retail Limited",
@@ -11,15 +11,6 @@
       "updated_at": "2026-09-14T12:55:24.115251+00:00"
     },
     {
-      "name": "Sonaselection India Limited",
-      "issue_price": "₹94 – ₹99",
-      "gmp": "₹21",
-      "estimated_listing": "—",
-      "gmp_pct": "—",
-      "kostak": "—",
-      "updated_at": "2026-09-14T12:55:22.532383+00:00"
-    },
-    {
       "name": "National Stock Exchange of India Limited",
       "issue_price": "₹1,700 – ₹1,785",
       "gmp": "₹21",
@@ -27,6 +18,15 @@
       "gmp_pct": "+1.2%",
       "kostak": "—",
       "updated_at": "2026-09-15T04:25:35.579912+00:00"
+    },
+    {
+      "name": "Sonaselection India Limited",
+      "issue_price": "₹94 – ₹99",
+      "gmp": "₹21",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-14T12:55:22.532383+00:00"
     }
   ]
 }

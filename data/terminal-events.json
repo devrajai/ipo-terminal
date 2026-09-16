@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T11:52:31.258911+00:00",
+  "generated_at": "2026-09-16T12:05:37.476687+00:00",
   "events": [
-    {
-      "date": "2026-09-16",
-      "type": "ALLOTMENT",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-16",
       "type": "CLOSE",
@@ -70,13 +63,6 @@
       "type": "OPEN",
       "ipo_id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "LISTING",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
       "source": "NSE"
     },
     {
