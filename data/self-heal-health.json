@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "checked_at": "2026-09-16T13:02:11.582085+05:30",
+  "status_repairs": 4,
+  "filings": {
+    "checked": 13,
+    "verified": 5,
+    "repaired": 0
+  },
+  "live_upcoming_rule": "IPO is eligible for application-facing views only when not closed/listed and close date has not passed"
+}
