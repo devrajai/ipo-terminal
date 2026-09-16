@@ -37,13 +37,17 @@ def gmp_from_page(html):
 def apply_gmp(i,g):
  m=re.search(r'(\d+(?:\.\d+)?)\s*(?:-|–|—)\s*(\d+(?:\.\d+)?)',str(i.get('price','')))
  hi=float(m.group(2)) if m else None
+ # Reject obviously malformed scraper matches. A GMP above 2x the upper issue price
+ # is treated as unverified instead of being displayed as a false multi-thousand-percent premium.
+ if hi is None or float(g) > hi*2 or float(g) < -hi:
+  return False
  i['gmp']=f'₹{int(g) if float(g).is_integer() else g}'
  i['gmp_source']='IPO Central'
  i['gmp_source_url']=PAGES[norm(i['name'])][1]
  i['gmp_updated_at']=dt.datetime.now(dt.timezone.utc).isoformat()
- if hi:
-  i['gmp_pct']=f'{g/hi*100:+.1f}%'
-  i['est_list']=f'₹{int(hi+g) if float(hi+g).is_integer() else round(hi+g,2)}'
+ i['gmp_pct']=f'{g/hi*100:+.1f}%'
+ i['est_list']=f'₹{int(hi+g) if float(hi+g).is_integer() else round(hi+g,2)}'
+ return True
 
 def main():
  if not OUT.exists() or not KNOW.exists(): return
@@ -51,7 +55,7 @@ def main():
  ipos=data.get('ipos',[]); overrides=knowledge.get('ipo_overrides',[]); om={norm(x.get('name')):x for x in overrides}
  for x in overrides:
   for a in x.get('aliases',[]):om[norm(a)]=x
- changed=0; live=0
+ changed=0; live=0; rejected=0
  for i in ipos:
   x=om.get(norm(i.get('name')))
   if x:
@@ -62,12 +66,15 @@ def main():
   if key in PAGES:
    try:
     g=gmp_from_page(fetch(PAGES[key][1]))
-    if g is not None:apply_gmp(i,g);live+=1
+    if g is not None:
+     if apply_gmp(i,g): live+=1
+     else:
+      i['gmp']='—';i['gmp_pct']='—';i['est_list']='—';i['gmp_source']='Rejected abnormal value';rejected+=1
    except Exception as exc:
     data.setdefault('knowledge_errors',[]).append(str(exc))
- data.setdefault('sources',{})['VideoKnowledge']={'ok':True,'records':len(overrides),'changed_fields':changed,'live_gmp_records':live,'checked_at':dt.datetime.now(dt.timezone.utc).isoformat()}
+ data.setdefault('sources',{})['VideoKnowledge']={'ok':True,'records':len(overrides),'changed_fields':changed,'live_gmp_records':live,'rejected_gmp_records':rejected,'checked_at':dt.datetime.now(dt.timezone.utc).isoformat()}
  data['updated_at']=dt.datetime.now(dt.timezone.utc).isoformat()
  OUT.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
- print('Video knowledge applied:',changed,'fields; live GMP:',live)
+ print('Video knowledge applied:',changed,'fields; live GMP:',live,'rejected abnormal GMP:',rejected)
 
 if __name__=='__main__':main()
