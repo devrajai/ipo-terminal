@@ -1,3 +1,4 @@
+/* FINAL UI CONTRACT V5 — loaded before the data engine by the Pages workflow. */
 (function(){
 'use strict';
 (function installDataCache(){
