@@ -1,7 +1,7 @@
 /* IPO Terminal navigation — single owner for Calendar, Decision and Radar. */
 (function(){
 'use strict';
-var wanted=['b-open','b-upc','b-pipe','b-list','b-comp','b-allot','b-news','b-doc','b-tips','b-gloss','b-why','ipc-btn','ipf-btn','radar-btn'];
+var wanted=['b-open','b-upc','b-pipe','b-list','b-comp','b-allot','b-news','b-doc','b-tips','b-brk','b-gloss','b-why','ipc-btn','ipf-btn','radar-btn'];
 var labels={'ipc-btn':'IPO Calendar','ipf-btn':'Decision','radar-btn':'IPO Radar'};
 var modules={
  calendar:['ipc-btn','scripts/ipo-calendar.js','ipo-calendar-panel'],
@@ -18,7 +18,7 @@ function feature(key){var m=modules[key],id=m[0],src=m[1],panel=m[2],p=document.
 function moveFeatures(nav){['ipc-btn','ipf-btn','radar-btn'].forEach(function(id){var b=document.getElementById(id);if(b&&b.parentElement!==nav)nav.appendChild(b);});}
 function order(nav){var all=[].slice.call(nav.querySelectorAll('.hb')),map={};all.forEach(function(b){if(b.id)map[b.id]=b;});wanted.forEach(function(id){var b=map[id];if(b)nav.appendChild(b);});}
 function featureKeyFor(id){var keys=Object.keys(modules);for(var i=0;i<keys.length;i++)if(modules[keys[i]][0]===id)return keys[i];return null;}
-function wire(){var nav=document.querySelector('.hbtns');if(!nav)return;['b-brk','b-research-lens','lot1-btn','b-intelligence'].forEach(function(id){var x=document.getElementById(id);if(x)x.remove();});moveFeatures(nav);order(nav);['ipc-btn','ipf-btn','radar-btn'].forEach(function(id){var b=document.getElementById(id);if(b){b.type='button';b.textContent=labels[id];b.dataset.navBound='1';}});if(!nav.dataset.featureDelegate){nav.dataset.featureDelegate='1';nav.addEventListener('click',function(ev){var b=ev.target.closest('.hb');if(!b)return;var key=featureKeyFor(b.id);if(!key)return;ev.preventDefault();ev.stopPropagation();feature(key);},true);}nav.classList.add('ipo-nav-stable');}
+function wire(){var nav=document.querySelector('.hbtns');if(!nav)return;['b-research-lens','lot1-btn','b-intelligence'].forEach(function(id){var x=document.getElementById(id);if(x)x.remove();});moveFeatures(nav);order(nav);['ipc-btn','ipf-btn','radar-btn'].forEach(function(id){var b=document.getElementById(id);if(b){b.type='button';b.textContent=labels[id];b.dataset.navBound='1';}});if(!nav.dataset.featureDelegate){nav.dataset.featureDelegate='1';nav.addEventListener('click',function(ev){var b=ev.target.closest('.hb');if(!b)return;var key=featureKeyFor(b.id);if(!key)return;ev.preventDefault();ev.stopPropagation();feature(key);},true);}nav.classList.add('ipo-nav-stable');}
 function start(){wire();var tries=0,t=setInterval(function(){wire();if(++tries>=40)clearInterval(t);},500);}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(start,700);});else setTimeout(start,700);
 })();
