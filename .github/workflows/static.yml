@@ -38,6 +38,20 @@ jobs:
           cp ui-hard-fix.js _site/ui-hard-fix.js
           cp -R data _site/data
           cp -R scripts _site/scripts
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('_site/index.html')
+          html = p.read_text(encoding='utf-8')
+          tag = '<script src="ui-hard-fix.js?v=nav-v3"></script>'
+          if 'ui-hard-fix.js?v=nav-v3' not in html:
+              marker = '</body>'
+              pos = html.lower().rfind(marker)
+              if pos >= 0:
+                  html = html[:pos] + tag + html[pos:]
+              else:
+                  html += tag
+              p.write_text(html, encoding='utf-8')
+          PY
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
