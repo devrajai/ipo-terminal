@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-16T15:21:44.433666+05:30",
+  "updated_at": "2026-09-16T15:34:14.589920+05:30",
   "sources": {
     "NSE": {
       "ok": true,
@@ -36,7 +36,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T09:51:22.215393+00:00",
+      "checked_at": "2026-09-16T10:03:57.239886+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -74,12 +74,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T09:51:24.501226+00:00"
+      "checked_at": "2026-09-16T10:03:59.245739+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T09:51:25.764040+00:00",
+      "checked_at": "2026-09-16T10:04:00.865417+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -89,17 +89,17 @@
       "changed_fields": 19,
       "live_gmp_records": 0,
       "rejected_gmp_records": 2,
-      "checked_at": "2026-09-16T09:51:25.948826+00:00"
+      "checked_at": "2026-09-16T10:04:01.106947+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T09:51:25.997608+00:00"
+      "checked_at": "2026-09-16T10:04:01.158951+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T09:51:26.142192+00:00",
+      "checked_at": "2026-09-16T10:04:01.316252+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -127,11 +127,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T09:51:26.142192+00:00"
+      "checked_at": "2026-09-16T10:04:01.316252+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T15:21:44.433666+05:30",
+      "checked_at": "2026-09-16T15:34:14.589920+05:30",
       "status_repairs": 4,
       "filings": {
         "checked": 13,
@@ -286,7 +286,7 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-16T09:51:25.763914+00:00",
+      "fundamentals_updated_at": "2026-09-16T10:04:00.865286+00:00",
       "pb": "2.6x",
       "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
       "assets": "₹252→₹320→₹323→₹317 Cr",
@@ -419,7 +419,7 @@
       "min_investment": "₹14,280",
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-16T09:51:25.997590+00:00",
+      "video_evidence_updated_at": "2026-09-16T10:04:01.158929+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
