@@ -25,12 +25,14 @@ jobs:
           from pathlib import Path
           p=Path('index.html')
           s=p.read_text(encoding='utf-8')
-          tag='<script src="ui-final-fix.js?v=20260916"></script>'
+          import re
+          tag='<script src="ui-final-fix.js?v=20260916-2"></script>'
+          s=re.sub(r'<script src="ui-final-fix\.js\?v=[^"]+"></script>',tag,s)
           if tag not in s:
               marker='</body>'
               if marker not in s: raise SystemExit('No </body> marker found')
               s=s.replace(marker, tag+'\n'+marker, 1)
-              p.write_text(s, encoding='utf-8')
+          p.write_text(s, encoding='utf-8')
           PY
       - name: Commit and push with retry
         shell: bash
