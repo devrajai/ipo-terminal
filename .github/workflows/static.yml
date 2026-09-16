@@ -45,42 +45,39 @@ jobs:
           index = root / 'index.html'
           html = index.read_text(encoding='utf-8')
 
-          # Remove the requested subtitle while keeping the IPO Terminal title.
           html = html.replace(
               '<div class="subtitle">Auto-updated • Free • India</div>',
               ''
           )
-
-          # Replace the old static update text with the live DD/MM/YY + HH:MM:SS IST clock.
           html = html.replace(
               '<div class="updated" id="lastUpdated">⏱ Auto-updated daily</div>',
               '<div class="updated" id="liveClock">--/--/-- • --:--:-- IST</div>'
           )
-
-          # Remove Broker navigation button while preserving its source content.
           html = html.replace(
               '<button class="hb" data-panel="p-brk">🏦 Brokers</button>',
               ''
           )
 
-          # Two-column navigation on both mobile and laptop/desktop.
+          # Mobile: single-column navigation. Desktop: two-column navigation.
           html = html.replace(
               'display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overflow-y:hidden;',
-              'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;'
+              'display:grid;grid-template-columns:1fr;gap:8px;overflow:visible;'
           )
           html = html.replace(
               '.hb{flex:0 0 auto;white-space:nowrap;',
               '.hb{width:100%;white-space:nowrap;'
           )
 
-          # The rich data file is an object with an `ipos` array, not a bare array.
-          # Normalize that in the existing inline loader so it does not enter its error fallback.
+          # Keep two columns only on desktop/laptop widths.
+          desktop_css = '<style id="desktop-nav-two-columns">@media(min-width:700px){.hbtns{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}</style>'
+          if desktop_css not in html:
+              html = html.replace('</head>', desktop_css + '</head>', 1)
+
           html = html.replace(
               "var ipos=Array.isArray(results[0])?results[0]:[];",
               "var ipos=Array.isArray(results[0])?results[0]:((results[0]&&results[0].ipos)||(results[0]&&results[0].data)||(results[0]&&results[0].items)||(results[0]&&results[0].records)||[]);"
           )
 
-          # Run the robust data normalizer after the existing UI script.
           marker = '</body>'
           loader = '<script src="scripts/ipo-live-loader.js?v=1"></script>'
           if loader not in html:
@@ -88,7 +85,6 @@ jobs:
 
           index.write_text(html, encoding='utf-8')
 
-          # Validate every local script reference.
           refs = re.findall(r'<script[^>]+src=["\']([^"\']+)["\']', html, flags=re.I)
           missing = []
           for ref in refs:
@@ -97,23 +93,10 @@ jobs:
                   continue
               if not (root / path).exists():
                   missing.append(path)
-
           if missing:
               raise SystemExit('Missing script files: ' + ', '.join(missing))
 
-          # Validate required JSON files.
-          for datafile in (
-              'ipo-data.json',
-              'gmp.json',
-              'subscriptions.json',
-              'sme-ipos.json',
-          ):
-              path = root / 'data' / datafile
-              if not path.exists() or path.stat().st_size == 0:
-                  raise SystemExit(f'Missing or empty data file: {path}')
-              json.loads(path.read_text(encoding='utf-8'))
-
-          for datafile in ('live-news.json', 'live-filings.json'):
+          for datafile in ('ipo-data.json','gmp.json','subscriptions.json','sme-ipos.json','live-news.json','live-filings.json'):
               path = root / 'data' / datafile
               if not path.exists() or path.stat().st_size == 0:
                   raise SystemExit(f'Missing or empty data file: {path}')
@@ -124,11 +107,7 @@ jobs:
               json.loads(last_updated.read_text(encoding='utf-8'))
 
           print('SITE HEALTH OK:', len(refs), 'local script references checked')
-          print('SUBTITLE: removed')
-          print('LIVE CLOCK: DD/MM/YY HH:MM:SS IST')
-          print('BROKER NAVIGATION: removed')
-          print('NAVIGATION: two columns')
-          print('DATA: required JSON files validated')
+          print('NAVIGATION: 1 column mobile, 2 columns desktop')
           PY
 
       - name: Validate inline JavaScript
@@ -137,7 +116,6 @@ jobs:
           python - <<'PY'
           import re
           from pathlib import Path
-
           html = Path('_site/index.html').read_text(encoding='utf-8')
           scripts = re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', html, flags=re.I | re.S)
           Path('/tmp/index-inline.js').write_text('\n'.join(scripts), encoding='utf-8')
