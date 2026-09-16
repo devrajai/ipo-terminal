@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-16T14:09:52.257428+05:30",
+  "updated_at": "2026-09-16T14:22:57.088612+05:30",
   "sources": {
     "NSE": {
       "ok": true,
@@ -36,7 +36,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T08:39:22.736289+00:00",
+      "checked_at": "2026-09-16T08:51:48.523166+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -74,12 +74,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T08:39:24.901866+00:00"
+      "checked_at": "2026-09-16T08:51:51.057413+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T08:39:37.539841+00:00",
+      "checked_at": "2026-09-16T08:52:34.857237+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -88,18 +88,18 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 0,
-      "rejected_gmp_records": 2,
-      "checked_at": "2026-09-16T08:39:38.309912+00:00"
+      "rejected_gmp_records": 1,
+      "checked_at": "2026-09-16T08:52:43.536983+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T08:39:38.358274+00:00"
+      "checked_at": "2026-09-16T08:52:43.581309+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T08:39:38.532447+00:00",
+      "checked_at": "2026-09-16T08:52:43.710494+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -127,11 +127,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T08:39:38.532447+00:00"
+      "checked_at": "2026-09-16T08:52:43.710494+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T14:09:52.257428+05:30",
+      "checked_at": "2026-09-16T14:22:57.088612+05:30",
       "status_repairs": 4,
       "filings": {
         "checked": 13,
@@ -286,7 +286,7 @@
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-16T08:39:37.539703+00:00",
+      "fundamentals_updated_at": "2026-09-16T08:52:34.857144+00:00",
       "pb": "2.6x",
       "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
       "assets": "₹252→₹320→₹323→₹317 Cr",
@@ -297,8 +297,7 @@
       "refund": "18/09/26",
       "shares": "18/09/26",
       "use_of_proceeds": "~₹54 Cr capex; ~₹15 Cr borrowing reduction",
-      "knowledge_source": "user-provided video transcript",
-      "gmp_source": "Rejected abnormal value"
+      "knowledge_source": "user-provided video transcript"
     },
     {
       "id": "veegaland-developers-limited",
@@ -419,7 +418,7 @@
       "min_investment": "₹14,280",
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-16T08:39:38.358257+00:00",
+      "video_evidence_updated_at": "2026-09-16T08:52:43.581291+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
@@ -684,5 +683,8 @@
       "date": "19/06/26",
       "source": "SEBI"
     }
+  ],
+  "knowledge_errors": [
+    "HTTP Error 521: <none>"
   ]
 }
