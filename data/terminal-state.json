@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T19:31:09.679856+00:00",
+  "generated_at": "2026-09-16T19:42:23.645967+00:00",
   "today_ist": "2026-09-17",
-  "data_updated_at": "2026-09-17T01:00:45.767364+05:30",
+  "data_updated_at": "2026-09-17T01:11:58.422271+05:30",
   "ipo_count": 12,
   "field_coverage_pct": 32.1,
   "sources": {
@@ -40,7 +40,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T19:30:09.501846+00:00",
+      "checked_at": "2026-09-16T19:41:27.804036+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -78,12 +78,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T19:30:13.106792+00:00"
+      "checked_at": "2026-09-16T19:41:31.090398+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-16T19:30:27.173126+00:00",
+      "checked_at": "2026-09-16T19:41:43.006064+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +93,17 @@
       "changed_fields": 10,
       "live_gmp_records": 0,
       "rejected_gmp_records": 1,
-      "checked_at": "2026-09-16T19:30:27.692759+00:00"
+      "checked_at": "2026-09-16T19:41:43.609979+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T19:30:27.742255+00:00"
+      "checked_at": "2026-09-16T19:41:43.663305+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T19:30:27.883349+00:00",
+      "checked_at": "2026-09-16T19:41:43.789534+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,11 +131,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T19:30:27.883349+00:00"
+      "checked_at": "2026-09-16T19:41:43.789534+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-17T01:00:45.767364+05:30",
+      "checked_at": "2026-09-17T01:11:58.422271+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -208,7 +208,7 @@
     {
       "id": "ss-retail-limited",
       "name": "SS Retail Limited",
-      "fingerprint": "415a8b5271cf00ec",
+      "fingerprint": "c6b9d2d205c5477c",
       "fields": {
         "price": "₹403-424",
         "size": "500.00",
@@ -219,8 +219,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.20",
-        "sub_nii": "1.25",
-        "sub_retail": "2.02",
+        "sub_nii": "1.53",
+        "sub_retail": "2.20",
         "gmp": "₹21",
         "gmp_pct": "—",
         "est_list": "—",
@@ -236,7 +236,7 @@
     {
       "id": "hero-motors-limited",
       "name": "Hero Motors Limited",
-      "fingerprint": "b453054a4719eab6",
+      "fingerprint": "16a8ba37be401c79",
       "fields": {
         "price": "₹79-84",
         "size": "1000.00",
@@ -247,8 +247,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.01",
-        "sub_nii": "1.06",
-        "sub_retail": "2.11",
+        "sub_nii": "1.25",
+        "sub_retail": "2.23",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -264,7 +264,7 @@
     {
       "id": "jindal-supreme-india-limited",
       "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "023c9e303e2f54dd",
+      "fingerprint": "a10383b6e39159d4",
       "fields": {
         "price": "₹88-93",
         "size": "124.88",
@@ -275,8 +275,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "1.02",
-        "sub_nii": "5.58",
-        "sub_retail": "10.76",
+        "sub_nii": "6.75",
+        "sub_retail": "11.63",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -608,6 +608,36 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-16T19:42:23.645967+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-16T19:42:23.645967+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-16T19:42:23.645967+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
     {
       "at": "2026-09-16T18:37:45.197353+00:00",
       "type": "DATA_CHANGE",
