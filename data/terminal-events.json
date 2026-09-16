@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-15T23:47:53.181492+00:00",
+  "generated_at": "2026-09-16T00:05:06.981784+00:00",
   "events": [
-    {
-      "date": "2026-09-15",
-      "type": "CLOSE",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-16",
       "type": "ALLOTMENT",
