@@ -1,144 +1,76 @@
-# IPO Terminal — responsive UI + stable GitHub Pages deployment
 name: Deploy static content to Pages
-
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
-
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
 jobs:
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
       - name: Prepare site
+        shell: bash
         run: |
           set -e
           rm -rf _site
           mkdir -p _site
-          cp -R index.html data scripts _site/
-
+          cp -R index.html data scripts ui-final-fix.js ui-hard-fix.js _site/
+          cat >> _site/index.html <<'HTML'
+<style id="final-responsive-navigation">
+.hbtns{box-sizing:border-box!important;width:100%!important;max-width:100%!important}
+.hbtns .hb{box-sizing:border-box!important}
+@media(max-width:699px){
+  .hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:8px!important;overflow:visible!important;overflow-x:visible!important;overflow-y:visible!important}
+  .hbtns .hb{width:100%!important;min-width:0!important;flex:none!important}
+}
+@media(min-width:700px){
+  .hbtns{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  .hbtns::-webkit-scrollbar{display:none!important}
+  .hbtns .hb{width:auto!important;min-width:max-content!important;flex:0 0 auto!important}
+}
+</style>
+HTML
           python - <<'PY'
-          import json
-          import re
+          import json,re
           from pathlib import Path
-
-          root = Path('_site')
-          index = root / 'index.html'
-          html = index.read_text(encoding='utf-8')
-
-          html = html.replace(
-              '<div class="subtitle">Auto-updated • Free • India</div>',
-              ''
-          )
-          html = html.replace(
-              '<div class="updated" id="lastUpdated">⏱ Auto-updated daily</div>',
-              '<div class="updated" id="liveClock">--/--/-- • --:--:-- IST</div>'
-          )
-          html = html.replace(
-              '<button class="hb" data-panel="p-brk">🏦 Brokers</button>',
-              ''
-          )
-
-          # Final navigation contract: mobile = two columns, desktop = horizontal slider.
-          html = html.replace(
-              'display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overflow-y:hidden;',
-              'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;'
-          )
-          html = html.replace(
-              '.hb{flex:0 0 auto;white-space:nowrap;',
-              '.hb{width:100%;white-space:nowrap;'
-          )
-
-          html = html.replace(
-              "var ipos=Array.isArray(results[0])?results[0]:[];",
-              "var ipos=Array.isArray(results[0])?results[0]:((results[0]&&results[0].ipos)||(results[0]&&results[0].data)||(results[0]&&results[0].items)||(results[0]&&results[0].records)||[]);"
-          )
-
-          loader = '<script src="scripts/ipo-live-loader.js?v=1"></script>'
-          if loader not in html:
-              html = html.replace('</body>', loader + '</body>', 1)
-
-          final_nav = '''<style id="ipo-final-nav-layout">
-          .hbtns{box-sizing:border-box!important;width:100%!important;max-width:100%!important;}
-          .hbtns .hb{box-sizing:border-box!important;}
-          @media(max-width:699px){
-            .hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:8px!important;overflow:visible!important;overflow-x:visible!important;overflow-y:visible!important;}
-            .hbtns .hb{width:100%!important;min-width:0!important;flex:none!important;}
-          }
-          @media(min-width:700px){
-            .hbtns{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important;}
-            .hbtns::-webkit-scrollbar{display:none!important;}
-            .hbtns .hb{width:auto!important;min-width:max-content!important;flex:0 0 auto!important;}
-          }
-          </style>'''
-          if 'id="ipo-final-nav-layout"' not in html:
-              html = html.replace('</body>', final_nav + '</body>', 1)
-
-          index.write_text(html, encoding='utf-8')
-
-          refs = re.findall(r'<script[^>]+src=["\']([^"\']+)["\']', html, flags=re.I)
-          missing = []
+          root=Path('_site')
+          html=(root/'index.html').read_text(encoding='utf-8')
+          refs=re.findall(r'<script[^>]+src=["\']([^"\']+)["\']',html,flags=re.I)
+          missing=[]
           for ref in refs:
-              path = ref.split('?', 1)[0]
-              if path.startswith(('http://', 'https://', '//')):
-                  continue
-              if not (root / path).exists():
-                  missing.append(path)
-          if missing:
-              raise SystemExit('Missing script files: ' + ', '.join(missing))
-
-          for datafile in ('ipo-data.json','gmp.json','subscriptions.json','sme-ipos.json','live-news.json','live-filings.json'):
-              path = root / 'data' / datafile
-              if not path.exists() or path.stat().st_size == 0:
-                  raise SystemExit(f'Missing or empty data file: {path}')
-              json.loads(path.read_text(encoding='utf-8'))
-
-          last_updated = root / 'data' / 'last-updated.json'
-          if last_updated.exists():
-              json.loads(last_updated.read_text(encoding='utf-8'))
-
-          print('SITE HEALTH OK:', len(refs), 'local script references checked')
-          print('NAVIGATION: 2 columns mobile, horizontal slider desktop')
+              p=ref.split('?',1)[0]
+              if p.startswith(('http://','https://','//')): continue
+              if not (root/p).exists(): missing.append(p)
+          if missing: raise SystemExit('Missing script files: '+', '.join(missing))
+          for f in ('ipo-data.json','gmp.json','subscriptions.json','sme-ipos.json','live-news.json','live-filings.json'):
+              p=root/'data'/f
+              if not p.exists() or p.stat().st_size==0: raise SystemExit('Missing or empty data file: '+str(p))
+              json.loads(p.read_text(encoding='utf-8'))
+          print('SITE HEALTH OK; mobile=2 columns; desktop=horizontal slider')
           PY
-
-      - name: Validate inline JavaScript
+      - name: Validate JavaScript
         run: |
           set -e
-          python - <<'PY'
-          import re
-          from pathlib import Path
-          html = Path('_site/index.html').read_text(encoding='utf-8')
-          scripts = re.findall(r'<script(?:\s[^>]*)?>(.*?)</script>', html, flags=re.I | re.S)
-          Path('/tmp/index-inline.js').write_text('\n'.join(scripts), encoding='utf-8')
-          print('Inline script blocks:', len(scripts))
-          PY
-          node --check /tmp/index-inline.js
+          node --check _site/ui-final-fix.js
+          node --check _site/ui-hard-fix.js
           node --check _site/scripts/ipo-live-loader.js
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '_site'
-
+          path: _site
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
