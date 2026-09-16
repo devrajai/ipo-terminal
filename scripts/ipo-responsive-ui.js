@@ -38,14 +38,17 @@ body.light .hdr,body.light .panel,body.light .kpi-card,body.light .news-item,bod
 
 /* ===== LAPTOP / DESKTOP ===== */
 @media(min-width:901px){
+  html,body{overflow-x:hidden!important}
   body{padding:10px 20px 56px 274px!important;min-width:0!important;min-height:100vh!important}
-  .hdr{width:100%!important;margin-bottom:10px!important}
+  .hdr{width:100%!important;margin-bottom:10px!important;position:relative!important;z-index:30!important}
   .hbtns{
     position:fixed!important;
     left:10px!important;
-    top:92px!important;
+    top:10px!important;
+    bottom:10px!important;
     width:246px!important;
-    max-height:calc(100vh - 104px)!important;
+    max-height:none!important;
+    height:auto!important;
     overflow-x:hidden!important;
     overflow-y:auto!important;
     overscroll-behavior:contain!important;
@@ -72,35 +75,51 @@ body.light .hdr,body.light .panel,body.light .kpi-card,body.light .news-item,bod
     cursor:pointer!important;
   }
   .hbtns .hb:hover{transform:translateX(2px)!important}
-  .kpi-row,.panel{width:100%!important;max-width:none!important}
-  .panel{scroll-margin-top:10px!important}
+  .kpi-row,.panel{width:100%!important;max-width:none!important;min-width:0!important}
+  .panel{scroll-margin-top:10px!important;position:relative!important;z-index:1!important}
   .panel-title{position:sticky!important;top:0!important;z-index:20!important}
   .ipo-table{min-width:720px}
+  .panel>div:not(.panel-title){max-width:100%;overflow-x:auto}
+  .panel-title{overflow:visible!important}
+  .kpi-row{position:relative!important;z-index:2!important}
 }
 
 /* ===== MOBILE / TABLET ===== */
 @media(max-width:900px){
-  body{padding:8px 8px 54px!important}
+  body{padding:8px 8px 54px!important;overflow-x:hidden!important}
   .hbtns{
     position:static!important;
     width:100%!important;
     max-height:none!important;
-    overflow-x:auto!important;
-    overflow-y:hidden!important;
-    display:flex!important;
-    flex-wrap:nowrap!important;
-    gap:6px!important;
+    overflow:visible!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:7px!important;
     margin-top:10px!important;
     padding:7px!important;
     border-radius:16px!important;
-    -webkit-overflow-scrolling:touch!important;
-    scrollbar-width:none!important;
   }
   .hbtns::-webkit-scrollbar{display:none!important}
-  .hbtns .hb{flex:0 0 auto!important;width:auto!important;min-width:112px!important;min-height:42px!important;text-align:center!important;white-space:nowrap!important;padding:8px 10px!important;margin:0!important;font-size:11px!important}
+  .hbtns .hb{
+    width:100%!important;
+    min-width:0!important;
+    min-height:42px!important;
+    text-align:center!important;
+    white-space:normal!important;
+    padding:8px 6px!important;
+    margin:0!important;
+    font-size:11px!important;
+    line-height:1.2!important;
+  }
   .kpi-card{min-width:0!important}
+  /* Mobile: keep the command grid clean; search controls move out of the way. */
+  #ipo-search,#ipoSearch,.ipo-search,.ipo-search-bar,.search-bar,.search-box,.search-container,[class*="search-bar"],[class*="search-box"]{display:none!important}
+  .panel>div:not(.panel-title){max-width:100%;overflow-x:auto}
 }
-@media(max-width:700px){.hbtns .hb{min-width:105px!important;font-size:10px!important;min-height:40px!important}}
+@media(max-width:700px){
+  .hbtns{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .hbtns .hb{font-size:10px!important;min-height:40px!important}
+}
 
 #ipc-btn,#ipf-btn,#dna-btn,#radar-btn,#sme-btn{font-weight:800!important}
 #ipf-btn{border-color:rgba(34,197,94,.55)!important}
