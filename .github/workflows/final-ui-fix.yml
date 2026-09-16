@@ -12,11 +12,15 @@ jobs:
   fix-ui:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest main
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Inject final UI fix
         shell: bash
         run: |
+          git fetch origin main
+          git reset --hard origin/main
           python3 - <<'PY'
           from pathlib import Path
           p=Path('index.html')
@@ -28,11 +32,18 @@ jobs:
               s=s.replace(marker, tag+'\n'+marker, 1)
               p.write_text(s, encoding='utf-8')
           PY
-      - name: Commit UI fix
+      - name: Commit and push with retry
         shell: bash
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add index.html ui-final-fix.js
-          git diff --cached --quiet || git commit -m 'fix: reliable liquid glass theme toggle and mobile nav'
-          git push
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'fix: reliable theme toggle and mobile nav'
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort; git reset --hard origin/main; git add index.html ui-final-fix.js; git commit -m 'fix: reliable theme toggle and mobile nav' || true; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 3
+          done
+          exit 1
