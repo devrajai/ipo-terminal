@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T01:50:21.064612+05:30",
+  "generated_at": "2026-09-17T02:03:17.380538+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 4,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T01:50:21.064612+05:30"
+      "checked_at": "2026-09-17T02:03:17.380538+05:30"
     },
     {
       "ipo_name": "FX Multitech Ltd. SME",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T01:50:21.064612+05:30"
+      "checked_at": "2026-09-17T02:03:17.380538+05:30"
     },
     {
       "ipo_name": "Robokidz Eduventures Ltd. SME",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T01:50:21.064612+05:30"
+      "checked_at": "2026-09-17T02:03:17.380538+05:30"
     },
     {
       "ipo_name": "Axiom Gas Engineering Ltd. SME",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T01:50:21.064612+05:30"
+      "checked_at": "2026-09-17T02:03:17.380538+05:30"
     }
   ]
 }
