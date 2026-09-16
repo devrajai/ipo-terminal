@@ -43,9 +43,21 @@ function cleanGmp(){
   ['gmp-btn','gmp-panel','ipo-gmp-panel','p-gmp'].forEach(function(id){var x=document.getElementById(id);if(x)x.remove();});
 }
 function cleanVideo(){
+  var phrase=/^Video summary\s*-\s*no external video\/link$/i;
+  var text=/Video summary\s*-\s*no external video\/link/i;
   var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),a=[],n;
   while(n=w.nextNode())a.push(n);
-  a.forEach(function(t){if(/Video summary\s*-\s*no external video\/link/i.test(t.nodeValue||'')){var p=t.parentElement;if(p&&p.childNodes.length===1)p.remove();else t.nodeValue=t.nodeValue.replace(/Video summary\s*-\s*no external video\/link/ig,'');}});
+  a.forEach(function(t){
+    var v=String(t.nodeValue||'');
+    if(text.test(v)){
+      var p=t.parentElement;
+      if(p && phrase.test(String(p.textContent||'').trim())) p.remove();
+      else t.nodeValue=v.replace(text,'');
+    }
+  });
+  document.querySelectorAll('body *').forEach(function(el){
+    if(el.children.length===0 && phrase.test(String(el.textContent||'').trim())) el.remove();
+  });
 }
 function wrapOpenOnly(){
   if(typeof window.renderComp==='function' && !window.renderComp.__liveOnly){
