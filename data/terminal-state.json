@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T15:19:30.740707+00:00",
+  "generated_at": "2026-09-16T15:33:17.026357+00:00",
   "today_ist": "2026-09-16",
-  "data_updated_at": "2026-09-16T20:49:01.879078+05:30",
+  "data_updated_at": "2026-09-16T21:02:49.983355+05:30",
   "ipo_count": 12,
   "field_coverage_pct": 32.9,
   "sources": {
@@ -31,16 +31,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T15:18:30.230390+00:00",
+      "checked_at": "2026-09-16T15:32:18.289486+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -78,12 +72,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T15:18:34.202936+00:00"
+      "checked_at": "2026-09-16T15:32:22.589806+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T15:18:46.825895+00:00",
+      "checked_at": "2026-09-16T15:32:34.089181+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +87,17 @@
       "changed_fields": 10,
       "live_gmp_records": 0,
       "rejected_gmp_records": 1,
-      "checked_at": "2026-09-16T15:18:47.271665+00:00"
+      "checked_at": "2026-09-16T15:32:34.484643+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T15:18:47.326252+00:00"
+      "checked_at": "2026-09-16T15:32:34.534810+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T15:18:47.485920+00:00",
+      "checked_at": "2026-09-16T15:32:34.691231+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,11 +125,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T15:18:47.485920+00:00"
+      "checked_at": "2026-09-16T15:32:34.691231+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T20:49:01.879078+05:30",
+      "checked_at": "2026-09-16T21:02:49.983355+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
