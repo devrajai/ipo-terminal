@@ -17,26 +17,16 @@ function liveOrUpcoming(i){
 }
 function liveData(){return Array.isArray(window.ALL_IPOS)?window.ALL_IPOS.filter(liveOrUpcoming):[];}
 window.IPO_TERMINAL_LIVE_ONLY=liveData;
-function cleanDecision(){
-  var p=document.getElementById('ipo-decision-panel'); if(!p)return;
-  p.querySelectorAll('.dec-row').forEach(function(row){
-    var name=row.querySelector('b'); if(!name)return;
-    var found=(window.ALL_IPOS||[]).find(function(i){return String(i.name||'').trim()===name.textContent.trim();});
-    if(found && !liveOrUpcoming(found))row.remove();
+function cleanRetiredControls(){
+  ['b-why','ipf-btn','radar-btn','b-radar','decision-btn'].forEach(function(id){
+    var x=document.getElementById(id);if(x)x.remove();
   });
-  var alt=p.querySelector('.dec-alt');
-  if(alt)alt.querySelectorAll(':scope > div').forEach(function(row){
-    var name=row.firstElementChild; if(!name)return;
-    var found=(window.ALL_IPOS||[]).find(function(i){return String(i.name||'').trim()===name.textContent.trim();});
-    if(found && !liveOrUpcoming(found))row.remove();
+  ['p-why','ipo-decision-panel','p-decision','ipo-radar-panel','p-radar'].forEach(function(id){
+    var x=document.getElementById(id);if(x)x.remove();
   });
-}
-function cleanRadar(){
-  var p=document.getElementById('ipo-radar-panel'); if(!p)return;
-  p.querySelectorAll('.radar-card').forEach(function(card){
-    var b=card.querySelector('.radar-head b'); if(!b)return;
-    var found=(window.ALL_IPOS||[]).find(function(i){return String(i.name||'').trim()===b.textContent.trim();});
-    if(found && !liveOrUpcoming(found))card.remove();
+  document.querySelectorAll('.hbtns .hb').forEach(function(b){
+    var t=String(b.textContent||'').replace(/\s+/g,' ').trim().toLowerCase();
+    if(t==='why apply'||t==='decision'||t==='ipo radar')b.remove();
   });
 }
 function cleanGmp(){
@@ -64,9 +54,6 @@ function wrapOpenOnly(){
   if(typeof window.renderComp==='function' && !window.renderComp.__liveOnly){
     var orig=window.renderComp;window.renderComp=function(id,ipos){return orig(id,(ipos||[]).filter(liveOrUpcoming));};window.renderComp.__liveOnly=true;
   }
-  if(typeof window.renderWhyApply==='function' && !window.renderWhyApply.__liveOnly){
-    var origWhy=window.renderWhyApply;window.renderWhyApply=function(id){var old=window.ALL_IPOS;try{window.ALL_IPOS=liveData();return origWhy(id);}finally{window.ALL_IPOS=old;}};window.renderWhyApply.__liveOnly=true;
-  }
 }
 function repairDeadControls(){
   document.querySelectorAll('.hbtns .hb').forEach(function(b){
@@ -76,7 +63,7 @@ function repairDeadControls(){
     if(m&&!document.getElementById(m[1])){b.setAttribute('aria-disabled','true');b.style.display='none';}
   });
 }
-function run(){wrapOpenOnly();cleanGmp();cleanVideo();cleanDecision();cleanRadar();repairDeadControls();}
+function run(){cleanRetiredControls();wrapOpenOnly();cleanGmp();cleanVideo();repairDeadControls();}
 function start(){
   run();
   var count=0,t=setInterval(function(){run();if(++count>=60)clearInterval(t);},500);
