@@ -1,0 +1,75 @@
+name: IPO Terminal Pages Deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ipo-terminal-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build site
+        shell: bash
+        run: |
+          set -e
+          rm -rf _site
+          mkdir -p _site
+          cp -R index.html data scripts ui-final-fix.js ui-hard-fix.js _site/
+          cat >> _site/index.html <<'HTML'
+<style id="final-responsive-navigation">
+.hbtns{box-sizing:border-box!important;width:100%!important;max-width:100%!important}
+.hbtns .hb{box-sizing:border-box!important}
+@media(max-width:699px){.hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important;overflow:visible!important}.hbtns .hb{width:100%!important;min-width:0!important;flex:none!important}}
+@media(min-width:700px){.hbtns{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;scrollbar-width:none!important}.hbtns::-webkit-scrollbar{display:none!important}.hbtns .hb{width:auto!important;min-width:max-content!important;flex:0 0 auto!important}}
+</style>
+HTML
+          python - <<'PY'
+          import json,re
+          from pathlib import Path
+          root=Path('_site')
+          html=(root/'index.html').read_text(encoding='utf-8')
+          refs=re.findall(r'<script[^>]+src=["\']([^"\']+)["\']',html,flags=re.I)
+          for ref in refs:
+              p=ref.split('?',1)[0]
+              if p.startswith(('http://','https://','//')): continue
+              if not (root/p).exists(): raise SystemExit('Missing script: '+p)
+          for f in ('ipo-data.json','gmp.json','subscriptions.json','sme-ipos.json','live-news.json','live-filings.json'):
+              p=root/'data'/f
+              if not p.exists() or p.stat().st_size==0: raise SystemExit('Missing data: '+str(p))
+              json.loads(p.read_text(encoding='utf-8'))
+          PY
+
+      - name: Validate JavaScript
+        run: |
+          node --check _site/ui-final-fix.js
+          node --check _site/ui-hard-fix.js
+          node --check _site/scripts/ipo-live-loader.js
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
