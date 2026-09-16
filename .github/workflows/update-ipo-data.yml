@@ -2,18 +2,23 @@ name: Update IPO data
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    # 09:30 IST = 04:00 UTC
+    # 15:30 IST = 10:00 UTC
+    # 21:30 IST = 16:00 UTC
+    - cron: '0 4,10,16 * * 1-5'
+
+    # Saturday 15:30 IST = 10:00 UTC
+    - cron: '0 10 * * 6'
+
   workflow_dispatch:
-  push:
-    branches: ["main"]
 
 permissions:
   contents: write
 
 jobs:
   update:
-    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -23,8 +28,36 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Backup existing data
+        run: |
+          set -e
+          mkdir -p /tmp/ipo-backup
+
+          for f in \
+            data/ipo-data.json \
+            data/gmp.json \
+            data/subscriptions.json \
+            data/sme-ipos.json \
+            data/terminal-state.json \
+            data/terminal-events.json \
+            data/live-news.json \
+            data/live-filings.json \
+            data/self-heal-health.json \
+            data/upcoming-ipo-filings.json
+          do
+            if [ -s "$f" ]; then
+              cp "$f" "/tmp/ipo-backup/$(basename "$f")"
+              echo "BACKUP OK: $f"
+            else
+              echo "NO EXISTING DATA: $f"
+            fi
+          done
+
       - name: Collect IPO data
-        run: python scripts/update_data.py
+        run: |
+          set -e
+          echo '=== Collecting IPO data ==='
+          python scripts/update_data.py
 
       - name: Enrich free public IPO sources
         run: python scripts/enrich_public_sources.py
@@ -58,10 +91,115 @@ jobs:
       - name: Build future-proof terminal state and event stream
         run: python scripts/build_terminal_state.py
 
+      - name: Validate data before commit
+        run: |
+          set -e
+          echo '========================================'
+          echo '       IPO TERMINAL DATA CHECK'
+          echo '========================================'
+
+          if [ -s data/ipo-data.json ]; then
+            echo 'Data OK: data/ipo-data.json'
+          else
+            echo 'Data EMPTY - keeping old'
+            if [ -s /tmp/ipo-backup/ipo-data.json ]; then
+              cp /tmp/ipo-backup/ipo-data.json data/ipo-data.json
+              echo 'Previous ipo-data.json restored.'
+            else
+              exit 1
+            fi
+          fi
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              'ipo-data.json',
+              'gmp.json',
+              'subscriptions.json',
+              'sme-ipos.json',
+          ]
+
+          for name in required:
+              path = Path('data') / name
+              backup = Path('/tmp/ipo-backup') / name
+
+              try:
+                  if not path.exists() or path.stat().st_size == 0:
+                      raise ValueError('empty or missing file')
+                  data = json.loads(path.read_text(encoding='utf-8'))
+                  if isinstance(data, list) and not data:
+                      raise ValueError('empty JSON list')
+                  print(f'Data OK: {path} | records={len(data) if isinstance(data, list) else "object"}')
+              except Exception as exc:
+                  print(f'Data invalid: {path} | {exc}')
+                  if backup.exists() and backup.stat().st_size > 0:
+                      path.write_bytes(backup.read_bytes())
+                      print(f'Restored previous data: {path}')
+                  else:
+                      raise
+
+          # Validate any optional generated JSON that exists.
+          optional = [
+              'terminal-state.json',
+              'terminal-events.json',
+              'live-news.json',
+              'live-filings.json',
+              'self-heal-health.json',
+              'upcoming-ipo-filings.json',
+          ]
+
+          for name in optional:
+              path = Path('data') / name
+              if not path.exists():
+                  print(f'Optional file not present: {path}')
+                  continue
+              try:
+                  json.loads(path.read_text(encoding='utf-8'))
+                  print(f'JSON OK: {path}')
+              except Exception as exc:
+                  backup = Path('/tmp/ipo-backup') / name
+                  if backup.exists() and backup.stat().st_size > 0:
+                      path.write_bytes(backup.read_bytes())
+                      print(f'Restored invalid optional file: {path}')
+                  else:
+                      raise SystemExit(f'Invalid optional JSON with no backup: {path}: {exc}')
+          PY
+
+          echo '=== Data fetch summary ==='
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for name in ['ipo-data.json', 'gmp.json', 'subscriptions.json', 'sme-ipos.json']:
+              p = Path('data') / name
+              data = json.loads(p.read_text(encoding='utf-8'))
+              print(f'{name}: {len(data) if isinstance(data, list) else "object"} records')
+          PY
+
+      - name: Save last updated timestamp
+        run: |
+          set -e
+          echo "{\"updated\": \"$(date -u +%Y-%m-%dT%H:%M:%SZ)\"}" > data/last-updated.json
+          echo 'Last updated:'
+          cat data/last-updated.json
+
       - name: Commit updated terminal data
         run: |
+          set -e
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ipo-data.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/terminal-state.json data/terminal-events.json data/live-news.json data/live-filings.json data/self-heal-health.json data/upcoming-ipo-filings.json
-          git diff --cached --quiet || git commit -m 'chore: self-heal IPO terminal data and links'
-          git push
+
+          git add -A data
+
+          echo '=== Changes to commit ==='
+          git diff --cached --stat
+
+          if git diff --cached --quiet; then
+            echo 'No data changes.'
+          else
+            git commit -m 'chore: update IPO terminal data'
+            git push
+            echo 'Data successfully committed and pushed.'
+          fi
