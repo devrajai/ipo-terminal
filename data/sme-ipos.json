@@ -1,4 +1,45 @@
 {
-  "updated_at": null,
-  "data": []
+  "updated_at": "2026-09-16T05:15:53.214505+00:00",
+  "data": [
+    {
+      "company": "SpectraA Technology Solutions Limited",
+      "exchange": "NSE",
+      "open_date": "17/09/26",
+      "close_date": "Sep 21, 2026",
+      "issue_size": "₹42.52 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Kheria Autocomp Limited",
+      "exchange": "NSE",
+      "open_date": "17/09/26",
+      "close_date": "Sep 21, 2026",
+      "issue_size": "₹46.44 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "S. K. Offset Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "23/09/26",
+      "close_date": "—",
+      "issue_size": "₹29.06 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Robokidz Eduventures Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "21/09/26",
+      "close_date": "—",
+      "issue_size": "₹31.09 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Axiom Gas Engineering Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "18/09/26",
+      "close_date": "—",
+      "issue_size": "₹49.81 Cr",
+      "status": "upcoming"
+    }
+  ]
 }

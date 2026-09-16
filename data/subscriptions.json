@@ -1,4 +1,26 @@
 {
-  "updated_at": null,
-  "data": []
+  "updated_at": "2026-09-16T05:15:53.214505+00:00",
+  "data": [
+    {
+      "name": "Manika Plastech Limited",
+      "qib": "—",
+      "nii": "—",
+      "rii": "35%",
+      "total": "—"
+    },
+    {
+      "name": "Veegaland Developers Limited",
+      "qib": "—",
+      "nii": "—",
+      "rii": "35%",
+      "total": "—"
+    },
+    {
+      "name": "National Stock Exchange of India Limited",
+      "qib": "50%",
+      "nii": "15%",
+      "rii": "35%",
+      "total": "—"
+    }
+  ]
 }

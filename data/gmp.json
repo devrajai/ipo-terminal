@@ -1,4 +1,50 @@
 {
-  "updated_at": null,
-  "data": []
+  "updated_at": "2026-09-16T05:15:53.214505+00:00",
+  "data": [
+    {
+      "name": "SS Retail Limited",
+      "issue_price": "₹403-424",
+      "gmp": "₹21",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-14T12:55:24.115251+00:00"
+    },
+    {
+      "name": "Manika Plastech Limited",
+      "issue_price": "₹40-43",
+      "gmp": "₹8211",
+      "estimated_listing": "₹8254",
+      "gmp_pct": "+19095.3%",
+      "kostak": "—",
+      "updated_at": "2026-09-16T05:15:52.710860+00:00"
+    },
+    {
+      "name": "Veegaland Developers Limited",
+      "issue_price": "₹130-140",
+      "gmp": "₹8211",
+      "estimated_listing": "₹8351",
+      "gmp_pct": "+5865.0%",
+      "kostak": "—",
+      "updated_at": "2026-09-16T05:15:53.020364+00:00"
+    },
+    {
+      "name": "Sonaselection India Limited",
+      "issue_price": "₹94 – ₹99",
+      "gmp": "₹21",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-14T12:55:22.532383+00:00"
+    },
+    {
+      "name": "National Stock Exchange of India Limited",
+      "issue_price": "₹1,700 – ₹1,785",
+      "gmp": "₹21",
+      "estimated_listing": "₹1806",
+      "gmp_pct": "+1.2%",
+      "kostak": "—",
+      "updated_at": "2026-09-15T04:25:35.579912+00:00"
+    }
+  ]
 }
