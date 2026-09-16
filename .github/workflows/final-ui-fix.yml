@@ -26,7 +26,7 @@ jobs:
           p=Path('index.html')
           s=p.read_text(encoding='utf-8')
           import re
-          tag='<script src="ui-final-fix.js?v=20260916-2"></script>'
+          tag='<script src="ui-final-fix.js?v=20260916-3"></script>'
           s=re.sub(r'<script src="ui-final-fix\.js\?v=[^"]+"></script>',tag,s)
           if tag not in s:
               marker='</body>'
