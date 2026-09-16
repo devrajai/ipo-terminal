@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated_at": "2026-09-16T07:05:35.678361+00:00",
+  "generated_at": "2026-09-16T07:25:04.277214+00:00",
   "documents": [
     {
       "name": "Kanohar Electricals",
@@ -10,7 +10,7 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html"
     },
     {
@@ -21,7 +21,7 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html"
     },
     {
@@ -32,7 +32,7 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf"
     },
     {
@@ -43,7 +43,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -54,7 +54,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -65,7 +65,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -76,7 +76,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -87,7 +87,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -98,7 +98,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -106,10 +106,10 @@
       "type": "UDRHP",
       "url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "date": "09/09/26",
-      "source": "NSE India",
+      "source": "SEBI",
       "verified": true,
-      "http_status": 200,
-      "verified_at": "2026-09-16T00:00:00Z",
+      "http_status": 206,
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents"
     },
     {
@@ -120,7 +120,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -131,7 +131,7 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:05:35.678361+00:00",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/"
     },
     {
@@ -139,10 +139,10 @@
       "type": "DRHP",
       "url": "https://www.ril.com/investor/resource-center/corporate-announcements",
       "date": "19/06/26",
-      "source": "Reliance Industries",
+      "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-16T00:00:00Z",
+      "verified_at": "2026-09-16T07:25:04.277214+00:00",
       "verified_url": "https://www.ril.com/investor/resource-center/corporate-announcements"
     }
   ],

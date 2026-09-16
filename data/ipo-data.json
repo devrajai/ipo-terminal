@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-16T07:05:35.678361+00:00",
+  "updated_at": "2026-09-16T07:25:04.277214+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -27,15 +27,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T07:04:51.233708+00:00",
+      "checked_at": "2026-09-16T07:24:51.542004+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -73,12 +68,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T07:04:53.680856+00:00"
+      "checked_at": "2026-09-16T07:24:53.377578+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T07:05:34.759441+00:00",
+      "checked_at": "2026-09-16T07:25:03.438880+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -86,18 +81,19 @@
       "ok": true,
       "records": 2,
       "changed_fields": 19,
-      "live_gmp_records": 2,
-      "checked_at": "2026-09-16T07:05:35.548348+00:00"
+      "live_gmp_records": 0,
+      "rejected_gmp_records": 2,
+      "checked_at": "2026-09-16T07:25:04.089284+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T07:05:35.585723+00:00"
+      "checked_at": "2026-09-16T07:25:04.136141+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T07:05:35.678361+00:00",
+      "checked_at": "2026-09-16T07:25:04.277214+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -124,8 +120,8 @@
     "FilingVerification": {
       "ok": true,
       "records": 13,
-      "verified": 3,
-      "checked_at": "2026-09-16T07:05:35.678361+00:00"
+      "verified": 5,
+      "checked_at": "2026-09-16T07:25:04.277214+00:00"
     }
   },
   "ipos": [
@@ -159,7 +155,10 @@
       "exchange": "NSE",
       "symbol": "JSIPL",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "sub_qib": "0.01",
+      "sub_nii": "1.78",
+      "sub_retail": "4.61"
     },
     {
       "id": "hero-motors-limited",
@@ -191,7 +190,10 @@
       "exchange": "NSE",
       "symbol": "HEROMOTORS",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "sub_qib": "0.00",
+      "sub_nii": "0.50",
+      "sub_retail": "1.17"
     },
     {
       "id": "ss-retail-limited",
@@ -227,7 +229,10 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-14T12:55:24.115251+00:00",
-      "gmp_source_updated_at": null
+      "gmp_source_updated_at": null,
+      "sub_qib": "0.00",
+      "sub_nii": "0.40",
+      "sub_retail": "0.85"
     },
     {
       "id": "manika-plastech-limited",
@@ -240,9 +245,9 @@
       "close": "16/09/26",
       "listing": "21/09/26",
       "sub": "—",
-      "gmp": "₹8211",
-      "gmp_pct": "+19095.3%",
-      "est_list": "₹8254",
+      "gmp": "—",
+      "gmp_pct": "—",
+      "est_list": "—",
       "sector": "Plastics",
       "fresh": "100%",
       "ofs": "0%",
@@ -260,12 +265,12 @@
       "symbol": "MANIKA",
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "gmp_source": "IPO Central",
+      "gmp_source": "Rejected abnormal value",
       "gmp_source_url": "https://ipocentral.in/manika-plastech-ipo-gmp-price-date-allotment/",
       "gmp_updated_at": "2026-09-16T07:05:35.201698+00:00",
       "gmp_source_updated_at": null,
       "fundamentals_source": "IPO Terminal embedded research fallback",
-      "fundamentals_updated_at": "2026-09-16T07:05:34.759373+00:00",
+      "fundamentals_updated_at": "2026-09-16T07:25:03.438752+00:00",
       "pb": "2.6x",
       "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
       "assets": "₹252→₹320→₹323→₹317 Cr",
@@ -289,9 +294,9 @@
       "close": "15/09/26",
       "listing": "18/09/26",
       "sub": "—",
-      "gmp": "₹8211",
-      "gmp_pct": "+5865.0%",
-      "est_list": "₹8351",
+      "gmp": "—",
+      "gmp_pct": "—",
+      "est_list": "—",
       "sector": "Real Estate",
       "fresh": "100%",
       "ofs": "0%",
@@ -309,7 +314,7 @@
       "symbol": "VEEGALAND",
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "gmp_source": "IPO Central",
+      "gmp_source": "Rejected abnormal value",
       "gmp_source_url": "https://ipocentral.in/veegaland-developers-ipo-gmp-price-allotment/",
       "gmp_updated_at": "2026-09-16T07:05:35.548278+00:00",
       "gmp_source_updated_at": null,
@@ -399,7 +404,7 @@
       "min_investment": "₹14,280",
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-16T07:05:35.585711+00:00",
+      "video_evidence_updated_at": "2026-09-16T07:25:04.136126+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
