@@ -50,8 +50,9 @@
     var original=window.renderTable;
     window.__subscriptionValuesWrapped=true;
     window.renderTable=function(containerId,ipos,showSub,showScore){
+      /* Subscription breakdown is shown only for Open/Live IPOs. */
       original(containerId,ipos,showSub,showScore);
-      if(containerId!=='open-container'&&containerId!=='upc-container')return;
+      if(containerId!=='open-container')return;
       var c=document.getElementById(containerId),table=c&&c.querySelector('table');
       if(!table||!ipos||!ipos.length)return;
       var head=table.querySelector('thead tr');
