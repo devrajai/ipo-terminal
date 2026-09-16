@@ -55,18 +55,19 @@ function removeGmpUi(){
   ['gmp-btn'].forEach(function(id){var b=document.getElementById(id);if(b)b.remove();});
   ['gmp-panel','ipo-gmp-panel','p-gmp'].forEach(function(id){var p=document.getElementById(id);if(p)p.remove();});
 }
-function apply(){
+function init(){
   removeGmpUi();
   patchRadar();
   refreshComparisonAndWhy();
   removeVideoLine(document.body);
-}
-function init(){
-  apply();
-  var mo=new MutationObserver(function(){apply();});
+  var mo=new MutationObserver(function(){
+    removeGmpUi();
+    patchRadar();
+    removeVideoLine(document.body);
+  });
   mo.observe(document.body,{childList:true,subtree:true});
   setTimeout(function(){mo.disconnect();},30000);
 }
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,400);});
-else setTimeout(init,400);
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,500);});
+else setTimeout(init,500);
 })();
