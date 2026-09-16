@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T18:22:13.570070+00:00",
-  "today_ist": "2026-09-16",
-  "data_updated_at": "2026-09-16T23:51:51.453060+05:30",
+  "generated_at": "2026-09-16T18:37:45.197353+00:00",
+  "today_ist": "2026-09-17",
+  "data_updated_at": "2026-09-17T00:07:16.947712+05:30",
   "ipo_count": 12,
-  "field_coverage_pct": 32.9,
+  "field_coverage_pct": 32.1,
   "sources": {
     "NSE": {
       "ok": true,
@@ -40,7 +40,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T18:21:00.357093+00:00",
+      "checked_at": "2026-09-16T18:36:46.912685+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -58,8 +58,8 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 8,
-          "matched": 4,
+          "records": 4,
+          "matched": 0,
           "added": 4,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
@@ -78,12 +78,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T18:21:03.935977+00:00"
+      "checked_at": "2026-09-16T18:36:49.726025+00:00"
     },
     "SeedFallback": {
       "ok": true,
-      "records": 1,
-      "checked_at": "2026-09-16T18:21:37.985261+00:00",
+      "records": 0,
+      "checked_at": "2026-09-16T18:37:02.306755+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +93,17 @@
       "changed_fields": 10,
       "live_gmp_records": 0,
       "rejected_gmp_records": 1,
-      "checked_at": "2026-09-16T18:21:38.380260+00:00"
+      "checked_at": "2026-09-16T18:37:02.749431+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T18:21:38.431587+00:00"
+      "checked_at": "2026-09-16T18:37:02.800227+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T18:21:38.573731+00:00",
+      "checked_at": "2026-09-16T18:37:02.948002+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,69 +131,69 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T18:21:38.573731+00:00"
+      "checked_at": "2026-09-16T18:37:02.948002+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T23:51:51.453060+05:30",
-      "status_repairs": 0,
+      "checked_at": "2026-09-17T00:07:16.947712+05:30",
+      "status_repairs": 1,
       "sme_added": 0,
       "filings": {
         "checked": 21,
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 8,
+      "upcoming_filing_map": 4,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
   },
   "ipos": [
     {
-      "id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "023c9e303e2f54dd",
+      "id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fingerprint": "2253ad816b1fa075",
       "fields": {
-        "price": "₹88-93",
-        "size": "124.88",
-        "lot": "161",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
+        "price": "₹1700-1785",
+        "size": "22568.94",
+        "lot": "8",
+        "open": "17/09/26",
+        "close": "Sep 21, 2026",
+        "allotment": "22/09/26",
+        "listing": "24/09/26",
         "sub": "—",
-        "sub_qib": "1.02",
-        "sub_nii": "5.58",
-        "sub_retail": "10.76",
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹21",
+        "gmp_pct": "+1.2%",
+        "est_list": "₹1806",
         "pe": "—",
         "roe": "—",
         "roce": "—",
-        "growth": "15%",
-        "de": "0.18",
-        "fresh": "80%",
-        "ofs": "20%"
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
       }
     },
     {
-      "id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "fingerprint": "b453054a4719eab6",
+      "id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fingerprint": "c161e153d3fe7701",
       "fields": {
-        "price": "₹79-84",
-        "size": "1000.00",
-        "lot": "178",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
+        "price": "₹94-99",
+        "size": "141.57",
+        "lot": "150",
+        "open": "17/09/26",
+        "close": "Sep 21, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "0.01",
-        "sub_nii": "1.06",
-        "sub_retail": "2.11",
-        "gmp": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹21",
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
@@ -234,78 +234,22 @@
       }
     },
     {
-      "id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "fingerprint": "f869c3ff92e385f8",
+      "id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fingerprint": "b453054a4719eab6",
       "fields": {
-        "price": "₹40-43",
-        "size": "₹126 Cr",
-        "lot": 348,
-        "open": "11/09/26",
-        "close": "16/09/26",
-        "allotment": "17/09/26",
-        "listing": "21/09/26",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "18x pre-issue; ~9x post-issue shown in the video (data-consistency warning)",
-        "roe": "—",
-        "roce": "—",
-        "growth": "25%",
-        "de": "0.20",
-        "fresh": "100%",
-        "ofs": "0%"
-      }
-    },
-    {
-      "id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
-      "fingerprint": "51cd4beb6bcca656",
-      "fields": {
-        "price": "₹1,700 – ₹1,785",
-        "size": "₹22,561 Cr",
-        "lot": "8",
-        "open": "17/09/26",
-        "close": "Sep 21, 2026",
-        "allotment": "22/09/26",
-        "listing": "24/09/26",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹21",
-        "gmp_pct": "+1.2%",
-        "est_list": "₹1806",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "sonaselection-india-limited",
-      "name": "Sonaselection India Limited",
-      "fingerprint": "85bd378a59af9638",
-      "fields": {
-        "price": "₹94 – ₹99",
-        "size": "₹141.57 Cr",
-        "lot": "150",
-        "open": "17/09/26",
-        "close": "Sep 21, 2026",
+        "price": "₹79-84",
+        "size": "1000.00",
+        "lot": "178",
+        "open": "16/09/26",
+        "close": "Sep 18, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹21",
+        "sub_qib": "0.01",
+        "sub_nii": "1.06",
+        "sub_retail": "2.11",
+        "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
@@ -315,15 +259,43 @@
         "de": "—",
         "fresh": "—",
         "ofs": "—"
+      }
+    },
+    {
+      "id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fingerprint": "023c9e303e2f54dd",
+      "fields": {
+        "price": "₹88-93",
+        "size": "124.88",
+        "lot": "161",
+        "open": "16/09/26",
+        "close": "Sep 18, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": "1.02",
+        "sub_nii": "5.58",
+        "sub_retail": "10.76",
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "15%",
+        "de": "0.18",
+        "fresh": "80%",
+        "ofs": "20%"
       }
     },
     {
       "id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "fingerprint": "04c748f7366e6e81",
+      "fingerprint": "e5e65a48933060de",
       "fields": {
-        "price": "₹112 – ₹118",
-        "size": "₹42.52 Cr",
+        "price": "—",
+        "size": "42.52",
         "lot": "1200",
         "open": "17/09/26",
         "close": "Sep 21, 2026",
@@ -348,10 +320,10 @@
     {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
-      "fingerprint": "08fc5a43c703e9a0",
+      "fingerprint": "0ea628283631fbf9",
       "fields": {
-        "price": "₹96 – ₹101",
-        "size": "₹46.44 Cr",
+        "price": "—",
+        "size": "46.44",
         "lot": "1200",
         "open": "17/09/26",
         "close": "Sep 21, 2026",
@@ -371,6 +343,34 @@
         "de": "—",
         "fresh": "—",
         "ofs": "—"
+      }
+    },
+    {
+      "id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
+      "fingerprint": "58ef5771ab70e649",
+      "fields": {
+        "price": "₹40-43",
+        "size": "₹92 Cr",
+        "lot": 348,
+        "open": "11/09/26",
+        "close": "16/09/26",
+        "allotment": "17/09/26",
+        "listing": "21/09/26",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "18x pre-issue; ~9x post-issue shown in the video (data-consistency warning)",
+        "roe": "—",
+        "roce": "—",
+        "growth": "25%",
+        "de": "0.20",
+        "fresh": "100%",
+        "ofs": "0%"
       }
     },
     {
@@ -608,6 +608,55 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-16T18:37:45.197353+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-16T18:37:45.197353+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-16T18:37:45.197353+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-16T18:37:45.197353+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-16T18:37:45.197353+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "manika-plastech-limited",
+      "name": "Manika Plastech Limited",
+      "fields": [
+        "size"
+      ]
+    },
     {
       "at": "2026-09-16T13:01:25.377108+00:00",
       "type": "DATA_CHANGE",

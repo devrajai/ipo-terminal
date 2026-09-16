@@ -1,18 +1,11 @@
 {
-  "updated_at": "2026-09-16T23:51:51.453060+05:30",
+  "updated_at": "2026-09-17T00:07:16.947712+05:30",
   "data": [
     {
-      "name": "Jindal Supreme (India) Limited",
-      "qib": "1.02",
-      "nii": "5.58",
-      "rii": "10.76",
-      "total": "—"
-    },
-    {
-      "name": "Hero Motors Limited",
-      "qib": "0.01",
-      "nii": "1.06",
-      "rii": "2.11",
+      "name": "National Stock Exchange of India Limited",
+      "qib": "50%",
+      "nii": "15%",
+      "rii": "35%",
       "total": "—"
     },
     {
@@ -23,16 +16,23 @@
       "total": "—"
     },
     {
-      "name": "Manika Plastech Limited",
-      "qib": "—",
-      "nii": "—",
-      "rii": "35%",
+      "name": "Hero Motors Limited",
+      "qib": "0.01",
+      "nii": "1.06",
+      "rii": "2.11",
       "total": "—"
     },
     {
-      "name": "National Stock Exchange of India Limited",
-      "qib": "50%",
-      "nii": "15%",
+      "name": "Jindal Supreme (India) Limited",
+      "qib": "1.02",
+      "nii": "5.58",
+      "rii": "10.76",
+      "total": "—"
+    },
+    {
+      "name": "Manika Plastech Limited",
+      "qib": "—",
+      "nii": "—",
       "rii": "35%",
       "total": "—"
     }
