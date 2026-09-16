@@ -49,6 +49,9 @@ jobs:
       - name: Refresh multi-source IPO news and verify RHP/DRHP links
         run: python scripts/refresh_live_content.py
 
+      - name: Self-heal dates, IPO status and known filing links
+        run: python scripts/self_heal.py
+
       - name: Generate GMP subscription and SME feature data
         run: python scripts/build_feature_data.py
 
@@ -59,6 +62,6 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/ipo-data.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/terminal-state.json data/terminal-events.json data/live-news.json data/live-filings.json
-          git diff --cached --quiet || git commit -m 'chore: update IPO terminal state'
+          git add data/ipo-data.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/terminal-state.json data/terminal-events.json data/live-news.json data/live-filings.json data/self-heal-health.json
+          git diff --cached --quiet || git commit -m 'chore: self-heal IPO terminal data and links'
           git push
