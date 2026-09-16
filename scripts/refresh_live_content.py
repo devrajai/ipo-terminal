@@ -5,6 +5,10 @@ UA='Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 IPO-Terminal/2.1'
 FEEDS=[
  ('Google News · IPO India','IPO India'),('Google News · IPO allotment','IPO allotment India'),
  ('Google News · IPO upcoming/listing','IPO upcoming listing India'),('Google News · RHP DRHP','RHP DRHP IPO India')]
+FILING_OVERRIDES={
+ 'nse':'https://www.nseindia.com/static/investor-relations/offer-documents',
+ 'jio platforms':'https://www.ril.com/investor/resource-center/corporate-announcements'
+}
 
 def fetch(url,timeout=15):
  req=urllib.request.Request(url,headers={'User-Agent':UA,'Accept':'application/rss+xml,application/xml,text/xml,*/*'})
@@ -46,7 +50,11 @@ def main():
  docs=[]
  for d in (payload.get('documents',[]) if isinstance(payload.get('documents',[]),list) else [])[:25]:
   if not isinstance(d,dict) or not d.get('url'):continue
-  ok,status,final=verify(d['url']);x=dict(d);x.update({'verified':ok,'http_status':status,'verified_at':now.isoformat(),'verified_url':final});docs.append(x)
+  x=dict(d)
+  key=str(x.get('name','')).strip().lower()
+  if key in FILING_OVERRIDES:
+   x['url']=FILING_OVERRIDES[key]
+  ok,status,final=verify(x['url']);x.update({'verified':ok,'http_status':status,'verified_at':now.isoformat(),'verified_url':final});docs.append(x)
  FILINGS.write_text(json.dumps({'version':'1.1.0','generated_at':now.isoformat(),'documents':docs,'verified_count':sum(1 for x in docs if x.get('verified'))},ensure_ascii=False,indent=2),encoding='utf-8')
  payload.setdefault('sources',{})['LiveNews']={'ok':bool(items),'records':len(items),'checked_at':now.isoformat(),'feeds':health};payload.setdefault('sources',{})['FilingVerification']={'ok':bool(docs),'records':len(docs),'verified':sum(1 for x in docs if x.get('verified')),'checked_at':now.isoformat()};payload['updated_at']=now.isoformat();DATA.write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
  print('Live content:',len(items),'news;',len(docs),'filings;',sum(1 for x in docs if x.get('verified')),'verified')
