@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated_at": "2026-09-16T13:21:33.169970+05:30",
+  "generated_at": "2026-09-16T13:34:04.385422+05:30",
   "documents": [
     {
       "name": "Kanohar Electricals",
@@ -10,9 +10,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Glass Wall Systems (India)",
@@ -22,9 +22,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Rentomojo",
@@ -34,9 +34,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Karamtara Engineering",
@@ -46,9 +46,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Steamhouse India",
@@ -58,9 +58,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "LCC Projects",
@@ -70,9 +70,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Manipal Payment & Identity",
@@ -82,9 +82,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Asset Reconstruction (ARCIL)",
@@ -94,9 +94,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Veegaland Developers",
@@ -106,9 +106,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "NSE",
@@ -118,9 +118,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 206,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Prasol Chemicals",
@@ -130,9 +130,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Pranav Constructions",
@@ -142,9 +142,9 @@
       "source": "SEBI",
       "verified": false,
       "http_status": null,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     },
     {
       "name": "Jio Platforms",
@@ -154,9 +154,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-16T07:51:17.030403+00:00",
+      "verified_at": "2026-09-16T08:03:49.832404+00:00",
       "verified_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
-      "self_healed_at": "2026-09-16T13:21:33.169970+05:30"
+      "self_healed_at": "2026-09-16T13:34:04.385422+05:30"
     }
   ],
   "verified_count": 5
