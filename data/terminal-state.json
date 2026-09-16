@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T11:30:35.198730+00:00",
+  "generated_at": "2026-09-16T11:38:32.153108+00:00",
   "today_ist": "2026-09-16",
-  "data_updated_at": "2026-09-16T17:00:00.984366+05:30",
-  "ipo_count": 12,
-  "field_coverage_pct": 36.9,
+  "data_updated_at": "2026-09-16T17:08:00.100693+05:30",
+  "ipo_count": 13,
+  "field_coverage_pct": 35.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -40,7 +40,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T11:29:37.083855+00:00",
+      "checked_at": "2026-09-16T11:37:34.995438+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -58,9 +58,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 7,
+          "records": 8,
           "matched": 4,
-          "added": 3,
+          "added": 4,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -75,15 +75,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 12,
+      "records": 13,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T11:29:38.845720+00:00"
+      "checked_at": "2026-09-16T11:37:36.631875+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T11:29:45.642410+00:00",
+      "checked_at": "2026-09-16T11:37:43.757057+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +93,17 @@
       "changed_fields": 19,
       "live_gmp_records": 0,
       "rejected_gmp_records": 2,
-      "checked_at": "2026-09-16T11:29:46.432023+00:00"
+      "checked_at": "2026-09-16T11:37:44.082802+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T11:29:46.480478+00:00"
+      "checked_at": "2026-09-16T11:37:44.138405+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T11:29:46.619484+00:00",
+      "checked_at": "2026-09-16T11:37:44.307738+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,18 +131,18 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T11:29:46.619484+00:00"
+      "checked_at": "2026-09-16T11:37:44.307738+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30",
+      "checked_at": "2026-09-16T17:08:00.100693+05:30",
       "status_repairs": 4,
       "filings": {
         "checked": 21,
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 11,
+      "upcoming_filing_map": 12,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "verify official filing links with retries and alternates; auto-generate upcoming IPO filing map; never invent a filing URL"
     }
@@ -429,6 +429,34 @@
       }
     },
     {
+      "id": "fx-multitech-ltd-sme",
+      "name": "FX Multitech Ltd. SME",
+      "fingerprint": "98fe2965cc5be694",
+      "fields": {
+        "price": "₹110 – ₹116",
+        "size": "₹45.24 Cr",
+        "lot": "1200",
+        "open": "21/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "robokidz-eduventures-ltd-sme",
       "name": "Robokidz Eduventures Ltd. SME",
       "fingerprint": "e829c10cfae3b731",
@@ -601,6 +629,13 @@
     {
       "date": "2026-09-21",
       "type": "OPEN",
+      "ipo_id": "fx-multitech-ltd-sme",
+      "name": "FX Multitech Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "OPEN",
       "ipo_id": "robokidz-eduventures-ltd-sme",
       "name": "Robokidz Eduventures Ltd. SME",
       "source": "Economic Times"
@@ -628,6 +663,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-16T11:38:32.153108+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "OPEN",
+        "ipo_id": "fx-multitech-ltd-sme",
+        "name": "FX Multitech Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-16T11:25:13.572681+00:00",
       "type": "DATA_CHANGE",

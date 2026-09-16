@@ -1,13 +1,13 @@
 {
   "ok": true,
-  "checked_at": "2026-09-16T17:00:00.984366+05:30",
+  "checked_at": "2026-09-16T17:08:00.100693+05:30",
   "status_repairs": 4,
   "filings": {
     "checked": 21,
     "verified": 13,
     "repaired": 8
   },
-  "upcoming_filing_map": 11,
+  "upcoming_filing_map": 12,
   "schedule": "every 15 minutes",
   "live_upcoming_rule": "IPO is application-facing when not closed/listed and close date has not passed"
 }

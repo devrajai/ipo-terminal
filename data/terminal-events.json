@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T11:30:35.198730+00:00",
+  "generated_at": "2026-09-16T11:38:32.153108+00:00",
   "events": [
     {
       "date": "2026-09-16",
@@ -92,6 +92,13 @@
       "ipo_id": "manika-plastech-limited",
       "name": "Manika Plastech Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "OPEN",
+      "ipo_id": "fx-multitech-ltd-sme",
+      "name": "FX Multitech Ltd. SME",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-21",

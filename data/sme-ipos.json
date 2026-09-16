@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T17:00:00.984366+05:30",
+  "updated_at": "2026-09-16T17:08:00.100693+05:30",
   "data": [
     {
       "company": "SpectraA Technology Solutions Limited",
@@ -23,6 +23,14 @@
       "open_date": "23/09/26",
       "close_date": "—",
       "issue_size": "₹29.06 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "FX Multitech Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "21/09/26",
+      "close_date": "—",
+      "issue_size": "₹45.24 Cr",
       "status": "upcoming"
     },
     {

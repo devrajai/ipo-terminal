@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-16T17:00:00.984366+05:30",
+  "generated_at": "2026-09-16T17:08:00.100693+05:30",
   "source": "IPO Terminal self-heal official-source checker",
-  "count": 11,
+  "count": 12,
   "ipos": [
     {
       "ipo_name": "Jindal Supreme (India) Limited",
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Hero Motors Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "SS Retail Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Manika Plastech Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Sonaselection India Limited",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "National Stock Exchange of India Limited",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "SpectraA Technology Solutions Limited",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Kheria Autocomp Limited",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
@@ -118,7 +118,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
+    },
+    {
+      "ipo_name": "FX Multitech Ltd. SME",
+      "id": "fx-multitech-ltd-sme",
+      "type": "SME",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "21/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Robokidz Eduventures Ltd. SME",
@@ -131,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     },
     {
       "ipo_name": "Axiom Gas Engineering Ltd. SME",
@@ -144,7 +157,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-16T17:00:00.984366+05:30"
+      "checked_at": "2026-09-16T17:08:00.100693+05:30"
     }
   ]
 }
