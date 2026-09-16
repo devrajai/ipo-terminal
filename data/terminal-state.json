@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T05:36:58.637150+00:00",
+  "generated_at": "2026-09-16T05:50:37.772635+00:00",
   "today_ist": "2026-09-16",
-  "data_updated_at": "2026-09-16T05:36:44.030170+00:00",
+  "data_updated_at": "2026-09-16T05:50:22.870002+00:00",
   "ipo_count": 12,
   "field_coverage_pct": 35.7,
   "sources": {
@@ -31,15 +31,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T05:36:29.526161+00:00",
+      "checked_at": "2026-09-16T05:50:07.497523+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -77,12 +72,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T05:36:31.464352+00:00"
+      "checked_at": "2026-09-16T05:50:09.982171+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T05:36:43.558637+00:00",
+      "checked_at": "2026-09-16T05:50:21.909783+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -91,17 +86,17 @@
       "records": 2,
       "changed_fields": 19,
       "live_gmp_records": 2,
-      "checked_at": "2026-09-16T05:36:43.801343+00:00"
+      "checked_at": "2026-09-16T05:50:22.675833+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T05:36:43.864704+00:00"
+      "checked_at": "2026-09-16T05:50:22.723773+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T05:36:44.030170+00:00",
+      "checked_at": "2026-09-16T05:50:22.870002+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -129,7 +124,7 @@
       "ok": true,
       "records": 13,
       "verified": 3,
-      "checked_at": "2026-09-16T05:36:44.030170+00:00"
+      "checked_at": "2026-09-16T05:50:22.870002+00:00"
     }
   },
   "ipos": [
