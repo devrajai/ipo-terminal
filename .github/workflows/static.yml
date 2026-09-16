@@ -58,7 +58,7 @@ jobs:
               ''
           )
 
-          # Base mobile navigation: exactly two columns.
+          # Final navigation contract: mobile = two columns, desktop = horizontal slider.
           html = html.replace(
               'display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overflow-y:hidden;',
               'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;'
@@ -73,13 +73,10 @@ jobs:
               "var ipos=Array.isArray(results[0])?results[0]:((results[0]&&results[0].ipos)||(results[0]&&results[0].data)||(results[0]&&results[0].items)||(results[0]&&results[0].records)||[]);"
           )
 
-          marker = '</body>'
           loader = '<script src="scripts/ipo-live-loader.js?v=1"></script>'
           if loader not in html:
-              html = html.replace(marker, loader + marker)
+              html = html.replace('</body>', loader + '</body>', 1)
 
-          # FINAL navigation contract. This is intentionally placed after all runtime
-          # scripts so it wins over older UI rules and cannot be overwritten by them.
           final_nav = '''<style id="ipo-final-nav-layout">
           .hbtns{box-sizing:border-box!important;width:100%!important;max-width:100%!important;}
           .hbtns .hb{box-sizing:border-box!important;}
@@ -94,7 +91,7 @@ jobs:
           }
           </style>'''
           if 'id="ipo-final-nav-layout"' not in html:
-              html = html.replace(marker, final_nav + loader + marker, 1) if loader in html else html.replace(marker, final_nav + marker, 1)
+              html = html.replace('</body>', final_nav + '</body>', 1)
 
           index.write_text(html, encoding='utf-8')
 
