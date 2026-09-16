@@ -58,20 +58,15 @@ jobs:
               ''
           )
 
-          # Mobile: single-column navigation. Desktop: two-column navigation.
+          # Base mobile navigation: exactly two columns.
           html = html.replace(
               'display:flex;flex-wrap:nowrap;gap:8px;overflow-x:auto;overflow-y:hidden;',
-              'display:grid;grid-template-columns:1fr;gap:8px;overflow:visible;'
+              'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible;'
           )
           html = html.replace(
               '.hb{flex:0 0 auto;white-space:nowrap;',
               '.hb{width:100%;white-space:nowrap;'
           )
-
-          # Keep two columns only on desktop/laptop widths.
-          desktop_css = '<style id="desktop-nav-two-columns">@media(min-width:700px){.hbtns{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}}</style>'
-          if desktop_css not in html:
-              html = html.replace('</head>', desktop_css + '</head>', 1)
 
           html = html.replace(
               "var ipos=Array.isArray(results[0])?results[0]:[];",
@@ -82,6 +77,24 @@ jobs:
           loader = '<script src="scripts/ipo-live-loader.js?v=1"></script>'
           if loader not in html:
               html = html.replace(marker, loader + marker)
+
+          # FINAL navigation contract. This is intentionally placed after all runtime
+          # scripts so it wins over older UI rules and cannot be overwritten by them.
+          final_nav = '''<style id="ipo-final-nav-layout">
+          .hbtns{box-sizing:border-box!important;width:100%!important;max-width:100%!important;}
+          .hbtns .hb{box-sizing:border-box!important;}
+          @media(max-width:699px){
+            .hbtns{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:8px!important;overflow:visible!important;overflow-x:visible!important;overflow-y:visible!important;}
+            .hbtns .hb{width:100%!important;min-width:0!important;flex:none!important;}
+          }
+          @media(min-width:700px){
+            .hbtns{display:flex!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important;}
+            .hbtns::-webkit-scrollbar{display:none!important;}
+            .hbtns .hb{width:auto!important;min-width:max-content!important;flex:0 0 auto!important;}
+          }
+          </style>'''
+          if 'id="ipo-final-nav-layout"' not in html:
+              html = html.replace(marker, final_nav + loader + marker, 1) if loader in html else html.replace(marker, final_nav + marker, 1)
 
           index.write_text(html, encoding='utf-8')
 
@@ -107,7 +120,7 @@ jobs:
               json.loads(last_updated.read_text(encoding='utf-8'))
 
           print('SITE HEALTH OK:', len(refs), 'local script references checked')
-          print('NAVIGATION: 1 column mobile, 2 columns desktop')
+          print('NAVIGATION: 2 columns mobile, horizontal slider desktop')
           PY
 
       - name: Validate inline JavaScript
