@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T11:19:20.623500+00:00",
+  "generated_at": "2026-09-16T11:23:12.632648+00:00",
   "today_ist": "2026-09-16",
-  "data_updated_at": "2026-09-16T16:48:48.158476+05:30",
+  "data_updated_at": "2026-09-16T16:52:38.659855+05:30",
   "ipo_count": 12,
   "field_coverage_pct": 36.9,
   "sources": {
@@ -31,16 +31,10 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T11:18:30.320446+00:00",
+      "checked_at": "2026-09-16T11:22:12.535090+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -78,12 +72,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T11:18:32.762757+00:00"
+      "checked_at": "2026-09-16T11:22:14.164527+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T11:18:34.029693+00:00",
+      "checked_at": "2026-09-16T11:22:24.060296+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +87,17 @@
       "changed_fields": 19,
       "live_gmp_records": 0,
       "rejected_gmp_records": 2,
-      "checked_at": "2026-09-16T11:18:34.225516+00:00"
+      "checked_at": "2026-09-16T11:22:24.706518+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T11:18:34.279646+00:00"
+      "checked_at": "2026-09-16T11:22:24.753405+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T11:18:34.430315+00:00",
+      "checked_at": "2026-09-16T11:22:24.891793+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,11 +125,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-16T11:18:34.430315+00:00"
+      "checked_at": "2026-09-16T11:22:24.891793+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-16T16:48:48.158476+05:30",
+      "checked_at": "2026-09-16T16:52:38.659855+05:30",
       "status_repairs": 4,
       "filings": {
         "checked": 21,
@@ -151,7 +145,7 @@
     {
       "id": "jindal-supreme-india-limited",
       "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "d938bd8feed3e902",
+      "fingerprint": "a832fe41c2222223",
       "fields": {
         "price": "₹88-93",
         "size": "124.88",
@@ -162,8 +156,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "1.02",
-        "sub_nii": "5.08",
-        "sub_retail": "10.21",
+        "sub_nii": "4.19",
+        "sub_retail": "8.76",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -179,7 +173,7 @@
     {
       "id": "hero-motors-limited",
       "name": "Hero Motors Limited",
-      "fingerprint": "55559029d3834e54",
+      "fingerprint": "ab9cf94b710854fd",
       "fields": {
         "price": "₹79-84",
         "size": "1000.00",
@@ -190,8 +184,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.01",
-        "sub_nii": "0.98",
-        "sub_retail": "2.03",
+        "sub_nii": "0.84",
+        "sub_retail": "1.81",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -207,7 +201,7 @@
     {
       "id": "ss-retail-limited",
       "name": "SS Retail Limited",
-      "fingerprint": "c266cecf8a3ba8d4",
+      "fingerprint": "6dabc80e48b2ad9e",
       "fields": {
         "price": "₹403-424",
         "size": "500.00",
@@ -217,9 +211,9 @@
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "0.20",
-        "sub_nii": "1.13",
-        "sub_retail": "1.91",
+        "sub_qib": "0.00",
+        "sub_nii": "0.90",
+        "sub_retail": "1.62",
         "gmp": "₹21",
         "gmp_pct": "—",
         "est_list": "—",
@@ -628,6 +622,37 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-16T11:23:12.632648+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-16T11:23:12.632648+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-16T11:23:12.632648+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fields": [
+        "sub_qib",
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
     {
       "at": "2026-09-16T11:19:20.623500+00:00",
       "type": "DATA_CHANGE",
