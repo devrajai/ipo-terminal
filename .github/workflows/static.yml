@@ -49,7 +49,7 @@ jobs:
           for pat in [r'<meta name="description"[^>]*>',r'<meta name="theme-color"[^>]*>',r'<meta property="og:[^"]+"[^>]*>',r'<link rel="canonical"[^>]*>']:
               s=re.sub(pat,'',s,flags=re.I)
           s=s.replace('</head>',seo+'</head>',1)
-          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-shell.js','scripts/ipo-radar.js','scripts/ipo-decision.js','scripts/ipo-radar-proof.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ipo-responsive-ui.js','scripts/ipo-live-content.js','scripts/ipo-upgrade.js','scripts/ipo-live-only-fix.js','scripts/ipo-self-heal.js','scripts/ipo-laptop-upgrade.js']
+          tags=['scripts/ui-enhancements.js','scripts/ipo-calendar.js','scripts/ipo-articles.js','scripts/ipo-shell.js','scripts/ipo-radar.js','scripts/ipo-decision.js','scripts/ipo-radar-proof.js','scripts/ipo-fixes.js','scripts/ipo-final.js','scripts/ipo-subscription-values.js','scripts/ipo-gmp-hidden.js','scripts/ipo-holiday-fix.js','scripts/ipo-nav.js','scripts/ipo-responsive-ui.js','scripts/ipo-live-content.js','scripts/ipo-upgrade.js','scripts/ipo-live-only-fix.js','scripts/ipo-self-heal.js']
           for src in tags:
               s=re.sub(r'<script[^>]+src=["\']'+re.escape(src)+r'(?:\?[^"\']*)?["\'][^>]*></script>','',s,flags=re.I)
               s=s.replace('</body>',f'<script src="{src}?v={q}"></script></body>',1)
@@ -63,7 +63,7 @@ jobs:
           print('SITE HEALTH OK:',len(refs),'script references checked')
           print('LEGACY UI PRESERVED: no feature/panel deletion')
           print('SEO: description + theme-color + Open Graph + canonical')
-          print('UPGRADE: laptop rail, search, GMP, subscriptions, SME, allotment, anchors, UPI copy, timestamp, disclaimer')
+          print('UPGRADE: search, GMP, subscriptions, SME, allotment, anchors, UPI copy, timestamp, disclaimer')
           PY
       - name: Validate runtime JavaScript
         run: |
