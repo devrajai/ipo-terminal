@@ -45,6 +45,18 @@ jobs:
           index = root / 'index.html'
           html = index.read_text(encoding='utf-8')
 
+          # Remove the requested subtitle while keeping the IPO Terminal title.
+          html = html.replace(
+              '<div class="subtitle">Auto-updated • Free • India</div>',
+              ''
+          )
+
+          # Replace the old static update text with the live DD/MM/YY + HH:MM:SS IST clock.
+          html = html.replace(
+              '<div class="updated" id="lastUpdated">⏱ Auto-updated daily</div>',
+              '<div class="updated" id="liveClock">--/--/-- • --:--:-- IST</div>'
+          )
+
           # Remove Broker navigation button while preserving its source content.
           html = html.replace(
               '<button class="hb" data-panel="p-brk">🏦 Brokers</button>',
@@ -60,6 +72,19 @@ jobs:
               '.hb{flex:0 0 auto;white-space:nowrap;',
               '.hb{width:100%;white-space:nowrap;'
           )
+
+          # The rich data file is an object with an `ipos` array, not a bare array.
+          # Normalize that in the existing inline loader so it does not enter its error fallback.
+          html = html.replace(
+              "var ipos=Array.isArray(results[0])?results[0]:[];",
+              "var ipos=Array.isArray(results[0])?results[0]:((results[0]&&results[0].ipos)||(results[0]&&results[0].data)||(results[0]&&results[0].items)||(results[0]&&results[0].records)||[]);"
+          )
+
+          # Run the robust data normalizer after the existing UI script.
+          marker = '</body>'
+          loader = '<script src="scripts/ipo-live-loader.js?v=1"></script>'
+          if loader not in html:
+              html = html.replace(marker, loader + marker)
 
           index.write_text(html, encoding='utf-8')
 
@@ -88,11 +113,19 @@ jobs:
                   raise SystemExit(f'Missing or empty data file: {path}')
               json.loads(path.read_text(encoding='utf-8'))
 
+          for datafile in ('live-news.json', 'live-filings.json'):
+              path = root / 'data' / datafile
+              if not path.exists() or path.stat().st_size == 0:
+                  raise SystemExit(f'Missing or empty data file: {path}')
+              json.loads(path.read_text(encoding='utf-8'))
+
           last_updated = root / 'data' / 'last-updated.json'
           if last_updated.exists():
               json.loads(last_updated.read_text(encoding='utf-8'))
 
           print('SITE HEALTH OK:', len(refs), 'local script references checked')
+          print('SUBTITLE: removed')
+          print('LIVE CLOCK: DD/MM/YY HH:MM:SS IST')
           print('BROKER NAVIGATION: removed')
           print('NAVIGATION: two columns')
           print('DATA: required JSON files validated')
@@ -111,6 +144,7 @@ jobs:
           print('Inline script blocks:', len(scripts))
           PY
           node --check /tmp/index-inline.js
+          node --check _site/scripts/ipo-live-loader.js
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
