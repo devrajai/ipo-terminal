@@ -1,6 +1,15 @@
 {
-  "updated_at": "2026-09-17T18:21:45.837915+00:00",
+  "updated_at": "2026-09-17T18:46:03.837972+00:00",
   "data": [
+    {
+      "name": "Sonaselection India Limited",
+      "issue_price": "₹94-99",
+      "gmp": "₹1",
+      "estimated_listing": "—",
+      "gmp_pct": "+1.1%",
+      "kostak": "—",
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
+    },
     {
       "name": "National Stock Exchange of India Limited",
       "issue_price": "₹1700-1785",
@@ -11,8 +20,8 @@
       "updated_at": "2026-09-17T17:52:06.379736+00:00"
     },
     {
-      "name": "Sonaselection India Limited",
-      "issue_price": "₹94-99",
+      "name": "Jindal Supreme (India) Limited",
+      "issue_price": "₹88-93",
       "gmp": "₹1",
       "estimated_listing": "—",
       "gmp_pct": "+1.1%",
@@ -38,11 +47,11 @@
       "updated_at": "2026-09-17T17:52:06.379736+00:00"
     },
     {
-      "name": "Jindal Supreme (India) Limited",
-      "issue_price": "₹88-93",
+      "name": "Kheria Autocomp Limited",
+      "issue_price": "—",
       "gmp": "₹1",
       "estimated_listing": "—",
-      "gmp_pct": "+1.1%",
+      "gmp_pct": "—",
       "kostak": "—",
       "updated_at": "2026-09-17T17:52:06.379736+00:00"
     },
@@ -50,15 +59,6 @@
       "name": "SpectraA Technology Solutions Limited",
       "issue_price": "—",
       "gmp": "₹23",
-      "estimated_listing": "—",
-      "gmp_pct": "—",
-      "kostak": "—",
-      "updated_at": "2026-09-17T17:52:06.379736+00:00"
-    },
-    {
-      "name": "Kheria Autocomp Limited",
-      "issue_price": "—",
-      "gmp": "₹1",
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",

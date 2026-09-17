@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-09-17T18:21:45.837915+00:00",
+  "updated_at": "2026-09-17T18:46:03.837972+00:00",
   "data": [
     {
-      "company": "SpectraA Technology Solutions Limited",
+      "company": "Axiom Gas Engineering Limited",
       "exchange": "BSE",
-      "open_date": "17/09/26",
-      "close_date": "21/09/26",
+      "open_date": "18/09/26",
+      "close_date": "22/09/26",
       "issue_size": "—",
       "status": "open"
     },
@@ -18,12 +18,12 @@
       "status": "open"
     },
     {
-      "company": "Axiom Gas Engineering Limited",
-      "exchange": "NSE",
-      "open_date": "18/09/26",
-      "close_date": "22/09/26",
-      "issue_size": "₹45 Cr",
-      "status": "upcoming"
+      "company": "SpectraA Technology Solutions Limited",
+      "exchange": "BSE",
+      "open_date": "17/09/26",
+      "close_date": "21/09/26",
+      "issue_size": "—",
+      "status": "open"
     }
   ]
 }

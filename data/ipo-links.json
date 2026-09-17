@@ -1,19 +1,7 @@
 {
-  "generated_at": "2026-09-17T23:51:53.720129+05:30",
-  "count": 9,
+  "generated_at": "2026-09-18T00:16:10.849203+05:30",
+  "count": 8,
   "links": [
-    {
-      "name": "National Stock Exchange of India Limited",
-      "status": "open",
-      "detail_url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
-      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/nse-anchor-book.pdf",
-      "rhp_kind": "pdf",
-      "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
-      "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
-      "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
-    },
     {
       "name": "Sonaselection India Limited",
       "status": "open",
@@ -21,34 +9,22 @@
       "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/sonaselection_india_limited_anchor_allocation_letter06519b81-70d4-49c6-ad42-ec9eb7dc539d.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     },
     {
-      "name": "SS Retail Limited",
+      "name": "National Stock Exchange of India Limited",
       "status": "open",
-      "detail_url": "https://www.chittorgarh.com/ipo/ss-retail-ipo/2822/",
-      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/ss-retail-ipo-anchor-allocation.pdf",
+      "detail_url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
+      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/nse-anchor-book.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
-    },
-    {
-      "name": "Hero Motors Limited",
-      "status": "open",
-      "detail_url": "https://www.chittorgarh.com/ipo/hero-motors-ipo/2225/",
-      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/hero-motor-ipo-anchor-book.pdf",
-      "rhp_kind": "pdf",
-      "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
-      "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
-      "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     },
     {
       "name": "Jindal Supreme (India) Limited",
@@ -57,22 +33,46 @@
       "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/jinadal-supereme-anchor-book.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     },
     {
-      "name": "SpectraA Technology Solutions Limited",
+      "name": "SS Retail Limited",
       "status": "open",
-      "detail_url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
-      "rhp_url": "https://www.spectraa.com/wp-content/uploads/2026/09/Red-Herring-Prosppectus.pdf",
+      "detail_url": "https://www.chittorgarh.com/ipo/ss-retail-ipo/2822/",
+      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/ss-retail-ipo-anchor-allocation.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
+    },
+    {
+      "name": "Hero Motors Limited",
+      "status": "open",
+      "detail_url": "https://www.chittorgarh.com/ipo/hero-motors-ipo/2225/",
+      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/hero-motor-ipo-anchor-book.pdf",
+      "rhp_kind": "pdf",
+      "rhp_verified": true,
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
+      "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
+      "allotment_verified": true,
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
+    },
+    {
+      "name": "Axiom Gas Engineering Limited",
+      "status": "open",
+      "detail_url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
+      "rhp_url": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
+      "rhp_kind": "pdf",
+      "rhp_verified": true,
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
+      "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
+      "allotment_verified": true,
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     },
     {
       "name": "Kheria Autocomp Limited",
@@ -81,34 +81,22 @@
       "rhp_url": "https://www.chittorgarh.net/reports/ipo_notes/kheria_autocomp_limited_rhp-1.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     },
     {
-      "name": "Manika Plastech Limited",
+      "name": "SpectraA Technology Solutions Limited",
       "status": "open",
-      "detail_url": "https://www.chittorgarh.com/ipo/manika-plastech-ipo/2483/",
-      "rhp_url": "https://www.chittorgarh.net/reports/anchor-investor/manika-plastech-ipo-anchor-list.pdf",
+      "detail_url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
+      "rhp_url": "https://www.spectraa.com/wp-content/uploads/2026/09/Red-Herring-Prosppectus.pdf",
       "rhp_kind": "pdf",
       "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
+      "rhp_checked_at": "2026-09-18T00:16:10.849203+05:30",
       "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
       "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
-    },
-    {
-      "name": "Axiom Gas Engineering Limited",
-      "status": "upcoming",
-      "detail_url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
-      "rhp_url": "https://axiomgas.com/uploads/investors/Red_Herring_Prospectus_AXIOM.pdf",
-      "rhp_kind": "pdf",
-      "rhp_verified": true,
-      "rhp_checked_at": "2026-09-17T23:51:53.720129+05:30",
-      "allotment_url": "https://www.chittorgarh.com/report/ipo-allotment-status-check-date-process/23/",
-      "allotment_verified": true,
-      "allotment_checked_at": "2026-09-17T23:51:53.720129+05:30"
+      "allotment_checked_at": "2026-09-18T00:16:10.849203+05:30"
     }
   ]
 }
