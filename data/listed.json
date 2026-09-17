@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Listed Company Ltd",
+    "issue_price": 110,
+    "listing_price": 143,
+    "gain_loss_percent": 30.0,
+    "listing_date": "2026-09-10",
+    "exchange": "NSE"
+  },
+  {
+    "name": "Loss Example Ltd",
+    "issue_price": 200,
+    "listing_price": 182,
+    "gain_loss_percent": -9.0,
+    "listing_date": "2026-09-03",
+    "exchange": "BSE"
+  }
+]
