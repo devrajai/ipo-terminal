@@ -1,0 +1,43 @@
+name: Fix Research and Tools navigation
+
+on:
+  push:
+    paths:
+      - '.github/workflows/research-tools-layout.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Move GMP Live and remove Allotment
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+
+          old = '''<div class="nav-group"><span class="nav-label">Market</span><nav class="nav" id="nav-market"><button data-section="gmp">📈 GMP Live</button><button data-section="listed">📊 Listed</button><button data-section="tips">💡 Tips</button><button data-section="glossary">📖 Glossary</button></nav></div>
+          <div class="nav-group"><span class="nav-label">Research & Tools</span><nav class="nav" id="nav-tools"><button data-section="allotment">🎯 Allotment</button><button data-section="news">📰 News</button><button data-section="documents">📋 RHP / DRHP</button></nav></div>'''
+
+          new = '''<div class="nav-group"><span class="nav-label">Market</span><nav class="nav" id="nav-market"><button data-section="listed">📊 Listed</button><button data-section="tips">💡 Tips</button><button data-section="glossary">📖 Glossary</button></nav></div>
+          <div class="nav-group"><span class="nav-label">Research & Tools</span><nav class="nav" id="nav-tools"><button data-section="gmp">📈 GMP Live</button><button data-section="news">📰 News</button><button data-section="documents">📋 RHP / DRHP</button></nav></div>'''
+
+          if old not in s:
+              raise SystemExit('Expected navigation block was not found; no changes made.')
+          s = s.replace(old, new, 1)
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit source change
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git diff --cached --quiet || git commit -m 'ui: move GMP Live to Research and Tools'
+          git push
