@@ -45,7 +45,7 @@ jobs:
           s=s.replace('<button data-section="upcoming">🕐 Upcoming</button>', '<button data-section="upcoming">🕐 Upcoming <span class="status-count" id="nav-upcoming-count">0</span></button>')
           s=s.replace('<button data-section="closed">⚪ Closed</button>', '<button data-section="closed">⚪ Closed <span class="status-count" id="nav-closed-count">0</span></button>')
           # Hide any legacy stat elements if a stale browser/service-worker artifact is copied.
-          s=s.replace('</style>', '.stats{display:none!important}.status-count{display:inline-flex;min-width:20px;height:20px;padding:0 6px;align-items:center;justify-content:center;margin-left:3px;border-radius:999px;background:rgba(255,255,255,.2);font-size:10px;font-weight:950;color:inherit}@media(max-width:699px){.status-count{min-width:18px;height:18px;font-size:9px}}\n</style>', 1)
+          s=s.replace('</style>', '.stats{display:none!important}.status-count{display:inline-flex;min-width:20px;height:20px;padding:0 6px;align-items:center;justify-content:center;margin-left:3px;border-radius:999px;background:rgba(255,255,255,.2);font-size:10px;font-weight:950;color:inherit}@media(max-width:699px){.status-count{min-width:18px;height:18px;font-size:9px}}\n/* Clicking Open/Upcoming/Closed must not recolour the selected button. */\n.nav button.active,.nav button.active:hover,.nav button.active:focus,.nav button.active:focus-visible{background:inherit!important;color:inherit!important;border-color:inherit!important;box-shadow:none!important;filter:none!important}\n</style>', 1)
           # Keep live counters synchronized with the same groups used by the IPO panels.
           marker="function renderOpen(){"
           inject="""function syncStatusButtons(g){
@@ -77,6 +77,7 @@ jobs:
           grep -q 'data-close="open"' _site/index.html
           grep -q 'nav-open-count' _site/index.html
           grep -q 'syncStatusButtons' _site/index.html
+          grep -q 'nav button.active' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
           ! grep -q 'Live Indian IPO information' _site/index.html
