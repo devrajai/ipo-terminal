@@ -2,8 +2,7 @@ name: Deploy IPO Terminal to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -37,6 +36,26 @@ jobs:
           cp -R data _site/data
           if [ -d scripts ]; then cp -R scripts _site/scripts; fi
 
+          python <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('_site/index.html')
+          s=p.read_text(encoding='utf-8')
+          s=re.sub(r'<button[^>]*data-section=["\']brokers["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
+          s=re.sub(r'<section[^>]*id=["\']section-brokers["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
+          glass=r'''<style id="liquid-glass-core">
+          :root{--lg-glass:rgba(255,255,255,.065);--lg-line:rgba(255,255,255,.15)}
+          html.light{--lg-glass:rgba(255,255,255,.58);--lg-line:rgba(71,85,105,.16)}
+          body{background:radial-gradient(circle at 10% 0%,rgba(59,130,246,.13),transparent 32%),radial-gradient(circle at 90% 5%,rgba(168,85,247,.10),transparent 30%),var(--bg)!important}
+          .header,.nav-wrap,.stat,.section,.card,.box,.warning,.theme,.nav button,.close{background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.035))!important;background-color:var(--lg-glass)!important;border-color:var(--lg-line)!important;box-shadow:0 18px 55px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.14)!important;backdrop-filter:blur(24px) saturate(140%)!important;-webkit-backdrop-filter:blur(24px) saturate(140%)!important}
+          .light .header,.light .nav-wrap,.light .stat,.light .section,.light .card,.light .box,.light .warning,.light .theme,.light .nav button,.light .close{background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(255,255,255,.40))!important;box-shadow:0 18px 55px rgba(51,65,85,.12),inset 0 1px 0 rgba(255,255,255,.95)!important}
+          .nav button{border-radius:999px!important}.section{border-radius:22px!important}.card{border-radius:18px!important}.box{border-radius:13px!important}.theme{border-radius:50%!important}
+          @media(max-width:699px){.nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important}.nav button{width:100%!important;min-height:43px!important}.section{margin-inline:8px!important}.grid{grid-template-columns:repeat(2,1fr)!important}}
+          </style>'''
+          s=s.replace('</head>',glass+'</head>',1)
+          p.write_text(s,encoding='utf-8')
+          PY
+
       - name: Verify site
         run: |
           set -e
@@ -48,7 +67,9 @@ jobs:
           test -s _site/data/last-updated.json
           grep -q 'Promise.all' _site/index.html
           grep -q 'section.active' _site/index.html
-          grep -q 'Refresh Now' _site/index.html
+          grep -q 'liquid-glass-core' _site/index.html
+          ! grep -q 'data-section="brokers"' _site/index.html
+          ! grep -q 'section-brokers' _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
