@@ -114,6 +114,13 @@ jobs:
                   else: raise
           PY
 
+      - name: Resolve and self-heal per-IPO links (RHP/DRHP + allotment)
+        run: |
+          set +e
+          python scripts/link_health.py
+          echo "link_health_exit=$?"
+          exit 0
+
       - name: Save timestamp only after valid data
         run: echo '{"updated":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"}' > data/last-updated.json
 
