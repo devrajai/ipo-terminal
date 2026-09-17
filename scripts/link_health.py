@@ -138,7 +138,9 @@ def scrape_detail(detail_url):
         if 'rhp' in low or 'red-herring' in low or 'red_herring' in low: r -= 4
         if 'drhp' in low or 'draft' in low: r -= 2
         if 'abridged' in low or '_ap' in low or '-ap' in low: r += 3
+        if 'anchor' in low: r += 6   # anchor book is not the RHP
         if 'prospectus' in low: r -= 1
+        if 'red-herring' in low or 'red_herring' in low: r -= 2
         if is_gateway(u): r += 5  # gateways are the last resort
         return r
 
