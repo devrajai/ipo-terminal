@@ -43,6 +43,9 @@ jobs:
           s=p.read_text(encoding='utf-8')
           s=re.sub(r'<button[^>]*data-section=["\']brokers["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
           s=re.sub(r'<section[^>]*id=["\']section-brokers["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
+          s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
+          s=re.sub(r'<section[^>]*id=["\']section-compare["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
+          s=re.sub(r'<a[^>]*>\s*SEBI\s*</a>','',s,flags=re.I|re.S)
           s=re.sub(r'<div class="subtitle">.*?</div>', '<div class="subtitle" id="live-date-time"></div>', s, count=1, flags=re.I|re.S)
           clock=r'''<style id="live-clock-style">#live-date-time{font-variant-numeric:tabular-nums;letter-spacing:.15px}</style>
           <script id="live-clock-script">
@@ -123,6 +126,9 @@ jobs:
           grep -q 'data-section="open"' _site/index.html
           ! grep -q 'data-section="brokers"' _site/index.html
           ! grep -q 'section-brokers' _site/index.html
+          ! grep -q 'data-section="compare"' _site/index.html
+          ! grep -q 'section-compare' _site/index.html
+          ! grep -qi 'SEBI' _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
