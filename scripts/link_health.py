@@ -53,7 +53,7 @@ MAX_RUN_SECONDS = 240
 
 DASHBOARD_PAGES = [
     'https://www.chittorgarh.com/ipo/ipo_dashboard.asp',        # mainboard
-    'https://www.chittorgarh.com/ipo/ipo_dashboard.asp?a=sme', # SME]
+    'https://www.chittorgarh.com/ipo/ipo_dashboard.asp?a=sme',  # SME
 ]
 
 GATEWAY_HOSTS = ('nseindia.com', 'bseindia.com')
@@ -137,8 +137,8 @@ def scrape_detail(detail_url):
         r = 0
         if 'rhp' in low or 'red-herring' in low or 'red_herring' in low: r -= 4
         if 'drhp' in low or 'draft' in low: r -= 2
-        if 'abridge' in low or '_ap' in low or '-ap' in low: r += 3
-          if 'prospectus' in low: r -= 1
+        if 'abridged' in low or '_ap' in low or '-ap' in low: r += 3
+        if 'prospectus' in low: r -= 1
         if is_gateway(u): r += 5  # gateways are the last resort
         return r
 
@@ -149,14 +149,14 @@ def scrape_detail(detail_url):
         if drhp:
             out['drhp_pdf'] = drhp[0]
     for u in all_hrefs:
-            low = u.lower()
-            if not out['allotment'] and any(k in low for k in REGISTRAR_KEYS):
-                out['allotment'] = u
+        low = u.lower()
+        if not out['allotment'] and any(k in low for k in REGISTRAR_KEYS):
+            out['allotment'] = u
     return out
 
 
 def resolve_via_sebi(ipo_name, filings_by_name):
-   """Secondary source: SEBI per-company filing pages from live-filings."""
+    """Secondary source: SEBI per-company filing pages from live-filings."""
     out = {'rhp_pdf': '', 'drhp_pdf': '', 'allotment': '', 'filing_page': ''}
     key = normalize_name(ipo_name)
     doc = filings_by_name.get(key)
