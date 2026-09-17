@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-17T11:27:16.733491+05:30",
+  "updated_at": "2026-09-17T06:49:43.324795+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -34,114 +34,6 @@
         "Moneycontrol: HTTP Error 404: Not Found",
         "Moneycontrol: HTTP Error 404: Not Found"
       ]
-    },
-    "PublicAggregators": {
-      "checked_at": "2026-09-17T05:56:59.683667+00:00",
-      "sources": {
-        "Groww": {
-          "ok": false,
-          "records": 0,
-          "matched": 0,
-          "added": 0,
-          "url": "https://groww.in/ipo/subscription"
-        },
-        "Mint": {
-          "ok": true,
-          "records": 10,
-          "matched": 6,
-          "added": 0,
-          "url": "https://www.livemint.com/market/ipo/subscription-status"
-        },
-        "EconomicTimes": {
-          "ok": true,
-          "records": 4,
-          "matched": 0,
-          "added": 4,
-          "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
-        },
-        "EconomicTimesListed": {
-          "ok": true,
-          "records": 10,
-          "matched": 0,
-          "added": 0,
-          "url": "https://economictimes.indiatimes.com/markets/ipo/recently-listed"
-        }
-      },
-      "ok": true
-    },
-    "ProspectusResearch": {
-      "ok": false,
-      "records": 12,
-      "matched": 0,
-      "errors": [],
-      "checked_at": "2026-09-17T05:57:01.649062+00:00"
-    },
-    "SeedFallback": {
-      "ok": true,
-      "records": 0,
-      "checked_at": "2026-09-17T05:57:02.869289+00:00",
-      "seed_fundamentals": 32,
-      "seed_documents": 13
-    },
-    "VideoKnowledge": {
-      "ok": true,
-      "records": 2,
-      "changed_fields": 10,
-      "live_gmp_records": 0,
-      "rejected_gmp_records": 1,
-      "checked_at": "2026-09-17T05:57:03.007059+00:00"
-    },
-    "TranscriptEvidence": {
-      "ok": true,
-      "records": 1,
-      "checked_at": "2026-09-17T05:57:03.058410+00:00"
-    },
-    "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-17T05:57:03.261207+00:00",
-      "feeds": {
-        "Google News · IPO India": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
-        },
-        "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
-        },
-        "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
-        },
-        "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 70,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
-        }
-      }
-    },
-    "FilingVerification": {
-      "ok": true,
-      "records": 13,
-      "verified": 5,
-      "checked_at": "2026-09-17T05:57:03.261207+00:00"
-    },
-    "SelfHeal": {
-      "ok": true,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30",
-      "status_repairs": 1,
-      "sme_added": 0,
-      "filings": {
-        "checked": 21,
-        "verified": 13,
-        "repaired": 8
-      },
-      "upcoming_filing_map": 4,
-      "schedule": "GitHub Actions every 15 minutes",
-      "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
   },
   "ipos": [
@@ -151,9 +43,9 @@
       "type": "Mainboard",
       "price": "₹1700-1785",
       "lot": "8",
-      "size": "22568.94",
+      "size": "₹0 Cr",
       "open": "17/09/26",
-      "close": "Sep 21, 2026",
+      "close": "21/09/26",
       "listing": "24/09/26",
       "sub": "—",
       "gmp": "₹21",
@@ -179,21 +71,7 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/",
       "gmp_updated_at": "2026-09-15T04:25:35.579912+00:00",
-      "gmp_source_updated_at": null,
-      "sub_qib": "0.00",
-      "sub_nii": "0.09",
-      "sub_retail": "0.07",
-      "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
-      "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-17T05:57:03.058390+00:00",
-      "allotment": "22/09/26",
-      "refund": "23/09/26",
-      "shares": "23/09/26",
-      "retail": "35%",
-      "qib": "50%",
-      "hni": "15%",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "gmp_source_updated_at": null
     },
     {
       "id": "sonaselection-india-limited",
@@ -201,9 +79,9 @@
       "type": "Mainboard",
       "price": "₹94-99",
       "lot": "150",
-      "size": "141.57",
+      "size": "₹0 Cr",
       "open": "17/09/26",
-      "close": "Sep 21, 2026",
+      "close": "21/09/26",
       "listing": "—",
       "sub": "—",
       "gmp": "₹21",
@@ -229,9 +107,7 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-14T12:55:22.532383+00:00",
-      "gmp_source_updated_at": null,
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "gmp_source_updated_at": null
     },
     {
       "id": "ss-retail-limited",
@@ -239,9 +115,9 @@
       "type": "Mainboard",
       "price": "₹403-424",
       "lot": "35",
-      "size": "500.00",
+      "size": "₹373 Cr",
       "open": "16/09/26",
-      "close": "Sep 18, 2026",
+      "close": "18/09/26",
       "listing": "—",
       "sub": "—",
       "gmp": "₹21",
@@ -267,12 +143,7 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-14T12:55:24.115251+00:00",
-      "gmp_source_updated_at": null,
-      "sub_qib": "0.20",
-      "sub_nii": "1.57",
-      "sub_retail": "2.37",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "gmp_source_updated_at": null
     },
     {
       "id": "hero-motors-limited",
@@ -280,9 +151,9 @@
       "type": "Mainboard",
       "price": "₹79-84",
       "lot": "178",
-      "size": "1000.00",
+      "size": "₹0 Cr",
       "open": "16/09/26",
-      "close": "Sep 18, 2026",
+      "close": "18/09/26",
       "listing": "—",
       "sub": "—",
       "gmp": "—",
@@ -304,12 +175,7 @@
       "exchange": "NSE",
       "symbol": "HEROMOTORS",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "sub_qib": "0.01",
-      "sub_nii": "1.30",
-      "sub_retail": "2.43",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     },
     {
       "id": "jindal-supreme-india-limited",
@@ -341,9 +207,7 @@
       "exchange": "NSE",
       "symbol": "JSIPL",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     },
     {
       "id": "spectraa-technology-solutions-limited",
@@ -351,9 +215,9 @@
       "type": "SME",
       "price": "—",
       "lot": "1200",
-      "size": "42.52",
+      "size": "—",
       "open": "17/09/26",
-      "close": "Sep 21, 2026",
+      "close": "21/09/26",
       "listing": "—",
       "sub": "—",
       "gmp": "—",
@@ -375,9 +239,7 @@
       "exchange": "BSE",
       "symbol": "SPECTRAA",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     },
     {
       "id": "kheria-autocomp-limited",
@@ -385,9 +247,9 @@
       "type": "SME",
       "price": "—",
       "lot": "1200",
-      "size": "46.44",
+      "size": "—",
       "open": "17/09/26",
-      "close": "Sep 21, 2026",
+      "close": "21/09/26",
       "listing": "—",
       "sub": "—",
       "gmp": "—",
@@ -409,9 +271,7 @@
       "exchange": "BSE",
       "symbol": "KHERIAAUTO",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     },
     {
       "id": "manika-plastech-limited",
@@ -439,161 +299,11 @@
       "de": "0.20",
       "growth": "25%",
       "prom": "58%",
-      "status": "closed",
+      "status": "open",
       "exchange": "NSE",
       "symbol": "MANIKA",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
-      "pb": "2.6x",
-      "eps": "₹2.3 pre-issue; ₹4 post-issue shown in video (data-consistency warning)",
-      "assets": "₹252→₹320→₹323→₹317 Cr",
-      "borrowings": "₹93→₹97→₹88→₹92 Cr",
-      "retail": "35%",
-      "min_investment": "₹14,964",
-      "allotment": "17/09/26",
-      "refund": "18/09/26",
-      "shares": "18/09/26",
-      "use_of_proceeds": "~₹54 Cr capex; ~₹15 Cr borrowing reduction",
-      "knowledge_source": "user-provided video transcript",
-      "gmp_source": "Rejected abnormal value",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
-    },
-    {
-      "id": "s-k-offset-ltd-sme",
-      "name": "S. K. Offset Ltd. SME",
-      "type": "SME",
-      "price": "₹119 – ₹125",
-      "lot": "1000",
-      "size": "₹29.06 Cr",
-      "open": "23/09/26",
-      "close": "—",
-      "listing": "—",
-      "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
-      "sector": "—",
-      "fresh": "—",
-      "ofs": "—",
-      "pe": "—",
-      "roe": "—",
-      "roce": "—",
-      "rev": "—",
-      "pat": "—",
-      "ebitda": "—",
-      "de": "—",
-      "growth": "—",
-      "prom": "—",
-      "status": "upcoming",
-      "exchange": "NSE/BSE",
-      "symbol": "",
-      "source": "Economic Times",
-      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
-    },
-    {
-      "id": "fx-multitech-ltd-sme",
-      "name": "FX Multitech Ltd. SME",
-      "type": "SME",
-      "price": "₹110 – ₹116",
-      "lot": "1200",
-      "size": "₹45.24 Cr",
-      "open": "21/09/26",
-      "close": "—",
-      "listing": "—",
-      "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
-      "sector": "—",
-      "fresh": "—",
-      "ofs": "—",
-      "pe": "—",
-      "roe": "—",
-      "roce": "—",
-      "rev": "—",
-      "pat": "—",
-      "ebitda": "—",
-      "de": "—",
-      "growth": "—",
-      "prom": "—",
-      "status": "upcoming",
-      "exchange": "NSE/BSE",
-      "symbol": "",
-      "source": "Economic Times",
-      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
-    },
-    {
-      "id": "robokidz-eduventures-ltd-sme",
-      "name": "Robokidz Eduventures Ltd. SME",
-      "type": "SME",
-      "price": "₹100 – ₹106",
-      "lot": "1200",
-      "size": "₹31.09 Cr",
-      "open": "21/09/26",
-      "close": "—",
-      "listing": "—",
-      "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
-      "sector": "—",
-      "fresh": "—",
-      "ofs": "—",
-      "pe": "—",
-      "roe": "—",
-      "roce": "—",
-      "rev": "—",
-      "pat": "—",
-      "ebitda": "—",
-      "de": "—",
-      "growth": "—",
-      "prom": "—",
-      "status": "upcoming",
-      "exchange": "NSE/BSE",
-      "symbol": "",
-      "source": "Economic Times",
-      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
-    },
-    {
-      "id": "axiom-gas-engineering-ltd-sme",
-      "name": "Axiom Gas Engineering Ltd. SME",
-      "type": "SME",
-      "price": "₹50 – ₹53",
-      "lot": "2000",
-      "size": "₹49.81 Cr",
-      "open": "18/09/26",
-      "close": "—",
-      "listing": "—",
-      "sub": "—",
-      "gmp": "—",
-      "gmp_pct": "—",
-      "est_list": "—",
-      "sector": "—",
-      "fresh": "—",
-      "ofs": "—",
-      "pe": "—",
-      "roe": "—",
-      "roce": "—",
-      "rev": "—",
-      "pat": "—",
-      "ebitda": "—",
-      "de": "—",
-      "growth": "—",
-      "prom": "—",
-      "status": "upcoming",
-      "exchange": "NSE/BSE",
-      "symbol": "",
-      "source": "Economic Times",
-      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
-      "status_auto": true,
-      "status_checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     }
   ],
   "listed": [],

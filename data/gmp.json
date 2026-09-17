@@ -1,12 +1,32 @@
 {
-  "updated_at":"2026-09-16T17:50:00+05:30",
-  "data":[
-    {"name":"National Stock Exchange of India Limited","issue_price":"₹1700-1785","gmp":"₹160","estimated_listing":"₹1945","gmp_pct":"+8.96%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"},
-    {"name":"Sonaselection India Limited","issue_price":"₹94-99","gmp":"₹8","estimated_listing":"₹107","gmp_pct":"+8.08%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"},
-    {"name":"SS Retail Limited","issue_price":"₹403-424","gmp":"₹105","estimated_listing":"₹529","gmp_pct":"+24.76%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"},
-    {"name":"Jindal Supreme (India) Limited","issue_price":"₹88-93","gmp":"₹25","estimated_listing":"₹118","gmp_pct":"+26.88%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"},
-    {"name":"Hero Motors Limited","issue_price":"₹79-84","gmp":"₹5","estimated_listing":"₹89","gmp_pct":"+5.95%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"},
-    {"name":"Vama Wovenfab Limited","issue_price":"₹324-341","gmp":"₹70","estimated_listing":"₹411","gmp_pct":"+20.53%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Finnpick"},
-    {"name":"Shakti Polytarp Limited","issue_price":"₹56-59","gmp":"₹0","estimated_listing":"₹59","gmp_pct":"0.00%","kostak":"—","updated_at":"2026-09-16T17:50:00+05:30","source":"Downstox"}
+  "updated_at": "2026-09-17T06:49:43.324795+00:00",
+  "data": [
+    {
+      "name": "National Stock Exchange of India Limited",
+      "issue_price": "₹1700-1785",
+      "gmp": "₹21",
+      "estimated_listing": "₹1806",
+      "gmp_pct": "+1.2%",
+      "kostak": "—",
+      "updated_at": "2026-09-15T04:25:35.579912+00:00"
+    },
+    {
+      "name": "Sonaselection India Limited",
+      "issue_price": "₹94-99",
+      "gmp": "₹21",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-14T12:55:22.532383+00:00"
+    },
+    {
+      "name": "SS Retail Limited",
+      "issue_price": "₹403-424",
+      "gmp": "₹21",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-14T12:55:24.115251+00:00"
+    }
   ]
 }
