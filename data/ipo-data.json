@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-17T09:57:39.318058+00:00",
+  "updated_at": "2026-09-17T10:19:32.996025+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -311,7 +311,7 @@
       "type": "SME",
       "price": "₹51-54",
       "lot": "—",
-      "size": "₹51 Cr",
+      "size": "₹45 Cr",
       "open": "18/09/26",
       "close": "22/09/26",
       "listing": "—",
