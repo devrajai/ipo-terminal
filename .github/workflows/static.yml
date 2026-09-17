@@ -50,6 +50,7 @@ jobs:
           .header,.nav-wrap,.stat,.section,.card,.box,.warning,.theme,.nav button,.close{background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.035))!important;background-color:var(--lg-glass)!important;border-color:var(--lg-line)!important;box-shadow:0 18px 55px rgba(0,0,0,.20),inset 0 1px 0 rgba(255,255,255,.14)!important;backdrop-filter:blur(24px) saturate(140%)!important;-webkit-backdrop-filter:blur(24px) saturate(140%)!important}
           .light .header,.light .nav-wrap,.light .stat,.light .section,.light .card,.light .box,.light .warning,.light .theme,.light .nav button,.light .close{background:linear-gradient(135deg,rgba(255,255,255,.82),rgba(255,255,255,.40))!important;box-shadow:0 18px 55px rgba(51,65,85,.12),inset 0 1px 0 rgba(255,255,255,.95)!important}
           .nav button{border-radius:999px!important}.section{border-radius:22px!important}.card{border-radius:18px!important}.box{border-radius:13px!important}.theme{border-radius:50%!important}
+          .close{background:#dc2626!important;border-color:rgba(255,255,255,.25)!important;color:#fff!important}
           @media(max-width:699px){.nav{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;overflow:visible!important}.nav button{width:100%!important;min-height:43px!important}.section{margin-inline:8px!important}.grid{grid-template-columns:repeat(2,1fr)!important}}
           </style>'''
           s=s.replace('</head>',glass+'</head>',1)
@@ -66,8 +67,9 @@ jobs:
           test -s _site/data/news.json
           test -s _site/data/last-updated.json
           grep -q 'Promise.all' _site/index.html
-          grep -q 'section.active' _site/index.html
+          grep -q 'section.opened' _site/index.html
           grep -q 'liquid-glass-core' _site/index.html
+          grep -q 'data-section="open"' _site/index.html
           ! grep -q 'data-section="brokers"' _site/index.html
           ! grep -q 'section-brokers' _site/index.html
 
