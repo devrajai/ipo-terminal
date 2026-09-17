@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Example Company Ltd",
+    "status": "OPEN",
+    "open_date": "2026-09-16",
+    "close_date": "2026-09-18",
+    "price_band": "₹100 – ₹110",
+    "lot_size": 135,
+    "issue_size": "₹500 Cr",
+    "exchange": "NSE",
+    "apply_link": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+  },
+  {
+    "name": "Another Corp Ltd",
+    "status": "UPCOMING",
+    "open_date": "2026-09-25",
+    "close_date": "2026-09-27",
+    "price_band": "₹300 – ₹320",
+    "lot_size": 46,
+    "issue_size": "₹1200 Cr",
+    "exchange": "BSE",
+    "apply_link": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+  }
+]
