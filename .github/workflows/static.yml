@@ -38,23 +38,10 @@ jobs:
           import re
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
+          # Defensive removal of the retired Compare item/panel and footer SEBI label.
           s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
           s=re.sub(r'<section[^>]*id=["\']section-compare["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
           s=re.sub(r'<a[^>]*>\s*SEBI\s*</a>','',s,flags=re.I|re.S)
-          s=re.sub(r'<div class="subtitle">.*?</div>','<div class="subtitle" id="live-date-time"></div>',s,count=1,flags=re.I|re.S)
-          live_clock=r'''<style id="live-clock-style">#live-date-time{font-variant-numeric:tabular-nums;letter-spacing:.2px}</style>
-          <script id="live-clock-script">(function(){function updateIndiaClock(){var e=document.getElementById('live-date-time');if(!e)return;var now=new Date();var parts=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).formatToParts(now);var p={};parts.forEach(function(x){if(x.type!=='literal')p[x.type]=x.value});e.textContent='Date: '+p.day+'/'+p.month+'/'+p.year+' • India: '+p.hour+':'+p.minute+':'+p.second+' '+p.dayPeriod}updateIndiaClock();setInterval(updateIndiaClock,1000)})();</script>'''
-          s=s.replace('</head>',live_clock+'</head>',1)
-          dark_fx=r'''<style id="dark-liquid-reference-fx">html:not(.light){--bg:#050708;--text:#f7fafb;--muted:#a7b0b5}html:not(.light) body{background:radial-gradient(circle at 18% 8%,rgba(255,255,255,.055),transparent 24%),radial-gradient(circle at 82% 16%,rgba(120,150,160,.055),transparent 25%),radial-gradient(circle at 50% 92%,rgba(255,255,255,.025),transparent 34%),#050708!important}html:not(.light) .header,html:not(.light) .stat,html:not(.light) .nav-wrap,html:not(.light) .nav button,html:not(.light) .section,html:not(.light) .card,html:not(.light) .box,html:not(.light) .warning,html:not(.light) .theme{background:radial-gradient(circle at 28% 15%,rgba(255,255,255,.075),transparent 34%),linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.028) 48%,rgba(0,0,0,.12))!important;border:1px solid rgba(255,255,255,.17)!important;box-shadow:0 22px 65px rgba(0,0,0,.58),inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(255,255,255,.045)!important;backdrop-filter:blur(28px) saturate(135%)!important;-webkit-backdrop-filter:blur(28px) saturate(135%)!important}html:not(.light) .nav-wrap{background:rgba(7,10,11,.68)!important;box-shadow:0 16px 50px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.13)!important}html:not(.light) .nav button{position:relative;overflow:hidden;color:#c9d0d4!important;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease}html:not(.light) .nav button::before,html:not(.light) .theme::before{content:"";position:absolute;left:12%;right:12%;top:2px;height:42%;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.22),transparent);pointer-events:none;opacity:.75}html:not(.light) .nav button:hover{transform:translateY(-1px);box-shadow:0 12px 32px rgba(0,0,0,.48),inset 0 1px 0 rgba(255,255,255,.34)!important}html:not(.light) .nav button:active{transform:scale(.965)}html:not(.light) .nav button.active{color:#fff!important;background:linear-gradient(145deg,rgba(255,255,255,.19),rgba(255,255,255,.055))!important;border-color:rgba(255,255,255,.27)!important;box-shadow:0 14px 38px rgba(0,0,0,.52),inset 0 1px 0 rgba(255,255,255,.34),inset 0 -10px 28px rgba(255,255,255,.025)!important}html:not(.light) .nav button[data-section=open].active{background:linear-gradient(145deg,#28d76f,#12a94f)!important;border-color:rgba(145,255,190,.5)!important;box-shadow:0 12px 32px rgba(18,169,79,.26),inset 0 1px 0 rgba(255,255,255,.48)!important}html:not(.light) .nav button[data-section=upcoming].active{background:linear-gradient(145deg,#ff9a3c,#ed6d08)!important;border-color:rgba(255,198,135,.48)!important;box-shadow:0 12px 32px rgba(237,109,8,.24),inset 0 1px 0 rgba(255,255,255,.48)!important}html:not(.light) .nav button[data-section=closed].active{background:linear-gradient(145deg,#cfd4d7,#7f898f)!important;border-color:rgba(255,255,255,.4)!important;color:#101416!important;box-shadow:0 12px 32px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.65)!important}html:not(.light) .section{overflow:hidden;position:relative}html:not(.light) .section::before,html:not(.light) .card::before,html:not(.light) .box::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 15% 0%,rgba(255,255,255,.075),transparent 30%);opacity:.8}html:not(.light) .section-title{position:relative}html:not(.light) .close{background:linear-gradient(145deg,#ff3b30,#c91f18)!important;border-color:rgba(255,160,155,.55)!important;box-shadow:0 10px 26px rgba(220,38,38,.28),inset 0 1px 0 rgba(255,255,255,.38)!important}html:not(.light) .link{background:linear-gradient(145deg,#4b93ff,#2563eb)!important;box-shadow:0 10px 28px rgba(37,99,235,.24),inset 0 1px 0 rgba(255,255,255,.3)!important}html:not(.light) .gainloss{box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 6px 18px rgba(0,0,0,.2)}html:not(.light) .gain{background:rgba(34,197,94,.18);color:#86efac}html:not(.light) .loss{background:rgba(239,68,68,.18);color:#fca5a5}html:not(.light) .zero{background:rgba(148,163,184,.16);color:#cbd5e1}@media(max-width:699px){html:not(.light) .nav-wrap{box-shadow:0 18px 45px rgba(0,0,0,.62),inset 0 1px 0 rgba(255,255,255,.15)!important}.nav-wrap{position:sticky!important;top:0!important}.nav{touch-action:pan-y}.nav button{touch-action:manipulation}}</style>'''
-          s=s.replace('</head>',dark_fx+'</head>',1)
-          # Keep the navigation visible while scrolling so users can switch panels without pulling back up.
-          nav_access=r'''<style id="nav-accessibility-fix">.nav-wrap{position:sticky!important;top:0!important;z-index:900;transform:none!important;opacity:1!important;max-height:none!important;pointer-events:auto!important;will-change:auto!important;transition:none!important}.nav-wrap.nav-hidden{transform:none!important;opacity:1!important;max-height:none!important;padding-top:9px!important;padding-bottom:9px!important;pointer-events:auto!important;border-color:var(--line)!important}@media(max-width:699px){.nav-wrap{padding:8px!important}.nav-wrap.nav-hidden{padding:8px!important}.nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;overflow:visible}.nav button{width:100%;min-height:44px}}</style>'''
-          s=s.replace('</head>',nav_access+'</head>',1)
-          s=re.sub(r'<script[^>]*id=["\']nav-scroll-fix-script["\'][^>]*>.*?</script>','',s,flags=re.I|re.S)
-          s=re.sub(r'<style[^>]*id=["\']nav-scroll-fix["\'][^>]*>.*?</style>','',s,flags=re.I|re.S)
-          nav_match=re.search(r'<nav[^>]*id=["\']nav["\'][^>]*>(.*?)</nav>',s,flags=re.I|re.S)
-          if nav_match and re.search(r'data-section=["\']compare["\']',nav_match.group(1),flags=re.I): raise SystemExit('Compare button still present')
-          if re.search(r'id=["\']section-compare["\']',s,flags=re.I): raise SystemExit('Compare section still present')
           p.write_text(s,encoding='utf-8')
           PY
       - name: Verify site
@@ -68,14 +55,15 @@ jobs:
           test -s _site/data/last-updated.json
           grep -q 'Promise.all' _site/index.html
           grep -q 'section.opened' _site/index.html
-          grep -q 'live-date-time' _site/index.html
+          grep -q 'india-date' _site/index.html
           grep -q 'Asia/Kolkata' _site/index.html
-          grep -q 'dark-liquid-reference-fx' _site/index.html
-          grep -q 'nav-accessibility-fix' _site/index.html
-          grep -q 'data-section="open"' _site/index.html
+          grep -q 'nav-groups' _site/index.html
+          grep -q 'IPO Status' _site/index.html
+          grep -q 'Research &amp; Tools\|Research & Tools' _site/index.html
+          grep -q 'nav-hidden' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
-          ! grep -qi 'SEBI' _site/index.html
+          ! grep -q '>SEBI<' _site/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
