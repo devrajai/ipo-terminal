@@ -33,17 +33,6 @@ jobs:
           cp index.html _site/index.html
           cp -R data _site/data
           if [ -d scripts ]; then cp -R scripts _site/scripts; fi
-          python <<'PY'
-          from pathlib import Path
-          import re
-          p=Path('_site/index.html')
-          s=p.read_text(encoding='utf-8')
-          # Defensive removal of the retired Compare item/panel and footer SEBI label.
-          s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
-          s=re.sub(r'<section[^>]*id=["\']section-compare["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
-          s=re.sub(r'<a[^>]*>\s*SEBI\s*</a>','',s,flags=re.I|re.S)
-          p.write_text(s,encoding='utf-8')
-          PY
       - name: Verify site
         run: |
           set -e
@@ -55,15 +44,14 @@ jobs:
           test -s _site/data/last-updated.json
           grep -q 'Promise.all' _site/index.html
           grep -q 'section.opened' _site/index.html
-          grep -q 'india-date' _site/index.html
           grep -q 'Asia/Kolkata' _site/index.html
-          grep -q 'nav-groups' _site/index.html
-          grep -q 'IPO Status' _site/index.html
-          grep -q 'Research &amp; Tools\|Research & Tools' _site/index.html
-          grep -q 'nav-hidden' _site/index.html
+          grep -q 'data-section="open"' _site/index.html
+          grep -q 'data-section="tips"' _site/index.html
+          grep -q 'data-section="glossary"' _site/index.html
+          grep -q 'data-close="open"' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
-          ! grep -q '>SEBI<' _site/index.html
+          ! grep -q 'Live Indian IPO information' _site/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
