@@ -34,8 +34,7 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp index.html _site/index.html
-          cp ui-final-fix.js _site/ui-final-fix.js
-          cp ui-hard-fix.js _site/ui-hard-fix.js
+          cp nav-core.js _site/nav-core.js
           cp -R data _site/data
           cp -R scripts _site/scripts
           python - <<'PY'
@@ -43,23 +42,27 @@ jobs:
           import re
           p = Path('_site/index.html')
           html = p.read_text(encoding='utf-8')
-          html = re.sub(r'<script\s+src=["\']ui-hard-fix\.js[^>]*></script>', '', html, flags=re.I)
-          tag = '<script src="ui-hard-fix.js?v=nav-v5"></script>'
-          marker = '</head>'
+          # Remove the two legacy UI patch scripts from the deployed document.
+          html = re.sub(r'<script\s+src=["\'][^"\']*ui-(?:hard-fix|final-fix)\.js[^>]*></script>', '', html, flags=re.I)
+          # Remove any old cache-busting variants too.
+          html = re.sub(r'<script\s+src=["\'][^"\']*nav-core\.js[^>]*></script>', '', html, flags=re.I)
+          tag = '<script src="nav-core.js?v=nav-core-1"></script>'
+          marker = '</body>'
           pos = html.lower().rfind(marker)
           if pos >= 0:
               html = html[:pos] + tag + html[pos:]
           else:
-              html = tag + html
+              html += tag
           p.write_text(html, encoding='utf-8')
           PY
 
-      - name: Verify final navigation script is included
+      - name: Verify single navigation core
         run: |
           set -e
-          grep -q 'ui-hard-fix.js?v=nav-v5' _site/index.html
-          test -s _site/ui-hard-fix.js
+          test -s _site/nav-core.js
           test -s _site/data/ipo-data.json
+          test "$(grep -oi 'nav-core.js?v=nav-core-1' _site/index.html | wc -l)" -eq 1
+          test "$(grep -Eio 'ui-(hard-fix|final-fix)\.js' _site/index.html | wc -l)" -eq 0
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
