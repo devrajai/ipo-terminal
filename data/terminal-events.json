@@ -1,35 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T23:50:24.930604+00:00",
+  "generated_at": "2026-09-17T00:04:16.143334+00:00",
   "events": [
-    {
-      "date": "2026-09-16",
-      "type": "CLOSE",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "OPEN",
-      "ipo_id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "OPEN",
-      "ipo_id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "OPEN",
-      "ipo_id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-17",
       "type": "ALLOTMENT",

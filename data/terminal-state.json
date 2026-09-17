@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-16T23:50:24.930604+00:00",
+  "generated_at": "2026-09-17T00:04:16.143334+00:00",
   "today_ist": "2026-09-17",
-  "data_updated_at": "2026-09-17T05:19:57.955417+05:30",
+  "data_updated_at": "2026-09-17T05:29:28.701195+05:30",
   "ipo_count": 12,
   "field_coverage_pct": 31.0,
   "sources": {
@@ -20,7 +20,7 @@
       "ok": false,
       "records": 0,
       "errors": [
-        "HTTP Error 403: Forbidden"
+        "<urlopen error _ssl.c:1064: The handshake operation timed out>"
       ]
     },
     "GMP": {
@@ -40,7 +40,7 @@
       ]
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-16T23:49:25.811716+00:00",
+      "checked_at": "2026-09-16T23:58:20.891962+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -78,12 +78,12 @@
       "records": 12,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-16T23:49:28.489536+00:00"
+      "checked_at": "2026-09-16T23:58:23.081065+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-16T23:49:42.707509+00:00",
+      "checked_at": "2026-09-16T23:58:25.816505+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -93,17 +93,17 @@
       "changed_fields": 10,
       "live_gmp_records": 0,
       "rejected_gmp_records": 1,
-      "checked_at": "2026-09-16T23:49:43.343055+00:00"
+      "checked_at": "2026-09-16T23:58:26.047962+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-16T23:49:43.391942+00:00"
+      "checked_at": "2026-09-16T23:58:26.089687+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-16T23:49:43.529919+00:00",
+      "checked_at": "2026-09-16T23:58:26.200975+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -130,18 +130,18 @@
     "FilingVerification": {
       "ok": true,
       "records": 13,
-      "verified": 5,
-      "checked_at": "2026-09-16T23:49:43.529919+00:00"
+      "verified": 2,
+      "checked_at": "2026-09-16T23:58:26.200975+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-17T05:19:57.955417+05:30",
+      "checked_at": "2026-09-17T05:29:28.701195+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
-        "checked": 21,
+        "checked": 24,
         "verified": 13,
-        "repaired": 8
+        "repaired": 11
       },
       "upcoming_filing_map": 4,
       "schedule": "GitHub Actions every 15 minutes",
