@@ -1,32 +1,68 @@
 {
-  "updated_at": "2026-09-17T17:56:44.778487+00:00",
+  "updated_at": "2026-09-17T17:52:06.379736+00:00",
   "data": [
     {
       "name": "National Stock Exchange of India Limited",
       "issue_price": "₹1700-1785",
-      "gmp": "₹21",
-      "estimated_listing": "₹1806",
-      "gmp_pct": "+1.2%",
+      "gmp": "₹26",
+      "estimated_listing": "₹1811",
+      "gmp_pct": "+1.5%",
       "kostak": "—",
-      "updated_at": "2026-09-15T04:25:35.579912+00:00"
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
     },
     {
       "name": "Sonaselection India Limited",
       "issue_price": "₹94-99",
-      "gmp": "₹21",
+      "gmp": "₹1",
       "estimated_listing": "—",
-      "gmp_pct": "—",
+      "gmp_pct": "+1.1%",
       "kostak": "—",
-      "updated_at": "2026-09-14T12:55:22.532383+00:00"
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
     },
     {
       "name": "SS Retail Limited",
       "issue_price": "₹403-424",
-      "gmp": "₹21",
+      "gmp": "₹26",
+      "estimated_listing": "—",
+      "gmp_pct": "+6.5%",
+      "kostak": "—",
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
+    },
+    {
+      "name": "Hero Motors Limited",
+      "issue_price": "₹79-84",
+      "gmp": "₹1",
+      "estimated_listing": "—",
+      "gmp_pct": "+1.3%",
+      "kostak": "—",
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
+    },
+    {
+      "name": "Jindal Supreme (India) Limited",
+      "issue_price": "₹88-93",
+      "gmp": "₹1",
+      "estimated_listing": "—",
+      "gmp_pct": "+1.1%",
+      "kostak": "—",
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
+    },
+    {
+      "name": "SpectraA Technology Solutions Limited",
+      "issue_price": "—",
+      "gmp": "₹23",
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",
-      "updated_at": "2026-09-14T12:55:24.115251+00:00"
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
+    },
+    {
+      "name": "Kheria Autocomp Limited",
+      "issue_price": "—",
+      "gmp": "₹1",
+      "estimated_listing": "—",
+      "gmp_pct": "—",
+      "kostak": "—",
+      "updated_at": "2026-09-17T17:52:06.379736+00:00"
     }
   ]
 }
