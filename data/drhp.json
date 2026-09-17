@@ -1,8 +1,7 @@
 [
-  {
-    "name": "Pipeline Co Ltd",
-    "filed_date": "2026-08-15",
-    "issue_size": "₹900 Cr",
-    "sebi_link": "https://www.sebi.gov.in"
-  }
+  {"name":"National Stock Exchange of India Limited — RHP","filed_date":"2026-09-11","issue_size":"₹22,561.57 Cr","sebi_link":"https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15","source_url":"https://www.nseindia.com/static/investor-relations/offer-documents"},
+  {"name":"Hero Motors Limited — RHP","filed_date":"2026-09-10","issue_size":"₹1,000 Cr","sebi_link":"https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15","source_url":"https://www.nseindia.com/market-data/all-upcoming-issues-ipo"},
+  {"name":"Sonaselection India Limited — RHP","filed_date":"2026-09-09","issue_size":"₹141.57 Cr","sebi_link":"https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15","source_url":"https://www.nseindia.com/market-data/all-upcoming-issues-ipo"},
+  {"name":"SS Retail Limited — RHP","filed_date":"2026-09-09","issue_size":"₹500 Cr","sebi_link":"https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15","source_url":"https://www.nseindia.com/market-data/all-upcoming-issues-ipo"},
+  {"name":"Jindal Supreme (India) Limited — RHP","filed_date":"2026-09-08","issue_size":"₹124.88 Cr","sebi_link":"https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15","source_url":"https://economictimes.indiatimes.com/jindal-supreme-india-ltd/ipos/companyid-2450405.cms"}
 ]
