@@ -33,6 +33,32 @@ jobs:
           cp index.html _site/index.html
           cp -R data _site/data
           if [ -d scripts ]; then cp -R scripts _site/scripts; fi
+          python <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('_site/index.html')
+          s=p.read_text(encoding='utf-8')
+          # Remove the large three status boxes. Their live counts are displayed directly in IPO Status buttons.
+          s=re.sub(r'<div class="stats">.*?</div>\s*<div id="last-updated"', '<div id="last-updated"', s, flags=re.S)
+          # Add a small live-count treatment to the three IPO Status buttons.
+          s=s.replace('<button class="active" data-section="open">🟢 Open</button>', '<button class="active" data-section="open">🟢 Open <span class="status-count" id="nav-open-count">0</span></button>')
+          s=s.replace('<button data-section="upcoming">🕐 Upcoming</button>', '<button data-section="upcoming">🕐 Upcoming <span class="status-count" id="nav-upcoming-count">0</span></button>')
+          s=s.replace('<button data-section="closed">⚪ Closed</button>', '<button data-section="closed">⚪ Closed <span class="status-count" id="nav-closed-count">0</span></button>')
+          # Hide any legacy stat elements if a stale browser/service-worker artifact is copied.
+          s=s.replace('</style>', '.stats{display:none!important}.status-count{display:inline-flex;min-width:20px;height:20px;padding:0 6px;align-items:center;justify-content:center;margin-left:3px;border-radius:999px;background:rgba(255,255,255,.2);font-size:10px;font-weight:950;color:inherit}@media(max-width:699px){.status-count{min-width:18px;height:18px;font-size:9px}}\n</style>', 1)
+          # Keep live counters synchronized with the same groups used by the IPO panels.
+          marker="function renderOpen(){"
+          inject="""function syncStatusButtons(g){
+            const map={open:'nav-open-count',upcoming:'nav-upcoming-count',closed:'nav-closed-count'};
+            Object.keys(map).forEach(k=>{const el=document.getElementById(map[k]);if(el)el.textContent=String((g[k]||[]).length)});
+          }
+          """
+          if marker in s and 'function syncStatusButtons' not in s:
+              s=s.replace(marker, inject+marker, 1)
+          old="countTo(document.getElementById('open-count'),g.open.length);countTo(document.getElementById('upcoming-count'),g.upcoming.length);countTo(document.getElementById('closed-count'),g.closed.length)"
+          s=s.replace(old, "syncStatusButtons(g)")
+          p.write_text(s,encoding='utf-8')
+          PY
       - name: Verify site
         run: |
           set -e
@@ -49,6 +75,8 @@ jobs:
           grep -q 'data-section="tips"' _site/index.html
           grep -q 'data-section="glossary"' _site/index.html
           grep -q 'data-close="open"' _site/index.html
+          grep -q 'nav-open-count' _site/index.html
+          grep -q 'syncStatusButtons' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
           ! grep -q 'Live Indian IPO information' _site/index.html
