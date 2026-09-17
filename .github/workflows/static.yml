@@ -43,6 +43,23 @@ jobs:
           s=p.read_text(encoding='utf-8')
           s=re.sub(r'<button[^>]*data-section=["\']brokers["\'][^>]*>.*?</button>','',s,flags=re.I|re.S)
           s=re.sub(r'<section[^>]*id=["\']section-brokers["\'][^>]*>.*?</section>','',s,flags=re.I|re.S)
+          s=re.sub(r'<div class="subtitle">.*?</div>', '<div class="subtitle" id="live-date-time"></div>', s, count=1, flags=re.I|re.S)
+          clock=r'''<style id="live-clock-style">#live-date-time{font-variant-numeric:tabular-nums;letter-spacing:.15px}</style>
+          <script id="live-clock-script">
+          (function(){
+            function updateIndiaClock(){
+              var e=document.getElementById('live-date-time');
+              if(!e)return;
+              var now=new Date();
+              var parts=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',day:'2-digit',month:'2-digit',year:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:true}).formatToParts(now);
+              var p={}; parts.forEach(function(x){if(x.type!=='literal')p[x.type]=x.value});
+              e.textContent='Date: '+p.day+'/'+p.month+'/'+p.year+' • India: '+p.hour+':'+p.minute+':'+p.second+' '+p.dayPeriod;
+            }
+            updateIndiaClock();
+            setInterval(updateIndiaClock,1000);
+          })();
+          </script>'''
+          s=s.replace('</head>',clock+'</head>',1)
           glass=r'''<style id="liquid-glass-core">
           :root{--lg-glass:rgba(255,255,255,.065);--lg-line:rgba(255,255,255,.15)}
           html.light{--lg-glass:rgba(255,255,255,.58);--lg-line:rgba(71,85,105,.16)}
@@ -69,6 +86,8 @@ jobs:
           grep -q 'Promise.all' _site/index.html
           grep -q 'section.opened' _site/index.html
           grep -q 'liquid-glass-core' _site/index.html
+          grep -q 'live-date-time' _site/index.html
+          grep -q 'Asia/Kolkata' _site/index.html
           grep -q 'data-section="open"' _site/index.html
           ! grep -q 'data-section="brokers"' _site/index.html
           ! grep -q 'section-brokers' _site/index.html
