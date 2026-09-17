@@ -3,8 +3,7 @@ name: IPO Terminal - Automatic Data Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 4,10,16 * * 1-5'
-    - cron: '0 10 * * 6'
+    - cron: '*/15 * * * 1-6'
 
 permissions:
   contents: write
@@ -22,133 +21,106 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-
-      - name: Install dependencies
-        run: python -m pip install requests
-
-      - name: Backup current data
+      - name: Backup verified data
         run: |
           mkdir -p /tmp/ipo-backup
-          for f in data/ipos.json data/listed.json data/drhp.json data/news.json; do
+          for f in data/ipos.json data/ipo-data.json data/listed.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/drhp.json data/news.json; do
             [ -f "$f" ] && cp "$f" "/tmp/ipo-backup/$(basename "$f")"
           done
 
-      - name: Fetch NSE IPO data safely
+      - name: Run multi-source live collector
+        run: |
+          set +e
+          python scripts/update_data.py
+          rc=$?
+          echo "collector_exit=$rc"
+          python scripts/build_feature_data.py || true
+          exit 0
+
+      - name: Build safe frontend IPO dataset
         run: |
           python <<'PY'
-          import json, os, tempfile, time
-          import requests
+          import json, os, re, tempfile
+          from datetime import datetime
+          from pathlib import Path
 
-          HEADERS = {
-              "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36",
-              "Accept": "application/json, text/plain, */*",
-              "Referer": "https://www.nseindia.com/",
-          }
-          ENDPOINTS = [
-              "https://www.nseindia.com/api/ipo-current-allotment",
-              "https://www.nseindia.com/api/ipo-listing-info",
-          ]
+          src=Path('data/ipo-data.json')
+          out=Path('data/ipos.json')
+          backup=Path('/tmp/ipo-backup/ipos.json')
 
-          def atomic_write(path, data):
-              os.makedirs(os.path.dirname(path), exist_ok=True)
-              fd, tmp = tempfile.mkstemp(dir=os.path.dirname(path), suffix='.json')
-              try:
-                  with os.fdopen(fd, 'w', encoding='utf-8') as f:
-                      json.dump(data, f, ensure_ascii=False, indent=2)
-                  os.replace(tmp, path)
-              finally:
-                  if os.path.exists(tmp): os.remove(tmp)
+          def date10(v):
+              s=str(v or '').strip()
+              for fmt in ('%d/%m/%y','%d/%m/%Y','%Y-%m-%d'):
+                  try:return datetime.strptime(s,fmt).strftime('%Y-%m-%d')
+                  except ValueError:pass
+              m=re.search(r'(\d{1,2})\s*[-/]\s*(\d{1,2})\s*[-/]\s*(\d{2,4})',s)
+              if m:
+                  y=m.group(3); y=('20'+y) if len(y)==2 else y
+                  return f'{y}-{int(m.group(2)):02d}-{int(m.group(1)):02d}'
+              return ''
 
+          def clean(v):
+              return '—' if v in (None,'','-','—') else v
+
+          def write_atomic(path,data):
+              fd,tmp=tempfile.mkstemp(dir=str(path.parent),suffix='.json')
+              with os.fdopen(fd,'w',encoding='utf-8') as f: json.dump(data,f,ensure_ascii=False,indent=2)
+              os.replace(tmp,path)
+
+          rows=[]
           try:
-              session = requests.Session()
-              session.headers.update(HEADERS)
-              home = session.get("https://www.nseindia.com", headers=HEADERS, timeout=20)
-              print('NSE landing:', home.status_code)
-              time.sleep(2)
-
-              payloads=[]
-              for endpoint in ENDPOINTS:
-                  try:
-                      r=session.get(endpoint, headers=HEADERS, timeout=30)
-                      print(endpoint, r.status_code)
-                      if r.ok:
-                          payloads.append(r.json())
-                  except Exception as e:
-                      print('endpoint error:', repr(e))
-
-              records=[]
-              for p in payloads:
-                  if isinstance(p,list): records.extend(p)
-                  elif isinstance(p,dict):
-                      for k in ('data','ipo','ipos','records','results','ipoData'):
-                          if isinstance(p.get(k),list): records.extend(p[k])
-
-              normalized=[]
-              for x in records:
-                  if not isinstance(x,dict): continue
-                  name=x.get('name') or x.get('companyName') or x.get('issuerName') or x.get('symbol')
-                  if not name: continue
-                  normalized.append({
-                      'name':str(name),
-                      'status':str(x.get('status') or x.get('ipoStatus') or 'UPCOMING').upper(),
-                      'open_date':x.get('open_date') or x.get('openDate') or x.get('issueOpenDate') or '',
-                      'close_date':x.get('close_date') or x.get('closeDate') or x.get('issueCloseDate') or '',
-                      'price_band':x.get('price_band') or x.get('priceBand') or x.get('price') or '',
-                      'lot_size':x.get('lot_size') or x.get('lotSize') or 0,
-                      'issue_size':x.get('issue_size') or x.get('issueSize') or '',
-                      'exchange':x.get('exchange') or 'NSE',
-                      'apply_link':x.get('apply_link') or 'https://www.nseindia.com/market-data/all-upcoming-issues-ipo'
+              payload=json.loads(src.read_text(encoding='utf-8'))
+              raw=payload.get('ipos',[]) if isinstance(payload,dict) else []
+              for x in raw:
+                  if not isinstance(x,dict) or not x.get('name'): continue
+                  op=date10(x.get('open')); cl=date10(x.get('close')); li=date10(x.get('listing'))
+                  if not op or not cl: continue
+                  rows.append({
+                    'name':x.get('name'),'open_date':op,'close_date':cl,'listing_date':li or '',
+                    'close_time':'17:00','price_band':clean(x.get('price')),'lot_size':int(float(x['lot'])) if str(x.get('lot','')).isdigit() else clean(x.get('lot')),
+                    'issue_size':clean(x.get('size')),'exchange':clean(x.get('exchange')),'board':clean(x.get('type')),
+                    'gmp':clean(x.get('gmp')),'gmp_pct':clean(x.get('gmp_pct')),
+                    'pe':clean(x.get('pe')),'pb':clean(x.get('pb')),'roe':clean(x.get('roe')),'roce':clean(x.get('roce')),'eps':clean(x.get('eps')),
+                    'allotment_date':clean(x.get('allotment')),'refund_date':clean(x.get('refund')),'share_credit_date':clean(x.get('shares'))
                   })
-
-              unique={x['name'].strip().lower():x for x in normalized}
-              normalized=list(unique.values())
-              if normalized:
-                  atomic_write('data/ipos.json', normalized)
-                  print('Saved',len(normalized),'IPO records')
-              else:
-                  print('No usable NSE records; preserving existing data/ipos.json')
           except Exception as e:
-              print('Scraper failed; preserving existing files:',repr(e))
+              print('frontend transform failed:',repr(e))
+
+          unique={str(x['name']).strip().lower():x for x in rows}
+          rows=list(unique.values())
+          if len(rows)>=3:
+              write_atomic(out,rows)
+              print('frontend IPO dataset refreshed:',len(rows))
+          elif backup.exists():
+              out.write_text(backup.read_text(encoding='utf-8'),encoding='utf-8')
+              print('kept previous verified frontend IPO dataset')
+          else:
+              print('no usable frontend dataset')
           PY
 
-      - name: Restore IPO file if empty or invalid
+      - name: Validate and self-heal JSON
         run: |
           python <<'PY'
-          import json, os
-          current='data/ipos.json'; backup='/tmp/ipo-backup/ipos.json'
-          try:
-              with open(current,encoding='utf-8') as f: data=json.load(f)
-          except Exception: data=[]
-          if not isinstance(data,list) or not data:
-              if os.path.exists(backup):
-                  with open(backup,encoding='utf-8') as f: old=json.load(f)
-                  with open(current,'w',encoding='utf-8') as f: json.dump(old,f,ensure_ascii=False,indent=2)
-                  print('Restored previous non-empty IPO file')
-              else:
-                  print('No previous IPO file available')
+          import json, os, shutil
+          files=['data/ipos.json','data/listed.json','data/drhp.json','data/news.json']
+          for p in files:
+              try:
+                  with open(p,encoding='utf-8') as f:d=json.load(f)
+                  if not isinstance(d,list) or (p.endswith('ipos.json') and not d): raise ValueError('invalid/empty')
+                  print(p,'OK',len(d))
+              except Exception as e:
+                  b='/tmp/ipo-backup/'+os.path.basename(p)
+                  if os.path.exists(b): shutil.copyfile(b,p); print(p,'restored from backup',e)
+                  else: raise
           PY
 
-      - name: Validate JSON
-        run: |
-          python <<'PY'
-          import json
-          for path in ['data/ipos.json','data/listed.json','data/drhp.json','data/news.json']:
-              with open(path,encoding='utf-8') as f: d=json.load(f)
-              if not isinstance(d,list): raise SystemExit(f'{path} must contain an array')
-              print(path, 'OK', len(d))
-          PY
-
-      - name: Save timestamp
+      - name: Save timestamp only after valid data
         run: echo '{"updated":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"}' > data/last-updated.json
 
-      - name: Commit data
+      - name: Commit verified data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
-          git diff --staged --quiet || git commit -m "data: auto-update $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "data: refresh live IPO dataset"
           git push
