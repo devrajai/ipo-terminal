@@ -174,5 +174,27 @@
     "allotment_date": "—",
     "refund_date": "—",
     "share_credit_date": "—"
+  },
+  {
+    "name": "Axiom Gas Engineering Limited",
+    "open_date": "2026-09-18",
+    "close_date": "2026-09-22",
+    "listing_date": "",
+    "close_time": "17:00",
+    "price_band": "₹51-54",
+    "lot_size": "—",
+    "issue_size": "₹51 Cr",
+    "exchange": "NSE",
+    "board": "SME",
+    "gmp": "—",
+    "gmp_pct": "—",
+    "pe": "—",
+    "pb": "—",
+    "roe": "—",
+    "roce": "—",
+    "eps": "—",
+    "allotment_date": "—",
+    "refund_date": "—",
+    "share_credit_date": "—"
   }
 ]

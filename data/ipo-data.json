@@ -1,10 +1,10 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-17T06:49:43.324795+00:00",
+  "updated_at": "2026-09-17T07:18:00.440108+00:00",
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 8,
+      "records": 9,
       "errors": []
     },
     "BSE": {
@@ -302,6 +302,38 @@
       "status": "open",
       "exchange": "NSE",
       "symbol": "MANIKA",
+      "source": "NSE",
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+    },
+    {
+      "id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "type": "SME",
+      "price": "₹51-54",
+      "lot": "—",
+      "size": "₹51 Cr",
+      "open": "18/09/26",
+      "close": "22/09/26",
+      "listing": "—",
+      "sub": "—",
+      "gmp": "—",
+      "gmp_pct": "—",
+      "est_list": "—",
+      "sector": "—",
+      "fresh": "—",
+      "ofs": "—",
+      "pe": "—",
+      "roe": "—",
+      "roce": "—",
+      "rev": "—",
+      "pat": "—",
+      "ebitda": "—",
+      "de": "—",
+      "growth": "—",
+      "prom": "—",
+      "status": "upcoming",
+      "exchange": "NSE",
+      "symbol": "AXIOMGAS",
       "source": "NSE",
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
     }

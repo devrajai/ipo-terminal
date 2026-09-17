@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T06:49:43.324795+00:00",
+  "updated_at": "2026-09-17T07:18:00.440108+00:00",
   "data": [
     {
       "company": "SpectraA Technology Solutions Limited",
@@ -16,6 +16,14 @@
       "close_date": "21/09/26",
       "issue_size": "—",
       "status": "open"
+    },
+    {
+      "company": "Axiom Gas Engineering Limited",
+      "exchange": "NSE",
+      "open_date": "18/09/26",
+      "close_date": "22/09/26",
+      "issue_size": "₹51 Cr",
+      "status": "upcoming"
     }
   ]
 }
