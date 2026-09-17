@@ -60,6 +60,37 @@ jobs:
           })();
           </script>'''
           s=s.replace('</head>',clock+'</head>',1)
+          navfix=r'''<style id="nav-scroll-fix">
+          .nav-wrap{will-change:transform,max-height,opacity;transition:transform .22s ease,opacity .18s ease,max-height .22s ease,padding .22s ease,border-color .22s ease;overflow:hidden}
+          .nav-wrap.nav-hidden{transform:translateY(calc(-100% - 4px));max-height:0!important;padding-top:0!important;padding-bottom:0!important;border-top-color:transparent!important;border-bottom-color:transparent!important;opacity:0;pointer-events:none}
+          @media(max-width:699px){.nav-wrap{width:100%;}.nav-wrap.nav-hidden{box-shadow:none!important}}
+          </style>
+          <script id="nav-scroll-fix-script">
+          (function(){
+            function initNavScroll(){
+              var nav=document.getElementById('nav-wrap')||document.querySelector('.nav-wrap');
+              if(!nav)return;
+              var lastY=window.scrollY||0;
+              var ticking=false;
+              function update(){
+                var y=window.scrollY||0;
+                var delta=y-lastY;
+                if(y<=70){nav.classList.remove('nav-hidden');}
+                else if(delta>5){nav.classList.add('nav-hidden');}
+                else if(delta<-5){nav.classList.remove('nav-hidden');}
+                lastY=y;
+                ticking=false;
+              }
+              window.addEventListener('scroll',function(){
+                if(!ticking){ticking=true;requestAnimationFrame(update);}
+              },{passive:true});
+              nav.addEventListener('touchstart',function(){nav.classList.remove('nav-hidden');},{passive:true});
+              nav.classList.remove('nav-hidden');
+            }
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',initNavScroll);else initNavScroll();
+          })();
+          </script>'''
+          s=s.replace('</head>',navfix+'</head>',1)
           glass=r'''<style id="liquid-glass-core">
           :root{--lg-glass:rgba(255,255,255,.065);--lg-line:rgba(255,255,255,.15)}
           html.light{--lg-glass:rgba(255,255,255,.58);--lg-line:rgba(71,85,105,.16)}
@@ -88,6 +119,7 @@ jobs:
           grep -q 'liquid-glass-core' _site/index.html
           grep -q 'live-date-time' _site/index.html
           grep -q 'Asia/Kolkata' _site/index.html
+          grep -q 'nav-scroll-fix' _site/index.html
           grep -q 'data-section="open"' _site/index.html
           ! grep -q 'data-section="brokers"' _site/index.html
           ! grep -q 'section-brokers' _site/index.html
