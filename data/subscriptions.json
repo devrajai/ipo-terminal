@@ -1,25 +1,25 @@
 {
-  "updated_at": "2026-09-17T10:54:24.321040+05:30",
+  "updated_at": "2026-09-17T11:06:29.283250+05:30",
   "data": [
     {
       "name": "National Stock Exchange of India Limited",
-      "qib": "50%",
-      "nii": "15%",
-      "rii": "35%",
+      "qib": "0.00",
+      "nii": "0.09",
+      "rii": "0.07",
       "total": "—"
     },
     {
       "name": "SS Retail Limited",
       "qib": "0.20",
-      "nii": "1.53",
-      "rii": "2.20",
+      "nii": "1.57",
+      "rii": "2.37",
       "total": "—"
     },
     {
       "name": "Hero Motors Limited",
       "qib": "0.01",
-      "nii": "1.25",
-      "rii": "2.23",
+      "nii": "1.30",
+      "rii": "2.43",
       "total": "—"
     },
     {
