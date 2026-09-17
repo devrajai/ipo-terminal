@@ -1,0 +1,4 @@
+{
+  "feed_url": "",
+  "note": "Optional live Google Sheet feed. Paste the Apps Script web app URL (ends in /exec) from the 'IPO Tracker - India' spreadsheet: Extensions > Apps Script > Deploy > New deployment > Web app (Execute as: Me, Who has access: Anyone). Leave empty to run the GMP Live tab on repository data refreshed by the 15-minute pipeline."
+}
