@@ -38,43 +38,21 @@ jobs:
           import re
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
-          # Never open any panel automatically after a page refresh.
-          s=s.replace('class="section glass opened"', 'class="section glass"')
-          s=re.sub(r'<div class="stats">.*?</div>\s*<div id="last-updated"', '<div id="last-updated"', s, flags=re.S)
-          s=s.replace('<button class="active" data-section="open">🟢 Open</button>', '<button data-section="open">🟢 Open <span class="status-count" id="nav-open-count">0</span></button>')
-          s=s.replace('<button data-section="upcoming">🕐 Upcoming</button>', '<button data-section="upcoming">🕐 Upcoming <span class="status-count" id="nav-upcoming-count">0</span></button>')
-          s=s.replace('<button data-section="closed">⚪ Closed</button>', '<button data-section="closed">⚪ Closed <span class="status-count" id="nav-closed-count">0</span></button>')
-          s=s.replace('</style>', '.stats{display:none!important}.status-count{display:inline-flex;min-width:20px;height:20px;padding:0 6px;align-items:center;justify-content:center;margin-left:3px;border-radius:999px;background:rgba(255,255,255,.2);font-size:10px;font-weight:950;color:inherit}@media(max-width:699px){.status-count{min-width:18px;height:18px;font-size:9px}}\n.nav button[data-section="open"].active,.nav button[data-section="upcoming"].active,.nav button[data-section="closed"].active{background:var(--glass2)!important;border-color:rgba(255,255,255,.32)!important;color:var(--text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px rgba(0,0,0,.14)!important}\n.nav-wrap{transition:transform .24s ease,opacity .24s ease;will-change:transform}\n.nav-wrap.nav-hidden{transform:translateY(calc(-100% - 10px));opacity:0;pointer-events:none}\n#section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}\n#section-open .actions .link:nth-child(3),#section-upcoming .actions .link:nth-child(3){display:none!important}\n</style>', 1)
-          marker="function renderOpen(){"
-          inject="""function syncStatusButtons(g){
-            const map={open:'nav-open-count',upcoming:'nav-upcoming-count',closed:'nav-closed-count'};
-            Object.keys(map).forEach(k=>{const el=document.getElementById(map[k]);if(el)el.textContent=String((g[k]||[]).length)});
-          }
-          """
-          if marker in s and 'function syncStatusButtons' not in s:
-              s=s.replace(marker, inject+marker, 1)
-          old="countTo(document.getElementById('open-count'),g.open.length);countTo(document.getElementById('upcoming-count'),g.upcoming.length);countTo(document.getElementById('closed-count'),g.closed.length)"
-          s=s.replace(old, "syncStatusButtons(g)")
-          scroll_js="""
-          (function(){
-            const nav=document.getElementById('nav-wrap');
-            if(!nav) return;
-            let lastY=window.scrollY||0;
-            const reveal=()=>nav.classList.remove('nav-hidden');
-            const hide=()=>{if((window.scrollY||0)>12)nav.classList.add('nav-hidden')};
-            window.addEventListener('scroll',()=>{
-              const y=window.scrollY||0;
-              if(y<=12){reveal();lastY=y;return;}
-              const d=y-lastY;
-              if(Math.abs(d)<5)return;
-              if(d>0)hide();else reveal();
-              lastY=y;
-            },{passive:true});
-            document.addEventListener('touchstart',e=>{if(e.target.closest('#nav-wrap'))reveal();},{passive:true});
-            document.addEventListener('click',e=>{if(e.target.closest('#nav-wrap'))reveal();});
-          })();
-          """
-          s=s.replace('</script>', scroll_js+'</script>', 1)
+          # Keep the public navigation clean: RHP/DRHP is no longer a navigation button.
+          s=re.sub(r'<button[^>]*data-section=["\']documents["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
+          # Keep status buttons neutral glass when selected.
+          s=s.replace('</style>', '.nav button[data-section="open"].active,.nav button[data-section="upcoming"].active,.nav button[data-section="closed"].active{background:var(--glass2)!important;border-color:rgba(255,255,255,.32)!important;color:var(--text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px rgba(0,0,0,.14)!important}\n</style>',1)
+          # Open and Upcoming cards do not show allotment.
+          s=s.replace('</style>', '#section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}\n#section-open .actions .link:nth-child(3),#section-upcoming .actions .link:nth-child(3){display:none!important}\n</style>',1)
+          # No panel is opened automatically after refresh.
+          s=s.replace('<section id="section-open" class="section glass opened">','<section id="section-open" class="section glass">',1)
+          # Remove any active state from Open on refresh.
+          s=s.replace('<button class="active" data-section="open">','<button data-section="open">',1)
+          # Remove legacy Compare navigation/panel if present.
+          s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
+          s=re.sub(r'<section[^>]*id=["\']section-compare["\'][\s\S]*?</section>', '', s, flags=re.S|re.I)
+          # Remove the old descriptive subtitle if a legacy copy is present.
+          s=s.replace('Indian IPO information, listing performance, allotment, RHP / DRHP, news and research','')
           p.write_text(s,encoding='utf-8')
           PY
       - name: Verify site
@@ -82,24 +60,12 @@ jobs:
           set -e
           test -s _site/index.html
           test -s _site/data/ipos.json
-          test -s _site/data/listed.json
-          test -s _site/data/drhp.json
-          test -s _site/data/news.json
-          test -s _site/data/last-updated.json
-          grep -q 'Promise.all' _site/index.html
-          grep -q 'section.opened' _site/index.html
           grep -q 'Asia/Kolkata' _site/index.html
           grep -q 'data-section="open"' _site/index.html
-          grep -q 'data-section="tips"' _site/index.html
-          grep -q 'data-section="glossary"' _site/index.html
-          grep -q 'data-close="open"' _site/index.html
-          grep -q 'nav-open-count' _site/index.html
-          grep -q 'syncStatusButtons' _site/index.html
-          grep -q 'nav-hidden' _site/index.html
-          grep -q '#section-open .grid .box:nth-child(6)' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
+          ! grep -q 'data-section="documents"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
-          ! grep -q 'Live Indian IPO information' _site/index.html
+          ! grep -q 'Indian IPO information, listing performance, allotment, RHP / DRHP, news and research' _site/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
