@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "checked_at": "2026-09-18T01:00:31.312970+05:30",
+  "checked_at": "2026-09-18T01:23:18.622440+05:30",
   "schedule": "GitHub Actions every 15 minutes",
   "latest": {
-    "checked_at": "2026-09-18T01:00:31.312970+05:30",
+    "checked_at": "2026-09-18T01:23:18.622440+05:30",
     "resolved": 8,
     "verified": 16,
     "repaired": 0,
     "pending": 0,
     "active_ipos": 8,
-    "duration_seconds": 5.4
+    "duration_seconds": 5.3
   },
   "history": [
     {
@@ -119,6 +119,15 @@
       "pending": 0,
       "active_ipos": 8,
       "duration_seconds": 5.4
+    },
+    {
+      "checked_at": "2026-09-18T01:23:18.622440+05:30",
+      "resolved": 8,
+      "verified": 16,
+      "repaired": 0,
+      "pending": 0,
+      "active_ipos": 8,
+      "duration_seconds": 5.3
     }
   ]
 }
