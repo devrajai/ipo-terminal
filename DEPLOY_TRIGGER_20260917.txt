@@ -1,0 +1,1 @@
+Pages deployment trigger. The current index.html already contains the corrected Research & Tools navigation: GMP Live, News, RHP / DRHP, with Allotment removed.
