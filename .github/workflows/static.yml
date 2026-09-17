@@ -49,8 +49,8 @@ jobs:
           # Keep selected IPO-status buttons neutral glass.
           s=s.replace('</style>', '.nav button[data-section="open"].active,.nav button[data-section="upcoming"].active,.nav button[data-section="closed"].active{background:var(--glass2)!important;border-color:rgba(255,255,255,.32)!important;color:var(--text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px rgba(0,0,0,.14)!important}\n</style>',1)
 
-          # Open and Upcoming cards do not show allotment.
-          s=s.replace('</style>', '#section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}\n#section-open .actions .link:nth-child(3),#section-upcoming .actions .link:nth-child(3){display:none!important}\n</style>',1)
+          # Open and Upcoming cards do not show allotment or RHP/DRHP actions.
+          s=s.replace('</style>', '#section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}\n#section-open .actions .link:nth-child(2),#section-upcoming .actions .link:nth-child(2),#section-open .actions .link:last-child,#section-upcoming .actions .link:last-child{display:none!important}\n</style>',1)
 
           # No panel opens automatically after refresh.
           s=s.replace('<section id="section-open" class="section glass opened">','<section id="section-open" class="section glass">',1)
