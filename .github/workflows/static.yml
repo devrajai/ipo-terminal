@@ -34,35 +34,21 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp index.html _site/index.html
-          cp nav-core.js _site/nav-core.js
           cp -R data _site/data
-          cp -R scripts _site/scripts
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          p = Path('_site/index.html')
-          html = p.read_text(encoding='utf-8')
-          # Remove the two legacy UI patch scripts from the deployed document.
-          html = re.sub(r'<script\s+src=["\'][^"\']*ui-(?:hard-fix|final-fix)\.js[^>]*></script>', '', html, flags=re.I)
-          # Remove any old cache-busting variants too.
-          html = re.sub(r'<script\s+src=["\'][^"\']*nav-core\.js[^>]*></script>', '', html, flags=re.I)
-          tag = '<script src="nav-core.js?v=nav-core-1"></script>'
-          marker = '</body>'
-          pos = html.lower().rfind(marker)
-          if pos >= 0:
-              html = html[:pos] + tag + html[pos:]
-          else:
-              html += tag
-          p.write_text(html, encoding='utf-8')
-          PY
+          if [ -d scripts ]; then cp -R scripts _site/scripts; fi
 
-      - name: Verify single navigation core
+      - name: Verify site
         run: |
           set -e
-          test -s _site/nav-core.js
-          test -s _site/data/ipo-data.json
-          test "$(grep -oi 'nav-core.js?v=nav-core-1' _site/index.html | wc -l)" -eq 1
-          test "$(grep -Eio 'ui-(hard-fix|final-fix)\.js' _site/index.html | wc -l)" -eq 0
+          test -s _site/index.html
+          test -s _site/data/ipos.json
+          test -s _site/data/listed.json
+          test -s _site/data/drhp.json
+          test -s _site/data/news.json
+          test -s _site/data/last-updated.json
+          grep -q 'Promise.all' _site/index.html
+          grep -q 'section.active' _site/index.html
+          grep -q 'Refresh Now' _site/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
