@@ -39,29 +39,32 @@ jobs:
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
 
-          # Remove RHP/DRHP from the public navigation, including legacy markup variants.
+          # Remove legacy/public navigation items that are no longer part of the terminal.
           s=re.sub(r'<button[^>]*data-section=["\']documents["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
           s=re.sub(r'<button[^>]*>\s*(?:📋\s*)?RHP\s*/\s*DRHP\s*</button>', '', s, flags=re.S|re.I)
+          s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
+          s=re.sub(r'<section[^>]*id=["\']section-compare["\'][\s\S]*?</section>', '', s, flags=re.S|re.I)
+          s=re.sub(r'<section[^>]*id=["\']section-documents["\'][\s\S]*?</section>', '', s, flags=re.S|re.I)
 
-          # Keep the three IPO-status buttons neutral glass when selected.
+          # Keep selected IPO-status buttons neutral glass.
           s=s.replace('</style>', '.nav button[data-section="open"].active,.nav button[data-section="upcoming"].active,.nav button[data-section="closed"].active{background:var(--glass2)!important;border-color:rgba(255,255,255,.32)!important;color:var(--text)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 24px rgba(0,0,0,.14)!important}\n</style>',1)
 
           # Open and Upcoming cards do not show allotment.
           s=s.replace('</style>', '#section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}\n#section-open .actions .link:nth-child(3),#section-upcoming .actions .link:nth-child(3){display:none!important}\n</style>',1)
 
-          # No panel is opened automatically after refresh.
+          # No panel opens automatically after refresh.
           s=s.replace('<section id="section-open" class="section glass opened">','<section id="section-open" class="section glass">',1)
           s=s.replace('<button class="active" data-section="open">','<button data-section="open">',1)
 
-          # Remove legacy Compare navigation/panel if present.
-          s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
-          s=re.sub(r'<section[^>]*id=["\']section-compare["\'][\s\S]*?</section>', '', s, flags=re.S|re.I)
-
-          # Remove the old descriptive subtitle.
+          # Remove the old subtitle and SEBI label/link from the published copy.
           s=s.replace('Indian IPO information, listing performance, allotment, RHP / DRHP, news and research','')
+          s=re.sub(r'<a[^>]*>\s*SEBI\s*</a>', '', s, flags=re.S|re.I)
 
-          # Remove the RHP/DRHP section itself so it cannot be opened by legacy code.
-          s=re.sub(r'<section[^>]*id=["\']section-documents["\'][\s\S]*?</section>', '', s, flags=re.S|re.I)
+          # Hide the three large IPO STATUS summary cards.
+          s=s.replace('</style>', '.stats{display:none!important}\n</style>',1)
+
+          # Footer attribution.
+          s=re.sub(r'IPO Terminal\s*-\s*informational research tool', 'IPO Terminal - By : Dev Raj', s, flags=re.I)
 
           p.write_text(s,encoding='utf-8')
           PY
@@ -78,6 +81,8 @@ jobs:
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
           ! grep -q 'Indian IPO information, listing performance, allotment, RHP / DRHP, news and research' _site/index.html
+          grep -q 'IPO Terminal - By : Dev Raj' _site/index.html
+          grep -q '.stats{display:none!important}' _site/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
