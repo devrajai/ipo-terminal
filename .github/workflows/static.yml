@@ -39,7 +39,7 @@ jobs:
           p=Path('_site/index.html')
           s=p.read_text(encoding='utf-8')
 
-          # Remove legacy/public navigation items that are no longer part of the terminal.
+          # Remove legacy/public navigation items.
           s=re.sub(r'<button[^>]*data-section=["\']documents["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
           s=re.sub(r'<button[^>]*>\s*(?:📋\s*)?RHP\s*/\s*DRHP\s*</button>', '', s, flags=re.S|re.I)
           s=re.sub(r'<button[^>]*data-section=["\']compare["\'][^>]*>.*?</button>', '', s, flags=re.S|re.I)
@@ -56,15 +56,15 @@ jobs:
           s=s.replace('<section id="section-open" class="section glass opened">','<section id="section-open" class="section glass">',1)
           s=s.replace('<button class="active" data-section="open">','<button data-section="open">',1)
 
-          # Remove the old subtitle and SEBI label/link from the published copy.
+          # Remove legacy subtitle and SEBI link.
           s=s.replace('Indian IPO information, listing performance, allotment, RHP / DRHP, news and research','')
           s=re.sub(r'<a[^>]*>\s*SEBI\s*</a>', '', s, flags=re.S|re.I)
 
-          # Hide the three large IPO STATUS summary cards.
+          # Hide the three large IPO status summary cards.
           s=s.replace('</style>', '.stats{display:none!important}\n</style>',1)
 
-          # Footer attribution.
-          s=re.sub(r'IPO Terminal\s*-\s*informational research tool', 'IPO Terminal - By : Dev Raj', s, flags=re.I)
+          # Replace footer using the actual em-dash/en-dash/hyphen variants.
+          s=re.sub(r'IPO Terminal\s*[—–-]\s*informational research tool\.?', 'IPO Terminal - By : Dev Raj', s, flags=re.I)
 
           p.write_text(s,encoding='utf-8')
           PY
@@ -75,14 +75,14 @@ jobs:
           test -s _site/data/ipos.json
           grep -q 'Asia/Kolkata' _site/index.html
           grep -q 'data-section="open"' _site/index.html
-          ! grep -qi 'RHP[[:space:]]*/[[:space:]]*DRHP' _site/index.html
+          ! grep -Eiq 'RHP[[:space:]]*/[[:space:]]*DRHP' _site/index.html
           ! grep -q 'data-section="documents"' _site/index.html
           ! grep -q 'section-documents' _site/index.html
           ! grep -q 'data-section="compare"' _site/index.html
           ! grep -q 'section-compare' _site/index.html
           ! grep -q 'Indian IPO information, listing performance, allotment, RHP / DRHP, news and research' _site/index.html
           grep -q 'IPO Terminal - By : Dev Raj' _site/index.html
-          grep -q '.stats{display:none!important}' _site/index.html
+          grep -q '\.stats{display:none!important}' _site/index.html
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
