@@ -1,0 +1,35 @@
+name: Notion Pipeline Sync
+
+on:
+  schedule:
+    - cron: "30 3 * * *"   # 09:00 IST daily (after the ipo-website pipeline updates at 08:30 IST)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Sync data from Notion pipeline
+        run: python scripts/sync_from_pipeline.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "ipo-sync-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes today."
+          else
+            git commit -m "Sync IPO data from Notion pipeline $(date -u +%F)"
+            git pull --rebase origin main || true
+            git push
+          fi
