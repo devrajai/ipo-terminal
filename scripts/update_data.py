@@ -257,101 +257,232 @@ def collect_gmp(ipos, old_ipos):
 
 def collect_listed(old_listed):
     """Refresh the rolling latest-9 listed IPOs with issue, listing and current prices."""
-    errors = []
-    rows = []
+    errors, rows = [], []
     try:
         page = request_text(LISTED_URL, timeout=30)
         trs = re.findall(r'<tr[^>]*>(.*?)</tr>', page, re.I | re.S)
         for tr in trs:
             cells = [clean_text(x) for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', tr, re.I | re.S)]
-            if len(cells) < 6: continue
-            name = re.sub(r'(Mainboard|SME)
-    """Collect exactly up to 9 fresh IPO stories from public RSS, tied to live/upcoming IPOs.
-    The rolling window is today through the previous 5 days, so the set naturally changes each day.
+            if len(cells) < 6:
+                continue
+            name = re.sub(r'(Mainboard|SME)$', '', cells[0], flags=re.I).strip()
+            if not name or name.lower() in ('company name', 'company'):
+                continue
+            listing_date = parse_date(cells[1])
+            if not listing_date:
+                continue
+            nums = []
+            for c in cells[3:]:
+                m = re.search(r'₹?\s*(-?[0-9]+(?:\.[0-9]+)?)', c.replace(',', ''))
+                nums.append(float(m.group(1)) if m else None)
+            issue_price = nums[0] if len(nums) > 0 else None
+            listing_price = nums[1] if len(nums) > 1 else None
+            ltp = nums[2] if len(nums) > 2 else None
+            gain = None
+            for c in cells[3:]:
+                m = re.search(r'(-?[0-9]+(?:\.[0-9]+)?)\s*%', c)
+                if m:
+                    gain = float(m.group(1))
+                    break
+            if gain is None and issue_price and ltp:
+                gain = (ltp - issue_price) / issue_price * 100
+            if issue_price is None:
+                continue
+            rows.append({
+                'name': name,
+                'listing_date': listing_date,
+                'issue_price': issue_price,
+                'listing_price': listing_price or issue_price,
+                'current_price': ltp or listing_price or issue_price,
+                'gain_loss_percent': round(gain, 2) if gain is not None else 0,
+                'gain_loss_value': round((ltp or listing_price or issue_price) - issue_price, 2),
+                'exchange': 'NSE & BSE',
+                'source': 'Economic Times',
+                'source_url': LISTED_URL,
+                'updated_at': dt.datetime.now(dt.timezone.utc).isoformat()
+            })
+    except Exception as exc:
+        errors.append(str(exc))
+
+    merged = {}
+    for x in rows + (old_listed if isinstance(old_listed, list) else []):
+        if not isinstance(x, dict) or not x.get('name'):
+            continue
+        key = norm_name(x.get('name'))
+        if key not in merged or str(x.get('updated_at', '')) > str(merged[key].get('updated_at', '')):
+            merged[key] = x
+    rows = sorted(merged.values(), key=lambda x: str(x.get('listing_date', '')), reverse=True)[:9]
+    return rows, errors
+
+def _ipo_status(ipo):
+    """Derive status from issue dates so bucket changes happen automatically."""
+    today = dt.date.today()
+    op = parse_date(ipo.get('open'))
+    cl = parse_date(ipo.get('close'))
+    if op and today < dt.date.fromisoformat(op):
+        return 'upcoming'
+    if cl and today > dt.date.fromisoformat(cl):
+        return 'closed'
+    if op and cl:
+        return 'open'
+    return str(ipo.get('status') or 'upcoming').lower()
+
+def _news_aliases(ipo):
+    name = clean_text(ipo.get('name'))
+    base = re.sub(r'\b(limited|ltd|india|private|pvt|company|technologies|technology)\b', ' ', name, flags=re.I)
+    base = re.sub(r'[^a-z0-9]+', ' ', base.lower()).strip()
+    aliases = {base, re.sub(r'\s+', '', base)}
+    words = [w for w in base.split() if len(w) >= 4]
+    if words:
+        aliases.add(' '.join(words[:2]))
+        aliases.add(words[0])
+    symbol = clean_text(ipo.get('symbol')).lower()
+    if symbol:
+        aliases.add(symbol)
+    special = {
+        'national stock exchange of india': {'nse', 'national stock exchange'},
+        'sonaselection': {'sona selection', 'sonaselection'},
+        'ss retail': {'ss retail'},
+        'jindal supreme': {'jindal supreme'},
+        'spectraa technology solutions': {'spectraa technology', 'spectraa'},
+        'kheria autocomp': {'kheria autocomp'},
+        'axiom gas engineering': {'axiom gas', 'axiom gas engineering'},
+    }
+    compact = re.sub(r'[^a-z0-9]+', '', base)
+    aliases.update(special.get(compact, set()))
+    return {a for a in aliases if a}
+
+def _match_news_ipo(title, candidates):
+    low = clean_text(title).lower()
+    compact = re.sub(r'[^a-z0-9]+', '', low)
+    scored = []
+    for ipo in candidates:
+        aliases = _news_aliases(ipo)
+        score = 0
+        for alias in aliases:
+            a = re.sub(r'[^a-z0-9]+', '', alias)
+            if a and (a in compact or alias in low):
+                score = max(score, len(a))
+        if score:
+            scored.append((score, ipo))
+    return max(scored, key=lambda x: x[0])[1] if scored else None
+
+def collect_news(ipos, old_news):
+    """Build three current buckets: 3 OPEN + 3 UPCOMING + 3 CLOSED.
+    Stories are limited to the latest 5 days and are tagged with the IPO/status
+    they matched. As an IPO changes status, its news moves buckets automatically.
     """
     now = dt.datetime.now(dt.timezone.utc)
     cutoff = now - dt.timedelta(days=5)
-    errors, stories, seen = [], [], set()
+    errors, buckets, seen = [], {'open': [], 'upcoming': [], 'closed': []}, set()
 
-    live = []
-    for ipo in ipos:
-        status = str(ipo.get('status') or '').lower()
-        if status in ('open', 'upcoming'):
-            live.append(ipo)
-    live.sort(key=lambda x: (0 if str(x.get('status')).lower() == 'open' else 1, str(x.get('open') or '')))
+    status_map = {'open': [], 'upcoming': [], 'closed': []}
+    for ipo in ipos if isinstance(ipos, list) else []:
+        if isinstance(ipo, dict) and ipo.get('name'):
+            status_map[_ipo_status(ipo)].append(ipo)
 
-    queries = []
-    for ipo in live[:6]:
-        name = clean_text(ipo.get('name'))
-        if name:
-            queries.append((name + ' IPO', name.lower()))
-    queries += [
-        ('India IPO upcoming subscription listing', 'ipo'),
-        ('India IPO news September 2026', 'ipo'),
-        ('Indian IPO latest public issue', 'ipo'),
+    # Query every current IPO, prioritising the three buckets needed by the UI.
+    query_rows = []
+    for bucket in ('open', 'upcoming', 'closed'):
+        for ipo in status_map[bucket][:12]:
+            name = clean_text(ipo.get('name'))
+            if name:
+                query_rows.append((f'"{name}" IPO India', ipo, bucket))
+
+    # Broad queries help discover newer stories for dated upcoming/closed issues.
+    query_rows += [
+        ('India IPO latest September 2026', None, None),
+        ('India upcoming IPO September 2026', None, None),
+        ('India IPO allotment September 2026', None, None),
+        ('India IPO subscription September 2026', None, None),
     ]
 
-    def add_item(title, link, source, published, hint='ipo'):
+    def add_item(title, link, source, published, ipo_hint=None, bucket_hint=None):
         title = clean_text(title)
         link = html.unescape(str(link or '')).strip()
-        if not title or not link or link in seen: return
-        low = title.lower()
-        if 'ipo' not in low and hint not in low:
+        if not title or not link or link in seen or published is None:
             return
-        if published is None or published < cutoff or published > now + dt.timedelta(hours=2):
+        if published < cutoff or published > now + dt.timedelta(hours=2):
             return
+
+        candidates = status_map.get(bucket_hint, []) if bucket_hint else [x for arr in status_map.values() for x in arr]
+        ipo = _match_news_ipo(title, candidates)
+        if not ipo and ipo_hint:
+            ipo = ipo_hint
+        if not ipo:
+            return
+
+        bucket = _ipo_status(ipo)
+        if bucket not in buckets:
+            return
+        # A generic article is accepted only when it contains a meaningful IPO name match.
         seen.add(link)
-        stories.append({
+        buckets[bucket].append({
             'title': title[:260],
             'date': published.astimezone(dt.timezone.utc).date().isoformat(),
             'source': clean_text(source) or 'News',
             'link': link,
             'published_at': published.astimezone(dt.timezone.utc).isoformat(),
-            'topic': 'Live / Upcoming IPO'
+            'topic': 'IPO News',
+            'ipo_name': clean_text(ipo.get('name')),
+            'ipo_status': bucket
         })
 
-    for query, hint in queries:
+    for query, ipo_hint, bucket_hint in query_rows:
         try:
             url = NEWS_RSS.format(query=urllib.parse.quote_plus(query))
             root = ET.fromstring(request_text(url, timeout=20))
             for item in root.findall('.//item'):
-                title = item.findtext('title', '')
-                link = item.findtext('link', '')
                 pub = item.findtext('pubDate', '')
-                source = item.findtext('source', '')
                 try:
                     published = parsedate_to_datetime(pub).astimezone(dt.timezone.utc) if pub else None
                 except Exception:
                     published = None
-                add_item(title, link, source, published, hint)
+                add_item(
+                    item.findtext('title', ''),
+                    item.findtext('link', ''),
+                    item.findtext('source', ''),
+                    published,
+                    ipo_hint,
+                    bucket_hint
+                )
         except Exception as exc:
             errors.append(f'{query}: {exc}')
 
-    # Keep company-specific/current IPO stories ahead of generic IPO headlines.
-    def priority(item):
-        low = item['title'].lower()
-        for n, _ in [(clean_text(x.get('name')).lower(), '') for x in live[:6]]:
-            if n and n in low: return 0
-        return 1
-    stories.sort(key=lambda x: (priority(x), x.get('published_at', '')), reverse=False)
-
-    # Add previously successful recent stories only as a safety fallback when a feed is down.
+    # Reuse only recent old stories that can still be tied to a current IPO.
     for old in old_news if isinstance(old_news, list) else []:
-        if len(stories) >= 9: break
-        if not isinstance(old, dict): continue
+        if not isinstance(old, dict):
+            continue
         try:
             published = dt.datetime.fromisoformat(str(old.get('published_at')).replace('Z', '+00:00')) if old.get('published_at') else dt.datetime.combine(dt.date.fromisoformat(str(old.get('date'))), dt.time(), tzinfo=dt.timezone.utc)
         except Exception:
             continue
-        add_item(old.get('title'), old.get('link'), old.get('source'), published, 'ipo')
+        title = clean_text(old.get('title'))
+        ipo = None
+        stored_name = clean_text(old.get('ipo_name'))
+        if stored_name:
+            all_current = [x for arr in status_map.values() for x in arr]
+            ipo = next((x for x in all_current if norm_name(x.get('name')) == norm_name(stored_name)), None)
+        if not ipo:
+            all_current = [x for arr in status_map.values() for x in arr]
+            ipo = _match_news_ipo(title, all_current)
+        if ipo:
+            add_item(title, old.get('link'), old.get('source'), published, ipo, _ipo_status(ipo))
 
-    stories.sort(key=lambda x: x.get('published_at', ''), reverse=True)
-    stories = stories[:9]
+    # Keep the newest three per bucket; never fabricate missing stories.
+    stories = []
+    for bucket in ('open', 'upcoming', 'closed'):
+        rows = sorted(buckets[bucket], key=lambda x: x.get('published_at', ''), reverse=True)
+        buckets[bucket] = rows[:3]
+        stories.extend(buckets[bucket])
+
     if stories:
         NEWS_OUT.write_text(json.dumps(stories, ensure_ascii=False, indent=2), encoding='utf-8')
     elif NEWS_OUT.exists():
-        try: stories = json.loads(NEWS_OUT.read_text(encoding='utf-8'))[:9]
-        except Exception: stories = []
+        try:
+            stories = json.loads(NEWS_OUT.read_text(encoding='utf-8'))
+        except Exception:
+            stories = []
     return stories, errors
 
 def merge_old_fields(new_ipos, old_ipos):
