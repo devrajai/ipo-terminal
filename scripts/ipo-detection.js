@@ -38,8 +38,38 @@ function score(x){
  const debtS=de==null?50:de<=.3?100:de<=.7?82:de<=1.2?62:de<=2?38:15;
  const long=Math.max(0,Math.min(100,(gr!=null?Math.min(Math.max(gr,0),50)*1.15:40)+(roe!=null?Math.min(Math.max(roe,0),35)*.75:22)+(roce!=null?Math.min(Math.max(roce,0),40)*.55:22)+peS*.32+pbS*.18+debtS*.28));
  const keys=['gmp_pct','total','pe','pb','roe','roce','de','growth'];const miss=keys.filter(k=>num(x[k])==null).length;
- return{listing,short,long,confidence:Math.max(30,100-miss*8)}
+ const demand=(sub!=null?Math.min(100,sub*2.2):50);
+ const valuation=(pe!=null&&gr!=null)?Math.max(0,Math.min(100,50+(gr-pe*.45))):50;
+ const riskParts=[de!=null?(de<=.7?10:de<=1.2?20:de<=2?35:50):20,pe!=null?(pe<=25?5:pe<=35?15:pe<=50?30:45):20,g!=null?(Math.abs(g)<=10?5:Math.abs(g)<=25?12:25):15];
+ const risk=Math.max(0,Math.min(100,riskParts.reduce((a,b)=>a+b,0)));
+ const confidence=Math.max(30,100-miss*8);
+ return{listing,short,long,demand,valuation,risk,confidence}
 }
+function addResearchKnowledge(){
+ const tips=$('#section-tips .tips'), gloss=$('#section-glossary .glossary');
+ if(tips&&!tips.dataset.videoDna){[
+ ['7 — GMP is a sentiment input, not a guarantee','Use GMP with subscription, valuation and official issue data. Record freshness and source agreement; do not turn one quote into a guaranteed listing prediction.','Source-supported concept; Terminal treatment = signal, not prediction.'],
+ ['8 — Separate pre-listing and post-listing decisions','A good IPO application thesis and a good post-listing trade are different questions. After listing, evaluate price structure and volume separately.','Derived from the post-listing trading framework.'],
+ ['9 — Look for a base before a technical entry','Track consolidation range and duration. A base is a measurable structure, not a promise that price will rise.','Source concept; requires backtesting.'],
+ ['10 — Volume matters with price structure','Compare trading volume with a recent average. Contracting volume during consolidation and expansion around a breakout can be screened quantitatively.','Source concept; requires backtesting.'],
+ ['11 — U-turn needs evidence','Weak initial performance followed by stabilization/base formation and a recovery trigger can be tagged as a U-turn watch—not an automatic buy signal.','Source concept; requires backtesting.'],
+ ['12 — Position sizing belongs beside the signal','A setup can be interesting while the position is too large for the portfolio. Keep opportunity score and risk sizing separate.','Source-supported risk-management concept.'],
+ ['13 — Backtest before increasing weights','When a video rule becomes a numerical score, test it on historical IPOs and record sample size, median return, drawdown and holding period.','Research methodology; not yet validated in this Terminal.']
+ ].forEach(t=>{const c=document.createElement('div');c.className='card glass';c.innerHTML='<b>'+E(t[0])+'</b><p>'+E(t[1])+'</p><small class="det-source">'+E(t[2])+'</small>';tips.appendChild(c)});tips.dataset.videoDna='1'}
+ if(gloss&&!gloss.dataset.videoDna){[
+ ['GMP Freshness','How recently a grey-market quote was observed. Older quotes should reduce confidence.'],
+ ['GMP Conflict','A flag when credible GMP sources disagree materially; conflicting quotes should not be silently averaged.'],
+ ['Demand Quality','Keep QIB, NII and Retail subscription separate instead of relying only on total subscription.'],
+ ['Volume Ratio','Current volume divided by a recent average volume. Below 1 means lower-than-average activity; above 1 means higher activity.'],
+ ['Volume Contraction','A measurable reduction in volume during consolidation. It is a screening condition, not proof of a breakout.'],
+ ['Base Formation','A period where price trades within a relatively contained range after a move; define the range and duration explicitly.'],
+ ['Inside Day','A daily candle whose high and low remain within the previous day range. Use only when reliable daily OHLC data exists.'],
+ ['Breakout','Price moving above a defined resistance/range boundary; volume can be used as confirmation.'],
+ ['U-turn Setup','Weak initial performance followed by stabilization/base formation and a recovery trigger.'],
+ ['Data Confidence','A measure of input completeness, freshness and consistency; it is not a probability of profit.']
+ ].forEach(t=>{const c=document.createElement('div');c.className='card glass';c.innerHTML='<b>'+E(t[0])+'</b><div class="detail">'+E(t[1])+'</div>';gloss.appendChild(c)});gloss.dataset.videoDna='1'}
+}
+
 function lifecycle(x){
  const parse=v=>{
   const s=String(v??'').trim();
@@ -62,6 +92,25 @@ function enriched(){
  return data.map(x=>({...x,status:lifecycle(x),s:score(x),l:lotInfo(x)})).filter(x=>/^(open|upcoming)$/i.test(x.status)&&x.l)
 }
 function rank(k){return enriched().sort((a,b)=>b.s[k]-a.s[k]||b.s.confidence-a.s.confidence)}
+function listedFor(name){return (listedData||[]).find(x=>norm(x.name)===norm(name))||(listedData||[]).find(x=>norm(x.name).includes(norm(name))||norm(name).includes(norm(x.name)))}
+function postSignal(x){
+ const z=listedFor(x.name); if(!z)return null;
+ const issue=num(z.issue_price||x.price||x.price_band),lp=num(z.listing_price||z.listed_price||z.listingPrice),cur=num(z.current_price||z.ltp);
+ const high=num(z.day1_high||z.high||z.listing_high),low=num(z.day1_low||z.low||z.listing_low),close=num(z.day1_close||z.close||z.listing_close);
+ const volumeRatio=num(z.volume_ratio||z.day1_volume_ratio);
+ const listingPct=issue&&lp?(lp/issue-1)*100,range=lp&&high&&low?((high-low)/lp)*100,closeStrength=high!=null&&low!=null&&close!=null&&high!==low?((close-low)/(high-low))*100:null;
+ let setup='No structured post-listing setup detected',score=40;
+ if(listingPct!=null&&listingPct<0)score+=8;if(range!=null&&range<12)score+=8;if(closeStrength!=null&&closeStrength>65)score+=8;if(volumeRatio!=null&&volumeRatio<0.8)score+=10;if(volumeRatio!=null&&volumeRatio>1.5)score+=5;
+ if(listingPct!=null&&listingPct<0&&range!=null&&range<12)setup='U-turn / base watch';
+ else if(volumeRatio!=null&&volumeRatio<0.8&&range!=null&&range<8)setup='Base + volume contraction watch';
+ else if(high!=null&&lp!=null&&high>lp*1.03)setup='Breakout / momentum watch';
+ return{score:Math.max(0,Math.min(100,score)),setup,listingPct,range,closeStrength,volumeRatio,current:cur}
+}
+function postView(){
+ const rows=(listedData||[]).map(z=>({...z,p:postSignal(z)})).filter(z=>z.p);
+ if(!rows.length)return '<div class="det-empty">Post-listing signals appear automatically when listing price, OHLC and volume fields are available in listed.json.</div>';
+ return '<div class="det-head"><b>Post-listing pattern detector</b><span>Research-derived screening labels. Base, volume and breakout rules require historical backtesting before larger score weights are used.</span></div><div class="det-grid">'+rows.slice(0,20).map((x,i)=>'<article class="det-card"><i>#'+(i+1)+'</i><b class="det-name">'+E(x.name)+'</b><div class="det-meta">Issue '+E(x.issue_price||'—')+' • Listing '+E(x.listing_price||x.listed_price||'—')+'</div><div class="det-score">'+x.p.score.toFixed(0)+'/100 <small>'+E(x.p.setup)+'</small></div><div class="det-mini"><span>Listing<b>'+E(x.p.listingPct==null?'—':x.p.listingPct.toFixed(1)+'%')+'</b></span><span>Range<b>'+E(x.p.range==null?'—':x.p.range.toFixed(1)+'%')+'</b></span><span>Volume<b>'+E(x.p.volumeRatio==null?'—':x.p.volumeRatio.toFixed(2)+'×')+'</b></span></div><div class="det-meta">Close strength '+E(x.p.closeStrength==null?'—':x.p.closeStrength.toFixed(0)+'%')+' • Current '+E(x.p.current==null?'—':money(x.p.current))+'</div></article>').join('')+'</div><div class="det-rules"><b>Research rules:</b> watch consolidation/base formation, contracting volume, defined breakouts and U-turn structures; keep stop-loss, position sizing and backtesting separate from the opportunity score.</div>';
+}
 function createPanel(){
  let s=$('#section-decision');
  if(!s){s=document.createElement('section');s.id='section-decision';s.className='section glass';s.innerHTML='<div class="section-title"><span>🧠 IPO Decision & Application Planner</span><button class="close" data-close="decision">✕ Close</button></div><div id="ipo-decision-content" class="content"></div>';$('main')?.appendChild(s)}
@@ -83,9 +132,9 @@ function applicationView(){
 function render(){
  const el=$('#ipo-decision-content');if(!el)return;
  const opts=enriched();if(!ref&&opts[0])ref=opts[0].name;
- const tabs=[['all','All comparison'],['listing','Listing gain'],['short','Short term'],['long','Long term'],['apply','Application planner']].map(a=>'<button class="det-tab '+(mode===a[0]?'active':'')+'" data-m="'+a[0]+'">'+a[1]+'</button>').join('');
- const body=mode==='apply'?applicationView():rankView(mode==='all'?(rank('short').slice().sort((a,b)=>((b.s.listing+b.s.short+b.s.long)-(a.s.listing+a.s.short+a.s.long)))):rank(mode),mode);
- el.innerHTML='<div class="det-intro"><b>🧠 Decision engine</b><span>Compare Open + Upcoming IPOs for listing-gain, short-term and long-term signals. “Best” is not guaranteed; the panel shows the strongest model signal from the fields currently available.</span></div><div class="det-tabs">'+tabs+'</div><div class="det-controls"><label>IPO for 1–10 lot calculator<select id="det-ref">'+opts.map(x=>'<option value="'+E(x.name)+'" '+(norm(x.name)===norm(ref)?'selected':'')+'>'+E(x.name)+' — '+E(x.board||x.type||'')+'</option>').join('')+'</select></label><label>Optional budget ₹<input id="det-budget" type="number" min="0" step="1000" value="'+(budget||'')+'" placeholder="e.g. 200000"></label><div class="det-presets">'+Array.from({length:10},(_,i)=>'<button type="button" data-x="'+(i+1)+'">'+(i+1)+'× lot</button>').join('')+'</div></div>'+body+'<div class="det-rules"><b>Official rule references:</b> Mainboard retail threshold ₹2L, NII bands above ₹2L/₹10L, and UPI up to ₹5L follow current SEBI/NSE public-issue rules. SME Individual Investor rules are 2+ lots and above ₹2L for issues opening from 1 Jul 2025. Always verify the specific issue RHP and bid instructions before applying.</div>';
+ const tabs=[['all','All comparison'],['listing','Listing gain'],['short','Short term'],['long','Long term'],['post','Post-listing'],['apply','Application planner']].map(a=>'<button class="det-tab '+(mode===a[0]?'active':'')+'" data-m="'+a[0]+'">'+a[1]+'</button>').join('');
+ const body=mode==='apply'?applicationView():mode==='post'?postView():rankView(mode==='all'?(rank('short').slice().sort((a,b)=>((b.s.listing+b.s.short+b.s.long)-(a.s.listing+a.s.short+a.s.long)))):rank(mode),mode);
+ el.innerHTML='<div class="det-intro"><b>🧠 Decision engine</b><span>Compare Open + Upcoming IPOs using demand, GMP, valuation and fundamentals. Listed IPOs also get post-listing pattern screening when market fields are available. Signals are research heuristics, not guaranteed returns.</span></div><div class="det-tabs">'+tabs+'</div><div class="det-controls"><label>IPO for 1–10 lot calculator<select id="det-ref">'+opts.map(x=>'<option value="'+E(x.name)+'" '+(norm(x.name)===norm(ref)?'selected':'')+'>'+E(x.name)+' — '+E(x.board||x.type||'')+'</option>').join('')+'</select></label><label>Optional budget ₹<input id="det-budget" type="number" min="0" step="1000" value="'+(budget||'')+'" placeholder="e.g. 200000"></label><div class="det-presets">'+Array.from({length:10},(_,i)=>'<button type="button" data-x="'+(i+1)+'">'+(i+1)+'× lot</button>').join('')+'</div></div>'+body+'<div class="det-rules"><b>Official rule references:</b> Mainboard retail threshold ₹2L, NII bands above ₹2L/₹10L, and UPI up to ₹5L follow current SEBI/NSE public-issue rules. SME Individual Investor rules are 2+ lots and above ₹2L for issues opening from 1 Jul 2025. Always verify the specific issue RHP and bid instructions before applying.</div>';
  bind()
 }
 function bind(){
@@ -98,14 +147,14 @@ const style=document.createElement('style');style.textContent='.det-intro{paddin
 
 async function load(){
  try{
-  const urls=['data/ipos.json','data/ipo-data.json','data/gmp.json','data/subscriptions.json'];
+  const urls=['data/ipos.json','data/ipo-data.json','data/gmp.json','data/subscriptions.json','data/listed.json'];
   const vals=await Promise.all(urls.map(u=>fetch(u+'?d='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).catch(()=>null)));
   const arr=v=>Array.isArray(v)?v:(v&&Array.isArray(v.data)?v.data:[]);
-  const base=arr(vals[0]),rich=arr(vals[1]),gm=arr(vals[2]),su=arr(vals[3]);
+  const base=arr(vals[0]),rich=arr(vals[1]),gm=arr(vals[2]),su=arr(vals[3]); listedData=arr(vals[4]);
   data=base.concat(rich).reduce((out,x)=>{if(!x?.name)return out;const y=find(out,x.name);if(!y)out.push({...x});else Object.keys(x).forEach(k=>{if(y[k]==null||y[k]===''||y[k]==='—')y[k]=x[k]});return out},[]);
   data=data.map(x=>{const g=find(gm,x.name),q=find(su,x.name);return{...x,...g?g:{},...q?{total:q.total,qib:q.qib,nii:q.nii,rii:q.rii}:{},status:lifecycle(x)};});
-  createPanel();render();
+  createPanel();addResearchKnowledge();render();
  }catch(e){console.error('IPO Decision engine',e)}
 }
-createPanel();load();setInterval(load,15*60*1000);
+createPanel();addResearchKnowledge();load();setInterval(load,15*60*1000);
 })();
