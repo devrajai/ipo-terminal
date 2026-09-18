@@ -80,6 +80,7 @@ jobs:
           grep -q 'Asia/Kolkata' _site/index.html
           grep -q 'data-section="open"' _site/index.html
           grep -q 'scripts/ipo-detection.js' _site/index.html
+          grep -q 'data-section="decision"' _site/index.html
           ! grep -Eiq 'RHP[[:space:]]*/[[:space:]]*DRHP' _site/index.html
           ! grep -q 'data-section="documents"' _site/index.html
           ! grep -q 'section-documents' _site/index.html
