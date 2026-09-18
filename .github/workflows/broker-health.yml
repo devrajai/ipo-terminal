@@ -1,0 +1,50 @@
+name: IPO Terminal - Broker Pricing & Link Health
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ipo-terminal-broker-health
+  cancel-in-progress: true
+
+jobs:
+  broker-health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check official broker pages and self-heal broker data
+        run: python scripts/broker_health.py
+
+      - name: Validate broker health JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("data/broker-health.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          assert isinstance(d.get("brokers"), dict)
+          print("Broker health records:", len(d["brokers"]))
+          print("Official pricing pages OK:", sum(1 for x in d["brokers"].values() if x.get("pricing_ok")))
+          print("Official account pages OK:", sum(1 for x in d["brokers"].values() if x.get("home_ok")))
+          PY
+
+      - name: Commit broker updates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.html data/broker-health.json
+          if git diff --staged --quiet; then
+            echo "No broker changes."
+          else
+            git commit -m "data: refresh broker pricing and link health"
+            git push
+          fi
