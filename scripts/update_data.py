@@ -323,7 +323,6 @@ def collect_news(ipos, old_news):
             if n and n in low: return 0
         return 1
     stories.sort(key=lambda x: (priority(x), x.get('published_at', '')), reverse=False)
-    stories.sort(key=lambda x: x.get('published_at', ''), reverse=True)
 
     # Add previously successful recent stories only as a safety fallback when a feed is down.
     for old in old_news if isinstance(old_news, list) else []:
