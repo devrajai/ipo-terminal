@@ -391,7 +391,7 @@ def main():
                 current_keys.add(key)
     for item in final_ipos:
         close = parse_date(item.get('close'))
-        if close and close < today.isoformat() and str(item.get('status','')).lower() not in ('open','upcoming'):
+        if close and close < today.isoformat():
             item['status'] = 'closed'
     gmp_count, gmp_errors = collect_gmp(final_ipos, old.get('ipos', []))
     if not final_ipos:
