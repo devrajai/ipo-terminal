@@ -42,7 +42,7 @@ jobs:
       - name: Fetch live market data (India/world indices, commodities, FX)
         run: python scripts/fetch_market_data.py
         env:
-          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SHEET_ID: ${{ vars.GOOGLE_SHEET_ID || secrets.GOOGLE_SHEET_ID }}
 
       - name: Enrich free public IPO sources
         run: python scripts/enrich_public_sources.py
