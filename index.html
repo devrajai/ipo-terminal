@@ -143,7 +143,7 @@ function renderNews(){
       (rows.length?rows.map(x=>'<article class="card glass news"><a href="'+esc(x.link)+'" target="_blank" rel="noopener"><b>'+esc(x.title)+'</b></a><div class="meta"><span class="badge '+b.key+'">'+b.label+'</span> <span>'+esc(x.ipo_name||'IPO')+'</span> • '+esc(x.source||'Source')+' • '+date(x.date)+'</div></article>').join(''):'<div class="empty">No current '+b.label.toLowerCase()+' IPO news available right now.</div>')+
       '</section>';
   }).join('');
-  el.innerHTML='<div class="news-meta">3 OPEN + 3 UPCOMING + 3 CLOSED • rolling 5-day news • automatically refreshed with the IPO status feed</div>'+sections;
+  el.innerHTML=sections;
 }
 
 function renderDocs(){document.getElementById('documents-list').innerHTML=state.drhp.length?state.drhp.map(x=>`<article class="card glass"><div class="name">${esc(x.name)}</div><div class="meta">Filed: ${date(x.filed_date)} • Issue size: ${esc(x.issue_size||'—')}</div><a class="link" href="${esc(x.sebi_link||'#')}" target="_blank" rel="noopener">Filing</a>${x.source_url?`<a class="link" href="${esc(x.source_url)}" target="_blank" rel="noopener">Source / RHP</a>`:''}</article>`).join(''):'<div class="empty">No current RHP / DRHP records available.</div>'}
