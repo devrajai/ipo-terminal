@@ -2,15 +2,15 @@
   {
     "name": "Steamhouse India",
     "listing_date": "2026-09-17",
-    "issue_price": 81,
+    "issue_price": 81.0,
     "listing_price": 94.5,
-    "current_price": 102.55,
-    "gain_loss_percent": 26.6,
-    "gain_loss_value": 21.55,
+    "current_price": 102.2,
+    "gain_loss_percent": 26.17,
+    "gain_loss_value": 21.2,
     "exchange": "NSE & BSE",
-    "source": "Economic Times",
-    "source_url": "https://economictimes.indiatimes.com/markets/ipo/recently-listed",
-    "updated_at": "2026-09-18T00:00:00Z"
+    "source": "Notion IPO Tracker",
+    "source_url": "https://www.chittorgarh.com/ipo/steamhouse-india-ipo/2514/",
+    "updated_at": "2026-09-18T15:43:47.466611+05:30"
   },
   {
     "name": "Amtech Esters",
@@ -28,15 +28,15 @@
   {
     "name": "LCC Projects",
     "listing_date": "2026-09-17",
-    "issue_price": 146,
+    "issue_price": 146.0,
     "listing_price": 189,
     "current_price": 170.1,
     "gain_loss_percent": 16.51,
     "gain_loss_value": 24.1,
     "exchange": "NSE & BSE",
-    "source": "Economic Times",
-    "source_url": "https://economictimes.indiatimes.com/markets/ipo/recently-listed",
-    "updated_at": "2026-09-18T00:00:00Z"
+    "source": "Notion IPO Tracker",
+    "source_url": "https://www.chittorgarh.com/ipo/lcc-projects-ipo/2086/",
+    "updated_at": "2026-09-18T15:43:47.466611+05:30"
   },
   {
     "name": "Vinod Texworld",
@@ -115,5 +115,31 @@
     "source": "Economic Times",
     "source_url": "https://economictimes.indiatimes.com/markets/ipo/recently-listed",
     "updated_at": "2026-09-18T00:00:00Z"
+  },
+  {
+    "name": "Manipal Payment & Identity Solutions",
+    "listing_date": "",
+    "issue_price": 339.0,
+    "listing_price": 345.75,
+    "current_price": 345.75,
+    "gain_loss_percent": 1.99,
+    "gain_loss_value": 6.75,
+    "exchange": "",
+    "source": "Notion IPO Tracker",
+    "source_url": "https://www.chittorgarh.com/ipo/manipal-payment-and-identity-solutions-ipo/2524/",
+    "updated_at": "2026-09-18T15:43:47.466611+05:30"
+  },
+  {
+    "name": "Karamtara Engineering",
+    "listing_date": "",
+    "issue_price": 254.0,
+    "listing_price": 351.95,
+    "current_price": 351.95,
+    "gain_loss_percent": 38.56,
+    "gain_loss_value": 97.95,
+    "exchange": "",
+    "source": "Notion IPO Tracker",
+    "source_url": "https://www.chittorgarh.com/ipo/karamtara-engineering-ipo/2020/",
+    "updated_at": "2026-09-18T15:43:47.466611+05:30"
   }
 ]
