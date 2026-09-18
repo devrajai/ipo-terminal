@@ -374,6 +374,25 @@ def main():
     _, bse_errors = collect_bse()
     docs, sebi_errors = collect_sebi()
     final_ipos = merge_old_fields(ipos or old.get('ipos', []), old.get('ipos', []))
+    # Keep recently closed IPOs in the frontend dataset so the News panel can
+    # always maintain a separate CLOSED bucket. Current/upcoming records from
+    # NSE are merged with historical records whose close date has passed.
+    today = dt.date.today()
+    current_keys = {norm_name(x.get('name')) for x in final_ipos if isinstance(x, dict) and x.get('name')}
+    for old_item in old.get('ipos', []) if isinstance(old.get('ipos', []), list) else []:
+        if not isinstance(old_item, dict) or not old_item.get('name'): continue
+        close = parse_date(old_item.get('close'))
+        if close and close < today.isoformat():
+            item = dict(old_item)
+            item['status'] = 'closed'
+            key = norm_name(item.get('name'))
+            if key not in current_keys:
+                final_ipos.append(item)
+                current_keys.add(key)
+    for item in final_ipos:
+        close = parse_date(item.get('close'))
+        if close and close < today.isoformat() and str(item.get('status','')).lower() not in ('open','upcoming'):
+            item['status'] = 'closed'
     gmp_count, gmp_errors = collect_gmp(final_ipos, old.get('ipos', []))
     if not final_ipos:
         final_ipos = old.get('ipos', [])
