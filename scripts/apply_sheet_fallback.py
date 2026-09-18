@@ -67,16 +67,27 @@ def apply_to_list(rows, overrides, name_keys=("name", "company", "ipo_name")):
             continue
         n = next((row.get(k) for k in name_keys if row.get(k)), "")
         by_name[norm(n)] = row
+    aliases = {
+        "price_band": "price", "price": "price",
+        "lot_size": "lot", "lot": "lot",
+        "issue_size": "size", "size": "size",
+        "gmp": "gmp", "gmp_pct": "gmp_pct",
+        "subscription": "sub", "sub": "sub",
+        "open_date": "open", "close_date": "close", "listing_date": "listing",
+        "allotment_date": "allotment", "refund_date": "refund", "share_credit_date": "shares",
+    }
     for ov in overrides:
         row = by_name.get(ov["name"])
         if not row:
             continue
-        field = ov["field"]
-        if field in row and row.get(field) not in MISSING:
+        requested_field = ov["field"]
+        field = aliases.get(requested_field, requested_field)
+        if row.get(field) not in MISSING:
             continue
         row[field] = ov["value"]
         row.setdefault("_sheet_fallback", {})[field] = {
-            "source": ov["source"], "updated_at": ov["updated_at"]
+            "source": ov["source"], "updated_at": ov["updated_at"],
+            "requested_field": requested_field
         }
         applied += 1
     return applied
