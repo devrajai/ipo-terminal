@@ -55,3 +55,27 @@ The badge on the GMP tab turns green ("LIVE — Google Sheet feed") once connect
 Missing data is displayed as unavailable rather than guessed. GMP is unofficial grey-market data and is treated as a supporting signal only. This is an informational research tool, **not investment advice**.
 
 See `README-AUTO.md` for the full pipeline documentation.
+
+## Google Sheet auto-tracker (Apps Script)
+
+`apps-script/IPO_Tracker_AllInOne.gs` is the complete single-file Google Apps
+Script behind the **"IPO Tracker - India"** Google Sheet - the Sheet-side
+companion of this repository's Python pipeline:
+
+- daily Chittorgarh scrape into **Upcoming / Open / Closed / Listed** tabs
+  (price band, lot size, issue size, subscription, GMP + GMP Log history)
+- **Fundamentals tab** - fresh issue %, OFS %, PAT margin, P/E, D/E per IPO,
+  auto-collected with careful parsing; manual Score / Verdict columns are
+  never overwritten
+- **Lot Planner tab** - type a budget in B1 and see lots, money blocked,
+  estimated gain and allotment odds for every open IPO (mainboard retail cap
+  Rs 2 lakh lottery vs SME 2-lot rule)
+- **doGet() JSON feed** - optional live feed for this website's GMP Live tab
+  (Deploy > Web app, put the /exec URL in data/feed-config.json)
+- **self-healing link monitor** - re-resolves dead RHP/DRHP/allotment links
+  every 30 minutes
+
+Install: Extensions > Apps Script in the Sheet, paste the file, run
+`updateAll` once, then `installAllTriggers` once. The two systems share the
+same free sources: the Python pipeline feeds the website, the Apps Script
+feeds the Google Sheet.
