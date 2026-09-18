@@ -1,7 +1,92 @@
 [
-  {"title":"Hero Motors IPO fully subscribed on opening day","date":"2026-09-16","source":"Reuters","link":"https://www.reuters.com/world/india/indian-auto-parts-maker-hero-motors-ipo-fully-subscribed-first-day-bidding-2026-09-16/"},
-  {"title":"NSE IPO to open September 17 with ₹1,700–₹1,785 price band","date":"2026-09-16","source":"Reuters","link":"https://www.reuters.com/world/india/indias-nse-launch-ipo-amid-investor-caution-over-derivatives-fuelled-growth-2026-09-16/"},
-  {"title":"Jindal Supreme IPO Day 1 subscription update","date":"2026-09-16","source":"Economic Times","link":"https://economictimes.indiatimes.com/markets/ipos/fpos/jindal-supreme-ipo-day-1-issue-subscribed-over-200-in-early-bids-gmp-at-29-should-you-subscribe/articleshow/134281844.cms"},
-  {"title":"SS Retail IPO opens September 16","date":"2026-09-16","source":"Economic Times","link":"https://m.economictimes.com/markets/ipos/fpos/ss-retail-ipo-opens-today-gmp-signals-31-listing-gain-heres-all-you-need-to-know/articleshow/134277383.cms"},
-  {"title":"Hero Motors, Jindal Supreme and SS Retail IPOs open for subscription","date":"2026-09-16","source":"Upstox","link":"https://upstox.com/news/market-news/ipo/hero-motors-jindal-supreme-ss-retail-ip-os-open-for-subscription-check-price-band-lot-size-and-key-details/article-200315/"}
+  {
+    "title": "NSE's $2.3 billion India IPO fully subscribed, led by institutional demand",
+    "date": "2026-09-18",
+    "source": "Reuters",
+    "link": "https://www.reuters.com/world/india/nse-ipo-institutional-investor-portion-fully-subscribed-second-day-2026-09-18/",
+    "published_at": "2026-09-18T09:30:00Z",
+    "topic": "IPO News",
+    "ipo_name": "National Stock Exchange of India Limited",
+    "ipo_status": "open"
+  },
+  {
+    "title": "Last day to bid! Jindal Supreme IPO closes today: Subscription tops 31 times",
+    "date": "2026-09-18",
+    "source": "Economic Times",
+    "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/last-day-to-bid-jindal-supreme-ipo-closes-today-subscription-tops-31-times-gmp-at-27-should-you-subscribe/articleshow/134324046.cms",
+    "published_at": "2026-09-18T02:36:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Jindal Supreme (India) Limited",
+    "ipo_status": "open"
+  },
+  {
+    "title": "SS Retail IPO Day 3: Issue subscribed 14.45 times; GMP signals 32% potential listing premium",
+    "date": "2026-09-18",
+    "source": "Economic Times",
+    "link": "https://m.economictimes.com/markets/ipos/fpos/ss-retail-ipo-day-3-subscription-surpasses-6-times-gmp-hints-at-19-listing-premium-check-key-details-inside/articleshow/134323936.cms",
+    "published_at": "2026-09-18T02:20:00Z",
+    "topic": "IPO News",
+    "ipo_name": "SS Retail Limited",
+    "ipo_status": "open"
+  },
+  {
+    "title": "Robokidz Eduventures coming with IPO to raise up to Rs 31 crore",
+    "date": "2026-09-17",
+    "source": "RK Global",
+    "link": "https://www.rkglobal.net/ajaxPages/HomeNewsPopGlobal.aspx?NewsID=&SecId=1&SubSecID=1",
+    "published_at": "2026-09-17T12:49:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Robokidz Eduventures Limited",
+    "ipo_status": "upcoming"
+  },
+  {
+    "title": "Vivekanand Cotspin announces launch of initial public offering",
+    "date": "2026-09-16",
+    "source": "Amrapali Capital",
+    "link": "https://www.amrapali.com/news-details/eod-5017325",
+    "published_at": "2026-09-16T10:30:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Vivekanand Cotspin Limited",
+    "ipo_status": "upcoming"
+  },
+  {
+    "title": "FX Multitech announces launch of initial public offering",
+    "date": "2026-09-16",
+    "source": "Amrapali Capital",
+    "link": "https://www.amrapali.com/news-details/eod-5016410",
+    "published_at": "2026-09-16T05:50:00Z",
+    "topic": "IPO News",
+    "ipo_name": "FX Multitech Limited",
+    "ipo_status": "upcoming"
+  },
+  {
+    "title": "Manika Plastech Ltd IPO subscribed 28.14 times",
+    "date": "2026-09-16",
+    "source": "JKB Financial Services",
+    "link": "https://www.jkbfsl.com/market/ipo/news_details/IPO_News/5018925",
+    "published_at": "2026-09-16T16:30:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Manika Plastech Limited",
+    "ipo_status": "closed"
+  },
+  {
+    "title": "BSE SME IPO of Injecto Polymers ends with 1.28x subscription",
+    "date": "2026-09-17",
+    "source": "Capital Market",
+    "link": "https://www.capitalmarket.com/markets/news/sme-ipo-news/bse-sme-ipo-of-injecto-polymers-ends-with-1-28x-subscription/1732801",
+    "published_at": "2026-09-17T11:00:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Injecto Polymers Limited",
+    "ipo_status": "closed"
+  },
+  {
+    "title": "3 SME IPOs open for subscription: Vama Wovenfab, Shakti Polytarp and Quanto Agroworld",
+    "date": "2026-09-15",
+    "source": "Economic Times",
+    "link": "https://m.economictimes.com/markets/ipos/fpos/3-sme-ipos-open-today-vama-wovenfab-shakti-polytarp-and-quanto-agroworld-check-gmp-and-key-details/articleshow/134251176.cms",
+    "published_at": "2026-09-15T05:30:00Z",
+    "topic": "IPO News",
+    "ipo_name": "Vama Wovenfab Limited",
+    "ipo_status": "closed"
+  }
 ]
