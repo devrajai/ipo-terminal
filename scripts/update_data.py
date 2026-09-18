@@ -26,6 +26,7 @@ GMP_SOURCES = [
 ]
 NEWS_OUT = ROOT / 'data' / 'news.json'
 NEWS_RSS = 'https://news.google.com/rss/search?q={query}&hl=en-IN&gl=IN&ceid=IN:en'
+LISTED_URL = 'https://economictimes.indiatimes.com/markets/ipo/recently-listed'
 
 def clean_text(value):
     value = html.unescape(str(value or ''))
@@ -253,6 +254,192 @@ def collect_gmp(ipos, old_ipos):
             except Exception as exc:
                 errors.append(f'{source}: {exc}')
     return matched, errors
+
+def collect_listed(old_listed):
+    """Refresh the rolling latest-9 listed IPOs with issue, listing and current prices."""
+    errors = []
+    rows = []
+    try:
+        page = request_text(LISTED_URL, timeout=30)
+        trs = re.findall(r'<tr[^>]*>(.*?)</tr>', page, re.I | re.S)
+        for tr in trs:
+            cells = [clean_text(x) for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', tr, re.I | re.S)]
+            if len(cells) < 6: continue
+            name = re.sub(r'(Mainboard|SME)
+    """Collect exactly up to 9 fresh IPO stories from public RSS, tied to live/upcoming IPOs.
+    The rolling window is today through the previous 5 days, so the set naturally changes each day.
+    """
+    now = dt.datetime.now(dt.timezone.utc)
+    cutoff = now - dt.timedelta(days=5)
+    errors, stories, seen = [], [], set()
+
+    live = []
+    for ipo in ipos:
+        status = str(ipo.get('status') or '').lower()
+        if status in ('open', 'upcoming'):
+            live.append(ipo)
+    live.sort(key=lambda x: (0 if str(x.get('status')).lower() == 'open' else 1, str(x.get('open') or '')))
+
+    queries = []
+    for ipo in live[:6]:
+        name = clean_text(ipo.get('name'))
+        if name:
+            queries.append((name + ' IPO', name.lower()))
+    queries += [
+        ('India IPO upcoming subscription listing', 'ipo'),
+        ('India IPO news September 2026', 'ipo'),
+        ('Indian IPO latest public issue', 'ipo'),
+    ]
+
+    def add_item(title, link, source, published, hint='ipo'):
+        title = clean_text(title)
+        link = html.unescape(str(link or '')).strip()
+        if not title or not link or link in seen: return
+        low = title.lower()
+        if 'ipo' not in low and hint not in low:
+            return
+        if published is None or published < cutoff or published > now + dt.timedelta(hours=2):
+            return
+        seen.add(link)
+        stories.append({
+            'title': title[:260],
+            'date': published.astimezone(dt.timezone.utc).date().isoformat(),
+            'source': clean_text(source) or 'News',
+            'link': link,
+            'published_at': published.astimezone(dt.timezone.utc).isoformat(),
+            'topic': 'Live / Upcoming IPO'
+        })
+
+    for query, hint in queries:
+        try:
+            url = NEWS_RSS.format(query=urllib.parse.quote_plus(query))
+            root = ET.fromstring(request_text(url, timeout=20))
+            for item in root.findall('.//item'):
+                title = item.findtext('title', '')
+                link = item.findtext('link', '')
+                pub = item.findtext('pubDate', '')
+                source = item.findtext('source', '')
+                try:
+                    published = parsedate_to_datetime(pub).astimezone(dt.timezone.utc) if pub else None
+                except Exception:
+                    published = None
+                add_item(title, link, source, published, hint)
+        except Exception as exc:
+            errors.append(f'{query}: {exc}')
+
+    # Keep company-specific/current IPO stories ahead of generic IPO headlines.
+    def priority(item):
+        low = item['title'].lower()
+        for n, _ in [(clean_text(x.get('name')).lower(), '') for x in live[:6]]:
+            if n and n in low: return 0
+        return 1
+    stories.sort(key=lambda x: (priority(x), x.get('published_at', '')), reverse=False)
+
+    # Add previously successful recent stories only as a safety fallback when a feed is down.
+    for old in old_news if isinstance(old_news, list) else []:
+        if len(stories) >= 9: break
+        if not isinstance(old, dict): continue
+        try:
+            published = dt.datetime.fromisoformat(str(old.get('published_at')).replace('Z', '+00:00')) if old.get('published_at') else dt.datetime.combine(dt.date.fromisoformat(str(old.get('date'))), dt.time(), tzinfo=dt.timezone.utc)
+        except Exception:
+            continue
+        add_item(old.get('title'), old.get('link'), old.get('source'), published, 'ipo')
+
+    stories.sort(key=lambda x: x.get('published_at', ''), reverse=True)
+    stories = stories[:9]
+    if stories:
+        NEWS_OUT.write_text(json.dumps(stories, ensure_ascii=False, indent=2), encoding='utf-8')
+    elif NEWS_OUT.exists():
+        try: stories = json.loads(NEWS_OUT.read_text(encoding='utf-8'))[:9]
+        except Exception: stories = []
+    return stories, errors
+
+def merge_old_fields(new_ipos, old_ipos):
+    old_map = {norm_name(i.get('name')): i for i in old_ipos if isinstance(i, dict) and i.get('name')}
+    for item in new_ipos:
+        old = old_map.get(norm_name(item.get('name')))
+        if not old: continue
+        for key in ('lot','sector','fresh','ofs','pe','roe','roce','rev','pat','ebitda','de','growth','prom','sub','listing'):
+            if item.get(key) in (None, '', '—', '-') and old.get(key) not in (None, '', '—', '-'):
+                item[key] = old[key]
+    return new_ipos
+
+def load_old():
+    try: return json.loads(OUT.read_text(encoding='utf-8')) if OUT.exists() else {}
+    except Exception: return {}
+
+def main():
+    old = load_old(); now = dt.datetime.now(dt.timezone.utc).isoformat()
+    ipos, nse_errors = collect_nse()
+    _, bse_errors = collect_bse()
+    docs, sebi_errors = collect_sebi()
+    final_ipos = merge_old_fields(ipos or old.get('ipos', []), old.get('ipos', []))
+    gmp_count, gmp_errors = collect_gmp(final_ipos, old.get('ipos', []))
+    if not final_ipos:
+        final_ipos = old.get('ipos', [])
+    news, news_errors = collect_news(final_ipos, old.get('news', []))
+    listed, listed_errors = collect_listed(old.get('listed', []))
+    payload = {
+        'source': 'multi-source-live-gmp',
+        'updated_at': now,
+        'sources': {
+            'NSE': {'ok': bool(ipos), 'records': len(ipos), 'errors': nse_errors[:3]},
+            'BSE': {'ok': not bse_errors, 'records': 0, 'errors': bse_errors[:3]},
+            'SEBI': {'ok': bool(docs), 'records': len(docs), 'errors': sebi_errors[:3]},
+            'GMP': {'ok': gmp_count > 0, 'records': gmp_count, 'sources': ['InvestorGain','Chittorgarh','Moneycontrol'], 'errors': gmp_errors[:5]},
+            'NEWS': {'ok': len(news) > 0, 'records': len(news), 'source': 'Google News RSS public feeds', 'window_days': 5, 'errors': news_errors[:5]},
+            'LISTED': {'ok': len(listed) > 0, 'records': len(listed), 'source': 'Economic Times recently-listed IPO table', 'errors': listed_errors[:5]}
+        },
+        'ipos': final_ipos,
+        'listed': listed,
+        'news': news,
+        'documents': docs or old.get('documents', [])
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(json.dumps({'updated_at': now, 'ipos': len(payload['ipos']), 'documents': len(payload['documents']), 'nse_ok': bool(ipos), 'bse_ok': not bse_errors, 'sebi_ok': bool(docs), 'gmp_records': gmp_count, 'news_records': len(news), 'listed_records': len(listed)}, indent=2))
+
+if __name__ == '__main__': main()
+, '', cells[0]).strip()
+            if not name or name.lower() in ('company name', 'company'): continue
+            listing_date = parse_date(cells[1])
+            if not listing_date: continue
+            nums = []
+            for c in cells[3:]:
+                m = re.search(r'₹?\\s*(-?[0-9]+(?:\\.[0-9]+)?)', c.replace(',', ''))
+                nums.append(float(m.group(1)) if m else None)
+            issue_price = nums[0] if len(nums) > 0 else None
+            listing_price = nums[1] if len(nums) > 1 else None
+            ltp = nums[2] if len(nums) > 2 else None
+            gain = None
+            for c in cells[3:]:
+                m = re.search(r'(-?[0-9]+(?:\\.[0-9]+)?)\\s*%', c)
+                if m:
+                    gain = float(m.group(1)); break
+            if gain is None and issue_price and ltp:
+                gain = (ltp - issue_price) / issue_price * 100
+            if issue_price is None: continue
+            rows.append({
+                'name': name, 'listing_date': listing_date,
+                'issue_price': issue_price, 'listing_price': listing_price or issue_price,
+                'current_price': ltp or listing_price or issue_price,
+                'gain_loss_percent': round(gain, 2) if gain is not None else 0,
+                'gain_loss_value': round((ltp or listing_price or issue_price) - issue_price, 2),
+                'exchange': 'NSE & BSE', 'source': 'Economic Times', 'source_url': LISTED_URL,
+                'updated_at': dt.datetime.now(dt.timezone.utc).isoformat()
+            })
+    except Exception as exc:
+        errors.append(str(exc))
+
+    # De-duplicate and keep the nine newest listing dates.
+    merged = {}
+    for x in rows + (old_listed if isinstance(old_listed, list) else []):
+        if not isinstance(x, dict) or not x.get('name'): continue
+        key = norm_name(x.get('name'))
+        if key not in merged or str(x.get('updated_at','')) > str(merged[key].get('updated_at','')):
+            merged[key] = x
+    rows = sorted(merged.values(), key=lambda x: str(x.get('listing_date','')), reverse=True)[:9]
+    return rows, errors
 
 def collect_news(ipos, old_news):
     """Collect exactly up to 9 fresh IPO stories from public RSS, tied to live/upcoming IPOs.
