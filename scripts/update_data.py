@@ -155,47 +155,113 @@ def collect_sebi():
     return docs, errors
 
 def parse_gmp_value(text):
-    m = re.search(r'(?:₹|Rs\.?\s*)\s*(-?[0-9]+(?:\.[0-9]+)?)', text, re.I)
-    if not m: return None
-    try: return float(m.group(1))
-    except ValueError: return None
-
-def parse_investorgain_dashboard(html_text):
-    result, errors = {}, []
+    m = re.search(r'(?:₹|Rs\\.?\\s*)\\s*(-?[0-9]+(?:\\.[0-9]+)?)', text, re.I)
+    if not m:
+        return None
     try:
-        rows = re.findall(r'<tr[^>]*>(.*?)</tr>', html_text, re.I | re.S)
-        for row in rows:
-            cells = re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.I | re.S)
-            cells = [clean_text(x) for x in cells]
-            if len(cells) < 2: continue
-            name = cells[0]
-            if not name or name.lower() in ('name', 'ipo name'): continue
-            gmp = None
-            for cell in cells[1:5]:
-                if '₹' in cell or 'rs' in cell.lower() or '%' in cell:
-                    gmp = parse_gmp_value(cell)
-                    if gmp is not None: break
-            if gmp is None: continue
-            updated = next((x for x in cells if re.search(r'\d{1,2}[-/]\w{3}[-/]?\s*\d{0,4}\s*\d{1,2}:\d{2}', x)), '')
-            result[norm_name(name)] = {'name': name, 'gmp': gmp, 'updated': updated}
-    except Exception as exc:
-        errors.append(str(exc))
-    return result, errors
+        return float(m.group(1))
+    except ValueError:
+        return None
 
-def extract_gmp(text, company):
-    clean = clean_text(text)
-    words = [w for w in re.split(r'\W+', company.lower()) if len(w) >= 4]
-    low = clean.lower()
-    if words and not any(w in low for w in words[:2]): return None
-    patterns = [r'(?:gmp|grey market premium)[^₹0-9-]{0,50}₹?\s*(-?[0-9]{1,6}(?:\.[0-9]+)?)', r'₹\s*(-?[0-9]{1,6}(?:\.[0-9]+)?)\s*(?:gmp|grey market premium)']
-    for pattern in patterns:
-        m = re.search(pattern, clean, re.I)
-        if m:
-            try: return float(m.group(1))
-            except ValueError: pass
+# GMP is unofficial, so IPO Terminal uses multiple public aggregators for
+# cross-checking. The first successful source is the primary displayed value;
+# all other successful quotes are retained for audit/conflict detection.
+GMP_SOURCES = [
+    ('InvestorGain', 'https://www.investorgain.com/report/ipo-gmp-live/331/all/'),
+    ('Chittorgarh', 'https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/'),
+    ('Moneycontrol', 'https://www.moneycontrol.com/ipo/ipo-gmp/'),
+    ('IPODose', 'https://ipodose.com/in/ipo-gmp/'),
+    ('GMPWatch', 'https://www.gmpwatch.in/'),
+    ('IPOGram', 'https://ipogram.in/ipo-gmp/'),
+    ('IPOMarket', 'https://www.ipomarket.in/'),
+    ('LiveGMP', 'https://livegmp.com/ipo'),
+]
+
+def _gmp_aliases(name):
+    clean = clean_text(name).lower()
+    base = re.sub(r'\\b(limited|ltd|india|private|pvt|company|technologies|technology|inc)\\b', ' ', clean)
+    base = re.sub(r'[^a-z0-9]+', ' ', base).strip()
+    compact = re.sub(r'[^a-z0-9]', '', base)
+    words = [w for w in base.split() if len(w) >= 4]
+    aliases = {base, compact}
+    if words:
+        aliases.add(' '.join(words[:2]))
+        aliases.add(words[0])
+    return {x for x in aliases if x}
+
+def _gmp_match_score(page_text, company):
+    low = clean_text(page_text).lower()
+    compact = re.sub(r'[^a-z0-9]+', '', low)
+    scores = []
+    for alias in _gmp_aliases(company):
+        a = re.sub(r'[^a-z0-9]+', '', alias)
+        if a and a in compact:
+            scores.append(len(a))
+    return max(scores) if scores else 0
+
+def _extract_gmp_near_company(page_text, company):
+    text = clean_text(page_text)
+    if not _gmp_match_score(text, company):
+        return None
+    # Prefer a GMP-labelled quote close to the company name.
+    aliases = sorted(_gmp_aliases(company), key=len, reverse=True)
+    for alias in aliases:
+        if not alias:
+            continue
+        pattern = re.compile(re.escape(alias).replace(r'\\ ', r'\\s+'), re.I)
+        m = pattern.search(text)
+        if not m:
+            continue
+        chunk = text[max(0, m.start()-80):m.end()+300]
+        g = re.search(r'(?:gmp|grey market premium|premium)[^₹0-9-]{0,80}₹?\\s*(-?[0-9]{1,6}(?:\\.[0-9]+)?)', chunk, re.I)
+        if not g:
+            g = re.search(r'₹\\s*(-?[0-9]{1,6}(?:\\.[0-9]+)?)\\s*(?:gmp|grey market premium|premium)', chunk, re.I)
+        if g:
+            try:
+                return float(g.group(1))
+            except ValueError:
+                pass
+        # Many GMP pages put the numeric quote immediately after the company.
+        nums = re.findall(r'(?:₹|Rs\\.?\\s*)\\s*(-?[0-9]{1,6}(?:\\.[0-9]+)?)', chunk, re.I)
+        if nums:
+            try:
+                return float(nums[0])
+            except ValueError:
+                pass
     return None
 
-def apply_gmp(ipo, value, source, source_url, fetched_at, source_updated_at=None):
+def _parse_gmp_source(source_name, page_text):
+    result = {}
+    text = clean_text(page_text)
+    # First parse table rows; this works well for InvestorGain/Chittorgarh style pages.
+    rows = re.findall(r'<tr[^>]*>(.*?)</tr>', page_text, re.I | re.S)
+    for row in rows:
+        cells = [clean_text(x) for x in re.findall(r'<t[dh][^>]*>(.*?)</t[dh]>', row, re.I | re.S)]
+        if len(cells) < 2:
+            continue
+        name = cells[0]
+        gmp = None
+        for cell in cells[1:7]:
+            if '₹' in cell or 'rs' in cell.lower() or 'gmp' in cell.lower() or 'premium' in cell.lower():
+                gmp = parse_gmp_value(cell)
+                if gmp is not None:
+                    break
+        if gmp is not None and name:
+            result[norm_name(name)] = {'name': name, 'gmp': gmp}
+    return result
+
+def _find_gmp_for_ipo(source_name, raw, parsed, ipo_name):
+    key = norm_name(ipo_name)
+    hit = parsed.get(key)
+    if hit:
+        return hit['gmp']
+    # Fuzzy matching against parsed table names.
+    for k, row in parsed.items():
+        if key and k and (key in k or k in key):
+            return row['gmp']
+    return _extract_gmp_near_company(raw, ipo_name)
+
+def apply_gmp(ipo, value, source, source_url, fetched_at, source_updated_at=None, all_quotes=None):
     try:
         g = float(value)
     except (TypeError, ValueError):
@@ -206,6 +272,13 @@ def apply_gmp(ipo, value, source, source_url, fetched_at, source_updated_at=None
     ipo['gmp_updated_at'] = fetched_at
     if source_updated_at:
         ipo['gmp_source_updated_at'] = source_updated_at
+    if all_quotes:
+        ipo['gmp_sources'] = all_quotes
+        nums = [float(x['gmp']) for x in all_quotes if isinstance(x, dict) and isinstance(x.get('gmp'), (int,float))]
+        if len(nums) >= 2:
+            spread = max(nums) - min(nums)
+            ipo['gmp_conflict'] = bool(spread >= 10)
+            ipo['gmp_range'] = f'₹{int(min(nums))}–₹{int(max(nums))}'
     _, hi, _ = parse_price_band(ipo.get('price'))
     if hi and hi > 0:
         pct = g / hi * 100
@@ -216,43 +289,51 @@ def apply_gmp(ipo, value, source, source_url, fetched_at, source_updated_at=None
 def collect_gmp(ipos, old_ipos):
     errors, matched = [], 0
     fetched_at = dt.datetime.now(dt.timezone.utc).isoformat()
-    dashboard = {}
-    try:
-        text = request_text(GMP_DASHBOARD, timeout=30)
-        dashboard, parse_errors = parse_investorgain_dashboard(text)
-        errors.extend(parse_errors)
-    except Exception as exc:
-        errors.append(f'InvestorGain: {exc}')
+    source_pages = []
+    # Fetch each public source once per run. This gives redundancy without making
+    # one IPO trigger many network requests.
+    for source, url in GMP_SOURCES:
+        try:
+            raw = request_text(url, timeout=20)
+            if raw and len(raw) > 300:
+                source_pages.append((source, url, raw, _parse_gmp_source(source, raw)))
+            else:
+                errors.append(f'{source}: empty response')
+        except Exception as exc:
+            errors.append(f'{source}: {exc}')
+
     old_map = {norm_name(i.get('name')): i for i in old_ipos if isinstance(i, dict) and i.get('name')}
+
     for ipo in ipos:
-        key = norm_name(ipo.get('name'))
-        hit = dashboard.get(key)
-        if not hit:
-            # Fuzzy token match for suffixes such as "India", "Limited" and exchange labels.
-            for k, row in dashboard.items():
-                if key and k and (key in k or k in key):
-                    hit = row; break
-        if hit and apply_gmp(ipo, hit['gmp'], 'InvestorGain', GMP_DASHBOARD, fetched_at, hit.get('updated')):
-            matched += 1
+        quotes = []
+        for source, url, raw, parsed in source_pages:
+            value = _find_gmp_for_ipo(source, raw, parsed, ipo.get('name',''))
+            if value is not None:
+                quotes.append({'source': source, 'gmp': value, 'url': url, 'fetched_at': fetched_at})
+
+        # Prefer InvestorGain, then the remaining sources in declared order.
+        chosen = None
+        for preferred in [x[0] for x in GMP_SOURCES]:
+            chosen = next((q for q in quotes if q['source'] == preferred), None)
+            if chosen:
+                break
+
+        if chosen:
+            if apply_gmp(ipo, chosen['gmp'], chosen['source'], chosen['url'], fetched_at, all_quotes=quotes):
+                matched += 1
             continue
-        old = old_map.get(key)
+
+        # Keep the last verified quote if every public source is temporarily down.
+        old = old_map.get(norm_name(ipo.get('name')))
         if old and old.get('gmp') not in (None, '', '—', '-'):
-            ipo['gmp'] = old.get('gmp')
-            ipo['gmp_pct'] = old.get('gmp_pct', '—')
-            ipo['est_list'] = old.get('est_list', '—')
-            ipo['gmp_source'] = old.get('gmp_source', 'previous successful source')
-            ipo['gmp_source_url'] = old.get('gmp_source_url', '')
-            ipo['gmp_updated_at'] = old.get('gmp_updated_at')
-            ipo['gmp_source_updated_at'] = old.get('gmp_source_updated_at')
-            continue
-        # Per-source fallback for companies not present in the dashboard.
-        for source, url in GMP_SOURCES[1:]:
-            try:
-                value = extract_gmp(request_text(url, timeout=20), ipo['name'])
-                if value is not None and apply_gmp(ipo, value, source, url, fetched_at):
-                    matched += 1; break
-            except Exception as exc:
-                errors.append(f'{source}: {exc}')
+            for k in ('gmp','gmp_pct','est_list','gmp_source','gmp_source_url','gmp_updated_at','gmp_source_updated_at','gmp_sources','gmp_conflict','gmp_range'):
+                if k in old:
+                    ipo[k] = old[k]
+            ipo['gmp_stale'] = True
+        else:
+            # Google Sheet fallback can still supply a missing GMP later in the pipeline.
+            ipo['gmp_stale'] = False
+
     return matched, errors
 
 def collect_listed(old_listed):
