@@ -63,8 +63,11 @@ jobs:
           # Hide the three large IPO status summary cards.
           s=s.replace('</style>', '.stats{display:none!important}\n</style>',1)
 
-          # Replace footer using the actual em-dash/en-dash/hyphen variants.
+          # Replace footer.
           s=re.sub(r'IPO Terminal\s*[—–-]\s*informational research tool\.?', 'IPO Terminal - By : Dev Raj', s, flags=re.I)
+
+          # Load the Research & Tools detection engine after the main page script.
+          s=s.replace('</body>', '<script src="scripts/ipo-detection.js"></script></body>', 1)
 
           p.write_text(s,encoding='utf-8')
           PY
@@ -73,8 +76,10 @@ jobs:
           set -e
           test -s _site/index.html
           test -s _site/data/ipos.json
+          test -s _site/scripts/ipo-detection.js
           grep -q 'Asia/Kolkata' _site/index.html
           grep -q 'data-section="open"' _site/index.html
+          grep -q 'scripts/ipo-detection.js' _site/index.html
           ! grep -Eiq 'RHP[[:space:]]*/[[:space:]]*DRHP' _site/index.html
           ! grep -q 'data-section="documents"' _site/index.html
           ! grep -q 'section-documents' _site/index.html
