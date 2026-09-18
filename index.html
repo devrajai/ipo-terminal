@@ -40,9 +40,12 @@ button.link{cursor:pointer;border:0;font:inherit;text-align:center}
 #section-open .actions .link:nth-child(2),#section-upcoming .actions .link:nth-child(2),#section-open .actions .link:last-child,#section-upcoming .actions .link:last-child{display:none!important}
 .stats{display:none!important}
 
-/* auto-hide nav buttons on scroll down / reveal on scroll up */
+/* nav buttons live only at the very top of the page; floating glass arrow returns you */
 .nav-wrap{transition:transform .28s ease,opacity .28s ease}
 .nav-wrap.nav-hide{transform:translateY(-110%);opacity:0;pointer-events:none}
+.totop{position:fixed;right:14px;bottom:18px;z-index:950;display:none;align-items:center;justify-content:center;width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--text);font-size:20px;font-weight:900;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 8px 24px rgba(0,0,0,.14);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);-webkit-tap-highlight-color:transparent}
+.totop.show{display:flex}
+.totop:active{transform:scale(.94)}
 </style>
 </head>
 <body>
@@ -198,13 +201,20 @@ let timeout=setTimeout(()=>document.getElementById('warning').classList.add('sho
 async function load(){if(!feedUrl)await loadFeedConfig();const entries=Object.values(files),vals=await Promise.all(entries.map(fetchJson));clearTimeout(timeout);const keys=Object.keys(files),raw={};keys.forEach((k,i)=>raw[k]=vals[i]);state.ipos=asArray(raw.ipos);state.listed=asArray(raw.listed);state.gmp=asArray(raw.gmp);state.subscriptions=asArray(raw.subscriptions);state.drhp=asArray(raw.drhp);state.news=asArray(raw.news);state.links=asArray(raw.links);if(raw.updated?.updated){const d=new Date(raw.updated.updated);document.getElementById('last-updated').textContent='⏱ Updated: '+(Number.isNaN(d.getTime())?raw.updated.updated:d.toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}))}if(vals.some(v=>v===null))document.getElementById('warning').classList.add('show');renderOpen();renderListed();renderAllotment();renderNews();renderDocs();renderGmp()}
 load();setInterval(load,15*60*1000);
 
-/* Auto-hide the nav button bar while scrolling down; reveal on scroll up */
-(function(){const nav=document.getElementById('nav-wrap');if(!nav)return;let lastY=window.scrollY,ticking=false;
-window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){const y=window.scrollY;
-if(y>150&&y-lastY>4){nav.classList.add('nav-hide');}
-else if(lastY-y>4||y<80){nav.classList.remove('nav-hide');}
-lastY=y;ticking=false;});},{passive:true});
-window.addEventListener('resize',function(){if(window.scrollY<80)nav.classList.remove('nav-hide');},{passive:true});})();
+/* Nav buttons show only at the very top of the page. Once you scroll away they
+   hide in BOTH directions and come back only when you return to the top.
+   A floating liquid-glass arrow appears after 300px to jump back to the top. */
+(function(){const nav=document.getElementById('nav-wrap');if(!nav)return;
+const btn=document.createElement('button');btn.className='totop';btn.type='button';
+btn.setAttribute('aria-label','Back to top');btn.textContent='\u2191';
+btn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+document.body.appendChild(btn);
+let ticking=false;
+function apply(){const y=window.scrollY||window.pageYOffset||0;
+nav.classList.toggle('nav-hide',y>120);
+btn.classList.toggle('show',y>300);}
+window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){apply();ticking=false;});},{passive:true});
+apply();})();
 </script>
 </body>
 </html>
