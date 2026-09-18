@@ -40,8 +40,16 @@ function score(x){
  const keys=['gmp_pct','total','pe','pb','roe','roce','de','growth'];const miss=keys.filter(k=>num(x[k])==null).length;
  return{listing,short,long,confidence:Math.max(30,100-miss*8)}
 }
+function lifecycle(x){
+ const parse=v=>{const s=String(v??'').trim();let m=s.match(/^(\\d{2})\\/(\\d{2})\\/(\\d{2,4})$/);if(m){let y=m[3];if(y.length===2)y='20'+y;return new Date(y+'-'+m[2]+'-'+m[1]+'T00:00:00+05:30')}m=s.match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);return m?new Date(s+'T00:00:00+05:30'):null};
+ const now=new Date(),o=parse(x.open_date||x.open),cl=parse(x.close_date||x.close),li=parse(x.listing_date||x.listing);
+ if(li&&!isNaN(li)&&now>=li)return 'listed';
+ if(cl&&!isNaN(cl)){const close=new Date(cl.getTime());close.setHours(17,0,0,0);if(now>=close)return 'closed'}
+ if(o&&!isNaN(o)){const open=new Date(o.getTime());open.setHours(10,0,0,0);if(now>=open)return 'open'}
+ return 'upcoming'
+}
 function enriched(){
- return data.filter(x=>/^(open|upcoming)$/i.test(String(x.status||''))).map(x=>({...x,s:score(x),l:lotInfo(x)})).filter(x=>x.l)
+ return data.map(x=>({...x,status:lifecycle(x),s:score(x),l:lotInfo(x)})).filter(x=>/^(open|upcoming)$/i.test(x.status)&&x.l)
 }
 function rank(k){return enriched().sort((a,b)=>b.s[k]-a.s[k]||b.s.confidence-a.s.confidence)}
 function createPanel(){
@@ -85,7 +93,7 @@ async function load(){
   const arr=v=>Array.isArray(v)?v:(v&&Array.isArray(v.data)?v.data:[]);
   const base=arr(vals[0]),rich=arr(vals[1]),gm=arr(vals[2]),su=arr(vals[3]);
   data=base.concat(rich).reduce((out,x)=>{if(!x?.name)return out;const y=find(out,x.name);if(!y)out.push({...x});else Object.keys(x).forEach(k=>{if(y[k]==null||y[k]===''||y[k]==='—')y[k]=x[k]});return out},[]);
-  data=data.map(x=>{const g=find(gm,x.name),q=find(su,x.name);return{...x,...g?g:{},...q?{total:q.total,qib:q.qib,nii:q.nii,rii:q.rii}: {}}});
+  data=data.map(x=>{const g=find(gm,x.name),q=find(su,x.name);return{...x,...g?g:{},...q?{total:q.total,qib:q.qib,nii:q.nii,rii:q.rii}:{},status:lifecycle(x)};});
   createPanel();render();
  }catch(e){console.error('IPO Decision engine',e)}
 }
