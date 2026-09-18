@@ -41,6 +41,13 @@ jobs:
           python scripts/build_feature_data.py || true
           exit 0
 
+      - name: Enrich missing IPO fields from public web
+        run: |
+          set +e
+          python scripts/ipo_web_fallback.py
+          echo "web_fallback_exit=$?"
+          exit 0
+
       - name: Apply Google Sheet fallback for missing fields
         if: ${{ secrets.GOOGLE_SHEET_ID != '' && secrets.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
         env:
