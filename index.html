@@ -39,6 +39,10 @@ button.link{cursor:pointer;border:0;font:inherit;text-align:center}
 #section-open .grid .box:nth-child(6),#section-upcoming .grid .box:nth-child(6){display:none!important}
 #section-open .actions .link:nth-child(2),#section-upcoming .actions .link:nth-child(2),#section-open .actions .link:last-child,#section-upcoming .actions .link:last-child{display:none!important}
 .stats{display:none!important}
+
+/* auto-hide nav buttons on scroll down / reveal on scroll up */
+.nav-wrap{transition:transform .28s ease,opacity .28s ease}
+.nav-wrap.nav-hide{transform:translateY(-110%);opacity:0;pointer-events:none}
 </style>
 </head>
 <body>
@@ -193,6 +197,14 @@ function updateIndiaClock(){const now=new Date();const parts=new Intl.DateTimeFo
 let timeout=setTimeout(()=>document.getElementById('warning').classList.add('show'),8000);
 async function load(){if(!feedUrl)await loadFeedConfig();const entries=Object.values(files),vals=await Promise.all(entries.map(fetchJson));clearTimeout(timeout);const keys=Object.keys(files),raw={};keys.forEach((k,i)=>raw[k]=vals[i]);state.ipos=asArray(raw.ipos);state.listed=asArray(raw.listed);state.gmp=asArray(raw.gmp);state.subscriptions=asArray(raw.subscriptions);state.drhp=asArray(raw.drhp);state.news=asArray(raw.news);state.links=asArray(raw.links);if(raw.updated?.updated){const d=new Date(raw.updated.updated);document.getElementById('last-updated').textContent='⏱ Updated: '+(Number.isNaN(d.getTime())?raw.updated.updated:d.toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'}))}if(vals.some(v=>v===null))document.getElementById('warning').classList.add('show');renderOpen();renderListed();renderAllotment();renderNews();renderDocs();renderGmp()}
 load();setInterval(load,15*60*1000);
+
+/* Auto-hide the nav button bar while scrolling down; reveal on scroll up */
+(function(){const nav=document.getElementById('nav-wrap');if(!nav)return;let lastY=window.scrollY,ticking=false;
+window.addEventListener('scroll',function(){if(ticking)return;ticking=true;requestAnimationFrame(function(){const y=window.scrollY;
+if(y>150&&y-lastY>4){nav.classList.add('nav-hide');}
+else if(lastY-y>4||y<80){nav.classList.remove('nav-hide');}
+lastY=y;ticking=false;});},{passive:true});
+window.addEventListener('resize',function(){if(window.scrollY<80)nav.classList.remove('nav-hide');},{passive:true});})();
 </script>
 </body>
 </html>
