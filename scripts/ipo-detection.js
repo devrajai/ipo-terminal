@@ -5,7 +5,7 @@ const pair=v=>{const a=String(v??'').replace(/₹|,/g,'').match(/\d+(?:\.\d+)?/g
 const norm=v=>String(v??'').toLowerCase().replace(/limited|ltd|india|private|pvt|[\W_]/g,'');
 const money=v=>Number.isFinite(v)?'₹'+Math.round(v).toLocaleString('en-IN'):'—';
 const find=(a,n)=>{const q=norm(n);return(a||[]).find(x=>norm(x.name)===q)||(a||[]).find(x=>norm(x.name).includes(q)||q.includes(norm(x.name)))};
-let data=[],mode='all',ref='',budget=0;
+let data=[],mode='all',ref='',budget=0,listedData=[];
 
 const videos=[
  ['Fundamental','NSE IPO — full analysis','https://youtu.be/rynGD1_t5ZY?si=DrRMFTmyhDk8o35q','User supplied'],
@@ -47,27 +47,39 @@ function score(x){
 }
 function addResearchKnowledge(){
  const tips=$('#section-tips .tips'), gloss=$('#section-glossary .glossary');
- if(tips&&!tips.dataset.videoDna){[
- ['7 — GMP is a sentiment input, not a guarantee','Use GMP with subscription, valuation and official issue data. Record freshness and source agreement; do not turn one quote into a guaranteed listing prediction.','Source-supported concept; Terminal treatment = signal, not prediction.'],
- ['8 — Separate pre-listing and post-listing decisions','A good IPO application thesis and a good post-listing trade are different questions. After listing, evaluate price structure and volume separately.','Derived from the post-listing trading framework.'],
- ['9 — Look for a base before a technical entry','Track consolidation range and duration. A base is a measurable structure, not a promise that price will rise.','Source concept; requires backtesting.'],
- ['10 — Volume matters with price structure','Compare trading volume with a recent average. Contracting volume during consolidation and expansion around a breakout can be screened quantitatively.','Source concept; requires backtesting.'],
- ['11 — U-turn needs evidence','Weak initial performance followed by stabilization/base formation and a recovery trigger can be tagged as a U-turn watch—not an automatic buy signal.','Source concept; requires backtesting.'],
- ['12 — Position sizing belongs beside the signal','A setup can be interesting while the position is too large for the portfolio. Keep opportunity score and risk sizing separate.','Source-supported risk-management concept.'],
- ['13 — Backtest before increasing weights','When a video rule becomes a numerical score, test it on historical IPOs and record sample size, median return, drawdown and holding period.','Research methodology; not yet validated in this Terminal.']
- ].forEach(t=>{const c=document.createElement('div');c.className='card glass';c.innerHTML='<b>'+E(t[0])+'</b><p>'+E(t[1])+'</p><small class="det-source">'+E(t[2])+'</small>';tips.appendChild(c)});tips.dataset.videoDna='1'}
- if(gloss&&!gloss.dataset.videoDna){[
- ['GMP Freshness','How recently a grey-market quote was observed. Older quotes should reduce confidence.'],
- ['GMP Conflict','A flag when credible GMP sources disagree materially; conflicting quotes should not be silently averaged.'],
- ['Demand Quality','Keep QIB, NII and Retail subscription separate instead of relying only on total subscription.'],
- ['Volume Ratio','Current volume divided by a recent average volume. Below 1 means lower-than-average activity; above 1 means higher activity.'],
- ['Volume Contraction','A measurable reduction in volume during consolidation. It is a screening condition, not proof of a breakout.'],
- ['Base Formation','A period where price trades within a relatively contained range after a move; define the range and duration explicitly.'],
- ['Inside Day','A daily candle whose high and low remain within the previous day range. Use only when reliable daily OHLC data exists.'],
- ['Breakout','Price moving above a defined resistance/range boundary; volume can be used as confirmation.'],
- ['U-turn Setup','Weak initial performance followed by stabilization/base formation and a recovery trigger.'],
- ['Data Confidence','A measure of input completeness, freshness and consistency; it is not a probability of profit.']
- ].forEach(t=>{const c=document.createElement('div');c.className='card glass';c.innerHTML='<b>'+E(t[0])+'</b><div class="detail">'+E(t[1])+'</div>';gloss.appendChild(c)});gloss.dataset.videoDna='1'}
+ if(tips&&!tips.dataset.tipsRewritten){
+  const items=[
+   ['8 — Decide the exit before listing day','Write down the plan before listing: sell at open, use a fixed target, or hold because you studied the business. Decide the maximum application size in advance so a loss cannot change your financial plans.','Practical risk-management guidance; not a return prediction.'],
+   ['7 — SME IPOs need extra caution','SME listings can have thinner liquidity, wider spreads and exchange-specific price limits. Check the lot size, minimum application amount, liquidity and issue rules before applying; never assume a large premium is guaranteed.','General market-risk guidance; verify the specific issue rules.'],
+   ['6 — Use GMP as a thermometer, not a forecast','GMP can show short-term market sentiment, but it is unofficial and can change quickly. Compare GMP with subscription, valuation and official issue data instead of treating it as a guaranteed listing gain.','Source-supported concept; Terminal treatment = signal, not prediction.'],
+   ['5 — Read subscription quality, not just quantity','Keep QIB, NII and Retail subscription separate. Total subscription alone can hide very different demand quality; compare the category mix and timing of bids before interpreting demand.','Research rule; requires historical validation before stronger weighting.'],
+   ['4 — Judge the business, not the buzz','Check revenue and profit growth, margins, operating cash flow, debt, promoter holding, related-party transactions and use of IPO proceeds. A strong company can still be an expensive IPO.','Fundamental-analysis guidance; use official filings for verification.'],
+   ['3 — Read the RHP / DRHP before applying','Focus on objects of the issue, financial history, risk factors, promoter/shareholding changes, fresh issue versus OFS and the valuation section. Use the official filing rather than relying only on summaries.','Primary-source research rule.'],
+   ['2 — Separate pre-listing and post-listing decisions','The reason to apply for an IPO and the reason to trade it after listing are different. After listing, evaluate price structure, volume, liquidity and risk again instead of carrying the application thesis forward automatically.','Derived from the post-listing trading framework.'],
+   ['1 — Never let a signal replace risk control','GMP, subscription, valuation, fundamentals and technical patterns are inputs—not guarantees. Keep position sizing, stop-loss rules, diversification and a maximum acceptable loss separate from the signal score.','Risk-management principle; not a profit guarantee.'],
+   ['P1 — Look for a base before a technical entry','Measure the consolidation range and its duration. A base is a defined price structure, not proof that price will rise.','Source concept; requires backtesting.'],
+   ['P2 — Volume matters with price structure','Compare current volume with a recent average. Volume contraction during consolidation and expansion around a defined breakout can be screened quantitatively.','Source concept; requires backtesting.'],
+   ['P3 — U-turn needs evidence','Weak initial performance followed by stabilization, a base and a recovery trigger can be tagged as a U-turn watch. Do not treat the label as an automatic buy signal.','Source concept; requires backtesting.'],
+   ['P4 — Backtest before increasing weights','When a video rule becomes a numerical Decision score, test it on historical IPOs and record sample size, median return, drawdown and holding period before increasing its weight.','Research methodology; not yet validated in this Terminal.'],
+   ['R1 — Red flags: debt, cash flow and governance','Watch for rising debt while ROCE falls, weak operating cash flow despite reported profits, related-party loans, auditor changes close to the IPO, promoter pledge and other governance concerns.','Screening checklist; verify against official filings.'],
+   ['R2 — Red flags: OFS-heavy and expensive issues','An OFS-heavy issue can mean existing holders are selling rather than the company raising new capital. Compare the valuation with listed peers and the growth needed to justify it.','Issue-structure and valuation checklist; verify with RHP.']
+  ];
+  tips.innerHTML=items.map(t=>'<div class="card glass tip-item"><b>'+E(t[0])+'</b><p>'+E(t[1])+'</p><small class="det-source">'+E(t[2])+'</small></div>').join('');
+  tips.dataset.tipsRewritten='1';
+ }
+ if(gloss&&!gloss.dataset.videoDna){
+  [['GMP Freshness','How recently a grey-market quote was observed. Older quotes should reduce confidence.'],
+   ['GMP Conflict','A flag when credible GMP sources disagree materially; conflicting quotes should not be silently averaged.'],
+   ['Demand Quality','Keep QIB, NII and Retail subscription separate instead of relying only on total subscription.'],
+   ['Volume Ratio','Current volume divided by a recent average volume. Below 1 means lower-than-average activity; above 1 means higher activity.'],
+   ['Volume Contraction','A measurable reduction in volume during consolidation. It is a screening condition, not proof of a breakout.'],
+   ['Base Formation','A period where price trades within a relatively contained range after a move; define the range and duration explicitly.'],
+   ['Inside Day','A daily candle whose high and low remain within the previous day range. Use only when reliable daily OHLC data exists.'],
+   ['Breakout','Price moving above a defined resistance/range boundary; volume can be used as confirmation.'],
+   ['U-turn Setup','Weak initial performance followed by stabilization/base formation and a recovery trigger.'],
+   ['Data Confidence','A measure of input completeness, freshness and consistency; it is not a probability of profit.']]
+   .forEach(t=>{const c=document.createElement('div');c.className='card glass';c.innerHTML='<b>'+E(t[0])+'</b><div class="detail">'+E(t[1])+'</div>';gloss.appendChild(c)});gloss.dataset.videoDna='1'
+ }
 }
 
 function lifecycle(x){
