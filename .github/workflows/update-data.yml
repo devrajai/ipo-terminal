@@ -24,9 +24,13 @@ jobs:
       - name: Backup verified data
         run: |
           mkdir -p /tmp/ipo-backup
-          for f in data/ipos.json data/ipo-data.json data/listed.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/drhp.json data/news.json; do
+          for f in data/ipos.json data/ipo-data.json data/listed.json data/gmp.json data/subscriptions.json data/sme-ipos.json data/drhp.json data/news.json data/sheet-fallback-health.json; do
             [ -f "$f" ] && cp "$f" "/tmp/ipo-backup/$(basename "$f")"
           done
+
+      - name: Install optional Google Sheet fallback client
+        if: ${{ secrets.GOOGLE_SHEET_ID != '' && secrets.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
+        run: pip install -r requirements-google-sheets.txt
 
       - name: Run multi-source live collector
         run: |
@@ -35,6 +39,17 @@ jobs:
           rc=$?
           echo "collector_exit=$rc"
           python scripts/build_feature_data.py || true
+          exit 0
+
+      - name: Apply Google Sheet fallback for missing fields
+        if: ${{ secrets.GOOGLE_SHEET_ID != '' && secrets.GOOGLE_SERVICE_ACCOUNT_JSON != '' }}
+        env:
+          GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          set +e
+          python scripts/apply_sheet_fallback.py
+          echo "sheet_fallback_exit=$?"
           exit 0
 
       - name: Build safe frontend IPO dataset
