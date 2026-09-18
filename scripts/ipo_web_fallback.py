@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "ipo-data.json"
 UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 IPO-Terminal-WebFallback/1.0"
 RSS = "https://news.google.com/rss/search?q={query}&hl=en-IN&gl=IN&ceid=IN:en"
-MISSING = {None, "", "-", "—", "N/A", "NA", "null", "None"}
+MISSING = {None, "", "-", "—", "N/A", "NA", "null", "None", "₹0 Cr", "0 Cr"}
 
 TRUST = {
     "zerodha.com": 100,
