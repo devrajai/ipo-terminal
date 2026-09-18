@@ -98,7 +98,7 @@ function postSignal(x){
  const issue=num(z.issue_price||x.price||x.price_band),lp=num(z.listing_price||z.listed_price||z.listingPrice),cur=num(z.current_price||z.ltp);
  const high=num(z.day1_high||z.high||z.listing_high),low=num(z.day1_low||z.low||z.listing_low),close=num(z.day1_close||z.close||z.listing_close);
  const volumeRatio=num(z.volume_ratio||z.day1_volume_ratio);
- const listingPct=issue&&lp?(lp/issue-1)*100,range=lp&&high&&low?((high-low)/lp)*100,closeStrength=high!=null&&low!=null&&close!=null&&high!==low?((close-low)/(high-low))*100:null;
+ const listingPct=issue&&lp?(lp/issue-1)*100:null; const range=lp&&high&&low?((high-low)/lp)*100:null; const closeStrength=high!=null&&low!=null&&close!=null&&high!==low?((close-low)/(high-low))*100:null;
  let setup='No structured post-listing setup detected',score=40;
  if(listingPct!=null&&listingPct<0)score+=8;if(range!=null&&range<12)score+=8;if(closeStrength!=null&&closeStrength>65)score+=8;if(volumeRatio!=null&&volumeRatio<0.8)score+=10;if(volumeRatio!=null&&volumeRatio>1.5)score+=5;
  if(listingPct!=null&&listingPct<0&&range!=null&&range<12)setup='U-turn / base watch';
