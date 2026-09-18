@@ -266,7 +266,7 @@ def main():
         "updated_at": checked_at,
         "changed": changed,
         "brokers": results,
-        "policy": "Official broker pages only; stale values are never replaced with guesses. If parsing is unavailable, the UI keeps the last verified value and flags the pricing check.",
+        "policy": "Official broker pages only. Pricing pages are checked every 6 hours. If an official page changes and the new tariff cannot be parsed safely, stale numeric values are replaced with 'Check current tariff' instead of being guessed. Broken links fall back to a working official candidate when available.",
     }
     OUT.write_text(json.dumps(health, ensure_ascii=False, indent=2), encoding="utf-8")
     print(json.dumps({"changed": changed, "checked": len(results), "pricing_ok": sum(1 for x in results.values() if x["pricing_ok"]), "home_ok": sum(1 for x in results.values() if x["home_ok"])}, indent=2))
