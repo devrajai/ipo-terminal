@@ -126,9 +126,9 @@ function renderNews(){
     const names=items.map(i=>norm(i.name));
     return [...state.news].filter(x=>{
       if(!x||!x.title||!x.link)return false;
-      const itemStatus=String(x.ipo_status||'').toLowerCase();
-      if(itemStatus!==status)return false;
-      if(x.ipo_name)return names.includes(norm(x.ipo_name));
+      // Always derive the bucket from the CURRENT IPO dataset. This keeps
+      // news visible even if the stored news status is one refresh behind.
+      if(x.ipo_name&&names.includes(norm(x.ipo_name)))return true;
       const t=String(x.title).toLowerCase();
       return items.some(i=>{
         const words=String(i.name||'').toLowerCase().split(/\s+/).filter(w=>w.length>=5&&!['limited','india','private','technologies','technology'].includes(w));
