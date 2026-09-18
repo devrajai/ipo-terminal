@@ -41,11 +41,21 @@ function score(x){
  return{listing,short,long,confidence:Math.max(30,100-miss*8)}
 }
 function lifecycle(x){
- const parse=v=>{const s=String(v??'').trim();let m=s.match(/^(\\d{2})\\/(\\d{2})\\/(\\d{2,4})$/);if(m){let y=m[3];if(y.length===2)y='20'+y;return new Date(y+'-'+m[2]+'-'+m[1]+'T00:00:00+05:30')}m=s.match(/^(\\d{4})-(\\d{2})-(\\d{2})$/);return m?new Date(s+'T00:00:00+05:30'):null};
+ const parse=v=>{
+  const s=String(v??'').trim();
+  if(!s)return null;
+  const a=s.split(/[\\/-]/).map(Number);
+  if(a.length===3){
+   if(a[0]>1900)return new Date(a[0],a[1]-1,a[2]);
+   let y=a[2]; if(y<100)y+=2000;
+   return new Date(y,a[1]-1,a[0]);
+  }
+  return null;
+ };
  const now=new Date(),o=parse(x.open_date||x.open),cl=parse(x.close_date||x.close),li=parse(x.listing_date||x.listing);
  if(li&&!isNaN(li)&&now>=li)return 'listed';
- if(cl&&!isNaN(cl)){const close=new Date(cl.getTime());close.setHours(17,0,0,0);if(now>=close)return 'closed'}
- if(o&&!isNaN(o)){const open=new Date(o.getTime());open.setHours(10,0,0,0);if(now>=open)return 'open'}
+ if(cl&&!isNaN(cl)){const close=new Date(cl);close.setHours(17,0,0,0);if(now>=close)return 'closed'}
+ if(o&&!isNaN(o)){const open=new Date(o);open.setHours(10,0,0,0);if(now>=open)return 'open'}
  return 'upcoming'
 }
 function enriched(){
