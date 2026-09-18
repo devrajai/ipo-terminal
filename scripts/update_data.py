@@ -442,15 +442,21 @@ if __name__ == '__main__': main()
     return rows, errors
 
 def collect_news(ipos, old_news):
-    """Collect up to 9 recent news stories tied only to currently live/upcoming IPOs.
-    The rolling 5-day window makes the feed refresh naturally each day and whenever IPO status changes.
+    """Collect exactly 3 recent stories for each IPO status bucket: OPEN, UPCOMING and CLOSED.
+    Stories use a rolling 5-day window. IPO status is re-evaluated on every data refresh,
+    so when an IPO moves UPCOMING -> OPEN -> CLOSED its news automatically moves buckets.
     """
     now = dt.datetime.now(dt.timezone.utc)
     cutoff = now - dt.timedelta(days=5)
     errors, stories, seen = [], [], set()
 
-    live = [x for x in ipos if str(x.get('status') or '').lower() in ('open', 'upcoming')]
-    live.sort(key=lambda x: (0 if str(x.get('status')).lower() == 'open' else 1, str(x.get('open') or '')))
+    buckets = {
+        'open': [x for x in ipos if str(x.get('status') or '').lower() == 'open'],
+        'upcoming': [x for x in ipos if str(x.get('status') or '').lower() == 'upcoming'],
+        'closed': [x for x in ipos if str(x.get('status') or '').lower() == 'closed'],
+    }
+    for key in buckets:
+        buckets[key].sort(key=lambda x: str(x.get('open') or x.get('close') or ''))
 
     def aliases(ipo):
         name = clean_text(ipo.get('name'))
@@ -466,11 +472,12 @@ def collect_news(ipos, old_news):
         name, words, compact, acronym = aliases(ipo)
         if name and name in low: return True
         if compact and compact in norm: return True
-        if acronym and len(acronym) >= 2 and re.search(r'\\b' + re.escape(acronym) + r'\\b', low): return True
-        hits = sum(1 for w in words if len(w) >= 5 and w in low)
-        return hits >= (2 if len([w for w in words if len(w) >= 5]) >= 2 else 1)
+        if acronym and len(acronym) >= 2 and re.search(r'\b' + re.escape(acronym) + r'\b', low): return True
+        long_words = [w for w in words if len(w) >= 5]
+        hits = sum(1 for w in long_words if w in low)
+        return hits >= (2 if len(long_words) >= 2 else 1)
 
-    def add_item(title, link, source, published, ipo):
+    def add_item(title, link, source, published, ipo, bucket):
         title = clean_text(title)
         link = html.unescape(str(link or '')).strip()
         if not title or not link or link in seen or not matches_ipo(title, ipo):
@@ -484,52 +491,63 @@ def collect_news(ipos, old_news):
             'source': clean_text(source) or 'News',
             'link': link,
             'published_at': published.astimezone(dt.timezone.utc).isoformat(),
-            'topic': 'Live / Upcoming IPO',
+            'topic': 'IPO News',
             'ipo_name': clean_text(ipo.get('name')),
-            'ipo_status': str(ipo.get('status') or '').upper()
+            'ipo_status': bucket.upper()
         })
 
-    for ipo in live[:12]:
-        name = clean_text(ipo.get('name'))
-        if not name: continue
-        query = urllib.parse.quote_plus(name + ' IPO')
-        try:
-            root = ET.fromstring(request_text(NEWS_RSS.format(query=query), timeout=20))
-            for item in root.findall('.//item'):
-                pub = item.findtext('pubDate', '')
-                try:
-                    published = parsedate_to_datetime(pub).astimezone(dt.timezone.utc) if pub else None
-                except Exception:
-                    published = None
-                add_item(item.findtext('title', ''), item.findtext('link', ''),
-                         item.findtext('source', ''), published, ipo)
-        except Exception as exc:
-            errors.append(f'{name}: {exc}')
+    # Search each current IPO. We keep a generous candidate pool, then take exactly
+    # three newest stories per status bucket.
+    for bucket, items in buckets.items():
+        for ipo in items[:12]:
+            name = clean_text(ipo.get('name'))
+            if not name: continue
+            query = urllib.parse.quote_plus(name + ' IPO')
+            try:
+                root = ET.fromstring(request_text(NEWS_RSS.format(query=query), timeout=20))
+                for item in root.findall('.//item'):
+                    pub = item.findtext('pubDate', '')
+                    try:
+                        published = parsedate_to_datetime(pub).astimezone(dt.timezone.utc) if pub else None
+                    except Exception:
+                        published = None
+                    add_item(item.findtext('title', ''), item.findtext('link', ''),
+                             item.findtext('source', ''), published, ipo, bucket)
+            except Exception as exc:
+                errors.append(f'{name}: {exc}')
 
-    # Reuse only recent old stories that still belong to a currently live/upcoming IPO.
+    # Reuse only recent old stories if they still match an IPO in the same current bucket.
     for old in old_news if isinstance(old_news, list) else []:
-        if len(stories) >= 9: break
         if not isinstance(old, dict): continue
         try:
             published = dt.datetime.fromisoformat(str(old.get('published_at')).replace('Z', '+00:00')) if old.get('published_at') else dt.datetime.combine(dt.date.fromisoformat(str(old.get('date'))), dt.time(), tzinfo=dt.timezone.utc)
         except Exception:
             continue
-        for ipo in live:
-            if matches_ipo(old.get('title', ''), ipo):
-                add_item(old.get('title'), old.get('link'), old.get('source'), published, ipo)
-                if len(stories) >= 9: break
+        for bucket, items in buckets.items():
+            if sum(1 for s in stories if s.get('ipo_status') == bucket.upper()) >= 3:
+                continue
+            for ipo in items:
+                if matches_ipo(old.get('title', ''), ipo):
+                    add_item(old.get('title'), old.get('link'), old.get('source'), published, ipo, bucket)
+                    break
 
-    stories.sort(key=lambda x: x.get('published_at', ''), reverse=True)
-    stories = stories[:9]
-    if stories:
-        NEWS_OUT.write_text(json.dumps(stories, ensure_ascii=False, indent=2), encoding='utf-8')
+    # Enforce the exact 3 + 3 + 3 structure. If a bucket has fewer than 3 genuinely
+    # current stories, it stays below 3 rather than showing unrelated IPO news.
+    final = []
+    for bucket in ('open', 'upcoming', 'closed'):
+        rows = [x for x in stories if x.get('ipo_status') == bucket.upper()]
+        rows.sort(key=lambda x: x.get('published_at', ''), reverse=True)
+        final.extend(rows[:3])
+
+    if final:
+        NEWS_OUT.write_text(json.dumps(final, ensure_ascii=False, indent=2), encoding='utf-8')
     elif NEWS_OUT.exists():
         try:
             old = json.loads(NEWS_OUT.read_text(encoding='utf-8'))
-            stories = [x for x in old if isinstance(x, dict) and x.get('ipo_name')][:9]
+            final = old[:9] if isinstance(old, list) else []
         except Exception:
-            stories = []
-    return stories, errors
+            final = []
+    return final, errors
 
 def merge_old_fields(new_ipos, old_ipos):
     old_map = {norm_name(i.get('name')): i for i in old_ipos if isinstance(i, dict) and i.get('name')}
