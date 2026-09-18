@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T15:43:47.466611+05:30",
+  "updated_at": "2026-09-18T16:06:09.772010+05:30",
   "data": [
     {
       "name": "National Stock Exchange of India",
@@ -18,11 +18,11 @@
       "applications": ""
     },
     {
-      "name": "SS Retail",
+      "name": "Hero Motors",
       "qib": "",
       "nii": "",
       "rii": "",
-      "total": "6.10x",
+      "total": "3.58x",
       "applications": ""
     },
     {
@@ -34,11 +34,11 @@
       "applications": ""
     },
     {
-      "name": "Hero Motors",
+      "name": "SS Retail",
       "qib": "",
       "nii": "",
       "rii": "",
-      "total": "3.58x",
+      "total": "6.10x",
       "applications": ""
     }
   ]
