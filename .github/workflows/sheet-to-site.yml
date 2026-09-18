@@ -1,0 +1,35 @@
+name: Sheet to Site Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 */2 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Sync Google Sheet data
+        env:
+          SHEET_ID: 1Ey8GNZ6yqg4Wu3Wtg92cbNrbgs-VL0jNnkiUUWWwsEQ
+        run: python scripts/sync_sheet_to_site.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "sheet-sync-bot"
+          git config user.email "actions@github.com"
+          git add data/
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "data: sync from Google Sheet IPO Tracker"
+          git push
