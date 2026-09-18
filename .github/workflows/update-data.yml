@@ -59,6 +59,41 @@ jobs:
           echo "sheet_fallback_exit=$?"
           exit 0
 
+      - name: Recalculate IPO lifecycle from open/close/listing dates
+        run: |
+          python <<'PY'
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from pathlib import Path
+          IST=ZoneInfo("Asia/Kolkata")
+          now=datetime.now(IST)
+          def parse(v):
+              s=str(v or "").strip()
+              for f in ("%d/%m/%y","%d/%m/%Y","%Y-%m-%d"):
+                  try:return datetime.strptime(s,f).replace(tzinfo=IST)
+                  except ValueError: pass
+              return None
+          p=Path("data/ipo-data.json")
+          try:
+              obj=json.loads(p.read_text(encoding="utf-8"))
+              rows=obj.get("ipos",[]) if isinstance(obj,dict) else []
+              for x in rows:
+                  if not isinstance(x,dict): continue
+                  o=parse(x.get("open") or x.get("open_date"))
+                  cl=parse(x.get("close") or x.get("close_date"))
+                  li=parse(x.get("listing") or x.get("listing_date"))
+                  if li and now>=li: st="listed"
+                  elif cl and now>=cl.replace(hour=17,minute=0,second=0,microsecond=0): st="closed"
+                  elif o and now>=o.replace(hour=10,minute=0,second=0,microsecond=0): st="open"
+                  else: st="upcoming"
+                  x["status"]=st
+              p.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding="utf-8")
+              print("lifecycle recalculated",len(rows),now.isoformat())
+          except Exception as e:
+              print("lifecycle step skipped:",repr(e))
+          PY
+
       - name: Build safe frontend IPO dataset
         run: |
           python <<'PY'
