@@ -152,7 +152,7 @@ async function load(){
   const arr=v=>Array.isArray(v)?v:(v&&Array.isArray(v.data)?v.data:[]);
   const base=arr(vals[0]),rich=arr(vals[1]),gm=arr(vals[2]),su=arr(vals[3]); listedData=arr(vals[4]);
   data=base.concat(rich).reduce((out,x)=>{if(!x?.name)return out;const y=find(out,x.name);if(!y)out.push({...x});else Object.keys(x).forEach(k=>{if(y[k]==null||y[k]===''||y[k]==='—')y[k]=x[k]});return out},[]);
-  data=data.map(x=>{const g=find(gm,x.name),q=find(su,x.name);return{...x,...g?g:{},...q?{total:q.total,qib:q.qib,nii:q.nii,rii:q.rii}:{},status:lifecycle(x)};});
+  data=data.map(x=>{const g=find(gm,x.name),q=find(su,x.name);return{...x,...(g||{}),...(q?{total:q.total,qib:q.qib,nii:q.nii,rii:q.rii}:{}),status:lifecycle(x)};});
   createPanel();addResearchKnowledge();render();
  }catch(e){console.error('IPO Decision engine',e)}
 }
