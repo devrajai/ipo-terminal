@@ -442,37 +442,38 @@ if __name__ == '__main__': main()
     return rows, errors
 
 def collect_news(ipos, old_news):
-    """Collect exactly up to 9 fresh IPO stories from public RSS, tied to live/upcoming IPOs.
-    The rolling window is today through the previous 5 days, so the set naturally changes each day.
+    """Collect up to 9 recent news stories tied only to currently live/upcoming IPOs.
+    The rolling 5-day window makes the feed refresh naturally each day and whenever IPO status changes.
     """
     now = dt.datetime.now(dt.timezone.utc)
     cutoff = now - dt.timedelta(days=5)
     errors, stories, seen = [], [], set()
 
-    live = []
-    for ipo in ipos:
-        status = str(ipo.get('status') or '').lower()
-        if status in ('open', 'upcoming'):
-            live.append(ipo)
+    live = [x for x in ipos if str(x.get('status') or '').lower() in ('open', 'upcoming')]
     live.sort(key=lambda x: (0 if str(x.get('status')).lower() == 'open' else 1, str(x.get('open') or '')))
 
-    queries = []
-    for ipo in live[:6]:
+    def aliases(ipo):
         name = clean_text(ipo.get('name'))
-        if name:
-            queries.append((name + ' IPO', name.lower()))
-    queries += [
-        ('India IPO upcoming subscription listing', 'ipo'),
-        ('India IPO news September 2026', 'ipo'),
-        ('Indian IPO latest public issue', 'ipo'),
-    ]
+        words = [w.lower() for w in re.findall(r'[A-Za-z]+', name)
+                 if len(w) >= 3 and w.lower() not in {'limited','ltd','india','ind','private','pvt','company','technologies','technology'}]
+        compact = re.sub(r'[^a-z0-9]', '', name.lower())
+        acronym = ''.join(w[0] for w in words)
+        return name.lower(), words, compact, acronym
 
-    def add_item(title, link, source, published, hint='ipo'):
+    def matches_ipo(title, ipo):
+        low = clean_text(title).lower()
+        norm = re.sub(r'[^a-z0-9]', '', low)
+        name, words, compact, acronym = aliases(ipo)
+        if name and name in low: return True
+        if compact and compact in norm: return True
+        if acronym and len(acronym) >= 2 and re.search(r'\\b' + re.escape(acronym) + r'\\b', low): return True
+        hits = sum(1 for w in words if len(w) >= 5 and w in low)
+        return hits >= (2 if len([w for w in words if len(w) >= 5]) >= 2 else 1)
+
+    def add_item(title, link, source, published, ipo):
         title = clean_text(title)
         link = html.unescape(str(link or '')).strip()
-        if not title or not link or link in seen: return
-        low = title.lower()
-        if 'ipo' not in low and hint not in low:
+        if not title or not link or link in seen or not matches_ipo(title, ipo):
             return
         if published is None or published < cutoff or published > now + dt.timedelta(hours=2):
             return
@@ -483,35 +484,29 @@ def collect_news(ipos, old_news):
             'source': clean_text(source) or 'News',
             'link': link,
             'published_at': published.astimezone(dt.timezone.utc).isoformat(),
-            'topic': 'Live / Upcoming IPO'
+            'topic': 'Live / Upcoming IPO',
+            'ipo_name': clean_text(ipo.get('name')),
+            'ipo_status': str(ipo.get('status') or '').upper()
         })
 
-    for query, hint in queries:
+    for ipo in live[:12]:
+        name = clean_text(ipo.get('name'))
+        if not name: continue
+        query = urllib.parse.quote_plus(name + ' IPO')
         try:
-            url = NEWS_RSS.format(query=urllib.parse.quote_plus(query))
-            root = ET.fromstring(request_text(url, timeout=20))
+            root = ET.fromstring(request_text(NEWS_RSS.format(query=query), timeout=20))
             for item in root.findall('.//item'):
-                title = item.findtext('title', '')
-                link = item.findtext('link', '')
                 pub = item.findtext('pubDate', '')
-                source = item.findtext('source', '')
                 try:
                     published = parsedate_to_datetime(pub).astimezone(dt.timezone.utc) if pub else None
                 except Exception:
                     published = None
-                add_item(title, link, source, published, hint)
+                add_item(item.findtext('title', ''), item.findtext('link', ''),
+                         item.findtext('source', ''), published, ipo)
         except Exception as exc:
-            errors.append(f'{query}: {exc}')
+            errors.append(f'{name}: {exc}')
 
-    # Keep company-specific/current IPO stories ahead of generic IPO headlines.
-    def priority(item):
-        low = item['title'].lower()
-        for n, _ in [(clean_text(x.get('name')).lower(), '') for x in live[:6]]:
-            if n and n in low: return 0
-        return 1
-    stories.sort(key=lambda x: (priority(x), x.get('published_at', '')), reverse=False)
-
-    # Add previously successful recent stories only as a safety fallback when a feed is down.
+    # Reuse only recent old stories that still belong to a currently live/upcoming IPO.
     for old in old_news if isinstance(old_news, list) else []:
         if len(stories) >= 9: break
         if not isinstance(old, dict): continue
@@ -519,15 +514,21 @@ def collect_news(ipos, old_news):
             published = dt.datetime.fromisoformat(str(old.get('published_at')).replace('Z', '+00:00')) if old.get('published_at') else dt.datetime.combine(dt.date.fromisoformat(str(old.get('date'))), dt.time(), tzinfo=dt.timezone.utc)
         except Exception:
             continue
-        add_item(old.get('title'), old.get('link'), old.get('source'), published, 'ipo')
+        for ipo in live:
+            if matches_ipo(old.get('title', ''), ipo):
+                add_item(old.get('title'), old.get('link'), old.get('source'), published, ipo)
+                if len(stories) >= 9: break
 
     stories.sort(key=lambda x: x.get('published_at', ''), reverse=True)
     stories = stories[:9]
     if stories:
         NEWS_OUT.write_text(json.dumps(stories, ensure_ascii=False, indent=2), encoding='utf-8')
     elif NEWS_OUT.exists():
-        try: stories = json.loads(NEWS_OUT.read_text(encoding='utf-8'))[:9]
-        except Exception: stories = []
+        try:
+            old = json.loads(NEWS_OUT.read_text(encoding='utf-8'))
+            stories = [x for x in old if isinstance(x, dict) and x.get('ipo_name')][:9]
+        except Exception:
+            stories = []
     return stories, errors
 
 def merge_old_fields(new_ipos, old_ipos):
