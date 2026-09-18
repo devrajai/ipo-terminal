@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-18T02:16:11.140317+00:00",
+  "updated_at": "2026-09-18T02:42:52.167553+00:00",
   "sources": {
     "NSE": {
       "ok": true,
@@ -27,7 +27,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     }
   },
   "ipos": [
