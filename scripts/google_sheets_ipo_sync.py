@@ -121,6 +121,16 @@ def main():
         ["source_files", len(FILES)],
         ["status", "OK"],
     ])
+    # Persistent manual fallback tab. Never clear this tab during the normal sync.
+    try:
+        ws = book.worksheet("DATA_OVERRIDES")
+    except gspread.WorksheetNotFound:
+        ws = book.add_worksheet(title="DATA_OVERRIDES", rows=1000, cols=8)
+        ws.update("A1", [[
+            "dataset", "name", "field", "value", "source", "updated_at", "enabled", "notes"
+        ]], value_input_option="RAW")
+        ws.freeze(rows=1)
+        ws.format("A1:H1", {"textFormat": {"bold": True}})
     append_history(book, results)
     print(f"Google Sheets sync complete: {book.title}")
 
