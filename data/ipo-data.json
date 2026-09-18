@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-18T05:16:30.379608+00:00",
+  "updated_at": "2026-09-18T12:21:11.154Z",
   "sources": {
     "NSE": {
       "ok": true,
@@ -37,7 +37,7 @@
       "type": "Mainboard",
       "price": "₹94-99",
       "lot": "150",
-      "size": "₹0 Cr",
+      "size": "₹156 Cr",
       "open": "17/09/26",
       "close": "21/09/26",
       "listing": "—",
@@ -65,7 +65,13 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-17T17:52:06.379736+00:00",
-      "gmp_source_updated_at": null
+      "gmp_source_updated_at": null,
+      "_internet_fallback": {
+        "size": {
+          "source": "Economic Times",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        }
+      }
     },
     {
       "id": "national-stock-exchange-of-india-limited",
@@ -181,7 +187,7 @@
       "type": "Mainboard",
       "price": "₹79-84",
       "lot": "178",
-      "size": "₹0 Cr",
+      "size": "₹1,200 Cr",
       "open": "16/09/26",
       "close": "18/09/26",
       "listing": "—",
@@ -209,15 +215,21 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-17T17:52:06.379736+00:00",
-      "gmp_source_updated_at": null
+      "gmp_source_updated_at": null,
+      "_internet_fallback": {
+        "size": {
+          "source": "EquityTale",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        }
+      }
     },
     {
       "id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
       "type": "SME",
-      "price": "—",
-      "lot": "—",
-      "size": "—",
+      "price": "₹51-54",
+      "lot": "2000",
+      "size": "₹50.75 Cr",
       "open": "18/09/26",
       "close": "22/09/26",
       "listing": "—",
@@ -241,15 +253,29 @@
       "exchange": "BSE",
       "symbol": "AXIOMGAS",
       "source": "NSE",
-      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo"
+      "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
+      "_internet_fallback": {
+        "price": {
+          "source": "Zerodha + Moneycontrol",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "lot": {
+          "source": "Zerodha + Moneycontrol",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "size": {
+          "source": "Zerodha + Moneycontrol",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        }
+      }
     },
     {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
       "type": "SME",
-      "price": "—",
+      "price": "₹96-101",
       "lot": "1200",
-      "size": "—",
+      "size": "₹46.44 Cr",
       "open": "17/09/26",
       "close": "21/09/26",
       "listing": "—",
@@ -277,15 +303,29 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-17T17:52:06.379736+00:00",
-      "gmp_source_updated_at": null
+      "gmp_source_updated_at": null,
+      "_internet_fallback": {
+        "price": {
+          "source": "Zerodha + Goodreturns",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "lot": {
+          "source": "Zerodha + Goodreturns",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "size": {
+          "source": "Zerodha + Goodreturns",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        }
+      }
     },
     {
       "id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
       "type": "SME",
-      "price": "—",
+      "price": "₹112-118",
       "lot": "1200",
-      "size": "—",
+      "size": "₹50 Cr",
       "open": "17/09/26",
       "close": "21/09/26",
       "listing": "—",
@@ -313,7 +353,21 @@
       "gmp_source": "Chittorgarh",
       "gmp_source_url": "",
       "gmp_updated_at": "2026-09-17T17:52:06.379736+00:00",
-      "gmp_source_updated_at": null
+      "gmp_source_updated_at": null,
+      "_internet_fallback": {
+        "price": {
+          "source": "EquityTale",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "lot": {
+          "source": "EquityTale",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        },
+        "size": {
+          "source": "EquityTale",
+          "updated_at": "2026-09-18T00:00:00+00:00"
+        }
+      }
     },
     {
       "id": "manika-plastech-limited",
