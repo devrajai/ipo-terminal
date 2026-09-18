@@ -139,7 +139,7 @@ function renderNews(){
   const el=document.getElementById('news-list');
   const sections=buckets.map(b=>{
     const rows=relatedFor(b.items,b.key);
-    return '<section class="news-group"><div class="news-group-head"><h3>'+b.label+' IPO NEWS</h3><span class="news-count">'+rows.length+'/3</span></div>'+
+    return '<section class="news-group"><div class="news-group-head"><h3>'+b.label+' IPO NEWS</h3></div>'+
       (rows.length?rows.map(x=>'<article class="card glass news"><a href="'+esc(x.link)+'" target="_blank" rel="noopener"><b>'+esc(x.title)+'</b></a><div class="meta"><span class="badge '+b.key+'">'+b.label+'</span> <span>'+esc(x.ipo_name||'IPO')+'</span> • '+esc(x.source||'Source')+' • '+date(x.date)+'</div></article>').join(''):'<div class="empty">No current '+b.label.toLowerCase()+' IPO news available right now.</div>')+
       '</section>';
   }).join('');
