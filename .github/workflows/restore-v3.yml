@@ -1,0 +1,52 @@
+name: Restore why-v3 parts
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: restore-v3
+  cancel-in-progress: true
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Assemble, verify, install
+        run: |
+          set -e
+          cat parts/v3-*.b64 > /tmp/all.b64
+          base64 -d /tmp/all.b64 > /tmp/fix.tgz
+          echo "a82cff3a07f02a872bdd50c9f86bf51a5aea985d7c9d1abff713bcf6c9035970  /tmp/fix.tgz" | sha256sum -c -
+          mkdir -p /tmp/x && tar xzf /tmp/fix.tgz -C /tmp/x
+          cp /tmp/x/scripts/why-v3-segment.js scripts/why-v3-segment.js
+          cp /tmp/x/scripts/apply-why-v3.py scripts/apply-why-v3.py
+          cp /tmp/x/scripts/apply-card-fix.py scripts/apply-card-fix.py
+          python3 -m py_compile scripts/apply-why-v3.py scripts/apply-card-fix.py
+          node --check scripts/why-v3-segment.js
+          rm -rf parts
+          echo "installed and verified"
+
+      - name: Commit if changed (with retry)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "chore: install verified why-v3 segment + patchers [skip ci]"
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push; then exit 0; fi
+              sleep 5
+            done
+            echo "push failed after retries"; exit 1
+          fi

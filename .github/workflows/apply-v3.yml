@@ -1,0 +1,46 @@
+name: Apply why-v3 + card fix
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-v3
+  cancel-in-progress: true
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply why-v3 to protools
+        run: python3 scripts/apply-why-v3.py
+
+      - name: Remove card buttons in index.html
+        run: python3 scripts/apply-card-fix.py
+
+      - name: Syntax check
+        run: node --check scripts/ipo-protools.js
+
+      - name: Commit if changed (with retry)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "feat: why-v3 sub-tabs (compare all, how we score, anchor books) + clean open cards [skip ci]"
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push; then exit 0; fi
+              sleep 5
+            done
+            echo "push failed after retries"; exit 1
+          fi
