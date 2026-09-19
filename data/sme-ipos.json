@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T05:16:30.379608+00:00",
+  "updated_at": "2026-09-19T09:24:26.559349+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -24,6 +24,70 @@
       "close_date": "21/09/26",
       "issue_size": "—",
       "status": "open"
+    },
+    {
+      "company": "Pooja Logistics Limited",
+      "exchange": "NSE",
+      "open_date": "23/09/26",
+      "close_date": "25/09/26",
+      "issue_size": "₹44 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "S. K. Offset Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "23/09/26",
+      "close_date": "—",
+      "issue_size": "₹29.06 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Sai Urja Indo Ventures Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "23/09/26",
+      "close_date": "—",
+      "issue_size": "₹24.95 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Himalaya Nutravedics India Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "22/09/26",
+      "close_date": "—",
+      "issue_size": "₹26.5 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Anand Seamless Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "22/09/26",
+      "close_date": "—",
+      "issue_size": "₹25.52 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "FX Multitech Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "21/09/26",
+      "close_date": "—",
+      "issue_size": "₹45.24 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Robokidz Eduventures Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "21/09/26",
+      "close_date": "—",
+      "issue_size": "₹31.09 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Vivekanand Cotspin Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "21/09/26",
+      "close_date": "—",
+      "issue_size": "₹22.2 Cr",
+      "status": "upcoming"
     }
   ]
 }

@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-17T05:57:39.559326+00:00",
-  "today_ist": "2026-09-17",
-  "data_updated_at": "2026-09-17T11:27:16.733491+05:30",
-  "ipo_count": 12,
-  "field_coverage_pct": 32.1,
+  "generated_at": "2026-09-19T03:55:22.721457+00:00",
+  "today_ist": "2026-09-19",
+  "data_updated_at": "2026-09-19T09:24:26.559349+05:30",
+  "ipo_count": 19,
+  "field_coverage_pct": 26.6,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 8,
+      "records": 10,
       "errors": []
     },
     "BSE": {
@@ -33,14 +33,25 @@
       ],
       "errors": [
         "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "GMPWatch: HTTP Error 403: Forbidden",
+        "IPOGram: HTTP Error 403: Forbidden"
       ]
     },
+    "NEWS": {
+      "ok": true,
+      "records": 6,
+      "source": "Google News RSS public feeds",
+      "window_days": 5,
+      "errors": []
+    },
+    "LISTED": {
+      "ok": false,
+      "records": 0,
+      "source": "Economic Times recently-listed IPO table",
+      "errors": []
+    },
     "PublicAggregators": {
-      "checked_at": "2026-09-17T05:56:59.683667+00:00",
+      "checked_at": "2026-09-19T03:52:44.897674+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -52,15 +63,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 6,
+          "matched": 1,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 4,
-          "matched": 0,
-          "added": 4,
+          "records": 10,
+          "matched": 1,
+          "added": 9,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -75,39 +86,39 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 12,
+      "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-17T05:57:01.649062+00:00"
+      "checked_at": "2026-09-19T03:52:46.908519+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-17T05:57:02.869289+00:00",
+      "checked_at": "2026-09-19T03:53:49.765655+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
     "VideoKnowledge": {
       "ok": true,
       "records": 2,
-      "changed_fields": 10,
+      "changed_fields": 0,
       "live_gmp_records": 0,
-      "rejected_gmp_records": 1,
-      "checked_at": "2026-09-17T05:57:03.007059+00:00"
+      "rejected_gmp_records": 0,
+      "checked_at": "2026-09-19T03:53:49.833892+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-17T05:57:03.058410+00:00"
+      "checked_at": "2026-09-19T03:53:49.879698+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-17T05:57:03.261207+00:00",
+      "checked_at": "2026-09-19T03:53:50.022233+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 100,
+          "records": 101,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -131,19 +142,19 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-17T05:57:03.261207+00:00"
+      "checked_at": "2026-09-19T03:53:50.022233+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30",
-      "status_repairs": 1,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30",
+      "status_repairs": 3,
       "sme_added": 0,
       "filings": {
         "checked": 21,
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 4,
+      "upcoming_filing_map": 11,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -152,22 +163,22 @@
     {
       "id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
-      "fingerprint": "b33eb78d1bdcc2dc",
+      "fingerprint": "8064733bd5cb0226",
       "fields": {
         "price": "₹1700-1785",
-        "size": "22568.94",
+        "size": "₹0 Cr",
         "lot": "8",
         "open": "17/09/26",
-        "close": "Sep 21, 2026",
+        "close": "21/09/26",
         "allotment": "22/09/26",
         "listing": "24/09/26",
         "sub": "—",
-        "sub_qib": "0.00",
-        "sub_nii": "0.09",
-        "sub_retail": "0.07",
-        "gmp": "₹21",
-        "gmp_pct": "+1.2%",
-        "est_list": "₹1806",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹148",
+        "gmp_pct": "+8.3%",
+        "est_list": "₹1933",
         "pe": "—",
         "roe": "—",
         "roce": "—",
@@ -180,22 +191,22 @@
     {
       "id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "fingerprint": "c161e153d3fe7701",
+      "fingerprint": "72e9b4ae6d603953",
       "fields": {
         "price": "₹94-99",
-        "size": "141.57",
+        "size": "₹0 Cr",
         "lot": "150",
         "open": "17/09/26",
-        "close": "Sep 21, 2026",
+        "close": "21/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
         "sub_retail": null,
-        "gmp": "₹21",
-        "gmp_pct": "—",
-        "est_list": "—",
+        "gmp": "₹2",
+        "gmp_pct": "+2.0%",
+        "est_list": "₹101",
         "pe": "—",
         "roe": "—",
         "roce": "—",
@@ -206,99 +217,15 @@
       }
     },
     {
-      "id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "fingerprint": "528c854d5bbbfdc3",
-      "fields": {
-        "price": "₹403-424",
-        "size": "500.00",
-        "lot": "35",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": "0.20",
-        "sub_nii": "1.57",
-        "sub_retail": "2.37",
-        "gmp": "₹21",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "fingerprint": "ad2fec6b618d7c48",
-      "fields": {
-        "price": "₹79-84",
-        "size": "1000.00",
-        "lot": "178",
-        "open": "16/09/26",
-        "close": "Sep 18, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": "0.01",
-        "sub_nii": "1.30",
-        "sub_retail": "2.43",
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fingerprint": "552db01f03a2c458",
-      "fields": {
-        "price": "₹88-93",
-        "size": "₹87 Cr",
-        "lot": "161",
-        "open": "16/09/26",
-        "close": "18/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "15%",
-        "de": "0.18",
-        "fresh": "80%",
-        "ofs": "20%"
-      }
-    },
-    {
-      "id": "spectraa-technology-solutions-limited",
-      "name": "SpectraA Technology Solutions Limited",
-      "fingerprint": "e5e65a48933060de",
+      "id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "fingerprint": "e5a19f72f3411ed5",
       "fields": {
         "price": "—",
-        "size": "42.52",
-        "lot": "1200",
-        "open": "17/09/26",
-        "close": "Sep 21, 2026",
+        "size": "—",
+        "lot": "2000",
+        "open": "18/09/26",
+        "close": "22/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -320,13 +247,153 @@
     {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
-      "fingerprint": "0ea628283631fbf9",
+      "fingerprint": "005cea4a86435a5a",
       "fields": {
         "price": "—",
-        "size": "46.44",
+        "size": "—",
         "lot": "1200",
         "open": "17/09/26",
-        "close": "Sep 21, 2026",
+        "close": "21/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹10",
+        "gmp_pct": "+9.9%",
+        "est_list": "₹111",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fingerprint": "29ad1f1961ad3bed",
+      "fields": {
+        "price": "—",
+        "size": "—",
+        "lot": "1200",
+        "open": "17/09/26",
+        "close": "21/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹30",
+        "gmp_pct": "+25.4%",
+        "est_list": "₹148",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fingerprint": "32efe244a4759408",
+      "fields": {
+        "price": "₹79-84",
+        "size": "₹744 Cr",
+        "lot": "178",
+        "open": "16/09/26",
+        "close": "18/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹6",
+        "gmp_pct": "+7.1%",
+        "est_list": "₹90",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fingerprint": "c0bd88fecafcee55",
+      "fields": {
+        "price": "₹88-93",
+        "size": "₹87 Cr",
+        "lot": "161",
+        "open": "16/09/26",
+        "close": "18/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹30",
+        "gmp_pct": "+32.3%",
+        "est_list": "₹123",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "15%",
+        "de": "0.18",
+        "fresh": "80%",
+        "ofs": "20%"
+      }
+    },
+    {
+      "id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fingerprint": "d5f8ac1920a37ab6",
+      "fields": {
+        "price": "₹403-424",
+        "size": "₹373 Cr",
+        "lot": "35",
+        "open": "16/09/26",
+        "close": "18/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹137",
+        "gmp_pct": "+32.3%",
+        "est_list": "₹561",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fingerprint": "e647454749defff8",
+      "fields": {
+        "price": "₹140 – ₹148",
+        "size": "₹708.02 Cr",
+        "lot": "101",
+        "open": "22/09/26",
+        "close": "Sep 24, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -346,17 +413,17 @@
       }
     },
     {
-      "id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "fingerprint": "58ef5771ab70e649",
+      "id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
+      "fingerprint": "c36c5629f7e3adf5",
       "fields": {
-        "price": "₹40-43",
-        "size": "₹92 Cr",
-        "lot": 348,
-        "open": "11/09/26",
-        "close": "16/09/26",
-        "allotment": "17/09/26",
-        "listing": "21/09/26",
+        "price": "₹109-115",
+        "size": "₹44 Cr",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "25/09/26",
+        "allotment": null,
+        "listing": "—",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
@@ -364,13 +431,69 @@
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
-        "pe": "18x pre-issue; ~9x post-issue shown in the video (data-consistency warning)",
+        "pe": "—",
         "roe": "—",
         "roce": "—",
-        "growth": "25%",
-        "de": "0.20",
-        "fresh": "100%",
-        "ofs": "0%"
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "a-one-steels-india-ltd-mainboard",
+      "name": "A-One Steels India Ltd. Mainboard",
+      "fingerprint": "5b8e910a6997ce27",
+      "fields": {
+        "price": "₹385 – ₹405",
+        "size": "₹405 Cr",
+        "lot": "37",
+        "open": "24/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "armee-infotech-ltd-mainboard",
+      "name": "ArMee Infotech Ltd. Mainboard",
+      "fingerprint": "3924f5e84112086b",
+      "fields": {
+        "price": "₹350 – ₹375",
+        "size": "₹300 Cr",
+        "lot": "40",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
       }
     },
     {
@@ -382,6 +505,90 @@
         "size": "₹29.06 Cr",
         "lot": "1000",
         "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "sai-urja-indo-ventures-ltd-sme",
+      "name": "Sai Urja Indo Ventures Ltd. SME",
+      "fingerprint": "60173f5659098e49",
+      "fields": {
+        "price": "₹107 – ₹113",
+        "size": "₹24.95 Cr",
+        "lot": "1200",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "himalaya-nutravedics-india-ltd-sme",
+      "name": "Himalaya Nutravedics India Ltd. SME",
+      "fingerprint": "02499861792a9706",
+      "fields": {
+        "price": "₹100 – ₹106",
+        "size": "₹26.5 Cr",
+        "lot": "1200",
+        "open": "22/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "anand-seamless-ltd-sme",
+      "name": "Anand Seamless Ltd. SME",
+      "fingerprint": "5bcea20a90e1df26",
+      "fields": {
+        "price": "₹72",
+        "size": "₹25.52 Cr",
+        "lot": "1600",
+        "open": "22/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -458,14 +665,14 @@
       }
     },
     {
-      "id": "axiom-gas-engineering-ltd-sme",
-      "name": "Axiom Gas Engineering Ltd. SME",
-      "fingerprint": "fa2638698ec84a3d",
+      "id": "vivekanand-cotspin-ltd-sme",
+      "name": "Vivekanand Cotspin Ltd. SME",
+      "fingerprint": "9a6556bb8af2a7b4",
       "fields": {
-        "price": "₹50 – ₹53",
-        "size": "₹49.81 Cr",
-        "lot": "2000",
-        "open": "18/09/26",
+        "price": "₹32 – ₹37",
+        "size": "₹22.2 Cr",
+        "lot": "3000",
+        "open": "21/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -488,20 +695,6 @@
   ],
   "events": [
     {
-      "date": "2026-09-11",
-      "type": "OPEN",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-16",
-      "type": "CLOSE",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "source": "NSE"
-    },
-    {
       "date": "2026-09-16",
       "type": "OPEN",
       "ipo_id": "hero-motors-limited",
@@ -520,13 +713,6 @@
       "type": "OPEN",
       "ipo_id": "ss-retail-limited",
       "name": "SS Retail Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "ALLOTMENT",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
       "source": "NSE"
     },
     {
@@ -560,22 +746,57 @@
     {
       "date": "2026-09-18",
       "type": "CLOSE",
+      "ipo_id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-18",
+      "type": "CLOSE",
       "ipo_id": "jindal-supreme-india-limited",
       "name": "Jindal Supreme (India) Limited",
       "source": "NSE"
     },
     {
       "date": "2026-09-18",
+      "type": "CLOSE",
+      "ipo_id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-18",
       "type": "OPEN",
-      "ipo_id": "axiom-gas-engineering-ltd-sme",
-      "name": "Axiom Gas Engineering Ltd. SME",
-      "source": "Economic Times"
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-21",
-      "type": "LISTING",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
+      "type": "CLOSE",
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "CLOSE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "CLOSE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-21",
+      "type": "CLOSE",
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
       "source": "NSE"
     },
     {
@@ -593,10 +814,59 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-21",
+      "type": "OPEN",
+      "ipo_id": "vivekanand-cotspin-ltd-sme",
+      "name": "Vivekanand Cotspin Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-22",
       "type": "ALLOTMENT",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "CLOSE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "anand-seamless-ltd-sme",
+      "name": "Anand Seamless Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "himalaya-nutravedics-india-ltd-sme",
+      "name": "Himalaya Nutravedics India Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "armee-infotech-ltd-mainboard",
+      "name": "ArMee Infotech Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
       "source": "NSE"
     },
     {
@@ -607,14 +877,287 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "sai-urja-indo-ventures-ltd-sme",
+      "name": "Sai Urja Indo Ventures Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "a-one-steels-india-ltd-mainboard",
+      "name": "A-One Steels India Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
+      "source": "NSE"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fields": [
+        "size",
+        "close",
+        "sub_qib",
+        "sub_nii",
+        "sub_retail",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fields": [
+        "size",
+        "close",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "fields": [
+        "size",
+        "close",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fields": [
+        "size",
+        "close",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "hero-motors-limited",
+      "name": "Hero Motors Limited",
+      "fields": [
+        "size",
+        "close",
+        "sub_qib",
+        "sub_nii",
+        "sub_retail",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "jindal-supreme-india-limited",
+      "name": "Jindal Supreme (India) Limited",
+      "fields": [
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "ss-retail-limited",
+      "name": "SS Retail Limited",
+      "fields": [
+        "size",
+        "close",
+        "sub_qib",
+        "sub_nii",
+        "sub_retail",
+        "gmp",
+        "gmp_pct",
+        "est_list"
+      ]
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "CLOSE",
+        "ipo_id": "kheria-autocomp-limited",
+        "name": "Kheria Autocomp Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "CLOSE",
+        "ipo_id": "national-stock-exchange-of-india-limited",
+        "name": "National Stock Exchange of India Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "CLOSE",
+        "ipo_id": "sonaselection-india-limited",
+        "name": "Sonaselection India Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "CLOSE",
+        "ipo_id": "spectraa-technology-solutions-limited",
+        "name": "SpectraA Technology Solutions Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-21",
+        "type": "OPEN",
+        "ipo_id": "vivekanand-cotspin-ltd-sme",
+        "name": "Vivekanand Cotspin Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-22",
+        "type": "CLOSE",
+        "ipo_id": "axiom-gas-engineering-limited",
+        "name": "Axiom Gas Engineering Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-22",
+        "type": "OPEN",
+        "ipo_id": "anand-seamless-ltd-sme",
+        "name": "Anand Seamless Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-22",
+        "type": "OPEN",
+        "ipo_id": "himalaya-nutravedics-india-ltd-sme",
+        "name": "Himalaya Nutravedics India Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-22",
+        "type": "OPEN",
+        "ipo_id": "varmora-granito-limited",
+        "name": "Varmora Granito Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "armee-infotech-ltd-mainboard",
+        "name": "ArMee Infotech Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "pooja-logistics-limited",
+        "name": "Pooja Logistics Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "sai-urja-indo-ventures-ltd-sme",
+        "name": "Sai Urja Indo Ventures Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "a-one-steels-india-ltd-mainboard",
+        "name": "A-One Steels India Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-19T03:55:22.721457+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "CLOSE",
+        "ipo_id": "pooja-logistics-limited",
+        "name": "Pooja Logistics Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-17T05:37:06.523944+00:00",
       "type": "DATA_CHANGE",

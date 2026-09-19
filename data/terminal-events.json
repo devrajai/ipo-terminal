@@ -1,61 +1,33 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-17T05:57:39.559326+00:00",
+  "generated_at": "2026-09-19T03:55:22.721457+00:00",
   "events": [
     {
-      "date": "2026-09-17",
-      "type": "ALLOTMENT",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "OPEN",
+      "date": "2026-09-21",
+      "type": "CLOSE",
       "ipo_id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
       "source": "NSE"
     },
     {
-      "date": "2026-09-17",
-      "type": "OPEN",
+      "date": "2026-09-21",
+      "type": "CLOSE",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
       "source": "NSE"
     },
     {
-      "date": "2026-09-17",
-      "type": "OPEN",
+      "date": "2026-09-21",
+      "type": "CLOSE",
       "ipo_id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
       "source": "NSE"
     },
     {
-      "date": "2026-09-17",
-      "type": "OPEN",
+      "date": "2026-09-21",
+      "type": "CLOSE",
       "ipo_id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "CLOSE",
-      "ipo_id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-18",
-      "type": "OPEN",
-      "ipo_id": "axiom-gas-engineering-ltd-sme",
-      "name": "Axiom Gas Engineering Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "LISTING",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
       "source": "NSE"
     },
     {
@@ -73,10 +45,59 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-21",
+      "type": "OPEN",
+      "ipo_id": "vivekanand-cotspin-ltd-sme",
+      "name": "Vivekanand Cotspin Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-22",
       "type": "ALLOTMENT",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "CLOSE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "anand-seamless-ltd-sme",
+      "name": "Anand Seamless Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "himalaya-nutravedics-india-ltd-sme",
+      "name": "Himalaya Nutravedics India Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-22",
+      "type": "OPEN",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "armee-infotech-ltd-mainboard",
+      "name": "ArMee Infotech Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
       "source": "NSE"
     },
     {
@@ -87,10 +108,31 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "sai-urja-indo-ventures-ltd-sme",
+      "name": "Sai Urja Indo Ventures Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "a-one-steels-india-ltd-mainboard",
+      "name": "A-One Steels India Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
       "source": "NSE"
     }
   ]

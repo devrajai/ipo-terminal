@@ -1,8 +1,60 @@
 {
-  "generated_at": "2026-09-17T11:27:16.733491+05:30",
+  "generated_at": "2026-09-19T09:24:26.559349+05:30",
   "source": "IPO Terminal self-heal official-source checker",
-  "count": 4,
+  "count": 11,
   "ipos": [
+    {
+      "ipo_name": "Varmora Granito Limited",
+      "id": "varmora-granito-limited",
+      "type": "Mainboard",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "22/09/26",
+      "close": "Sep 24, 2026",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "Pooja Logistics Limited",
+      "id": "pooja-logistics-limited",
+      "type": "SME",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "23/09/26",
+      "close": "25/09/26",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "A-One Steels India Ltd. Mainboard",
+      "id": "a-one-steels-india-ltd-mainboard",
+      "type": "Mainboard",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "24/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "ArMee Infotech Ltd. Mainboard",
+      "id": "armee-infotech-ltd-mainboard",
+      "type": "Mainboard",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "23/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
       "id": "s-k-offset-ltd-sme",
@@ -14,7 +66,46 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "Sai Urja Indo Ventures Ltd. SME",
+      "id": "sai-urja-indo-ventures-ltd-sme",
+      "type": "SME",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "23/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "Himalaya Nutravedics India Ltd. SME",
+      "id": "himalaya-nutravedics-india-ltd-sme",
+      "type": "SME",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "22/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
+    },
+    {
+      "ipo_name": "Anand Seamless Ltd. SME",
+      "id": "anand-seamless-ltd-sme",
+      "type": "SME",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "22/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
     },
     {
       "ipo_name": "FX Multitech Ltd. SME",
@@ -27,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
     },
     {
       "ipo_name": "Robokidz Eduventures Ltd. SME",
@@ -40,20 +131,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
     },
     {
-      "ipo_name": "Axiom Gas Engineering Ltd. SME",
-      "id": "axiom-gas-engineering-ltd-sme",
+      "ipo_name": "Vivekanand Cotspin Ltd. SME",
+      "id": "vivekanand-cotspin-ltd-sme",
       "type": "SME",
       "exchange": "NSE/BSE",
       "status": "upcoming",
-      "open": "18/09/26",
+      "open": "21/09/26",
       "close": "—",
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-17T11:27:16.733491+05:30"
+      "checked_at": "2026-09-19T09:24:26.559349+05:30"
     }
   ]
 }

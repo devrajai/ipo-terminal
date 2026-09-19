@@ -1,0 +1,273 @@
+{
+  "updated_at": "2026-09-19T03:51:08.317301+00:00",
+  "india": [
+    {
+      "name": "Nifty 50",
+      "symbol": "NIFTY 50",
+      "price": 23346.4,
+      "change": 75.8,
+      "change_pct": 0.33
+    },
+    {
+      "name": "Nifty Bank",
+      "symbol": "NIFTY BANK",
+      "price": 56358.7,
+      "change": 302.95,
+      "change_pct": 0.54
+    },
+    {
+      "name": "Nifty Next 50",
+      "symbol": "NIFTY NEXT 50",
+      "price": 72025.4,
+      "change": 881.4,
+      "change_pct": 1.24
+    },
+    {
+      "name": "India VIX",
+      "symbol": "INDIA VIX",
+      "price": 11.39,
+      "change": -0.9,
+      "change_pct": -7.36
+    },
+    {
+      "name": "Nifty Midcap 100",
+      "symbol": "NIFTY MIDCAP 100",
+      "price": 62191.25,
+      "change": 759.15,
+      "change_pct": 1.24
+    },
+    {
+      "name": "Nifty Smallcap 100",
+      "symbol": "NIFTY SMALLCAP 100",
+      "price": 19875.7,
+      "change": 340,
+      "change_pct": 1.74
+    },
+    {
+      "name": "Nifty It",
+      "symbol": "NIFTY IT",
+      "price": 28854.55,
+      "change": -301.05,
+      "change_pct": -1.03
+    },
+    {
+      "name": "Nifty Auto",
+      "symbol": "NIFTY AUTO",
+      "price": 27129,
+      "change": -30.15,
+      "change_pct": -0.11
+    },
+    {
+      "name": "Nifty Pharma",
+      "symbol": "NIFTY PHARMA",
+      "price": 26710.1,
+      "change": 130.85,
+      "change_pct": 0.49
+    },
+    {
+      "name": "Nifty Fmcg",
+      "symbol": "NIFTY FMCG",
+      "price": 45466.8,
+      "change": -105.9,
+      "change_pct": -0.23
+    },
+    {
+      "name": "Nifty Metal",
+      "symbol": "NIFTY METAL",
+      "price": 13052.6,
+      "change": 194.15,
+      "change_pct": 1.51
+    },
+    {
+      "name": "Nifty Energy",
+      "symbol": "NIFTY ENERGY",
+      "price": 37773.55,
+      "change": 391.8,
+      "change_pct": 1.05
+    },
+    {
+      "name": "Nifty Realty",
+      "symbol": "NIFTY REALTY",
+      "price": 844.2,
+      "change": 9.95,
+      "change_pct": 1.19
+    },
+    {
+      "name": "Nifty Media",
+      "symbol": "NIFTY MEDIA",
+      "price": 1553.75,
+      "change": 20.6,
+      "change_pct": 1.34
+    }
+  ],
+  "world": [],
+  "commodities": [],
+  "fx": [
+    {
+      "name": "USD/INR",
+      "symbol": "USDINR",
+      "price": 95.88,
+      "change": null,
+      "change_pct": null
+    }
+  ],
+  "derived": {},
+  "sheet_listed_ipos": [
+    [
+      "IPO Name",
+      "Ticker",
+      "Issue Price (₹)",
+      "Listing Date",
+      "Listing Price (₹)",
+      "Listing Gain %",
+      "Current Price",
+      "Current Gain %"
+    ],
+    [
+      "ESDS Software Solutions",
+      "NSE:ESDS",
+      "236",
+      "19/10/22",
+      "212",
+      "-10.17",
+      "1564.55",
+      "562.94"
+    ],
+    [
+      "Tata Technologies",
+      "NSE:TATATECH",
+      "500",
+      "30/11/23",
+      "1200",
+      "140",
+      "719",
+      "43.8"
+    ],
+    [
+      "Manika Plastech",
+      "",
+      "42",
+      "21/09/26",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "NSE of India",
+      "",
+      "1785",
+      "24/09/26",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "HOW TO USE",
+      "After an IPO lists, type its NSE ticker in column B (e.g. NSE:NAME). Current price and gain update automatically.",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "For SME IPOs use NSE: or BSE: prefix if supported, otherwise prices show —",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  ],
+  "sheet_corporate_actions": [
+    [
+      "Date",
+      "Type",
+      "Company / Event",
+      "Details",
+      "Source"
+    ],
+    [
+      "18/09/26",
+      "IPO Close",
+      "Hero Motors, Jindal Supremo, SS Retail",
+      "Subscription closes today",
+      "NSE"
+    ],
+    [
+      "18/09/26",
+      "IPO Open",
+      "Axiom Gas Engineering (SME)",
+      "Subscription opens",
+      "Economic Times"
+    ],
+    [
+      "21/09/26",
+      "IPO Close",
+      "NSE India, Sonasel, SpectraA, Kheria",
+      "Subscription closes",
+      "NSE"
+    ],
+    [
+      "21/09/26",
+      "Listing",
+      "Manika Plastech",
+      "NSE SME listing",
+      "NSE"
+    ],
+    [
+      "21/09/26",
+      "IPO Open",
+      "FX Multitech, Robokidz (SME)",
+      "Subscription opens",
+      "Economic Times"
+    ],
+    [
+      "22/09/26",
+      "Allotment",
+      "NSE of India",
+      "Allotment expected",
+      "Registrar"
+    ],
+    [
+      "23/09/26",
+      "IPO Open",
+      "S. K. Offset (SME)",
+      "Subscription opens",
+      "Economic Times"
+    ],
+    [
+      "23/09/26",
+      "Refund/Credit",
+      "NSE of India",
+      "Refunds begin + shares credited",
+      "Registrar"
+    ],
+    [
+      "24/09/26",
+      "Listing",
+      "National Stock Exchange of India",
+      "Mainboard listing — biggest Indian exchange IPO",
+      "NSE"
+    ],
+    [
+      "Oct 2026",
+      "Results",
+      "Q2 FY27 earnings season",
+      "TCS typically kicks off mid-October",
+      "Trend"
+    ],
+    [
+      "",
+      "Add dividends, bonus, splits, buybacks, board meetings, results dates as announced. The website auto-pulls this tab every 5 min once the bridge is enabled.",
+      "",
+      "",
+      ""
+    ]
+  ]
+}
