@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T10:03:54.251557+00:00",
+  "generated_at": "2026-09-19T10:48:44.085032+00:00",
   "today_ist": "2026-09-19",
-  "data_updated_at": "2026-09-19T15:33:27.257791+05:30",
+  "data_updated_at": "2026-09-19T16:18:15.312674+05:30",
   "ipo_count": 19,
   "field_coverage_pct": 26.6,
   "sources": {
@@ -32,7 +32,9 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "GMPWatch: HTTP Error 403: Forbidden",
+        "IPOGram: HTTP Error 403: Forbidden"
       ]
     },
     "NEWS": {
@@ -49,7 +51,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T10:03:12.642160+00:00",
+      "checked_at": "2026-09-19T10:47:56.464577+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +89,12 @@
       "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T10:03:13.647772+00:00"
+      "checked_at": "2026-09-19T10:47:58.220269+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T10:03:15.459341+00:00",
+      "checked_at": "2026-09-19T10:48:00.609142+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +104,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T10:03:15.529379+00:00"
+      "checked_at": "2026-09-19T10:48:00.677581+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T10:03:15.574618+00:00"
+      "checked_at": "2026-09-19T10:48:00.721052+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-19T10:03:15.714725+00:00",
+      "checked_at": "2026-09-19T10:48:00.859218+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +142,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-19T10:03:15.714725+00:00"
+      "checked_at": "2026-09-19T10:48:00.859218+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-19T15:33:27.257791+05:30",
+      "checked_at": "2026-09-19T16:18:15.312674+05:30",
       "status_repairs": 3,
       "sme_added": 0,
       "filings": {
