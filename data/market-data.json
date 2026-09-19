@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T06:22:10.871813+00:00",
+  "updated_at": "2026-09-19T06:36:45.319050+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -101,15 +101,7 @@
     }
   ],
   "world": [],
-  "commodities": [
-    {
-      "price": 67.15,
-      "change": 1.05,
-      "change_pct": 1.59,
-      "name": "Silver ($/oz)",
-      "symbol": "SI=F"
-    }
-  ],
+  "commodities": [],
   "fx": [
     {
       "name": "USD/INR",
@@ -119,9 +111,7 @@
       "change_pct": null
     }
   ],
-  "derived": {
-    "silver_inr_per_kg": 206997.35
-  },
+  "derived": {},
   "sheet_listed_ipos": [
     [
       "IPO Name",
