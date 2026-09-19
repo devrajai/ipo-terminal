@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T16:20:54.920384+00:00",
+  "generated_at": "2026-09-19T16:34:44.648234+00:00",
   "today_ist": "2026-09-19",
-  "data_updated_at": "2026-09-19T21:50:08.772981+05:30",
+  "data_updated_at": "2026-09-19T22:03:58.155843+05:30",
   "ipo_count": 19,
   "field_coverage_pct": 31.3,
   "sources": {
@@ -32,7 +32,8 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "GMPWatch: HTTP Error 403: Forbidden",
+        "IPOGram: HTTP Error 403: Forbidden"
       ]
     },
     "NEWS": {
@@ -40,7 +41,13 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": []
+      "errors": [
+        "\"National Stock Exchange of India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Sonaselection India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Axiom Gas Engineering Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Kheria Autocomp Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"SpectraA Technology Solutions Limited\" IPO India: HTTP Error 503: Service Unavailable"
+      ]
     },
     "LISTED": {
       "ok": false,
@@ -49,7 +56,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T16:19:14.979286+00:00",
+      "checked_at": "2026-09-19T16:32:38.822943+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +94,12 @@
       "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T16:19:18.355134+00:00"
+      "checked_at": "2026-09-19T16:32:41.353610+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T16:19:39.692612+00:00",
+      "checked_at": "2026-09-19T16:32:58.499607+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,49 +109,53 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T16:19:39.744213+00:00"
+      "checked_at": "2026-09-19T16:32:58.566562+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T16:19:39.776868+00:00"
+      "checked_at": "2026-09-19T16:32:58.610008+00:00"
     },
     "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-19T16:19:39.879995+00:00",
+      "ok": false,
+      "records": 0,
+      "checked_at": "2026-09-19T16:32:58.748970+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": true,
-          "records": 92,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 59,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         }
       }
     },
     "FilingVerification": {
       "ok": true,
       "records": 13,
-      "verified": 4,
-      "checked_at": "2026-09-19T16:19:39.879995+00:00"
+      "verified": 5,
+      "checked_at": "2026-09-19T16:32:58.748970+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-19T21:50:08.772981+05:30",
+      "checked_at": "2026-09-19T22:03:58.155843+05:30",
       "status_repairs": 3,
       "sme_added": 0,
       "filings": {
