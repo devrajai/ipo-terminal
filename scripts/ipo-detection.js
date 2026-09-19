@@ -1,8 +1,8 @@
 (()=>{if(window.__IPODET_V2)return;window.__IPODET_V2=1;
-const $=s=>document.querySelector(s), E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=s=>document.querySelector(s), E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&'+'amp;','<':'&'+'lt;','>':'&'+'gt;','"':'&'+'quot;',"'":'&'+'#39;'}[c]));
 const num=v=>{const m=String(v??'').replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?Number(m[0]):null};
 const pair=v=>{const a=String(v??'').replace(/₹|,/g,'').match(/\d+(?:\.\d+)?/g);return a&&a.length?{lo:+a[0],hi:+(a[1]||a[0])}:null};
-const norm=v=>String(v??'').toLowerCase().replace(/limited|ltt|india|private|pvt|[\W_]/g,'');
+const norm=v=>String(v??'').toLowerCase().replace(/limited|ltd|india|private|pvt|[\W_]/g,'');
 const money=v=>Number.isFinite(v)?'₹'+Math.round(v).toLocaleString('en-IN'):'—';
 const find=(a,n)=>{const q=norm(n);return(a||[]).find(x=>norm(x.name)===q)||(a||[]).find(x=>norm(x.name).includes(q)||q.includes(norm(x.name)))};
 let data=[],mode='all',ref='',budget=0,listedData=[];
@@ -14,7 +14,7 @@ const videos=[
  ['Fundamental','Hero Motors IPO review','https://youtu.be/IM3MBqDevU0?si=Nr52pzxVyEi_Y4sY','User supplied'],
  ['Fundamental','Manika Plastech IPO review','https://youtu.be/Wsu2ucCD8t8?si=NHXLdQA8FlblMiSc','User supplied'],
  ['Fundamental','Veegaland Developers final verdict','https://youtu.be/7JFFisRByYM?si=AfrqVSNHLXKhu6f_','User supplied'],
- ['User video','IPO video — title not resolved','https://youtu.be/dniTzu91L08?si=hK4PQBK_cY4N6RV2','User supplied'],
+ ['User video','IPO video — title not resolved','https://youtu.be/dniTzu91L08?si=kK4PQBK_cY4N6RV2','User supplied'],
  ['Comparison','Hero Motors vs Jindal Supreme vs SS Retail','https://youtu.be/GH12ezWhHek?si=OpXp_33efW_kqwqs','User supplied'],
  ['Comparison','Veegaland vs Manika Plastech','https://youtu.be/DxURoTDQdlc?si=PZd3DFdc67Qt2DEb9','User supplied'],
  ['Comparison','6 IPO comparison — Rentomojo/LCC/Karamtara/Steamhouse/Manipal/Asset Reconstruction','https://youtu.be/x2HwQYTz73w?si=xYJHF5R-XwgGUL-w','User supplied'],
@@ -56,7 +56,7 @@ function addResearchKnowledge(){
    ['Judge the business, not the buzz','Check revenue and profit growth, margins, operating cash flow, debt, promoter holding, related-party transactions and use of IPO proceeds. A strong company can still be an expensive IPO.','Fundamental-analysis guidance; use official filings for verification.'],
    ['Read subscription quality, not just quantity','Keep QIB, NII and Retail subscription separate. Total subscription alone can hide very different demand quality; compare the category mix and timing of bids before interpreting demand.','Research rule; requires historical validation before stronger weighting.'],
    ['Use GMP as a thermometer, not a forecast','GMP can show short-term market sentiment, but it is unofficial and can change quickly. Compare GMP with subscription, valuation and official issue data instead of treating it as a guaranteed listing gain.','Source-supported concept; Terminal treatment = signal, not prediction.'],
-   ['SME IPOs need extra caution','SML listings can have thinner liquidity, wider spreads and exchange-specific price limits. Check the lot size, minimum application amount, liquidity and issue rules before applying; never assume a large premium is guaranteed.','General market-risk guidance; verify the specific issue rules.'],
+   ['SME IPOs need extra caution','SME listings can have thinner liquidity, wider spreads and exchange-specific price limits. Check the lot size, minimum application amount, liquidity and issue rules before applying; never assume a large premium is guaranteed.','General market-risk guidance; verify the specific issue rules.'],
    ['Decide the exit before listing day','Write down the plan before listing: sell at open, use a fixed target, or hold because you studied the business. Decide the maximum application size in advance so a loss cannot change your financial plans.','Practical risk-management guidance; not a return prediction.'],
    ['Look for a base before a technical entry','Measure the consolidation range and its duration. A base is a defined price structure, not proof that price will rise.','Source concept; requires backtesting.'],
    ['Volume matters with price structure','Compare current volume with a recent average. Volume contraction during consolidation and expansion around a defined breakout can be screened quantitatively.','Source concept; requires backtesting.'],
@@ -145,9 +145,9 @@ function rankView(rows,key){
 function applicationView(){
  const x=find(data,ref); if(!x||!lotInfo(x))return'<div class="det-empty">Select an IPO with valid price band and lot size.</div>';
  const l=lotInfo(x);
- const rows=Array.from({length:10},(_,i)=>{const n=i+1,a=l.cost*n,c=category(x,n);return '<tr><td><b>'+n+' lot'+(n>1?'s':'')+'</b></td><td>'+money(a)+'</td><td>'+E(c[0])+'</td><td>'+E(c[1])+'</td><td>'+E(payment(x,n)+'</td></tr>'}).join('');
+ const rows=Array.from({length:10},(_,i)=>{const n=i+1,a=l.cost*n,c=category(x,n);return '<tr><td><b>'+n+' lot'+(n>1?'s':'')+'</b></td><td>'+money(a)+'</td><td>'+E(c[0])+'</td><td>'+E(c[1])+'</td><td>'+E(payment(x,n))+'</td></tr>'}).join('');
  const multi=enriched().filter(z=>z.name!==x.name).sort((a,b)=>b.s.short-a.s.short).slice(0,12);
- const multiRows=multi.map(z=>{const max=isSme(z)?Math.floor(500000/z.l.cost):Math.floor(1000000/z.l.cost);const n=Math.max(1,Math.min(max,2));const c=category(z,n);return '<div class="det-alloc"><b>'+E(z.name)+'</b><span>'+n+' lot ′ '+money(n*z.l.cost)+' • '+E(c[0])+'</span></div>'}).join('');
+ const multiRows=multi.map(z=>{const max=isSme(z)?Math.floor(500000/z.l.cost):Math.floor(1000000/z.l.cost);const n=Math.max(1,Math.min(max,2));const c=category(z,n);return '<div class="det-alloc"><b>'+E(z.name)+'</b><span>'+n+' lot • '+money(n*z.l.cost)+' • '+E(c[0])+'</span></div>'}).join('');
  return '<div class="det-budget"><b>'+E(x.name)+'</b><span>1 lot = '+money(l.cost)+' ('+l.qty.toLocaleString('en-IN')+' shares at the upper price band). Use the upper band for a conservative application-money estimate.</span></div><div class="table-wrap"><table class="table det-apply-table"><thead><tr><th>Lots</th><th>Application</th><th>Category</th><th>Why</th><th>Payment route</th></tr></thead><tbody>'+rows+'</tbody></table></div><div class="det-rules"><b>Quick interpretation:</b> Mainboard 1–10 lots are allowed in lot multiples; category changes automatically when total application crosses ₹2L and ₹10L. SME issues opening on/after 1 Jul 2025 require at least 2 lots and application value above ₹2L for the Individual Investor category; exactly 2 lots is Individual Investor and more than 2 lots is NII-Individual. </div><div class="det-head"><b>Multi-IPO planning</b><span>Use this as a capital-allocation calculator, not an allotment-probability forecast.</span></div><div class="det-allocation">'+(multiRows||'<div class="det-empty">No other current IPO has enough data.</div>')+'</div>'
 }
 function planView(){
@@ -157,7 +157,7 @@ function planView(){
  const sme=es.filter(x=>isSme(x)).sort(byEV);
  const med=a=>{const c=a.map(x=>x.l.cost).sort((p,q)=>p-q);return c.length?c[Math.floor(c.length/2)]:15000};
  const mMed=med(main);
- const evTxt=v=>v==null?'\u2014':((v>=0?'+':''))+v.toFixed(1)+'%');
+ const evTxt=v=>v==null?'\u2014':((v>=0?'+':'')+v.toFixed(1)+'%');
  const pick=(p,i,lots)=>'<u>Rank '+(i+1)+'</u> '+E(p.name)+' ('+lots+' lot'+(lots>1?'s':'')+' '+money(p.l.cost*lots)+', EV '+evTxt(p.s.ev)+', short score '+p.s.short.toFixed(0)+'/100)';
  const lvl=(title,sub,picks,lots)=>'<div class="det-alloc"><b>'+title+'</b><span>'+sub+(picks.length?' \u2014 '+picks.map((p,i)=>pick(p,i,lots)).join(' \u2022 '):' \u2014 no IPO data')+'</span></div>';
  let h='<div class="det-head"><b>Budget ladder \u2014 where to apply</b><span>Open and upcoming IPOs ranked by expected value per application (GMP% x allot odds), then short-term score. Rank 1 = best pick.</span></div>';
