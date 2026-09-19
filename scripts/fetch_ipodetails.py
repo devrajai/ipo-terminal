@@ -294,7 +294,7 @@ def main():
                 url = u
                 break
             if len(k) > 6 and (k in key or key in k):
-                if best is None or len(k) > len(best[0])::
+                if best is None or len(k) > len(best[0]):
                     best = (k, u)
         if not url and best:
             url = best[1]
@@ -307,30 +307,29 @@ def main():
             print('NO LINK for:', name)
             continue
         entry = {}
-        if url:
-            entry['url'] = url
-            try:
-                page = fetch(url)
-                parser = TableParser()
-                parser.feed(page)
-                rows = parser.rows
-                sec = extract_sector(rows, page)
-                if sec:
-                    entry['sector'] = sec
-                subs = extract_subs(rows)
-                if subs:
-                    entry['subs'] = subs
-                anc = extract_anchor(page)
-                if anc:
-                    entry['anchor'] = anc
-                peers = extract_peers(rows)
-                if peers:
-                    entry['peers'] = peers
-                print('fetched %-45s sector=%s subs=%s anchor=%s peers=%d' % (
-                    name[:45], entry.get('sector'), bool(entry.get('subs')),
-                    bool(entry.get('anchor')), len(entry.get('peers') or [])))
-            except Exception as e:
-                print('page failed:', name, e)
+        entry['url'] = url
+        try:
+            page = fetch(url)
+            parser = TableParser()
+            parser.feed(page)
+            rows = parser.rows
+            sec = extract_sector(rows, page)
+            if sec:
+                entry['sector'] = sec
+            subs = extract_subs(rows)
+            if subs:
+                entry['subs'] = subs
+            anc = extract_anchor(page)
+            if anc:
+                entry['anchor'] = anc
+            peers = extract_peers(rows)
+            if peers:
+                entry['peers'] = peers
+            print('fetched %-45s sector=%s subs=%s anchor=%s peers=%d' % (
+                name[:45], entry.get('sector'), bool(entry.get('subs')),
+                bool(entry.get('anchor')), len(entry.get('peers') or [])))
+        except Exception as e:
+            print('page failed:', name, e)
         result['ipos'][name] = entry
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding='utf-8')
