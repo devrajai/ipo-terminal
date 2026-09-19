@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s), E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const num=v=>{const m=String(v??'').replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?Number(m[0]):null};
 const pair=v=>{const a=String(v??'').replace(/₹|,/g,'').match(/\d+(?:\.\d+)?/g);return a&&a.length?{lo:+a[0],hi:+(a[1]||a[0])}:null};
-const norm=v=>String(v??'').toLowerCase().replace(/limited|ltd|india|private|pvt|[\W_]/g,'');
+const norm=v=>String(v??'').toLowerCase().replace(/limited|ltt|india|private|pvt|[\W_]/g,'');
 const money=v=>Number.isFinite(v)?'₹'+Math.round(v).toLocaleString('en-IN'):'—';
 const find=(a,n)=>{const q=norm(n);return(a||[]).find(x=>norm(x.name)===q)||(a||[]).find(x=>norm(x.name).includes(q)||q.includes(norm(x.name)))};
 let data=[],mode='all',ref='',budget=0,listedData=[];
@@ -56,7 +56,7 @@ function addResearchKnowledge(){
    ['Judge the business, not the buzz','Check revenue and profit growth, margins, operating cash flow, debt, promoter holding, related-party transactions and use of IPO proceeds. A strong company can still be an expensive IPO.','Fundamental-analysis guidance; use official filings for verification.'],
    ['Read subscription quality, not just quantity','Keep QIB, NII and Retail subscription separate. Total subscription alone can hide very different demand quality; compare the category mix and timing of bids before interpreting demand.','Research rule; requires historical validation before stronger weighting.'],
    ['Use GMP as a thermometer, not a forecast','GMP can show short-term market sentiment, but it is unofficial and can change quickly. Compare GMP with subscription, valuation and official issue data instead of treating it as a guaranteed listing gain.','Source-supported concept; Terminal treatment = signal, not prediction.'],
-   ['SME IPOs need extra caution','SME listings can have thinner liquidity, wider spreads and exchange-specific price limits. Check the lot size, minimum application amount, liquidity and issue rules before applying; never assume a large premium is guaranteed.','General market-risk guidance; verify the specific issue rules.'],
+   ['SME IPOs need extra caution','SML listings can have thinner liquidity, wider spreads and exchange-specific price limits. Check the lot size, minimum application amount, liquidity and issue rules before applying; never assume a large premium is guaranteed.','General market-risk guidance; verify the specific issue rules.'],
    ['Decide the exit before listing day','Write down the plan before listing: sell at open, use a fixed target, or hold because you studied the business. Decide the maximum application size in advance so a loss cannot change your financial plans.','Practical risk-management guidance; not a return prediction.'],
    ['Look for a base before a technical entry','Measure the consolidation range and its duration. A base is a defined price structure, not proof that price will rise.','Source concept; requires backtesting.'],
    ['Volume matters with price structure','Compare current volume with a recent average. Volume contraction during consolidation and expansion around a defined breakout can be screened quantitatively.','Source concept; requires backtesting.'],
@@ -145,16 +145,39 @@ function rankView(rows,key){
 function applicationView(){
  const x=find(data,ref); if(!x||!lotInfo(x))return'<div class="det-empty">Select an IPO with valid price band and lot size.</div>';
  const l=lotInfo(x);
- const rows=Array.from({length:10},(_,i)=>{const n=i+1,a=l.cost*n,c=category(x,n);return '<tr><td><b>'+n+' lot'+(n>1?'s':'')+'</b></td><td>'+money(a)+'</td><td>'+E(c[0])+'</td><td>'+E(c[1])+'</td><td>'+E(payment(x,n))+'</td></tr>'}).join('');
+ const rows=Array.from({length:10},(_,i)=>{const n=i+1,a=l.cost*n,c=category(x,n);return '<tr><td><b>'+n+' lot'+(n>1?'s':'')+'</b></td><td>'+money(a)+'</td><td>'+E(c[0])+'</td><td>'+E(c[1])+'</td><td>'+E(payment(x,n)+'</td></tr>'}).join('');
  const multi=enriched().filter(z=>z.name!==x.name).sort((a,b)=>b.s.short-a.s.short).slice(0,12);
- const multiRows=multi.map(z=>{const max=isSme(z)?Math.floor(500000/z.l.cost):Math.floor(1000000/z.l.cost);const n=Math.max(1,Math.min(max,2));const c=category(z,n);return '<div class="det-alloc"><b>'+E(z.name)+'</b><span>'+n+' lot • '+money(n*z.l.cost)+' • '+E(c[0])+'</span></div>'}).join('');
+ const multiRows=multi.map(z=>{const max=isSme(z)?Math.floor(500000/z.l.cost):Math.floor(1000000/z.l.cost);const n=Math.max(1,Math.min(max,2));const c=category(z,n);return '<div class="det-alloc"><b>'+E(z.name)+'</b><span>'+n+' lot ′ '+money(n*z.l.cost)+' • '+E(c[0])+'</span></div>'}).join('');
  return '<div class="det-budget"><b>'+E(x.name)+'</b><span>1 lot = '+money(l.cost)+' ('+l.qty.toLocaleString('en-IN')+' shares at the upper price band). Use the upper band for a conservative application-money estimate.</span></div><div class="table-wrap"><table class="table det-apply-table"><thead><tr><th>Lots</th><th>Application</th><th>Category</th><th>Why</th><th>Payment route</th></tr></thead><tbody>'+rows+'</tbody></table></div><div class="det-rules"><b>Quick interpretation:</b> Mainboard 1–10 lots are allowed in lot multiples; category changes automatically when total application crosses ₹2L and ₹10L. SME issues opening on/after 1 Jul 2025 require at least 2 lots and application value above ₹2L for the Individual Investor category; exactly 2 lots is Individual Investor and more than 2 lots is NII-Individual. </div><div class="det-head"><b>Multi-IPO planning</b><span>Use this as a capital-allocation calculator, not an allotment-probability forecast.</span></div><div class="det-allocation">'+(multiRows||'<div class="det-empty">No other current IPO has enough data.</div>')+'</div>'
+}
+function planView(){
+ const es=enriched();
+ const byEV=(a,b)=>((b.s.ev==null?-1e9:b.s.ev)-(a.s.ev==null?-1e9:a.s.ev))||(b.s.short-a.s.short);
+ const main=es.filter(x=>!isSme(x)).sort(byEV);
+ const sme=es.filter(x=>isSme(x)).sort(byEV);
+ const med=a=>{const c=a.map(x=>x.l.cost).sort((p,q)=>p-q);return c.length?c[Math.floor(c.length/2)]:15000};
+ const mMed=med(main);
+ const evTxt=v=>v==null?'\u2014':((v>=0?'+':''))+v.toFixed(1)+'%');
+ const pick=(p,i,lots)=>'<u>Rank '+(i+1)+'</u> '+E(p.name)+' ('+lots+' lot'+(lots>1?'s':'')+' '+money(p.l.cost*lots)+', EV '+evTxt(p.s.ev)+', short score '+p.s.short.toFixed(0)+'/100)';
+ const lvl=(title,sub,picks,lots)=>'<div class="det-alloc"><b>'+title+'</b><span>'+sub+(picks.length?' \u2014 '+picks.map((p,i)=>pick(p,i,lots)).join(' \u2022 '):' \u2014 no IPO data')+'</span></div>';
+ let h='<div class="det-head"><b>Budget ladder \u2014 where to apply</b><span>Open and upcoming IPOs ranked by expected value per application (GMP% x allot odds), then short-term score. Rank 1 = best pick.</span></div>';
+ h+='<div class="det-budget"><b>Mainboard \u2014 1 lot each (allotment lottery)</b><span>Median 1-lot cost '+money(mMed)+'. More lots of the SAME IPO do not raise retail odds \u2014 with extra money add the next-ranked IPO, or use another family demat.</span></div>';
+ [1,2,3].forEach(n=>{h+=lvl('Level '+n+' ('+money(n*mMed)+')','1 lot each, top '+n,main.slice(0,n),1)});
+ h+='<div class="det-budget"><b>SME \u2014 2 lots each (SME minimum)</b><span>SME Individual Investor category: 2+ lots and application value above Rs 2,00,000. Know exactly how much money gets blocked.</span></div>';
+ [1,2,3].forEach(n=>{h+=lvl('SME Level '+n,'2 lots each, top '+n,sme.slice(0,n),2)});
+ if(budget>0){
+  h+='<div class="det-head"><b>Your budget '+money(budget)+'</b><span>Affordable picks, best EV first.</span></div>';
+  h+=lvl('Mainboard \u2014 1 lot each','fits in budget',main.filter(x=>x.l.cost<=budget),1);
+  h+=lvl('SME \u2014 2 lots each','fits in budget',sme.filter(x=>x.l.cost*2<=budget),2);
+ }
+ h+='<div class="det-rules"><b>How to use:</b> Level 1 money = 1 lot of Rank 1. Level 2 = 1 lot each of Rank 1 + Rank 2 (not 2 lots of one). Level 3 = 1 lot each of top 3. SME = 2 lots minimum per IPO. Type your budget above to personalise. Rankings refresh automatically with GMP and subscription data; these are research heuristics, not guarantees.</div>';
+ return h
 }
 function render(){
  const el=$('#ipo-decision-content');if(!el)return;
  const opts=enriched();if(!ref&&opts[0])ref=opts[0].name;
- const tabs=[['all','All comparison'],['listing','Listing gain'],['short','Short term'],['long','Long term'],['post','Post-listing'],['ev','Apply EV'],['apply','Application planner']].map(a=>'<button class="det-tab '+(mode===a[0]?'active':'')+'" data-m="'+a[0]+'">'+a[1]+'</button>').join('');
- const body=mode==='apply'?applicationView():mode==='post'?postView():rankView(mode==='all'?(rank('short').slice().sort((a,b)=>((b.s.listing+b.s.short+b.s.long)-(a.s.listing+a.s.short+a.s.long)))):rank(mode),mode);
+ const tabs=[['all','All comparison'],['plan','Budget ladder'],['listing','Listing gain'],['short','Short term'],['long','Long term'],['post','Post-listing'],['ev','Apply EV'],['apply','Application planner']].map(a=>'<button class="det-tab '+(mode===a[0]?'active':'')+'" data-m="'+a[0]+'">'+a[1]+'</button>').join('');
+ const body=mode==='apply'?applicationView():mode==='plan'?planView():mode==='post'?postView():rankView(mode==='all'?(rank('short').slice().sort((a,b)=>((b.s.listing+b.s.short+b.s.long)-(a.s.listing+a.s.short+a.s.long)))):rank(mode),mode);
  el.innerHTML='<div class="det-intro"><b>🧠 Decision engine</b><span>Compare Open + Upcoming IPOs using demand, GMP, valuation and fundamentals. Listed IPOs also get post-listing pattern screening when market fields are available. Signals are research heuristics, not guaranteed returns.</span></div><div class="det-tabs">'+tabs+'</div><div class="det-controls"><label>IPO for 1–10 lot calculator<select id="det-ref">'+opts.map(x=>'<option value="'+E(x.name)+'" '+(norm(x.name)===norm(ref)?'selected':'')+'>'+E(x.name)+' — '+E(x.board||x.type||'')+'</option>').join('')+'</select></label><label>Optional budget ₹<input id="det-budget" type="number" min="0" step="1000" value="'+(budget||'')+'" placeholder="e.g. 200000"></label><div class="det-presets">'+Array.from({length:10},(_,i)=>'<button type="button" data-x="'+(i+1)+'">'+(i+1)+'× lot</button>').join('')+'</div></div>'+body+'<div class="det-rules"><b>Official rule references:</b> Mainboard retail threshold ₹2L, NII bands above ₹2L/₹10L, and UPI up to ₹5L follow current SEBI/NSE public-issue rules. SME Individual Investor rules are 2+ lots and above ₹2L for issues opening from 1 Jul 2025. Always verify the specific issue RHP and bid instructions before applying.</div>';
  bind()
 }
