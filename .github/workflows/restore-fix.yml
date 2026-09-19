@@ -1,0 +1,52 @@
+name: Restore verified files
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: restore-fix
+  cancel-in-progress: true
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Assemble, verify, install
+        run: |
+          set -e
+          cat parts/fix-*.b64 > /tmp/all.b64
+          base64 -d /tmp/all.b64 > /tmp/fix.tgz
+          echo "6ecf40fb13b91f97e75b07fab6ad8e29d0eef6339046af9666c1a3a2a1bb2e13  /tmp/fix.tgz" | sha256sum -c -
+          mkdir -p /tmp/x && tar xzf /tmp/fix.tgz -C /tmp/x
+          cp /tmp/x/scripts/fetch_ipodetails.py scripts/fetch_ipodetails.py
+          cp /tmp/x/scripts/why-v2-segment.js scripts/why-v2-segment.js
+          cp /tmp/x/.github/workflows/ipo-daily-tools.yml .github/workflows/ipo-daily-tools.yml
+          python3 -m py_compile scripts/fetch_ipodetails.py
+          node --check scripts/why-v2-segment.js
+          rm -rf parts
+          echo "installed and verified"
+
+      - name: Commit if changed (with retry)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "fix: restore verified scraper v6 + segment + daily-tools yml [skip ci]"
+            for i in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push; then exit 0; fi
+              sleep 5
+            done
+            echo "push failed after retries"; exit 1
+          fi
