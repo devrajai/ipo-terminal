@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Fetch per-IPO detail pages and build data/ipo-details.json.
 
-For every OPEN IPO: locate its IPO page via listing/GMP sources, fetch it,
-and extract:
+For every OPEN IPO: locate its IPO page via listing/GMP sources (with a
+DuckDuckGo search fallback), fetch it, and extract:
   - sector
   - live subscription by category (RII / NII / QIB / Total, in x times)
   - anchor book summary (total raised, mutual-fund / FII portion, investor count)
@@ -16,6 +16,7 @@ import datetime as dt
 import html
 import json
 import re
+import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -102,17 +103,23 @@ def is_open(ipo, today):
     return str(ipo.get('status') or '').lower() in ('open', 'live')
 
 
-def extract_sector(rows):
+def extract_sector(rows, text=''):
     for r in rows:
         if len(r) >= 2 and 'sector' in r[0].lower():
             v = r[1]
             if v not in EMPTY:
                 return v
+    plain = re.sub(r'<[^>]+>', ' ', text)
+    m = re.search(r'sector\s*[:\-]?\s*([A-Za-z][A-Za-z &/()\-]{2,45})', plain, re.I)
+    if m and not re.match(r'(?i)sector', m.group(1).strip()):
+        v = m.group(1).strip()
+        if v.lower() not in ('na', 'n/a', '-'):
+            return v
     return None
 
 
 def extract_subs(rows):
-    """subscription table: headers containing rii + qib; take last data row."""
+    """subscription table: try header layout and transposed (label rows)."""
     best = None
     for i, h in enumerate(rows):
         heads = [x.lower() for x in h]
@@ -142,6 +149,26 @@ def extract_subs(rows):
                            'qib': num(cells[3]), 'total': num(cells[4])}
                 if rec:
                     best = rec
+    # transposed layout: rows are category labels, columns are days
+    rec = {}
+    for r in rows:
+        if not r:
+            continue
+        label = clean(r[0]).lower()
+        nums = [num(c) for c in r[1:] if num(c) is not None]
+        if not nums:
+            continue
+        last = nums[-1]
+        if label in ('rii', 'retail', 'rii (retail)'):
+            rec.setdefault('rii', last)
+        elif label in ('nii', 'hni', 'nii (hni)', 'nii (s+hni)'):
+            rec.setdefault('nii', last)
+        elif label == 'qib' or label.startswith('qib'):
+            rec.setdefault('qib', last)
+        elif 'total' in label:
+            rec.setdefault('total', last)
+    if len(rec) >= 2:
+        best = rec
     return best
 
 
@@ -222,6 +249,21 @@ def collect_links(text, base_domain):
     return out
 
 
+def search_link(name):
+    """DuckDuckGo HTML search: chittorgarh IPO page for a company name."""
+    q = urllib.parse.quote(name + ' site:chittorgarh.com')
+    for _ in range(2):
+        try:
+            text = fetch('https://html.duckduckgo.com/html/?q=' + q, timeout=20)
+            for m in re.finditer(r'uddg=([^&"]+)', text):
+                u = urllib.parse.unquote(m.group(1))
+                if re.search(r'chittorgarh\.com/ipo/[^/]+/\d+', u):
+                    return u
+        except Exception:
+            pass
+    return None
+
+
 def main():
     payload = json.loads(IPODATA.read_text(encoding='utf-8'))
     all_ipos = payload.get('ipos', [])
@@ -235,8 +277,6 @@ def main():
             page = fetch(lp)
             got = collect_links(page, dom)
             print('%s: %d ipo links' % (sname, len(got)))
-            for k in list(got.keys())[:15]:
-                print('   sample:', k[:50], '->', got[k][:80])
             links.update(got)
         except Exception as e:
             print('source failed:', sname, e)
@@ -254,10 +294,14 @@ def main():
                 url = u
                 break
             if len(k) > 6 and (k in key or key in k):
-                if best is None or len(k) > len(best[0]):
+                if best is None or len(k) > len(best[0])::
                     best = (k, u)
         if not url and best:
             url = best[1]
+        if not url:
+            url = search_link(name)
+            if url:
+                print('search found:', name, '->', url)
         if not url:
             misses.append(name)
             print('NO LINK for:', name)
@@ -270,7 +314,7 @@ def main():
                 parser = TableParser()
                 parser.feed(page)
                 rows = parser.rows
-                sec = extract_sector(rows)
+                sec = extract_sector(rows, page)
                 if sec:
                     entry['sector'] = sec
                 subs = extract_subs(rows)
