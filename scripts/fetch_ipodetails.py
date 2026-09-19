@@ -2,9 +2,9 @@
 """Fetch per-IPO detail pages and build data/ipo-details.json.
 
 For every OPEN IPO: locate its IPO page via listing/GMP sources (with a
-DuckDuckGo search fallback), fetch it, and extract:
-  - sector
-  - live subscription by category (RII / NII / QIB / Total, in x times)
+search-engine fallback), fetch it, and extract:
+  - sector (table rows only - no text regex, avoids garbage)
+  - live subscription by category (RII / NII / QIB / Total, sane x-times only)
   - anchor book summary (total raised, mutual-fund / FII portion, investor count)
   - peer comparison table (name + P/E)
   - the working page URL (shown to users as the source link)
@@ -16,7 +16,6 @@ import datetime as dt
 import html
 import json
 import re
-import urllib.parse
 import urllib.request
 from html.parser import HTMLParser
 from pathlib import Path
@@ -103,23 +102,17 @@ def is_open(ipo, today):
     return str(ipo.get('status') or '').lower() in ('open', 'live')
 
 
-def extract_sector(rows, text=''):
+def extract_sector(rows):
     for r in rows:
         if len(r) >= 2 and 'sector' in r[0].lower():
             v = r[1]
             if v not in EMPTY:
                 return v
-    plain = re.sub(r'<[^>]+>', ' ', text)
-    m = re.search(r'sector\s*[:\-]?\s*([A-Za-z][A-Za-z &/()\-]{2,45})', plain, re.I)
-    if m and not re.match(r'(?i)sector', m.group(1).strip()):
-        v = m.group(1).strip()
-        if v.lower() not in ('na', 'n/a', '-'):
-            return v
     return None
 
 
 def extract_subs(rows):
-    """subscription table: try header layout and transposed (label rows)."""
+    """subscription table: headers containing rii + qib; sane x-times only."""
     best = None
     for i, h in enumerate(rows):
         heads = [x.lower() for x in h]
@@ -147,28 +140,8 @@ def extract_subs(rows):
                 if len(cells) >= 5 and not rec:
                     rec = {'rii': num(cells[1]), 'nii': num(cells[2]),
                            'qib': num(cells[3]), 'total': num(cells[4])}
-                if rec:
+                if rec and all(0 < v < 1000 for v in rec.values()):
                     best = rec
-    # transposed layout: rows are category labels, columns are days
-    rec = {}
-    for r in rows:
-        if not r:
-            continue
-        label = clean(r[0]).lower()
-        nums = [num(c) for c in r[1:] if num(c) is not None]
-        if not nums:
-            continue
-        last = nums[-1]
-        if label in ('rii', 'retail', 'rii (retail)'):
-            rec.setdefault('rii', last)
-        elif label in ('nii', 'hni', 'nii (hni)', 'nii (s+hni)'):
-            rec.setdefault('nii', last)
-        elif label == 'qib' or label.startswith('qib'):
-            rec.setdefault('qib', last)
-        elif 'total' in label:
-            rec.setdefault('total', last)
-    if len(rec) >= 2:
-        best = rec
     return best
 
 
@@ -250,17 +223,27 @@ def collect_links(text, base_domain):
 
 
 def search_link(name):
-    """DuckDuckGo HTML search: chittorgarh IPO page for a company name."""
+    """Search engines -> chittorgarh IPO page URL for a company name."""
+    import urllib.parse
     q = urllib.parse.quote(name + ' site:chittorgarh.com')
-    for _ in range(2):
-        try:
-            text = fetch('https://html.duckduckgo.com/html/?q=' + q, timeout=20)
-            for m in re.finditer(r'uddg=([^&"]+)', text):
-                u = urllib.parse.unquote(m.group(1))
-                if re.search(r'chittorgarh\.com/ipo/[^/]+/\d+', u):
-                    return u
-        except Exception:
-            pass
+    for engine in (
+            'https://html.duckduckgo.com/html/?q=',
+            'https://lite.duckduckgo.com/lite/?q=',
+            'https://www.bing.com/search?q='):
+        for _ in range(2):
+            try:
+                text = fetch(engine + q, timeout=20)
+                # direct links
+                m = re.search(r'https://www\.chittorgarh\.com/ipo/[a-z0-9\-]+/\d+', text)
+                if m:
+                    return m.group(0)
+                # ddg redirect params
+                for mm in re.finditer(r'uddg=([^&"\']+)', text):
+                    u = urllib.parse.unquote(mm.group(1))
+                    if re.search(r'chittorgarh\.com/ipo/[a-z0-9\-]+/\d+', u):
+                        return u
+            except Exception:
+                pass
     return None
 
 
@@ -305,6 +288,7 @@ def main():
         if not url:
             misses.append(name)
             print('NO LINK for:', name)
+            result['ipos'][name] = {}
             continue
         entry = {}
         entry['url'] = url
@@ -313,7 +297,7 @@ def main():
             parser = TableParser()
             parser.feed(page)
             rows = parser.rows
-            sec = extract_sector(rows, page)
+            sec = extract_sector(rows)
             if sec:
                 entry['sector'] = sec
             subs = extract_subs(rows)
