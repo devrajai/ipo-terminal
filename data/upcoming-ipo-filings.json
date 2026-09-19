@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T16:59:03.000279+05:30",
+  "generated_at": "2026-09-19T17:15:59.123740+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 11,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Pooja Logistics Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "A-One Steels India Ltd. Mainboard",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "ArMee Infotech Ltd. Mainboard",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Sai Urja Indo Ventures Ltd. SME",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Himalaya Nutravedics India Ltd. SME",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Anand Seamless Ltd. SME",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "FX Multitech Ltd. SME",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Robokidz Eduventures Ltd. SME",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     },
     {
       "ipo_name": "Vivekanand Cotspin Ltd. SME",
@@ -144,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-19T16:59:03.000279+05:30"
+      "checked_at": "2026-09-19T17:15:59.123740+05:30"
     }
   ]
 }
