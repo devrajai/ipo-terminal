@@ -247,7 +247,62 @@
       + 'Never miss a close date again \u2014 reminders fire on your phone like a normal calendar event.</div>';
   }
 
-  const tabs = () => [['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar']]
+  function tabWhy(el) {
+    const rows = [];
+    IPO.forEach(x => {
+      if (!x || !x.name) return;
+      const b = band(x.price);
+      if (!b) return;
+      rows.push({ x: x, b: b, gp: num(x.gmp_pct), cost: Math.round(b.hi * (num(x.lot) || 1)),
+                  isSme: /sme/i.test(String(x.type || x.board || '')) });
+    });
+    rows.sort((a, b) => (b.gp == null ? -999 : b.gp) - (a.gp == null ? -999 : a.gp));
+    const top = rows.filter(r => r.gp != null && r.gp > 0).slice(0, 3);
+    let rank = '';
+    if (top.length) {
+      rank = '<table class="pt-tbl"><tr><th>Rank</th><th>IPO</th><th>1 lot</th><th>GMP</th><th>Main reason</th></tr>'
+        + top.map((r, i) => '<tr><td><b>#' + (i + 1) + '</b></td><td>' + E(r.x.name) + '</td><td class="pt-mono">' + money(r.cost)
+          + '</td><td class="pt-mono" style="color:' + (r.gp >= 25 ? '#22c55e' : '#fbbf24') + '">+' + r.gp + '%</td><td>'
+          + (r.gp >= 25 ? 'GMP above the 25% bar - historically almost no such IPO listed at a loss'
+                        : 'best available GMP of the currently open set')
+          + (r.isSme ? ' (SME: 2 lots minimum)' : '') + '</td></tr>').join('') + '</table>';
+    } else {
+      rank = '<div class="pt-hint">Ranking appears as soon as open IPOs have live GMP quotes.</div>';
+    }
+    const buds = [100000, 200000, 300000].map(bud => {
+      let left = bud;
+      const picks = [];
+      for (const r of top) {
+        const c = r.isSme ? r.cost * 2 : r.cost;
+        if (c <= left) { picks.push({ r: r, c: c }); left -= c; }
+      }
+      return { bud: bud, picks: picks, left: left };
+    });
+    const plan = '<table class="pt-tbl"><tr><th>If you have</th><th>What the plans suggest</th></tr>'
+      + buds.map(b => '<tr><td class="pt-mono">' + money(b.bud) + '</td><td>'
+        + (b.picks.length
+           ? b.picks.map(p => '1 lot ' + E(p.r.x.name.replace(/ Limited$/, '')) + ' (' + money(p.c) + ')').join(' + ')
+             + (b.left > 5000 ? ' + ' + money(b.left) + ' kept free' : '')
+           : 'No top-ranked IPO fits this budget right now')
+        + '</td></tr>').join('') + '</table>';
+    el.innerHTML = '<div class="pt-tabs">' + tabs() + '</div>'
+      + '<div class="pt-hint">Full transparency: this is exactly how the Coach, Decision and budget plans pick IPOs - computed live from data, nothing hand-picked.</div>'
+      + '<h4 style="margin:4px 0 6px;font-size:14px">Why these IPOs are ranked 1-2-3</h4>'
+      + '<div class="pt-hint">Ranking = GMP% first (the 25%+ bar from 5 years of listing data), then TimesFM forecast trend, then P/E vs peers, then SME risk. The order changes automatically as data changes.</div>'
+      + rank
+      + '<h4 style="margin:16px 0 6px;font-size:14px">How the \u20B91L / \u20B92L / \u20B93L budget plans work</h4>'
+      + '<div class="pt-hint">Money is spread as 1 lot each across the top-ranked open IPOs (diversifying lottery entries), not stacked into one. More lots in the same category do not raise your chances - more family names do (Tip 27).</div>'
+      + plan
+      + '<h4 style="margin:16px 0 6px;font-size:14px">Our data sources</h4>'
+      + '<div class="pt-hint">\u2022 <b>GMP, price bands, dates, subscriptions:</b> Chittorgarh.com, auto-scraped every 5 minutes.<br>'
+      + '\u2022 <b>Daily GMP history:</b> our own log, built since 19 Sep 2026 (data/history.json).<br>'
+      + '\u2022 <b>Forecasts:</b> Google TimesFM 3.0 model, running daily on GitHub Actions at 07:15 IST - accuracy published openly in Track Record.<br>'
+      + '\u2022 <b>Selection & exit rules:</b> Anant Ladha\'s published research (Rule of 15 / Rule of 5, category odds, one-PAN rule).<br>'
+      + '\u2022 <b>Documents:</b> RHP / DRHP from the exchanges - buttons on every IPO card.<br>'
+      + 'Research heuristics for education - not investment advice. Verify in the RHP before applying.</div>';
+  }
+
+  const tabs = () => [['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar'], ['why', '\u2753 Why & Sources']]
     .map(t => '<button data-pt="' + t[0] + '" class="' + (tab === t[0] ? 'on' : '') + '">' + t[1] + '</button>').join('');
 
   function render() {
@@ -260,6 +315,7 @@
     if (tab === 'track') tabTrack(el);
     else if (tab === 'apps') tabApps(el);
     else if (tab === 'plan') tabPlan(el);
+    else if (tab === 'why') tabWhy(el);
     else tabCal(el);
   }
 
