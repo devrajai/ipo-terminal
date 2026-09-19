@@ -1,15 +1,13 @@
-/* Smart Tools v3:
-   - nav: Home | Research (unified Decision+Coach+Why cards) | Pro Tools
-   - Results: Closed + Listed
-   - Research cards: score bar /100, 5-lane line chart, GO/CAREFUL/AVOID verdict,
-     Mainboard & SME split, open + upcoming, auto-refresh. Loaded last. */
+/* Smart Tools v4: All-in-One research desk.
+   One tab = market pulse + quick picks + scored cards (expandable dossier:
+   lanes, anchors, peer compare, analyst checklist) + compare-all + anchor
+   books + listed track record + how-we-score. Pro Tools stays for interactive
+   tools. No auto-open on load; remembers last tab. */
 (function () {
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { 38: '&'+'amp;', 60: '&'+'lt;', 62: '&'+'gt;', 34: '&'+'quot;', 39: '&#39;' }[c.charCodeAt(0)]; }); };
   var num = function (v) { var m = String(v == null ? '' : v).replace(/,/g, '').match(/-?\d+(?:\.\d+)?/); return m ? Number(m[0]) : null; };
-
   function secOf(n) { return document.getElementById('section-' + n); }
 
-  /* ---------------- shared helpers ---------------- */
   function pd(v, end) {
     if (!v) return null;
     var s = String(v).trim();
@@ -20,26 +18,29 @@
     return null;
   }
 
-  var DET = null, detTried = false;
+  var DET = null, HIST = null, LISTED = null, tried = false;
+  function norm(s) { return String(s || '').toLowerCase().replace(/limited|ltd|\.|\s+/g, ''); }
   function detailFor(name) {
     if (!DET) return null;
-    var q = String(name || '').toLowerCase().replace(/limited|ltd|\.|\s+/g, '');
-    for (var k in DET) {
-      var kk = k.toLowerCase().replace(/limited|ltd|\.|\s+/g, '');
-      if (kk === q || kk.indexOf(q) >= 0 || q.indexOf(kk) >= 0) return DET[k];
-    }
+    var q = norm(name);
+    for (var k in DET) { var kk = norm(k); if (kk === q || kk.indexOf(q) >= 0 || q.indexOf(kk) >= 0) return DET[k]; }
     return null;
   }
-  function ensureDetails() {
-    if (detTried) return;
-    detTried = true;
-    fetch('data/ipo-details.json?d=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) { if (d && d.ipos) DET = d.ipos; })
-      .catch(function () {});
+  function histFor(name) {
+    if (!HIST || !HIST.series) return null;
+    var q = norm(name);
+    for (var k in HIST.series) { if (norm(k) === q || norm(k).indexOf(q) >= 0 || q.indexOf(norm(k)) >= 0) return HIST.series[k]; }
+    return null;
+  }
+  function ensureExtra() {
+    if (tried) return;
+    tried = true;
+    fetch('data/ipo-details.json?d=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d && d.ipos) DET = d.ipos; }).catch(function () {});
+    fetch('data/history.json?d=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (d && d.series) HIST = d; }).catch(function () {});
+    fetch('data/listed.json?d=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) { if (Array.isArray(d)) LISTED = d; }).catch(function () {});
   }
 
-  /* 5-lane signal, same maths as Pro Tools Why & Sources */
+  /* 5-lane signal, same maths as Pro Tools Why and Sources */
   function signal(x, d) {
     d = d || {};
     var kpi = d.kpi || {};
@@ -67,18 +68,17 @@
     if (sub != null && sub >= 10) why.push('strong demand');
     if (gp != null && gp >= 10) why.push('positive GMP');
     if (de != null && de > 1) why.push('high debt');
-    return { score: score, lanes: lanes, why: why, gmp: gp, sub: sub };
+    return { score: score, lanes: lanes, why: why, gmp: gp, sub: sub, roe: roe, pe: pe, g: g };
   }
 
   function verdictOf(sig, upcoming) {
-    if (upcoming) return ['WAIT', '#94a3b8', 'opens soon \u2014 watch the anchor book on day -1'];
+    if (upcoming) return ['WAIT', '#94a3b8', 'opens soon - watch the anchor book on day -1'];
     if (sig.gmp != null && sig.gmp < 0) return ['AVOID', '#ef4444', 'GMP is negative'];
     if (sig.score >= 68 && (sig.gmp == null || sig.gmp >= 5)) return ['GO', '#22c55e', 'strong evidence across lanes'];
-    if (sig.score >= 45) return ['CAREFUL', '#fbbf24', 'mixed evidence \u2014 read the RHP points first'];
-    return ['AVOID', '#ef4444', 'weak evidence \u2014 high risk'];
+    if (sig.score >= 45) return ['CAREFUL', '#fbbf24', 'mixed evidence - read the RHP points first'];
+    return ['AVOID', '#ef4444', 'weak evidence - high risk'];
   }
 
-  /* mini line chart: 5 lanes, 0-100 */
   function laneChart(sig) {
     var L = [sig.lanes.b, sig.lanes.v, sig.lanes.d, sig.lanes.g, sig.lanes.s];
     var W = 132, H = 44, P = 6;
@@ -93,26 +93,12 @@
       + grid + '<polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="2" stroke-linejoin="round"/>' + dots + labels + '</svg>';
   }
 
-  /* score bar /100 */
   function scoreBar(score) {
     var col = score >= 68 ? '#22c55e' : score >= 45 ? '#fbbf24' : '#ef4444';
     return '<div style="flex:1;min-width:90px">'
       + '<div style="height:8px;border-radius:6px;background:rgba(148,163,184,.15);overflow:hidden">'
       + '<div style="height:100%;width:' + Math.max(3, score) + '%;border-radius:6px;background:linear-gradient(90deg,' + col + 'cc,' + col + ')"></div></div>'
       + '<div style="font-size:10px;color:var(--muted);margin-top:3px">fundamental level <b style="color:' + col + '">' + score + '/100</b></div></div>';
-  }
-
-  /* ---------------- Home dashboard ---------------- */
-  function createHomeSection() {
-    if (secOf('home')) return;
-    var s = document.createElement('section');
-    s.id = 'section-home';
-    s.className = 'section glass';
-    s.innerHTML = '<div class="section-title"><span>🏠 Smart Tools — Home</span><button class="close" data-close="home">✕ Close</button></div>'
-      + '<div id="smart-home-content" class="content"><div class="pt-hint">Loading today\u2019s snapshot\u2026</div></div>';
-    var anchor = secOf('decision');
-    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(s, anchor);
-    else (document.querySelector('main') || document.body).appendChild(s);
   }
 
   function classify(list) {
@@ -123,19 +109,87 @@
       x._up = !(st === 'open' || (c && c >= now && (!o || o <= now)));
       x._sme = /sme/i.test(String(x.type || x.board || ''));
       return x;
-    }).filter(function (x) { return !x._up || String(x.status || '').match(/upcoming/i) || true; });
+    });
   }
 
-  function renderHome() {
-    var el = document.getElementById('smart-home-content');
+  /* ---------------- All-in-One ---------------- */
+  function createAioSection() {
+    if (secOf('allinone')) return;
+    var s = document.createElement('section');
+    s.id = 'section-allinone';
+    s.className = 'section glass';
+    s.innerHTML = '<div class="section-title"><span>\u{1F9E0} Smart Tools \u2014 All-in-One research desk</span><button class="close" data-close="allinone">\u2715 Close</button></div>'
+      + '<div id="smart-aio-content" class="content"><div class="pt-hint">Loading the full desk\u2026</div></div>';
+    var anchor = secOf('decision');
+    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(s, anchor);
+    else (document.querySelector('main') || document.body).appendChild(s);
+  }
+
+  var LANE_DEF = [
+    ['b', 'B \u2014 Business', 'growth + ROE together'],
+    ['v', 'V \u2014 Valuation', 'P/E vs market'],
+    ['d', 'D \u2014 Demand', 'subscription multiples'],
+    ['g', 'G \u2014 Grey market', 'GMP % (unofficial street price)'],
+    ['s', 'S \u2014 Structure', 'debt on the balance sheet']
+  ];
+
+  function laneRow(k, label, mean, v) {
+    var col = v >= 70 ? '#22c55e' : v >= 50 ? '#fbbf24' : '#ef4444';
+    return '<div style="display:flex;align-items:center;gap:8px;margin-top:6px">'
+      + '<div style="width:118px;font-size:10.5px;font-weight:700">' + label + '<div style="font-weight:400;color:var(--muted);font-size:9px">' + mean + '</div></div>'
+      + '<div style="flex:1;height:7px;border-radius:5px;background:rgba(148,163,184,.15);overflow:hidden"><div style="height:100%;width:' + Math.max(3, v) + '%;background:' + col + '"></div></div>'
+      + '<b style="width:30px;text-align:right;font-size:11px;color:' + col + '">' + v + '</b></div>';
+  }
+
+  function chip(ok, warn, text) {
+    var c = ok ? 'rgba(34,197,94,.13);color:#22c55e' : warn ? 'rgba(251,191,36,.13);color:#fbbf24' : 'rgba(148,163,184,.13);color:#cbd5e1';
+    return '<span style="font-size:10px;padding:3px 8px;border-radius:7px;background:' + c + '">' + (ok ? '\u2713 ' : warn ? '\u26A0 ' : '\u2013 ') + esc(text) + '</span>';
+  }
+
+  function renderAio() {
+    var el = document.getElementById('smart-aio-content');
     if (!el) return;
+    ensureExtra();
     fetch('data/ipo-data.json?d=' + Date.now(), { cache: 'no-store' })
       .then(function (r) { return r.ok ? r.json() : null; })
       .then(function (d) {
         var ipos = (d && (d.ipos || d.data)) || [];
-        var now = new Date();
-        var all = classify(ipos);
+        var all = classify(ipos).map(function (x) { x._sig = signal(x, detailFor(x.name) || {}); return x; })
+          .sort(function (a, b) { return b._sig.score - a._sig.score; });
         var open = all.filter(function (x) { return !x._up; });
+
+        /* peer averages per board */
+        function avgOf(list, pick) {
+          var s = 0, n = 0;
+          list.forEach(function (x) { var v = pick(x); if (v != null) { s += v; n++; } });
+          return n ? Math.round(s / n * 10) / 10 : null;
+        }
+        var mb = all.filter(function (z) { return !z._sme; });
+        var sme = all.filter(function (z) { return z._sme; });
+        var avgs = {};
+        [['mb', mb], ['sme', sme]].forEach(function (p) {
+          avgs[p[0]] = {
+            g: avgOf(p[1], function (z) { return z._sig.g; }),
+            pe: avgOf(p[1], function (z) { return z._sig.pe; }),
+            gmp: avgOf(p[1], function (z) { return z._sig.gmp; }),
+            sub: avgOf(p[1], function (z) { return z._sig.sub; })
+          };
+        });
+
+        /* pulse tiles */
+        var gSum = 0, gN = 0;
+        open.forEach(function (x) { var g = num(x.gmp_pct); if (g != null && g >= -50 && g <= 150) { gSum += g; gN++; } });
+        var avgG = gN ? Math.round(gSum / gN) : null;
+        var nextClose = null;
+        open.forEach(function (x) { var c = pd(x.close || x.close_date, true); if (c && (!nextClose || c < nextClose.d)) nextClose = { d: c, x: x }; });
+        var tile = function (label, val, sub) {
+          return '<div style="flex:1;min-width:125px;padding:12px 14px;border:1px solid var(--bd);border-radius:13px;background:var(--card2)">'
+            + '<div style="font-size:9.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:800">' + label + '</div>'
+            + '<div style="font-size:21px;font-weight:800;margin-top:2px">' + val + '</div>'
+            + (sub ? '<div style="font-size:10px;color:var(--muted);margin-top:1px">' + sub + '</div>' : '') + '</div>';
+        };
+
+        /* quick picks */
         var clamp = function (v, hi) { v = num(v); return v == null ? 0 : Math.max(0, Math.min(v, hi)); };
         var scored = open.map(function (x) {
           var g = num(x.gmp_pct); if (!(g != null && g >= -50 && g <= 150)) g = 0;
@@ -143,90 +197,58 @@
           x._g = g;
           return x;
         }).sort(function (a, b) { return b._q - a._q; });
-
-        var gSum = 0, gN = 0;
-        open.forEach(function (x) { var g = num(x.gmp_pct); if (g != null && g >= -50 && g <= 150) { gSum += g; gN++; } });
-        var avgG = gN ? Math.round(gSum / gN) : null;
-        var nextClose = null;
-        open.forEach(function (x) { var c = pd(x.close || x.close_date, true); if (c && (!nextClose || c < nextClose.d)) nextClose = { d: c, x: x }; });
-
-        var tile = function (label, val, sub) {
-          return '<div style="flex:1;min-width:130px;padding:13px 15px;border:1px solid var(--bd);border-radius:14px;background:var(--card2)">'
-            + '<div style="font-size:10px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:800">' + label + '</div>'
-            + '<div style="font-size:22px;font-weight:800;margin-top:3px">' + val + '</div>'
-            + (sub ? '<div style="font-size:10.5px;color:var(--muted);margin-top:2px">' + sub + '</div>' : '') + '</div>';
-        };
-        var tag = function (x) { return x._sme ? '<span style="font-size:9px;padding:1px 6px;border-radius:5px;background:rgba(168,85,247,.15);color:#c084fc;font-weight:800;vertical-align:2px">SME</span>' : '<span style="font-size:9px;padding:1px 6px;border-radius:5px;background:rgba(59,130,246,.15);color:#93c5fd;font-weight:800;vertical-align:2px">MB</span>'; };
         var pickList = function (list) {
-          if (!list.length) return '<div class="pt-hint" style="margin-top:5px">None open right now.</div>';
+          if (!list.length) return '<div class="pt-hint" style="margin-top:4px">None open right now.</div>';
           return list.slice(0, 3).map(function (x, i) {
-            return '<div style="display:flex;align-items:center;gap:9px;padding:8px 11px;border:1px solid var(--bd);border-radius:12px;background:var(--card2);margin-top:6px">'
+            return '<div style="display:flex;align-items:center;gap:9px;padding:7px 11px;border:1px solid var(--bd);border-radius:11px;background:var(--card2);margin-top:6px;cursor:pointer" data-card="' + esc(x.name) + '">'
               + '<b style="font-size:12.5px;color:' + (i === 0 ? '#22c55e' : '#fbbf24') + '">#' + (i + 1) + '</b>'
-              + '<div style="flex:1;min-width:0"><b style="font-size:13px">' + esc(x.name.replace(/ Limited$/, '')) + ' ' + tag(x) + '</b>'
+              + '<div style="flex:1;min-width:0"><b style="font-size:12.5px">' + esc(x.name.replace(/ Limited$/, '')) + (x._sme ? ' <span style="font-size:9px;padding:1px 6px;border-radius:5px;background:rgba(168,85,247,.15);color:#c084fc;font-weight:800">SME</span>' : ' <span style="font-size:9px;padding:1px 6px;border-radius:5px;background:rgba(59,130,246,.15);color:#93c5fd;font-weight:800">MB</span>') + '</b>'
               + '<div style="font-size:10px;color:var(--muted)">closes ' + esc(x.close || x.close_date || '\u2014') + '</div></div>'
               + '<div style="text-align:right"><b style="color:' + (x._g >= 10 ? '#22c55e' : x._g >= 0 ? '#fbbf24' : '#ef4444') + ';font-size:12px">' + (x._g > 0 ? '+' : '') + x._g + '% GMP</b>'
               + '<div style="font-size:10px;color:var(--muted)">quick ' + x._q + '/100</div></div></div>';
           }).join('');
         };
-        var jump = function (id, icon, label, desc) {
-          return '<button type="button" data-goto="' + id + '" style="text-align:left;flex:1;min-width:150px;padding:12px 14px;border:1px solid rgba(59,130,246,.4);border-radius:13px;background:rgba(59,130,246,.08);cursor:pointer">'
-            + '<div style="font-size:13px;font-weight:800;color:#93c5fd">' + icon + ' ' + label + '</div>'
-            + '<div style="font-size:10.5px;color:var(--muted);margin-top:3px;line-height:1.5">' + desc + '</div></button>';
-        };
 
-        el.innerHTML = '<div class="pt-hint"><b>One place for every tool.</b> Today\u2019s snapshot \u2014 refreshes automatically with site data.</div>'
-          + '<div style="display:flex;gap:9px;flex-wrap:wrap;margin:4px 0 12px">'
-          + tile('Open IPOs', open.length, (all.filter(function (z) { return z._up; }).length) + ' upcoming')
-          + tile('Avg GMP', avgG == null ? '\u2014' : (avgG > 0 ? '+' : '') + avgG + '%', 'of open IPOs')
-          + tile('Next closing', nextClose ? esc(String(nextClose.x.close || nextClose.x.close_date)) : '\u2014', nextClose ? esc(nextClose.x.name) : 'no open IPO')
-          + '</div>'
-          + (open.length ? '<div style="font-size:13px;font-weight:800;margin:10px 0 2px">\u{1F3C6} Quick picks \u2014 Mainboard</div>' + pickList(scored.filter(function (z) { return !z._sme; }))
-            + '<div style="font-size:13px;font-weight:800;margin:12px 0 2px">\u{1F3C6} Quick picks \u2014 SME</div>' + pickList(scored.filter(function (z) { return z._sme; }))
-            + '<div class="pt-hint" style="margin-top:6px">Fast triage \u2014 full maths, RHP evidence and sources in Pro Tools \u2192 Why & Sources.</div>' : '<div class="pt-hint">No open IPOs right now \u2014 the dashboard fills in automatically when the next IPO opens.</div>')
-          + '<div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:14px">'
-          + jump('research', '\u{1F4CA}', 'Research cards', 'Every open + upcoming IPO \u2014 score /100, lanes, GO / CAREFUL / AVOID verdict.')
-          + jump('protools', '\u{1F680}', 'Pro Tools', 'Track record, My Apps, calendar, Why & Sources rankings.')
-          + '</div>';
-
-        el.querySelectorAll('button[data-goto]').forEach(function (b) {
-          b.onclick = function () { openGroup1(b.getAttribute('data-goto')); };
-        });
-      })
-      .catch(function () { el.innerHTML = '<div class="pt-hint">Snapshot unavailable right now \u2014 the tools below still work.</div>'; });
-  }
-
-  /* ---------------- Research (unified cards) ---------------- */
-  function createResearchSection() {
-    if (secOf('research')) return;
-    var s = document.createElement('section');
-    s.id = 'section-research';
-    s.className = 'section glass';
-    s.innerHTML = '<div class="section-title"><span>📊 Research — every open & upcoming IPO</span><button class="close" data-close="research">✕ Close</button></div>'
-      + '<div id="smart-research-content" class="content"><div class="pt-hint">Loading\u2026</div></div>';
-    var anchor = secOf('home') || secOf('decision');
-    if (anchor && anchor.parentNode) anchor.parentNode.insertBefore(s, anchor.nextSibling);
-    else (document.querySelector('main') || document.body).appendChild(s);
-  }
-
-  function renderResearch() {
-    var el = document.getElementById('smart-research-content');
-    if (!el) return;
-    ensureDetails();
-    fetch('data/ipo-data.json?d=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (d) {
-        var ipos = (d && (d.ipos || d.data)) || [];
-        var all = classify(ipos);
-        var cards = all.map(function (x) { x._sig = signal(x, detailFor(x.name) || {}); return x; })
-          .sort(function (a, b) { return b._sig.score - a._sig.score; });
-
+        /* full dossier card */
         function cardHtml(x) {
           var sig = x._sig, v = verdictOf(sig, x._up);
-          var lot = num(x.lot), price = num(String(x.price || '').replace(/[^\d-]/g, ' ').split(' ')[0] || x.price);
           var band = String(x.price || '').match(/(\d[\d,]*)\s*[-\u2013]\s*(\d[\d,]*)/);
           var hi = band ? Number(band[2].replace(/,/g, '')) : null;
-          var cost = (hi && lot) ? '\u20B9' + (hi * lot).toLocaleString('en-IN') : '\u2014';
-          return '<article style="padding:13px 14px;border:1px solid var(--bd);border-radius:15px;background:var(--card2);margin-bottom:10px">'
+          var cost = (hi && num(x.lot)) ? '\u20B9' + (hi * num(x.lot)).toLocaleString('en-IN') : '\u2014';
+          var det = detailFor(x.name) || {};
+          var anc = det.anchor || null;
+          var kpi = det.kpi || {};
+          var hs = histFor(x.name);
+          var trend = null;
+          if (hs && hs.length >= 2) {
+            var gs = hs.filter(function (p) { return p && Number.isFinite(p.gmp); }).map(function (p) { return p.gmp; });
+            if (gs.length >= 2) trend = gs[gs.length - 1] - gs[0];
+          }
+          var A = avgs[x._sme ? 'sme' : 'mb'];
+
+          /* analyst checklist */
+          var prom = num(x.prom);
+          var fresh = num(x.fresh), ofs = num(x.ofs);
+          var pm = num(kpi.pat_margin);
+          var ck = '';
+          ck += chip(prom != null && prom >= 20, prom != null && prom < 20, prom != null ? 'promoter stake ' + esc(x.prom) : 'promoter stake not in data');
+          ck += chip(fresh == null || fresh > 0, fresh != null && fresh === 0 && ofs > 0, (fresh != null && fresh === 0 && ofs > 0) ? '100% OFS - no fresh money to company' : 'fresh issue ' + (fresh != null ? '\u20B9' + fresh + ' cr' : '\u2014'));
+          ck += chip(anc != null && num(anc.investors) >= 10, false, anc && (anc.total_cr != null || anc.investors) ? 'anchor book: \u20B9' + num(anc.total_cr) + ' cr, ' + num(anc.investors) + ' investors' : 'anchor book not published yet');
+          ck += chip(pm != null && pm >= 15, pm != null && pm < 15, pm != null ? 'PAT margin ' + esc(kpi.pat_margin) : 'PAT margin not in data');
+          ck += chip(trend != null && trend >= 0, trend != null && trend < 0, trend != null ? ('GMP trend ' + (trend >= 0 ? 'rising' : 'cooling') + ' (' + (trend >= 0 ? '+' : '') + trend + ')') : 'GMP trend: first data point');
+
+          /* peer compare */
+          var cmp = function (label, mine, avg, inv) {
+            if (mine == null || avg == null) return '';
+            var better = inv ? mine <= avg : mine >= avg;
+            return '<div style="display:flex;justify-content:space-between;font-size:10.5px;padding:3px 0;border-bottom:1px dashed rgba(148,163,184,.15)"><span>' + label + '</span><span><b style="color:' + (better ? '#22c55e' : '#fbbf24') + '">' + mine + '</b> <span style="color:var(--muted)">vs ' + avg + ' avg</span></span></div>';
+          };
+          var peer = cmp('Growth %', sig.g, A.g) + cmp('P/E', sig.pe, A.pe, true) + cmp('GMP %', sig.gmp, A.gmp) + cmp('Subscription (x)', sig.sub, A.sub);
+          if (!peer) peer = '<div style="font-size:10.5px;color:var(--muted);padding:3px 0">Not enough peer data yet.</div>';
+
+          var lanes = LANE_DEF.map(function (l) { return laneRow(l[0], l[1], l[2], sig.lanes[l[0]]); }).join('');
+
+          return '<article style="padding:13px 14px;border:1px solid var(--bd);border-radius:15px;background:var(--card2);margin-bottom:10px" data-name="' + esc(x.name) + '">'
             + '<div style="display:flex;justify-content:space-between;gap:8px;align-items:flex-start;flex-wrap:wrap">'
             + '<div style="min-width:0"><b style="font-size:14.5px">' + esc(x.name.replace(/ Limited$/, '')) + '</b> '
             + (x._sme ? '<span style="font-size:9.5px;padding:2px 7px;border-radius:6px;background:rgba(168,85,247,.15);color:#c084fc;font-weight:800">SME</span>' : '<span style="font-size:9.5px;padding:2px 7px;border-radius:6px;background:rgba(59,130,246,.15);color:#93c5fd;font-weight:800">MAINBOARD</span>')
@@ -241,23 +263,122 @@
             + (x.roe && x.roe !== '\u2014' ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(148,163,184,.13);color:#cbd5e1">ROE ' + esc(x.roe) + '</span>' : '')
             + (sig.why.length ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(59,130,246,.10);color:#93c5fd">' + esc(sig.why.slice(0, 3).join(' \u00B7 ')) + '</span>' : '')
             + '</div>'
-            + '<div style="font-size:9.5px;color:var(--muted);margin-top:7px">' + v[2] + ' \u00B7 lanes: B business \u00B7 V valuation \u00B7 D demand \u00B7 G grey market \u00B7 S structure (debt) \u2014 full maths & sources in Pro Tools \u2192 Why & Sources.</div>'
+            + '<button type="button" data-x="' + esc(x.name) + '" style="margin-top:10px;width:100%;padding:8px;border:1px dashed rgba(148,163,184,.35);border-radius:10px;background:transparent;color:#93c5fd;font-size:11.5px;font-weight:700;cursor:pointer">\u25BE Full dossier \u2014 lanes, anchors, peers, checklist</button>'
+            + '<div class="mt-det" style="display:none;margin-top:10px;border-top:1px solid var(--bd);padding-top:10px">'
+            + '<div style="font-size:11px;font-weight:800;margin-bottom:2px">\u{1F9EE} How we scored this IPO (0-100 each lane)</div>'
+            + lanes
+            + '<div style="font-size:11px;font-weight:800;margin:12px 0 4px">\u2696\uFE0F vs ' + (x._sme ? 'SME' : 'Mainboard') + ' average</div>' + peer
+            + '<div style="font-size:11px;font-weight:800;margin:12px 0 4px">\u2705 Analyst checklist (RHP points)</div>'
+            + '<div style="display:flex;gap:6px;flex-wrap:wrap">' + ck + '</div>'
+            + (x.source_url ? '<div style="font-size:10px;color:var(--muted);margin-top:10px">Source: <a href="' + esc(x.source_url) + '" target="_blank" rel="noopener" style="color:#93c5fd">' + esc(String(x.source_url).slice(0, 60)) + '</a></div>' : '')
+            + '</div>'
+            + '<div style="font-size:9.5px;color:var(--muted);margin-top:7px">' + v[2] + ' \u00B7 missing data counts neutral (50), never invented \u00B7 full maths in the How-we-score block below.</div>'
             + '</article>';
         }
 
-        var mb = cards.filter(function (x) { return !x._sme; });
-        var sme = cards.filter(function (x) { return x._sme; });
-        var head = '<div class="pt-hint"><b>Mainboard and SME are ranked separately.</b> Each card merges the Decision engine scores, the Coach verdict and the Why & Sources lane maths \u2014 auto-updated with site data. Missing data counts neutral (50), never invented.</div>';
         var sec = function (title, list) {
           if (!list.length) return '';
           return '<div style="font-size:13px;font-weight:800;margin:14px 0 6px">' + title + ' (' + list.length + ')</div>' + list.map(cardHtml).join('');
         };
-        el.innerHTML = head
-          + sec('\u{1F537} Mainboard', mb)
-          + sec('\u{1F7E9} SME', sme)
-          + '<div class="pt-hint">Education and research only \u2014 not investment advice. Data: Chittorgarh offer-document pages + GMP feed, refreshed automatically.</div>';
+
+        /* compare-all table */
+        var cmpRows = all.map(function (x) {
+          var v = verdictOf(x._sig, x._up);
+          return '<tr><td style="max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' + esc(x.name.replace(/ Limited$/, '')) + '</td>'
+            + '<td style="font-size:9px;color:' + (x._sme ? '#c084fc' : '#93c5fd') + '">' + (x._sme ? 'SME' : 'MB') + '</td>'
+            + '<td><b style="color:' + v[1] + '">' + v[0] + '</b></td>'
+            + '<td class="pt-mono">' + x._sig.score + '</td>'
+            + '<td class="pt-mono" style="color:' + (x._sig.gmp >= 10 ? '#22c55e' : x._sig.gmp >= 0 ? '#fbbf24' : '#ef4444') + '">' + (x._sig.gmp == null ? '\u2014' : (x._sig.gmp > 0 ? '+' : '') + x._sig.gmp + '%') + '</td>'
+            + '<td class="pt-mono">' + (x._sig.sub == null ? '\u2014' : x._sig.sub + 'x') + '</td>'
+            + '<td class="pt-mono">' + (x.pe || '\u2014') + '</td>'
+            + '<td class="pt-mono">' + (x.roe || '\u2014') + '</td>'
+            + '<td class="pt-mono">' + (x.growth || '\u2014') + '</td>'
+            + '<td class="pt-mono">' + esc(x.close || x.close_date || '\u2014') + '</td></tr>';
+        }).join('');
+
+        /* anchor table */
+        var ancRows = '';
+        all.forEach(function (x) {
+          var a = (detailFor(x.name) || {}).anchor;
+          if (a && (a.total_cr != null || a.investors)) {
+            ancRows += '<tr><td>' + esc(x.name.replace(/ Limited$/, '')) + '</td><td class="pt-mono">\u20B9' + num(a.total_cr) + ' cr</td><td class="pt-mono">' + num(a.investors) + '</td>'
+              + '<td style="font-size:10px;color:' + (num(a.investors) >= 10 ? '#22c55e' : '#fbbf24') + '">' + (num(a.investors) >= 10 ? 'wide institutional interest' : 'few anchors - read carefully') + '</td></tr>';
+          }
+        });
+
+        /* track record from listed.json */
+        var trHtml = '<div class="pt-hint">Real listing outcomes of recently listed IPOs \u2014 the scoreboard every site hides.</div>';
+        if (LISTED && LISTED.length) {
+          var gs = LISTED.map(function (l) { return num(l.gain_loss_percent); }).filter(function (v) { return v != null; });
+          var avg = gs.length ? Math.round(gs.reduce(function (a, b) { return a + b; }, 0) / gs.length * 10) / 10 : null;
+          var pos = gs.filter(function (v) { return v > 0; }).length;
+          var sorted = LISTED.slice().sort(function (a, b) { return String(b.listing_date || '').localeCompare(String(a.listing_date || '')); });
+          var best = sorted.slice().sort(function (a, b) { return num(b.gain_loss_percent) - num(a.gain_loss_percent); })[0];
+          var worst = sorted.slice().sort(function (a, b) { return num(a.gain_loss_percent) - num(b.gain_loss_percent); })[0];
+          var t2 = function (label, val, sub) {
+            return '<div style="flex:1;min-width:120px;padding:11px 13px;border:1px solid var(--bd);border-radius:12px;background:var(--card2)">'
+              + '<div style="font-size:9.5px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:800">' + label + '</div>'
+              + '<div style="font-size:19px;font-weight:800;margin-top:2px;color:' + sub + '">' + val + '</div></div>';
+          };
+          trHtml = '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 8px">'
+            + t2('Avg listing gain', (avg > 0 ? '+' : '') + avg + '%', avg >= 0 ? '#22c55e' : '#ef4444')
+            + t2('Positive listings', pos + ' / ' + gs.length, pos * 2 >= gs.length ? '#22c55e' : '#fbbf24')
+            + t2('Best', esc(String(best.name).replace(/ Limited$/, '')) + ' +' + num(best.gain_loss_percent) + '%', '#22c55e')
+            + t2('Worst', esc(String(worst.name).replace(/ Limited$/, '')) + ' ' + num(worst.gain_loss_percent) + '%', '#ef4444')
+            + '</div><div style="overflow-x:auto"><table class="pt-tbl"><tr><th>IPO</th><th>Listed</th><th>Issue</th><th>Listing</th><th>Now</th><th>Gain</th></tr>'
+            + sorted.slice(0, 8).map(function (l) {
+              var gp = num(l.gain_loss_percent);
+              return '<tr><td>' + esc(String(l.name).replace(/ Limited$/, '')) + '</td><td class="pt-mono">' + esc(String(l.listing_date || '').slice(0, 10)) + '</td><td class="pt-mono">' + num(l.issue_price) + '</td><td class="pt-mono">' + num(l.listing_price) + '</td><td class="pt-mono">' + num(l.current_price) + '</td><td class="pt-mono" style="color:' + (gp >= 0 ? '#22c55e' : '#ef4444') + ';font-weight:800">' + (gp > 0 ? '+' : '') + gp + '%</td></tr>';
+            }).join('') + '</table></div>';
+        }
+
+        var H2 = '<div class="pt-hint"><b>One desk, every signal.</b> Cards merge Decision scores + Coach verdicts + Why-and-Sources maths. Tap a card\u2019s dossier button for lanes, peers, anchors and the RHP checklist. Everything auto-updates with site data.</div>';
+
+        el.innerHTML = H2
+          + '<div style="display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 12px">'
+          + tile('Open', open.length, all.filter(function (z) { return z._up; }).length + ' upcoming')
+          + tile('Avg GMP', avgG == null ? '\u2014' : (avgG > 0 ? '+' : '') + avgG + '%', 'of open IPOs')
+          + tile('Next closing', nextClose ? esc(String(nextClose.x.close || nextClose.x.close_date)) : '\u2014', nextClose ? esc(nextClose.x.name.replace(/ Limited$/, '')) : 'no open IPO')
+          + '</div>'
+          + (open.length ? '<div style="font-size:13px;font-weight:800;margin:10px 0 2px">\u{1F3C6} Quick picks \u2014 Mainboard</div>' + pickList(scored.filter(function (z) { return !z._sme; }))
+            + '<div style="font-size:13px;font-weight:800;margin:12px 0 2px">\u{1F3C6} Quick picks \u2014 SME</div>' + pickList(scored.filter(function (z) { return z._sme; })) : '<div class="pt-hint">No open IPOs right now \u2014 the desk fills in automatically when the next IPO opens.</div>')
+          + sec('\u{1F537} Mainboard \u2014 scored cards', mb.filter(function (z) { return !z._up; }))
+          + sec('\u{1F7E9} SME \u2014 scored cards', sme.filter(function (z) { return !z._up; }))
+          + sec('\u23F3 Upcoming (watch list)', all.filter(function (z) { return z._up; }))
+          + '<div style="font-size:13px;font-weight:800;margin:16px 0 6px">\u2696\uFE0F Compare all</div>'
+          + '<div style="overflow-x:auto"><table class="pt-tbl"><tr><th>IPO</th><th>Board</th><th>Verdict</th><th>Score</th><th>GMP</th><th>Sub</th><th>P/E</th><th>ROE</th><th>Growth</th><th>Closes</th></tr>' + cmpRows + '</table></div>'
+          + '<div style="font-size:13px;font-weight:800;margin:16px 0 6px">\u2693 Anchor books</div>'
+          + (ancRows ? '<div class="pt-hint">Anchor books are built one day before an IPO opens \u2014 real institutional money committed.</div><div style="overflow-x:auto"><table class="pt-tbl"><tr><th>IPO</th><th>Anchor total</th><th>Investors</th><th>Read</th></tr>' + ancRows + '</table></div>' : '<div class="pt-hint">No anchor books published for current IPOs yet \u2014 they appear here automatically the day before an IPO opens.</div>')
+          + '<div style="font-size:13px;font-weight:800;margin:16px 0 6px">\u{1F3C6} Track record \u2014 listed scoreboard</div>' + trHtml
+          + '<div style="font-size:13px;font-weight:800;margin:16px 0 6px">\u{1F9EE} How we score (exact maths)</div>'
+          + '<div class="pt-hint"><b>B Business:</b> growth 20%+ = 90, 12%+ = 78, 5%+ = 62, else 38; then blended with ROE (capped 45). <b>V Valuation:</b> P/E up to 20 = 82, up to 35 = 62, up to 50 = 38, above = 22. <b>D Demand:</b> subscription 50x+ = 95, 20x+ = 82, 10x+ = 70, 3x+ = 58, under 1x = 25. <b>G Grey market:</b> GMP 20%+ = 90, 10%+ = 75, 5%+ = 68, 0%+ = 60, negative = 25. <b>S Structure:</b> debt/equity up to 0.3 = 85, up to 0.6 = 70, up to 1.0 = 55, above = 30. Missing data = 50 (neutral) \u2014 never invented. Score = average of the 5 lanes; verdict: 68+ GO, 45+ CAREFUL, below AVOID; negative GMP always AVOID.</div>'
+          + '<div style="display:flex;gap:9px;flex-wrap:wrap;margin-top:14px">'
+          + '<button type="button" data-goto="protools" style="flex:1;min-width:150px;text-align:left;padding:12px 14px;border:1px solid rgba(59,130,246,.4);border-radius:13px;background:rgba(59,130,246,.08);cursor:pointer"><div style="font-size:13px;font-weight:800;color:#93c5fd">\u{1F680} Pro Tools</div><div style="font-size:10.5px;color:var(--muted);margin-top:3px;line-height:1.5">Interactive tools: My Apps tracker, Planner, Calendar, Why and Sources deep-dive.</div></button>'
+          + '</div>'
+          + '<div class="pt-hint" style="margin-top:10px">Education and research only \u2014 not investment advice. Data: Chittorgarh offer-document pages, GMP feed, own history log \u2014 auto-refreshed.</div>';
+
+        /* dossier toggle + quick-pick jump */
+        el.querySelectorAll('button[data-x]').forEach(function (b) {
+          b.onclick = function () {
+            var det = b.parentNode.querySelector('.mt-det');
+            var open = det && det.style.display !== 'none';
+            if (det) det.style.display = open ? 'none' : 'block';
+            b.innerHTML = open ? '\u25BE Full dossier \u2014 lanes, anchors, peers, checklist' : '\u25B4 Close dossier';
+          };
+        });
+        el.querySelectorAll('[data-card]').forEach(function (c) {
+          c.onclick = function () {
+            var t = el.querySelector('article[data-name="' + c.getAttribute('data-card').replace(/"/g, '\\"') + '"] button[data-x]');
+            if (t && t.parentNode.querySelector('.mt-det').style.display === 'none') t.click();
+            try { if (t) t.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (er) {}
+          };
+        });
+        el.querySelectorAll('button[data-goto]').forEach(function (b) {
+          b.onclick = function () { openGroup1(b.getAttribute('data-goto'));
+ };
+        });
       })
-      .catch(function () { el.innerHTML = '<div class="pt-hint">Research data unavailable right now \u2014 retrying automatically.</div>'; });
+      .catch(function () { el.innerHTML = '<div class="pt-hint">Desk data unavailable right now \u2014 retrying automatically.</div>'; });
   }
 
   /* ---------------- generic group ---------------- */
@@ -297,8 +418,7 @@
         }
         try { x.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {}
       }
-      if (id === 'home') renderHome();
-      if (id === 'research') renderResearch();
+      if (id === 'allinone') renderAio();
       self.syncNav();
       self.updateBar();
     };
@@ -348,10 +468,9 @@
   }
 
   var group1 = new Group({
-    nav: 'decision', label: '\u{1F9E0} Smart Tools', def: 'home', hide: ['coach'],
+    nav: 'decision', label: '\u{1F9E0} Smart Tools', def: 'allinone', hide: ['coach'],
     subs: [
-      { id: 'home', label: '\u{1F3E0} Home' },
-      { id: 'research', label: '\u{1F4CA} Research' },
+      { id: 'allinone', label: '\u{1F4CA} All-in-One' },
       { id: 'protools', label: '\u{1F680} Pro Tools' }
     ]
   });
@@ -365,8 +484,7 @@
 
   function openGroup1(id) { group1.open(id); }
 
-  createHomeSection();
-  createResearchSection();
+  createAioSection();
 
   document.addEventListener('click', function (e) {
     if (e.target && e.target.closest && e.target.closest('[data-close]')) {
@@ -374,10 +492,8 @@
     }
   });
 
-  /* auto-refresh every 15 min */
   setInterval(function () {
-    if (secOf('home') && secOf('home').classList.contains('opened')) renderHome();
-    if (secOf('research') && secOf('research').classList.contains('opened')) renderResearch();
+    if (secOf('allinone') && secOf('allinone').classList.contains('opened')) renderAio();
   }, 15 * 60 * 1000);
 
   var tries = 0;
