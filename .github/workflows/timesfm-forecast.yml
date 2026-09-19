@@ -1,0 +1,95 @@
+name: TimesFM forecast
+
+on:
+  schedule:
+    # Daily at 01:45 UTC = 07:15 IST, after the morning data refreshes.
+    - cron: '45 1 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: timesfm-forecast
+  cancel-in-progress: false
+
+jobs:
+  forecast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Append today's GMP history
+        run: python3 scripts/append_history.py
+
+      - name: Cache TimesFM model weights
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: timesfm-3.0-pytorch-v1
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-timesfm-${{ runner.os }}
+
+      - name: Install TimesFM 3.0 (CPU torch)
+        continue-on-error: true
+        timeout-minutes: 25
+        run: |
+          pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install "timesfm[torch]"
+
+      - name: Run forecast job
+        run: python3 scripts/timesfm_forecast.py
+
+      - name: Wire forecast UI into index.html
+        run: |
+          python3 - <<'PY'
+          src = open('index.html', encoding='utf-8').read()
+          tag = '<script src="scripts/ipo-forecast.js"></script>'
+          if tag in src:
+              print('forecast UI already wired')
+          elif '</body>' in src:
+              src = src.replace('</body>', tag + '\n</body>', 1)
+              open('index.html', 'w', encoding='utf-8').write(src)
+              print('forecast UI script tag added')
+          else:
+              raise SystemExit('no </body> found in index.html')
+          PY
+
+      - name: Validate JavaScript
+        run: |
+          set -e
+          node --check scripts/ipo-forecast.js
+          python3 - <<'PY'
+          import re
+          src = open('index.html', encoding='utf-8').read()
+          m = re.findall(r'<script>(.*?)</script>', src, re.S)
+          open('/tmp/inline.js', 'w', encoding='utf-8').write(m[0])
+          PY
+          node --check /tmp/inline.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "data: TimesFM 3.0 daily GMP forecasts + history"
+            git pull --rebase --autostash || true
+            git push
+          fi
