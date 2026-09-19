@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T23:53:45.400048+05:30",
+  "updated_at": "2026-09-20T00:05:59.971567+05:30",
   "data": [
     {
       "name": "National Stock Exchange of India Limited",
@@ -34,33 +34,6 @@
       "gmp": "₹30",
       "estimated_listing": "₹148",
       "gmp_pct": "+25.4%",
-      "kostak": "—",
-      "updated_at": "2026-09-18T00:00:00+00:00"
-    },
-    {
-      "name": "Hero Motors Limited",
-      "issue_price": "₹79-84",
-      "gmp": "₹6",
-      "estimated_listing": "₹90",
-      "gmp_pct": "+7.1%",
-      "kostak": "—",
-      "updated_at": "2026-09-18T00:00:00+00:00"
-    },
-    {
-      "name": "Jindal Supreme (India) Limited",
-      "issue_price": "₹88-93",
-      "gmp": "₹30",
-      "estimated_listing": "₹123",
-      "gmp_pct": "+32.3%",
-      "kostak": "—",
-      "updated_at": "2026-09-18T00:00:00+00:00"
-    },
-    {
-      "name": "SS Retail Limited",
-      "issue_price": "₹403-424",
-      "gmp": "₹137",
-      "estimated_listing": "₹561",
-      "gmp_pct": "+32.3%",
       "kostak": "—",
       "updated_at": "2026-09-18T00:00:00+00:00"
     }
