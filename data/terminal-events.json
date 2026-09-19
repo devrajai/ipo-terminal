@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T11:47:02.648261+00:00",
+  "generated_at": "2026-09-19T11:53:54.913609+00:00",
   "events": [
     {
       "date": "2026-09-21",
@@ -127,13 +127,6 @@
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
       "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
-      "source": "NSE"
     }
   ]
 }

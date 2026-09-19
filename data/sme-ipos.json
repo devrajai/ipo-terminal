@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T17:15:59.123740+05:30",
+  "updated_at": "2026-09-19T17:22:50.749190+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -29,8 +29,8 @@
       "company": "Pooja Logistics Limited",
       "exchange": "NSE",
       "open_date": "23/09/26",
-      "close_date": "25/09/26",
-      "issue_size": "₹44 Cr",
+      "close_date": "Sep 25, 2026",
+      "issue_size": "44.23",
       "status": "upcoming"
     },
     {

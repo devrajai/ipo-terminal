@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T11:47:02.648261+00:00",
+  "generated_at": "2026-09-19T11:53:54.913609+00:00",
   "today_ist": "2026-09-19",
-  "data_updated_at": "2026-09-19T17:15:59.123740+05:30",
+  "data_updated_at": "2026-09-19T17:22:50.749190+05:30",
   "ipo_count": 19,
   "field_coverage_pct": 26.6,
   "sources": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T11:45:29.293023+00:00",
+      "checked_at": "2026-09-19T11:52:29.355301+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -61,7 +61,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 1,
+          "matched": 2,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -87,12 +87,12 @@
       "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T11:45:31.011225+00:00"
+      "checked_at": "2026-09-19T11:52:31.338681+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T11:45:34.160745+00:00",
+      "checked_at": "2026-09-19T11:52:33.261799+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T11:45:34.217589+00:00"
+      "checked_at": "2026-09-19T11:52:33.331360+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T11:45:34.254798+00:00"
+      "checked_at": "2026-09-19T11:52:33.376043+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-19T11:45:34.367401+00:00",
+      "checked_at": "2026-09-19T11:52:33.515885+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-19T11:45:34.367401+00:00"
+      "checked_at": "2026-09-19T11:52:33.515885+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-19T17:15:59.123740+05:30",
+      "checked_at": "2026-09-19T17:22:50.749190+05:30",
       "status_repairs": 3,
       "sme_added": 0,
       "filings": {
@@ -413,13 +413,13 @@
     {
       "id": "pooja-logistics-limited",
       "name": "Pooja Logistics Limited",
-      "fingerprint": "c36c5629f7e3adf5",
+      "fingerprint": "762449bf0322a907",
       "fields": {
         "price": "₹109-115",
-        "size": "₹44 Cr",
+        "size": "44.23",
         "lot": "—",
         "open": "23/09/26",
-        "close": "25/09/26",
+        "close": "Sep 25, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -894,16 +894,19 @@
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
       "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
-      "source": "NSE"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-19T11:53:54.913609+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
     {
       "at": "2026-09-19T03:55:22.721457+00:00",
       "type": "DATA_CHANGE",
