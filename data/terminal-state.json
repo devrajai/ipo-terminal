@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T17:52:09.786316+00:00",
+  "generated_at": "2026-09-19T17:58:43.882548+00:00",
   "today_ist": "2026-09-19",
-  "data_updated_at": "2026-09-19T23:21:04.982803+05:30",
+  "data_updated_at": "2026-09-19T23:27:46.527224+05:30",
   "ipo_count": 19,
   "field_coverage_pct": 31.3,
   "sources": {
@@ -47,7 +47,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T17:50:20.878978+00:00",
+      "checked_at": "2026-09-19T17:57:16.754514+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -85,12 +85,12 @@
       "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T17:50:22.240781+00:00"
+      "checked_at": "2026-09-19T17:57:19.104446+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T17:50:38.001436+00:00",
+      "checked_at": "2026-09-19T17:57:21.125926+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -100,21 +100,21 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T17:50:38.070573+00:00"
+      "checked_at": "2026-09-19T17:57:21.195096+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T17:50:38.116787+00:00"
+      "checked_at": "2026-09-19T17:57:21.241679+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-19T17:50:38.258265+00:00",
+      "checked_at": "2026-09-19T17:57:21.388173+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 92,
+          "records": 100,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -129,7 +129,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 56,
+          "records": 55,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -138,11 +138,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-19T17:50:38.258265+00:00"
+      "checked_at": "2026-09-19T17:57:21.388173+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-19T23:21:04.982803+05:30",
+      "checked_at": "2026-09-19T23:27:46.527224+05:30",
       "status_repairs": 3,
       "sme_added": 0,
       "filings": {
