@@ -79,8 +79,7 @@
         const d = p[p.length - 1].gmp - p[0].gmp;
         box.title = 'Daily GMP so far: ' + fmt(p[0].gmp) + ' \u2192 ' + fmt(p[p.length - 1].gmp)
           + (f && f.points && f.points.length ? '. Dashed = TimesFM 3-day forecast.' : '');
-        box.innerHTML = 'GMP trend (' + p.length + 'd)<b style="color:' + (d >= 0 ? '#22c55e' : '#ef4444') + '"'
-          + '>'
+        box.innerHTML = 'GMP trend (' + p.length + 'd)<b style="color:' + (d >= 0 ? '#22c55e' : '#ef4444') + '">'
           + (d >= 0 ? '+' : '') + fmt(d) + '</b>' + svg;
         const grid = card.querySelector('.grid');
         if (grid) grid.appendChild(box);
@@ -119,5 +118,6 @@
   }
 
   load().catch(() => {});
-  setInterval(() => { load().catch(() => {}); }, 5000);
+  setInterval(inject, 5000);                              // DOM-only re-inject, no network
+  setInterval(() => { load().catch(() => {}); }, 900000); // refetch data every 15 min
 })();
