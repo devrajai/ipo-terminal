@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T12:25:30.570260+00:00",
+  "generated_at": "2026-09-19T12:40:32.115388+00:00",
   "today_ist": "2026-09-19",
-  "data_updated_at": "2026-09-19T17:54:36.264453+05:30",
+  "data_updated_at": "2026-09-19T18:09:24.635030+05:30",
   "ipo_count": 19,
-  "field_coverage_pct": 26.6,
+  "field_coverage_pct": 31.3,
   "sources": {
     "NSE": {
       "ok": true,
@@ -20,7 +20,7 @@
       "ok": false,
       "records": 0,
       "errors": [
-        "HTTP Error 403: Forbidden"
+        "The read operation timed out"
       ]
     },
     "GMP": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T12:23:43.126207+00:00",
+      "checked_at": "2026-09-19T12:38:44.214325+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +87,12 @@
       "records": 19,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T12:23:45.001910+00:00"
+      "checked_at": "2026-09-19T12:38:46.517051+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T12:24:04.928701+00:00",
+      "checked_at": "2026-09-19T12:39:02.471193+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T12:24:04.984354+00:00"
+      "checked_at": "2026-09-19T12:39:02.537542+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T12:24:05.021904+00:00"
+      "checked_at": "2026-09-19T12:39:02.581444+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-19T12:24:05.153610+00:00",
+      "checked_at": "2026-09-19T12:39:02.717986+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -139,12 +139,12 @@
     "FilingVerification": {
       "ok": true,
       "records": 13,
-      "verified": 4,
-      "checked_at": "2026-09-19T12:24:05.153610+00:00"
+      "verified": 5,
+      "checked_at": "2026-09-19T12:39:02.717986+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-19T17:54:36.264453+05:30",
+      "checked_at": "2026-09-19T18:09:24.635030+05:30",
       "status_repairs": 3,
       "sme_added": 0,
       "filings": {
@@ -161,7 +161,7 @@
     {
       "id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
-      "fingerprint": "8064733bd5cb0226",
+      "fingerprint": "01663a58d53e1656",
       "fields": {
         "price": "₹1700-1785",
         "size": "₹0 Cr",
@@ -178,9 +178,9 @@
         "gmp_pct": "+8.3%",
         "est_list": "₹1933",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
+        "roe": "9.26%",
+        "roce": "11.55%",
+        "growth": "-2%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -189,7 +189,7 @@
     {
       "id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "fingerprint": "72e9b4ae6d603953",
+      "fingerprint": "457f19f6d64f4a1a",
       "fields": {
         "price": "₹94-99",
         "size": "₹0 Cr",
@@ -206,10 +206,10 @@
         "gmp_pct": "+2.0%",
         "est_list": "₹101",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "39.05%",
+        "roce": "19.69%",
+        "growth": "64%",
+        "de": "2.48",
         "fresh": "—",
         "ofs": "—"
       }
@@ -217,7 +217,7 @@
     {
       "id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
-      "fingerprint": "e5a19f72f3411ed5",
+      "fingerprint": "c6737435b32d926a",
       "fields": {
         "price": "—",
         "size": "—",
@@ -234,10 +234,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "28.40%",
+        "roce": "28.90%",
+        "growth": "12%",
+        "de": "0.48",
         "fresh": "—",
         "ofs": "—"
       }
@@ -245,7 +245,7 @@
     {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
-      "fingerprint": "005cea4a86435a5a",
+      "fingerprint": "91a9a1d0d51cb080",
       "fields": {
         "price": "—",
         "size": "—",
@@ -262,10 +262,10 @@
         "gmp_pct": "+9.9%",
         "est_list": "₹111",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "33.72%",
+        "roce": "26.89%",
+        "growth": "30%",
+        "de": "0.89",
         "fresh": "—",
         "ofs": "—"
       }
@@ -273,7 +273,7 @@
     {
       "id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "fingerprint": "29ad1f1961ad3bed",
+      "fingerprint": "fe8a1ae9fcc65d68",
       "fields": {
         "price": "—",
         "size": "—",
@@ -290,10 +290,10 @@
         "gmp_pct": "+25.4%",
         "est_list": "₹148",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "60.95%",
+        "roce": "37.61%",
+        "growth": "36%",
+        "de": "1.09",
         "fresh": "—",
         "ofs": "—"
       }
@@ -897,6 +897,65 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-19T12:40:32.115388+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
+    {
+      "at": "2026-09-19T12:40:32.115388+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-19T12:40:32.115388+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-19T12:40:32.115388+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-19T12:40:32.115388+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
     {
       "at": "2026-09-19T11:53:54.913609+00:00",
       "type": "DATA_CHANGE",
