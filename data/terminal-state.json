@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-19T19:17:50.107241+00:00",
+  "generated_at": "2026-09-19T19:26:10.208482+00:00",
   "today_ist": "2026-09-20",
-  "data_updated_at": "2026-09-20T00:46:48.632124+05:30",
+  "data_updated_at": "2026-09-20T00:55:28.393488+05:30",
   "ipo_count": 16,
   "field_coverage_pct": 28.9,
   "sources": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-19T19:16:02.367995+00:00",
+      "checked_at": "2026-09-19T19:24:46.996902+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +87,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-19T19:16:06.096668+00:00"
+      "checked_at": "2026-09-19T19:24:49.113289+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-19T19:16:25.995279+00:00",
+      "checked_at": "2026-09-19T19:25:02.932024+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-19T19:16:26.067528+00:00"
+      "checked_at": "2026-09-19T19:25:03.003292+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-19T19:16:26.114333+00:00"
+      "checked_at": "2026-09-19T19:25:03.050910+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-19T19:16:26.256320+00:00",
+      "checked_at": "2026-09-19T19:25:03.191462+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 53,
+          "records": 55,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -139,12 +139,12 @@
     "FilingVerification": {
       "ok": true,
       "records": 13,
-      "verified": 5,
-      "checked_at": "2026-09-19T19:16:26.256320+00:00"
+      "verified": 4,
+      "checked_at": "2026-09-19T19:25:03.191462+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-20T00:46:48.632124+05:30",
+      "checked_at": "2026-09-20T00:55:28.393488+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
