@@ -1,8 +1,40 @@
 {
- "updated_at": "2026-09-19T10:08:56.715713+00:00",
+ "updated_at": "2026-09-19T10:14:38.165120+00:00",
  "ipos": {
   "National Stock Exchange of India Limited": {},
-  "Sonaselection India Limited": {},
+  "Sonaselection India Limited": {
+   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
+   "anchor": {
+    "total_cr": 42.47,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Alpine Texworld Ltd.",
+     "pe": "Mainboard"
+    },
+    {
+     "name": "Kusumgar Ltd.",
+     "pe": "Mainboard"
+    },
+    {
+     "name": "Aastha Spintex Ltd.",
+     "pe": "Mainboard"
+    },
+    {
+     "name": "Shree Ram Twistex Ltd.",
+     "pe": "Mainboard"
+    },
+    {
+     "name": "Panchatv Bharat Ltd.",
+     "pe": "SME"
+    },
+    {
+     "name": "Vinod Texworld Ltd.",
+     "pe": "SME"
+    }
+   ]
+  },
   "Axiom Gas Engineering Limited": {},
   "Kheria Autocomp Limited": {},
   "SpectraA Technology Solutions Limited": {},
