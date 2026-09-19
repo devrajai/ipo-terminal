@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Fetch per-IPO detail pages and build data/ipo-details.json.
 
-For every OPEN IPO: locate its Chittorgarh IPO page via the mainboard/SME
-listing pages, fetch it, and extract:
+For every OPEN IPO: locate its IPO page via listing/GMP sources, fetch it,
+and extract:
   - sector
   - live subscription by category (RII / NII / QIB / Total, in x times)
   - anchor book summary (total raised, mutual-fund / FII portion, investor count)
@@ -26,9 +26,11 @@ IPODATA = DATA / 'ipo-data.json'
 OUT = DATA / 'ipo-details.json'
 
 UA = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 IPO-Terminal/2.0'
-LIST_PAGES = [
-    'https://www.chittorgarh.com/report/mainboard-ipo-list-in-india-bse-nse/80/',
-    'https://www.chittorgarh.com/report/sme-ipo-list-in-india-bse-nse/83/',
+SOURCES = [
+    ('chittorgarh-mainboard', 'https://www.chittorgarh.com/report/mainboard-ipo-list-in-india-bse-nse/80/', 'https://www.chittorgarh.com'),
+    ('chittorgarh-sme', 'https://www.chittorgarh.com/report/sme-ipo-list-in-india-bse-nse/83/', 'https://www.chittorgarh.com'),
+    ('chittorgarh-gmp', 'https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/', 'https://www.chittorgarh.com'),
+    ('investorgain', 'https://www.investorgain.com/report/ipo-gmp-live/331/all/', 'https://www.investorgain.com'),
 ]
 
 EMPTY = ('', None, '\u2014', '-', 'NA', 'N/A')
@@ -189,15 +191,25 @@ def extract_peers(rows):
     return peers[:6]
 
 
-def ipo_links_from_listing(text):
+def collect_links(text, base_domain):
+    """all <a> links whose href mentions ipo; returns {normtext: url}"""
     out = {}
-    for href, title in re.findall(r'<a[^>]+href="(/ipo/[^"]#[?]+)"[^>]*>(.*?)</a>', text, re.I | re.S):
+    for href, title in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', text, re.I | re.S):
+        h = href.strip()
+        if 'ipo' not in h.lower():
+            continue
+        if h.startswith('//'):
+            h = 'https:' + h
+        elif h.startswith('/'):
+            h = base_domain + h
+        if not h.startswith('http'):
+            continue
         t = clean(title)
         if not t:
             continue
-        key = norm(t)
-        if key and key not in out:
-            out[key] = 'https://www.chittorgarh.com' + href
+        k = norm(t)
+        if k and k not in out:
+            out[k] = h
     return out
 
 
@@ -209,12 +221,17 @@ def main():
     print('open IPOs:', len(open_ipos))
 
     links = {}
-    for lp in LIST_PAGES:
+    for sname, lp, dom in SOURCES:
         try:
-            links.update(ipo_links_from_listing(fetch(lp)))
+            page = fetch(lp)
+            got = collect_links(page, dom)
+            print('%s: %d ipo links' % (sname, len(got)))
+            for k in list(got.keys())[:25]:
+                print('   sample:', k[:50], '->', got[k][:80])
+            links.update(got)
         except Exception as e:
-            print('listing page failed:', lp, e)
-    print('listing links found:', len(links))
+            print('source failed:', sname, e)
+    print('total listing links found:', len(links))
 
     result = {'updated_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'ipos': {}}
     for ipo in open_ipos:
