@@ -1,15 +1,21 @@
 {
- "updated_at": "2026-09-19T10:30:37.474827+00:00",
+ "updated_at": "2026-09-19T10:38:43.144570+00:00",
  "ipos": {
+  "National Stock Exchange of India Limited": {
+   "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
+   "subs": {
+    "rii": 30.0,
+    "nii": 31.0,
+    "qib": 31.0,
+    "total": 31.0
+   },
+   "anchor": {
+    "total_cr": 6746.18,
+    "investors": 20
+   }
+  },
   "Sonaselection India Limited": {
    "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
-   "sector": "wise-ipo-list-in-india/",
-   "subs": {
-    "total": 14300000.0,
-    "qib": 50.0,
-    "nii": 15.0,
-    "rii": 33366.0
-   },
    "anchor": {
     "total_cr": 42.47,
     "investors": 20
@@ -43,13 +49,6 @@
   },
   "Axiom Gas Engineering Limited": {
    "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
-   "sector": "s with a commitment to quality",
-   "subs": {
-    "total": 9398000.0,
-    "qib": 18.99,
-    "nii": 37.96,
-    "rii": 37.96
-   },
    "anchor": {
     "total_cr": 5.78,
     "investors": 20
@@ -57,13 +56,6 @@
   },
   "Kheria Autocomp Limited": {
    "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-   "sector": "wise-ipo-list-in-india/",
-   "subs": {
-    "total": 4598400.0,
-    "qib": 47.49,
-    "nii": 14.25,
-    "rii": 33.25
-   },
    "anchor": {
     "total_cr": 13.24,
     "investors": 20
@@ -97,13 +89,6 @@
   },
   "SpectraA Technology Solutions Limited": {
    "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
-   "sector": "wise-ipo-list-in-india/",
-   "subs": {
-    "total": 3603600.0,
-    "qib": 47.42,
-    "nii": 14.29,
-    "rii": 33.23
-   },
    "anchor": {
     "total_cr": 12.09,
     "investors": 20
@@ -134,6 +119,9 @@
      "pe": "16.7"
     }
    ]
-  }
+  },
+  "Hero Motors Limited": {},
+  "Jindal Supreme (India) Limited": {},
+  "SS Retail Limited": {}
  }
 }
