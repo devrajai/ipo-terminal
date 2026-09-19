@@ -29,7 +29,6 @@ jobs:
           mkdir -p /tmp/x && tar xzf /tmp/fix.tgz -C /tmp/x
           cp /tmp/x/scripts/fetch_ipodetails.py scripts/fetch_ipodetails.py
           cp /tmp/x/scripts/why-v2-segment.js scripts/why-v2-segment.js
-          cp /tmp/x/.github/workflows/ipo-daily-tools.yml .github/workflows/ipo-daily-tools.yml
           python3 -m py_compile scripts/fetch_ipodetails.py
           node --check scripts/why-v2-segment.js
           rm -rf parts
@@ -43,7 +42,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "fix: restore verified scraper v6 + segment + daily-tools yml [skip ci]"
+            git commit -m "fix: restore verified scraper v6 + segment [skip ci]"
             for i in 1 2 3 4 5; do
               if git pull --rebase --autostash origin main && git push; then exit 0; fi
               sleep 5
