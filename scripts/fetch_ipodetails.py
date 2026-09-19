@@ -171,194 +171,325 @@ def extract_subs(rows, tids=None):
                 if 'rii' in lab or 'retail' in lab:
                     key = 'rii'
                 elif 'qib' in lab:
-                        key = 'qib'
-                  elif 'nii' in lab or 'hni' in lab:
-                        ­•ä€ô€¹¥¤œ(€€€€€€€€€€€€€€€•±¥˜€Ñ½Ñ…°œ¥¸±…ˆè(€€€€€€€€€€€€€€€€€€€€€€€­•ä€ô€Ñ½Ñ…°œ(€€€€€€€€€€€€€€€€¥˜¹½Ğ­•ä½È­•ä¥¸ÑÉ…¹Î‚ˆÛÛ[YBˆ˜[ÈHÛ[JÊH›ÜˆÈ[ˆ–ÌN—WBˆ˜[ÈHİˆ›Üˆˆ[ˆ˜[ÈYˆˆ\È›İ›Û™H[™ˆLBˆYˆ˜[Î‚ˆ˜[œÖÚÙ^WHH˜[ÖËLWBˆYˆ[ŠÙ]
-˜[œÊH	ˆÉÜšZIË	ÛšZIË	ÜZX‰ßJHH‚ˆ™\İHÊŠ˜[œË
-Š˜™\İHYˆ™\İ[ÙH˜[œÂˆ™]\›ˆ™\İ‚‚™Yˆ^˜XİØ[˜ÚÜŠ^
-N‚ˆİ]HßBˆİÈH^›İÙ\Š
-BˆHH
-™KœÙX\˜Ú
-‰Ø[˜ÚÜ–×‹—^ÌÌOÊ×—JŠWÊŠÎ˜Ü›Ü™_Ü—ŠIËİÊBˆÜˆ™KœÙX\˜Ú
-‰Ê×—JŠWÊŠÎ˜Ü›Ü™_Ü—ŠV×‹—^ÌÌOØ[˜ÚÜ‰ËİÊJBˆYˆN‚ˆİ]Éİİ[ØÜ‰×HH[JK™Ü›İ\
-JJBˆHH™KœÙX\˜Ú
-‰Ê×JŠWÊ˜[˜ÚÜ—Êš[™\İÜœÉËİÊHÜˆˆ™KœÙX\˜Ú
-‰Ø[˜ÚÜ–×‹—^ÌŒOÊ×JŠWÊš[™\İÜœÉËİÊBˆYˆN‚ˆİ]ÉÚ[™\İÜœÉ×HH[
-[JK™Ü›İ\
-JJJBˆHH™KœÙX\˜Ú
-‰Û]]X[Ê™[™ÏÖ×ŒNW^ÌJ×—JŠWÊŠÎ˜Ü›Ü™_Ü—ŠIËİÊBˆYˆN‚ˆİ]ÉÛY—ØÜ‰×HH[JK™Ü›İ\
-JJBˆHH™KœÙX\˜Ú
-‰ÊÎ™šZ_›Ü™ZYÛŠV×ŒNW^ÌJ×—JŠWÊŠÎ˜Ü›Ü™_Ü—ŠIËİÊBˆYˆN‚ˆİ]ÉÙšZWØÜ‰×HH[JK™Ü›İ\
-JJBˆ™]\›ˆİ]‚‚™Yˆ^˜XİÙš[˜[˜ÚX[Ê›İÜÊN‚ˆˆˆœ™\İ]YÛÛœÛÛY]Yš[˜[˜ÚX[ÈX›Nˆ	Ô\š[Ù[™Y	ÈXY\ˆ
-ÈY]šXÈ›İÜËˆˆˆ‚ˆ›ÜˆK[ˆ[[Y\˜]J›İÜÊN‚ˆYˆ›İÜˆ	Ü\š[Ù[™Y	È›İ[ˆÛX[ŠÌJK›İÙ\Š
-HÜˆ[Š
-HÎ‚ˆÛÛ[YBˆ\š[ÙÈHØÛX[Š
-H›Üˆ[ˆÌN—WBˆX™[ÈHÉØ\ÜÙ]ÉÎˆ	Ø\ÜÙ]ÉË	İİ[[˜ÛÛYIÎˆ	Ú[˜ÛÛYIË	Ü™]™[YIÎˆ	Ú[˜ÛÛYIËˆ	Ü›Ùš]Y\ˆ^	Îˆ	Ü]	Ë	İİ[›Üœ›İÚ[™ÉÎˆ	Ø›Üœ›İÚ[™ÉËˆ	Û™]ÛÜ	Îˆ	Û™]ÛÜ	Ë	ÙXš]IÎˆ	ÙXš]IßBˆİ]HÉÜ\š[ÙÉÎˆ\š[ÙßBˆ›Üˆˆ[ˆ›İÜÖÚH
-ÈNšH
-ÈL—N‚ˆYˆ›İˆÜˆ›İ–ÌN‚ˆÛÛ[YBˆXˆH™KœİXŠ‰Ö×˜K^ˆIË	ÉËÛX[Š–ÌJK›İÙ\Š
-JKœİš\
+                    key = 'qib'
+                elif 'nii' in lab or 'hni' in lab:
+                    key = 'nii'
+                elif 'total' in lab:
+                    key = 'total'
+                if not key or key in trans:
+                    continue
+                vals = [num(c) for c in r[1:]]
+                vals = [v for v in vals if v is not None and 0 < v < 500]
+                if vals:
+                    trans[key] = vals[-1]
+            if len(set(trans) & {'rii', 'nii', 'qib'}) >= 2:
+                best = {**trans, **best} if best else trans
+    return best
 
-BˆXˆH™KœİXŠ‰×ÊÉË	È	ËXŠBˆÈH›Û™BˆYˆ	Ü›Ùš]	È[ˆXˆ[™	İ^	È[ˆX‚ˆÈH	Ü]	Âˆ[YˆXˆ[ˆX™[Î‚ˆÈHX™[ÖÛX—BˆYˆÎ‚ˆ˜[ÈHÛ[JÊH›ÜˆÈ[ˆ–ÌN›[Š
-WWBˆÚ[H[Š˜[ÊH[Š\š[ÙÊN‚ˆ˜[Ë˜\[™
-›Û™JBˆİ]Ú×HH˜[ÂˆYˆ	Ú[˜ÛÛYIÈ[ˆİ][™	Ü]	È[ˆİ]‚ˆ™]\›ˆİ]ˆ™]\›ˆ›Û™B‚‚™YˆWÙÜ›İİ
-š[ŠN‚ˆˆˆ–[ÖHÜ›İİ
-İ
-H›Üˆ[˜ÛÛYH[™U\Ú[™ÈHÛÈ[Üİ™XÙ[•Sˆš[˜[˜ÚX[YX\œÈ
-\š[ÙÈÛÛZ[š[™È	ÓX\‰ÊKˆˆˆ‚ˆİ]HßBˆYHÚH›ÜˆK[ˆ[[Y\˜]Jš[–ÉÜ\š[ÙÉ×JHYˆ	ÛX\‰È[ˆ›İÙ\Š
-WBˆYˆ[ŠY
-H‚ˆ™]\›ˆİ]ˆKˆHYÌKYÌWBˆ›ÜˆÙ^K˜[YH[ˆ
 
-	Ú[˜ÛÛYIË	Ü™]—ÙÜ›İİ	ÊK
-	Ü]	Ë	Ü]ÙÜ›İİ	ÊJN‚ˆˆHš[‹™Ù]
-Ù^JBˆYˆˆ[™–ØWH\È›İ›Û™H[™–Ø—H›İ[ˆ
-›Û™K
-H[™–Ø—Hˆ‚ˆİ]Û˜[YWHH›İ[™
+def extract_anchor(text):
+    out = {}
+    low = text.lower()
+    m = (re.search(r'anchor[^.]{0,300}?(\d[\d,.]*)\s*(?:crore|cr\b)', low)
+         or re.search(r'(\d[\d,.]*)\s*(?:crore|cr\b)[^.]{0,300}?anchor', low))
+    if m:
+        out['total_cr'] = num(m.group(1))
+    m = re.search(r'(\d[\d,]*)\s*anchor\s*investors', low) or \
+        re.search(r'anchor[^.]{0,200}?(\d[\d,]*)\s*investors', low)
+    if m:
+        out['investors'] = int(num(m.group(1)))
+    m = re.search(r'mutual\s*funds?[^0-9]{0,80}(\d[\d,.]*)\s*(?:crore|cr\b)', low)
+    if m:
+        out['mf_cr'] = num(m.group(1))
+    m = re.search(r'(?:fii|foreign)[^0-9]{0,80}(\d[\d,.]*)\s*(?:crore|cr\b)', low)
+    if m:
+        out['fii_cr'] = num(m.group(1))
+    return out
 
-–ØWHH–Ø—JHÈ–Ø—H
-ˆLJBˆ™]\›ˆİ]‚‚™Yˆ^˜XİÚÜJ›İÜÊN‚ˆˆˆ’ÔHX›H›İÜÎˆ“ÑHÈ“ĞÑHÈXQ\]Z]HÈUX\™Ú[ˆÈP’UHX\™Ú[ˆÈU‹ˆˆˆ‚ˆÛX\HÉÜ›ÙIÎˆ	Ü›ÙIË	Ü›ØÙIÎˆ	Ü›ØÙIË	ÙXÙ\]Z]IÎˆ	ÙIË	ÙX\]Z]IÎˆ	ÙIËˆ	ÙXÈ\]Z]IÎˆ	ÙIË	Ü]X\™Ú[‰Îˆ	Ü]ÛX\™Ú[‰Ëˆ	ÙXš]HX\™Ú[‰Îˆ	ÙXš]WÛX\™Ú[‰Ë	Û™]›Ùš]X\™Ú[‰Îˆ	Ü]ÛX\™Ú[‰Ëˆ	Û˜]‰Îˆ	Û˜]‰ßBˆİ]HßBˆ›Üˆˆ[ˆ›İÜÎ‚ˆYˆ[ŠŠHˆÜˆ›İ–ÌN‚ˆÛÛ[YBˆXˆH™KœİXŠ‰Ö×˜K^‹ÈIË	ÉËÛX[Š–ÌJK›İÙ\Š
-JKœİš\
 
-BˆXˆH™KœİXŠ‰×ÊÉË	È	ËXŠBˆYˆXˆ[ˆÛX\[™ÛX\ÛX—H›İ[ˆİ]‚ˆˆHÛX[Š–ÌWJBˆYˆ[JŠH\È›İ›Û™H[™ˆ›İ[ˆSTN‚ˆİ]ÚÛX\ÛX—WHH‚ˆ™]\›ˆİ]Yˆ[Šİ]
-HHˆ[ÙH›Û™B‚‚™Yˆ^˜XİÜ›Û[İ\Š›İÜÊN‚ˆˆˆœ™KRTÈ›Û[İ\ˆÛ[™Èİœ›ÛHHÚ\™ZÛ[™ÈX›Kˆˆˆ‚ˆ›Üˆˆ[ˆ›İÜÎ‚ˆYˆ[ŠŠHHˆ[™–ÌH[™	Ü›Û[İ\‰È[ˆÛX[Š–ÌJK›İÙ\Š
-N‚ˆˆH[J–ÌWJBˆYˆˆ\È›İ›Û™H[™ˆHL‚ˆ™]\›ˆ›İ[™
-‹ŠBˆ™]\›ˆ›Û™B‚‚™Yˆ^˜XİÜY\œÊ›İÜÊN‚ˆY\œÈH×Bˆ›ÜˆK[ˆ[[Y\˜]J›İÜÊN‚ˆXYÈHŞ›İÙ\Š
-H›Üˆ[ˆBˆ›Ú[™YH	È	Ëš›Ú[ŠXYÊBˆYˆ	ÜY\‰È›İ[ˆ›Ú[™Y[™	ØÛÛ\[IÈ›İ[ˆ›Ú[™Y‚ˆÛÛ[YBˆYˆ	ÜIÈ›İ[ˆ›Ú[™Y[™	Ü›ÙIÈ›İ[ˆ›Ú[™Y‚ˆÛÛ[YBˆ›Üˆˆ[ˆ›İÜÖÚH
-ÈNšH
-ÈL—N‚ˆYˆ[ŠŠH‚ˆÛÛ[YBˆ˜[ÈH\İ
-ŠBˆYˆ˜[È[™™K™[X]Ú
-‰Ö×‹	WJÉË˜[ÖÌHÜˆ	ÉÊH[™[Š˜[ÊHH‚ˆ˜[ÈH˜[ÖÌN—Bˆ˜[YHH˜[ÖÌHYˆ˜[È[ÙH	ÉÂˆYˆ
-›İ˜[YHÜˆ[Š˜[YJHˆŒÜˆ[Š˜[YJHÂˆÜˆ˜[YK›İÙ\Š
-H[ˆ
-	ÜY\‰Ë	ØÛÛ\[IË	ÜY\œÉË	İİ[	ÊJN‚ˆÛÛ[YBˆ][HHÉÛ˜[YIÎˆ˜[Y_BˆHXYÖÌN—HYˆ[ŠŠHOH[Š˜[ÊH
-ÈH[ÙHXYÂˆ›Üˆ‹ˆ[ˆ[[Y\˜]J˜[ÖÌN—KJN‚ˆYˆˆH[Š
-N‚ˆœ™XZÂˆˆH™KœİXŠ‰Ö×˜K^‹×IË	ÉËÚ—JKœİš\
+def extract_financials(rows):
+    """restated consolidated financials table: 'Period Ended' header + metric rows."""
+    for i, h in enumerate(rows):
+        if not h or 'period ended' not in clean(h[0]).lower() or len(h) < 3:
+            continue
+        periods = [clean(p) for p in h[1:]]
+        labels = {'assets': 'assets', 'total income': 'income', 'revenue': 'income',
+                  'profit after tax': 'pat', 'total borrowing': 'borrowing',
+                  'net worth': 'networth', 'ebitda': 'ebitda'}
+        out = {'periods': periods}
+        for r in rows[i + 1:i + 12]:
+            if not r or not r[0]:
+                continue
+            lab = re.sub(r'[^a-z ]', '', clean(r[0]).lower()).strip()
+            lab = re.sub(r'\s+', ' ', lab)
+            k = None
+            if 'profit' in lab and 'tax' in lab:
+                k = 'pat'
+            elif lab in labels:
+                k = labels[lab]
+            if k:
+                vals = [num(c) for c in r[1:len(h)]]
+                while len(vals) < len(periods):
+                    vals.append(None)
+                out[k] = vals
+        if 'income' in out and 'pat' in out:
+            return out
+    return None
 
-BˆYˆˆ[ˆ
-	ÜIË	ÜÙIË	Ü\˜][ÉË	ÜÙ^	ÊH[™	ÜIÈ›İ[ˆ][N‚ˆ][VÉÜI×HHÛX[ŠŠBˆ[Yˆˆ[ˆ
-	Ü›ÙIË	Ü›ÛÉÊH[™	Ü›ÙIÈ›İ[ˆ][N‚ˆ][VÉÜ›ÙI×HHÛX[ŠŠBˆYˆ[Š][JHˆN‚ˆY\œË˜\[™
-][JBˆ™]\›ˆY\œÖÎ—B‚‚™YˆÛÛXİÛ[šÜÊ^˜\ÙWÙÛXZ[ŠN‚ˆˆˆ˜[Oˆ[šÜÈÚÜÙH™YˆY[[ÛœÈ\ÎÈ™]\›œÈÛ›Ü›]^ˆ\›Hˆˆ‚ˆİ]HßBˆ›Üˆ™Y‹]H[ˆ™K™š[™[
-‰ÏV×—JÚ™YHŠ×ˆ—JÊH–×—JŠŠÊOØO‰Ë^™K’H™K”ÊN‚ˆH™Y‹œİš\
 
-BˆYˆ	Ú\ÉÈ›İ[ˆ›İÙ\Š
-N‚ˆÛÛ[YBˆYˆœİ\İÚ]
-	ËËÉÊN‚ˆH	ÚÎ‰È
-Èˆ[Yˆœİ\İÚ]
-	ËÉÊN‚ˆH˜\ÙWÙÛXZ[ˆ
-ÈˆYˆ›İœİ\İÚ]
-	Ú	ÊN‚ˆÛÛ[YBˆHÛX[Š]JBˆYˆ›İ‚ˆÛÛ[YBˆÈH›Ü›J
-BˆYˆÈ[™È›İ[ˆİ]‚ˆİ]Ú×HHˆÈ[ÛÈ[™^HT“ÛYÎˆÚ\ËŞÜÛYßKZ\ËŞÚYKÈÛÈH[ÛÛ\[H˜[YBˆ\ÈHÜ›Üˆ[ˆœÜ]
-	ËÉÊHYˆBˆ›Üˆ[ˆ\Î‚ˆYˆ	Ú\ÉÈ›İ[ˆ›İÙ\Š
-H[™[Š›Ü›J
-JHˆ‚ˆÜH›Ü›J
-Bˆİ]œÙ]Y˜][
-Ü
-Bˆ™]\›ˆİ]‚‚™YˆÙX\˜ÚÛ[šÊ˜[YJN‚ˆˆˆ”ÙX\˜Ú[™Ú[™\ÈOˆÚ]Ü™Ø\šTÈYÙHT“›ÜˆHÛÛ\[H˜[YKˆˆˆ‚ˆ[\Ü\›X‹œ\œÙBˆHH\›X‹œ\œÙKœ][İJ˜[YH
-È	ÈÚ]N˜Ú]Ü™Ø\š˜ÛÛIÊBˆ›Üˆ[™Ú[™H[ˆ
-ˆ	ÚÎ‹ËÚ[™XÚÙXÚÙÛË˜ÛÛKÚ[ÏÜOIËˆ	ÚÎ‹ËÛ]K™XÚÙXÚÙÛË˜ÛÛKÛ]KÏÜOIËˆ	ÚÎ‹ËİİİË˜š[™Ë˜ÛÛKÜÙX\˜ÚÜOIÊN‚ˆ›ÜˆÈ[ˆ˜[™ÙJŠN‚ˆN‚ˆ^H™]Ú
-[™Ú[™H
-ÈK[Y[İ]LŒ
-BˆÈ\™Xİ[šÜÂˆHH™KœÙX\˜Ú
-‰ÚÎ‹Ëİİİ×˜Ú]Ü™Ø\š˜ÛÛKÚ\ËÖØK^ŒNWWJË×
-ÉË^
-BˆYˆN‚ˆ™]\›ˆK™Ü›İ\
-
-BˆÈÈ™Y\™Xİ\˜[\Âˆ›Üˆ[H[ˆ™K™š[™]\Š‰İYÏJ×‰ˆ—	×JÊIË^
-N‚ˆHH\›X‹œ\œÙK[œ][İJ[K™Ü›İ\
-JJBˆYˆ™KœÙX\˜Ú
-‰ØÚ]Ü™Ø\š˜ÛÛKÚ\ËÖØK^ŒNWWJË×
-ÉËJN‚ˆ™]\›ˆBˆ^Ù\^Ù\[Û‚ˆ\ÜÂˆ™]\›ˆ›Û™B‚‚™YˆXZ[Š
-N‚ˆ^[ØYHœÛÛ‹›ØYÊTÑUKœ™XYİ^
-[˜ÛÙ[™ÏIİ]‹N	ÊJBˆ[Ú\ÜÈH^[ØY™Ù]
-	Ú\ÜÉË×JBˆÙ^HH™]KÙ^J
-BˆÜ[—Ú\ÜÈHŞ›Üˆ[ˆ[Ú\ÜÈYˆ™Ù]
-	Û˜[YIÊH[™\×ÛÜ[ŠÙ^JWBˆš[
-	ÛÜ[ˆTÜÎ‰Ë[ŠÜ[—Ú\ÜÊJB‚ˆ[šÜÈHßBˆ›ÜˆÛ˜[YKÛH[ˆÓÕTÑTÎ‚ˆN‚ˆYÙHH™]Ú
-
-BˆÛİHÛÛXİÛ[šÜÊYÙKÛJBˆš[
-	É\Îˆ	Y\È[šÜÉÈ	H
-Û˜[YK[ŠÛİ
-JJBˆ[šÜË\]JÛİ
-Bˆ^Ù\^Ù\[Ûˆ\ÈN‚ˆš[
-	ÜÛİ\˜ÙH˜Z[Y‰ËÛ˜[YKJBˆš[
-	İİ[\İ[™È[šÜÈ›İ[™‰Ë[Š[šÜÊJB‚ˆ™\İ[HÉİ\]YØ]	Îˆ™]][YK››İÊ[Y^›Û™K]ÊKš\ÛÙ›Ü›X]
+def fy_growth(fin):
+    """YoY growth (pct) for income and PAT using the two most recent FULL
+    financial years (periods containing 'Mar')."""
+    out = {}
+    idx = [i for i, p in enumerate(fin['periods']) if 'mar' in p.lower()]
+    if len(idx) < 2:
+        return out
+    a, b = idx[0], idx[1]
+    for key, name in (('income', 'rev_growth'), ('pat', 'pat_growth')):
+        v = fin.get(key)
+        if v and v[a] is not None and v[b] not in (None, 0) and v[b] > 0:
+            out[name] = round((v[a] - v[b]) / v[b] * 100, 1)
+    return out
 
-K	Ú\ÜÉÎˆß_BˆZ\ÜÙ\ÈH×Bˆ›Üˆ\È[ˆÜ[—Ú\ÜÎ‚ˆ˜[YHH\ÖÉÛ˜[YI×BˆÙ^HH›Ü›J˜[YJBˆ\›H›Û™Bˆ™\İH›Û™Bˆ›ÜˆËH[ˆ[šÜËš][\Ê
-N‚ˆYˆÈOHÙ^N‚ˆ\›HBˆœ™XZÂˆYˆ[ŠÊHˆˆ[™
-È[ˆÙ^HÜˆÙ^H[ˆÊN‚ˆYˆ™\İ\È›Û™HÜˆ[ŠÊHˆ[Š™\İÌJN‚ˆ™\İH
-ËJBˆYˆ›İ\›[™™\İ‚ˆ\›H™\İÌWBˆYˆ›İ\›‚ˆ\›HÙX\˜ÚÛ[šÊ˜[YJBˆYˆ\›‚ˆš[
-	ÜÙX\˜Ú›İ[™‰Ë˜[YK	ËO‰Ë\›
-BˆYˆ›İ\›‚ˆZ\ÜÙ\Ë˜\[™
-˜[YJBˆš[
-	Ó“ÈS’È›Ü‰Ë˜[YJBˆ™\İ[ÉÚ\ÜÉ×VÛ˜[YWHHßBˆÛÛ[YBˆ[HHßBˆ[VÉİ\›	×HH\›ˆN‚ˆYÙHH™]Ú
-\›
-Bˆ\œÙ\ˆHX›T\œÙ\Š
-Bˆ\œÙ\‹™™YY
-YÙJBˆ›İÜÈH\œÙ\‹œ›İÜÂˆÙXÈH^˜XİÜÙXİÜŠ›İÜÊBˆYˆÙXÎ‚ˆ[VÉÜÙXİÜ‰×HHÙXÂˆİXœÈH^˜XİÜİXœÊ›İÜË\œÙ\‹YÊBˆYˆİXœÎ‚ˆ[VÉÜİXœÉ×HHİXœÂˆ[˜ÈH^˜XİØ[˜ÚÜŠYÙJBˆYˆ[˜Î‚ˆ[VÉØ[˜ÚÜ‰×HH[˜ÂˆY\œÈH^˜XİÜY\œÊ›İÜÊBˆYˆY\œÎ‚ˆ[VÉÜY\œÉ×HHY\œÂˆš[ˆH^˜XİÙš[˜[˜ÚX[Ê›İÜÊBˆYˆš[‚ˆ[VÉÙš[‰×HHš[‚ˆ›ÜˆÚËİˆ[ˆWÙÜ›İİ
-š[ŠKš][\Ê
-N‚ˆ[VÙÚ×HHİ‚ˆÜHH^˜XİÚÜJ›İÜÊBˆYˆÜN‚ˆ[VÉÚÜI×HHÜBˆ›ÛHH^˜XİÜ›Û[İ\Š›İÜÊBˆYˆ›ÛH\È›İ›Û™N‚ˆ[VÉÜ›Û[İ\—Üİ	×HH›ÛBˆš[
-	Ù™]ÚY	KMœÈÙXİÜIKLÜÈİXœÏIKLÜÈ[˜ÚÜIKLÜÈY\œÏIYš[I\ÈÜOI\È›ÛOI\ÉÈ	H
-ˆ˜[YVÎ—K›ÛÛ
-[K™Ù]
-	ÜÙXİÜ‰ÊJK›ÛÛ
-[K™Ù]
-	ÜİXœÉÊJKˆ›ÛÛ
-[K™Ù]
-	Ø[˜ÚÜ‰ÊJK[Š[K™Ù]
-	ÜY\œÉÊHÜˆ×JKˆ	Ùš[‰È[ˆ[K	ÚÜIÈ[ˆ[K	Ü›Û[İ\—Üİ	È[ˆ[JJBˆ^Ù\^Ù\[Ûˆ\ÈN‚ˆš[
-	ÜYÙH˜Z[Y‰Ë˜[YKJBˆ™\İ[ÉÚ\ÜÉ×VÛ˜[YWHH[B‚ˆÈ˜XÚÙš[™X[[™[Y[[È[È\ËY]KšœÛÛˆ
-Z\ÜÚ[™ÈšY[ÈÛ›JBˆ[˜[YHHŞ™Ù]
-	Û˜[YIÊNˆ›Üˆ[ˆ[Ú\ÜÈYˆ™Ù]
-	Û˜[YIÊ_B‚ˆYˆZ\ÜÚ[™ÊšY[
-N‚ˆİ\ˆHİŠ™Ù]
-šY[
-HÜˆ	ÉÊKœİš\
 
-Bˆ™]\›ˆİ\ˆ[ˆ
-	ÉË	ËIË	×LŒM	Ë	Ó›Û™IË	ÓIË	Ó‹ĞIÊHÜˆİ\‹›İÙ\Š
-H[ˆ
-	İ˜IË
-B‚ˆ˜XÚÙš[YHˆ›Üˆ˜[YK[H[ˆ™\İ[ÉÚ\ÜÉ×Kš][\Ê
-N‚ˆH[˜[YK™Ù]
-˜[YJBˆYˆ›İ‚ˆÛÛ[YBˆÜHH[K™Ù]
-	ÚÜIÊHÜˆßBˆš[ˆH[K™Ù]
-	Ùš[‰ÊHÜˆßBˆš[ÈH×BˆYˆÜK™Ù]
-	Ü›ÙIÊH[™Z\ÜÚ[™Ê	Ü›ÙIÊN‚ˆš[Ë˜\[™
+def extract_kpi(rows):
+    """KPI table rows: ROE / ROCE / Debt-Equity / PAT Margin / EBITDA Margin / NAV."""
+    kmap = {'roe': 'roe', 'roce': 'roce', 'debt/equity': 'de', 'debt equity': 'de',
+            'debt to equity': 'de', 'pat margin': 'pat_margin',
+            'ebitda margin': 'ebitda_margin', 'net profit margin': 'pat_margin',
+            'nav': 'nav'}
+    out = {}
+    for r in rows:
+        if len(r) < 2 or not r[0]:
+            continue
+        lab = re.sub(r'[^a-z/ ]', '', clean(r[0]).lower()).strip()
+        lab = re.sub(r'\s+', ' ', lab)
+        if lab in kmap and kmap[lab] not in out:
+            v = clean(r[1])
+            if num(v) is not None and v not in EMPTY:
+                out[kmap[lab]] = v
+    return out if len(out) >= 2 else None
 
-	Ü›ÙIËÜVÉÜ›ÙI×JJBˆYˆÜK™Ù]
-	Ü›ØÙIÊH[™Z\ÜÚ[™Ê	Ü›ØÙIÊN‚ˆš[Ë˜\[™
 
-	Ü›ØÙIËÜVÉÜ›ØÙI×JJBˆYˆÜK™Ù]
-	ÙIÊH[™Z\ÜÚ[™Ê	ÙIÊN‚ˆš[Ë˜\[™
+def extract_promoter(rows):
+    """pre-IPO promoter holding pct from the shareholding table."""
+    for r in rows:
+        if len(r) >= 2 and r[0] and 'promoter' in clean(r[0]).lower():
+            v = num(r[1])
+            if v is not None and 0 < v <= 100:
+                return round(v, 2)
+    return None
 
-	ÙIËÜVÉÙI×JJBˆYˆ[K™Ù]
-	Ü™]—ÙÜ›İİ	ÊH\È›İ›Û™H[™Z\ÜÚ[™Ê	ÙÜ›İİ	ÊN‚ˆš[Ë˜\[™
 
-	ÙÜ›İİ	ËİŠ›İ[™
-[VÉÜ™]—ÙÜ›İİ	×JJH
-È	ÉIÊJBˆZHHÚH›ÜˆK[ˆ[[Y\˜]Jš[‹™Ù]
-	Ü\š[ÙÉÊHÜˆ×JHYˆ	ÛX\‰È[ˆ›İÙ\Š
-WBˆYˆš[‹™Ù]
-	Ú[˜ÛÛYIÊH[™ZH[™š[–ÉÚ[˜ÛÛYI×VÙZVÌWH\È›İ›Û™H[™Z\ÜÚ[™Ê	Ü™]‰ÊN‚ˆš[Ë˜\[™
+def extract_peers(rows):
+    peers = []
+    for i, h in enumerate(rows):
+        heads = [x.lower() for x in h]
+        joined = ' '.join(heads)
+        if 'peer' not in joined and 'company' not in joined:
+            continue
+        if 'pe' not in joined and 'roe' not in joined:
+            continue
+        for r in rows[i + 1:i + 12]:
+            if len(r) < 2:
+                continue
+            vals = list(r)
+            if vals and re.fullmatch(r'[\d.,%]+', vals[0] or '') and len(vals) >= 2:
+                vals = vals[1:]
+            name = vals[0] if vals else ''
+            if (not name or len(name) > 60 or len(name) < 3
+                    or name.lower() in ('peer', 'company', 'peers', 'total')):
+                continue
+            item = {'name': name}
+            hh = heads[1:] if len(r) == len(vals) + 1 else heads
+            for j, v in enumerate(vals[1:], 1):
+                if j >= len(hh):
+                    break
+                hj = re.sub(r'[^a-z/]', '', hh[j]).strip()
+                if hj in ('pe', 'p/e', 'peratio', 'p/ex') and 'pe' not in item:
+                    item['pe'] = clean(v)
+                elif hj in ('roe', 'ronw') and 'roe' not in item:
+                    item['roe'] = clean(v)
+            if len(item) > 1:
+                peers.append(item)
+    return peers[:6]
 
-	Ü™]‰Ë	×LŒIÈ
-ÈİŠš[–ÉÚ[˜ÛÛYI×VÙZVÌWJH
-È	ÈÜ‰ÊJBˆYˆš[‹™Ù]
-	Ü]	ÊH[™ZH[™š[–ÉÜ]	×VÙZVÌWH\È›İ›Û™H[™Z\ÜÚ[™Ê	Ü]	ÊN‚ˆš[Ë˜\[™
 
-	Ü]	Ë	×LŒIÈ
-ÈİŠš[–ÉÜ]	×VÙZVÌWJH
-È	ÈÜ‰ÊJBˆYˆ[K™Ù]
-	Ü›Û[İ\—Üİ	ÊH\È›İ›Û™H[™Z\ÜÚ[™Ê	Ü›ÛIÊN‚ˆš[Ë˜\[™
+def collect_links(text, base_domain):
+    """all <a> links whose href mentions ipo; returns {normtext: url}"""
+    out = {}
+    for href, title in re.findall(r'<a[^>]+href="([^"]+)"[^>]*>(.*?)</a>', text, re.I | re.S):
+        h = href.strip()
+        if 'ipo' not in h.lower():
+            continue
+        if h.startswith('//'):
+            h = 'https:' + h
+        elif h.startswith('/'):
+            h = base_domain + h
+        if not h.startswith('http'):
+            continue
+        t = clean(title)
+        if not t:
+            continue
+        k = norm(t)
+        if k and k not in out:
+            out[k] = h
+        # also index by URL slug: /ipo/{slug}-ipo/{id}/ holds the full company name
+        parts = [p for p in h.split('/') if p]
+        for p in parts:
+            if 'ipo' not in p.lower() and len(norm(p)) > 8:
+                sp = norm(p)
+                out.setdefault(sp, h)
+    return out
 
-	Ü›ÛIËİŠ[VÉÜ›Û[İ\—Üİ	×JH
-È	ÉIÊJBˆ›Üˆ›˜[[ˆš[Î‚ˆÙ›HH˜[ˆ˜XÚÙš[Y
-ÏH[Šš[ÊBˆTÑUKÜš]Wİ^
-œÛÛ‹™[\Ê^[ØY[œİ\™WØ\ØÚZOQ˜[ÙK[™[LJK[˜ÛÙ[™ÏIİ]‹N	ÊBˆš[
-	Ú\ËY]KšœÛÛˆ	Y[™[Y[[šY[È˜XÚÙš[Y	È	H˜XÚÙš[Y
-B‚ˆÕUÜš]Wİ^
-œÛÛ‹™[\Ê™\İ[[œİ\™WØ\ØÚZOQ˜[ÙK[™[LJK[˜ÛÙ[™ÏIİ]‹N	ÊBˆÛİHİ[JH›Üˆˆ[ˆ™\İ[ÉÚ\ÜÉ×K˜[Y\Ê
-HYˆ‹™Ù]
-	İ\›	ÊJBˆš[
-	Ú\ËY]Z[ËšœÛÛˆÜš][ˆ	YTÜË	YÚ]YÙ\Ë	YÚ]İ][šÜÉÈ	H
-ˆ[Š™\İ[ÉÚ\ÜÉ×JKÛİ[ŠZ\ÜÙ\ÊJJB‚‚šYˆ×Û˜[YW×ÈOH	××ÛXZ[—×ÉÎ‚ˆXZ[Š
-B
+
+def search_link(name):
+    """Search engines -> chittorgarh IPO page URL for a company name."""
+    import urllib.parse
+    q = urllib.parse.quote(name + ' site:chittorgarh.com')
+    for engine in (
+            'https://html.duckduckgo.com/html/?q=',
+            'https://lite.duckduckgo.com/lite/?q=',
+            'https://www.bing.com/search?q='):
+        for _ in range(2):
+            try:
+                text = fetch(engine + q, timeout=20)
+                # direct links
+                m = re.search(r'https://www\.chittorgarh\.com/ipo/[a-z0-9\-]+/\d+', text)
+                if m:
+                    return m.group(0)
+                # ddg redirect params
+                for mm in re.finditer(r'uddg=([^&"\']+)', text):
+                    u = urllib.parse.unquote(mm.group(1))
+                    if re.search(r'chittorgarh\.com/ipo/[a-z0-9\-]+/\d+', u):
+                        return u
+            except Exception:
+                pass
+    return None
+
+
+def main():
+    payload = json.loads(IPODATA.read_text(encoding='utf-8'))
+    all_ipos = payload.get('ipos', [])
+    today = dt.date.today()
+    open_ipos = [x for x in all_ipos if x.get('name') and is_open(x, today)]
+    print('open IPOs:', len(open_ipos))
+
+    links = {}
+    for sname, lp, dom in SOURCES:
+        try:
+            page = fetch(lp)
+            got = collect_links(page, dom)
+            print('%s: %d ipo links' % (sname, len(got)))
+            links.update(got)
+        except Exception as e:
+            print('source failed:', sname, e)
+    print('total listing links found:', len(links))
+
+    result = {'updated_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'ipos': {}}
+    misses = []
+    for ipo in open_ipos:
+        name = ipo['name']
+        key = norm(name)
+        url = None
+        best = None
+        for k, u in links.items():
+            if k == key:
+                url = u
+                break
+            if len(k) > 6 and (k in key or key in k):
+                if best is None or len(k) > len(best[0]):
+                    best = (k, u)
+        if not url and best:
+            url = best[1]
+        if not url:
+            url = search_link(name)
+            if url:
+                print('search found:', name, '->', url)
+        if not url:
+            misses.append(name)
+            print('NO LINK for:', name)
+            result['ipos'][name] = {}
+            continue
+        entry = {}
+        entry['url'] = url
+        try:
+            page = fetch(url)
+            parser = TableParser()
+            parser.feed(page)
+            rows = parser.rows
+            sec = extract_sector(rows)
+            if sec:
+                entry['sector'] = sec
+            subs = extract_subs(rows, parser.tids)
+            if subs:
+                entry['subs'] = subs
+            anc = extract_anchor(page)
+            if anc:
+                entry['anchor'] = anc
+            peers = extract_peers(rows)
+            if peers:
+                entry['peers'] = peers
+            fin = extract_financials(rows)
+            if fin:
+                entry['fin'] = fin
+                for gk, gv in fy_growth(fin).items():
+                    entry[gk] = gv
+            kpi = extract_kpi(rows)
+            if kpi:
+                entry['kpi'] = kpi
+            prom = extract_promoter(rows)
+            if prom is not None:
+                entry['promoter_pct'] = prom
+            print('fetched %-42s sector=%-3s subs=%-3s anchor=%-3s peers=%d fin=%s kpi=%s prom=%s' % (
+                name[:42], bool(entry.get('sector')), bool(entry.get('subs')),
+                bool(entry.get('anchor')), len(entry.get('peers') or []),
+                'fin' in entry, 'kpi' in entry, 'promoter_pct' in entry))
+        except Exception as e:
+            print('page failed:', name, e)
+        result['ipos'][name] = entry
+
+    # backfill real fundamentals into ipo-data.json (missing fields only)
+    byname = {x.get('name'): x for x in all_ipos if x.get('name')}
+
+    def missing(field):
+        cur = str(x.get(field) or '').strip()
+        return cur in ('', '-', '\u2014', 'None', 'NA', 'N/A') or cur.lower() in ('tba',)
+
+    backfilled = 0
+    for name, entry in result['ipos'].items():
+        x = byname.get(name)
+        if not x:
+            continue
+        kpi = entry.get('kpi') or {}
+        fin = entry.get('fin') or {}
+        fills = []
+        if kpi.get('roe') and missing('roe'):
+            fills.append(('roe', kpi['roe']))
+        if kpi.get('roce') and missing('roce'):
+            fills.append(('roce', kpi['roce']))
+        if kpi.get('de') and missing('de'):
+            fills.append(('de', kpi['de']))
+        if entry.get('rev_growth') is not None and missing('growth'):
+            fills.append(('growth', str(round(entry['rev_growth'])) + '%'))
+        fyi = [i for i, p in enumerate(fin.get('periods') or []) if 'mar' in p.lower()]
+        if fin.get('income') and fyi and fin['income'][fyi[0]] is not None and missing('rev'):
+            fills.append(('rev', '\u20b9' + str(fin['income'][fyi[0]]) + ' Cr'))
+        if fin.get('pat') and fyi and fin['pat'][fyi[0]] is not None and missing('pat'):
+            fills.append(('pat', '\u20b9' + str(fin['pat'][fyi[0]]) + ' Cr'))
+        if entry.get('promoter_pct') is not None and missing('prom'):
+            fills.append(('prom', str(entry['promoter_pct']) + '%'))
+        for fld, val in fills:
+            x[fld] = val
+        backfilled += len(fills)
+    IPODATA.write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding='utf-8')
+    print('ipo-data.json: %d fundamental fields backfilled' % backfilled)
+
+    OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding='utf-8')
+    got = sum(1 for v in result['ipos'].values() if v.get('url'))
+    print('ipo-details.json written: %d IPOs, %d with pages, %d without links' % (
+        len(result['ipos']), got, len(misses)))
+
+
+if __name__ == '__main__':
+    main()

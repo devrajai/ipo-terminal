@@ -127,7 +127,7 @@
         const mfPct = (anc.mf_cr != null && anc.total_cr) ? Math.round(anc.mf_cr / anc.total_cr * 100) : null;
         anchorHtml = '<div class="pt-hint"><b>' + (anc.total_cr != null ? '\u20B9' + anc.total_cr + ' Cr' : '')
           + (anc.investors ? ' from ' + anc.investors + ' anchor investors' : '') + '</b>'
-          + (anc.mf_cr != null ? ' \u00B7 Mutual funds \u2248 \u20B9' + anc.mf_cr + ' Cr' + (mfPct != null ? ' (' + mfPct + '%)' : '')
+          + (anc.mf_cr != null ? ' \u00B7 Mutual funds \u2248 \u20B9' + anc.mf_cr + ' Cr' + (mfPct != null ? ' (' + mfPct + '%)' : '') : '')
           + (anc.fii_cr != null ? ' \u00B7 FIIs \u2248 \u20B9' + anc.fii_cr + ' Cr' : '') + '</div>'
           + '<div class="pt-hint">' + (mfPct != null && mfPct >= 40
              ? '<b style="color:#22c55e">Mutual-fund heavy anchor book \u2014 domestic institutions did their homework. Good sign.</b>'
@@ -141,13 +141,13 @@
           + ['rii', 'nii', 'qib', 'total'].map(k => sub[k] != null
             ? '<div><div class="pt-hint" style="margin:0">' + ({ rii: 'Retail', nii: 'NII / HNI', qib: 'QIB', total: 'Total' })[k] + '</div><div class="pt-big" style="font-size:18px;color:' + (sub[k] >= 10 ? '#22c55e' : (sub[k] >= 2 ? '#fbbf24' : '#94a3b8')) + '">' + sub[k] + 'x</div></div>'
             : '').join('') + '</div>'
-           + '<div class="pt-hint">QIB ' + (sub.qib != null && sub.qib >= 10 ? 'filling strongly \u2014 institutional conviction.' : 'still building \u2014 big institutions often commit in the final hours (Tip 26, step 5).') + '</div>';
+          + '<div class="pt-hint">QIB ' + (sub.qib != null && sub.qib >= 10 ? 'filling strongly \u2014 institutional conviction.' : 'still building \u2014 big institutions often commit in the final hours (Tip 26, step 5).') + '</div>';
       } else {
         subHtml = '<div class="pt-hint">Live subscription (Retail / HNI / QIB) fills in here during the IPO window.</div>';
       }
-      let sectorHtml;
+      let peersHtml = '';
       if (peers && peers.length) {
-        sectorHtml = '<h4 style="margin:16px 0 6px;font-size:13px">Same-sector peers</h4>'
+        peersHtml = '<h4 style="margin:16px 0 6px;font-size:13px">Same-sector peers</h4>'
           + '<table class="pt-tbl"><tr><th>Company</th><th>P/E</th></tr>'
           + peers.map(p => '<tr><td>' + E(p.name) + '</td><td class="pt-mono">' + E(p.pe || '\u2014') + '</td></tr>').join('')
           + '<tr><td><b>' + E(x.name.replace(/ Limited$/, '')) + ' (this IPO)</b></td><td class="pt-mono"><b>' + E(x.pe || '\u2014') + '</b></td></tr></table>'
@@ -155,27 +155,78 @@
       }
       detail = '<h4 style="margin:4px 0 6px;font-size:14px">Full stock detail \u2014 ' + E(x.name) + '</h4>'
         + '<div class="pt-hint">' + E(x.type || 'Mainboard') + ' \u00B7 1 lot \u2248 ' + money(r.cost)
-        + ' \u00B7 GMP  ' + E(x.gmp_pct || '\u2014') + ' \u00B7 closes ' + E(x.close || '\u2014') + '</div>'
-         + radarHtml
+        + ' \u00B7 GMP ' + E(x.gmp_pct || '\u2014') + ' \u00B7 closes ' + E(x.close || '\u2014') + '</div>'
+        + radarHtml
         + '<h4 style="margin:12px 0 4px;font-size:13px">Fundamentals (from the RHP)</h4>' + fund
         + '<h4 style="margin:16px 0 4px;font-size:13px">Anchor book (who invested the day before)</h4>' + anchorHtml
         + '<h4 style="margin:16px 0 4px;font-size:13px">Live subscription</h4>' + subHtml
-        + sectorHtml
+        + peersHtml
         + '<h4 style="margin:16px 0 4px;font-size:13px">Direct sources</h4>'
         + '<div class="pt-hint" style="display:flex;gap:8px;flex-wrap:wrap">'
         + (rhp ? '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="noopener" href="' + E(rhp) + '">\uD83D\uDCC4 RHP / offer document</a>' : '')
-        + (d.url ? '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="nopener" href="' + E(d.url) + '">\uD83D\uDD17 Chittorgarh page</a>' : '')
+        + (d.url ? '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="noopener" href="' + E(d.url) + '">\uD83D\uDD17 Chittorgarh page</a>' : '')
         + '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="noopener" href="https://youtu.be/W4VmJ8UaUjE">\uD83D\uDCFA Selection rules (video)</a>'
-        + '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="nopener" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15">\uD83D\uDCE2 SEBI filings</a>'
+        + '<a class="pt-btn" style="text-decoration:none;padding:7px 12px" target="_blank" rel="noopener" href="https://www.sebi.gov.in/sebiweb/home/HomeAction.do?doListing=yes&sid=3&smid=11&ssid=15">\uD83D\uDCE2 SEBI filings</a>'
         + '</div>';
     } else {
       detail = '<div class="pt-hint">No open IPOs with price bands right now \u2014 detail appears when the next IPO opens.</div>';
     }
     const selector = scored.length
       ? '<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:2px 0 10px">'
-        + '<span class="pt-hint" style="margin:0">Inspect IP3:</span>'
+        + '<span class="pt-hint" style="margin:0">Inspect IPO:</span>'
         + '<select id="pt-why-select" class="pt-in" style="width:250px">'
         + scored.map(function (z, i) { return '<option value="' + E(z.x.name) + '"' + (z.x.name === selName ? ' selected' : '') + '>'
-            + E('#' + (i + 1) + ' \u00B7 ' + z.x.name) + '</option>'; }).join('')
+          + E('#' + (i + 1) + ' \u00B7 ' + z.x.name) + '</option>'; }).join('')
         + '</select></div>' : '';
-    const mb = scored.filter(z => ÖËπ•ÕMµî§πÕ±•çî†¿∞ÄÃ§Ï(ÄÄÄÅçΩπÕ–ÅÕµîÄÙÅÕçΩ…ïêπô•±—ï»°ËÄÙ¯ÅËπ•ÕMµî§πÕ±•çî†¿∞ÄÃ§Ï(ÄÄÄÅçΩπÕ–Å…Öπ≠QÖâ±îÄÙÅô’πç—•Ω∏Ä°±•Õ–§ÅÏ(ÄÄÄÄÄÅ•òÄ†Ö±•Õ–π±ïπù—†§Å…ï—’…∏ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘9ΩπîÅΩ¡ï∏Å…•ù°–ÅπΩ‹∏Ωë•ÿ¯úÏ(ÄÄÄÄÄÅ…ï—’…∏ÄúÒ—Öâ±îÅç±ÖÕÃÙâ¡–µ—â∞à¯Ò—»¯Ò—†˘IÖπ¨Ω—†¯Ò—†˘%A<Ω—†¯Ò—†¯ƒÅ±Ω–Ω—†¯Ò—†˘5@Ω—†¯Ò—†˘MçΩ…îΩ—†¯Ò—†˘]°‰Ω—†¯Ω—»¯ú(ÄÄÄÄÄÄÄÄ¨Å±•Õ–πµÖ¿°ô’πç—•Ω∏Ä°Ë∞Å§§ÅÏ(ÄÄÄÄÄÄÄÄÄÄÄÅ…ï—’…∏ÄúÒ—»¯Ò—ê¯Òà¯åúÄ¨Ä°§Ä¨Äƒ§Ä¨ÄúΩà¯Ω—ê¯Ò—ê¯úÄ¨Å°Ëπ‡ππÖµîπ…ï¡±Öçî†ºÅ1•µ•—ïêêº∞Äúú§§Ä¨ÄúΩ—ê¯Ò—êÅç±ÖÕÃÙâ¡–µµΩπºà¯úÄ¨ÅµΩπï‰°ËπçΩÕ–§Ä¨ÄúΩ—ê¯ú(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¨ÄúÒ—êÅç±ÖÕÃÙâ¡–µµΩπºàÅÕ—Â±îÙâçΩ±Ω»ËúÄ¨Ä°Ëπù¿Ä¯ÙÄ»‘Ä¸Äúå»…å‘’îúÄËÅËπù¿ÄÑÙÅπ’±∞ÄòòÅËπù¿Ä¯Ä¿Ä¸Äúçôââò»–úÄËÄúå‰—ÑÕà‡ú§Ä¨Äúà¯úÄ¨Ä°Ëπù¿ÄÑÙÅπ’±∞ÄòòÅËπù¿Ä¯Ä¿Ä¸Äú¨úÄ¨ÅËπù¿Ä¨ÄúîúÄËÄùq‘»¿ƒ–ú§Ä¨ÄúΩ—ê¯ú(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¨ÄúÒ—êÅç±ÖÕÃÙâ¡–µµΩπºà¯ÒàÅÕ—Â±îÙâçΩ±Ω»ËúÄ¨Ä°ËπÕ•úπÕçΩ…îÄ¯ÙÄ‹¿Ä¸Äúå»…å‘’îúÄËÅËπÕ•úπÕçΩ…îÄ¯ÙÄ‘¿Ä¸Äúçôââò»–úÄËÄúçïò––––ú§Ä¨Äúà¯úÄ¨ÅËπÕ•úπÕçΩ…îÄ¨ÄúΩà¯Ω—ê¯ú(ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¨ÄúÒ—êÅÕ—Â±îÙâôΩπ–µÕ•ÈîËƒ¡¡‡ÌçΩ±Ω»ÈŸÖ»†¥µ—‡Ã§à¯úÄ¨Å°ËπÕ•úπ›°‰π±ïπù—†Ä¸ÅËπÕ•úπ›°‰πÕ±•çî†¿∞Ä»§π©Ω•∏†úÅq‘¿¡‹Äú§ÄËÄùïŸ•ëïπçîÅâ’•±ë•πúú§Ä¨ÄúΩ—ê¯Ω—»¯úÏ(ÄÄÄÄÄÄÄÄÄÅÙ§π©Ω•∏†úú§Ä¨ÄúΩ—Öâ±î¯úÏ(ÄÄÄÅÙÏ(ÄÄÄÅçΩπÕ–Å—Ω¿ÄÙÅÕçΩ…ïêπÕ±•çî†¿∞Äÿ§Ï(ÄÄÄÅçΩπÕ–Åâ’ëÃÄÙÅlƒ¿¿¿¿¿∞Ä»¿¿¿¿¿∞ÄÃ¿¿¿¿¡tπµÖ¿°â’êÄÙ¯ÅÏ(ÄÄÄÄÄÅ±ï–Å±ïô–ÄÙÅâ’êÏ(ÄÄÄÄÄÅçΩπÕ–Å¡•ç≠ÃÄÙÅmtÏ(ÄÄÄÄÄÅôΩ»Ä°çΩπÕ–ÅËÅΩòÅ—Ω¿§ÅÏ(ÄÄÄÄÄÄÄÅçΩπÕ–ÅåÄÙÅËπ•ÕMµîÄ¸ÅËπçΩÕ–Ä®Ä»ÄËÅËπçΩÕ–Ï(ÄÄÄÄÄÄÄÅ•òÄ°åÄÙÅ±ïô–§ÅÏÅ¡•ç≠Ãπ¡’Õ†°ÏÅËËÅË∞ÅåËÅåÅÙ§ÏÅ±ïô–Ä¥ÙÅåÏÅÙ(ÄÄÄÄÄÅÙ(ÄÄÄÄÄÅ…ï—’…∏ÅÏÅâ’êËÅâ’ê∞Å¡•ç≠ÃËÅ¡•ç≠Ã∞Å±ïô–ËÅ±ïô–ÅÙÏ(ÄÄÄÅÙ§Ï(ÄÄÄÅçΩπÕ–Å¡±Ö∏ÄÙÄúÒ—Öâ±îÅç±ÖÕÃÙâ¡–µ—â∞à¯Ò—»¯Ò—†˘%òÅÂΩ‘Å°ÖŸîΩ—†¯Ò—†˘]°Ö–Å—°îÅ¡±ÖπÃÅÕ’ùùïÕ–Ω—†¯Ω—»¯ú(ÄÄÄÄÄÄ¨Åâ’ëÃπµÖ¿°àÄÙ¯ÄúÒ—»¯Ò—êÅç±ÖÕÃÙâ¡–µµΩπºà¯úÄ¨ÅµΩπï‰°àπâ’ê§Ä¨ÄúΩ—ê¯Ò—ê¯ú(ÄÄÄÄÄÄÄÄ¨Ä°àπ¡•ç≠Ãπ±ïπù—†(ÄÄÄÄÄÄÄÄÄÄÄ¸Åàπ¡•ç≠ÃπµÖ¿°¿ÄÙ¯ÄúƒÅ±Ω–ÄúÄ¨Å°¿πËπ‡ππÖµîπ…ï¡±Öçî†ºÅ1•µ•—ïêêº∞Äúú§§Ä¨ÄúÄ†úÄ¨ÅµΩπï‰°¿πå§Ä¨Äú§ú§π©Ω•∏†úÄ¨Äú§(ÄÄÄÄÄÄÄÄÄÄÄÄÄ¨Ä°àπ±ïô–Ä¯Ä‘¿¿¿Ä¸ÄúÄ¨ÄúÄ¨ÅµΩπï‰°àπ±ïô–§Ä¨ÄúÅ≠ï¡–Åô…ïîúÄËÄúú§(ÄÄÄÄÄÄÄÄÄÄÄËÄù9ºÅ—Ω¿µ…Öπ≠ïêÅ%A<Åô•—ÃÅ—°•ÃÅâ’ëùï–Å…•ù°–ÅπΩ‹ú§(ÄÄÄÄÄÄÄÄÄÄÄÄ¨ÄúΩ—ê¯Ω—»¯ú§π©Ω•∏†úú§Ä¨ÄúΩ—Öâ±î¯úÏ(ÄÄÄÅï∞π•ππï…!Q50ÄÙÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ—ÖâÃà¯úÄ¨Å—ÖâÃ†§Ä¨ÄúΩë•ÿ¯ú(ÄÄÄÄÄÄ¨ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘’±∞Å—…ÖπÕ¡Ö…ïπç‰ËÅ°Ω‹ÅÖπêÅ›°‰Å—°•ÃÅÕ•—îÅ¡•ç≠ÃÅ%A=ÃÅq‘»¿ƒ–Å›•—†Å—°îÅ’πëï…±Â•πúÅëÖ—ÑÅÖπêÅ±•π≠Ã∏Ωë•ÿ¯ú(ÄÄÄÄÄÄ¨ÅÕï±ïç—Ω»Ä¨Åëï—Ö•∞(ÄÄÄÄÄÄ¨ÄúÒ†–ÅÕ—Â±îÙâµÖ…ù•∏Ëƒ·¡‡Ä¿ÄŸ¡‡ÌôΩπ–µÕ•ÈîËƒ—¡‡à˘	ïÕ–ÄÃÅq‘»¿ƒ–Å5Ö•πâΩÖ…êΩ†–¯ú(ÄÄÄÄÄÄ¨ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘IÖπ≠ïêÅâ‰ÅïŸ•ëïπçîÅÕçΩ…îÄ°ù…Ω›—†Ä¨ÅI=Ä¨ÅŸÖ±’Ö—•Ω∏Ä¨ÅÕ’âÕç…•¡—•Ω∏Ä¨Å5@Ä¨Åëïâ–§∞ÅπΩ–Å©’Õ–Å5@∏Ωë•ÿ¯ú(ÄÄÄÄÄÄ¨Å…Öπ≠QÖâ±î°µà§(ÄÄÄÄÄÄ¨ÄúÒ†–ÅÕ—Â±îÙâµÖ…ù•∏ËƒŸ¡‡Ä¿ÄŸ¡‡ÌôΩπ–µÕ•ÈîËƒ—¡‡à˘	ïÕ–ÄÃÅq‘»¿ƒ–ÅM5Ω†–¯ú(ÄÄÄÄÄÄ¨ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘M5Å%A=ÃÅÖ…îÅ©’ëùïêÅÕï¡Ö…Ö—ï±‰ËÅÕµÖ±±ï»ÅçΩµ¡Öπ•ïÃ∞Å°•ù°ï»Å…•Õ¨Åq‘»¿ƒ–ÅçΩµ¡Ö…îÅ›•—°•∏Å—°îÅçÖ—ïùΩ…‰ÅΩπ±‰Ä°Q•¿Ä»ÿ∞ÅÕ—ï¿Äƒ§∏Ωë•ÿ¯ú(ÄÄÄÄÄÄ¨Å…Öπ≠QÖâ±î°Õµî§(ÄÄÄÄÄÄ¨ÄúÒ†–ÅÕ—Â±îÙâµÖ…ù•∏ËƒŸ¡‡Ä¿ÄŸ¡‡ÌôΩπ–µÕ•ÈîËƒ—¡‡à˘!Ω‹Å—°îÅq‘»¡‰≈0ÄºÅq‘»¡‰…0ÄºÅq‘»¡‰Õ0Åâ’ëùï–Å¡±ÖπÃÅ›Ω…¨Ω†–¯ú(ÄÄÄÄÄÄ¨ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘5Ωπï‰Å•ÃÅÕ¡…ïÖêÅÖÃÄƒÅ±Ω–ÅïÖç†ÅÖç…ΩÕÃÅ—°îÅ—Ω¿µ…Öπ≠ïêÅΩ¡ï∏Å%A=ÃÅq‘»¿ƒ–ÅµΩ…îÅôÖµ•±‰ÅπÖµïÃ∞ÅπΩ–ÅµΩ…îÅ±Ω—Ã∞Å…Ö•ÕîÅÂΩ’»Åç°ÖπçïÃÄ°Q•¿Ä»‹§∏ÅM5Åïπ—…•ïÃÅ’ÕîÄ»Å±Ω—ÃÄ°µ•π•µ’¥Åq‘»¡à‰…0ÅôΩ»Å!9$ÅΩëëÃ§∏Ωë•ÿ¯ú(ÄÄÄÄÄÄ¨Å¡±Ö∏(ÄÄÄÄÄÄ¨ÄúÒ†–ÅÕ—Â±îÙâµÖ…ù•∏ËƒŸ¡‡Ä¿ÄŸ¡‡ÌôΩπ–µÕ•ÈîËƒ—¡‡à˘=’»ÅëÖ—ÑÅÕΩ’…çïÃΩ†–¯ú(ÄÄÄÄÄÄ¨ÄúÒë•ÿÅç±ÖÕÃÙâ¡–µ°•π–à˘q‘»¿»»ÄÒà˘5@∞Å¡…•çîÅâÖπëÃ∞ÅëÖ—ïÃ∞ÅÕ’âÕç…•¡—•ΩπÃËΩà¯ÄÒÑÅÕ—Â±îÙâçΩ±Ω»Ëå‰Õå’ôêàÅ—Ö…ùï–Ùâ}â±Öπ¨àÅ…ï∞ÙâπΩΩ¡ïπï»àÅ°…ïòÙâ°——¡ÃËºΩ››‹πç°•——Ω…ùÖ…†πçΩ¥Ω…ï¡Ω…–Ω•¡ºµù…ï‰µµÖ…≠ï–µ¡…ïµ•’¥µùµ¿º»ƒºà˘°•——Ω…ùÖ…†Å5@Å¡ÖùîΩÑ¯∞ÅÖ’—ºµÕç…Ö¡ïêÅïŸï…‰Ä‘Åµ•π’—ïÃ∏Òâ»¯ú(ÄÄÄÄÄÄ¨Äùq‘»¿»»ÄÒà˘•πÖπç•Ö±Ã∞Å-A%Ã∞ÅÖπç°Ω»ÅâΩΩ¨∞Å¡ïï…Ã∞ÅÕïç—Ω»∞Å±•ŸîÅÕ’âÕç…•¡—•Ω∏ËΩà¯ÅïÖç†Å%A=q‘»¿ƒÂÃÅΩ›∏Å°•——Ω…ùÖ…†Å¡ÖùîÄ°±•π≠ïêÅÖâΩŸîÅ¡ï»Å%A<§∞Å…ïô…ïÕ°ïêÅïŸï…‰ÄÃ¿Åµ•π’—ïÃ∏Òâ»¯ú(ÄÄÄÄÄÄ¨Äùq‘»¿»»ÄÒà˘Ö•±‰Å5@Å°•Õ—Ω…‰ËΩà¯ÅΩ’»ÅΩ›∏Å±ΩúÅÕ•πçîÄƒ‰ÅMï¿Ä»¿»ÿÄ°ëÖ—ÑΩ°•Õ—Ω…‰π©ÕΩ∏§∏Òâ»¯ú(ÄÄÄÄÄÄ¨Äùq‘»¿»»ÄÒà˘Ω…ïçÖÕ—ÃËΩà¯ÅΩΩù±îÅQ•µïÕ4ÄÃ∏¿∞ÅëÖ•±‰Ä¿‹Ëƒ‘Å%MPÅq‘»¿ƒ–ÅÖçç’…Öç‰Å¡’â±•Õ°ïêÅ•∏ÅQ…Öç¨ÅIïçΩ…ê∏Òâ»¯ú(ÄÄÄÄÄÄ¨Äùq‘»¿»»ÄÒà˘Mï±ïç—•Ω∏ÄòÅï·•–Å…’±ïÃËΩà¯ÄÒÑÅÕ—Â±îÙâçΩ±Ω»Ëå‰Õå’ôêàÅ—Ö…ùï–Ùâ}â±Öπ¨àÅ…ï∞ÙâπΩΩ¡ïπï»àÅ°…ïòÙâ°——¡ÃËºΩÂΩ’—‘πâîΩ\—Yµ(·UÖU©à˘πÖπ–Å1Öë°Öq‘»¿ƒÂÃÅ…ïÕïÖ…ç†ΩÑ¯Ä°I’±îÅΩòÄƒ‘ÄºÅI’±îÅΩòÄ‘∞ÅçÖ—ïùΩ…‰ÅΩëëÃ∞ÅΩπîµA8Å…’±î§∏Òâ»¯ú(ÄÄÄÄÄÄ¨Äùq‘»¿»»ÄÒà˘=ôôï»ÅëΩç’µïπ—ÃËΩà¯ÅI!@ÄºÅI!@Åô…Ω¥ÅM	$ÅÖπêÅï·ç°ÖπùïÃÅq‘»¿ƒ–Åâ’——ΩπÃÅΩ∏ÅïŸï…‰Å%A<ÅçÖ…ê∏Òâ»¯ú(ÄÄÄÄÄÄ¨ÄùIïÕïÖ…ç†Å°ï’…•Õ—•çÃÅôΩ»Åïë’çÖ—•Ω∏Åq‘»¿ƒ–ÅπΩ–Å•πŸïÕ—µïπ–ÅÖëŸ•çî∏Ωë•ÿ¯úÏ(ÄÄÄÅçΩπÕ–ÅÃÄÙÅï∞π≈’ï…ÂMï±ïç—Ω»†úç¡–µ›°‰µÕï±ïç–ú§Ï(ÄÄÄÅ•òÄ°Ã§ÅÃπΩπç°ÖπùîÄÙÄ†§ÄÙ¯ÅÏÅ›°ÂMï∞ÄÙÅÃπŸÖ±’îÏÅ—Öâ]°‰°ï∞§ÏÅÙÏ(ÄÅÙ(
+    const mb = scored.filter(z => !z.isSme).slice(0, 3);
+    const sme = scored.filter(z => z.isSme).slice(0, 3);
+    const rankTable = function (list) {
+      if (!list.length) return '<div class="pt-hint">None open right now.</div>';
+      return '<table class="pt-tbl"><tr><th>Rank</th><th>IPO</th><th>1 lot</th><th>GMP</th><th>Score</th><th>Why</th></tr>'
+        + list.map(function (z, i) {
+            return '<tr><td><b>#' + (i + 1) + '</b></td><td>' + E(z.x.name.replace(/ Limited$/, '')) + '</td><td class="pt-mono">' + money(z.cost) + '</td>'
+              + '<td class="pt-mono" style="color:' + (z.gp >= 25 ? '#22c55e' : z.gp != null && z.gp > 0 ? '#fbbf24' : '#94a3b8') + '">' + (z.gp != null && z.gp > 0 ? '+' + z.gp + '%' : '\u2014') + '</td>'
+              + '<td class="pt-mono"><b style="color:' + (z.sig.score >= 70 ? '#22c55e' : z.sig.score >= 50 ? '#fbbf24' : '#ef4444') + '">' + z.sig.score + '</b></td>'
+              + '<td style="font-size:10px;color:var(--tx3)">' + E(z.sig.why.length ? z.sig.why.slice(0, 2).join(' \u00B7 ') : 'evidence building') + '</td></tr>';
+          }).join('') + '</table>';
+    };
+    const top = scored.slice(0, 6);
+    const buds = [100000, 200000, 300000].map(bud => {
+      let left = bud;
+      const picks = [];
+      for (const z of top) {
+        const c = z.isSme ? z.cost * 2 : z.cost;
+        if (c <= left) { picks.push({ z: z, c: c }); left -= c; }
+      }
+      return { bud: bud, picks: picks, left: left };
+    });
+    const plan = '<table class="pt-tbl"><tr><th>If you have</th><th>What the plans suggest</th></tr>'
+      + buds.map(b => '<tr><td class="pt-mono">' + money(b.bud) + '</td><td>'
+        + (b.picks.length
+           ? b.picks.map(p => '1 lot ' + E(p.z.x.name.replace(/ Limited$/, '')) + ' (' + money(p.c) + ')').join(' + ')
+             + (b.left > 5000 ? ' + ' + money(b.left) + ' kept free' : '')
+           : 'No top-ranked IPO fits this budget right now')
+        + '</td></tr>').join('') + '</table>';
+    el.innerHTML = '<div class="pt-tabs">' + tabs() + '</div>'
+      + '<div class="pt-hint">Full transparency: how and why this site picks IPOs \u2014 with the underlying data and links.</div>'
+      + selector + detail
+      + '<h4 style="margin:18px 0 6px;font-size:14px">Best 3 \u2014 Mainboard</h4>'
+      + '<div class="pt-hint">Ranked by evidence score (growth + ROE + valuation + subscription + GMP + debt), not just GMP.</div>'
+      + rankTable(mb)
+      + '<h4 style="margin:16px 0 6px;font-size:14px">Best 3 \u2014 SME</h4>'
+      + '<div class="pt-hint">SME IPOs are judged separately: smaller companies, higher risk \u2014 compare within the category only (Tip 26, step 1).</div>'
+      + rankTable(sme)
+      + '<h4 style="margin:16px 0 6px;font-size:14px">How the \u20B91L / \u20B92L / \u20B93L budget plans work</h4>'
+      + '<div class="pt-hint">Money is spread as 1 lot each across the top-ranked open IPOs \u2014 more family names, not more lots, raise your chances (Tip 27). SME entries use 2 lots (minimum \u20b92L for HNI odds).</div>'
+      + plan
+      + '<h4 style="margin:16px 0 6px;font-size:14px">Our data sources</h4>'
+      + '<div class="pt-hint">\u2022 <b>GMP, price bands, dates, subscriptions:</b> <a style="color:#93c5fd" target="_blank" rel="noopener" href="https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/">Chittorgarh GMP page</a>, auto-scraped every 5 minutes.<br>'
+      + '\u2022 <b>Financials, KPIs, anchor book, peers, sector, live subscription:</b> each IPO\u2019s own Chittorgarh page (linked above per IPO), refreshed every 30 minutes.<br>'
+      + '\u2022 <b>Daily GMP history:</b> our own log since 19 Sep 2026 (data/history.json).<br>'
+      + '\u2022 <b>Forecasts:</b> Google TimesFM 3.0, daily 07:15 IST \u2014 accuracy published in Track Record.<br>'
+      + '\u2022 <b>Selection & exit rules:</b> <a style="color:#93c5fd" target="_blank" rel="noopener" href="https://youtu.be/W4VmJ8UaUjE">Anant Ladha\u2019s research</a> (Rule of 15 / Rule of 5, category odds, one-PAN rule).<br>'
+      + '\u2022 <b>Offer documents:</b> RHP / DRHP from SEBI and exchanges \u2014 buttons on every IPO card.<br>'
+      + 'Research heuristics for education \u2014 not investment advice.</div>';
+    const s = el.querySelector('#pt-why-select');
+    if (s) s.onchange = () => { whySel = s.value; tabWhy(el); };
+  }
