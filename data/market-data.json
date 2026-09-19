@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T17:03:53.407464+00:00",
+  "updated_at": "2026-09-19T17:16:28.751348+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -101,7 +101,15 @@
     }
   ],
   "world": [],
-  "commodities": [],
+  "commodities": [
+    {
+      "price": 99.29,
+      "change": -0.64,
+      "change_pct": -0.64,
+      "name": "Crude Brent ($/bbl)",
+      "symbol": "BZ=F"
+    }
+  ],
   "fx": [
     {
       "name": "USD/INR",
