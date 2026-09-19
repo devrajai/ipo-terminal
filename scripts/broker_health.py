@@ -229,7 +229,12 @@ def patch_index(results):
         obj = replace_field(obj, "verified", status)
         # Add metadata fields if this broker did not already have them.
         if "pricing_url:" not in obj:
-            obj = obj[:-1] + ",pricing_url:'" + r.get("pricing_url", r["home"]) + "'}"
+            # Insert BEFORE the object's closing brace instead of stripping the
+            # last character (which is the array-element comma, not '}').
+            url = r.get("pricing_url") or r["home"]
+            cut = obj.rfind("}")
+            if cut >= 0:
+                obj = obj[:cut] + ",pricing_url:'" + url + "'}" + obj[cut + 1:]
         block = block[:pos] + obj + block[next_pos:]
     return source[:start] + block + source[end + 2:]
 

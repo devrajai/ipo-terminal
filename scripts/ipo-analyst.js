@@ -2,8 +2,8 @@
    Deterministic research support. Transcript-specific rules will override the seed framework when ingested. */
 (function(){
 'use strict';
-function e(v){return String(v==null?'':v).replace(/[&<>\"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[x];});}
-function n(v){var m=String(v==null?'').replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
+function e(v){return String(v==null?"":v).replace(/[&<>"']/g,function(x){return x==="&"?"&"+"amp;":x==="<"?"&"+"lt;":x==="<"?"&"+"gt;":x==="<"?"&"+"quot;":"&"+"#39;";});}
+function n(v){var m=String(v==null?'':v).replace(/,/g,'').match(/-?\d+(?:\.\d+)?/);return m?parseFloat(m[0]):null;}
 function ok(v){return v!=null&&v!==''&&v!=='—'&&v!=='-';}
 function gmpValid(i){var gp=n(i.gmp_pct),g=n(i.gmp);return gp!=null&&gp>=-50&&gp<=100&&g!=null&&g>=-100&&g<=1000;}
 function lotCost(i,count){var p=n(i.price),l=n(i.lot);return p!=null&&l!=null&&p>0&&l>0?p*l*count:null;}

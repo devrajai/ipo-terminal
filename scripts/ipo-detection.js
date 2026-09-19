@@ -73,7 +73,8 @@ function addResearchKnowledge(){
   ['Follow the money trail in objects of the issue','Debt repayment is verifiable and cuts future interest cost. Capex is medium risk \u2014 check the plant address and capacity actually exist. General corporate purpose is untraceable. Be extra careful when most of the issue is GCP or promoter OFS.','Video research 18 Sep \u2014 use-of-proceeds hierarchy'],
   ['The IPO calendar itself is a signal','Issues cluster in bull markets because sellers want high prices. A sudden rush of OFS-heavy IPOs near market highs is distribution, not opportunity \u2014 the same caution applies to a week crowded with six simultaneous issues.','Video research 18 Sep \u2014 market-cycle awareness']
   ];
-  tips.innerHTML=items.map((t,i)=>'<div class="card glass tip-item"><b>'+E((i+1)+' — '+t[0])+'</b><p>'+E(t[1])+'</p><small class="det-source">'+E(t[2])+'</small></div>').join('');
+  const base=tips.querySelectorAll('.card').length;
+ tips.innerHTML+=items.map((t,i)=>'<div class="card glass tip-item"><b>'+E((base+i+1)+' — '+t[0])+'</b><p>'+E(t[1])+'</p><small class="det-source">'+E(t[2])+'</small></div>').join('');
   tips.dataset.tipsRewritten='2';
  }
  if(gloss&&!gloss.dataset.videoDna){
