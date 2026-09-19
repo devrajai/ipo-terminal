@@ -1,0 +1,54 @@
+name: Apply full detail upgrade
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: apply-detail-upgrade
+  cancel-in-progress: false
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Apply patches
+        run: python3 scripts/apply-detail-upgrade.py
+
+      - name: Validate JavaScript
+        run: |
+          set -e
+          node --check scripts/ipo-protools.js
+          node --check scripts/ipo-sparkline.js
+          python3 - <<'PY'
+          import re
+          src = open('index.html', encoding='utf-8').read()
+          m = re.findall(r'<script>(.*?)</script>', src, re.S)
+          open('/tmp/inline.js', 'w', encoding='utf-8').write(m[0])
+          PY
+          node --check /tmp/inline.js
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "feat: full stock detail in Why tab (anchor, subscription, peers, sources) + UI perf"
+            git push
+          fi

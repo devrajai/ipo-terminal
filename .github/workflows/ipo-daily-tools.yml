@@ -2,7 +2,8 @@ name: IPO daily tools
 
 on:
   schedule:
-    - cron: "30 2 * * *"   # 02:30 UTC = 08:00 IST daily
+    - cron: "0,30 4-12 * * *"   # every 30 min, 09:30-18:00 IST (live IPO window)
+    - cron: "30 2 * * *"         # 08:00 IST daily
   workflow_dispatch: {}
 
 permissions:
@@ -10,12 +11,12 @@ permissions:
 
 concurrency:
   group: ipo-daily-tools
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   tools:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,6 +28,9 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: Fetch IPO detail pages (anchor, subscription, peers, sector)
+        run: python3 scripts/fetch_ipodetails.py
+
       - name: Build IPO calendar (.ics)
         run: python3 scripts/make_calendar.py
 
@@ -37,10 +41,10 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ipo-calendar.ics data/forecast-log.json
+          git add data/ipo-details.json data/ipo-calendar.ics data/forecast-log.json
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "chore: daily IPO calendar + forecast log [skip ci]"
+            git commit -m "chore: IPO details + calendar + forecast log [skip ci]"
             git push
           fi
