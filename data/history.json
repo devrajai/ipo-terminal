@@ -1,0 +1,62 @@
+{
+ "series": {
+  "National Stock Exchange of India Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 148.0,
+    "gmp_pct": 8.3,
+    "listing_est": 1933.0
+   }
+  ],
+  "Sonaselection India Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 2.0,
+    "gmp_pct": 2.0,
+    "listing_est": 101.0
+   }
+  ],
+  "Kheria Autocomp Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 10.0,
+    "gmp_pct": 9.9,
+    "listing_est": 111.0
+   }
+  ],
+  "SpectraA Technology Solutions Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 30.0,
+    "gmp_pct": 25.4,
+    "listing_est": 148.0
+   }
+  ],
+  "Hero Motors Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 6.0,
+    "gmp_pct": 7.1,
+    "listing_est": 90.0
+   }
+  ],
+  "Jindal Supreme (India) Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 30.0,
+    "gmp_pct": 32.3,
+    "listing_est": 123.0
+   }
+  ],
+  "SS Retail Limited": [
+   {
+    "d": "2026-09-19",
+    "gmp": 137.0,
+    "gmp_pct": 32.3,
+    "listing_est": 561.0
+   }
+  ]
+ },
+ "market": [],
+ "updated": "2026-09-19T07:13:36.778735+00:00"
+}
