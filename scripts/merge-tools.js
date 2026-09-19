@@ -189,8 +189,7 @@
           + '</div>';
 
         el.querySelectorAll('button[data-goto]').forEach(function (b) {
-          b.onclick = function () { openGroup1(b.getAttribute('data-goto'));
- };
+          b.onclick = function () { openGroup1(b.getAttribute('data-goto')); };
         });
       })
       .catch(function () { el.innerHTML = '<div class="pt-hint">Snapshot unavailable right now \u2014 the tools below still work.</div>'; });
@@ -285,6 +284,7 @@
     };
     this.open = function (id) {
       self.current = id;
+      try { localStorage.setItem('mt-group-' + cfg.nav, id); } catch (e) {}
       self.subs.forEach(function (s) {
         var x = secOf(s.id);
         if (x) x.classList.toggle('opened', s.id === id);
@@ -338,7 +338,11 @@
         var b = e.target && e.target.closest ? e.target.closest('button[data-sub]') : null;
         if (b) self.open(b.getAttribute('data-sub'));
       });
-      self.open(self.current);
+      var saved = null;
+      try { saved = localStorage.getItem('mt-group-' + cfg.nav); } catch (e) {}
+      if (saved && self.subs.some(function (s) { return s.id === saved; })) self.current = saved;
+      self.updateBar();
+      self.syncNav();
       return true;
     };
   }
