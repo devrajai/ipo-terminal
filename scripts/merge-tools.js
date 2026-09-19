@@ -4,7 +4,7 @@
    - Research cards: score bar /100, 5-lane line chart, GO/CAREFUL/AVOID verdict,
      Mainboard & SME split, open + upcoming, auto-refresh. Loaded last. */
 (function () {
-  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { 38: '&', 60: '<', 62: '>', 34: '"', 39: '&#39;' }[c.charCodeAt(0)]; }); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { 38: '&'+'amp;', 60: '&'+'lt;', 62: '&'+'gt;', 34: '&'+'quot;', 39: '&#39;' }[c.charCodeAt(0)]; }); };
   var num = function (v) { var m = String(v == null ? '' : v).replace(/,/g, '').match(/-?\d+(?:\.\d+)?/); return m ? Number(m[0]) : null; };
 
   function secOf(n) { return document.getElementById('section-' + n); }
