@@ -1,7 +1,6 @@
 {
- "updated_at": "2026-09-19T10:14:38.165120+00:00",
+ "updated_at": "2026-09-19T10:20:04.824041+00:00",
  "ipos": {
-  "National Stock Exchange of India Limited": {},
   "Sonaselection India Limited": {
    "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
    "anchor": {
@@ -11,35 +10,102 @@
    "peers": [
     {
      "name": "Alpine Texworld Ltd.",
-     "pe": "Mainboard"
+     "pe": "12.68"
     },
     {
      "name": "Kusumgar Ltd.",
-     "pe": "Mainboard"
+     "pe": "44.8"
     },
     {
      "name": "Aastha Spintex Ltd.",
-     "pe": "Mainboard"
+     "pe": "18.78"
     },
     {
      "name": "Shree Ram Twistex Ltd.",
-     "pe": "Mainboard"
+     "pe": "38.21"
     },
     {
      "name": "Panchatv Bharat Ltd.",
-     "pe": "SME"
+     "pe": "14.23"
     },
     {
      "name": "Vinod Texworld Ltd.",
-     "pe": "SME"
+     "pe": "10.48"
     }
    ]
   },
-  "Axiom Gas Engineering Limited": {},
-  "Kheria Autocomp Limited": {},
-  "SpectraA Technology Solutions Limited": {},
-  "Hero Motors Limited": {},
-  "Jindal Supreme (India) Limited": {},
-  "SS Retail Limited": {}
+  "Axiom Gas Engineering Limited": {
+   "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
+   "anchor": {
+    "total_cr": 5.78,
+    "investors": 20
+   }
+  },
+  "Kheria Autocomp Limited": {
+   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
+   "anchor": {
+    "total_cr": 13.24,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Sumax Engineering Ltd.",
+     "pe": "11.66"
+    },
+    {
+     "name": "LAPL Automotive Ltd.",
+     "pe": "9.91"
+    },
+    {
+     "name": "Poojaa Precision Engg.Ltd.",
+     "pe": "14.25"
+    },
+    {
+     "name": "Happy Steels Ltd.",
+     "pe": "9.76"
+    },
+    {
+     "name": "Autofurnish Ltd.",
+     "pe": "11.64"
+    },
+    {
+     "name": "Gallard Steel Ltd.",
+     "pe": "17.31"
+    }
+   ]
+  },
+  "SpectraA Technology Solutions Limited": {
+   "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
+   "anchor": {
+    "total_cr": 12.09,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Om Galaxy Ltd.",
+     "pe": "12.02"
+    },
+    {
+     "name": "Kwick Forensic Solutions Ltd.",
+     "pe": "11.25"
+    },
+    {
+     "name": "Skytech Infinite Platform Ltd.",
+     "pe": "null"
+    },
+    {
+     "name": "Merritronix Ltd.",
+     "pe": "11.83"
+    },
+    {
+     "name": "Adisoft Technologies Ltd.",
+     "pe": "12.82"
+    },
+    {
+     "name": "Highness Microelectronics Ltd.",
+     "pe": "16.7"
+    }
+   ]
+  }
  }
 }
