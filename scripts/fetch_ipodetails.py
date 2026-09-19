@@ -30,6 +30,8 @@ SOURCES = [
     ('chittorgarh-mainboard', 'https://www.chittorgarh.com/report/mainboard-ipo-list-in-india-bse-nse/80/', 'https://www.chittorgarh.com'),
     ('chittorgarh-sme', 'https://www.chittorgarh.com/report/sme-ipo-list-in-india-bse-nse/83/', 'https://www.chittorgarh.com'),
     ('chittorgarh-gmp', 'https://www.chittorgarh.com/report/ipo-grey-market-premium-gmp/21/', 'https://www.chittorgarh.com'),
+    ('chittorgarh-current-mb', 'https://www.chittorgarh.com/report/ipo-in-india-list-main-board-sme/82/mainboard/', 'https://www.chittorgarh.com'),
+    ('chittorgarh-current-sme', 'https://www.chittorgarh.com/report/ipo-in-india-list-main-board-sme/82/sme/', 'https://www.chittorgarh.com'),
     ('investorgain', 'https://www.investorgain.com/report/ipo-gmp-live/331/all/', 'https://www.investorgain.com'),
 ]
 
@@ -182,9 +184,10 @@ def extract_peers(rows):
             for j, v in enumerate(r[1:], 1):
                 if j >= len(heads):
                     break
-                if 'pe' in heads[j] and 'pe' not in item:
+                hj = re.sub(r'[^a-z/]', '', heads[j]).strip()
+                if hj in ('pe', 'p/e', 'peratio', 'p/ex') and 'pe' not in item:
                     item['pe'] = clean(v)
-                elif 'roe' in heads[j] and 'roe' not in item:
+                elif hj in ('roe', 'ronw') and 'roe' not in item:
                     item['roe'] = clean(v)
             if len(item) > 1:
                 peers.append(item)
@@ -210,6 +213,12 @@ def collect_links(text, base_domain):
         k = norm(t)
         if k and k not in out:
             out[k] = h
+        # also index by URL slug: /ipo/{slug}-ipo/{id}/ holds the full company name
+        parts = [p for p in h.split('/') if p]
+        for p in parts:
+            if 'ipo' not in p.lower() and len(norm(p)) > 8:
+                sp = norm(p)
+                out.setdefault(sp, h)
     return out
 
 
@@ -226,7 +235,7 @@ def main():
             page = fetch(lp)
             got = collect_links(page, dom)
             print('%s: %d ipo links' % (sname, len(got)))
-            for k in list(got.keys())[:25]:
+            for k in list(got.keys())[:15]:
                 print('   sample:', k[:50], '->', got[k][:80])
             links.update(got)
         except Exception as e:
@@ -234,14 +243,25 @@ def main():
     print('total listing links found:', len(links))
 
     result = {'updated_at': dt.datetime.now(dt.timezone.utc).isoformat(), 'ipos': {}}
+    misses = []
     for ipo in open_ipos:
         name = ipo['name']
         key = norm(name)
         url = None
+        best = None
         for k, u in links.items():
-            if k == key or (len(k) > 6 and (k in key or key in k)):
+            if k == key:
                 url = u
                 break
+            if len(k) > 6 and (k in key or key in k):
+                if best is None or len(k) > len(best[0]):
+                    best = (k, u)
+        if not url and best:
+            url = best[1]
+        if not url:
+            misses.append(name)
+            print('NO LINK for:', name)
+            continue
         entry = {}
         if url:
             entry['url'] = url
@@ -271,7 +291,8 @@ def main():
 
     OUT.write_text(json.dumps(result, ensure_ascii=False, indent=1), encoding='utf-8')
     got = sum(1 for v in result['ipos'].values() if v.get('url'))
-    print('ipo-details.json written: %d IPOs, %d with pages' % (len(result['ipos']), got))
+    print('ipo-details.json written: %d IPOs, %d with pages, %d without links' % (
+        len(result['ipos']), got, len(misses)))
 
 
 if __name__ == '__main__':
