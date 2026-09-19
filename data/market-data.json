@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T08:03:17.298576+00:00",
+  "updated_at": "2026-09-19T08:18:56.280005+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -102,11 +102,11 @@
   ],
   "world": [
     {
-      "price": 51682.64,
-      "change": -95.4,
-      "change_pct": -0.18,
-      "name": "Dow Jones (US)",
-      "symbol": "^DJI"
+      "price": 6894.23,
+      "change": 178.82,
+      "change_pct": 2.66,
+      "name": "KOSPI (Korea)",
+      "symbol": "^KS11"
     }
   ],
   "commodities": [],
