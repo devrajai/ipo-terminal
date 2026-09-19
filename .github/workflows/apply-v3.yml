@@ -37,7 +37,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes"
           else
-            git commit -m "feat: why-v3 sub-tabs (compare all, how we score, anchor books) + clean open cards [skip ci]"
+            git commit -m "feat: why-v3 sub-tabs (compare all, how we score, anchor books) + clean open cards"
             for i in 1 2 3 4 5; do
               if git pull --rebase --autostash origin main && git push; then exit 0; fi
               sleep 5
