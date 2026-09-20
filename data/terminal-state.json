@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-20T19:33:53.944287+00:00",
+  "generated_at": "2026-09-20T19:43:38.920486+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T01:03:22.826515+05:30",
+  "data_updated_at": "2026-09-21T01:13:13.123972+05:30",
   "ipo_count": 13,
   "field_coverage_pct": 31.1,
   "sources": {
@@ -40,7 +40,13 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": []
+      "errors": [
+        "\"National Stock Exchange of India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Sonaselection India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Axiom Gas Engineering Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Kheria Autocomp Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"SpectraA Technology Solutions Limited\" IPO India: HTTP Error 503: Service Unavailable"
+      ]
     },
     "LISTED": {
       "ok": false,
@@ -49,7 +55,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-20T19:32:46.354700+00:00",
+      "checked_at": "2026-09-20T19:42:08.204271+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +93,12 @@
       "records": 13,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-20T19:32:49.051867+00:00"
+      "checked_at": "2026-09-20T19:42:10.855753+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-20T19:33:04.356378+00:00",
+      "checked_at": "2026-09-20T19:42:25.022789+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,37 +108,41 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-20T19:33:04.427593+00:00"
+      "checked_at": "2026-09-20T19:42:25.078255+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-20T19:33:04.475499+00:00"
+      "checked_at": "2026-09-20T19:42:25.114954+00:00"
     },
     "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-20T19:33:04.623013+00:00",
+      "ok": false,
+      "records": 0,
+      "checked_at": "2026-09-20T19:42:25.229348+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": true,
-          "records": 102,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 64,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         }
       }
     },
@@ -140,11 +150,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-20T19:33:04.623013+00:00"
+      "checked_at": "2026-09-20T19:42:25.229348+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T01:03:22.826515+05:30",
+      "checked_at": "2026-09-21T01:13:13.123972+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
