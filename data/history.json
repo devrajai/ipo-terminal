@@ -6,11 +6,23 @@
     "gmp": 148.0,
     "gmp_pct": 8.3,
     "listing_est": 1933.0
+   },
+   {
+    "d": "2026-09-20",
+    "gmp": 148.0,
+    "gmp_pct": 8.3,
+    "listing_est": 1933.0
    }
   ],
   "Sonaselection India Limited": [
    {
     "d": "2026-09-19",
+    "gmp": 2.0,
+    "gmp_pct": 2.0,
+    "listing_est": 101.0
+   },
+   {
+    "d": "2026-09-20",
     "gmp": 2.0,
     "gmp_pct": 2.0,
     "listing_est": 101.0
@@ -22,11 +34,23 @@
     "gmp": 10.0,
     "gmp_pct": 9.9,
     "listing_est": 111.0
+   },
+   {
+    "d": "2026-09-20",
+    "gmp": 10.0,
+    "gmp_pct": 9.9,
+    "listing_est": 111.0
    }
   ],
   "SpectraA Technology Solutions Limited": [
    {
     "d": "2026-09-19",
+    "gmp": 30.0,
+    "gmp_pct": 25.4,
+    "listing_est": 148.0
+   },
+   {
+    "d": "2026-09-20",
     "gmp": 30.0,
     "gmp_pct": 25.4,
     "listing_est": 148.0
@@ -58,5 +82,5 @@
   ]
  },
  "market": [],
- "updated": "2026-09-19T07:13:36.778735+00:00"
+ "updated": "2026-09-20T01:54:14.109966+00:00"
 }
