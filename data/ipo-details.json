@@ -1,7 +1,65 @@
 {
- "updated_at": "2026-09-20T08:17:14.299395+00:00",
+ "updated_at": "2026-09-20T08:43:26.883656+00:00",
  "ipos": {
-  "National Stock Exchange of India Limited": {},
+  "National Stock Exchange of India Limited": {
+   "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
+   "subs": {
+    "rii": 30.0,
+    "nii": 31.0,
+    "qib": 31.0,
+    "total": 31.0
+   },
+   "anchor": {
+    "total_cr": 6746.18,
+    "investors": 20
+   },
+   "fin": {
+    "periods": [
+     "30 Jun 2026",
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     91334.07,
+     87937.44,
+     69466.64,
+     65463.98
+    ],
+    "income": [
+     5252.17,
+     18713.37,
+     19176.83,
+     16352.06
+    ],
+    "pat": [
+     3120.08,
+     10302.06,
+     12187.69,
+     8305.74
+    ],
+    "ebitda": [
+     4332.04,
+     14519.09,
+     16021.36,
+     11623.83
+    ],
+    "networth": [
+     34983.74,
+     31869.72,
+     30165.05,
+     23833.1
+    ]
+   },
+   "rev_growth": -2.4,
+   "pat_growth": -15.5,
+   "kpi": {
+    "roe": "9.26%",
+    "roce": "11.55%",
+    "pat_margin": "58.78%",
+    "nav": "142.40"
+   }
+  },
   "Sonaselection India Limited": {
    "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
    "subs": {
@@ -251,10 +309,6 @@
    },
    "peers": [
     {
-     "name": "Om Galaxy Ltd.",
-     "pe": "12.02"
-    },
-    {
      "name": "Kwick Forensic Solutions Ltd.",
      "pe": "11.25"
     },
@@ -273,6 +327,10 @@
     {
      "name": "Highness Microelectronics Ltd.",
      "pe": "16.7"
+    },
+    {
+     "name": "Tipco Engineering India Ltd.",
+     "pe": "8.73"
     }
    ],
    "fin": {
