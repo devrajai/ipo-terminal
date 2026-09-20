@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-20T18:21:49.497874+00:00",
+  "generated_at": "2026-09-20T18:35:30.629889+00:00",
   "events": [
     {
       "date": "2026-09-21",
@@ -29,27 +29,6 @@
       "ipo_id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
       "source": "NSE"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "OPEN",
-      "ipo_id": "fx-multitech-ltd-sme",
-      "name": "FX Multitech Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "OPEN",
-      "ipo_id": "robokidz-eduventures-ltd-sme",
-      "name": "Robokidz Eduventures Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "OPEN",
-      "ipo_id": "vivekanand-cotspin-ltd-sme",
-      "name": "Vivekanand Cotspin Ltd. SME",
-      "source": "Economic Times"
     },
     {
       "date": "2026-09-22",
