@@ -219,11 +219,16 @@
           var anc = det.anchor || null;
           var kpi = det.kpi || {};
           var hs = histFor(x.name);
-          var trend = null;
+          var trend = null, peak = null, cur = null;
           if (hs && hs.length >= 2) {
             var gs = hs.filter(function (p) { return p && Number.isFinite(p.gmp); }).map(function (p) { return p.gmp; });
             if (gs.length >= 2) trend = gs[gs.length - 1] - gs[0];
           }
+          if (hs) {
+            var gsp = hs.filter(function (p) { return p && Number.isFinite(p.gmp); }).map(function (p) { return p.gmp; });
+            if (gsp.length) { cur = gsp[gsp.length - 1]; peak = Math.max.apply(null, gsp); }
+          }
+          var rsub = num(x.retail) != null ? num(x.retail) : (det.subs ? num(det.subs.rii) : null);
           var A = avgs[x._sme ? 'sme' : 'mb'];
 
           /* analyst checklist */
@@ -236,6 +241,7 @@
           ck += chip(anc != null && num(anc.investors) >= 10, false, anc && (anc.total_cr != null || anc.investors) ? 'anchor book: \u20B9' + num(anc.total_cr) + ' cr, ' + num(anc.investors) + ' investors' : 'anchor book not published yet');
           ck += chip(pm != null && pm >= 15, pm != null && pm < 15, pm != null ? 'PAT margin ' + esc(kpi.pat_margin) : 'PAT margin not in data');
           ck += chip(trend != null && trend >= 0, trend != null && trend < 0, trend != null ? ('GMP trend ' + (trend >= 0 ? 'rising' : 'cooling') + ' (' + (trend >= 0 ? '+' : '') + trend + ')') : 'GMP trend: first data point');
+          if (peak != null && cur != null && peak > cur + 2) ck += chip(false, true, 'GMP topped out: cooled from peak ' + peak + ' to ' + cur + ' - like BSE and HDB before listing');
 
           /* peer compare */
           var cmp = function (label, mine, avg, inv) {
@@ -259,6 +265,7 @@
             + '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:9px">'
             + '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:' + (sig.gmp == null ? 'rgba(148,163,184,.13);color:#cbd5e1' : sig.gmp >= 10 ? 'rgba(34,197,94,.13);color:#22c55e' : sig.gmp >= 0 ? 'rgba(251,191,36,.13);color:#fbbf24' : 'rgba(239,68,68,.13);color:#ef4444') + '">GMP ' + (sig.gmp == null ? '\u2014' : (sig.gmp > 0 ? '+' : '') + sig.gmp + '%') + '</span>'
             + '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(148,163,184,.13);color:#cbd5e1">Sub ' + (sig.sub == null ? '\u2014' : sig.sub + 'x') + '</span>'
+            + (rsub != null ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(59,130,246,.10);color:#93c5fd">Allotment ' + (rsub < 1 ? 'near-certain (retail under 1x)' : 'chance ~1 in ' + Math.max(1, Math.ceil(rsub))) + '</span>' : '')
             + (x.pe && x.pe !== '\u2014' ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(148,163,184,.13);color:#cbd5e1">P/E ' + esc(x.pe) + '</span>' : '')
             + (x.roe && x.roe !== '\u2014' ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(148,163,184,.13);color:#cbd5e1">ROE ' + esc(x.roe) + '</span>' : '')
             + (sig.why.length ? '<span style="font-size:10.5px;padding:4px 9px;border-radius:8px;background:rgba(59,130,246,.10);color:#93c5fd">' + esc(sig.why.slice(0, 3).join(' \u00B7 ')) + '</span>' : '')
@@ -342,6 +349,7 @@
           + '</div>'
           + (open.length ? '<div style="font-size:13px;font-weight:800;margin:10px 0 2px">\u{1F3C6} Quick picks \u2014 Mainboard</div>' + pickList(scored.filter(function (z) { return !z._sme; }))
             + '<div style="font-size:13px;font-weight:800;margin:12px 0 2px">\u{1F3C6} Quick picks \u2014 SME</div>' + pickList(scored.filter(function (z) { return z._sme; })) : '<div class="pt-hint">No open IPOs right now \u2014 the desk fills in automatically when the next IPO opens.</div>')
+          + '<div class="pt-hint" style="margin-top:4px">No FOMO: if the risk-reward is not favorable, skip \u2014 the next IPO always comes. Expect single-digit listing gains on fully-priced big IPOs, not bumper pops.</div>'
           + sec('\u{1F537} Mainboard \u2014 scored cards', mb.filter(function (z) { return !z._up; }))
           + sec('\u{1F7E9} SME \u2014 scored cards', sme.filter(function (z) { return !z._up; }))
           + sec('\u23F3 Upcoming (watch list)', all.filter(function (z) { return z._up; }))
