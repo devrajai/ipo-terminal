@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T16:29:49.849462+00:00",
+  "updated_at": "2026-09-20T16:40:32.135925+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -101,7 +101,15 @@
     }
   ],
   "world": [],
-  "commodities": [],
+  "commodities": [
+    {
+      "price": 2.91,
+      "change": 0.01,
+      "change_pct": 0.38,
+      "name": "Natural Gas",
+      "symbol": "NG=F"
+    }
+  ],
   "fx": [
     {
       "name": "USD/INR",
