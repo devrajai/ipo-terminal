@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-20T04:20:58.995617+00:00",
+  "generated_at": "2026-09-20T04:33:20.294145+00:00",
   "today_ist": "2026-09-20",
-  "data_updated_at": "2026-09-20T09:50:25.346736+05:30",
+  "data_updated_at": "2026-09-20T10:02:44.929563+05:30",
   "ipo_count": 16,
   "field_coverage_pct": 28.9,
   "sources": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-20T04:19:46.643348+00:00",
+      "checked_at": "2026-09-20T04:32:21.941942+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +87,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-20T04:19:49.090525+00:00"
+      "checked_at": "2026-09-20T04:32:24.036813+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-20T04:20:04.622055+00:00",
+      "checked_at": "2026-09-20T04:32:25.650133+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-20T04:20:04.678536+00:00"
+      "checked_at": "2026-09-20T04:32:25.719836+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-20T04:20:04.715708+00:00"
+      "checked_at": "2026-09-20T04:32:25.763496+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-20T04:20:04.829721+00:00",
+      "checked_at": "2026-09-20T04:32:25.902941+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 48,
+          "records": 47,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-20T04:20:04.829721+00:00"
+      "checked_at": "2026-09-20T04:32:25.902941+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-20T09:50:25.346736+05:30",
+      "checked_at": "2026-09-20T10:02:44.929563+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
