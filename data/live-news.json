@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated_at": "2026-09-20T22:48:10.021584+00:00",
+  "generated_at": "2026-09-20T22:55:21.776440+00:00",
   "items": [
     {
       "title": "Bengaluru-based A-One Steels India to raise ₹405 crore in an IPO - The Hindu",
@@ -12,13 +12,13 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "National Stock Exchange of India's $2.3 billion IPO draws muted early demand - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPME1EbktmN3VLZGdidFl4UVl0UURYZXNxQWFySFFZNHVSYU9YX1BrNkRYVUZzSnFLaE1BRGNicG9RbHpvczg5VWdXSnM4NjJWNlZoUkZZamlBakFhaTl3VDlkMkZrdTg3N3IyUTlvTm5vQm5BeXJTWTJ5ZzNZN0xHNF8tLWtTUzV5TFEtNEkyR0lZMFBDUDNjeVpockloajNIN3djRkVuYXB6TUJ6dXZYSlNYVWhQV2NlQlE?oc=5",
-      "published": "Thu, 17 Sep 2026 12:05:40 GMT",
-      "source": "Reuters",
+      "title": "What NSE IPO tells you about Indian equity markets - The New Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOTE5JdDdrX1JZZkk1dXBxN1kxckRuY25aNmVBNEZmYndFWnFZQU5raWVZd2thY092OUItRlRkYmRYYTZoTVNBMUpMNURnVmZSd053Y2lWeUV2WDhCTzNoNVd4RU8tVS1rX1ZIUGdfWk5ObTVlbEdzUW15QktPdklIUkVHNmk5T0l6VGN0VXV2N1g0TlRGQVc3WWJRNHFRcl8wdjduRUJ0UdIBtAFBVV95cUxNQmFxUFJpVWVTdUZSOFdBYjJ0QVVyOHVycWVvenhmTVJvTjJiSlhxdWVMTTlIU0R6eWhyVW41VHNZNVZ6WHpNMlFfUDV2R1d2R2ZSNVZWejJ4cWNwYVN6dmFET004RVlHNXZ6M3g5MDJsU2xXWV9rc3RSVUJRbnJPaWRBRERHWEkyMExPLWtOYnloeFVWdHd3OVBGc2Mxckw5TkVqRWNhWElRVWxmUi14SzRNRW4?oc=5",
+      "published": "Sun, 20 Sep 2026 17:12:20 GMT",
+      "source": "The New Indian Express",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
-      "ipo": "National Stock Exchange of India Limited"
+      "ipo": "Sonaselection India Limited"
     },
     {
       "title": "Rs 3,825 crore IPO rush: 6 companies to launch public issues next week - Moneycontrol.com",
@@ -65,10 +65,10 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "Noel Tata Issues Another Statement, Speaks Out Against Tata Sons' IPO - NDTV",
+      "title": "Noel Tata Issues Another Statement, Speaks Out Against Tata Sons' IPO - ndtv.com",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPYzdKTnFBejdnY2pjRjF3bVFDLVFpT2lUejYzaUs3Y245aUdpbENaRzlodTc0MnhOMWRoMnJpTi1uc21xSVhiaklCWWd0Ul9hZFVPLWN6d1RldVVqQTRYdHIwdVRSVzBMVGtKbGRxRVB4ai1SZW1EeE5PcmhzU2FQc1NMZFk5Z0todGlrQUQ2YlkwUGh5Z0otSUdyOWowSUEyUGwtZ0twamUwT3pnajF1LW9BVjQ2V040Skg5bFVWVFU5UdIBygFBVV95cUxPS1ZtQksxUEFYRkRmZWw4TFkxbl9uV3VmMjl1YjBZb1ZVLXRWa0lrcS1DSjRTZUlXSGo1bmdMTmlIR01XX0ZzM09VaUlVcjMxczdVZ0hkbG9RUHRNM0pkRDNNekNVeHB1RW1vclpHR2I0cHY2d1o3MXFMd3hnVWM2aTlqc255cktSYVNzTDdxVjBoWjZOUWhBVXhkS0NpdjdsX2dUY2pST0sxVzF5b2RNekNoaGYtNFhLdUFjdGdvd0tTWmtmY0t0djFB?oc=5",
       "published": "Thu, 17 Sep 2026 15:47:01 GMT",
-      "source": "NDTV",
+      "source": "ndtv.com",
       "feed_source": "Google News · IPO India",
       "tag": "IPO"
     },
@@ -99,19 +99,27 @@
       "tag": "IPO"
     },
     {
-      "title": "Landmark NSE IPO threatens to hollow out India shadow market - The Economic Times",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPeEx0MnF6QksybzY4LWJzdklYMG1mSkp5dnVuckE3S3l5bkhLOFNRZHlqNkNrckpoUzd6dl9XTFBpWUtPcmV5Y3ZnV1lzMklSUG5RRllXdUZjODJxbjdLUWtyb0JWa2hzSlI5SFMtTHhBTHhPTWhXSmVyNjgxdW5STUhwbjRPRmozaHNROGdReUhNeU5MaU4zTlllekg2NFBmSVJnYlFfWVNXUVVuY2puMDJnQmJ4am9fSnNMV0VWNkQyTmRCVjlCdXBDNm3SAdIBQVVfeXFMUFFlTlFxSjhCZWxOLXYyVGdEVDJmLWxzM0ZvSXNna09lY3hKTmNteTF6amNraXl4R3pBTmc5NzF4U2tQcWxEUlJYSzlaMEswMWlGSjgxal9EVWFRTEt5UlI3TXZDelpPd0RoVERrTHlzemc2T0JMZEtzTzItMTlTNE8yZG8tVXI2WWwyd0NQdHh5NXNIZzNoeV9UOVVTemNNR21wdlZzUWFSblgxQ3hBS0hlVTVXRFpLcW93bWNMdEFJMGkzb3FReV9GMDhKeDI4Q29R?oc=5",
-      "published": "Tue, 15 Sep 2026 02:45:13 GMT",
-      "source": "The Economic Times",
+      "title": "Jindal Supreme IPO booked over 31x on Day 2; GMP soars to 30% - Moneycontrol.com",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNX08tTGtsTDRYdU8xREI2TFpLT0R4NHJZd0hsVF82VWZSazQyRGRxTGluSi0xZjBBQW9HR2lvdlhINEI3aUQtSkNLeWV4QmhLSlNqejlEWUVFdEl4U29OY0NvU3FJLUlkT0U4blVneER2OWxwaEpRV1JfY2l1d3p4OXppZGI3bzV6VGlQay1JdGVqOS1zQUpSSzNQUVY0b2Y3OVRoQjBTVEFyclFmaGt0U0JEUUxGQ3FxTDhfSnp6VXVNd2JpbEHSAcsBQVVfeXFMUFp1eGt3WUwtVE9ZVXpad1lneGliVS1fRFdteU1oSWoxb0kzWXR6ME9NUUFVTzh5alNtbU9vTUQ1WW5uWFBxSGI1aVN4TlNPOHZWTWtOLWI3Q2NCYldVbHRjU3R1M2VCVXRBTnl4VnRfeUVLSDV6dXc5bW9RaTVabmQwazQtY3VWZEl6eVYyZTJDOHdTMjVna3hxZkF0ajlWSGs3MkhaRUpvMV83TTR3cEhIZWg5YkcyZUV4eUJwcF9rNTJQLWtINGtYTWc?oc=5",
+      "published": "Thu, 17 Sep 2026 08:33:58 GMT",
+      "source": "Moneycontrol.com",
       "feed_source": "Google News · IPO India",
-      "tag": "IPO",
-      "ipo": "Sonaselection India Limited"
+      "tag": "IPO"
     },
     {
       "title": "NSE IPO: India's biggest stock exchange launches mega share sale - BBC",
       "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE12WllINEpBanJxS2xaWXlVUjFqVnZycUp2akdfN0R5VXRkNjhsVGVfWS1tazQ0VkdVRUN1dTk5TVJqblp6QTJ3X1lXVlhyLW5wMWFkRUdaYTMtRG8?oc=5",
       "published": "Thu, 17 Sep 2026 08:13:59 GMT",
       "source": "BBC",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
+      "ipo": "National Stock Exchange of India Limited"
+    },
+    {
+      "title": "National Stock Exchange of India's $2.3 billion IPO draws muted early demand - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPME1EbktmN3VLZGdidFl4UVl0UURYZXNxQWFySFFZNHVSYU9YX1BrNkRYVUZzSnFLaE1BRGNicG9RbHpvczg5VWdXSnM4NjJWNlZoUkZZamlBakFhaTl3VDlkMkZrdTg3N3IyUTlvTm5vQm5BeXJTWTJ5ZzNZN0xHNF8tLWtTUzV5TFEtNEkyR0lZMFBDUDNjeVpockloajNIN3djRkVuYXB6TUJ6dXZYSlNYVWhQV2NlQlE?oc=5",
+      "published": "Thu, 17 Sep 2026 12:05:40 GMT",
+      "source": "Reuters",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "National Stock Exchange of India Limited"
@@ -186,14 +194,6 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Sonaselection India Limited"
-    },
-    {
-      "title": "NSE's $2.3 billion IPO fully subscribed, spotlight shifts to Sept. 24 debut - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNGRuZlZMeEdyNkpHQU4zT3oxQUJJa0x2WVZaRW4tVlRIcEp2b19VdXBoVWhCNm5UbW5MNUFRX2hzNEN1eWZlVFczYUdZajFCUjk4OUdkNE53VmFJVHFNMWxzaml6UDY5bzNGSHQzS1hab0NwQkd1ODhtVTZ3RzJOdFNsMmk3cnNPOExiMEwyMlJUVDliSEZlU0k3WHE5OUlWdW93ZTF0OXVqZmVlWF9kWHczWTU?oc=5",
-      "published": "Fri, 18 Sep 2026 10:34:27 GMT",
-      "source": "Reuters",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO"
     },
     {
       "title": "NSE IPO Day 1: Subscription Status, Timeline & Key Issue Details - Groww",
@@ -275,14 +275,6 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "NSE IPO: Shareholders Retain Significant Stakes Post-OFS - Rediff MoneyWiz",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQjBRbkZmQzBMY1QzbUZrVl8teXlXWlRYcTBFZ0VrMWM3Q2ExYTV3eC1hOGJlZHRtQmYzMzRjdTFBU0YzSFh3cjVFQUxEbzA4bVRMVW1Ccm5yeDh1MlJHRjkzaVZESF9QVjhUX3g5cVU1ZTVsZUhrZVpodUpnMGdBa2hHeWFaTzlZb3dNMDhMd3VVcmhLbDNqNVlSeWFTS2JUSmN3dlgzLWRTR0HSAbABQVVfeXFMTmotZUJ3U0xhdDJRdVBCNk5kNHd4bjJQZGdPeTUzcm9wR05kblhJX0FSOTIzUWVRUnA2Und0MUFyd0dtXzJDREdOdFdqa19fa01mWC05cDU3YlYteUcxVzk2NUN0WUluUUdNaDl3U2FISHdxQWRUaVhnN3dFSHRZbXQ4R0tLUmNZU3dSaUhReEtQV1liQnVpSkU1ekVMYmhuOHduTkxqUnUyVlJwSnI3R3U?oc=5",
-      "published": "Sun, 20 Sep 2026 11:59:43 GMT",
-      "source": "Rediff MoneyWiz",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO"
-    },
-    {
       "title": "NSE IPO Opens Tomorrow: ‘Unexpectedly Large’ Demand, Anchor Book Cut; Track GMP - India Infoline",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPY2hlVVk5NnVONm1lVmlJUTJUSnBjblA4THIzOWJza3V0SkFwTEc0ZktGS01VSFZiWkRTWnJDdjhMQ1NKUW13aUFDb3VsbTkwcktZQk9pU05YUlRQX1oxS2xENlBjN1FwZTNIYUl6cXd4QXVxR1phZHptQzZMNHVJMEtMVlNfODVmU2ZOUFgwVmc2QWZ5aHU5MXlKMFRsdUI2SmhBZEtlM2tIdzFicWdLeXNCSQ?oc=5",
       "published": "Wed, 16 Sep 2026 05:43:44 GMT",
@@ -290,6 +282,14 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Sonaselection India Limited"
+    },
+    {
+      "title": "NSE IPO: Shareholders Retain Significant Stakes Post-OFS - Rediff MoneyWiz",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQjBRbkZmQzBMY1QzbUZrVl8teXlXWlRYcTBFZ0VrMWM3Q2ExYTV3eC1hOGJlZHRtQmYzMzRjdTFBU0YzSFh3cjVFQUxEbzA4bVRMVW1Ccm5yeDh1MlJHRjkzaVZESF9QVjhUX3g5cVU1ZTVsZUhrZVpodUpnMGdBa2hHeWFaTzlZb3dNMDhMd3VVcmhLbDNqNVlSeWFTS2JUSmN3dlgzLWRTR0HSAbABQVVfeXFMTmotZUJ3U0xhdDJRdVBCNk5kNHd4bjJQZGdPeTUzcm9wR05kblhJX0FSOTIzUWVRUnA2Und0MUFyd0dtXzJDREdOdFdqa19fa01mWC05cDU3YlYteUcxVzk2NUN0WUluUUdNaDl3U2FISHdxQWRUaVhnN3dFSHRZbXQ4R0tLUmNZU3dSaUhReEtQV1liQnVpSkU1ekVMYmhuOHduTkxqUnUyVlJwSnI3R3U?oc=5",
+      "published": "Sun, 20 Sep 2026 11:59:43 GMT",
+      "source": "Rediff MoneyWiz",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
     },
     {
       "title": "ETMarkets Smart Talk | India may see 50 bps of rate hikes in 2026 as Fed tightens: Garima Kapoor - IndiaIPO",
@@ -447,14 +447,6 @@
       "tag": "IPO"
     },
     {
-      "title": "IPO watch: 6 new issues to open next week; check dates, price bands and issue sizes - CNBC TV18",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQN3YzSHVGZjZkMXpZLUs0ek5vTHJjV0c2X2YxeTBseHNTT0FTa2p3MTNfd1NEYk1lZEVLMXVrWE1DZTNqUUF0SWM0VWtIWE82VE1HYTdOUm9kaUEzSHo1OElzLU5DSnY1S2o0Z29EdzR5X0dIUjBuZDgtMjZDS0lCbExEZkJibUN6aTRqRTQwU3NyX3diZmFNc3pDX3BpWm9NdmVUWnBWSWZtQ0xKSmptTFJ1TzE4d0Q0NTB5QWpjNVhtWXNac3g4Z0M4NTdQelhMS0R2MzZmY0p5ZG9yYmtBZTByYXhUQ0IwZHEzRjhMZnFBVmtOanB5MtIB_gFBVV95cUxObkkwWldHWV96dk5kVnl0Zy0xbmRteU5TMWUwbEdrX0lObG5seXNfWGZQNEJsVUZEeHk5YnktanJaNjhkRU9MQlF1aXpHTUtVTXF5LWRqRlctUzhKcUlEWnNZaGFqRzJjYkJZQ1MwQmVKcEQyVWN5WWZPSXVTNmpxNGhPNDNQMXBtQk9VelJjZTlOV3NveTV5TnRLV0ViRFJpaUM3bGZyRS1sRHgwVW91STB3NWJIWWd5M1ZmN3hlMk52cjVJN1FEMEVjaHRFUFhUNERKSHlyTnZ0ckRfWXp3SGl2dW1XajBzUFpMZFZVZ1A3TTNkZmZTc0lHT1o4QQ?oc=5",
-      "published": "Sun, 20 Sep 2026 15:24:29 GMT",
-      "source": "CNBC TV18",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO"
-    },
-    {
       "title": "NSE IPO subscribed 1.16 times on Day 2 led by non-institutional investors, QIBs - The Times of India",
       "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNUmpzdU1INnNHVlFyR0E1VWFFX2FjSnF1NktablMwVmhRaU0zMXpveHlabXhEZGtUZkF6YUdtSWlDb3RickVHUmdDV3Z0cTlpY0FlT3dnb19GcmZtdHkzVTBHSTlTcDV6REJrcXduUkIxekdhNk1rUmdPVnp6TndEcjFyT2RaaExnT3JGOFNrY3lNSnREQ0Z0QVI3RjJPRXJESF9PTE5Xd3RRbzdwdElXV3lPV0dkY1llemZhTE1QTEhoRXZuZFdTSmtPcExNb2hEOHU2WlRmRkpMRkgxbXRzaVVEdkZKX1lfcENydzQ1RmJ4Q1dBV0lv0gH8AUFVX3lxTE1sXzltZ0FSLTMyRFZOQTFXUFJlVGZfZ0VOQWFURkR4VE42MnJoak40WHJLcnFMc0hZbGpoZFEwbXdqcXhJaXEzMmV1QmFoVzkzNThkbjcxa3YwRXhIMWFGbGxITUhrOUIwb01GNG1QNkpMdmpra0RELWZlUkNSVmlPcFVweHphVGdlN1RXOHg4TkJ1Q1ZkT0RXSkVRYjR4Q0hPVV9FeU9Zdm5qQVB6NDBEQmhuNDViMDhTYWg3MDNGWjNHcDNjcXBscklNOUlYS1FMUmptQ1liRlVkWGpaSnRCdy1EeFEyaDJoaE1lRDNxdnNVZzNKY2JUaFRmLQ?oc=5",
       "published": "Fri, 18 Sep 2026 15:45:00 GMT",
@@ -462,6 +454,14 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Sonaselection India Limited"
+    },
+    {
+      "title": "IPO watch: 6 new issues to open next week; check dates, price bands and issue sizes - CNBC TV18",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQN3YzSHVGZjZkMXpZLUs0ek5vTHJjV0c2X2YxeTBseHNTT0FTa2p3MTNfd1NEYk1lZEVLMXVrWE1DZTNqUUF0SWM0VWtIWE82VE1HYTdOUm9kaUEzSHo1OElzLU5DSnY1S2o0Z29EdzR5X0dIUjBuZDgtMjZDS0lCbExEZkJibUN6aTRqRTQwU3NyX3diZmFNc3pDX3BpWm9NdmVUWnBWSWZtQ0xKSmptTFJ1TzE4d0Q0NTB5QWpjNVhtWXNac3g4Z0M4NTdQelhMS0R2MzZmY0p5ZG9yYmtBZTByYXhUQ0IwZHEzRjhMZnFBVmtOanB5MtIB_gFBVV95cUxObkkwWldHWV96dk5kVnl0Zy0xbmRteU5TMWUwbEdrX0lObG5seXNfWGZQNEJsVUZEeHk5YnktanJaNjhkRU9MQlF1aXpHTUtVTXF5LWRqRlctUzhKcUlEWnNZaGFqRzJjYkJZQ1MwQmVKcEQyVWN5WWZPSXVTNmpxNGhPNDNQMXBtQk9VelJjZTlOV3NveTV5TnRLV0ViRFJpaUM3bGZyRS1sRHgwVW91STB3NWJIWWd5M1ZmN3hlMk52cjVJN1FEMEVjaHRFUFhUNERKSHlyTnZ0ckRfWXp3SGl2dW1XajBzUFpMZFZVZ1A3TTNkZmZTc0lHT1o4QQ?oc=5",
+      "published": "Sun, 20 Sep 2026 15:24:29 GMT",
+      "source": "CNBC TV18",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
     },
     {
       "title": "Liqvd Digital India IPO GMP, Date, Price Band & Review - IndiaIPO",
@@ -516,15 +516,6 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "6 IPOs to hit stock market this week: Companies to raise total of ₹3,825 crore - Bhaskar English",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX0lzdVBRNzFjWklnOTVhc3luNUw5VXVlVmRieDZsWWU3a3NmbFRlNk1iSlF3RExZVWptQVduUUdWTzJ3WGtHREMwQjNSY255Yk5IRkRwQUFJSHFNS2JwYmp3QVBIYlNudThnaXd4OTRpcFctYUZuSUgxMERKMkFQRk9pMVVnSzM3eWJGbGNhcnRRNWltUW5vc0RBdVdOeVlJVGJ5LWtlZEdWOVAybFgxYmhXVHhjc3FT0gG-AUFVX3lxTE9oclRiQ0NTSm9JVm1nR1NlQVFsbzJtanVHck5IVXVtSnhMOWNUWVVzTkFMX3NHaXdnelA2dWxqQ3hZemVZYWZBbU1YQ3dUNlpQc0N3X3RNR2hpdFoydW5EMmk0cVBxQUFnVlNkRk5EMTVRZXFzOUk3RnFhakNmendNZGg2ZUUySV9KTUtZb0JoeG85UDk2TWtLNTdGME5SNmxPaTZGOXBaUGJfX1luQU1hazR5czFMSjNTRWhUTmc?oc=5",
-      "published": "Sun, 20 Sep 2026 09:13:49 GMT",
-      "source": "Bhaskar English",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
-      "ipo": "National Stock Exchange of India Limited"
-    },
-    {
       "title": "Hero Motors targets $401 million valuation in India IPO - Reuters",
       "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOS3VHRnRsMTJJTWRhTi1RRjBQcE9SX01OQTFpdDZ2NjZVYnNuRWFTYWVnSXRvTHFhdVVkUjY1N1VFbU5BY3NPUWMwc0dJbDl2RHlVTHFvLUkyWHJlLU82ZHFFODdsOXowa2RMN0ZodlhDaUZOV0JWZ2pDY1pHUlRhNldCNFk3UGV0eHF2bGF1djhQbW9McnZFVFdSNGpsY0xJ?oc=5",
       "published": "Wed, 09 Sep 2026 07:00:00 GMT",
@@ -532,6 +523,15 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Sonaselection India Limited"
+    },
+    {
+      "title": "6 IPOs to hit stock market this week: Companies to raise total of ₹3,825 crore - Bhaskar English",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPX0lzdVBRNzFjWklnOTVhc3luNUw5VXVlVmRieDZsWWU3a3NmbFRlNk1iSlF3RExZVWptQVduUUdWTzJ3WGtHREMwQjNSY255Yk5IRkRwQUFJSHFNS2JwYmp3QVBIYlNudThnaXd4OTRpcFctYUZuSUgxMERKMkFQRk9pMVVnSzM3eWJGbGNhcnRRNWltUW5vc0RBdVdOeVlJVGJ5LWtlZEdWOVAybFgxYmhXVHhjc3FT0gG-AUFVX3lxTE9oclRiQ0NTSm9JVm1nR1NlQVFsbzJtanVHck5IVXVtSnhMOWNUWVVzTkFMX3NHaXdnelA2dWxqQ3hZemVZYWZBbU1YQ3dUNlpQc0N3X3RNR2hpdFoydW5EMmk0cVBxQUFnVlNkRk5EMTVRZXFzOUk3RnFhakNmendNZGg2ZUUySV9KTUtZb0JoeG85UDk2TWtLNTdGME5SNmxPaTZGOXBaUGJfX1luQU1hazR5czFMSjNTRWhUTmc?oc=5",
+      "published": "Sun, 20 Sep 2026 09:13:49 GMT",
+      "source": "Bhaskar English",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
+      "ipo": "National Stock Exchange of India Limited"
     },
     {
       "title": "Steamhouse India IPO GMP Today: GMP Holds at ₹20, Issue Subscribed 0.80x - India Infoline",
@@ -549,15 +549,6 @@
       "source": "Bloomberg.com",
       "feed_source": "Google News · IPO India",
       "tag": "LISTING",
-      "ipo": "Sonaselection India Limited"
-    },
-    {
-      "title": "Landmark NSE IPO Threatens to Hollow Out India Shadow Market - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaVNrR3dRSHB1OFlpVDUyS3Jlc1lvSkd1X2pzNzRkeW13dERzanV2RGZzdGxjQ2lETWttdnBXYVItekU5eGNfVEhwSzBJcUExdXNCV3FjUE5jY2JiQlRvUlhyVUljRk1uTG1pcWo3aDJZM3o3c09aLS11YTlyeXRUSktYLV9jUHJxaVZLZDBTM0R3NC12eER6bmIzc0R6am9MMjVpTUZvZzliLXI0OTNrMg?oc=5",
-      "published": "Tue, 15 Sep 2026 01:39:00 GMT",
-      "source": "Bloomberg.com",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
       "ipo": "Sonaselection India Limited"
     },
     {
@@ -584,6 +575,15 @@
       "source": "India Infoline",
       "feed_source": "Google News · IPO allotment",
       "tag": "LISTING",
+      "ipo": "Sonaselection India Limited"
+    },
+    {
+      "title": "Landmark NSE IPO Threatens to Hollow Out India Shadow Market - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNaVNrR3dRSHB1OFlpVDUyS3Jlc1lvSkd1X2pzNzRkeW13dERzanV2RGZzdGxjQ2lETWttdnBXYVItekU5eGNfVEhwSzBJcUExdXNCV3FjUE5jY2JiQlRvUlhyVUljRk1uTG1pcWo3aDJZM3o3c09aLS11YTlyeXRUSktYLV9jUHJxaVZLZDBTM0R3NC12eER6bmIzc0R6am9MMjVpTUZvZzliLXI0OTNrMg?oc=5",
+      "published": "Tue, 15 Sep 2026 01:39:00 GMT",
+      "source": "Bloomberg.com",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
       "ipo": "Sonaselection India Limited"
     },
     {
@@ -749,14 +749,6 @@
       "ipo": "National Stock Exchange of India Limited"
     },
     {
-      "title": "Elevate Campuses IPO Review - Well-Informed Investors Can Park Funds for Medium to Long Term - IPO Watch",
-      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MdVhVU1pNVEU4Zkt5T0M2YTRMN1hlNFpPeUkzSnRFYmdibVlIUHNwMFA0MkpUb0d3aV9KdkF1aXpSUHRPOWt1eDNoQlZoaFFIMk1VVXBHc2JVUUQ1?oc=5",
-      "published": "Sun, 20 Sep 2026 08:52:55 GMT",
-      "source": "IPO Watch",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO"
-    },
-    {
       "title": "Steamhouse India IPO Listing Today: Check Share Price - Univest",
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPNG0wQUxOSDJvd1NRbGRqX2NrTnN6cENqdURnTURWakl4N3Y4eVNMSjdaUW0yOW1xY0p4cF9OU1NMbkVkenR6UzBVVlhXRkRGYUxYNzQwUll0aXFHY2E5Vl92SjRyaHRkR0ljbHIzbXdFcFplMnllRmlQSlRRWkZxdDVES05pZw?oc=5",
       "published": "Thu, 17 Sep 2026 06:56:00 GMT",
@@ -764,6 +756,14 @@
       "feed_source": "Google News · IPO allotment",
       "tag": "LISTING",
       "ipo": "Sonaselection India Limited"
+    },
+    {
+      "title": "Elevate Campuses IPO Review - Well-Informed Investors Can Park Funds for Medium to Long Term - IPO Watch",
+      "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9MdVhVU1pNVEU4Zkt5T0M2YTRMN1hlNFpPeUkzSnRFYmdibVlIUHNwMFA0MkpUb0d3aV9KdkF1aXpSUHRPOWt1eDNoQlZoaFFIMk1VVXBHc2JVUUQ1?oc=5",
+      "published": "Sun, 20 Sep 2026 08:52:55 GMT",
+      "source": "IPO Watch",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
     },
     {
       "title": "Hero Motors IPO: Check Details, Key Dates, GMP, and more - India Infoline",
@@ -792,10 +792,10 @@
       "tag": "IPO"
     },
     {
-      "title": "Meta- and Google-backed Indian telecom operator Jio Platforms gets regulatory nod for IPO - CNBC",
+      "title": "Meta- and Google-backed Indian telecom operator Jio Platforms gets regulatory nod for IPO - cnbc.com",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE11UC1TUVNmSU85cGI4cmlTMldPak1pWm5YN18wbDlYNER3QTFRR2xxMk90cVVkXzhvTTV6bDc3S2YzclY5OVRtX3Zjdks2OVBBdzQ0NU5nQTZ0VklVc3libFJWUXdETFdVVlB1VElzLUs2UFgxYVNEMXdpenQ1Z9IBgwFBVV95cUxObzRqSDlkYzNRRjIwTkdOQ014TmdsR09oZV83TDgyb3IzQmloM0tOZGUzcDRyTnVIc1NlTlNIaEJyemlUQ1RSVUw3SDBObTFHMzBjbnYtNG93b3BDX1VVc0dzMUtyb3JyMUhXR3hjMFFRLTZjQVItWmFmaTR4OWtsTElxMA?oc=5",
       "published": "Sun, 30 Aug 2026 07:00:00 GMT",
-      "source": "CNBC",
+      "source": "cnbc.com",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Sonaselection India Limited"
@@ -890,13 +890,13 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "ArMee Infotech IPO Review - Well-Informed Investors May Park Moderate Funds for Long Term - IPO Watch",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9OUC1uRXVnVnNNaGUwZVhuVER0dU8zTS12aC1iZkZvYjF6WmJVbklXMUIzWVpYaFdfTVIzRHdxMDZDUWUxUGdQRmRSX1ZOUllFbHh4T0NrTXRhQQ?oc=5",
-      "published": "Sun, 20 Sep 2026 08:52:55 GMT",
-      "source": "IPO Watch",
+      "title": "Glass Wall Systems (India) Ltd. IPO: price band, issue structure, financials, subscription, GMP and listing - multibagg.ai",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOYU5KMlFaWjd6Q1NCXzA3ZDNodGFWcmRFcC1xN1BheThNZUtsdWdhUWM1SHBFTHRycHFlQkh2NnVYbk5ETEk1Uy1wUFFIWnFzbklySEFQaWFLaGZQRDk3Q1llRWQwbjI3RUhzemRva2pGNXZ6MWpCdWNvQnhCVDZaVmdwX0FfSmFSUmxOcEotMDVzQlV0SWRxdWpQdEtLcHprWWFGRzFQY3BxLWZIUE5OYU5teHRYTVdLdm9XbDJ0MjU3TlpWemlPOE9hN25mc1BlSVhrT0hSRkRuTE9NdkE0TDJ1TW9HYm9nQjRXd2x2amtqRkR6cnlJ?oc=5",
+      "published": "Sat, 19 Sep 2026 09:02:56 GMT",
+      "source": "multibagg.ai",
       "feed_source": "Google News · IPO India",
-      "tag": "IPO",
-      "ipo": "ArMee Infotech Ltd. Mainboard"
+      "tag": "LISTING",
+      "ipo": "Sonaselection India Limited"
     },
     {
       "title": "Jindal Supreme India IPO allotment: How to check status online on NSE, BSE, Bigshare Services; listing date, time here - Upstox",
@@ -1163,10 +1163,10 @@
       "tag": "IPO"
     },
     {
-      "title": "Asset Reconstruction Co.(India) IPO Allotment Today: How To Check Status On BSE, NSE And MUFG Intime India - NDTV Profit",
+      "title": "Asset Reconstruction Co.(India) IPO Allotment Today: How To Check Status On BSE, NSE And MUFG Intime India - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQS0hMdUZkYzRKRlZHYUdqamVHWEFWb3BSVjhNeFRmM2c2dHB0TmF1WUJ3aFY0MXU4ajY2S2JPbDBLRUNhS1BSdHRPc1ZZbmg3UVgxdFpXNnBwU05lQ0FMUjhsTWRDelZvMVJhbG0yeGxxMlBhNjFhZFlrbG9tRHJlZm1WU1pXMm1JbEpaZFA2X25ZNjMtZDJWcWRJdkg4RGNRQ0hZdjEyaUpiSVJjb3R2ZHlqcVdtbHd6VTd5T25YcFVfU3N4SG5TcGNQRFpVVS1SZ1o4Z2tnMWxVUGllQmV30gHnAUFVX3lxTE9kX3liYXpFRmlaa3V5M3N1S25lT19XNE5ZVEZxYTRydDNwTEF3V1Q5VjNTYWI4TEQ4WlUyWE9PZ21pVXJFNHJOaGx1MU04R3JpQ0dUdVV5ZGJuaVVSVDNWdGJpWWFkbVlrakFTN0lOTjFxSnd1eXR3SWJOTm5lMVM2bG82am9TeWdKclZ4Vjg4R3dPcjEtOVRlOExIaGsxaFRFNUprT3VHU0V6WXdXUkhFa2N4NE9BazNxU1VjUmpuWXdrSV9TOXVGeW9OWFY5eEkxdjJFdnd4bnFDRUUtSWw2aEZKWUdXOA?oc=5",
       "published": "Tue, 15 Sep 2026 02:30:15 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "Sonaselection India Limited"
@@ -1221,10 +1221,10 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "Veegaland Developers IPO allotment: How to check your share allocation - DhanamOnline",
+      "title": "Veegaland Developers IPO allotment: How to check your share allocation - english.dhanamonline.com",
       "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNajcyUldxbUdHMnlSWW9GTlRpWTdtUUIyZVNlemRWbXExLVBaNU1KTXVwbktkSE5IOEhHOGhPRkpCU3RZa2dFVkE0OHpCY0dmckFGVWZnY1RtQUl4V3dvYmF3RFdLSTAxZUpOWWtVYkxUcWh5Z2wxc3lhZmtEakpBd2poc1NqSlRXUTZ2NWhDUGxvTkUxbFRBVnFmaTZNVlhfWGdBcTZnSFlLS2hycVJJOW9LaEt4TlRmNVltYUtITF90QdIBzwFBVV95cUxNeXFuRXBwZXk2eXlsQTBhTE9TUVRpdDhLZm9EZ2l1cWI0WEh4bVZqa01QanA2ejBPa3F2UFNuRmdVakkxXzR3SlpBTEo2UWlRbFVkSmloYnlCdHpoTDlpbC1MSFRFMVhybXNneEI4endIaGFUMVYzYlVRVk1CRG43SHhLNEdvOFFBVlNjNUFYUlNESjhEblR3SDBjTEVGb0pjZkUxU1BiblljbHVFZ1pmYmc2NXV4MzZscXBRS3hhZFRmNXRmcUJBSUR0ODE0SGs?oc=5",
       "published": "Thu, 17 Sep 2026 02:27:54 GMT",
-      "source": "DhanamOnline",
+      "source": "english.dhanamonline.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
     },
@@ -1237,10 +1237,10 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "Karamtara Engineering IPO Allotment Today: How To Check Status On BSE, NSE And MUFG Intime India - NDTV Profit",
+      "title": "Karamtara Engineering IPO Allotment Today: How To Check Status On BSE, NSE And MUFG Intime India - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQdzhLTkRGYTVnd3VqUUVrYUYzMFM2c3VOMFhZUjFqZTFFdzd1SFl5bXNHejFMX1RET05DSTRucGloaDJJdXFRMUZPckZLTFItRkk5Vkt2MzItMGRFMHFUWi1xWm1LY1JveDBKUDg0TFhVTjBSUHktbVd5eV9aX2FlcU4tUWNpb0FiWE1wUEVNd0lYWjV6bjZNaE9BYjNKckpmQm5aRUQycjZMSmNXa1hESVpnb0RqM2xCWDZYZTBPamFGOEF6R05uMmd5eHZHUjdQajRmdNIB3AFBVV95cUxOQW1IbGF4LWh6Q3pxWEMyRnJQNXJiYzhRNkY3di1feDAydzBQOTlFT2doX1pva0hZVmVDTVA0NWZ3bHUyT1RYRnM1WFpVQm9xbHlUTlNPT1h1bjdxRFFIVEx3b0hoVG9Zc3F1WTVQb2Rwc0p0RHAwODBrNzRRX29TWXRNcmhGZi1xWG1TMm1uYjB3X0ZhTHBGM29TQ1ZhczhhM3U5SVVsLU5sZ0F6dldNZXVzTWQ1N05tcFVpdENtZERqV3g5LVp0N1lNeE0zZGI0aGhJRHdWWkdiZTN6?oc=5",
       "published": "Tue, 15 Sep 2026 02:38:50 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "Sonaselection India Limited"
@@ -1254,10 +1254,10 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "Steamhouse India IPO Allotment Today: How To Check Status On BSE, NSE And KFin Technologies - NDTV Profit",
+      "title": "Steamhouse India IPO Allotment Today: How To Check Status On BSE, NSE And KFin Technologies - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOc1VsSWFZR2pOdldxcV9Xd1NCX3JsbW5jQ040anhYcDVpaEhXXzVaZWRpcHhrYXhBb2xGVGxYbVZYQnA1bmRWdTVJS3dtbUxSaF9kZ0JwSEpTcnhaY09RVTk4elpiTEZyay10UG9yMmw2NUR6anZUVWNnTGYyVzBCTE5rZzRtTXZqeHNNNmhZbEZyLVB5X3dGejNKaFcyeTU3TzEzQzVDSnBPa1UwZEhNQmpxZUl5a0Q4UTBxVjM2aU9GeE9jVWxfQ1dZTG5CMW9aMTNQNml30gHWAUFVX3lxTE5zVWxJYVlHak52V3FxX1d3U0JfcmxtbmNDTjRqeFhwNWloSFdfNVplZGlweGtheEFvbEZUbFhtVlhCcDVuZFZ1NUlLd21tTFJoX2RnQnBISlNyeFpjT1FVOTh6WmJMRnJrLXRQb3IybDY1RHpqdlRVY2dMZjJXMEJMTmtnNG1Ndmp4c002aFlsRnItUHlfd0Z6M0poVzJ5NTdPMTNDNUNKcE9rVTBkSE1CanFlSXlrRDhRMHFWMzZpT0Z4T2NVbF9DV1lMbkIxb1oxM1A2aXc?oc=5",
       "published": "Tue, 15 Sep 2026 02:30:44 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "Sonaselection India Limited"
@@ -1272,10 +1272,10 @@
       "ipo": "Axiom Gas Engineering Limited"
     },
     {
-      "title": "Steamhouse India IPO Listing Today: Check Expected Listing Gain Based On Latest GMP - NDTV Profit",
+      "title": "Steamhouse India IPO Listing Today: Check Expected Listing Gain Based On Latest GMP - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPTWtEYW1jREtreXpDYXlUWDJVaGE0dkFYcW01QWJKQTJ5Xy1qdnJySW40VWZWVTI2VThHbDZUeFVkVXBobm5RSUUwTVFzMHlKZHE2UjRpcDljSVJ1QzVhMC1qcUd0V09mci1xejNRWlZ4c1NaalkxY0RBdHpudGZ2aERuazN6djlmdE8xTUNmZ0dNWlRPclF3TUg2ajJKM3pmRlphVkJsVXFHT2FUQXNpUHZaazMtLWlyd0NCN0FUV3RwR0gz0gHMAUFVX3lxTE1ST1pYREF1dkR2Qks5NjFPLURvcnpWcGNxRkl4Ry00SnFHM0hzWWpFOWM3SWZYa1hNVEFRMXpmQXIxTmdQcGJxWVYxZlRLbFJ0dmlONFcycG93ME9WQWs1cjUwNnh3SGxoRlZhZDZvVXhxaGtaZWs3M1FQeGRqSjV0RTB3cjRlWDg4UnNYMDhDUVVodFBkNDc4MlRsb2t0OHV3MWx4dXRCZTFuX1dnUDhNR25zYlJGcUJyUzIwMlFHZGZ3ckdkckM0T3NIcQ?oc=5",
       "published": "Thu, 17 Sep 2026 02:45:44 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "LISTING",
       "ipo": "Sonaselection India Limited"
@@ -1299,10 +1299,10 @@
       "ipo": "Axiom Gas Engineering Limited"
     },
     {
-      "title": "Manika Plastech IPO Allotment Today: How To Check Status On BSE, NSE And KFin Technologies - NDTV Profit",
+      "title": "Manika Plastech IPO Allotment Today: How To Check Status On BSE, NSE And KFin Technologies - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNaEtOdDZYNDRRSHBmT0RvOFBWNUh3UXFLc2pBYmlnSWNzVzNMSXRyazhUSllOQ1FfTjJRUVRpM2picHM4RmVNdklIQTBYTkxsN0s4aFdib09UY3JfWTk5Nm9ranFWdkhLMDNHeVR5eWtISzIzNVJNa3piNjB2NzIxdHVQbDFpa0Jwa3BPQ0lTcGxORlQwdUo2cDc2X2xmam1GX2ExclJsRGd4YkROVWF5V09NejN4OEVuRXFYaFluWC03SU5DMW5XdjZwMUHSAdQBQVVfeXFMTmlYcy1BWFB6UHlZZ3h4TXNtSnpMQmR4UE9LOVFJbVdnVU9Fd2Z6ZUFic19FSkhlWGxHZlRZV01HMW5nbkZyaEZSeElYUEVnekRwNXU4anRJblRBYTBnQU1nbExBYTBfbzFlWXdoc1ppT0dkUUVUMGluZXN6ekhnVnJFT3BDX1U4OWlUbVBCcTJKNFd5bXhFQTc4RzZjTkpaWFJUcVRaWkJlbDA3blYxZFJaZW5pYXlqNWxwTkthU3ZJQ0V6VmVub1JscXdxbTlpWWFxbkQ?oc=5",
       "published": "Thu, 17 Sep 2026 02:30:27 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
     },
@@ -1391,10 +1391,10 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "Asset Reconstruction IPO Listing Today: Latest GMP, Expected Listing Price And Listing Gain - NDTV Profit",
+      "title": "Asset Reconstruction IPO Listing Today: Latest GMP, Expected Listing Price And Listing Gain - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNbktuNXNUQmJrb0JES0Q1dnVfN0VBNS1WMENaXzZUQTdLR1FkczNKNWRGeFVxRGxKTUFlRU9tbnI4ckdnOTZxV2ROTVpKXzNnek9RbVdnV2pSM240LXNKUEttODdaVUZGTjRJV2w0TGlkNGlTd0lYZzNOZ2dJWk5KZVNSSnhtU3dFWTRjOUhWaEc0WUdOc1BzemJmd09MeEtZcEh1TVg3ZDd1YzUxZWxDR0FMbHBjb2FwVi1iNDFMNmhiZ1FaLWVtVVlrV1d1enBt0gHYAUFVX3lxTFBRSWVUa0lQSmQ4Q25WQ3oyeUdHck94d1RCdFU4OWV0SE1BUTFWME55QVRqa2tYdFYwRXkyMnRiUElVNUFGQ3NMTWVCSkdNYW9TZ3hxTzZ3Zmh2anpjMENBa1dLeEprYVduMW9TcnZ3dy1EYkk3VFduaV9Bd3NTRkNYLVRSS2VrZ0ZZdzRyNFF5bFpTWnplcnpLcE11WDV1d0dQNS05ck9uM0VCaXM2enZfNGhncDc1eC1MRGV3SVpRekNyLXBiQTd0VTJWSGZLd0ZHZnhHQXdfdw?oc=5",
       "published": "Thu, 17 Sep 2026 02:45:25 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "LISTING"
     },
@@ -1510,7 +1510,7 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "Glass Wall Systems IPO allotment: How to check status online on NSE, BSE, MUFG Intime India - Upstox - Upstox",
+      "title": "Glass Wall Systems IPO allotment: How to check status online on MUFG Intime India, NSE, BSE; listing date, time here - Upstox",
       "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxQZVdUTjkxUFNxZ0c5M2RXUERDX1R5VFA3QURGaW1Gb3V6ZlJFeFdSQ2drYldnaFlqRE94V1ZPTVRZUWhqTms3TV9DQUswcW8xSF9kakhDWWVydWF2MTF4RnJjQ3Q0VGc2WUFiVDNLV0lSUEpjekZ1UlFmWkpLc0VYVzdyTWxKSFdla1g1emlmY2piS0E1eFI5SEJqSVB6WXZVX3Jlam1HeU01dXVBZ3cxM0JaSTIySkdSZWdxNVBmNzFERno0Vi1VVld1X3NkQ04xRGpXOHV6R0FQZXZwM3hPQWU2MkpyT3FSLVhLdlFEREJOcHRKbmR0SF9FQQ?oc=5",
       "published": "Fri, 11 Sep 2026 07:00:00 GMT",
       "source": "Upstox",
@@ -1563,10 +1563,10 @@
       "tag": "LISTING"
     },
     {
-      "title": "Augmont Enterprises IPO Allotment: Date And How To Check On BSE, NSE And MUFG Intime India - NDTV Profit",
+      "title": "Augmont Enterprises IPO Allotment: Date And How To Check On BSE, NSE And MUFG Intime India - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPcUpPVzJZS1paaFpZV21DYUJFVzU1TnVaMTFSNGhId0pJVEFYT0Y5V0V2cG9KeGdhTFdoS25OMGZUQkx2MDBVVWF6TUEwOF9PWkJSQ19lT1JXclI4ZjVHMkhaQWVsTC1xRGxzVnQ4Sjh1VWowX3UxWVNUYUwxdjNpbm1IMWlWWFhZX09oZTJ5UDdGQWZHd29Fa09RME44WU1MaXpsdnNRaGpOWi1lVVBqMW9hYzZ3S21oeWtJT2N2dElCQUlSck9iZtIB0AFBVV95cUxPeE9SaGtTZWJhTy10ZHpNUEFzZ1VhT2xYYWM2ZGNfdnZqdTJhbVlnVGoxclBpVTk5X0Y1OTAwVmoyUndENEwyR1NuUWs2V0ltQzkxVElvTW5pZU5TcDduMDFMQjRNbHZ3S3o0ZVhLcENvdGExVkZPMXpfaUIzNmF2Q0prWm93T0t4bUFteDBxTTAxSExlSFE5ZTlnWHpITW5ManRLS0NNb3F1SHpEckowMmVXVG02N0tHTDFGNVhobkZFUzQwQWxEQmJEb2FTR1N5?oc=5",
       "published": "Wed, 26 Aug 2026 07:00:00 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "Sonaselection India Limited"
@@ -1613,10 +1613,10 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "Symbiotec Pharmalab IPO Allotment Status: How To Check On BSE, NSE And MUFG Intime India - NDTV Profit",
+      "title": "Symbiotec Pharmalab IPO Allotment Status: How To Check On BSE, NSE And MUFG Intime India - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONFgzZEZNUG45X0lxdHRHaUl2a2piM1cxa2ZneFJ6d1JoekoydnZyYU83aWNjNUxvLVJmUEU0WXM4VnFCQTJOTUFTYTZHZmlORl9Xa2Yzb1BHTUxKbmZiUHFvX1JFWGRCYTJTbWlaTDBJUDJ3bVFfOGRrRmtLMDdfanl3dDhUR1F3Ym9FcDNUQ0tVR05zSVZuSURDbU5hUTRabFV4MTd3QzJVdjJMbG5KQUE0c19TSUdaaFRzX2JyWkljOW5KNG1hM2d30gHSAUFVX3lxTE1nZ3pEcnZGMHA4QlZrakp0MlhSYVNRaURyTm5uaXBiRzdlbGZuc2dQNklnbnhsQTR2cWVqMTZJZk90YkVZX0dHM2pqYUUwOUxpSW5ROUFGcWl6dEJsa2lvLUlqTG1JS183NVVGRmlfUGIzWTRHY0htTzd4YmQxRU1BemQxRVhva2Vta0wtQlN3WWtjTkttQnhBTHJPQ0Z4dk1HY2x2RU41WkhYd0QtZzFteTVXZGxqN0lBdERRZnFjRFdIai1TcUtrcVo3emJRZWlSQQ?oc=5",
       "published": "Fri, 28 Aug 2026 07:00:00 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "Sonaselection India Limited"
@@ -1656,10 +1656,10 @@
       "ipo": "Sonaselection India Limited"
     },
     {
-      "title": "Tempsens Instruments IPO Allotment OUT: Check Status, GMP, Listing Date And More - NDTV Profit",
+      "title": "Tempsens Instruments IPO Allotment OUT: Check Status, GMP, Listing Date And More - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQUk9mYklWa1FhMENaakk1bTBRS1ZSYm9RWTZ1cDZNazROMXEyNWx4NExSZHk2emRVejRKNVNkbURPQlh2Uy1SblgyRm9TS2VjWURjaHNXeUxFOGowbVo5N1VGcEh3Q2lnNURaNTUzazdNYkFpWHBrSlExMDZyUUEtSk5QeXVLQkxieHJpc20tbEFtNURMdHFuMUIyY1ZHT0RRaUF3OHNQeWFXSWVGYXVXSzk5TnlfbHl4RzRsMllLWEzSAcgBQVVfeXFMTTRvMUdwTlU4cU9DMlRxWDY5b24zV29ZVXBLMDJnQWY4OVRZNlo4Q1l3U2gzQnJPQmJFMW5oUU9KNkw4UlRuWFlNWmpWSlBZd1VUQjFBM3NmZjNXT2xVQXgwTDZwMVVqRm5WZzNuSkwyWkdSdWdOQl9jRnlubDlKSmZvTldxcXVGMUxjZ1BmNWhiMldIcjlzN3lDVDFZaFFfQk00cHFKNENlY29yN3JWUEVCa0VhTTV1clltVEs2QWtKMVZyOVV2VjM?oc=5",
       "published": "Tue, 25 Aug 2026 07:00:00 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
     },
@@ -1672,10 +1672,10 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "ESDS Software Solution IPO Allotment Today: Check Status, GMP, Listing Date And More - NDTV Profit",
+      "title": "ESDS Software Solution IPO Allotment Today: Check Status, GMP, Listing Date And More - ndtvprofit.com",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPbkVxU2RIRWJpUnM3RGhxaDRaVThGemtRYURiNlYtNWl2TEhqQ3NNeFp4c1BESzRUOXoxSzlZdWJEQjV3cjhZVThWLTJBQWNjVHF2R2pHTE1MSjRia0hNdVE3SjhGem4wNEt5ejFiZ2JVQ2dXUEFaZXF2aDFybUV5RjRWNHI2bFY5bFNqb09tcVAtT3ktQ0plc2ZoTFExNWVGX1FTMVVXY0IxQTNmcmVpU0l6czNmNEsxQlhTeTZjSXctUzTSAcsBQVVfeXFMT3RfMm5WdlkweWtfMXNhZERyc0hfRVNPNGx1OWtRWGlQdU9jdlpPNlhxYlJ6MWVQc2ZwMm5oNk56VlFwZkFXOWV1T1Q0NlNON2ZIT0h6UW85TDRHM1phM21YdGxUMDd0Z19yRGgzcTg2aUl6LTd4dm5rV1FZV0RPZzRjWWcxZ0F5MEVsZURrZzFpekVULWdiU3J4Y1B0WDE1R1hIdkZtZmJRZUotdGh5ZlpZSHNXNkx0SWd2c3NVNXFEbC12bHF1OXZPemM?oc=5",
       "published": "Wed, 02 Sep 2026 07:00:00 GMT",
-      "source": "NDTV Profit",
+      "source": "ndtvprofit.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
     },
@@ -1749,7 +1749,7 @@
     },
     "Google News · RHP DRHP": {
       "ok": true,
-      "records": 63,
+      "records": 64,
       "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
     }
   }
