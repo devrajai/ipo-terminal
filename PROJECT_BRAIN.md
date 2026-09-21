@@ -24,9 +24,10 @@ Dev's personal all-in-one India IPO + market terminal. Free forever. Mobile-firs
    - Bridge active via repo variable GOOGLE_SHEET_ID (workflow reads vars.GOOGLE_SHEET_ID || secrets.GOOGLE_SHEET_ID)
    - Listed_IPO_Tracker + Corporate_Actions tabs are auto-pulled into data/market-data.json
 
-## Current Status (updated 18/09/2026)
+## Current Status (updated 21/09/2026)
 - Website live with 5-min auto data refresh; market data pipeline live (Way 1 + Way 2)
 - Daily brain run cron scheduled 6:30 PM IST: research IPO news, fix stale data, deliver digest
+- Pro Tools (scripts/ipo-protools.js) now has 6 tabs: Calculator (NEW 21/09/26 — Apply Cost / GMP Return / P&L, IPO dropdown auto-filled from live ipo-data.json, default tab), Track Record, My Apps, Planner, Calendar, Why & Sources
 - Next: Phase 1 — Screener layer (Nifty 500: PE, PB, ROE, ROCE, D/E, promoter/DII/FII holding, EMA 20/200, RSI, MACD, 52w/200d high-low)
 
 ## Roadmap (one phase at a time — never all at once)
