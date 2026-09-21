@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-21T04:45:26.575707+00:00",
+ "updated_at": "2026-09-21T05:17:08.843916+00:00",
  "ipos": {
   "National Stock Exchange of India Limited": {
    "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
@@ -209,91 +209,7 @@
    "promoter_pct": 98.28
   },
   "Kheria Autocomp Limited": {
-   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-   "subs": {
-    "qib": 47.49,
-    "nii": 14.25,
-    "rii": 33.25,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 13.24,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
-    },
-    {
-     "name": "LAPL Automotive Ltd.",
-     "pe": "9.91"
-    },
-    {
-     "name": "Poojaa Precision Engg.Ltd.",
-     "pe": "14.25"
-    },
-    {
-     "name": "Happy Steels Ltd.",
-     "pe": "9.76"
-    },
-    {
-     "name": "Autofurnish Ltd.",
-     "pe": "11.64"
-    },
-    {
-     "name": "Gallard Steel Ltd.",
-     "pe": "17.31"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     106.23,
-     81.79,
-     53.14
-    ],
-    "income": [
-     120.3,
-     92.31,
-     62.4
-    ],
-    "pat": [
-     11.42,
-     8.24,
-     3.31
-    ],
-    "ebitda": [
-     22.9,
-     16.18,
-     9.76
-    ],
-    "networth": [
-     39.52,
-     28.24,
-     20.0
-    ],
-    "borrowing": [
-     35.03,
-     30.9,
-     18.83
-    ]
-   },
-   "rev_growth": 30.3,
-   "pat_growth": 38.6,
-   "kpi": {
-    "roe": "33.72%",
-    "roce": "26.89%",
-    "de": "0.89",
-    "pat_margin": "9.52%",
-    "ebitda_margin": "19.08%",
-    "nav": "35.13"
-   },
-   "promoter_pct": 100.0
+   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/"
   },
   "SpectraA Technology Solutions Limited": {
    "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
