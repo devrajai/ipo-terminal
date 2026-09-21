@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-21T12:20:53.485973+00:00",
+ "updated_at": "2026-09-21T12:45:54.710999+00:00",
  "ipos": {
   "National Stock Exchange of India Limited": {
    "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
@@ -61,91 +61,7 @@
    }
   },
   "Sonaselection India Limited": {
-   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
-   "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 42.47,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Alpine Texworld Ltd.",
-     "pe": "12.68"
-    },
-    {
-     "name": "Kusumgar Ltd.",
-     "pe": "44.8"
-    },
-    {
-     "name": "Aastha Spintex Ltd.",
-     "pe": "18.78"
-    },
-    {
-     "name": "Shree Ram Twistex Ltd.",
-     "pe": "38.21"
-    },
-    {
-     "name": "Panchatv Bharat Ltd.",
-     "pe": "14.23"
-    },
-    {
-     "name": "Vinod Texworld Ltd.",
-     "pe": "10.48"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     474.99,
-     374.77,
-     203.5
-    ],
-    "income": [
-     517.6,
-     316.47,
-     121.31
-    ],
-    "pat": [
-     34.02,
-     18.56,
-     13.1
-    ],
-    "ebitda": [
-     84.77,
-     58.12,
-     28.49
-    ],
-    "networth": [
-     104.16,
-     70.07,
-     38.88
-    ],
-    "borrowing": [
-     258.24,
-     207.4,
-     144.6
-    ]
-   },
-   "rev_growth": 63.6,
-   "pat_growth": 83.3,
-   "kpi": {
-    "roe": "39.05%",
-    "roce": "19.69%",
-    "de": "2.48",
-    "pat_margin": "6.58%",
-    "ebitda_margin": "16.40%",
-    "nav": "24.78"
-   },
-   "promoter_pct": 86.21
+   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/"
   },
   "Axiom Gas Engineering Limited": {
    "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
@@ -393,7 +309,6 @@
     "total": 100.0
    },
    "anchor": {
-    "total_cr": 42.47,
     "investors": 20
    },
    "peers": [
@@ -1212,75 +1127,7 @@
    "promoter_pct": 72.33
   },
   "FX Multitech": {
-   "url": "https://www.chittorgarh.com/ipo/fx-multitech-ipo/2849/",
-   "subs": {
-    "qib": 47.35,
-    "nii": 14.31,
-    "rii": 33.29,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 12.79,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Mopshop Distribution Ltd.",
-     "pe": "22.22"
-    },
-    {
-     "name": "Safecure Services Ltd.",
-     "pe": "11.66"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     73.05,
-     61.12,
-     32.66
-    ],
-    "income": [
-     111.9,
-     102.34,
-     68.74
-    ],
-    "pat": [
-     11.54,
-     9.64,
-     4.18
-    ],
-    "ebitda": [
-     19.37,
-     14.17,
-     6.95
-    ],
-    "networth": [
-     37.89,
-     26.35,
-     16.71
-    ],
-    "borrowing": [
-     18.42,
-     17.32,
-     11.24
-    ]
-   },
-   "rev_growth": 9.3,
-   "pat_growth": 19.7,
-   "kpi": {
-    "roe": "37.63%",
-    "roce": "28.93%",
-    "de": "0.49",
-    "pat_margin": "9.60%",
-    "ebitda_margin": "15.35%",
-    "nav": "35.22"
-   },
-   "promoter_pct": 100.0
+   "url": "https://www.chittorgarh.com/ipo/fx-multitech-ipo/2849/"
   },
   "Vivekanand Cotspin": {
    "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/",
