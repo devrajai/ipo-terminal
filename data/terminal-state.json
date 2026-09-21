@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T13:36:24.119945+00:00",
+  "generated_at": "2026-09-21T13:48:34.830829+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T19:05:58.637491+05:30",
+  "data_updated_at": "2026-09-21T19:18:00.073542+05:30",
   "ipo_count": 16,
-  "field_coverage_pct": 22.6,
+  "field_coverage_pct": 22.9,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 11,
+      "records": 12,
       "errors": []
     },
     "BSE": {
@@ -32,7 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "IPODose: The read operation timed out"
+        "IPODose: HTTP Error 525: <none>"
       ]
     },
     "NEWS": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T13:35:25.252038+00:00",
+      "checked_at": "2026-09-21T13:47:36.989363+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -61,15 +61,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 5,
+          "matched": 6,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
           "records": 10,
-          "matched": 5,
-          "added": 5,
+          "matched": 6,
+          "added": 4,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -87,12 +87,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T13:35:27.379170+00:00"
+      "checked_at": "2026-09-21T13:47:38.392698+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T13:35:43.434697+00:00",
+      "checked_at": "2026-09-21T13:47:44.001844+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T13:35:43.501112+00:00"
+      "checked_at": "2026-09-21T13:47:44.069028+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T13:35:43.544921+00:00"
+      "checked_at": "2026-09-21T13:47:44.113085+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T13:35:43.683238+00:00",
+      "checked_at": "2026-09-21T13:47:44.248999+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T13:35:43.683238+00:00"
+      "checked_at": "2026-09-21T13:47:44.248999+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T19:05:58.637491+05:30",
+      "checked_at": "2026-09-21T19:18:00.073542+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -299,34 +299,6 @@
       }
     },
     {
-      "id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fingerprint": "ab9c956c9b341e83",
-      "fields": {
-        "price": "₹350 – ₹375",
-        "size": "₹300 Cr",
-        "lot": "40",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
       "fingerprint": "92980d1cedee55dc",
@@ -355,6 +327,34 @@
       }
     },
     {
+      "id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fingerprint": "50c2e0850158fc3d",
+      "fields": {
+        "price": "₹126 – ₹134",
+        "size": "₹150.71 Cr",
+        "lot": "111",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
       "fingerprint": "794376ce9406b84f",
@@ -362,6 +362,34 @@
         "price": "₹343 – ₹362",
         "size": "₹2,100 Cr",
         "lot": "41",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fingerprint": "ab9c956c9b341e83",
+      "fields": {
+        "price": "₹350 – ₹375",
+        "size": "₹300 Cr",
+        "lot": "40",
         "open": "23/09/26",
         "close": "Sep 25, 2026",
         "allotment": null,
@@ -475,34 +503,6 @@
         "size": "₹405 Cr",
         "lot": "37",
         "open": "24/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "adroit-industries-india-ltd-mainboard",
-      "name": "Adroit Industries (India) Ltd. Mainboard",
-      "fingerprint": "013c2882ba273085",
-      "fields": {
-        "price": "₹126 – ₹134",
-        "size": "₹150.71 Cr",
-        "lot": "111",
-        "open": "23/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -695,9 +695,9 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "adroit-industries-india-ltd-mainboard",
-      "name": "Adroit Industries (India) Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-23",
@@ -778,6 +778,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T13:48:34.830829+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "adroit-industries-india-limited",
+        "name": "Adroit Industries (India) Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-21T13:25:20.759216+00:00",
       "type": "DATA_CHANGE",
