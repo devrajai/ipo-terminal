@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPO Tracker — Mainboard & SME</title>
+<meta name="description" content="Live Mainboard and SME IPO tracker: open, upcoming and recently listed IPOs with price band, lot size, issue size, subscription and listing gains.">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --border:#30363d; --text:#e6edf3; --muted:#8b949e;
+    --green:#3fb950; --orange:#d29922; --blue:#58a6ff; --purple:#bc8cff; --red:#f85149;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+  .wrap{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+  header{text-align:center;padding:36px 16px 8px}
+  h1{font-size:2rem;letter-spacing:.5px}
+  h1 span{color:var(--blue)}
+  .sub{color:var(--muted);margin-top:6px;font-size:.95rem}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:26px 0}
+  .stat{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px 18px}
+  .stat .n{font-size:1.7rem;font-weight:700}
+  .stat .l{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:22px;position:sticky;top:0;background:var(--bg);padding:10px 0;z-index:5}
+  .chips{display:flex;gap:8px}
+  .chip{background:var(--panel);border:1px solid var(--border);color:var(--muted);padding:7px 16px;border-radius:20px;cursor:pointer;font-size:.9rem}
+  .chip.active{background:#1f6feb33;border-color:var(--blue);color:var(--blue)}
+  select,input{background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:8px;font-size:.9rem}
+  input{flex:1;min-width:180px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px;transition:transform .15s,border-color .15s}
+  .card:hover{transform:translateY(-3px);border-color:var(--blue)}
+  .card .top{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+  .name{font-weight:700;font-size:1.05rem}
+  .badges{display:flex;gap:6px;flex-shrink:0}
+  .badge{font-size:.7rem;padding:3px 9px;border-radius:12px;font-weight:600;white-space:nowrap}
+  .b-main{background:#1f6feb33;color:var(--blue)} .b-sme{background:#bc8cff22;color:var(--purple)}
+  .s-Open{background:#3fb95026;color:var(--green)} .s-Upcoming{background:#58a6ff22;color:var(--blue)}
+  .s-Closing{background:#d2992226;color:var(--orange)} .s-Closed{background:#8b949e22;color:var(--muted)}
+  .s-Allotment{background:#d2992222;color:var(--orange)} .s-Listed{background:#f8514922;color:var(--red)}
+  .dates{color:var(--muted);font-size:.85rem;margin:6px 0 12px}
+  .row{display:flex;justify-content:space-between;font-size:.88rem;padding:5px 0;border-bottom:1px dashed #30363d55}
+  .row .k{color:var(--muted)} .row .v{font-weight:600;text-align:right}
+  .gain{color:var(--green)} .loss{color:var(--red)}
+  .links{display:flex;gap:14px;margin-top:12px}
+  .links a{color:var(--blue);text-decoration:none;font-size:.85rem}
+  .links a:hover{text-decoration:underline}
+  .empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px}
+  footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:40px}
+  footer a{color:var(--blue);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <h1>IPO <span>Tracker</span></h1>
+  <div class="sub">Mainboard & SME — open, upcoming and recently listed IPOs &middot; updated daily</div>
+</header>
+<div class="wrap">
+  <div class="stats" id="stats"></div>
+  <div class="controls">
+    <div class="chips" id="boardChips">
+      <button class="chip active" data-board="All">All</button>
+      <button class="chip" data-board="Mainboard">Mainboard</button>
+      <button class="chip" data-board="SME">SME</button>
+    </div>
+    <select id="statusFilter">
+      <option value="All">All statuses</option>
+      <option>Upcoming</option><option>Open</option><option>Closing</option>
+      <option>Closed</option><option>Allotment</option><option>Listed</option>
+    </select>
+    <input id="search" type="search" placeholder="Search company...">
+  </div>
+  <div class="grid" id="grid"></div>
+  <footer id="footer">Loading data...</footer>
+</div>
+<script>
+const fmt = {
+  cr: v => v == null ? "—" : "₹" + Number(v).toLocaleString("en-IN") + " Cr",
+  num: v => v == null || v === "" ? "—" : Number(v).toLocaleString("en-IN"),
+  pct: v => v == null ? "—" : (v >= 0 ? "+" : "") + v.toFixed(2) + "%",
+  date: d => d ? d.split("-").reverse().join("/") : "—"
+};
+const STATE = { board: "All", status: "All", q: "" };
+
+function card(i){
+  const gainClass = i.listingGainPct >= 0 ? "gain" : "loss";
+  return `<div class="card">
+    <div class="top">
+      <div class="name">${i.company}</div>
+      <div class="badges">
+        ${i.board ? `<span class="badge b-${i.board === "Mainboard" ? "main" : "sme"}">${i.board}</span>` : ""}
+        ${i.status ? `<span class="badge s-${i.status}">${i.status}</span>` : ""}
+      </div>
+    </div>
+    <div class="dates">Issue: ${i.issueDates || "—"}${i.listingDate ? " &middot; Listing: " + fmt.date(i.listingDate) : ""}</div>
+    <div class="row"><span class="k">Price Band</span><span class="v">${i.priceBand || "—"}</span></div>
+    <div class="row"><span class="k">Lot Size</span><span class="v">${i.lotSize ? fmt.num(i.lotSize) + " shares" : "—"}</span></div>
+    <div class="row"><span class="k">Issue Size</span><span class="v">${fmt.cr(i.issueSizeCr)}</span></div>
+    <div class="row"><span class="k">Subscription</span><span class="v">${i.subscription || "—"}</span></div>
+    ${i.gmp ? `<div class="row"><span class="k">GMP</span><span class="v">${i.gmp}</span></div>` : ""}
+    ${i.status === "Listed" && i.currentPrice != null
+      ? `<div class="row"><span class="k">Issue → Current</span><span class="v">₹${fmt.num(i.issuePrice)} → ₹${fmt.num(i.currentPrice)}</span></div>
+         <div class="row"><span class="k">Listing Gain</span><span class="v ${gainClass}">${fmt.pct(i.listingGainPct)}</span></div>`
+      : ""}
+    <div class="links">
+      ${i.sourceUrl ? `<a href="${i.sourceUrl}" target="_blank" rel="noopener">Details ↗</a>` : ""}
+      ${i.offerDoc ? `<a href="${i.offerDoc}" target="_blank" rel="noopener">RHP/DRHP ↗</a>` : ""}
+    </div>
+  </div>`;
+}
+
+function render(data){
+  const ipos = data.ipos || [];
+  const open = ipos.filter(i => i.status === "Open").length;
+  const up = ipos.filter(i => i.status === "Upcoming").length;
+  const main = ipos.filter(i => i.board === "Mainboard").length;
+  const sme = ipos.filter(i => i.board === "SME").length;
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><div class="n" style="color:var(--green)">${open}</div><div class="l">Open Now</div></div>
+    <div class="stat"><div class="n" style="color:var(--blue)">${up}</div><div class="l">Upcoming</div></div>
+    <div class="stat"><div class="n">${main}</div><div class="l">Mainboard</div></div>
+    <div class="stat"><div class="n">${sme}</div><div class="l">SME</div></div>`;
+
+  const filtered = ipos.filter(i =>
+    (STATE.board === "All" || i.board === STATE.board) &&
+    (STATE.status === "All" || i.status === STATE.status) &&
+    (!STATE.q || i.company.toLowerCase().includes(STATE.q))
+  );
+  document.getElementById("grid").innerHTML = filtered.length
+    ? filtered.map(card).join("")
+    : `<div class="empty">No IPOs match your filters.</div>`;
+  document.getElementById("footer").innerHTML =
+    `Data last updated: ${data.updated ? new Date(data.updated).toLocaleString("en-IN", {timeZone:"Asia/Kolkata"}) : "—"} IST &middot; ` +
+    `sourced from <a href="https://www.chittorgarh.com/ipo/" target="_blank" rel="noopener">Chittorgarh IPO Dashboard</a> via Notion`;
+}
+
+function wireUp(){
+  document.getElementById("boardChips").addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+    b.classList.add("active"); STATE.board = b.dataset.board; render(window.__data);
+  });
+  document.getElementById("statusFilter").addEventListener("change", e => { STATE.status = e.target.value; render(window.__data); });
+  document.getElementById("search").addEventListener("input", e => { STATE.q = e.target.value.toLowerCase(); render(window.__data); });
+}
+
+fetch("data.json")
+  .then(r => r.json())
+  .then(d => { window.__data = d; wireUp(); render(d); })
+  .catch(e => {
+    document.getElementById("grid").innerHTML = `<div class="empty">Could not load data.json — ${e.message}</div>`;
+  });
+</script>
+</body>
+</html>
