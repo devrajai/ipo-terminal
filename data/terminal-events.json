@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T19:57:26.070767+00:00",
+  "generated_at": "2026-09-21T20:07:38.272033+00:00",
   "events": [
     {
       "date": "2026-09-21",
@@ -106,13 +106,6 @@
       "ipo_id": "unitec-fibres-ltd-sme",
       "name": "Unitec Fibres Ltd. SME",
       "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "CLOSE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "source": "NSE"
     },
     {
       "date": "2026-09-24",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T19:55:04.534327+00:00",
+  "updated_at": "2026-09-21T20:04:29.562685+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,7 +100,15 @@
       "change_pct": 0.14
     }
   ],
-  "world": [],
+  "world": [
+    {
+      "price": 65018.95,
+      "change": 882.75,
+      "change_pct": 1.38,
+      "name": "Nikkei 225 (Japan)",
+      "symbol": "^N225"
+    }
+  ],
   "commodities": [],
   "fx": [
     {
