@@ -95,8 +95,9 @@
   window.renderOpen = function () {
     if (orig) orig();
     const host = document.getElementById('open-list');
-    if (!host || !window.groups || !window.state || !window.ipoCard) return;
-    const open = (window.groups().open || []).slice();
+    if (!host || typeof groups !== 'function' || typeof ipoCard !== 'function') return;
+    let open = [];
+    try { open = (groups().open || []).slice(); } catch (e) { return; }
     if (!open.length) return; // keep the original empty message
     open.sort((a, b) => (isSme(a) ? 1 : 0) - (isSme(b) ? 1 : 0));
     const mb = open.filter(x => !isSme(x)), sm = open.filter(isSme);
@@ -105,7 +106,7 @@
       + [['all', 'All (' + open.length + ')'], ['mb', 'Mainboard (' + mb.length + ')'], ['sme', 'SME (' + sm.length + ')']]
         .map(f => '<button data-of="' + f[0] + '" class="' + (filter === f[0] ? 'on' : '') + '">' + f[1] + '</button>').join('')
       + '</div>';
-    const cards = shown.map(x => window.ipoCard(x, 'OPEN')).join('');
+    const cards = shown.map(x => ipoCard(x, 'OPEN')).join('');
     host.innerHTML = bar + (cards || '<div class="empty">No ' + (filter === 'sme' ? 'SME' : 'Mainboard') + ' IPO is open right now.</div>');
   };
 
