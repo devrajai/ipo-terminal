@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T22:34:39.393140+05:30",
+  "generated_at": "2026-09-21T22:47:33.708465+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 11,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Adroit Industries (India) Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Elevate Campuses Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "ArMee Infotech Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Varmora Granito Limited",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Coreintegra Consulting Services Limited",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Pooja Logistics Limited",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "A-One Steels India Ltd. Mainboard",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Liqvd Digital India Ltd. SME",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "Unitec Fibres Ltd. SME",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
@@ -144,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T22:34:39.393140+05:30"
+      "checked_at": "2026-09-21T22:47:33.708465+05:30"
     }
   ]
 }
