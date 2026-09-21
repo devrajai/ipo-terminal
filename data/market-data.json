@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T20:18:04.822833+00:00",
+  "updated_at": "2026-09-21T20:40:11.399232+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,22 +100,7 @@
       "change_pct": 0.14
     }
   ],
-  "world": [
-    {
-      "price": 27122.09,
-      "change": 599.55,
-      "change_pct": 2.26,
-      "name": "Nasdaq (US)",
-      "symbol": "^IXIC"
-    },
-    {
-      "price": 8731.9,
-      "change": 0.7,
-      "change_pct": 0.01,
-      "name": "ASX 200 (Australia)",
-      "symbol": "^AXJO"
-    }
-  ],
+  "world": [],
   "commodities": [],
   "fx": [
     {
