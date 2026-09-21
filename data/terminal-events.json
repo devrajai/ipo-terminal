@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T18:03:41.604477+00:00",
+  "generated_at": "2026-09-21T18:23:40.051013+00:00",
   "events": [
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
-      "ipo_id": "kheria-autocomp-limited",
-      "name": "Kheria Autocomp Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-21",
       "type": "CLOSE",
@@ -21,13 +14,6 @@
       "type": "CLOSE",
       "ipo_id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
-      "ipo_id": "spectraa-technology-solutions-limited",
-      "name": "SpectraA Technology Solutions Limited",
       "source": "NSE"
     },
     {

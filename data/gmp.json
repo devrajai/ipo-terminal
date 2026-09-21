@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T23:32:49.615806+05:30",
+  "updated_at": "2026-09-21T23:53:02.085520+05:30",
   "data": [
     {
       "name": "National Stock Exchange of India Limited",
@@ -8,7 +8,7 @@
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",
-      "updated_at": "2026-09-21T17:58:16.643883+00:00"
+      "updated_at": "2026-09-21T18:03:42.245635+00:00"
     },
     {
       "name": "Sonaselection India Limited",
@@ -17,7 +17,7 @@
       "estimated_listing": "₹100",
       "gmp_pct": "+1.0%",
       "kostak": "—",
-      "updated_at": "2026-09-21T17:58:16.643771+00:00"
+      "updated_at": "2026-09-21T18:03:42.245487+00:00"
     },
     {
       "name": "Axiom Gas Engineering Limited",
@@ -26,25 +26,7 @@
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",
-      "updated_at": "2026-09-21T17:58:16.643896+00:00"
-    },
-    {
-      "name": "Kheria Autocomp Limited",
-      "issue_price": "—",
-      "gmp": "₹1",
-      "estimated_listing": "—",
-      "gmp_pct": "—",
-      "kostak": "—",
-      "updated_at": "2026-09-21T17:58:16.643871+00:00"
-    },
-    {
-      "name": "SpectraA Technology Solutions Limited",
-      "issue_price": "—",
-      "gmp": "₹23",
-      "estimated_listing": "—",
-      "gmp_pct": "—",
-      "kostak": "—",
-      "updated_at": "2026-09-21T17:58:16.643860+00:00"
+      "updated_at": "2026-09-21T18:03:42.245658+00:00"
     }
   ]
 }

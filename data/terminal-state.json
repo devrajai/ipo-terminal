@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T18:03:41.604477+00:00",
+  "generated_at": "2026-09-21T18:23:40.051013+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T23:32:49.615806+05:30",
-  "ipo_count": 16,
-  "field_coverage_pct": 22.9,
+  "data_updated_at": "2026-09-21T23:53:02.085520+05:30",
+  "ipo_count": 14,
+  "field_coverage_pct": 23.5,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 12,
+      "records": 10,
       "errors": []
     },
     "BSE": {
@@ -31,7 +31,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "NEWS": {
       "ok": true,
@@ -47,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T18:02:14.914747+00:00",
+      "checked_at": "2026-09-21T18:22:21.752731+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -82,15 +84,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 16,
+      "records": 14,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T18:02:17.121869+00:00"
+      "checked_at": "2026-09-21T18:22:26.040476+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T18:02:31.800257+00:00",
+      "checked_at": "2026-09-21T18:22:40.736096+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -100,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T18:02:31.867373+00:00"
+      "checked_at": "2026-09-21T18:22:40.809721+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T18:02:31.912341+00:00"
+      "checked_at": "2026-09-21T18:22:40.859422+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T18:02:32.056000+00:00",
+      "checked_at": "2026-09-21T18:22:41.000577+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -138,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T18:02:32.056000+00:00"
+      "checked_at": "2026-09-21T18:22:41.000577+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T23:32:49.615806+05:30",
+      "checked_at": "2026-09-21T23:53:02.085520+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -229,62 +231,6 @@
         "sub_nii": null,
         "sub_retail": null,
         "gmp": "₹17",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "kheria-autocomp-limited",
-      "name": "Kheria Autocomp Limited",
-      "fingerprint": "944106398f7d9331",
-      "fields": {
-        "price": "—",
-        "size": "—",
-        "lot": "1200",
-        "open": "17/09/26",
-        "close": "21/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹1",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "spectraa-technology-solutions-limited",
-      "name": "SpectraA Technology Solutions Limited",
-      "fingerprint": "81e0ea2409ac4bee",
-      "fields": {
-        "price": "—",
-        "size": "—",
-        "lot": "1200",
-        "open": "17/09/26",
-        "close": "21/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹23",
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
@@ -609,13 +555,6 @@
     {
       "date": "2026-09-17",
       "type": "OPEN",
-      "ipo_id": "kheria-autocomp-limited",
-      "name": "Kheria Autocomp Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "OPEN",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
       "source": "NSE"
@@ -625,13 +564,6 @@
       "type": "OPEN",
       "ipo_id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-17",
-      "type": "OPEN",
-      "ipo_id": "spectraa-technology-solutions-limited",
-      "name": "SpectraA Technology Solutions Limited",
       "source": "NSE"
     },
     {
@@ -644,13 +576,6 @@
     {
       "date": "2026-09-21",
       "type": "CLOSE",
-      "ipo_id": "kheria-autocomp-limited",
-      "name": "Kheria Autocomp Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
       "source": "NSE"
@@ -660,13 +585,6 @@
       "type": "CLOSE",
       "ipo_id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
-      "ipo_id": "spectraa-technology-solutions-limited",
-      "name": "SpectraA Technology Solutions Limited",
       "source": "NSE"
     },
     {
