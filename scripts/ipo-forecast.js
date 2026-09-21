@@ -119,3 +119,161 @@
 
   if (orig && document.getElementById('open-list')) window.renderOpen();
 })();
+
+/* IPO Terminal - tap-name detail sheet (21/09/26).
+   Tap any IPO name -> full detail summary overlay with dates, GMP,
+   subscription, fundamentals, offer doc and allotment links.
+   Uses the page's own global helpers (state, status, date, esc, gmpRupees,
+   gmpPctOf, bandLow, findSub) via bare identifiers. */
+(() => {
+  if (window.__IPODT) return;
+  window.__IPODT = 1;
+
+  const css = document.createElement('style');
+  css.textContent = '.ipodt{position:fixed;inset:0;z-index:9999;background:rgba(4,8,16,.68);display:flex;align-items:flex-end;justify-content:center}'
+    + '.ipodt-card{background:var(--glass2);border:1px solid var(--line);border-radius:22px 22px 0 0;width:100%;max-width:640px;max-height:88vh;overflow:auto;padding:18px 18px 30px;animation:ipodt-up .22s ease-out}'
+    + '@keyframes ipodt-up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}'
+    + '.ipodt-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}'
+    + '.ipodt-name{font-size:19px;font-weight:900;line-height:1.3}'
+    + '.ipodt-x{background:var(--glass);border:1px solid var(--line);color:var(--muted);border-radius:999px;width:36px;height:36px;font-size:17px;cursor:pointer;flex:none;line-height:1}'
+    + '.ipodt-tags{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 12px}'
+    + '.ipodt-tag{font-size:11px;font-weight:800;padding:4px 10px;border-radius:999px;border:1px solid var(--line);color:var(--text)}'
+    + '.ipodt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}'
+    + '.ipodt-box{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:9px 12px}'
+    + '.ipodt-box span{display:block;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}'
+    + '.ipodt-box b{font-size:14.5px}'
+    + '.ipodt-box.wide{grid-column:span 2}'
+    + '.ipodt-gmp{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;grid-column:span 2}'
+    + '.ipodt-gmp span{font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}'
+    + '.ipodt-gmp b{font-size:16px}'
+    + '.ipodt-h{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px;font-weight:900}'
+    + '.ipodt-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}'
+    + '.ipodt-links a{flex:1 1 45%;text-align:center;padding:10px 8px;border-radius:12px;border:1px solid var(--line);background:var(--glass);color:var(--text);font-weight:800;font-size:13px;text-decoration:none}'
+    + '.ipodt-note{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}';
+  document.head.appendChild(css);
+
+  const E = (typeof esc === 'function') ? esc
+    : (v => String(v == null ? '' : v).replace(/[&<>"']/g, c => '&' === c ? '&a' + 'mp;' : '<' === c ? '&l' + 't;' : '>' === c ? '&g' + 't;' : '"' === c ? '&q' + 'uot;' : '&#3' + '9;'));
+  const D = (typeof date === 'function') ? date : (v => String(v || '\u2014'));
+  const normN = v => String(v || '').toLowerCase().replace(/limited|ltd|india|[^\w]/g, '');
+  const has = v => { const s = String(v == null ? '' : v).trim(); return s && s !== '\u2014' && s !== '-'; };
+
+  function findIpo(name) {
+    let best = null;
+    const q = normN(name);
+    if (!q) return null;
+    try {
+      for (const x of state.ipos) if (normN(x.name) === q) return x;
+      for (const x of state.ipos) if (normN(x.name).includes(q) || q.includes(normN(x.name))) { best = x; break; }
+    } catch (e) { }
+    return best;
+  }
+  function findListed(name) {
+    try {
+      const q = normN(name);
+      for (const x of state.listed) if (normN(x.name) === q) return x;
+    } catch (e) { }
+    return null;
+  }
+  function findDoc(name) {
+    try {
+      const q = normN(name);
+      for (const x of state.drhp) if (normN(x.name) === q) return x.sebi_link || x.source_url || '';
+    } catch (e) { }
+    return '';
+  }
+
+  function close() {
+    const m = document.getElementById('ipodt-overlay');
+    if (m) m.remove();
+  }
+  function openSheet(name) {
+    close();
+    const x = findIpo(name) || findListed(name) || { name: name };
+    const st = (typeof status === 'function' && findIpo(name)) ? status(x) : String(x.status || 'LISTED').toUpperCase();
+    const gmp = (typeof gmpRupees === 'function' && findIpo(name)) ? gmpRupees(x) : null;
+    const pct = (typeof gmpPctOf === 'function' && findIpo(name)) ? gmpPctOf(x) : '\u2014';
+    const lo = (typeof bandLow === 'function' && findIpo(name)) ? bandLow(x) : null;
+    let sub = null;
+    try { if (typeof findSub === 'function') sub = findSub(name); } catch (e) { }
+
+    const box = (k, v) => has(v) ? '<div class="ipodt-box"><span>' + k + '</span><b>' + E(v) + '</b></div>' : '';
+    const money = v => Number.isFinite(v) ? ('\u20B9' + Math.round(v).toLocaleString('en-IN')) : '\u2014';
+
+    let g = '';
+    if (gmp != null) {
+      const est = (lo != null) ? money(lo + gmp) : '\u2014';
+      g = '<div class="ipodt-gmp"><span>GMP (unofficial)</span><b>' + money(gmp) + ' (' + E(pct === null || pct === '\u2014' ? '\u2014' : pct + '%') + ') \u2192 est ' + est + '</b></div>';
+    }
+    const listed = findListed(name);
+    let perf = '';
+    if (listed) {
+      const issue = Number(listed.issue_price) || 0, cur = Number(listed.current_price || listed.ltp || listed.listing_price) || 0;
+      const p = Number(listed.gain_loss_percent) || (issue && cur ? (cur - issue) / issue * 100 : 0);
+      perf = '<div class="ipodt-h">Listing performance</div><div class="ipodt-grid">'
+        + box('Issue price', issue ? '\u20B9' + issue : '')
+        + box('Current price', cur ? '\u20B9' + cur : '')
+        + box('Listing gain', (p > 0 ? '+' : '') + p.toFixed(2) + '%')
+        + box('Listed on', D(listed.listing_date))
+        + '</div>';
+    }
+
+    const doc = findDoc(name);
+    const ex = String(x.exchange || '');
+    const allot = /bse/i.test(ex)
+      ? 'https://www.bseindia.com/investors/appli_check.aspx'
+      : 'https://www.nseindia.com/market-data/all-upcoming-issues-ipo';
+    let links = '';
+    if (doc) links += '<a href="' + E(doc) + '" target="_blank" rel="noopener">\uD83D\uDCC4 RHP / DRHP</a>';
+    if (st === 'CLOSED' || st === 'LISTED' || st === 'OPEN') links += '<a href="' + allot + '" target="_blank" rel="noopener">\uD83C\uDFAB Check allotment</a>';
+    if (has(x.source_url)) links += '<a href="' + E(x.source_url) + '" target="_blank" rel="noopener">\uD83D\uDD17 IPO page</a>';
+
+    const el = document.createElement('div');
+    el.className = 'ipodt';
+    el.id = 'ipodt-overlay';
+    el.innerHTML = '<div class="ipodt-card" role="dialog" aria-label="IPO details">'
+      + '<div class="ipodt-top"><div class="ipodt-name">' + E(x.name || name) + '</div>'
+      + '<button class="ipodt-x" aria-label="Close">\u2715</button></div>'
+      + '<div class="ipodt-tags">'
+      + '<span class="ipodt-tag">' + E(st) + '</span>'
+      + (has(x.board) ? '<span class="ipodt-tag">' + E(x.board) + '</span>' : '')
+      + (has(x.exchange) ? '<span class="ipodt-tag">' + E(x.exchange) + '</span>' : '')
+      + '</div>'
+      + '<div class="ipodt-grid">'
+      + g
+      + box('Price band', x.price_band)
+      + box('Lot size', x.lot_size)
+      + box('Issue size', x.issue_size)
+      + box('Subscription', (sub && has(sub.total)) ? sub.total : x.sub)
+      + box('Opens', D(x.open_date))
+      + box('Closes', D(x.close_date))
+      + box('Allotment', D(x.allotment_date))
+      + box('Refund', D(x.refund_date))
+      + box('Shares credit', D(x.share_credit_date))
+      + box('Listing', D(x.listing_date))
+      + '</div>'
+      + (sub && (has(sub.qib) || has(sub.nii) || has(sub.rii))
+        ? '<div class="ipodt-h">Subscription detail</div><div class="ipodt-grid">'
+          + box('QIB', sub.qib) + box('NII', sub.nii) + box('Retail', sub.rii) + box('Applications', sub.applications)
+          + '</div>' : '')
+      + ((has(x.pe) || has(x.pb) || has(x.roe) || has(x.roce) || has(x.eps))
+        ? '<div class="ipodt-h">Fundamentals</div><div class="ipodt-grid">'
+          + box('P/E', x.pe) + box('P/B', x.pb) + box('ROE', x.roe) + box('ROCE', x.roce) + box('EPS', x.eps)
+          + '</div>' : '')
+      + perf
+      + (links ? '<div class="ipodt-links">' + links + '</div>' : '')
+      + '<div class="ipodt-note">GMP is an unofficial grey-market rate, not guaranteed. Data refreshes automatically; verify on the exchange site before investing.</div>'
+      + '</div>';
+    document.body.appendChild(el);
+    el.addEventListener('click', e => { if (e.target === el) close(); });
+    el.querySelector('.ipodt-x').addEventListener('click', close);
+  }
+
+  document.addEventListener('click', e => {
+    const t = e.target && e.target.closest ? e.target.closest('.card .name, .listed-card .listed-name b') : null;
+    if (!t || !t.textContent.trim()) return;
+    e.preventDefault();
+    openSheet(t.textContent.trim());
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+})();
