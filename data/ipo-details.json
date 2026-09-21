@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-21T09:43:54.292628+00:00",
+ "updated_at": "2026-09-21T10:18:40.248404+00:00",
  "ipos": {
   "National Stock Exchange of India Limited": {
    "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
@@ -147,103 +147,46 @@
    },
    "promoter_pct": 86.21
   },
-  "Axiom Gas Engineering Limited": {
-   "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
+  "Axiom Gas Engineering Limited": {},
+  "Kheria Autocomp Limited": {},
+  "SpectraA Technology Solutions Limited": {},
+  "National Stock Exchange of India": {},
+  "Sonaselection India": {
+   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
    "subs": {
-    "qib": 18.99,
-    "nii": 37.96,
-    "rii": 37.96,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
-    "total_cr": 5.78,
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     69.38,
-     60.83,
-     52.37
-    ],
-    "income": [
-     100.78,
-     89.85,
-     74.54
-    ],
-    "pat": [
-     9.45,
-     7.75,
-     5.74
-    ],
-    "ebitda": [
-     15.48,
-     13.29,
-     10.01
-    ],
-    "networth": [
-     33.28,
-     23.83,
-     13.85
-    ],
-    "borrowing": [
-     16.06,
-     16.3,
-     20.12
-    ]
-   },
-   "rev_growth": 12.2,
-   "pat_growth": 21.9,
-   "kpi": {
-    "roe": "28.40%",
-    "roce": "28.90%",
-    "de": "0.48",
-    "pat_margin": "9.38%",
-    "ebitda_margin": "15.36%",
-    "nav": "12.83"
-   },
-   "promoter_pct": 98.28
-  },
-  "Kheria Autocomp Limited": {
-   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-   "subs": {
-    "qib": 47.49,
-    "nii": 14.25,
-    "rii": 33.25,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 13.24,
+    "total_cr": 42.47,
     "investors": 20
    },
    "peers": [
     {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
+     "name": "Alpine Texworld Ltd.",
+     "pe": "12.68"
     },
     {
-     "name": "LAPL Automotive Ltd.",
-     "pe": "9.91"
+     "name": "Kusumgar Ltd.",
+     "pe": "44.8"
     },
     {
-     "name": "Poojaa Precision Engg.Ltd.",
-     "pe": "14.25"
+     "name": "Aastha Spintex Ltd.",
+     "pe": "18.78"
     },
     {
-     "name": "Happy Steels Ltd.",
-     "pe": "9.76"
+     "name": "Shree Ram Twistex Ltd.",
+     "pe": "38.21"
     },
     {
-     "name": "Autofurnish Ltd.",
-     "pe": "11.64"
+     "name": "Panchatv Bharat Ltd.",
+     "pe": "14.23"
     },
     {
-     "name": "Gallard Steel Ltd.",
-     "pe": "17.31"
+     "name": "Vinod Texworld Ltd.",
+     "pe": "10.48"
     }
    ],
    "fin": {
@@ -253,84 +196,210 @@
      "31 Mar 2024"
     ],
     "assets": [
-     106.23,
-     81.79,
-     53.14
+     474.99,
+     374.77,
+     203.5
     ],
     "income": [
-     120.3,
-     92.31,
-     62.4
+     517.6,
+     316.47,
+     121.31
     ],
     "pat": [
-     11.42,
-     8.24,
-     3.31
+     34.02,
+     18.56,
+     13.1
     ],
     "ebitda": [
-     22.9,
-     16.18,
-     9.76
+     84.77,
+     58.12,
+     28.49
     ],
     "networth": [
-     39.52,
-     28.24,
-     20.0
+     104.16,
+     70.07,
+     38.88
     ],
     "borrowing": [
-     35.03,
-     30.9,
-     18.83
+     258.24,
+     207.4,
+     144.6
     ]
    },
-   "rev_growth": 30.3,
-   "pat_growth": 38.6,
+   "rev_growth": 63.6,
+   "pat_growth": 83.3,
    "kpi": {
-    "roe": "33.72%",
-    "roce": "26.89%",
-    "de": "0.89",
-    "pat_margin": "9.52%",
-    "ebitda_margin": "19.08%",
-    "nav": "35.13"
+    "roe": "39.05%",
+    "roce": "19.69%",
+    "de": "2.48",
+    "pat_margin": "6.58%",
+    "ebitda_margin": "16.40%",
+    "nav": "24.78"
    },
-   "promoter_pct": 100.0
+   "promoter_pct": 86.21
   },
-  "SpectraA Technology Solutions Limited": {
-   "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
+  "SpectraA Technology Solutions": {},
+  "Kheria Autocomp": {},
+  "Axiom Gas Engineering": {},
+  "A-One Steels India": {
+   "url": "https://www.chittorgarh.com/ipo/a-one-steels-ipo/2000/"
+  },
+  "ArMee Infotech": {
+   "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
    "subs": {
-    "qib": 47.42,
-    "nii": 14.29,
-    "rii": 33.23,
-    "total": 100.0
+    "rii": 52.5,
+    "nii": 22.5,
+    "qib": 25.0
    },
    "anchor": {
-    "total_cr": 12.09,
     "investors": 20
    },
    "peers": [
     {
-     "name": "Kwick Forensic Solutions Ltd.",
-     "pe": "11.25"
+     "name": "Marushika Technology Ltd.",
+     "pe": "11.6"
     },
     {
-     "name": "Skytech Infinite Platform Ltd.",
+     "name": "EPW India Ltd.",
+     "pe": "18.36"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     958.87,
+     828.54,
+     673.5
+    ],
+    "income": [
+     1410.09,
+     1315.78,
+     1023.99
+    ],
+    "pat": [
+     45.47,
+     41.67,
+     50.13
+    ],
+    "ebitda": [
+     75.64,
+     58.64,
+     71.58
+    ],
+    "networth": [
+     182.18,
+     136.67,
+     95.18
+    ],
+    "borrowing": [
+     174.36,
+     48.1,
+     27.26
+    ]
+   },
+   "rev_growth": 7.2,
+   "pat_growth": 9.1,
+   "kpi": {
+    "roe": "28.52%",
+    "roce": "24.10%",
+    "de": "0.96",
+    "pat_margin": "3.26%",
+    "ebitda_margin": "5.42%",
+    "nav": "76.77"
+   },
+   "promoter_pct": 92.72
+  },
+  "Varmora Granito": {
+   "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     1509.87,
+     1589.8,
+     1476.16
+    ],
+    "income": [
+     1562.53,
+     1492.68,
+     1472.58
+    ],
+    "pat": [
+     55.09,
+     30.77,
+     44.94
+    ],
+    "ebitda": [
+     221.56,
+     198.29,
+     150.33
+    ],
+    "networth": [
+     796.88,
+     722.9,
+     678.59
+    ],
+    "borrowing": [
+     357.95,
+     505.16,
+     412.89
+    ]
+   },
+   "rev_growth": 4.7,
+   "pat_growth": 79.0,
+   "kpi": {
+    "roe": "6.80%",
+    "roce": "9.89%",
+    "pat_margin": "3.53%",
+    "ebitda_margin": "14.18%",
+    "nav": "39.52"
+   },
+   "promoter_pct": 52.0
+  },
+  "S.K.Offset": {},
+  "Liqvd Digital India": {},
+  "Sai Urja Indo Ventures": {},
+  "Anand Seamless": {},
+  "Himalaya Nutravedics India": {},
+  "Robokidz Eduventures": {},
+  "FX Multitech": {},
+  "Vivekanand Cotspin": {},
+  "Adroit Industries (India)": {
+   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/"
+  },
+  "Elevate Campuses": {
+   "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
+   "subs": {
+    "rii": 10.0,
+    "nii": 15.0,
+    "qib": 75.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Bagmane Prime Office REIT",
      "pe": "null"
     },
     {
-     "name": "Merritronix Ltd.",
-     "pe": "11.83"
-    },
-    {
-     "name": "Adisoft Technologies Ltd.",
-     "pe": "12.82"
-    },
-    {
-     "name": "Highness Microelectronics Ltd.",
-     "pe": "16.7"
-    },
-    {
-     "name": "Tipco Engineering India Ltd.",
-     "pe": "8.73"
+     "name": "Property Share Investment Trust-Propshare Celestia",
+     "pe": "null"
     }
    ],
    "fin": {
@@ -340,47 +409,107 @@
      "31 Mar 2024"
     ],
     "assets": [
-     106.29,
-     100.0,
-     66.64
+     5773.35,
+     2421.2,
+     2104.74
     ],
     "income": [
-     103.05,
-     75.53,
-     89.68
+     603.39,
+     394.13,
+     362.61
     ],
     "pat": [
-     11.56,
-     4.91,
-     2.0
+     173.76,
+     49.74,
+     39.69
     ],
     "ebitda": [
-     19.26,
-     10.13,
-     4.48
+     545.0,
+     256.4,
+     220.13
     ],
     "networth": [
-     24.81,
-     13.12,
-     8.18
+     956.29,
+     699.78,
+     655.77
     ],
     "borrowing": [
-     26.96,
-     17.21,
-     14.19
+     4120.53,
+     1206.6,
+     984.71
     ]
    },
-   "rev_growth": 36.4,
-   "pat_growth": 135.4,
+   "rev_growth": 53.1,
+   "pat_growth": 249.3,
    "kpi": {
-    "roe": "60.95%",
-    "roce": "37.61%",
-    "de": "1.09",
-    "pat_margin": "11.42%",
-    "ebitda_margin": "19.04%",
-    "nav": "24.58"
+    "roce": "6.42%",
+    "de": "4.98",
+    "pat_margin": "28.80%",
+    "ebitda_margin": "90.32%",
+    "nav": "432.62"
    },
-   "promoter_pct": 96.04
-  }
+   "promoter_pct": 100.0
+  },
+  "Swastika Infra": {
+   "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     412.24,
+     258.54,
+     143.26
+    ],
+    "income": [
+     505.57,
+     352.6,
+     211.33
+    ],
+    "pat": [
+     41.43,
+     27.45,
+     13.98
+    ],
+    "ebitda": [
+     70.85,
+     43.89,
+     23.71
+    ],
+    "networth": [
+     156.78,
+     77.02,
+     49.57
+    ],
+    "borrowing": [
+     114.64,
+     111.02,
+     43.82
+    ]
+   },
+   "rev_growth": 43.4,
+   "pat_growth": 50.9,
+   "kpi": {
+    "roe": "35.44%",
+    "roce": "25.76%",
+    "de": "0.73",
+    "pat_margin": "8.23%",
+    "ebitda_margin": "14.07%",
+    "nav": "57.69"
+   },
+   "promoter_pct": 76.51
+  },
+  "Unitec Fibres": {},
+  "Pooja Logistics": {}
  }
 }
