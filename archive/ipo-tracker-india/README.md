@@ -11,7 +11,7 @@ A self-updating IPO tracker for Indian Mainboard + SME IPOs, built with Google S
 - **Apps Script code** — already merged into [`apps-script/IPO_Tracker_AllInOne.gs`](../../apps-script/IPO_Tracker_AllInOne.gs) (a superset of the original IPO_Tracker_AppsScript.gs + IPO_Tracker_API.gs, which this repo already contained before the merge)
 - **CSV snapshots** — [`data/`](./data/) here (open / upcoming / closed / listed / gmp_log / config, as of 17/09/2026)
 - **config.js** — kept here (old site's feed configuration)
-- **index.html** — the old website's UI, kept here for reference (superseded by the IPO Terminal site)
+- **index.html** — the old website's UI. Note: it could not be committed through the API (size limit); a copy was delivered to the repo owner separately. The site itself is fully superseded by the IPO Terminal site.
 
 ## Note on the Google Sheet
 
