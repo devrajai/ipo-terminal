@@ -74,3 +74,47 @@
 
   load();
 })();
+
+/* IPO Terminal - Open list board filter (21/09/26).
+   Mainboard IPOs first, then SME; pill buttons filter All / Mainboard / SME.
+   Wraps the site renderOpen(); counts stay correct. */
+(() => {
+  if (window.__IPOBF) return;
+  window.__IPOBF = 1;
+
+  const css = document.createElement('style');
+  css.textContent = '.of-bar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}'
+    + '.of-bar button{border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--muted);padding:7px 15px;font-size:12px;font-weight:850;cursor:pointer}'
+    + '.of-bar button.on{color:#fff;background:var(--glass2);border-color:rgba(255,255,255,.32)}';
+  document.head.appendChild(css);
+
+  let filter = 'all';
+  const isSme = x => /sme/i.test(String(x.board || x.type || x.exchange || ''));
+  const orig = window.renderOpen;
+
+  window.renderOpen = function () {
+    if (orig) orig();
+    const host = document.getElementById('open-list');
+    if (!host || !window.groups || !window.state || !window.ipoCard) return;
+    const open = (window.groups().open || []).slice();
+    if (!open.length) return; // keep the original empty message
+    open.sort((a, b) => (isSme(a) ? 1 : 0) - (isSme(b) ? 1 : 0));
+    const mb = open.filter(x => !isSme(x)), sm = open.filter(isSme);
+    const shown = filter === 'all' ? open : (filter === 'sme' ? sm : mb);
+    const bar = '<div class="of-bar">'
+      + [['all', 'All (' + open.length + ')'], ['mb', 'Mainboard (' + mb.length + ')'], ['sme', 'SME (' + sm.length + ')']]
+        .map(f => '<button data-of="' + f[0] + '" class="' + (filter === f[0] ? 'on' : '') + '">' + f[1] + '</button>').join('')
+      + '</div>';
+    const cards = shown.map(x => window.ipoCard(x, 'OPEN')).join('');
+    host.innerHTML = bar + (cards || '<div class="empty">No ' + (filter === 'sme' ? 'SME' : 'Mainboard') + ' IPO is open right now.</div>');
+  };
+
+  document.addEventListener('click', e => {
+    const b = e.target && e.target.closest ? e.target.closest('[data-of]') : null;
+    if (!b) return;
+    filter = b.getAttribute('data-of');
+    window.renderOpen();
+  });
+
+  if (orig && document.getElementById('open-list')) window.renderOpen();
+})();
