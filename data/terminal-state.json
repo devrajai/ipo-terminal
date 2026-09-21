@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T16:00:14.487666+00:00",
+  "generated_at": "2026-09-21T16:22:36.652122+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T21:29:46.092930+05:30",
+  "data_updated_at": "2026-09-21T21:52:07.529195+05:30",
   "ipo_count": 16,
   "field_coverage_pct": 22.9,
   "sources": {
@@ -32,7 +32,10 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Chittorgarh: HTTP Error 522: <none>",
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: HTTP Error 525: <none>",
+        "IPOGram: The read operation timed out"
       ]
     },
     "NEWS": {
@@ -49,7 +52,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T15:59:28.261077+00:00",
+      "checked_at": "2026-09-21T16:21:28.271857+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +90,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T15:59:29.650623+00:00"
+      "checked_at": "2026-09-21T16:21:31.751947+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T15:59:32.377437+00:00",
+      "checked_at": "2026-09-21T16:21:51.941269+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +105,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T15:59:32.450044+00:00"
+      "checked_at": "2026-09-21T16:21:52.008298+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T15:59:32.496207+00:00"
+      "checked_at": "2026-09-21T16:21:52.053082+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T15:59:32.637252+00:00",
+      "checked_at": "2026-09-21T16:21:52.196331+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +143,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T15:59:32.637252+00:00"
+      "checked_at": "2026-09-21T16:21:52.196331+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T21:29:46.092930+05:30",
+      "checked_at": "2026-09-21T21:52:07.529195+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
