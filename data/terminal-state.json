@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T18:23:40.051013+00:00",
-  "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T23:53:02.085520+05:30",
-  "ipo_count": 14,
-  "field_coverage_pct": 23.5,
+  "generated_at": "2026-09-21T18:52:54.895209+00:00",
+  "today_ist": "2026-09-22",
+  "data_updated_at": "2026-09-22T00:22:10.930367+05:30",
+  "ipo_count": 15,
+  "field_coverage_pct": 22.9,
   "sources": {
     "NSE": {
       "ok": true,
@@ -31,9 +31,7 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "NEWS": {
       "ok": true,
@@ -49,7 +47,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T18:22:21.752731+00:00",
+      "checked_at": "2026-09-21T18:51:34.746010+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -68,8 +66,8 @@
         "EconomicTimes": {
           "ok": true,
           "records": 10,
-          "matched": 6,
-          "added": 4,
+          "matched": 5,
+          "added": 5,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -84,15 +82,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 14,
+      "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T18:22:26.040476+00:00"
+      "checked_at": "2026-09-21T18:51:37.331180+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T18:22:40.736096+00:00",
+      "checked_at": "2026-09-21T18:51:50.739360+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +100,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T18:22:40.809721+00:00"
+      "checked_at": "2026-09-21T18:51:50.807214+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T18:22:40.859422+00:00"
+      "checked_at": "2026-09-21T18:51:50.852463+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T18:22:41.000577+00:00",
+      "checked_at": "2026-09-21T18:51:50.993055+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,12 +138,12 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T18:22:41.000577+00:00"
+      "checked_at": "2026-09-21T18:51:50.993055+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T23:53:02.085520+05:30",
-      "status_repairs": 0,
+      "checked_at": "2026-09-22T00:22:10.930367+05:30",
+      "status_repairs": 2,
       "sme_added": 0,
       "filings": {
         "checked": 21,
@@ -159,52 +157,24 @@
   },
   "ipos": [
     {
-      "id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
-      "fingerprint": "c55cb8660e0f9756",
+      "id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fingerprint": "9e38b4fb307b46ae",
       "fields": {
-        "price": "₹1700-1785",
-        "size": "₹0 Cr",
-        "lot": 8,
-        "open": "17/09/26",
-        "close": "21/09/26",
-        "allotment": "22/09/26",
-        "listing": "24/09/26",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "₹26",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "sonaselection-india-limited",
-      "name": "Sonaselection India Limited",
-      "fingerprint": "20677751d7436fe0",
-      "fields": {
-        "price": "₹94-99",
-        "size": "₹0 Cr",
-        "lot": "150",
-        "open": "17/09/26",
-        "close": "21/09/26",
+        "price": "₹140-148",
+        "size": "708.02",
+        "lot": "—",
+        "open": "22/09/26",
+        "close": "Sep 24, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
         "sub_retail": null,
-        "gmp": "₹1",
-        "gmp_pct": "+1.0%",
-        "est_list": "₹100",
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
         "pe": "—",
         "roe": "—",
         "roce": "—",
@@ -243,22 +213,50 @@
       }
     },
     {
-      "id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fingerprint": "92980d1cedee55dc",
+      "id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fingerprint": "abd17e3d2b381106",
       "fields": {
-        "price": "₹175 – ₹185",
-        "size": "₹161.38 Cr",
-        "lot": "81",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
+        "price": "₹94-99",
+        "size": "₹99 Cr",
+        "lot": "150",
+        "open": "17/09/26",
+        "close": "21/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
         "sub_qib": null,
         "sub_nii": null,
         "sub_retail": null,
-        "gmp": "—",
+        "gmp": "₹1",
+        "gmp_pct": "+1.0%",
+        "est_list": "₹100",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fingerprint": "dea506191d1adca4",
+      "fields": {
+        "price": "₹1700-1785",
+        "size": "₹15,823 Cr",
+        "lot": 8,
+        "open": "17/09/26",
+        "close": "21/09/26",
+        "allotment": "22/09/26",
+        "listing": "24/09/26",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "₹26",
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
@@ -271,13 +269,13 @@
       }
     },
     {
-      "id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fingerprint": "50c2e0850158fc3d",
+      "id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fingerprint": "ab9c956c9b341e83",
       "fields": {
-        "price": "₹126 – ₹134",
-        "size": "₹150.71 Cr",
-        "lot": "111",
+        "price": "₹350 – ₹375",
+        "size": "₹300 Cr",
+        "lot": "40",
         "open": "23/09/26",
         "close": "Sep 25, 2026",
         "allotment": null,
@@ -327,13 +325,13 @@
       }
     },
     {
-      "id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fingerprint": "ab9c956c9b341e83",
+      "id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fingerprint": "50c2e0850158fc3d",
       "fields": {
-        "price": "₹350 – ₹375",
-        "size": "₹300 Cr",
-        "lot": "40",
+        "price": "₹126 – ₹134",
+        "size": "₹150.71 Cr",
+        "lot": "111",
         "open": "23/09/26",
         "close": "Sep 25, 2026",
         "allotment": null,
@@ -355,15 +353,15 @@
       }
     },
     {
-      "id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fingerprint": "e647454749defff8",
+      "id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fingerprint": "92980d1cedee55dc",
       "fields": {
-        "price": "₹140 – ₹148",
-        "size": "₹708.02 Cr",
-        "lot": "101",
-        "open": "22/09/26",
-        "close": "Sep 24, 2026",
+        "price": "₹175 – ₹185",
+        "size": "₹161.38 Cr",
+        "lot": "81",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -549,6 +547,34 @@
         "fresh": "—",
         "ofs": "—"
       }
+    },
+    {
+      "id": "sai-urja-indo-ventures-ltd-sme",
+      "name": "Sai Urja Indo Ventures Ltd. SME",
+      "fingerprint": "60173f5659098e49",
+      "fields": {
+        "price": "₹107 – ₹113",
+        "size": "₹24.95 Cr",
+        "lot": "1200",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
     }
   ],
   "events": [
@@ -660,6 +686,13 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
+      "ipo_id": "sai-urja-indo-ventures-ltd-sme",
+      "name": "Sai Urja Indo Ventures Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
       "ipo_id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
       "source": "NSE"
@@ -694,6 +727,46 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T18:52:54.895209+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-21T18:52:54.895209+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fields": [
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-21T18:52:54.895209+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "national-stock-exchange-of-india-limited",
+      "name": "National Stock Exchange of India Limited",
+      "fields": [
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-21T18:52:54.895209+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "sai-urja-indo-ventures-ltd-sme",
+        "name": "Sai Urja Indo Ventures Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-21T13:48:34.830829+00:00",
       "type": "NEW_EVENT",

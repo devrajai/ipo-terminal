@@ -1,14 +1,14 @@
 {
-  "updated_at": "2026-09-21T23:53:02.085520+05:30",
+  "updated_at": "2026-09-22T00:22:10.930367+05:30",
   "data": [
     {
-      "name": "National Stock Exchange of India Limited",
-      "issue_price": "₹1700-1785",
-      "gmp": "₹26",
+      "name": "Axiom Gas Engineering Limited",
+      "issue_price": "—",
+      "gmp": "₹17",
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",
-      "updated_at": "2026-09-21T18:03:42.245635+00:00"
+      "updated_at": "2026-09-21T18:36:08.565601+00:00"
     },
     {
       "name": "Sonaselection India Limited",
@@ -17,16 +17,16 @@
       "estimated_listing": "₹100",
       "gmp_pct": "+1.0%",
       "kostak": "—",
-      "updated_at": "2026-09-21T18:03:42.245487+00:00"
+      "updated_at": "2026-09-21T18:36:08.565462+00:00"
     },
     {
-      "name": "Axiom Gas Engineering Limited",
-      "issue_price": "—",
-      "gmp": "₹17",
+      "name": "National Stock Exchange of India Limited",
+      "issue_price": "₹1700-1785",
+      "gmp": "₹26",
       "estimated_listing": "—",
       "gmp_pct": "—",
       "kostak": "—",
-      "updated_at": "2026-09-21T18:03:42.245658+00:00"
+      "updated_at": "2026-09-21T18:36:08.565582+00:00"
     }
   ]
 }
