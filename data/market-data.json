@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T17:15:19.800241+00:00",
+  "updated_at": "2026-09-21T17:25:19.302926+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,7 +100,15 @@
       "change_pct": 0.14
     }
   ],
-  "world": [],
+  "world": [
+    {
+      "price": 10739.01,
+      "change": 79.88,
+      "change_pct": 0.75,
+      "name": "FTSE 100 (UK)",
+      "symbol": "^FTSE"
+    }
+  ],
   "commodities": [],
   "fx": [
     {
