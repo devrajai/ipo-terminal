@@ -1,7 +1,115 @@
 {
- "generated_at": "2026-09-20T01:54:44.481940+00:00",
- "model": "naive-fallback",
+ "generated_at": "2026-09-21T01:56:42.360359+00:00",
+ "model": "timesfm-3.0",
  "min_points_required": 3,
- "ipos": {},
- "points_ready": {}
+ "ipos": {
+  "Kheria Autocomp Limited": {
+   "horizon_days": 3,
+   "points": [
+    {
+     "date": "2026-09-22",
+     "low": 10.0,
+     "mid": 10.0,
+     "high": 10.0
+    },
+    {
+     "date": "2026-09-23",
+     "low": 10.0,
+     "mid": 10.0,
+     "high": 10.0
+    },
+    {
+     "date": "2026-09-24",
+     "low": 10.0,
+     "mid": 10.0,
+     "high": 10.0
+    }
+   ]
+  },
+  "National Stock Exchange of India Limited": {
+   "horizon_days": 3,
+   "points": [
+    {
+     "date": "2026-09-22",
+     "low": 148.0,
+     "mid": 148.0,
+     "high": 148.0
+    },
+    {
+     "date": "2026-09-23",
+     "low": 148.0,
+     "mid": 148.0,
+     "high": 148.0
+    },
+    {
+     "date": "2026-09-24",
+     "low": 148.0,
+     "mid": 148.0,
+     "high": 148.0
+    }
+   ],
+   "est_listing": {
+    "low": 1848.0,
+    "mid": 1848.0,
+    "high": 1848.0
+   }
+  },
+  "Sonaselection India Limited": {
+   "horizon_days": 3,
+   "points": [
+    {
+     "date": "2026-09-22",
+     "low": 2.0,
+     "mid": 2.0,
+     "high": 2.0
+    },
+    {
+     "date": "2026-09-23",
+     "low": 2.0,
+     "mid": 2.0,
+     "high": 2.0
+    },
+    {
+     "date": "2026-09-24",
+     "low": 2.0,
+     "mid": 2.0,
+     "high": 2.0
+    }
+   ],
+   "est_listing": {
+    "low": 96.0,
+    "mid": 96.0,
+    "high": 96.0
+   }
+  },
+  "SpectraA Technology Solutions Limited": {
+   "horizon_days": 3,
+   "points": [
+    {
+     "date": "2026-09-22",
+     "low": 30.0,
+     "mid": 30.0,
+     "high": 30.0
+    },
+    {
+     "date": "2026-09-23",
+     "low": 30.0,
+     "mid": 30.0,
+     "high": 30.0
+    },
+    {
+     "date": "2026-09-24",
+     "low": 30.0,
+     "mid": 30.0,
+     "high": 30.0
+    }
+   ]
+  }
+ },
+ "points_ready": {
+  "National Stock Exchange of India Limited": 3,
+  "Sonaselection India Limited": 3,
+  "Kheria Autocomp Limited": 3,
+  "SpectraA Technology Solutions Limited": 3
+ }
 }
