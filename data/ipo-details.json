@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-21T06:51:31.950844+00:00",
+ "updated_at": "2026-09-21T07:18:51.691621+00:00",
  "ipos": {
   "National Stock Exchange of India Limited": {
    "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
@@ -208,7 +208,179 @@
    },
    "promoter_pct": 98.28
   },
-  "Kheria Autocomp Limited": {},
-  "SpectraA Technology Solutions Limited": {}
+  "Kheria Autocomp Limited": {
+   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
+   "subs": {
+    "qib": 47.49,
+    "nii": 14.25,
+    "rii": 33.25,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 13.24,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Sumax Engineering Ltd.",
+     "pe": "11.66"
+    },
+    {
+     "name": "LAPL Automotive Ltd.",
+     "pe": "9.91"
+    },
+    {
+     "name": "Poojaa Precision Engg.Ltd.",
+     "pe": "14.25"
+    },
+    {
+     "name": "Happy Steels Ltd.",
+     "pe": "9.76"
+    },
+    {
+     "name": "Autofurnish Ltd.",
+     "pe": "11.64"
+    },
+    {
+     "name": "Gallard Steel Ltd.",
+     "pe": "17.31"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     106.23,
+     81.79,
+     53.14
+    ],
+    "income": [
+     120.3,
+     92.31,
+     62.4
+    ],
+    "pat": [
+     11.42,
+     8.24,
+     3.31
+    ],
+    "ebitda": [
+     22.9,
+     16.18,
+     9.76
+    ],
+    "networth": [
+     39.52,
+     28.24,
+     20.0
+    ],
+    "borrowing": [
+     35.03,
+     30.9,
+     18.83
+    ]
+   },
+   "rev_growth": 30.3,
+   "pat_growth": 38.6,
+   "kpi": {
+    "roe": "33.72%",
+    "roce": "26.89%",
+    "de": "0.89",
+    "pat_margin": "9.52%",
+    "ebitda_margin": "19.08%",
+    "nav": "35.13"
+   },
+   "promoter_pct": 100.0
+  },
+  "SpectraA Technology Solutions Limited": {
+   "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
+   "subs": {
+    "qib": 47.42,
+    "nii": 14.29,
+    "rii": 33.23,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 12.09,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Kwick Forensic Solutions Ltd.",
+     "pe": "11.25"
+    },
+    {
+     "name": "Skytech Infinite Platform Ltd.",
+     "pe": "null"
+    },
+    {
+     "name": "Merritronix Ltd.",
+     "pe": "11.83"
+    },
+    {
+     "name": "Adisoft Technologies Ltd.",
+     "pe": "12.82"
+    },
+    {
+     "name": "Highness Microelectronics Ltd.",
+     "pe": "16.7"
+    },
+    {
+     "name": "Tipco Engineering India Ltd.",
+     "pe": "8.73"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     106.29,
+     100.0,
+     66.64
+    ],
+    "income": [
+     103.05,
+     75.53,
+     89.68
+    ],
+    "pat": [
+     11.56,
+     4.91,
+     2.0
+    ],
+    "ebitda": [
+     19.26,
+     10.13,
+     4.48
+    ],
+    "networth": [
+     24.81,
+     13.12,
+     8.18
+    ],
+    "borrowing": [
+     26.96,
+     17.21,
+     14.19
+    ]
+   },
+   "rev_growth": 36.4,
+   "pat_growth": 135.4,
+   "kpi": {
+    "roe": "60.95%",
+    "roce": "37.61%",
+    "de": "1.09",
+    "pat_margin": "11.42%",
+    "ebitda_margin": "19.04%",
+    "nav": "24.58"
+   },
+   "promoter_pct": 96.04
+  }
  }
 }
