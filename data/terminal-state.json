@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T09:57:42.415490+00:00",
+  "generated_at": "2026-09-21T10:06:45.840599+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T15:27:14.345720+05:30",
+  "data_updated_at": "2026-09-21T15:36:16.750840+05:30",
   "ipo_count": 15,
-  "field_coverage_pct": 21.6,
+  "field_coverage_pct": 21.9,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 7,
+      "records": 8,
       "errors": []
     },
     "BSE": {
@@ -32,7 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "IPODose: The read operation timed out"
+        "Moneycontrol: HTTP Error 404: Not Found"
       ]
     },
     "NEWS": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T09:56:44.385215+00:00",
+      "checked_at": "2026-09-21T10:05:36.089123+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -61,15 +61,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 2,
+          "matched": 3,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
           "records": 9,
-          "matched": 1,
-          "added": 8,
+          "matched": 2,
+          "added": 7,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -87,12 +87,12 @@
       "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T09:56:45.638875+00:00"
+      "checked_at": "2026-09-21T10:05:38.286876+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T09:57:00.662232+00:00",
+      "checked_at": "2026-09-21T10:06:01.338056+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T09:57:00.731360+00:00"
+      "checked_at": "2026-09-21T10:06:01.412388+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T09:57:00.777336+00:00"
+      "checked_at": "2026-09-21T10:06:01.461035+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T09:57:00.919090+00:00",
+      "checked_at": "2026-09-21T10:06:01.611808+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T09:57:00.919090+00:00"
+      "checked_at": "2026-09-21T10:06:01.611808+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T15:27:14.345720+05:30",
+      "checked_at": "2026-09-21T15:36:16.750840+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -299,6 +299,34 @@
       }
     },
     {
+      "id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fingerprint": "92980d1cedee55dc",
+      "fields": {
+        "price": "₹175 – ₹185",
+        "size": "₹161.38 Cr",
+        "lot": "81",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
       "fingerprint": "e647454749defff8",
@@ -418,34 +446,6 @@
         "price": "₹350 – ₹375",
         "size": "₹300 Cr",
         "lot": "40",
-        "open": "23/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "swastika-infra-ltd-mainboard",
-      "name": "Swastika Infra Ltd. Mainboard",
-      "fingerprint": "9fe111268ceb1ad5",
-      "fields": {
-        "price": "₹175 – ₹185",
-        "size": "₹161.38 Cr",
-        "lot": "81",
         "open": "23/09/26",
         "close": "—",
         "allotment": null,
@@ -716,9 +716,9 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "swastika-infra-ltd-mainboard",
-      "name": "Swastika Infra Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-24",
@@ -736,6 +736,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T10:06:45.840599+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "swastika-infra-limited",
+        "name": "Swastika Infra Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-21T09:57:42.415490+00:00",
       "type": "DATA_CHANGE",
