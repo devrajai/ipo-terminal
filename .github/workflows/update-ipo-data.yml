@@ -76,6 +76,9 @@ jobs:
       - name: Build future-proof terminal state and event stream
         run: python scripts/build_terminal_state.py
 
+      - name: Merge Google Sheet IPO Tracker data
+        run: python scripts/sync_sheet_to_site.py || echo "sheet merge skipped"
+
       - name: Validate generated data
         run: |
           set -e
