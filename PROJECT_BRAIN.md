@@ -23,11 +23,17 @@ Dev's personal all-in-one India IPO + market terminal. Free forever. Mobile-firs
    - Tabs: Dashboard(Sheet1), India_Indices, World_Markets, Commodities_FX, Nifty50_Stocks, Sensex_Stocks, Listed_IPO_Tracker, IPO_GMP_Subscription, Corporate_Actions, How_To_Connect
    - Bridge active via repo variable GOOGLE_SHEET_ID (workflow reads vars.GOOGLE_SHEET_ID || secrets.GOOGLE_SHEET_ID)
    - Listed_IPO_Tracker + Corporate_Actions tabs are auto-pulled into data/market-data.json
+3. WAY 3 — Notion "IPO Tracker" DB (id 3dfa9d04-aeb5-8168-a28e-f358acd44da5, shared with the Sarvam/composio connection)
+   - Sarvam AI pulls it daily 08:15 IST (cron "Notion IPO Tracker → ipo-terminal daily sync") and writes data/notion-data.json
+   - .github/workflows/notion-fetch.yml is DISABLED (its NOTION_TOKEN secret died with the deleted ipo-website repo; repo has no secrets — do NOT rely on repo secrets)
+   - notion-pipeline-sync.yml (09:00 IST) then merges notion-data.json into data/ipos.json + listed.json
+   - Old repos ipo-website + ipo-tracker-india were merged into archive/ on 21/09/26 and deleted — do not reference their raw URLs
 
 ## Current Status (updated 21/09/2026)
 - Website live with 5-min auto data refresh; market data pipeline live (Way 1 + Way 2)
 - Daily brain run cron scheduled 6:30 PM IST: research IPO news, fix stale data, deliver digest
 - Pro Tools (scripts/ipo-protools.js) now has 6 tabs: Calculator (NEW 21/09/26 — Apply Cost / GMP Return / P&L, IPO dropdown auto-filled from live ipo-data.json, default tab), Track Record, My Apps, Planner, Calendar, Why & Sources
+- 21/09/26 evening: repo consolidation done (2 old repos merged in); Open-list board filter (Mainboard first, then SME + filter pills) live in scripts/ipo-forecast.js; Notion sync moved from GitHub Actions to Sarvam (Way 3)
 - Next: Phase 1 — Screener layer (Nifty 500: PE, PB, ROE, ROCE, D/E, promoter/DII/FII holding, EMA 20/200, RSI, MACD, 52w/200d high-low)
 
 ## Roadmap (one phase at a time — never all at once)
