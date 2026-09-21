@@ -26,7 +26,7 @@
   };
 
   let H = null, LOG = null, IPO = [];
-  let tab = 'track';
+  let tab = 'calc';
   const LS = 'ipoAppsV1';
 
   const readApps = () => { try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; } };
@@ -247,6 +247,117 @@
       + 'Never miss a close date again \u2014 reminders fire on your phone like a normal calendar event.</div>';
   }
 
+  /* ---------- Calculator ---------- */
+  let calcMode = 'cost';
+  const dmy = s => { const m = String(s || '').match(/(\d{1,2})\/(\d{1,2})\/(\d{2,4})/); if (!m) return null; const y = +m[3] < 100 ? 2000 + +m[3] : +m[3]; return new Date(y, +m[2] - 1, +m[1]); };
+
+  function calcIPOs() {
+    const t = new Date(); t.setHours(0, 0, 0, 0);
+    const list = IPO.filter(x => x && x.name && band(x.price));
+    list.sort((a, b) => {
+      const ca = dmy(a.close), cb = dmy(b.close);
+      const oa = !!(ca && ca >= t), ob = !!(cb && cb >= t);
+      if (oa !== ob) return oa ? -1 : 1;
+      return 0;
+    });
+    return list;
+  }
+
+  function calcResult(rows, note) {
+    return '<table class="pt-tbl">' + rows.map(r => '<tr><th style="width:46%">' + r[0] + '</th><td class="pt-mono" style="' + (r[2] || '') + '">' + r[1] + '</td></tr>').join('') + '</table>'
+      + (note ? '<div class="pt-hint" style="margin-top:8px">' + note + '</div>' : '');
+  }
+
+  function tabCalc(el) {
+    const list = calcIPOs();
+    const modes = [['cost', '\uD83D\uDCB0 Apply Cost'], ['gmp', '\uD83D\uDCCA GMP Return'], ['pl', '\uD83D\uDCC9 Profit / Loss']];
+    let html = '<div class="pt-tabs">' + tabs() + '</div>'
+      + '<div class="pt-tabs" style="margin-bottom:10px">' + modes.map(m => '<button data-cm="' + m[0] + '" class="' + (calcMode === m[0] ? 'on' : '') + '">' + m[1] + '</button>').join('') + '</div>';
+    const sel = '<select id="pt-c-ipo" class="pt-in" style="width:230px;max-width:100%">'
+      + list.map((x, i) => '<option value="' + E(x.name) + '"' + (i === 0 ? ' selected' : '') + '>' + E(x.name) + '</option>').join('') + '</select>';
+    if (calcMode === 'cost') {
+      html += '<div class="pt-hint">How much money will one application block? Auto-filled from live price bands \u2014 UPI blocks at the <b>upper band</b>.</div>'
+        + '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">' + sel
+        + '<label class="pt-hint" style="margin:0">Lots</label><input id="pt-c-lots" class="pt-in" type="number" min="1" value="1"></div>'
+        + '<div id="pt-c-out"></div>';
+    } else if (calcMode === 'gmp') {
+      html += '<div class="pt-hint">Expected listing gain from the live grey market premium \u2014 <b>GMP is unofficial</b> and can change any time.</div>'
+        + '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">' + sel
+        + '<label class="pt-hint" style="margin:0">Lots</label><input id="pt-c-lots" class="pt-in" type="number" min="1" value="1"></div>'
+        + '<div id="pt-c-out"></div>';
+    } else {
+      html += '<div class="pt-hint">Actual profit or loss after listing \u2014 pick an IPO to auto-fill, or type your own numbers.</div>'
+        + '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">' + sel + '</div>'
+        + '<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">'
+        + '<label class="pt-hint" style="margin:0">Issue \u20B9</label><input id="pt-c-ip" class="pt-in" type="number" min="1" placeholder="314">'
+        + '<label class="pt-hint" style="margin:0">Listing \u20B9</label><input id="pt-c-lp" class="pt-in" type="number" min="0" placeholder="300">'
+        + '<label class="pt-hint" style="margin:0">Lot size</label><input id="pt-c-ls" class="pt-in" type="number" min="1" value="1">'
+        + '<label class="pt-hint" style="margin:0">Lots</label><input id="pt-c-lots" class="pt-in" type="number" min="1" value="1"></div>'
+        + '<div id="pt-c-out"></div>';
+    }
+    el.innerHTML = html;
+    el.querySelectorAll('[data-cm]').forEach(b => b.onclick = () => { calcMode = b.dataset.cm; tabCalc(el); });
+    const run = () => {
+      const selEl = el.querySelector('#pt-c-ipo');
+      const name = selEl ? selEl.value : '';
+      const x = name ? (IPO.find(z => z.name === name) || null) : null;
+      const lots = Math.max(1, parseInt((el.querySelector('#pt-c-lots') || { value: '1' }).value || '1', 10));
+      const out = el.querySelector('#pt-c-out');
+      if (!out) return;
+      if (calcMode === 'cost') {
+        if (!x) { out.innerHTML = '<div class="pt-hint">No IPO with a price band in the data yet.</div>'; return; }
+        const b = band(x.price), ls = num(x.lot) || 1;
+        const lo = Math.round(b.lo * ls * lots), hi = Math.round(b.hi * ls * lots);
+        out.innerHTML = calcResult([
+          ['Price band', E(x.price)],
+          ['Lot size', ls.toLocaleString('en-IN') + ' shares'],
+          ['Shares (' + lots + ' lot' + (lots > 1 ? 's' : '') + ')', (ls * lots).toLocaleString('en-IN')],
+          ['Blocked at lower band', money(lo)],
+          ['Money to arrange \u2248', money(hi), 'color:#fbbf24;font-weight:700']
+        ], 'UPI mandate blocks the <b>upper band</b> amount (' + money(hi) + '). Refund arrives in ~3\u20134 days if not allotted.');
+      } else if (calcMode === 'gmp') {
+        if (!x) { out.innerHTML = '<div class="pt-hint">No IPO with a price band in the data yet.</div>'; return; }
+        const b = band(x.price), ls = num(x.lot) || 1;
+        let g = num(x.gmp); if (g == null) g = 0;
+        const estHi = b.hi + g;
+        const perLot = Math.round((estHi - b.hi) * ls);
+        const pct = b.hi ? (estHi - b.hi) / b.hi * 100 : 0;
+        out.innerHTML = calcResult([
+          ['Issue price (upper)', money(b.hi)],
+          ['GMP today', (g >= 0 ? '+' : '') + money(g), g >= 0 ? 'color:#22c55e' : 'color:#ef4444'],
+          ['Est. listing price', money(estHi), 'font-weight:700'],
+          ['Gain / lot', (perLot >= 0 ? '+' : '') + money(perLot), perLot >= 0 ? 'color:#22c55e' : 'color:#ef4444'],
+          ['Gain on ' + lots + ' lot' + (lots > 1 ? 's' : ''), (perLot * lots >= 0 ? '+' : '') + money(perLot * lots), perLot >= 0 ? 'color:#22c55e' : 'color:#ef4444'],
+          ['Expected return', (pct >= 0 ? '+' : '') + pct.toFixed(1) + '%', pct >= 0 ? 'color:#22c55e' : 'color:#ef4444']
+        ], 'GMP is an unofficial grey-market estimate \u2014 not a guarantee. Data refreshes every 5 minutes.');
+      } else {
+        const ip = num(el.querySelector('#pt-c-ip').value), lp = num(el.querySelector('#pt-c-lp').value);
+        const ls = Math.max(1, parseInt(el.querySelector('#pt-c-ls').value || '1', 10));
+        if (ip == null || lp == null) { out.innerHTML = '<div class="pt-hint">Enter issue price and listing price.</div>'; return; }
+        const inv = ip * ls * lots, val = lp * ls * lots, pl = val - inv, pct = inv ? pl / inv * 100 : 0;
+        out.innerHTML = calcResult([
+          ['Investment', money(inv)],
+          ['Listing value', money(val)],
+          ['Profit / Loss', (pl >= 0 ? '+' : '') + money(pl), pl >= 0 ? 'color:#22c55e;font-weight:700' : 'color:#ef4444;font-weight:700'],
+          ['Return', (pct >= 0 ? '+' : '') + pct.toFixed(2) + '%', pct >= 0 ? 'color:#22c55e;font-weight:700' : 'color:#ef4444;font-weight:700']
+        ], 'Selling on listing day? Charges (brokerage + STT + taxes) typically eat ~0.3\u20130.5% \u2014 this shows the gross result.');
+      }
+    };
+    const selEl = el.querySelector('#pt-c-ipo');
+    if (selEl) selEl.onchange = () => {
+      const x = IPO.find(z => z.name === selEl.value);
+      if (x && calcMode === 'pl') {
+        const b = band(x.price);
+        const ipf = el.querySelector('#pt-c-ip'), lsf = el.querySelector('#pt-c-ls');
+        if (b && ipf) ipf.value = b.hi;
+        if (num(x.lot) && lsf) lsf.value = num(x.lot);
+      }
+      run();
+    };
+    el.querySelectorAll('#pt-c-lots, #pt-c-ip, #pt-c-lp, #pt-c-ls').forEach(i => i.oninput = run);
+    run();
+  }
+
   let DETAILS = null, detailsTried = false, whySel = null;
 
   async function ensureDetails() {
@@ -365,7 +476,7 @@
       + '<tr><td><b>Business</b></td><td>Revenue growth + return ratios (quality of the company)</td><td class="pt-mono">growth \u226520%\u219290 \u00B7 \u226512%\u219278 \u00B7 \u22655%\u219262 \u00B7 else 38; then blended with max(ROE,ROCE)\u00D71.6 (capped 45)</td><td>RHP financials \u00B7 KPI table</td></tr>'
       + '<tr><td><b>Valuation</b></td><td>Price you pay (P/E at issue price)</td><td class="pt-mono">P/E \u226420\u219282 \u00B7 \u226435\u219262 \u00B7 \u226450\u219238 \u00B7 else 22</td><td>RHP / issue price</td></tr>'
       + '<tr><td><b>Demand</b></td><td>Live subscription (how many times oversubscribed)</td><td class="pt-mono">\u226550x\u219295 \u00B7 \u226520x\u219282 \u00B7 \u226510x\u219270 \u00B7 \u22653x\u219258 \u00B7 <1x\u219225</td><td>Live subscription feed</td></tr>'
-      + '<tr><td><b>GMP</b></td><td>Grey-market premium (unofficial sentiment)</td><td class="pt-mono">\u226520%\u219290 \u00B7 \u226510%\u219275 \u00B7 \u22655%\u219268 \u00B7 \u22650\u219260 \u00B7 <0\u219225</td><td>GMP feed (every 5 min)</td></tr>'
+      + '<tr><td><b>GMP</b></td><td>Grey-market premium (unofficial sentiment)</td><td class="pt-mono">\u226520%\u219290 \u00B7 \u226510%\u219275 \u00B7 \u22655%\u219268 \u00B7 \u22650%\u219260 \u00B7 <0%\u219225</td><td>GMP feed (every 5 min)</td></tr>'
       + '<tr><td><b>Structure</b></td><td>Debt on the balance sheet (D/E)</td><td class="pt-mono">\u22640.3\u219285 \u00B7 \u22640.6\u219270 \u00B7 \u22641\u219255 \u00B7 else 30</td><td>RHP financials</td></tr>'
       + '<tr><td colspan="4" style="font-size:10px;color:var(--tx3)">Missing data \u2192 lane = neutral 50. A data gap never becomes a fake plus or minus. Red-flag checks run on top: EBITDA margin vs PAT margin gap > 15 points \u21D2 flagged (heavy interest/depreciation drag); demand vs valuation and GMP vs business disagreements are listed, not averaged away.</td></tr></table>'
       + worked
@@ -628,7 +739,7 @@
     });
   }
 
-  const tabs = () => [['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar'], ['why', '\u2753 Why & Sources']]
+  const tabs = () => [['calc', '\uD83E\uDDE9 Calculator'], ['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar'], ['why', '\u2753 Why & Sources']]
     .map(t => '<button data-pt="' + t[0] + '" class="' + (tab === t[0] ? 'on' : '') + '">' + t[1] + '</button>').join('');
 
   function render() {
@@ -638,7 +749,8 @@
       const b = e.target && e.target.closest ? e.target.closest('[data-pt]') : null;
       if (b) { tab = b.dataset.pt; render(); }
     };
-    if (tab === 'track') tabTrack(el);
+    if (tab === 'calc') tabCalc(el);
+    else if (tab === 'track') tabTrack(el);
     else if (tab === 'apps') tabApps(el);
     else if (tab === 'plan') tabPlan(el);
     else if (tab === 'why') tabWhy(el);
