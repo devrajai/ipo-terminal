@@ -26,7 +26,7 @@
   };
 
   let H = null, LOG = null, IPO = [];
-  let tab = 'calc';
+  let tab = 'track';
   const LS = 'ipoAppsV1';
 
   const readApps = () => { try { return JSON.parse(localStorage.getItem(LS) || '[]'); } catch (e) { return []; } };
@@ -739,7 +739,7 @@
     });
   }
 
-  const tabs = () => [['calc', '\uD83E\uDDE9 Calculator'], ['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar'], ['why', '\u2753 Why & Sources']]
+  const tabs = () => [['track', '\uD83C\uDFC6 Track Record'], ['apps', '\uD83D\uDCCB My Apps'], ['plan', '\uD83D\uDC68\u200D\uD83D\uDC69\u200D\uD83D\uDC67 Planner'], ['cal', '\uD83D\uDCC5 Calendar'], ['calc', '\uD83E\uDDE9 Calculator'], ['why', '\u2753 Why & Sources']]
     .map(t => '<button data-pt="' + t[0] + '" class="' + (tab === t[0] ? 'on' : '') + '">' + t[1] + '</button>').join('');
 
   function render() {
