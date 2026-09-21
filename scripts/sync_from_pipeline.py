@@ -47,7 +47,7 @@ def load_pipeline():
 
 def norm(name):
     """Same normalization the site's findSub/findLink uses, for matching."""
-    return re.sub("limited|ltd|\.|\s+", "", str(name or "").lower()
+    return re.sub("limited|ltd|\.|\s+", "", str(name or "").lower())
 
 def parse_issue_dates(s):
     """'17-21 Sep 2026' -> ('2026-09-17', '2026-09-21')."""
