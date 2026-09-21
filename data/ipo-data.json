@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-21T11:26:59.979565+05:30",
+  "updated_at": "2026-09-21T11:36:12.854275+05:30",
   "sources": {
     "NSE": {
       "ok": true,
@@ -27,7 +27,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "NEWS": {
       "ok": true,
@@ -43,7 +45,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T05:56:30.005990+00:00",
+      "checked_at": "2026-09-21T06:05:41.113441+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -81,12 +83,12 @@
       "records": 13,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T05:56:32.324746+00:00"
+      "checked_at": "2026-09-21T06:05:43.069527+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T05:56:44.354397+00:00",
+      "checked_at": "2026-09-21T06:05:56.616540+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -96,17 +98,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T05:56:44.432049+00:00"
+      "checked_at": "2026-09-21T06:05:56.691912+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T05:56:44.478969+00:00"
+      "checked_at": "2026-09-21T06:05:56.740687+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T05:56:44.624717+00:00",
+      "checked_at": "2026-09-21T06:05:56.889223+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -134,11 +136,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T05:56:44.624717+00:00"
+      "checked_at": "2026-09-21T06:05:56.889223+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T11:26:59.979565+05:30",
+      "checked_at": "2026-09-21T11:36:12.854275+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -190,7 +192,7 @@
       "gmp_stale": true,
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-21T05:56:44.478952+00:00",
+      "video_evidence_updated_at": "2026-09-21T06:05:56.740670+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
@@ -198,7 +200,7 @@
       "qib": "50%",
       "hni": "15%",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "sonaselection-india-limited",
@@ -237,7 +239,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "axiom-gas-engineering-limited",
@@ -272,7 +274,7 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_stale": false,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "kheria-autocomp-limited",
@@ -311,7 +313,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "spectraa-technology-solutions-limited",
@@ -350,7 +352,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "varmora-granito-limited",
@@ -386,7 +388,7 @@
       "gmp_stale": false,
       "min_investment": "₹14,948",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "pooja-logistics-limited",
@@ -421,7 +423,7 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_stale": false,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "a-one-steels-india-ltd-mainboard",
@@ -455,7 +457,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "armee-infotech-ltd-mainboard",
@@ -489,7 +491,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "s-k-offset-ltd-sme",
@@ -523,7 +525,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "sai-urja-indo-ventures-ltd-sme",
@@ -557,7 +559,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "himalaya-nutravedics-india-ltd-sme",
@@ -591,7 +593,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     },
     {
       "id": "anand-seamless-ltd-sme",
@@ -625,37 +627,37 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T11:26:59.979565+05:30"
+      "status_checked_at": "2026-09-21T11:36:12.854275+05:30"
     }
   ],
   "listed": [],
   "news": [
+    {
+      "title": "Axiom Gas Engineering IPO Day 2: Subscribed 0.75x; QIB and Retail lead at 0.8x - scanx.trade",
+      "date": "2026-09-21",
+      "source": "scanx.trade",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQVU1GTnRpS0FIY0ZkdnN0Qi1nbWdQa0pYQ2k5aWtGMVBnYXAxMmE5Z3pGZnAwQlRpYnluQjFobU4wbUVfc0U1R1J4NlhaZTFCbzBCd2ZYcnBwUDNSUjYzT2NTUFpYVXRlaFNxWmdncnA4cFVsUy12RGVLYTRFN2RzN2FfRndkM0ZRQjd6WnhnS0Zhb2xEdTF1Uk5mLXRhdVlXYmoweFVGOExjX2lPRDRhQ1hJMnVId0FJLWMxZQ?oc=5",
+      "published_at": "2026-09-21T05:54:51+00:00",
+      "topic": "IPO News",
+      "ipo_name": "Axiom Gas Engineering Limited",
+      "ipo_status": "open"
+    },
+    {
+      "title": "NSE IPO subscribed 1.68 times so far on Day 3: Check allotment date and steps - Upstox",
+      "date": "2026-09-21",
+      "source": "Upstox",
+      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWE8wRnMwMjltZGQtNkcwdlNMWjBXWncxQ2hlWTQ4aFM3WjUwNVZqV19QUTZyYm1SY0xlQWx6T3pOUW93aWd5Z0l5UkxUQm5LTEtWaEl0RDE3RlQ4aUNWOWFTYWMwTGpPRjl3Z0lTYjBOOXJnWUlWN1JYYktlbHgwazEtZTFNM2hxZGNPekwyaFpzLXNYelpmQ0xDTVFETU5VTVRrb0hFTVNsTUZkUHJtSGk0SUJPMjhmLS1IVg?oc=5",
+      "published_at": "2026-09-21T05:53:10+00:00",
+      "topic": "IPO News",
+      "ipo_name": "National Stock Exchange of India Limited",
+      "ipo_status": "open"
+    },
     {
       "title": "NSE IPO: Will there be a negative listing? But, should you still apply — if yes, then why | What experts suggest - Livemint",
       "date": "2026-09-21",
       "source": "Livemint",
       "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSG1HWHVFTXpVZkZROHd5c2ppNkhxdjZ3c0ducjBIQXRuaV9DYjQ5S2JiVGFMWjRkRUtGOGNCQ1Y3NkU2T3VjUnRyZzQ2d1h5TkdEck5EZ0piWm5IUE9fWmRZR1BkaHYwOURmMWhiZ1BERHg0b0hjbUFoU0UybWxxUXJQdzFJbTExNTdaWTJDT0ljRG1rVm16VzYxTXljZXl4T0tza2xCWDhoYmpWbU5GNFFIZlFaaDZDQzAxdEdpOTYwbkhPVDVBZjJIZ1h5MENuSUFJeXVIdVhmd0NRYWVaVldJMUJtc2JxeW95NkszQ2ZBUdIB9wFBVV95cUxPSC1qMHJDb29SQzQ0YlZucllWVlk1MmVMWHI3SmthR1lkSEtuMVBnelFLaC1VYWtwYzc3MmRqcm1uRFRPWEh5RDRJckZfRXlIUnlMTnIySHZ1blJhUWt0VXdkSlJtU2JVZU9oTmdSTDRyUFVwWW1RaWxKdjJwbG1tS1RuMjhWczZUdC1ERU92bDdKZkt0eU9jSW51OGNhZTJjcHRqLUt6NE9POE1LTU4zcE16NVB4ZTdKNHF2LWtHQWFCTVlWVGo2NkotSG9iOGYzVXpvSXJMcVBVV0E3MFpBUElDMEc4cnoxRmRJeGFDNkZOTEdiU3M0?oc=5",
       "published_at": "2026-09-21T05:27:11+00:00",
-      "topic": "IPO News",
-      "ipo_name": "National Stock Exchange of India Limited",
-      "ipo_status": "open"
-    },
-    {
-      "title": "NSE IPO Day 3 Subscription Status: Issue Subscribed 1.46x - HDFC Sky",
-      "date": "2026-09-21",
-      "source": "HDFC Sky",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTHRiQnlOeTR1c25ZRGhSQzFOR1JQY2d5WXhXdkNxVGs1R0s0N3dQUXRGcVhkZS1kOXR2U19CX1pOclZQVWUxQml0Z2o0bHphZmZmSk9jY3RhNXhHQ2dhMVJXVFMwMy1pRWxXS0dIdWI2QjJnQ3FoV2J5a095dGxJNU9tbjhvSVhOWl95YU9LSVZseFdacUhUTUFjdw?oc=5",
-      "published_at": "2026-09-21T05:18:48+00:00",
-      "topic": "IPO News",
-      "ipo_name": "National Stock Exchange of India Limited",
-      "ipo_status": "open"
-    },
-    {
-      "title": "NSE IPO Day 3: Check subscription status, allotment date and steps - upstox.com",
-      "date": "2026-09-21",
-      "source": "upstox.com",
-      "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWE8wRnMwMjltZGQtNkcwdlNMWjBXWncxQ2hlWTQ4aFM3WjUwNVZqV19QUTZyYm1SY0xlQWx6T3pOUW93aWd5Z0l5UkxUQm5LTEtWaEl0RDE3RlQ4aUNWOWFTYWMwTGpPRjl3Z0lTYjBOOXJnWUlWN1JYYktlbHgwazEtZTFNM2hxZGNPekwyaFpzLXNYelpmQ0xDTVFETU5VTVRrb0hFTVNsTUZkUHJtSGk0SUJPMjhmLS1IVg?oc=5",
-      "published_at": "2026-09-21T04:46:51+00:00",
       "topic": "IPO News",
       "ipo_name": "National Stock Exchange of India Limited",
       "ipo_status": "open"
@@ -671,9 +673,9 @@
       "ipo_status": "upcoming"
     },
     {
-      "title": "Varmora Granito IPO To Make Its Market Debut; Issue To Open On September 22. - tripurastarnews.com",
+      "title": "Varmora Granito IPO To Make Its Market Debut; Issue To Open On September 22. - TRIPURA STAR NEWS",
       "date": "2026-09-18",
-      "source": "tripurastarnews.com",
+      "source": "TRIPURA STAR NEWS",
       "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPVW5MWlJVdjN2eUNDZlBiMjBrWnVfNUFnekY0Vk0xbVN2ZmxXM01JdG4wTmNHR21KSTdFUXItemRXOXh2Vmo4YUlNc3JrQUNleDdrdjVXQ1NlMjF0b1ZxSVQ2Y2V6VW0wVjFkNW5UQUo3TlpGUWdOVTZOWXUyeEhXem1YRU9sYkp4ZjBNOVdpdmV5ZnJHcS1MYVRPWGVuV3Q1X0VCQ3hnODZkSEE?oc=5",
       "published_at": "2026-09-18T14:13:41+00:00",
       "topic": "IPO News",
