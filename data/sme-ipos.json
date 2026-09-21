@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T17:54:53.810572+05:30",
+  "updated_at": "2026-09-21T18:41:56.292632+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -42,6 +42,14 @@
       "status": "upcoming"
     },
     {
+      "company": "Liqvd Digital India Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "23/09/26",
+      "close_date": "—",
+      "issue_size": "₹39.01 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Unitec Fibres Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "23/09/26",
@@ -55,22 +63,6 @@
       "open_date": "23/09/26",
       "close_date": "—",
       "issue_size": "₹29.06 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Sai Urja Indo Ventures Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "23/09/26",
-      "close_date": "—",
-      "issue_size": "₹24.95 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Himalaya Nutravedics India Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "22/09/26",
-      "close_date": "—",
-      "issue_size": "₹26.5 Cr",
       "status": "upcoming"
     }
   ]

@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T12:25:26.449292+00:00",
+  "generated_at": "2026-09-21T13:12:24.667020+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T17:54:53.810572+05:30",
+  "data_updated_at": "2026-09-21T18:41:56.292632+05:30",
   "ipo_count": 16,
   "field_coverage_pct": 31.5,
   "sources": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T12:23:57.155437+00:00",
+      "checked_at": "2026-09-21T13:09:18.600938+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T12:23:59.716272+00:00"
+      "checked_at": "2026-09-21T13:09:21.245426+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T12:24:37.842153+00:00",
+      "checked_at": "2026-09-21T13:11:37.566202+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,21 +103,21 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T12:24:37.884381+00:00"
+      "checked_at": "2026-09-21T13:11:37.621494+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T12:24:37.911917+00:00"
+      "checked_at": "2026-09-21T13:11:37.659439+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T12:24:37.997712+00:00",
+      "checked_at": "2026-09-21T13:11:37.776914+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 102,
+          "records": 99,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -132,7 +132,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 66,
+          "records": 62,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T12:24:37.997712+00:00"
+      "checked_at": "2026-09-21T13:11:37.776914+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T17:54:53.810572+05:30",
+      "checked_at": "2026-09-21T18:41:56.292632+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -496,6 +496,62 @@
       }
     },
     {
+      "id": "adroit-industries-india-ltd-mainboard",
+      "name": "Adroit Industries (India) Ltd. Mainboard",
+      "fingerprint": "013c2882ba273085",
+      "fields": {
+        "price": "₹126 – ₹134",
+        "size": "₹150.71 Cr",
+        "lot": "111",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "liqvd-digital-india-ltd-sme",
+      "name": "Liqvd Digital India Ltd. SME",
+      "fingerprint": "5e1cd574d32fbb1b",
+      "fields": {
+        "price": "₹51 – ₹54",
+        "size": "₹39.01 Cr",
+        "lot": "2000",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "unitec-fibres-ltd-sme",
       "name": "Unitec Fibres Ltd. SME",
       "fingerprint": "aeda6b091fb127ef",
@@ -532,62 +588,6 @@
         "size": "₹29.06 Cr",
         "lot": "1000",
         "open": "23/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "sai-urja-indo-ventures-ltd-sme",
-      "name": "Sai Urja Indo Ventures Ltd. SME",
-      "fingerprint": "60173f5659098e49",
-      "fields": {
-        "price": "₹107 – ₹113",
-        "size": "₹24.95 Cr",
-        "lot": "1200",
-        "open": "23/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "himalaya-nutravedics-india-ltd-sme",
-      "name": "Himalaya Nutravedics India Ltd. SME",
-      "fingerprint": "02499861792a9706",
-      "fields": {
-        "price": "₹100 – ₹106",
-        "size": "₹26.5 Cr",
-        "lot": "1200",
-        "open": "22/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -689,16 +689,16 @@
     {
       "date": "2026-09-22",
       "type": "OPEN",
-      "ipo_id": "himalaya-nutravedics-india-ltd-sme",
-      "name": "Himalaya Nutravedics India Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "OPEN",
       "ipo_id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "adroit-industries-india-ltd-mainboard",
+      "name": "Adroit Industries (India) Ltd. Mainboard",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-23",
@@ -724,6 +724,13 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
+      "ipo_id": "liqvd-digital-india-ltd-sme",
+      "name": "Liqvd Digital India Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
       "ipo_id": "pooja-logistics-limited",
       "name": "Pooja Logistics Limited",
       "source": "NSE"
@@ -733,13 +740,6 @@
       "type": "OPEN",
       "ipo_id": "s-k-offset-ltd-sme",
       "name": "S. K. Offset Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "OPEN",
-      "ipo_id": "sai-urja-indo-ventures-ltd-sme",
-      "name": "Sai Urja Indo Ventures Ltd. SME",
       "source": "Economic Times"
     },
     {
@@ -779,6 +779,28 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T13:12:24.667020+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "adroit-industries-india-ltd-mainboard",
+        "name": "Adroit Industries (India) Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-21T13:12:24.667020+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "liqvd-digital-india-ltd-sme",
+        "name": "Liqvd Digital India Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-21T12:25:26.449292+00:00",
       "type": "DATA_CHANGE",
