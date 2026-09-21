@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T07:22:57.571902+00:00",
+  "generated_at": "2026-09-21T07:37:01.845542+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T12:52:25.817280+05:30",
-  "ipo_count": 13,
-  "field_coverage_pct": 31.1,
+  "data_updated_at": "2026-09-21T13:06:31.920334+05:30",
+  "ipo_count": 15,
+  "field_coverage_pct": 29.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,7 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "IPODose: HTTP Error 525: <none>"
       ]
     },
     "NEWS": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T07:21:46.407351+00:00",
+      "checked_at": "2026-09-21T07:35:56.280649+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -67,9 +67,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 7,
+          "records": 9,
           "matched": 1,
-          "added": 6,
+          "added": 8,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -84,15 +84,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 13,
+      "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T07:21:48.992097+00:00"
+      "checked_at": "2026-09-21T07:35:58.115022+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T07:22:11.344207+00:00",
+      "checked_at": "2026-09-21T07:36:17.056908+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T07:22:11.484585+00:00"
+      "checked_at": "2026-09-21T07:36:17.129202+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T07:22:11.516191+00:00"
+      "checked_at": "2026-09-21T07:36:17.178702+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T07:22:11.714558+00:00",
+      "checked_at": "2026-09-21T07:36:17.330618+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 65,
+          "records": 66,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T07:22:11.714558+00:00"
+      "checked_at": "2026-09-21T07:36:17.330618+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30",
+      "checked_at": "2026-09-21T13:06:31.920334+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -152,7 +152,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 8,
+      "upcoming_filing_map": 10,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -383,6 +383,34 @@
       }
     },
     {
+      "id": "elevate-campuses-ltd-mainboard",
+      "name": "Elevate Campuses Ltd. Mainboard",
+      "fingerprint": "b48d1d0de96de2a3",
+      "fields": {
+        "price": "₹343 – ₹362",
+        "size": "₹2,100 Cr",
+        "lot": "41",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "armee-infotech-ltd-mainboard",
       "name": "ArMee Infotech Ltd. Mainboard",
       "fingerprint": "3924f5e84112086b",
@@ -390,6 +418,34 @@
         "price": "₹350 – ₹375",
         "size": "₹300 Cr",
         "lot": "40",
+        "open": "23/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "swastika-infra-ltd-mainboard",
+      "name": "Swastika Infra Ltd. Mainboard",
+      "fingerprint": "9fe111268ceb1ad5",
+      "fields": {
+        "price": "₹175 – ₹185",
+        "size": "₹161.38 Cr",
+        "lot": "81",
         "open": "23/09/26",
         "close": "—",
         "allotment": null,
@@ -632,6 +688,13 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
+      "ipo_id": "elevate-campuses-ltd-mainboard",
+      "name": "Elevate Campuses Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
       "ipo_id": "pooja-logistics-limited",
       "name": "Pooja Logistics Limited",
       "source": "NSE"
@@ -651,6 +714,13 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "swastika-infra-ltd-mainboard",
+      "name": "Swastika Infra Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
@@ -666,6 +736,28 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T07:37:01.845542+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "elevate-campuses-ltd-mainboard",
+        "name": "Elevate Campuses Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-21T07:37:01.845542+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "swastika-infra-ltd-mainboard",
+        "name": "Swastika Infra Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-19T12:40:32.115388+00:00",
       "type": "DATA_CHANGE",

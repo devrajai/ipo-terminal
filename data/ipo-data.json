@@ -1,6 +1,6 @@
 {
   "source": "multi-source-live-gmp",
-  "updated_at": "2026-09-21T12:52:25.817280+05:30",
+  "updated_at": "2026-09-21T13:06:31.920334+05:30",
   "sources": {
     "NSE": {
       "ok": true,
@@ -28,7 +28,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "IPODose: HTTP Error 525: <none>"
       ]
     },
     "NEWS": {
@@ -45,7 +45,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T07:21:46.407351+00:00",
+      "checked_at": "2026-09-21T07:35:56.280649+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -63,9 +63,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 7,
+          "records": 9,
           "matched": 1,
-          "added": 6,
+          "added": 8,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -80,15 +80,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 13,
+      "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T07:21:48.992097+00:00"
+      "checked_at": "2026-09-21T07:35:58.115022+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T07:22:11.344207+00:00",
+      "checked_at": "2026-09-21T07:36:17.056908+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -98,17 +98,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T07:22:11.484585+00:00"
+      "checked_at": "2026-09-21T07:36:17.129202+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T07:22:11.516191+00:00"
+      "checked_at": "2026-09-21T07:36:17.178702+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T07:22:11.714558+00:00",
+      "checked_at": "2026-09-21T07:36:17.330618+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -127,7 +127,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 65,
+          "records": 66,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -136,11 +136,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T07:22:11.714558+00:00"
+      "checked_at": "2026-09-21T07:36:17.330618+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30",
+      "checked_at": "2026-09-21T13:06:31.920334+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -148,7 +148,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 8,
+      "upcoming_filing_map": 10,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -192,7 +192,7 @@
       "gmp_stale": true,
       "video_evidence": "Transcript says the IPO price band is ₹1,700–₹1,785, lot size 8, so one lot at the upper price is ₹14,280. It describes 100% OFS, expected opening 17 Sep 2026, closing 21 Sep 2026, allotment 22 Sep, refunds/shares 23 Sep and listing 24 Sep. The speaker's view is to apply for the long term, while not expecting an unusually high listing gain; the transcript gives a rough 10–20% listing-gain expectation and warns that large IPO supply can pressure listing. These are source opinions, not guarantees.",
       "video_evidence_source": "user-provided NSE IPO transcript",
-      "video_evidence_updated_at": "2026-09-21T07:22:11.516177+00:00",
+      "video_evidence_updated_at": "2026-09-21T07:36:17.178684+00:00",
       "allotment": "22/09/26",
       "refund": "23/09/26",
       "shares": "23/09/26",
@@ -200,7 +200,7 @@
       "qib": "50%",
       "hni": "15%",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "sonaselection-india-limited",
@@ -239,7 +239,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "axiom-gas-engineering-limited",
@@ -274,7 +274,7 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_stale": false,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "kheria-autocomp-limited",
@@ -313,7 +313,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "spectraa-technology-solutions-limited",
@@ -352,7 +352,7 @@
       "gmp_source_updated_at": null,
       "gmp_stale": true,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "varmora-granito-limited",
@@ -388,7 +388,7 @@
       "gmp_stale": false,
       "min_investment": "₹14,948",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "pooja-logistics-limited",
@@ -423,7 +423,7 @@
       "source_url": "https://www.nseindia.com/market-data/all-upcoming-issues-ipo",
       "gmp_stale": false,
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "a-one-steels-india-ltd-mainboard",
@@ -457,7 +457,41 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
+    },
+    {
+      "id": "elevate-campuses-ltd-mainboard",
+      "name": "Elevate Campuses Ltd. Mainboard",
+      "type": "Mainboard",
+      "price": "₹343 – ₹362",
+      "lot": "41",
+      "size": "₹2,100 Cr",
+      "open": "23/09/26",
+      "close": "—",
+      "listing": "—",
+      "sub": "—",
+      "gmp": "—",
+      "gmp_pct": "—",
+      "est_list": "—",
+      "sector": "—",
+      "fresh": "—",
+      "ofs": "—",
+      "pe": "—",
+      "roe": "—",
+      "roce": "—",
+      "rev": "—",
+      "pat": "—",
+      "ebitda": "—",
+      "de": "—",
+      "growth": "—",
+      "prom": "—",
+      "status": "upcoming",
+      "exchange": "NSE/BSE",
+      "symbol": "",
+      "source": "Economic Times",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
+      "status_auto": true,
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "armee-infotech-ltd-mainboard",
@@ -491,7 +525,41 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
+    },
+    {
+      "id": "swastika-infra-ltd-mainboard",
+      "name": "Swastika Infra Ltd. Mainboard",
+      "type": "Mainboard",
+      "price": "₹175 – ₹185",
+      "lot": "81",
+      "size": "₹161.38 Cr",
+      "open": "23/09/26",
+      "close": "—",
+      "listing": "—",
+      "sub": "—",
+      "gmp": "—",
+      "gmp_pct": "—",
+      "est_list": "—",
+      "sector": "—",
+      "fresh": "—",
+      "ofs": "—",
+      "pe": "—",
+      "roe": "—",
+      "roce": "—",
+      "rev": "—",
+      "pat": "—",
+      "ebitda": "—",
+      "de": "—",
+      "growth": "—",
+      "prom": "—",
+      "status": "upcoming",
+      "exchange": "NSE/BSE",
+      "symbol": "",
+      "source": "Economic Times",
+      "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
+      "status_auto": true,
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "s-k-offset-ltd-sme",
@@ -525,7 +593,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "sai-urja-indo-ventures-ltd-sme",
@@ -559,7 +627,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "himalaya-nutravedics-india-ltd-sme",
@@ -593,7 +661,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "id": "anand-seamless-ltd-sme",
@@ -627,7 +695,7 @@
       "source": "Economic Times",
       "source_url": "https://economictimes.indiatimes.com/markets/ipo/upcoming",
       "status_auto": true,
-      "status_checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "status_checked_at": "2026-09-21T13:06:31.920334+05:30"
     }
   ],
   "listed": [],

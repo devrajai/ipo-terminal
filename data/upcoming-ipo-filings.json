@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-21T12:52:25.817280+05:30",
+  "generated_at": "2026-09-21T13:06:31.920334+05:30",
   "source": "IPO Terminal self-heal official-source checker",
-  "count": 8,
+  "count": 10,
   "ipos": [
     {
       "ipo_name": "Varmora Granito Limited",
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "Pooja Logistics Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "A-One Steels India Ltd. Mainboard",
@@ -40,7 +40,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
+    },
+    {
+      "ipo_name": "Elevate Campuses Ltd. Mainboard",
+      "id": "elevate-campuses-ltd-mainboard",
+      "type": "Mainboard",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "23/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "ArMee Infotech Ltd. Mainboard",
@@ -53,7 +66,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
+    },
+    {
+      "ipo_name": "Swastika Infra Ltd. Mainboard",
+      "id": "swastika-infra-ltd-mainboard",
+      "type": "Mainboard",
+      "exchange": "NSE/BSE",
+      "status": "upcoming",
+      "open": "23/09/26",
+      "close": "—",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "S. K. Offset Ltd. SME",
@@ -66,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "Sai Urja Indo Ventures Ltd. SME",
@@ -79,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "Himalaya Nutravedics India Ltd. SME",
@@ -92,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     },
     {
       "ipo_name": "Anand Seamless Ltd. SME",
@@ -105,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-21T12:52:25.817280+05:30"
+      "checked_at": "2026-09-21T13:06:31.920334+05:30"
     }
   ]
 }
