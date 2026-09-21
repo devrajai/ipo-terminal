@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T20:07:38.272033+00:00",
+  "generated_at": "2026-09-21T20:20:43.573204+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T01:37:03.354318+05:30",
+  "data_updated_at": "2026-09-22T01:50:07.523284+05:30",
   "ipo_count": 15,
-  "field_coverage_pct": 22.9,
+  "field_coverage_pct": 22.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -31,22 +31,14 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
-      ]
+      "errors": []
     },
     "NEWS": {
       "ok": true,
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": [
-        "\"Varmora Granito Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Axiom Gas Engineering Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Sonaselection India Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"National Stock Exchange of India Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"ArMee Infotech Limited\" IPO India: HTTP Error 503: Service Unavailable"
-      ]
+      "errors": []
     },
     "LISTED": {
       "ok": true,
@@ -55,7 +47,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T20:06:08.849141+00:00",
+      "checked_at": "2026-09-21T20:19:36.506293+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -67,7 +59,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 6,
+          "matched": 5,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -93,12 +85,12 @@
       "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T20:06:11.695708+00:00"
+      "checked_at": "2026-09-21T20:19:38.814830+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T20:06:16.734083+00:00",
+      "checked_at": "2026-09-21T20:19:54.038909+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -108,41 +100,37 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T20:06:16.783624+00:00"
+      "checked_at": "2026-09-21T20:19:54.112804+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T20:06:16.819884+00:00"
+      "checked_at": "2026-09-21T20:19:54.168416+00:00"
     },
     "LiveNews": {
-      "ok": false,
-      "records": 0,
-      "checked_at": "2026-09-21T20:06:16.920049+00:00",
+      "ok": true,
+      "records": 200,
+      "checked_at": "2026-09-21T20:19:54.319301+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 102,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · RHP DRHP": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 62,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
     },
@@ -150,11 +138,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T20:06:16.920049+00:00"
+      "checked_at": "2026-09-21T20:19:54.319301+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T01:37:03.354318+05:30",
+      "checked_at": "2026-09-22T01:50:07.523284+05:30",
       "status_repairs": 2,
       "sme_added": 0,
       "filings": {
@@ -171,13 +159,13 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "9e38b4fb307b46ae",
+      "fingerprint": "8231bce145cc8c30",
       "fields": {
         "price": "₹140-148",
-        "size": "708.02",
+        "size": "—",
         "lot": "—",
         "open": "22/09/26",
-        "close": "Sep 24, 2026",
+        "close": "24/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -718,6 +706,13 @@
     },
     {
       "date": "2026-09-24",
+      "type": "CLOSE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
@@ -739,6 +734,27 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T20:20:43.573204+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-21T20:20:43.573204+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "CLOSE",
+        "ipo_id": "varmora-granito-limited",
+        "name": "Varmora Granito Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-21T20:07:38.272033+00:00",
       "type": "DATA_CHANGE",
