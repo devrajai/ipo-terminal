@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T10:06:45.840599+00:00",
+  "generated_at": "2026-09-21T11:03:48.615548+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T15:36:16.750840+05:30",
-  "ipo_count": 15,
-  "field_coverage_pct": 21.9,
+  "data_updated_at": "2026-09-21T16:33:17.098175+05:30",
+  "ipo_count": 16,
+  "field_coverage_pct": 29.8,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 8,
+      "records": 10,
       "errors": []
     },
     "BSE": {
@@ -32,7 +32,8 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "LiveGMP: <urlopen error [Errno 104] Connection reset by peer>"
       ]
     },
     "NEWS": {
@@ -40,7 +41,13 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": []
+      "errors": [
+        "\"National Stock Exchange of India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Sonaselection India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Axiom Gas Engineering Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Kheria Autocomp Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"SpectraA Technology Solutions Limited\" IPO India: HTTP Error 503: Service Unavailable"
+      ]
     },
     "LISTED": {
       "ok": true,
@@ -49,7 +56,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T10:05:36.089123+00:00",
+      "checked_at": "2026-09-21T11:02:16.162480+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -61,15 +68,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 3,
+          "matched": 4,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
           "records": 9,
-          "matched": 2,
-          "added": 7,
+          "matched": 3,
+          "added": 6,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -84,15 +91,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 15,
+      "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T10:05:38.286876+00:00"
+      "checked_at": "2026-09-21T11:02:18.746448+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T10:06:01.338056+00:00",
+      "checked_at": "2026-09-21T11:02:30.548505+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,37 +109,41 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T10:06:01.412388+00:00"
+      "checked_at": "2026-09-21T11:02:30.592217+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T10:06:01.461035+00:00"
+      "checked_at": "2026-09-21T11:02:30.622027+00:00"
     },
     "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-21T10:06:01.611808+00:00",
+      "ok": false,
+      "records": 0,
+      "checked_at": "2026-09-21T11:02:30.711798+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 65,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         }
       }
     },
@@ -140,11 +151,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T10:06:01.611808+00:00"
+      "checked_at": "2026-09-21T11:02:30.711798+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T15:36:16.750840+05:30",
+      "checked_at": "2026-09-21T16:33:17.098175+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -152,7 +163,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 10,
+      "upcoming_filing_map": 11,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -189,7 +200,7 @@
     {
       "id": "sonaselection-india-limited",
       "name": "Sonaselection India Limited",
-      "fingerprint": "20677751d7436fe0",
+      "fingerprint": "178228f79647c6cf",
       "fields": {
         "price": "₹94-99",
         "size": "₹0 Cr",
@@ -206,10 +217,10 @@
         "gmp_pct": "+1.0%",
         "est_list": "₹100",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "39.05%",
+        "roce": "19.69%",
+        "growth": "64%",
+        "de": "2.48",
         "fresh": "—",
         "ofs": "—"
       }
@@ -217,7 +228,7 @@
     {
       "id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
-      "fingerprint": "1d35fbc0304b2149",
+      "fingerprint": "296c1fe75fecfb52",
       "fields": {
         "price": "—",
         "size": "—",
@@ -234,10 +245,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "28.40%",
+        "roce": "28.90%",
+        "growth": "12%",
+        "de": "0.48",
         "fresh": "—",
         "ofs": "—"
       }
@@ -245,7 +256,7 @@
     {
       "id": "kheria-autocomp-limited",
       "name": "Kheria Autocomp Limited",
-      "fingerprint": "944106398f7d9331",
+      "fingerprint": "efd9b4199d99f791",
       "fields": {
         "price": "—",
         "size": "—",
@@ -262,10 +273,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "33.72%",
+        "roce": "26.89%",
+        "growth": "30%",
+        "de": "0.89",
         "fresh": "—",
         "ofs": "—"
       }
@@ -273,7 +284,7 @@
     {
       "id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "fingerprint": "81e0ea2409ac4bee",
+      "fingerprint": "7477b7fcd6039570",
       "fields": {
         "price": "—",
         "size": "—",
@@ -290,10 +301,38 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
+        "roe": "60.95%",
+        "roce": "37.61%",
+        "growth": "36%",
+        "de": "1.09",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fingerprint": "ba6b59f0a5f98ac1",
+      "fields": {
+        "price": "₹343 – ₹362",
+        "size": "₹2,100 Cr",
+        "lot": "41",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
         "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roce": "6.42%",
+        "growth": "53%",
+        "de": "4.98",
         "fresh": "—",
         "ofs": "—"
       }
@@ -301,7 +340,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "92980d1cedee55dc",
+      "fingerprint": "8523f18c3c656796",
       "fields": {
         "price": "₹175 – ₹185",
         "size": "₹161.38 Cr",
@@ -318,10 +357,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "35.44%",
+        "roce": "25.76%",
+        "growth": "43%",
+        "de": "0.73",
         "fresh": "—",
         "ofs": "—"
       }
@@ -329,13 +368,41 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "e647454749defff8",
+      "fingerprint": "d8f3c0047511b137",
       "fields": {
         "price": "₹140 – ₹148",
         "size": "₹708.02 Cr",
         "lot": "101",
         "open": "22/09/26",
         "close": "Sep 24, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "6.80%",
+        "roce": "9.89%",
+        "growth": "5%",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "coreintegra-consulting-services-limited",
+      "name": "Coreintegra Consulting Services Limited",
+      "fingerprint": "9ec90b84b183a7a4",
+      "fields": {
+        "price": "₹74-78",
+        "size": "₹22 Cr",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "25/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -391,34 +458,6 @@
         "size": "₹405 Cr",
         "lot": "37",
         "open": "24/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "elevate-campuses-ltd-mainboard",
-      "name": "Elevate Campuses Ltd. Mainboard",
-      "fingerprint": "b48d1d0de96de2a3",
-      "fields": {
-        "price": "₹343 – ₹362",
-        "size": "₹2,100 Cr",
-        "lot": "41",
-        "open": "23/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -688,9 +727,16 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "elevate-campuses-ltd-mainboard",
-      "name": "Elevate Campuses Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "coreintegra-consulting-services-limited",
+      "name": "Coreintegra Consulting Services Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-23",
@@ -733,9 +779,120 @@
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
       "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "coreintegra-consulting-services-limited",
+      "name": "Coreintegra Consulting Services Limited",
+      "source": "NSE"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "sonaselection-india-limited",
+      "name": "Sonaselection India Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "kheria-autocomp-limited",
+      "name": "Kheria Autocomp Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "spectraa-technology-solutions-limited",
+      "name": "SpectraA Technology Solutions Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "coreintegra-consulting-services-limited",
+        "name": "Coreintegra Consulting Services Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "elevate-campuses-limited",
+        "name": "Elevate Campuses Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-21T11:03:48.615548+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "CLOSE",
+        "ipo_id": "coreintegra-consulting-services-limited",
+        "name": "Coreintegra Consulting Services Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-21T10:06:45.840599+00:00",
       "type": "NEW_EVENT",

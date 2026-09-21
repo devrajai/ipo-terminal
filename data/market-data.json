@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T10:04:03.083053+00:00",
+  "updated_at": "2026-09-21T11:00:33.861925+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -27,7 +27,7 @@
       "symbol": "INDIA VIX",
       "price": 11.26,
       "change": -0.13,
-      "change_pct": -1.09
+      "change_pct": -1.07
     },
     {
       "name": "Nifty Midcap 100",
@@ -100,15 +100,7 @@
       "change_pct": 0.14
     }
   ],
-  "world": [
-    {
-      "price": 51682.64,
-      "change": -95.36,
-      "change_pct": -0.18,
-      "name": "Dow Jones (US)",
-      "symbol": "^DJI"
-    }
-  ],
+  "world": [],
   "commodities": [],
   "fx": [
     {

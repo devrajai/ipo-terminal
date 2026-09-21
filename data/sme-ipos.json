@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T15:36:16.750840+05:30",
+  "updated_at": "2026-09-21T16:33:17.098175+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -24,6 +24,14 @@
       "close_date": "21/09/26",
       "issue_size": "—",
       "status": "open"
+    },
+    {
+      "company": "Coreintegra Consulting Services Limited",
+      "exchange": "NSE",
+      "open_date": "23/09/26",
+      "close_date": "25/09/26",
+      "issue_size": "₹22 Cr",
+      "status": "upcoming"
     },
     {
       "company": "Pooja Logistics Limited",
