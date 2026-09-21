@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T02:38:27.639785+00:00",
+  "generated_at": "2026-09-21T02:46:06.067940+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T08:08:00.273533+05:30",
+  "data_updated_at": "2026-09-21T08:15:39.310402+05:30",
   "ipo_count": 13,
   "field_coverage_pct": 31.1,
   "sources": {
@@ -32,10 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Chittorgarh: HTTP Error 522: <none>",
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "IPODose: HTTP Error 525: <none>",
-        "IPOGram: HTTP Error 522: <none>"
+        "Moneycontrol: HTTP Error 404: Not Found"
       ]
     },
     "NEWS": {
@@ -52,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T02:33:59.754712+00:00",
+      "checked_at": "2026-09-21T02:45:11.202592+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -90,12 +87,12 @@
       "records": 13,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T02:34:03.815506+00:00"
+      "checked_at": "2026-09-21T02:45:12.927676+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T02:37:47.026838+00:00",
+      "checked_at": "2026-09-21T02:45:25.442876+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -105,21 +102,21 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T02:37:47.095337+00:00"
+      "checked_at": "2026-09-21T02:45:25.509700+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T02:37:47.143582+00:00"
+      "checked_at": "2026-09-21T02:45:25.554095+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T02:37:47.285457+00:00",
+      "checked_at": "2026-09-21T02:45:25.692800+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 104,
+          "records": 100,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -143,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T02:37:47.285457+00:00"
+      "checked_at": "2026-09-21T02:45:25.692800+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T08:08:00.273533+05:30",
+      "checked_at": "2026-09-21T08:15:39.310402+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
