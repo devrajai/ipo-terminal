@@ -1,0 +1,7 @@
+Setting,Value,Notes
+Primary Source,Chittorgarh,"IPO lists, dates, subscription data"
+Secondary Source,NSE India,Official backup source
+GMP Source,Grey market aggregators,Unofficial data - always verify
+Auto Archive,Yes,Listed IPOs move to the Listed tab automatically
+Trigger,Daily 8-9 AM IST,Set via Apps Script Triggers (see Dashboard)
+Disclaimer,GMP and estimates are indicative only. Verify with RHP before investing.,
