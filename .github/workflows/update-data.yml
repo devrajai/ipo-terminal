@@ -178,6 +178,9 @@ jobs:
           echo "link_health_exit=$?"
           exit 0
 
+      - name: Merge Google Sheet IPO Tracker data
+        run: python scripts/sync_sheet_to_site.py || echo "sheet merge skipped"
+
       - name: Save timestamp only after valid data
         run: echo '{"updated":"'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"}' > data/last-updated.json
 
