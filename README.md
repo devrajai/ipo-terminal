@@ -4,6 +4,12 @@ A continuously updating research terminal for Indian Mainboard and SME IPOs — 
 
 **Live:** https://devrajai.github.io/ipo-terminal/
 
+> **Repo consolidation (2026-09-21):** This is now the single IPO repository. The former
+> `ipo-tracker-india` (Google Sheets tracker) and `ipo-website` (Notion-based tracker)
+> repos were merged in — see [`archive/`](./archive/) for what was preserved, and the
+> `notion-fetch.yml` + `scripts/fetch-notion.mjs` + `data/notion-data.json` pipeline
+> that replaced the ipo-website data feed.
+
 ## What's on the terminal
 
 - **Open / Upcoming / Closed IPO cards** — dates, price band, lot size, issue size, GMP with computed GMP %, subscription, and one-click actions:
@@ -31,6 +37,18 @@ GitHub Pages  (index.html + data, deployed on every push)
 IPO Terminal
 ```
 
+### Notion pipeline (merged from ipo-website)
+
+```
+Notion "IPO Tracker" database
+        │  scripts/fetch-notion.mjs   (GitHub Actions, daily 08:30 IST — notion-fetch.yml)
+        ▼
+data/notion-data.json
+        │  scripts/sync_from_pipeline.py  (daily 09:00 IST — notion-pipeline-sync.yml)
+        ▼
+data/ipos.json + subscriptions.json + listed.json
+```
+
 ## Self-healing links
 
 `scripts/link_health.py` runs inside the 15-minute pipeline:
@@ -44,7 +62,7 @@ IPO Terminal
 
 The GMP Live tab runs on repository data by default. To connect a live Google Sheet feed:
 
-1. In the **IPO Tracker - India** spreadsheet: Extensions > Apps Script, make sure `IPO_Tracker_API.gs` (from the [ipo-tracker-india](https://github.com/devrajai/ipo-tracker-india) repo) is in the project.
+1. In the **IPO Tracker - India** spreadsheet: Extensions > Apps Script, make sure `IPO_Tracker_API.gs` (from this repo's `apps-script/IPO_Tracker_AllInOne.gs` — the single-file merged version) is in the project.
 2. Deploy > New deployment > Web app — Execute as: Me, Who has access: Anyone.
 3. Paste the `/exec` URL into `feed_url` in `data/feed-config.json` and commit.
 
@@ -76,6 +94,7 @@ companion of this repository's Python pipeline:
   every 30 minutes
 
 Install: Extensions > Apps Script in the Sheet, paste the file, run
-`updateAll` once, then `installAllTriggers` once. The two systems share the
-same free sources: the Python pipeline feeds the website, the Apps Script
-feeds the Google Sheet.
+`updateAll` once, then `installAllTriggers` once.
+
+The two systems share the same free sources: the Python pipeline feeds the
+website, the Apps Script feeds the Google Sheet.
