@@ -14,7 +14,7 @@ Dev's personal all-in-one India IPO + market terminal. Free forever. Mobile-firs
 - Sarvam AI assistant is the ONLY developer on this project (no GPT, no other AI).
 - Dev is on a weekly message limit: be efficient, build in phases, never redo work.
 
-## Architecture — Two Ways (both free)
+## Architecture — Three Ways (all free)
 1. WAY 1 — GitHub Actions auto-refresh every 5 min: .github/workflows/update-ipo-data.yml
    - scripts/update_data.py — IPO data from NSE/BSE/SEBI public sources
    - scripts/fetch_market_data.py — India indices (NSE allIndices API), world indices/commodities/FX (Yahoo chart API with 0.6s delay, Stooq and Frankfurter fallbacks), plus Google Sheet bridge (GOOGLE_SHEET_ID)
@@ -28,12 +28,17 @@ Dev's personal all-in-one India IPO + market terminal. Free forever. Mobile-firs
    - .github/workflows/notion-fetch.yml is DISABLED (its NOTION_TOKEN secret died with the deleted ipo-website repo; repo has no secrets — do NOT rely on repo secrets)
    - notion-pipeline-sync.yml (09:00 IST) then merges notion-data.json into data/ipos.json + listed.json
    - Old repos ipo-website + ipo-tracker-india were merged into archive/ on 21/09/26 and deleted — do not reference their raw URLs
+4. WAY 4 — Telegram (free, no limits)
+   - Daily IPO digest 8:45 AM IST: market-brain repo .github/workflows/telegram-ipo.yml + scripts/telegram_ipo.py
+   - Runs in devrajai/market-brain (which has TG_TOKEN + TG_CHAT_ID secrets); reads ipo-terminal data via public raw URLs — no secrets needed here
+   - Message: closes today / allotment & listing today / open now with GMP* + sub / opening soon (+5d)
 
 ## Current Status (updated 21/09/2026)
 - Website live with 5-min auto data refresh; market data pipeline live (Way 1 + Way 2)
 - Daily brain run cron scheduled 6:30 PM IST: research IPO news, fix stale data, deliver digest
-- Pro Tools (scripts/ipo-protools.js) now has 6 tabs: Calculator (NEW 21/09/26 — Apply Cost / GMP Return / P&L, IPO dropdown auto-filled from live ipo-data.json, default tab), Track Record, My Apps, Planner, Calendar, Why & Sources
+- Pro Tools (scripts/ipo-protools.js) has 6 tabs: Calculator (21/09/26 — Apply Cost / GMP Return / P&L, IPO dropdown auto-filled from live ipo-data.json), Track Record, My Apps, Planner, Calendar, Why & Sources
 - 21/09/26 evening: repo consolidation done (2 old repos merged in); Open-list board filter (Mainboard first, then SME + filter pills) live in scripts/ipo-forecast.js; Notion sync moved from GitHub Actions to Sarvam (Way 3)
+- 21/09/26 night: tap any IPO name on the site → full detail sheet (GMP, dates, subscription, fundamentals, RHP/allotment links) — IIFE __IPODT in scripts/ipo-forecast.js; Telegram IPO digest live (Way 4, first sent 21/09 20:02 IST)
 - Next: Phase 1 — Screener layer (Nifty 500: PE, PB, ROE, ROCE, D/E, promoter/DII/FII holding, EMA 20/200, RSI, MACD, 52w/200d high-low)
 
 ## Roadmap (one phase at a time — never all at once)
@@ -50,6 +55,7 @@ Dev's personal all-in-one India IPO + market terminal. Free forever. Mobile-firs
 - Public sheet CSV: https://docs.google.com/spreadsheets/d/{ID}/gviz/tq?tqx=out:csv&sheet=TabName
 - GitHub contents API GET fails on .github/ paths — fetch blob by SHA instead
 - Sandbox: keep build scripts in /workspace/notes/ (durable); /scratch/work is wiped on restart
+- Site's inline script: state is a const (global LEXICAL scope, NOT on window) — access via bare identifiers (state, groups, ipoCard, esc, date, status), never window.state; assign overrides to window.renderOpen (function declarations ARE on window)
 
 ## Conventions
 - data JSONs in data/, scripts in scripts/, commit prefixes feat:/chore:/fix:
