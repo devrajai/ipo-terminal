@@ -9,6 +9,32 @@
    "d": "2026-09-20",
    "model": "naive-fallback",
    "ipos": {}
+  },
+  {
+   "d": "2026-09-21",
+   "model": "timesfm-3.0",
+   "ipos": {
+    "Kheria Autocomp Limited": {
+     "mid": 10.0,
+     "low": 10.0,
+     "high": 10.0
+    },
+    "National Stock Exchange of India Limited": {
+     "mid": 148.0,
+     "low": 148.0,
+     "high": 148.0
+    },
+    "Sonaselection India Limited": {
+     "mid": 2.0,
+     "low": 2.0,
+     "high": 2.0
+    },
+    "SpectraA Technology Solutions Limited": {
+     "mid": 30.0,
+     "low": 30.0,
+     "high": 30.0
+    }
+   }
   }
  ]
 }
