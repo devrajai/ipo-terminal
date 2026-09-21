@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T17:25:20.531736+05:30",
+  "updated_at": "2026-09-21T17:35:55.393549+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -38,7 +38,7 @@
       "exchange": "NSE",
       "open_date": "23/09/26",
       "close_date": "Sep 25, 2026",
-      "issue_size": "44.23",
+      "issue_size": "₹44.23 Cr",
       "status": "upcoming"
     },
     {
@@ -71,14 +71,6 @@
       "open_date": "22/09/26",
       "close_date": "—",
       "issue_size": "₹26.5 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Anand Seamless Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "22/09/26",
-      "close_date": "—",
-      "issue_size": "₹25.52 Cr",
       "status": "upcoming"
     }
   ]

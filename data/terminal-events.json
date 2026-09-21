@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T11:56:00.495522+00:00",
+  "generated_at": "2026-09-21T12:06:30.023602+00:00",
   "events": [
     {
       "date": "2026-09-21",
@@ -43,13 +43,6 @@
       "ipo_id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
       "source": "NSE"
-    },
-    {
-      "date": "2026-09-22",
-      "type": "OPEN",
-      "ipo_id": "anand-seamless-ltd-sme",
-      "name": "Anand Seamless Ltd. SME",
-      "source": "Economic Times"
     },
     {
       "date": "2026-09-22",
