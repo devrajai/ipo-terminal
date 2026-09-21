@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T19:49:46.194148+00:00",
+  "generated_at": "2026-09-21T19:57:26.070767+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T01:19:18.534580+05:30",
+  "data_updated_at": "2026-09-22T01:27:02.278369+05:30",
   "ipo_count": 15,
-  "field_coverage_pct": 22.9,
+  "field_coverage_pct": 22.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,7 +32,8 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "GMPWatch: The read operation timed out"
       ]
     },
     "NEWS": {
@@ -49,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T19:49:01.130306+00:00",
+      "checked_at": "2026-09-21T19:56:43.718915+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -61,7 +62,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 6,
+          "matched": 5,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -87,12 +88,12 @@
       "records": 15,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T19:49:03.131044+00:00"
+      "checked_at": "2026-09-21T19:56:45.585213+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T19:49:05.700143+00:00",
+      "checked_at": "2026-09-21T19:56:49.814186+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T19:49:05.781944+00:00"
+      "checked_at": "2026-09-21T19:56:49.890156+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T19:49:05.832969+00:00"
+      "checked_at": "2026-09-21T19:56:49.943763+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-21T19:49:05.987308+00:00",
+      "checked_at": "2026-09-21T19:56:50.100150+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T19:49:05.987308+00:00"
+      "checked_at": "2026-09-21T19:56:50.100150+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T01:19:18.534580+05:30",
+      "checked_at": "2026-09-22T01:27:02.278369+05:30",
       "status_repairs": 2,
       "sme_added": 0,
       "filings": {
@@ -161,13 +162,13 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "9e38b4fb307b46ae",
+      "fingerprint": "8231bce145cc8c30",
       "fields": {
         "price": "₹140-148",
-        "size": "708.02",
+        "size": "—",
         "lot": "—",
         "open": "22/09/26",
-        "close": "Sep 24, 2026",
+        "close": "24/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -708,6 +709,13 @@
     },
     {
       "date": "2026-09-24",
+      "type": "CLOSE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
       "name": "National Stock Exchange of India Limited",
@@ -729,6 +737,27 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T19:57:26.070767+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-21T19:57:26.070767+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "CLOSE",
+        "ipo_id": "varmora-granito-limited",
+        "name": "Varmora Granito Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-21T18:52:54.895209+00:00",
       "type": "DATA_CHANGE",
