@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T11:03:48.615548+00:00",
+  "generated_at": "2026-09-21T11:21:35.153304+00:00",
   "today_ist": "2026-09-21",
-  "data_updated_at": "2026-09-21T16:33:17.098175+05:30",
-  "ipo_count": 16,
-  "field_coverage_pct": 29.8,
+  "data_updated_at": "2026-09-21T16:51:03.520815+05:30",
+  "ipo_count": 17,
+  "field_coverage_pct": 30.5,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 10,
+      "records": 11,
       "errors": []
     },
     "BSE": {
@@ -32,8 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
-        "LiveGMP: <urlopen error [Errno 104] Connection reset by peer>"
+        "Moneycontrol: HTTP Error 404: Not Found"
       ]
     },
     "NEWS": {
@@ -41,13 +40,7 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": [
-        "\"National Stock Exchange of India Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Sonaselection India Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Axiom Gas Engineering Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Kheria Autocomp Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"SpectraA Technology Solutions Limited\" IPO India: HTTP Error 503: Service Unavailable"
-      ]
+      "errors": []
     },
     "LISTED": {
       "ok": true,
@@ -56,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-21T11:02:16.162480+00:00",
+      "checked_at": "2026-09-21T11:20:21.311453+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -68,14 +61,14 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 4,
+          "matched": 5,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 9,
-          "matched": 3,
+          "records": 10,
+          "matched": 4,
           "added": 6,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
@@ -91,15 +84,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 16,
+      "records": 17,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-21T11:02:18.746448+00:00"
+      "checked_at": "2026-09-21T11:20:23.527207+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-21T11:02:30.548505+00:00",
+      "checked_at": "2026-09-21T11:20:48.400201+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -109,41 +102,37 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-21T11:02:30.592217+00:00"
+      "checked_at": "2026-09-21T11:20:48.466594+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-21T11:02:30.622027+00:00"
+      "checked_at": "2026-09-21T11:20:48.515248+00:00"
     },
     "LiveNews": {
-      "ok": false,
-      "records": 0,
-      "checked_at": "2026-09-21T11:02:30.711798+00:00",
+      "ok": true,
+      "records": 200,
+      "checked_at": "2026-09-21T11:20:48.651707+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 102,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · RHP DRHP": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 66,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
     },
@@ -151,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-21T11:02:30.711798+00:00"
+      "checked_at": "2026-09-21T11:20:48.651707+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-21T16:33:17.098175+05:30",
+      "checked_at": "2026-09-21T16:51:03.520815+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -163,7 +152,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 11,
+      "upcoming_filing_map": 12,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -310,13 +299,13 @@
       }
     },
     {
-      "id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fingerprint": "ba6b59f0a5f98ac1",
+      "id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fingerprint": "b54bcca36ffe1059",
       "fields": {
-        "price": "₹343 – ₹362",
-        "size": "₹2,100 Cr",
-        "lot": "41",
+        "price": "₹350 – ₹375",
+        "size": "₹300 Cr",
+        "lot": "40",
         "open": "23/09/26",
         "close": "Sep 25, 2026",
         "allotment": null,
@@ -329,10 +318,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "6.42%",
-        "growth": "53%",
-        "de": "4.98",
+        "roe": "28.52%",
+        "roce": "24.10%",
+        "growth": "7%",
+        "de": "0.96",
         "fresh": "—",
         "ofs": "—"
       }
@@ -361,6 +350,34 @@
         "roce": "25.76%",
         "growth": "43%",
         "de": "0.73",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fingerprint": "ba6b59f0a5f98ac1",
+      "fields": {
+        "price": "₹343 – ₹362",
+        "size": "₹2,100 Cr",
+        "lot": "41",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "6.42%",
+        "growth": "53%",
+        "de": "4.98",
         "fresh": "—",
         "ofs": "—"
       }
@@ -478,13 +495,13 @@
       }
     },
     {
-      "id": "armee-infotech-ltd-mainboard",
-      "name": "ArMee Infotech Ltd. Mainboard",
-      "fingerprint": "3924f5e84112086b",
+      "id": "unitec-fibres-ltd-sme",
+      "name": "Unitec Fibres Ltd. SME",
+      "fingerprint": "aeda6b091fb127ef",
       "fields": {
-        "price": "₹350 – ₹375",
-        "size": "₹300 Cr",
-        "lot": "40",
+        "price": "₹83 – ₹88",
+        "size": "₹34.47 Cr",
+        "lot": "1600",
         "open": "23/09/26",
         "close": "—",
         "allotment": null,
@@ -720,9 +737,9 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "armee-infotech-ltd-mainboard",
-      "name": "ArMee Infotech Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-23",
@@ -767,6 +784,13 @@
       "source": "NSE"
     },
     {
+      "date": "2026-09-23",
+      "type": "OPEN",
+      "ipo_id": "unitec-fibres-ltd-sme",
+      "name": "Unitec Fibres Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-24",
       "type": "LISTING",
       "ipo_id": "national-stock-exchange-of-india-limited",
@@ -789,6 +813,28 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-21T11:21:35.153304+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "armee-infotech-limited",
+        "name": "ArMee Infotech Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-21T11:21:35.153304+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-23",
+        "type": "OPEN",
+        "ipo_id": "unitec-fibres-ltd-sme",
+        "name": "Unitec Fibres Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-21T11:03:48.615548+00:00",
       "type": "DATA_CHANGE",

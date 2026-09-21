@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T16:33:17.098175+05:30",
+  "updated_at": "2026-09-21T16:51:03.520815+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -39,6 +39,14 @@
       "open_date": "23/09/26",
       "close_date": "Sep 25, 2026",
       "issue_size": "44.23",
+      "status": "upcoming"
+    },
+    {
+      "company": "Unitec Fibres Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "23/09/26",
+      "close_date": "—",
+      "issue_size": "₹34.47 Cr",
       "status": "upcoming"
     },
     {
