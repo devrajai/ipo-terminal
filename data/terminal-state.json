@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T14:08:45.512254+00:00",
+  "generated_at": "2026-09-22T14:27:01.714330+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T19:38:13.856199+05:30",
+  "data_updated_at": "2026-09-22T19:56:25.631847+05:30",
   "ipo_count": 14,
   "field_coverage_pct": 22.1,
   "sources": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T14:07:45.105537+00:00",
+      "checked_at": "2026-09-22T14:25:40.182615+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 14,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T14:07:46.960533+00:00"
+      "checked_at": "2026-09-22T14:25:42.370352+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T14:08:01.476530+00:00",
+      "checked_at": "2026-09-22T14:26:07.618428+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T14:08:01.547618+00:00"
+      "checked_at": "2026-09-22T14:26:07.693089+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T14:08:01.593778+00:00"
+      "checked_at": "2026-09-22T14:26:07.742768+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T14:08:01.736278+00:00",
+      "checked_at": "2026-09-22T14:26:07.894657+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T14:08:01.736278+00:00"
+      "checked_at": "2026-09-22T14:26:07.894657+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T19:38:13.856199+05:30",
+      "checked_at": "2026-09-22T19:56:25.631847+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -496,14 +496,14 @@
       }
     },
     {
-      "id": "a-one-steels-india-ltd-mainboard",
-      "name": "A-One Steels India Ltd. Mainboard",
-      "fingerprint": "5b8e910a6997ce27",
+      "id": "runwal-enterprises-ltd-mainboard",
+      "name": "Runwal Enterprises Ltd. Mainboard",
+      "fingerprint": "96bb3c9b79fc2bb3",
       "fields": {
-        "price": "₹385 – ₹405",
-        "size": "₹405 Cr",
-        "lot": "37",
-        "open": "24/09/26",
+        "price": "₹290 – ₹305",
+        "size": "₹500 Cr",
+        "lot": "49",
+        "open": "25/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -524,13 +524,13 @@
       }
     },
     {
-      "id": "green-asia-impex-ltd-sme",
-      "name": "Green Asia Impex Ltd. SME",
-      "fingerprint": "913ad1b3135ae860",
+      "id": "a-one-steels-india-ltd-mainboard",
+      "name": "A-One Steels India Ltd. Mainboard",
+      "fingerprint": "5b8e910a6997ce27",
       "fields": {
-        "price": "₹85 – ₹90",
-        "size": "₹60.1 Cr",
-        "lot": "1600",
+        "price": "₹385 – ₹405",
+        "size": "₹405 Cr",
+        "lot": "37",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -633,13 +633,6 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
-      "ipo_id": "green-asia-impex-ltd-sme",
-      "name": "Green Asia Impex Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
@@ -680,6 +673,13 @@
       "source": "Economic Times"
     },
     {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "runwal-enterprises-ltd-mainboard",
+      "name": "Runwal Enterprises Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-28",
       "type": "CLOSE",
       "ipo_id": "moneyview-limited",
@@ -688,6 +688,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T14:27:01.714330+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "OPEN",
+        "ipo_id": "runwal-enterprises-ltd-mainboard",
+        "name": "Runwal Enterprises Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-22T14:01:06.710296+00:00",
       "type": "NEW_EVENT",
@@ -4100,17 +4111,6 @@
       "event": {
         "date": "2026-09-22",
         "type": "ALLOTMENT",
-        "ipo_id": "national-stock-exchange-of-india-limited",
-        "name": "National Stock Exchange of India Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-15T14:27:16.535402+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-24",
-        "type": "LISTING",
         "ipo_id": "national-stock-exchange-of-india-limited",
         "name": "National Stock Exchange of India Limited",
         "source": "NSE"

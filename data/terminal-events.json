@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T14:08:45.512254+00:00",
+  "generated_at": "2026-09-22T14:27:01.714330+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -75,13 +75,6 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
-      "ipo_id": "green-asia-impex-ltd-sme",
-      "name": "Green Asia Impex Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
@@ -119,6 +112,13 @@
       "type": "OPEN",
       "ipo_id": "orient-cables-india-ltd-mainboard",
       "name": "Orient Cables (India) Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "runwal-enterprises-ltd-mainboard",
+      "name": "Runwal Enterprises Ltd. Mainboard",
       "source": "Economic Times"
     },
     {
