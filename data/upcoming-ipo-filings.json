@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T17:03:11.907838+05:30",
+  "generated_at": "2026-09-22T17:13:48.928241+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 12,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Elevate Campuses Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Adroit Industries (India) Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Swastika Infra Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Bench Mark Infotech Services Limited",
@@ -66,7 +66,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
+    },
+    {
+      "ipo_name": "Himalayan Solar Limited",
+      "id": "himalayan-solar-limited",
+      "type": "SME",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "25/09/26",
+      "close": "Sep 29, 2026",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Pooja Logistics Limited",
@@ -79,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Coreintegra Consulting Services Limited",
@@ -92,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "A-One Steels India Ltd. Mainboard",
@@ -105,20 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
-    },
-    {
-      "ipo_name": "Himalayan Solar Ltd. SME",
-      "id": "himalayan-solar-ltd-sme",
-      "type": "SME",
-      "exchange": "NSE/BSE",
-      "status": "upcoming",
-      "open": "25/09/26",
-      "close": "—",
-      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "verified": true,
-      "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Peshwa Wheat Ltd. SME",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Roopa Screen Ltd. SME",
@@ -144,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     },
     {
       "ipo_name": "Liqvd Digital India Ltd. SME",
@@ -157,7 +157,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T17:03:11.907838+05:30"
+      "checked_at": "2026-09-22T17:13:48.928241+05:30"
     }
   ]
 }
