@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T19:53:16.807048+00:00",
+  "updated_at": "2026-09-22T20:00:18.785242+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,7 +100,29 @@
       "change_pct": 1.21
     }
   ],
-  "world": [],
+  "world": [
+    {
+      "price": 7764.83,
+      "change": 0.13,
+      "change_pct": 0.0,
+      "name": "S&P 500 (US)",
+      "symbol": "^GSPC"
+    },
+    {
+      "price": 51863.8,
+      "change": -185.03,
+      "change_pct": -0.36,
+      "name": "Dow Jones (US)",
+      "symbol": "^DJI"
+    },
+    {
+      "price": 27244.28,
+      "change": 122.18,
+      "change_pct": 0.45,
+      "name": "Nasdaq (US)",
+      "symbol": "^IXIC"
+    }
+  ],
   "commodities": [],
   "fx": [
     {
