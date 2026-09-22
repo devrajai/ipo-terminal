@@ -1,21 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-21T23:56:04.912701+00:00",
+  "generated_at": "2026-09-22T00:03:35.305924+00:00",
   "events": [
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
-      "ipo_id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-21",
-      "type": "CLOSE",
-      "ipo_id": "sonaselection-india-limited",
-      "name": "Sonaselection India Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-22",
       "type": "ALLOTMENT",
