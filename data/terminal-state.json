@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T11:53:21.688809+00:00",
+  "generated_at": "2026-09-22T12:02:21.476020+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T17:22:50.431843+05:30",
+  "data_updated_at": "2026-09-22T17:31:35.858291+05:30",
   "ipo_count": 16,
   "field_coverage_pct": 22.9,
   "sources": {
@@ -32,7 +32,8 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: The read operation timed out"
       ]
     },
     "NEWS": {
@@ -49,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T11:51:56.007925+00:00",
+      "checked_at": "2026-09-22T12:00:58.610069+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +88,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T11:51:58.142810+00:00"
+      "checked_at": "2026-09-22T12:01:01.811982+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T11:52:33.814087+00:00",
+      "checked_at": "2026-09-22T12:01:22.234441+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T11:52:33.872975+00:00"
+      "checked_at": "2026-09-22T12:01:22.306515+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-22T11:52:33.912048+00:00"
+      "checked_at": "2026-09-22T12:01:22.354330+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T11:52:34.036285+00:00",
+      "checked_at": "2026-09-22T12:01:22.503107+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T11:52:34.036285+00:00"
+      "checked_at": "2026-09-22T12:01:22.503107+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T17:22:50.431843+05:30",
+      "checked_at": "2026-09-22T17:31:35.858291+05:30",
       "status_repairs": 2,
       "sme_added": 0,
       "filings": {
@@ -495,6 +496,34 @@
       }
     },
     {
+      "id": "moneyview-ltd-mainboard",
+      "name": "Moneyview Ltd. Mainboard",
+      "fingerprint": "c31abe85a2a9428e",
+      "fields": {
+        "price": "₹32 – ₹34",
+        "size": "₹1,091 Cr",
+        "lot": "441",
+        "open": "24/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
       "fingerprint": "5b8e910a6997ce27",
@@ -559,34 +588,6 @@
         "size": "₹19.2 Cr",
         "lot": "2000",
         "open": "24/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "liqvd-digital-india-ltd-sme",
-      "name": "Liqvd Digital India Ltd. SME",
-      "fingerprint": "5e1cd574d32fbb1b",
-      "fields": {
-        "price": "₹51 – ₹54",
-        "size": "₹39.01 Cr",
-        "lot": "2000",
-        "open": "23/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -695,13 +696,6 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "liqvd-digital-india-ltd-sme",
-      "name": "Liqvd Digital India Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "OPEN",
       "ipo_id": "pooja-logistics-limited",
       "name": "Pooja Logistics Limited",
       "source": "NSE"
@@ -732,6 +726,13 @@
       "type": "OPEN",
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "moneyview-ltd-mainboard",
+      "name": "Moneyview Ltd. Mainboard",
       "source": "Economic Times"
     },
     {
@@ -778,6 +779,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T12:02:21.476020+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "moneyview-ltd-mainboard",
+        "name": "Moneyview Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-22T11:44:21.332648+00:00",
       "type": "DATA_CHANGE",

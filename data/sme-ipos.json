@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T17:22:50.431843+05:30",
+  "updated_at": "2026-09-22T17:31:35.858291+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -55,14 +55,6 @@
       "open_date": "24/09/26",
       "close_date": "—",
       "issue_size": "₹19.2 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Liqvd Digital India Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "23/09/26",
-      "close_date": "—",
-      "issue_size": "₹39.01 Cr",
       "status": "upcoming"
     }
   ]
