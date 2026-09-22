@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated_at": "2026-09-22T22:48:52.773664+00:00",
+  "generated_at": "2026-09-22T22:56:33.536992+00:00",
   "items": [
     {
       "title": "India's NSE IPO draws over $10 billion, traders eye modest listing pop - Reuters",
@@ -35,15 +35,6 @@
       "source": "BBC",
       "feed_source": "Google News · IPO upcoming/listing",
       "tag": "IPO",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
-      "title": "NSE IPO Allotment Status Check Online: Steps, GMP, Listing Date and Key Details - India Infoline",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTmZrMWJDYy1GS05xekFVZ3dlcU50bHlsVzdFNXR6d21MdG56M2ZLc3BmRnVELVhDT1ZJbUkyWjNTaGl6UExoUDJWa3ZKWXZreFZ1ZlRKMTRvUENvM3czbURNelBIS1htS2hiZi1ELWxPMmNXNXhfUVV3aFhnQ3RmOTFkRHhXV25SaWwyRTFCRFpGTk45VlhWbmUweTBGWEJuNFdGTGxWcURQUDB5S1RuTFZaa3JPQQ?oc=5",
-      "published": "Tue, 22 Sep 2026 06:00:01 GMT",
-      "source": "India Infoline",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
@@ -189,10 +180,10 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Six companies line up IPOs worth ₹3,825 crore amid brisk primary market activity - thehindu.com",
+      "title": "Six companies line up IPOs worth ₹3,825 crore amid brisk primary market activity - The Hindu",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNVUVnc1dBVkdJdDd6TXYzM0pyWmRrYTUxTlZaY3EybGpzM3hROHVWZTgweHhrbmJ4T3JjYjZldzNXd3dGTm43TUg0TDk1T3Y1dlc5dUJ6cmNVWHZlMW40SG9jNk9MMGZyMmxWUmxyQ0x4SkZneWZoMi15UlRua2JyUEVQZlpvaS1KVEk4dU1OU01NOEJuODlKd2NfS0wxV3RtM2JCMFc2ZE9LdURCNXFxQ0MzaG1EZ0w2ejF6V1EzbDViZGJGVFV3SjlEcjJPVTBFVWFPYWtMQdIB3gFBVV95cUxPR0gxX1MyZ2p5UExIWUthSTI3U3hzVERQS0JIWnIwOTN1MngyUGhPVUxtNG9GNWJXTmZoaDY3NGVkeC12ZTU1Ulp6VEpnQ1RCdVYyYTdHa2Q0MmZIQUpzd0Vab05yLVNVajgzUlVjOXhJcHY0OENjRlVKTnpvbXVKcUYtOXhSel92OUdFLXVjY1Z2ZnB3Z29MMkxkWlM4Z0VYN2d4a0xjcWsyREp4Um56N2NJc1JFMms4YkJMbjB1eWRqODI1ZC1qUDd3d0M2NXdNZEQtcUxzbUdmZGF2Qnc?oc=5",
       "published": "Sun, 20 Sep 2026 07:04:19 GMT",
-      "source": "thehindu.com",
+      "source": "The Hindu",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Bench Mark Infotech Services Limited"
@@ -203,6 +194,15 @@
       "published": "Sun, 20 Sep 2026 07:00:00 GMT",
       "source": "Inc42",
       "feed_source": "Google News · RHP DRHP",
+      "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "Sunil Singhania-led Abakkus files for IPO, issue to be entirely an OFS - IndiaIPO",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOOU84bnlRdEZhOG84R2RGTlVpYnhkRVNJVVYtUEw2SzBFby0yRGI5SXRlNDRQMnVNLWlQNl9jY2x5bUpfOXFSbTAyLVNwV2UtMVhJZjdxMGQ2ZzhOdzVGZFNBalFYeDB3SEVHUDhEekoxelA0M0RXRG9iZzJoOTFzZlQ3b0hLMnR2MGpGeFdKMTJpQlNyZ0N5bW1Wck5YMkZwdk9kOXd0OWs?oc=5",
+      "published": "Tue, 22 Sep 2026 22:50:16 GMT",
+      "source": "IndiaIPO",
+      "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
@@ -288,15 +288,6 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "NSE IPO subscribed 5.7 times as bidding ends, shares to list on September 24 - The Times of India",
-      "url": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxOZkdkOE5jOXY3Z1VxdE1BaEtBQVcxcUlkaXRoLTlKMFpGaHpQUVNPeFk4NG1jdTRPY0ZuY2ZQc0Y0NGJsLTJHcDJ4eWFGR2JoX3VmODl0WTRMNXJsdDNXbnFvRDg1am1ZbFFtdDhwNG1oWjBNYnI2SWFBbzRIaW9TNVJTN1NGN2JzMGlHcVRVcXczRUVSa2NlMmt4aW15V1lFRnYxdnNGdlZRZ0FFcE9JMU9Cei1pS01mU3dhSi1iSzU0ckpiVFhMX3VLMjhVa3J1SFFzaHJ0SmtRcVNoTklYeDA5R1pKZlExN2JkaG9wc3dVYlHSAfgBQVVfeXFMTnZEOTEwSzh6ZGxmZXV3QTlGVDFwWjB1aVppczh2QmNUVkVHRVJRRUhoSWFKVnQzdUxBZkxSbFdpanoxUHUtVlFFMWc1NmhWMGhrenNqUmNHRV9YLW5kMEg4UGVGX1lqaU9zd1ZBMXlENW1UcDZySjFhOWtsYXVybF9VRVV6RUs0enhhbWRITE4xU210Um92dlhSU09xQ2RXcDB3U2xjTWloTDNiWi1rdjZvbF9HU0FjaXlIbWk4ZFBVUm1BZDFMc1pVaW9qamdYbVhOLTMtMHNWNUVYYlRqZENQcTVoeEJUbXZrbk1FWVJPYkhUbFVPV1Q?oc=5",
-      "published": "Mon, 21 Sep 2026 13:02:00 GMT",
-      "source": "The Times of India",
-      "feed_source": "Google News · IPO India",
-      "tag": "LISTING",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
       "title": "Sonaselection India IPO booked 2x on Day 3; check latest GMP - Moneycontrol.com",
       "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQR29yZTdBREFNazRPbWExeHprbERCOXc4THRMdHBMZUV1bzdxZ2dqbFRMOFh2YXAwS0tvTDJHeERVTmwzdmw1MXYwM2U4Y3BGX2JMSW01WlNYRlViNkE4UHpsd2t1NklWRV9XNGJSak04cy13V3pLbUQzMy0zeTc3VldSOWYzSW00emFScWEzM2tFQkJMZnIyRVJqSEVxOWxYUUZoNm5GNm1aZmEtbGVQMG5WMVdGYkdjWkpfbGhtamQtS083VnfSAcsBQVVfeXFMUENsX0hIMjFENWZNMDQ4cFl4bnVxcG5lNzRReEhkSWdidnBpYTdhRDVETzFjc3N3NmpUWFR6WVlLNXZLYzBwS2JjeFVxUDdDRy11ZlRWX2p4eThEdjRXZktMNkR6Qmo3UkVsVlZ4WTlGR3k5MlZmd0ZFZVh2VkRneUwzN3NEMkpTcnMzNjVuRHlSTGJkRFJQSlpwRlBkRXZiOFA5Mld5MVU4QXE3VVg3MmtfaTZDTWNaa0ZVeFRKZUpNMG51YnRjQzI2RjQ?oc=5",
       "published": "Mon, 21 Sep 2026 06:09:56 GMT",
@@ -358,10 +349,10 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "NSE IPO subscribed nearly 6 times; attracts nearly ₹90,300 crore of demand - thehindu.com",
+      "title": "NSE IPO subscribed nearly 6 times; attracts nearly ₹90,300 crore of demand - The Hindu",
       "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPMnhaYk9VWFNob3A2djBDSy15cW8zRENmLTFVSHdGRGk0X3NLNHRKZEN5V0tXM3BXdGVCMGRVNzRVX1h0MnIxZnJjaTh1MEF0amZCSTMxdEx6d3lvTDFBUUV4VkhEc0NURTNsQkJtRC1USEx3bmh3cjVKQk5qNEk0U1dQSWxqMlcwZnNXM3gzUlBoQW9fc3cxNnFNazZYdldGajVhSk1NYmVjYVhYemV0YkhjUGwxbzZKNHJ0R3lWZk1pVWPSAcoBQVVfeXFMTkpIc2I3STlmTWdrZEhKR3BTYmZDMzJ0THFQNHBjeVBVejZhYnQ0RFNxVDZ5Qk1Ec2lOdUQxbHJWY1lGNGktTjh3MGtLWTBmYkNyY0ZRNF96YXMtSnJuemRZY3JrMGJ0LS1uWDZ0Rk9meXc4bzJ6Y0IwVEV4QmlZQ0k0d0g4c2JZTlc4b0I0Z1otVlp1YW9MckwtQ2JpYnJJN0hYcGRIQzVmM2JkS3N5TEtTTGNtbEEzUmhYVzFlMGg5YlYyUkUyZ204Zw?oc=5",
       "published": "Mon, 21 Sep 2026 16:40:23 GMT",
-      "source": "thehindu.com",
+      "source": "The Hindu",
       "feed_source": "Google News · IPO India",
       "tag": "IPO"
     },
@@ -374,19 +365,19 @@
       "tag": "IPO"
     },
     {
-      "title": "NSE IPO draws 5.71x bids, highest among India’s top five public issues - The New Indian Express",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNLWw4SjVXVGlQc0dkbVBmQWhyUnJxSHdPLWVCOGxKZ011TXRqUl9aVGxlOF9uNW9vWW5tTFB1RU0zaXFIVDRrVVRkOUJOTVJnQXJmQ1Z0ODRWczBWSzlOUFhZRjFXNXIxc21wb1RGTjdYeDZLeDVERlNUamxQNkVaN0RyWWdDZlphMmc4VzgzTkVaWlA3OGhHYTdNWVFFYUN1SDNYcEdmazNZMXFfU2FTX3RpeUhSV0t5S2x0Wlh30gHLAUFVX3lxTE0zY2VlTDJmUFhNVUExSV9DSkN6SDdyMTV0M09zbnFkTWFmVGt1dkJxWmplMnNVX295YkUySkJvRUxrWjhxX1FIX3BPZVBqWlZpM2RhNUVpZTBsWTBCV0JYU2hCdzNjM0x0ZnRHMC1URm9BTHRTa1lsTGtvbDh1bThfUkpUWGlPQ2JSYVFfd2FoOC01Z0NGTm1tYXFlRjdVaGpyLWpMQ0x5QkstNUxabGx6NWdKTG9Wd1dJTjdxVTZfcktRa0RGaGdkdkk4?oc=5",
-      "published": "Mon, 21 Sep 2026 14:51:56 GMT",
-      "source": "The New Indian Express",
+      "title": "Carlyle Said to Prepare for $400 Million IPO of India Auto Unit - Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTndMSWdPN0kwbG91amtScjNKeUQ3RE42T1AtMlkzNS1vQVFJUGtBR1EwS2s5RVY0dzJMTzQwY08zdjhxM2JtQjRMeHREUmdvbFo1OWlqeHpFWHNCc2YzTU4zcDBCUGg4TlJtTEt4aElaaTA2aEZ2YkJUclBmeHRCTUtXWVlHdWFLVWJjTmp5N0g4cU1DZGhiTXhBall1WU1SR1dlMHpJY2VCMHRacnljNmlJbw?oc=5",
+      "published": "Mon, 21 Sep 2026 08:56:01 GMT",
+      "source": "Bloomberg.com",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Carlyle Said to Prepare for $400 Million IPO of India Auto Unit - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNTndMSWdPN0kwbG91amtScjNKeUQ3RE42T1AtMlkzNS1vQVFJUGtBR1EwS2s5RVY0dzJMTzQwY08zdjhxM2JtQjRMeHREUmdvbFo1OWlqeHpFWHNCc2YzTU4zcDBCUGg4TlJtTEt4aElaaTA2aEZ2YkJUclBmeHRCTUtXWVlHdWFLVWJjTmp5N0g4cU1DZGhiTXhBall1WU1SR1dlMHpJY2VCMHRacnljNmlJbw?oc=5",
-      "published": "Mon, 21 Sep 2026 08:56:01 GMT",
-      "source": "Bloomberg.com",
+      "title": "NSE IPO draws 5.71x bids, highest among India’s top five public issues - The New Indian Express",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNLWw4SjVXVGlQc0dkbVBmQWhyUnJxSHdPLWVCOGxKZ011TXRqUl9aVGxlOF9uNW9vWW5tTFB1RU0zaXFIVDRrVVRkOUJOTVJnQXJmQ1Z0ODRWczBWSzlOUFhZRjFXNXIxc21wb1RGTjdYeDZLeDVERlNUamxQNkVaN0RyWWdDZlphMmc4VzgzTkVaWlA3OGhHYTdNWVFFYUN1SDNYcEdmazNZMXFfU2FTX3RpeUhSV0t5S2x0Wlh30gHLAUFVX3lxTE0zY2VlTDJmUFhNVUExSV9DSkN6SDdyMTV0M09zbnFkTWFmVGt1dkJxWmplMnNVX295YkUySkJvRUxrWjhxX1FIX3BPZVBqWlZpM2RhNUVpZTBsWTBCV0JYU2hCdzNjM0x0ZnRHMC1URm9BTHRTa1lsTGtvbDh1bThfUkpUWGlPQ2JSYVFfd2FoOC01Z0NGTm1tYXFlRjdVaGpyLWpMQ0x5QkstNUxabGx6NWdKTG9Wd1dJTjdxVTZfcktRa0RGaGdkdkk4?oc=5",
+      "published": "Mon, 21 Sep 2026 14:51:56 GMT",
+      "source": "The New Indian Express",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
@@ -419,21 +410,21 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "NSE IPO Allotment Status Today: How To Check On BSE And MUFG Intime India - NDTV Profit",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUXFjUTM2UERjX01GVlhKQnJYYTM2SWdVdVd6cFZWanRaaEVKVldPVV9aMGhzRjk4VjdsWDNnYjdwR3kxZ2ZXMUlqR0FWbXFtS0Vtem5uZk1iNGNla2xKVmpqLXVJZnU0MC15dkNhSloxU2ZVclpzLUNySHhnTzNYV3RZejVBeFVYb0d5Ulp5Nm1LUGl3Y1haX3lhN052TE5FVkV0UTNmbnNVeGxsX1RTZnd3ZFRfcE3SAb8BQVVfeXFMTURjLXVpV2dlLXhGcGlDRzVsLW5rbkxQM1hLTTVLV1J6ODhCMG1ZUjdIcThGOEdtSGpYWkNhZVpCdlNVc051dGNta3dyeWFINWJKMUc2SU1HREx6TS1lb3V2VjhHWmM4MVlweTc5dGUwUVctX18yWkdlV1Q3NUQ1YjUyTEdBVDhnRk1vS0NXZUZRVGJMVFJ4QW05bmMwakhKYVB5bEZXZWJfQk1kRmNHanI2eW01YjIyTXNHTXNqeWs?oc=5",
-      "published": "Tue, 22 Sep 2026 02:35:35 GMT",
-      "source": "NDTV Profit",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
       "title": "Sonaselection India IPO Day 3: Issue subscribed over 2 times. Check GMP and key details - The Economic Times",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPTm9oQmdURjZlNExCeDBLYlMyMmNlYkg0SGtLMkpOajIyU1NDalhycTh4eHUzYXZLb1I2d1BXUHlrR1NObGNrNG85QkJCM3VPaGpVTVgtSnFsYkxCZF8tWFFaZHh0ZlE3bW5MeHJrUlcwZUN3TnlHQ3htZHlaaTFBX2N2QmJiWmNiQkVjT2U5S0pJQ1BhaTgyMXpNc3NnZlY3SjhnNUpBazN2VFByOV9LU25rQUQ4ekNYSlBraC1TNUFLenNDU2EweHllMFFPalFGMmxmLURWMkdGRTAyZ3o3Q9IB5gFBVV95cUxONXdpbWdlTUJ1SUJTX1BmM1p5RUw2ajlSd0Q3c0pFUXY0Y19OR0NKWjNrU09sTU95cDhJd2QxQVNISHdhNFZXbnhvUVBBZUstV0dwbGtvbDRkLTBZTEJXenprWDBPYnMwZy1GaDZFNkVrSDNOZmtSTl9ZMGxicnhrYzB2LTVRREU2elN3MjBaWXFGd2lCMTl3OFlvbDR5S0k4X2FDbk5lM1ROUTNXSG50bmE2cWEyd0dvNXh6NTZxcVl6bEdBRTFkT2hwNGM2aVVvS1N5VkZZbEktOE9qYkdWWFN1T1RrZw?oc=5",
       "published": "Mon, 21 Sep 2026 04:00:08 GMT",
       "source": "The Economic Times",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "NSE IPO Allotment Status Today: How To Check On BSE And MUFG Intime India - NDTV Profit",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOUXFjUTM2UERjX01GVlhKQnJYYTM2SWdVdVd6cFZWanRaaEVKVldPVV9aMGhzRjk4VjdsWDNnYjdwR3kxZ2ZXMUlqR0FWbXFtS0Vtem5uZk1iNGNla2xKVmpqLXVJZnU0MC15dkNhSloxU2ZVclpzLUNySHhnTzNYV3RZejVBeFVYb0d5Ulp5Nm1LUGl3Y1haX3lhN052TE5FVkV0UTNmbnNVeGxsX1RTZnd3ZFRfcE3SAb8BQVVfeXFMTURjLXVpV2dlLXhGcGlDRzVsLW5rbkxQM1hLTTVLV1J6ODhCMG1ZUjdIcThGOEdtSGpYWkNhZVpCdlNVc051dGNta3dyeWFINWJKMUc2SU1HREx6TS1lb3V2VjhHWmM4MVlweTc5dGUwUVctX18yWkdlV1Q3NUQ1YjUyTEdBVDhnRk1vS0NXZUZRVGJMVFJ4QW05bmMwakhKYVB5bEZXZWJfQk1kRmNHanI2eW01YjIyTXNHTXNqeWs?oc=5",
+      "published": "Tue, 22 Sep 2026 02:35:35 GMT",
+      "source": "NDTV Profit",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
@@ -481,6 +472,15 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
+      "title": "Bengaluru-based A-One Steels India to raise ₹405 crore in an IPO - The Hindu",
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQ2s5LUtQRGdESnlhLWpReTVjYXc2U0I5RVAxbWFIMFFET2RmUWpwSm90eVRJOUwtdTVxWFdvYjNtZ2h4SnNNOElpZ3lTdkdZbU9WcFozcTZJQ1laSE1Xa3hPTjc3STZUSzZiV2oza2pYemF1YmhFbDhYeTJNSEx6SHZ5M1U5WVhfU1RtT2VocEVLR1JWVzEtZElERFAzdkg5bF9vM3QwdmpSS2V5T1NEVzIzekRkZF9oQkptQTFyWjdEN1hq0gHLAUFVX3lxTE5kdnpJd2YwR1pMT054dk1BclE5Wk1WS1diMTdndkR4VEFRYkZfUF91UEstX1VzS1NGWEpmM0hDYVRBemJUVm5LT0gxRlg3YTdyQVNKMUprNlFQNDlRRFpaTTdEWmxFM0k3MHJXT3hzaUNidnBSc1BEOFlGRDlFM3J1TktvdWczMUtTLW5USjdHNTZGcXpKUkhIRFMzQWRzUml5ZnpkSXhDaVpXclp5ckFaSllMcWJqR1JQQjlPX2tzZEg1LXR5M2toX3hN?oc=5",
+      "published": "Sun, 20 Sep 2026 10:02:23 GMT",
+      "source": "The Hindu",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
       "title": "Snapdeal parent AceVector seeks up to $182 million valuation in India IPO - business-standard.com",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOQjdSd0tEN3JNeVUweGlkWWVXZGR6dkpPSXJKd1FWZF9ZUkFEMzhvcmR4WDZzN21Na3FFb0VGRk9MR1BoenBQSHloWkRtdW9uUlhuWGcyZjF1cjRDc1Y2ZWcwaGhtU0xNcm9ic2oteXhvQlhQZEJfUlRiMU1YY3E4WUFyekxCTENqZUREX3UweVo2Z2V1M09oSHE5OWJWYUZKMERKNmR2bUdidGxOUTFIa1Q0UHMxQkQxbkdEWV9mYWxxa1FCcTQyQ1ZPOXk4MzBieVJYQ9IB2gFBVV95cUxNM01WV0hHOEVxMTRuZlBIN2IzTGp5eU8tT1BpVlRCcXIzQ2lWd194T0pNRVZzRkpCN0JYaWtTUE5zOUF6emlwLXZvdWE3VHZwSmtYQkV5cmJoRTB2NzdOOXBGd29tMkVJdXJndHJSYVlLcGxyUDNpNHlxaEFnQ3pwRHdLTW1XenBjVDlhTXRrZ1h3VzlEcVhqd2prZ3ZwVWd0VzhqRFBFTDkxTzc3TktjamlMM2lWNTlFbWlsbE9vQzdNTjNET3BOdHhiZ2JHQnlNN084VWdmYi12QQ?oc=5",
       "published": "Tue, 22 Sep 2026 04:46:40 GMT",
@@ -490,10 +490,10 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Bengaluru-based A-One Steels India to raise ₹405 crore in an IPO - thehindu.com",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQ2s5LUtQRGdESnlhLWpReTVjYXc2U0I5RVAxbWFIMFFET2RmUWpwSm90eVRJOUwtdTVxWFdvYjNtZ2h4SnNNOElpZ3lTdkdZbU9WcFozcTZJQ1laSE1Xa3hPTjc3STZUSzZiV2oza2pYemF1YmhFbDhYeTJNSEx6SHZ5M1U5WVhfU1RtT2VocEVLR1JWVzEtZElERFAzdkg5bF9vM3QwdmpSS2V5T1NEVzIzekRkZF9oQkptQTFyWjdEN1hq0gHLAUFVX3lxTE5kdnpJd2YwR1pMT054dk1BclE5Wk1WS1diMTdndkR4VEFRYkZfUF91UEstX1VzS1NGWEpmM0hDYVRBemJUVm5LT0gxRlg3YTdyQVNKMUprNlFQNDlRRFpaTTdEWmxFM0k3MHJXT3hzaUNidnBSc1BEOFlGRDlFM3J1TktvdWczMUtTLW5USjdHNTZGcXpKUkhIRFMzQWRzUml5ZnpkSXhDaVpXclp5ckFaSllMcWJqR1JQQjlPX2tzZEg1LXR5M2toX3hN?oc=5",
-      "published": "Sun, 20 Sep 2026 10:02:23 GMT",
-      "source": "thehindu.com",
+      "title": "Sonaselection India IPO ends with 2.01 times subscription - business-standard.com",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNS0lQZkl6Mnh0YWctSzJSNGl1SDNVdXpOMmE1SUZ6cEVGZHpKTVdZVGxmMFVWRzctUDhrZFFmLWJfM0lvaHFiZ1FhX1p4S2d2dGkzR3pCaXVVNmhUc1M0MWdhVzQ0cHNwRjBRY0hNcnJHazUzOVQ3MmJTaC1xMFNmaWp6VVB6OVNNaFl0ZFpPTFVqY0NfZGpMVnlEVVVSenJ1S2MtTFFOMmtiOE1nNDFKX2VTcnBlc1lBc01nUDJkSEx5T2RxVlNmYkplRGtxeUZOSmRkcENR0gHbAUFVX3lxTFA2XzRZRGo0YW1ua0RrckxScFJSVHNrOW0ybFBqckpXSlBPMVVNNXVxVHp5Vmg0Z0ZMRG9QY3B0NnoxUHo3N1NWSTNIV2ZkbElSZWY3VGp6QWlKOEoydFBKdkJIMkFJalkzZGpxTzNMY0x4WjA4QVpFOUJQaUZiYlJlMjZ4emRjRlNWMHB2b3VONFcwcUxzN01YWG8zcEp6ZFJrYnB1TUxkbHFTWGx3NXZwc3F5TV9DQ05lYl9JOWs3TXRnRDN2ZGoza1I4UjBtMnJlSUk5bHdWS2l6UQ?oc=5",
+      "published": "Tue, 22 Sep 2026 08:01:01 GMT",
+      "source": "business-standard.com",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
@@ -508,30 +508,12 @@
       "ipo": "Moneyview Limited"
     },
     {
-      "title": "Sonaselection India IPO ends with 2.01 times subscription - business-standard.com",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNS0lQZkl6Mnh0YWctSzJSNGl1SDNVdXpOMmE1SUZ6cEVGZHpKTVdZVGxmMFVWRzctUDhrZFFmLWJfM0lvaHFiZ1FhX1p4S2d2dGkzR3pCaXVVNmhUc1M0MWdhVzQ0cHNwRjBRY0hNcnJHazUzOVQ3MmJTaC1xMFNmaWp6VVB6OVNNaFl0ZFpPTFVqY0NfZGpMVnlEVVVSenJ1S2MtTFFOMmtiOE1nNDFKX2VTcnBlc1lBc01nUDJkSEx5T2RxVlNmYkplRGtxeUZOSmRkcENR0gHbAUFVX3lxTFA2XzRZRGo0YW1ua0RrckxScFJSVHNrOW0ybFBqckpXSlBPMVVNNXVxVHp5Vmg0Z0ZMRG9QY3B0NnoxUHo3N1NWSTNIV2ZkbElSZWY3VGp6QWlKOEoydFBKdkJIMkFJalkzZGpxTzNMY0x4WjA4QVpFOUJQaUZiYlJlMjZ4emRjRlNWMHB2b3VONFcwcUxzN01YWG8zcEp6ZFJrYnB1TUxkbHFTWGx3NXZwc3F5TV9DQ05lYl9JOWs3TXRnRDN2ZGoza1I4UjBtMnJlSUk5bHdWS2l6UQ?oc=5",
-      "published": "Tue, 22 Sep 2026 08:01:01 GMT",
-      "source": "business-standard.com",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
       "title": "Sonaselection India IPO Allotment Status: Check Allocation Online - HDFC Sky",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNX1FRelJxMVR2a2NWenFkNjlwbXo4WkRwbDRxNFBIT1ZpMmRkQ3RnMm1IaE9qNDVtU21aR0NFTVdEWGFhVWtLMHBOUFRrZHJvS1BXSTJSNkxPSkJyelFqUlNMUGJhTV93WnJEUlh0NVA0UWZFZTNuWk85WW1CX21HVko3cXFxZWstTHFLUW8zU1lmNFNOa1FQN1dEMHpBV2dqNUNaajRQclNjazNxZzRhQkZtaw?oc=5",
       "published": "Tue, 22 Sep 2026 05:02:50 GMT",
       "source": "HDFC Sky",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
-      "title": "RBI bond sales, FX intervention help halve India's cash overhang - IndiaIPO",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNSGxtTkpVRTE5U2JScUdlUlpFTzFiOFN3NWdtTkxqTVh5M1p0TmRwaUs1UnBqWktHR0hRR1NqaWRPeTcxdkZCMnJNdTF3YVVPQnlLdkRjUW4wVTRoTUZseldQRXdtczFNNTdXUUhRWk9FV1ZKQmV5aFNleVNlb1pQdFlWbTZ2VmpjaGlaRm9mWkJBc3V2QnBTSXRBOENYQ0k?oc=5",
-      "published": "Tue, 22 Sep 2026 13:29:59 GMT",
-      "source": "IndiaIPO",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
@@ -553,19 +535,19 @@
       "ipo": "Bench Mark Infotech Services Limited"
     },
     {
-      "title": "India could raise ₹2 lakh crore through IPOs; 55% of FY27 proceeds already fresh capital: SEBI Chairman - Business Today",
-      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZjZyWGFrQWljTDlEbTN1ZDJjMnFsSGhQdENDb3B1ajVWOXl2U2dNVUVNRVV4ZzY3aDVjVW1laS02RlNNaXVXVkt6NHB3Z3BPNXdIQVlUb2tsQWlqdjcyMzBadmQ4VEQ4S1drWHZBUXpJQk9hWjR4a2FUMjV0UTFYNFdYbEw2ZUU2T0hYQXlYT3ZPYVZWZXJPbFFITjZrOC1FSUdtSVZRald1SDlsX2VaWGVYQWtlZkdfSGkta3pjcXZ0MzJuRjlzYkpES25xZHo0RElld0hFQzdocWVIRG5wb2NQY0pkekZJcGo5YmI5N0ZTZHk5VzZuQ2ZyRzNyNFlHU3pJ0gGIAkFVX3lxTE9vUzNBN1BFNnpsT3dVamppeU9fd296M2QySTZhb2ZoS3hnUmd2OFV4UGU1U2xEekY4YUdrT2Q5NHVqQ0h6SnZ6MnRQZHhTSFU5S0lIUlQwOHhEOHk4a19MZ2ZRWWpINHVmLXRKcDRZOFlVVmFiTW1fQjBMX01vcnpoTFBaQ2I5aG1odGV0dXhtN3VTNkwyNkZEWTFtWFhObjJnSkFNWjgtUGxDMVlDcmV2Z0lXNzNnS01sWWlicTFDbjM2b1JfZHh0VXZvQTlpV0YtanN4Qkh1TGJ2cWR4OXJCYzZOS3loVkU2R1dOYkhWZW9IWG56Y2tqV0pObU1QVW9IV3E4bUFydg?oc=5",
-      "published": "Tue, 22 Sep 2026 14:56:07 GMT",
-      "source": "Business Today",
+      "title": "NSE IPO GMP at ₹49; Issue Subscribed 5.69x on Final Day - India Infoline",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ3lva3p4bXg4VExUYVBRZTMyOFFpdXpkOWwySHFSb1EzMmR4R1Z1ZzB2ZmJPSFNPLWpOUFBoYXoyZWRaanl4aHdBMDNlOTNtQjlZT2FnZUhESGRXaUhIS3BFSEJBQzFPMjFGTjRHaTkwQlZZWkhGNnpiNk9BdFlYWDhJUnVDMVY1dGE1dzlTaC1TNWIzTHY0?oc=5",
+      "published": "Mon, 21 Sep 2026 12:32:29 GMT",
+      "source": "India Infoline",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "NSE IPO GMP at ₹49; Issue Subscribed 5.69x on Final Day - India Infoline",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPZ3lva3p4bXg4VExUYVBRZTMyOFFpdXpkOWwySHFSb1EzMmR4R1Z1ZzB2ZmJPSFNPLWpOUFBoYXoyZWRaanl4aHdBMDNlOTNtQjlZT2FnZUhESGRXaUhIS3BFSEJBQzFPMjFGTjRHaTkwQlZZWkhGNnpiNk9BdFlYWDhJUnVDMVY1dGE1dzlTaC1TNWIzTHY0?oc=5",
-      "published": "Mon, 21 Sep 2026 12:32:29 GMT",
-      "source": "India Infoline",
+      "title": "India could raise ₹2 lakh crore through IPOs; 55% of FY27 proceeds already fresh capital: SEBI Chairman - Business Today",
+      "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxQZjZyWGFrQWljTDlEbTN1ZDJjMnFsSGhQdENDb3B1ajVWOXl2U2dNVUVNRVV4ZzY3aDVjVW1laS02RlNNaXVXVkt6NHB3Z3BPNXdIQVlUb2tsQWlqdjcyMzBadmQ4VEQ4S1drWHZBUXpJQk9hWjR4a2FUMjV0UTFYNFdYbEw2ZUU2T0hYQXlYT3ZPYVZWZXJPbFFITjZrOC1FSUdtSVZRald1SDlsX2VaWGVYQWtlZkdfSGkta3pjcXZ0MzJuRjlzYkpES25xZHo0RElld0hFQzdocWVIRG5wb2NQY0pkekZJcGo5YmI5N0ZTZHk5VzZuQ2ZyRzNyNFlHU3pJ0gGIAkFVX3lxTE9vUzNBN1BFNnpsT3dVamppeU9fd296M2QySTZhb2ZoS3hnUmd2OFV4UGU1U2xEekY4YUdrT2Q5NHVqQ0h6SnZ6MnRQZHhTSFU5S0lIUlQwOHhEOHk4a19MZ2ZRWWpINHVmLXRKcDRZOFlVVmFiTW1fQjBMX01vcnpoTFBaQ2I5aG1odGV0dXhtN3VTNkwyNkZEWTFtWFhObjJnSkFNWjgtUGxDMVlDcmV2Z0lXNzNnS01sWWlicTFDbjM2b1JfZHh0VXZvQTlpV0YtanN4Qkh1TGJ2cWR4OXJCYzZOS3loVkU2R1dOYkhWZW9IWG56Y2tqV0pObU1QVW9IV3E4bUFydg?oc=5",
+      "published": "Tue, 22 Sep 2026 14:56:07 GMT",
+      "source": "Business Today",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
@@ -588,15 +570,6 @@
       "tag": "IPO"
     },
     {
-      "title": "Sonaselection India IPO allotment today; check status on BSE, NSE and registrar - Moneycontrol.com",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUldCdFZGajVYRVJlUjhHOGFZdEFSWXQ0X2hhSTFXRm4zR20wcGxxZ3BrZ2E5UEVFU1Bnc0pORU42VWttQlV3T3RDOVN6cG9QemROWnhmdjlTWUFCVkRqdHBITmlCcURKN0NhN1ZaNC1JZzQ3MFRjY2dPMVMxNFk4WUM5VkJ5SU5zNjVOS0F3SG1CYUNqbHk5NDVYbXhZOFZNbERmS19YZWM3SGd3UW92MlM0LXRvWlZST0lOanFaNnRtV0t5cXRLWTJGNmVRLXlxZ3BLZUhOdXEzd9IB2gFBVV95cUxQUldCdFZGajVYRVJlUjhHOGFZdEFSWXQ0X2hhSTFXRm4zR20wcGxxZ3BrZ2E5UEVFU1Bnc0pORU42VWttQlV3T3RDOVN6cG9QemROWnhmdjlTWUFCVkRqdHBITmlCcURKN0NhN1ZaNC1JZzQ3MFRjY2dPMVMxNFk4WUM5VkJ5SU5zNjVOS0F3SG1CYUNqbHk5NDVYbXhZOFZNbERmS19YZWM3SGd3UW92MlM0LXRvWlZST0lOanFaNnRtV0t5cXRLWTJGNmVRLXlxZ3BLZUhOdXEzdw?oc=5",
-      "published": "Tue, 22 Sep 2026 05:25:08 GMT",
-      "source": "Moneycontrol.com",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
       "title": "NSE’s $2.4 Billion India IPO Opens With Valuation in Focus - Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxObVpCcTFQTzdhcDh5elVvZVk1QnNXa3FWRS1CZ3pBOG1ZT0I0YVRvbE5ILVhYSG5VWUVqdGlCZTgtNnNfZ3hzM0swYW9KV0V5ajNfMXU1Y2E5bXNrbWFfdEFtNWRCYy1rY0VhZ3gwYXJtVDBNbm5tOE53VkF2M08yQjFNZDlfc2VINjNDdkpQNTBNYzI2alM5a2dDQVdYdlU5YTY1VDEtakNNYk5IOU1mRmVR?oc=5",
       "published": "Thu, 17 Sep 2026 11:33:05 GMT",
@@ -615,21 +588,21 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
+      "title": "Sonaselection India IPO allotment today; check status on BSE, NSE and registrar - Moneycontrol.com",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQUldCdFZGajVYRVJlUjhHOGFZdEFSWXQ0X2hhSTFXRm4zR20wcGxxZ3BrZ2E5UEVFU1Bnc0pORU42VWttQlV3T3RDOVN6cG9QemROWnhmdjlTWUFCVkRqdHBITmlCcURKN0NhN1ZaNC1JZzQ3MFRjY2dPMVMxNFk4WUM5VkJ5SU5zNjVOS0F3SG1CYUNqbHk5NDVYbXhZOFZNbERmS19YZWM3SGd3UW92MlM0LXRvWlZST0lOanFaNnRtV0t5cXRLWTJGNmVRLXlxZ3BLZUhOdXEzd9IB2gFBVV95cUxQUldCdFZGajVYRVJlUjhHOGFZdEFSWXQ0X2hhSTFXRm4zR20wcGxxZ3BrZ2E5UEVFU1Bnc0pORU42VWttQlV3T3RDOVN6cG9QemROWnhmdjlTWUFCVkRqdHBITmlCcURKN0NhN1ZaNC1JZzQ3MFRjY2dPMVMxNFk4WUM5VkJ5SU5zNjVOS0F3SG1CYUNqbHk5NDVYbXhZOFZNbERmS19YZWM3SGd3UW92MlM0LXRvWlZST0lOanFaNnRtV0t5cXRLWTJGNmVRLXlxZ3BLZUhOdXEzdw?oc=5",
+      "published": "Tue, 22 Sep 2026 05:25:08 GMT",
+      "source": "Moneycontrol.com",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
       "title": "India's Manika Plastech closes $13 million IPO, listing due September 21 - app.dealroom.co",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRGFLVVkya0YyWmgtVFBWWWUtVVJTckp5ei04V2hZcEJGMHFYREhnWHF5bUo5MzBhQTBFWEYwd19NNEV6dGxQTU1BZzFUVzJGU1FQelFiX1hncER2Si1zWklTV3JDcFZ0cXJ6akhlOF9uY0tSemREQUw0Z1paNWUxTWI0SE5BTjhiZUdPd19rYVdwV0pQRFdRZ1o5U3NlUTBGNWc3S293QQ?oc=5",
       "published": "Sat, 19 Sep 2026 21:10:26 GMT",
       "source": "app.dealroom.co",
       "feed_source": "Google News · IPO India",
       "tag": "LISTING",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
-      "title": "India's German Green Steel And Power Sets IPO Price Band At 132-139 Rupees/Share - Newspaper Ad - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTFppM08za0RYcG1rdTRGX0tDTExIY0JlbXhEd1hlbDRBRnRRN1ZHWnp6T08zMHRsYXFwX2FqTjloRVJUZjdxWHpFVGVGeVdVM2d6OEFUUjZlcmZPYWFjWEJBUDhmb0tRWUNBZkhrLTliNUtKVmlVbEpDZ1hHRk1hVHI2c2tLQmhINWFuanpFUlQ2MnlqeUc5a3lUeExFcTVmMldMaDZFTDluZUtlZy03RWswYlpleU1uWjZTU1RiMEV0S3VZdXFMZXFzZ1RSbkQzTm1vVG1PTGJMTWdDUkdnVW1abjdsVHc0S3VMR3NoX1NfNnBqSEE?oc=5",
-      "published": "Tue, 22 Sep 2026 02:27:00 GMT",
-      "source": "TradingView",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
@@ -642,13 +615,30 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Snapdeal parent AceVector seeks up to $182 million valuation in trimmed India IPO - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQWWpTSExjWmxUbnpsdXJPeW9wZVJBWURvNUxIN0pua2llU1o2V3MySGx0S0VJM1pWWUlrZ0Vzc2tnOVVkOXF2R3FrQng4RklOQ1ZBM2VQOThVbkdMdmVsMDBoY3l1d05SNWtONGFqVVVVdFZrVTNOUnEtRjVEX2VrYk9sNUpWRjY5VENPdnlQRHhRS2hma1dfUmhmdk1DaU9kNGdqd0FoWGYtTEl6Zjk2U0dmdVl6akp2RGxEcTVkLVFZZFV5M1BGd1BrbDE5U1o1WVpvV05RYXFiaXBLNHhxRklKUDY?oc=5",
-      "published": "Tue, 22 Sep 2026 03:15:00 GMT",
+      "title": "India's German Green Steel And Power Sets IPO Price Band At 132-139 Rupees/Share - Newspaper Ad - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxOTFppM08za0RYcG1rdTRGX0tDTExIY0JlbXhEd1hlbDRBRnRRN1ZHWnp6T08zMHRsYXFwX2FqTjloRVJUZjdxWHpFVGVGeVdVM2d6OEFUUjZlcmZPYWFjWEJBUDhmb0tRWUNBZkhrLTliNUtKVmlVbEpDZ1hHRk1hVHI2c2tLQmhINWFuanpFUlQ2MnlqeUc5a3lUeExFcTVmMldMaDZFTDluZUtlZy03RWswYlpleU1uWjZTU1RiMEV0S3VZdXFMZXFzZ1RSbkQzTm1vVG1PTGJMTWdDUkdnVW1abjdsVHc0S3VMR3NoX1NfNnBqSEE?oc=5",
+      "published": "Tue, 22 Sep 2026 02:27:00 GMT",
       "source": "TradingView",
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "NSE IPO GMP today: On Day 3, grey market premium stands at 3% - all you need to know - The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQRGRrdHFsQVdubHg0cmFXMWg0RnN6ZDh3dTBpY1p6RHc5cXRTSVNfTHc1cVNVcjVaRTgyWXhRdzdTNkNmclhpd0lFMnpodlRlajFEczd6VENXY1o1YjRaMmc2N2Z6eFlvU1EybkNDLUVybTVDSVBvaHpwRm1kbFNEYldaZmJwdnVwalVxRFFReG5HRU1GZ2otQlNfdmVEMmxsOFU5NTZyNzlmQ09Yc095SVFvc3REQ3NvMVAtVTdEZjdFZFdadU03OExjd0MxLUhsYWFBcjJIa2MzZUFhbVJicmI2NGs0TWxTT2VEOFM0UlFTQU5pVFd5RNIB_gFBVV95cUxNLVBmZk1FZ0JXSHgwc1RmRnpHZlZOaGRsNG5FVnZJenVLX1ZlSWRJNU9sVFg0YmVfR3hhTTVnT2lVSlh0MnNuN2stb2pMUV9aWG91VldMZFhpODZKV085ajFBTUJldEhTQ2lfX3RVWmJaaEE1cko2UHl6T3FySzVxYzg5LXd0aWU5NDd5bkIzRzF2VGd6VDVhb2tWUjZBU1oyU2xqaDJfZkdMVDJHd2Y0UTN3cjA0UjJUakJwcS1kYUk3VGYzak9HS3NTTUl6VThTb2ZDUE5tS3FaY2ZWb2pCdElrZjRJSVMwa01yMHhtWnk0VkpwbkdzN2F2bEx6UQ?oc=5",
+      "published": "Mon, 21 Sep 2026 04:09:00 GMT",
+      "source": "The Times of India",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
+      "ipo": "Bench Mark Infotech Services Limited"
+    },
+    {
+      "title": "Trilegal Advises ARCIL On INR 7,329 million IPO - LawBeat",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUzlLSU5ESnVVdTYzS3pKeU9jVHVaLU5uUDVReHMzZTZRdG9kR3h0Mm9nOTBWbmhzYXhHRUtXQ0FHejZjVVFHNVpFS1gycGtOTEEtYWNxQ0RvbmNEVkt6Nml3a3g0QzNvQWgyMTMwYnU5VFpoR2gyRUhhY2REYmIxY0NEWW1JazNmWGJr0gGQAUFVX3lxTFBtSEFBX0huenlsWTJEd0RRMUIyWG9KM1h1WVRsQkQ2ODd5bTRsek1Bdlp2T0ZEYVFCMVhjS19wWHJ4eHVRbEw1d292aC1zUEZtc1NPZjdHYzB5U2FfTWhHeVlKelNlckRXZXgzNnVhT3NoNTYyV0c1RW1NZzFpLW1VT05PMUZoVkdrZnZva1V5RA?oc=5",
+      "published": "Sat, 19 Sep 2026 10:59:01 GMT",
+      "source": "LawBeat",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
     },
     {
       "title": "Latest GMP compared: NSE IPO vs Sonaselection India IPO - Last day to apply today | Share listing price prediction - TradingView",
@@ -660,12 +650,13 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Trilegal Advises ARCIL On INR 7,329 million IPO - LawBeat",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUzlLSU5ESnVVdTYzS3pKeU9jVHVaLU5uUDVReHMzZTZRdG9kR3h0Mm9nOTBWbmhzYXhHRUtXQ0FHejZjVVFHNVpFS1gycGtOTEEtYWNxQ0RvbmNEVkt6Nml3a3g0QzNvQWgyMTMwYnU5VFpoR2gyRUhhY2REYmIxY0NEWW1JazNmWGJr0gGQAUFVX3lxTFBtSEFBX0huenlsWTJEd0RRMUIyWG9KM1h1WVRsQkQ2ODd5bTRsek1Bdlp2T0ZEYVFCMVhjS19wWHJ4eHVRbEw1d292aC1zUEZtc1NPZjdHYzB5U2FfTWhHeVlKelNlckRXZXgzNnVhT3NoNTYyV0c1RW1NZzFpLW1VT05PMUZoVkdrZnZva1V5RA?oc=5",
-      "published": "Sat, 19 Sep 2026 10:59:01 GMT",
-      "source": "LawBeat",
+      "title": "Snapdeal parent AceVector seeks up to $182 million valuation in trimmed India IPO - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQWWpTSExjWmxUbnpsdXJPeW9wZVJBWURvNUxIN0pua2llU1o2V3MySGx0S0VJM1pWWUlrZ0Vzc2tnOVVkOXF2R3FrQng4RklOQ1ZBM2VQOThVbkdMdmVsMDBoY3l1d05SNWtONGFqVVVVdFZrVTNOUnEtRjVEX2VrYk9sNUpWRjY5VENPdnlQRHhRS2hma1dfUmhmdk1DaU9kNGdqd0FoWGYtTEl6Zjk2U0dmdVl6akp2RGxEcTVkLVFZZFV5M1BGd1BrbDE5U1o1WVpvV05RYXFiaXBLNHhxRklKUDY?oc=5",
+      "published": "Tue, 22 Sep 2026 03:15:00 GMT",
+      "source": "TradingView",
       "feed_source": "Google News · IPO India",
-      "tag": "IPO"
+      "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
       "title": "Cyril Amarchand Mangaldas advises the BRLMs on IPO of Asset Reconstruction Company (India) Ltd. - SCC Online",
@@ -677,12 +668,13 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Spinny confidentially pre-files IPO; appoints Ex Bharti executive Akhil Gupta as board chairman - entrackr.com",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYTFwS1R2ZjJ3ZlZCaC1PR09IOFFxNkszRjVZdWczMnNJdHlMZG1Td3l3WE8xdGVwcEhONGRRWmNKWmVwNGVpT3FtYnVOZG1SSUpCTlNlRUhQTTc5SGhkUF9IeTBDaWtaMUY5WHFMbVBnR2laUzVqR05TTjJWWi13YUQxSlU0dlYzOTR5Zlo5dkFuTDRmQS1tU2pEZG9LOTFGVmI1VFJDamJnWVROaklqd2ZGdVVRM1lvWk1tOHFycmVHLWxGMXU1Uzh6N2NIbDQy0gHQAUFVX3lxTE1hMXBLVHZmMndmVkJoLU9HT0g4UXE2SzNGNVl1ZzMyc0l0eUxkbVN3eXdYTzF0ZXBwSE40ZFFaY0paZXA0ZWlPcW1idU5kbVJJSkJOU2VFSFBNNzlIaGRQX0h5MENpa1oxRjlYcUxtUGdHaVpTNWpHTlNOMlZaLXdhRDFKVTR2VjM5NHlmWjl2QW5MNGZBLW1TakRkb0s5MUZWYjVUUkNqYmdZVE5qSWp3ZkZ1VVEzWW9aTW04cXJyZUctbEYxdTVTOHo3Y0hsNDI?oc=5",
-      "published": "Tue, 22 Sep 2026 04:03:27 GMT",
-      "source": "entrackr.com",
+      "title": "World’s biggest derivatives exchange finally set for $46bn market debut - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPLWxqMjFRWUtaaXRYVS1IOUZkNGRYSFVXM0YyQU9GUURPRXQwU3ZQdU5qYUpmdnQ1Um1sd01TMHFSRThIczZ2QVZWb3RWNC1UMnJzTFFjTmViMkFybW14MU5TRUkweTY1SXZtaFhJc1BUMnJBa05XWkNVVjFYMzhmYk5rd0s?oc=5",
+      "published": "Mon, 21 Sep 2026 21:00:07 GMT",
+      "source": "Financial Times",
       "feed_source": "Google News · IPO India",
-      "tag": "IPO"
+      "tag": "IPO",
+      "ipo": "Bench Mark Infotech Services Limited"
     },
     {
       "title": "Sebi sees potential for Rs 2 lakh crore IPO fundraising as fresh capital gains prominence - The Economic Times",
@@ -693,21 +685,20 @@
       "tag": "IPO"
     },
     {
-      "title": "World’s biggest derivatives exchange finally set for $46bn market debut - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPLWxqMjFRWUtaaXRYVS1IOUZkNGRYSFVXM0YyQU9GUURPRXQwU3ZQdU5qYUpmdnQ1Um1sd01TMHFSRThIczZ2QVZWb3RWNC1UMnJzTFFjTmViMkFybW14MU5TRUkweTY1SXZtaFhJc1BUMnJBa05XWkNVVjFYMzhmYk5rd0s?oc=5",
-      "published": "Mon, 21 Sep 2026 21:00:07 GMT",
-      "source": "Financial Times",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO",
-      "ipo": "Bench Mark Infotech Services Limited"
-    },
-    {
       "title": "Jindal Supreme IPO allotment today: GMP at 31% — check status on BSE, NSE and registrar - Moneycontrol.com",
       "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQb1kyU3FCU2IwbDloZDlSeGo2SmRXNERST2huaXN4VXNaVkNTOERzNVdQT3BjT1AyUWJQZ3pyWEkwOXBLbm4teUJWYmFZNXlhY25Yay1iV3ZROXhleWhrZlNXd1lpTmhmOHV2T2dHcnNzdm9aZ2wzY0NKbi1lZEpYNlVDTVVXU09INlpqd2FUQTNQZHpTWVZ3YmZpZTkwVmFtelpIem10NGJrTldGc3l2aXJnR051dHg2enNicDRyZjlXQ3pUazAwUWU5RmZxUkw0TzhMaUttb9IB3AFBVV95cUxONWZQS0dzcDYzODRoMDlBdTFrTFA2dm12emc2SU1vMkVXeGViRzdaak9XSmllZEJnSE9wSFRhd1lHbmdFNS00dlZWR1NxOUstck81bUVoVmpWTWxLa2ptS3F5b0Zuam1DY0I1N3ItemktSV9qVnRGYXFkdWFEREZwWDdaRTJSdy1QUFZxSk5Od3E3UnNhdC13V2draGN3eDFPSDZhcURwMTdZMHItNHpfNVFjcGdadFRDNDdXU0FoX0d2S0lpSUFiazFMc2pyY05ZU1JnQTZwRmVNYkdz?oc=5",
       "published": "Mon, 21 Sep 2026 04:12:52 GMT",
       "source": "Moneycontrol.com",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
+    },
+    {
+      "title": "Spinny confidentially pre-files IPO; appoints Ex Bharti executive Akhil Gupta as board chairman - entrackr.com",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNYTFwS1R2ZjJ3ZlZCaC1PR09IOFFxNkszRjVZdWczMnNJdHlMZG1Td3l3WE8xdGVwcEhONGRRWmNKWmVwNGVpT3FtYnVOZG1SSUpCTlNlRUhQTTc5SGhkUF9IeTBDaWtaMUY5WHFMbVBnR2laUzVqR05TTjJWWi13YUQxSlU0dlYzOTR5Zlo5dkFuTDRmQS1tU2pEZG9LOTFGVmI1VFJDamJnWVROaklqd2ZGdVVRM1lvWk1tOHFycmVHLWxGMXU1Uzh6N2NIbDQy0gHQAUFVX3lxTE1hMXBLVHZmMndmVkJoLU9HT0g4UXE2SzNGNVl1ZzMyc0l0eUxkbVN3eXdYTzF0ZXBwSE40ZFFaY0paZXA0ZWlPcW1idU5kbVJJSkJOU2VFSFBNNzlIaGRQX0h5MENpa1oxRjlYcUxtUGdHaVpTNWpHTlNOMlZaLXdhRDFKVTR2VjM5NHlmWjl2QW5MNGZBLW1TakRkb0s5MUZWYjVUUkNqYmdZVE5qSWp3ZkZ1VVEzWW9aTW04cXJyZUctbEYxdTVTOHo3Y0hsNDI?oc=5",
+      "published": "Tue, 22 Sep 2026 04:03:27 GMT",
+      "source": "entrackr.com",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
     },
     {
       "title": "Orient Cables sets IPO price band at ₹258-272; issue opens September 25 - Fortune India",
@@ -719,6 +710,14 @@
       "ipo": "Orient Cables (India) Ltd. Mainboard"
     },
     {
+      "title": "Rupee ends marginally higher in subdued trade, forward premiums ease - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMDBYYmduall1WjBidjdJdDlwd0cxaG1nVTA3MjJtX0dFa2lla3VNVFB1TGJCeHFveGlVVmNiTG1xa1AyOUlpLTU1WVZaWXF5Q3RxMmpFRTlEYUJuT2RfMTY3U2JsZXJvaXFMTWVzRW5JVlRLRW96SlZEcmdFT3VvQkxQRHpPNkcwa0tsQmlITEtPdzYzMjlqb0p2ZmFmeGstaVltQXF0VEJNWXo2Vm1nd1A1YlhpUUE?oc=5",
+      "published": "Mon, 21 Sep 2026 02:37:00 GMT",
+      "source": "Reuters",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO"
+    },
+    {
       "title": "NSE IPO 2026: Everything CA/CS Professionals Need to Know - CAclubindia",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQTRsZjJOUFBjaDZjYmVpeGdxQU16YVFvdjk4dEFORGNBaThKRUlIOEZxUWJrdDNEY3Vsb2hFX3VpcHpVTDc3Z2YwWU5zWHkzTUNCeHNrMWdBNzNFUjNxYk1HYldPTFFJLU5UekpHdGtwOXY0eHlrRXdmZng5TTdwWGxTdFBoUFJmTHR3ZGQyUXBMSUdRZ2lYX0FmMWpJckotMk9MaXR3?oc=5",
       "published": "Tue, 22 Sep 2026 03:32:00 GMT",
@@ -726,14 +725,6 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
-      "title": "Rupee ends marginally higher in subdued trade, forward premiums ease - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMDBYYmduall1WjBidjdJdDlwd0cxaG1nVTA3MjJtX0dFa2lla3VNVFB1TGJCeHFveGlVVmNiTG1xa1AyOUlpLTU1WVZaWXF5Q3RxMmpFRTlEYUJuT2RfMTY3U2JsZXJvaXFMTWVzRW5JVlRLRW96SlZEcmdFT3VvQkxQRHpPNkcwa0tsQmlITEtPdzYzMjlqb0p2ZmFmeGstaVltQXF0VEJNWXo2Vm1nd1A1YlhpUUE?oc=5",
-      "published": "Mon, 21 Sep 2026 02:37:00 GMT",
-      "source": "Reuters",
-      "feed_source": "Google News · IPO India",
-      "tag": "IPO"
     },
     {
       "title": "NSE IPO listing on September 24: How 5 largest IPOs fared on market debuts - Business Today",
@@ -763,14 +754,6 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "NSE IPO Allotment Today: Check Status on MUFG Intime & BSE - HDFC Sky",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9UaXF5WmdadGNGcnBuZ2k0SmxhMENaZGpTMzN0Sy1jZWhlWjFsUXdKMGtteks3dERrRXg2RUxWSVVXWkg1eVl1WkZfbktvZ1ZKRVJwVnZaU0h6aHRLNUN5ZEdnb0djeDBQcHNTYTdTNDYxQmdrSUtDV2RHQQ?oc=5",
-      "published": "Tue, 22 Sep 2026 04:29:56 GMT",
-      "source": "HDFC Sky",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT"
-    },
-    {
       "title": "India's Moneyview seeks up to $624M valuation in trimmed IPO - TNGlobal",
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVkVTMkFOSkdncThwVFBBWEJ0dlJ6Q2JQTE8yWjBER3RmSS1uLXJqWW1rS1F2LUxPUDA0SzB4cHBNc002ZDdra2dEUlZKbEtzQUFaeWZjc1F2R1k0Tkt5dER2S05UYnZNekJNaExNNUtmWGVOVTAwbl9TT0J3azIzOU1CY0pDS19VUU5MQUNB?oc=5",
       "published": "Mon, 21 Sep 2026 11:10:50 GMT",
@@ -778,6 +761,14 @@
       "feed_source": "Google News · IPO India",
       "tag": "IPO",
       "ipo": "Moneyview Limited"
+    },
+    {
+      "title": "NSE IPO Allotment Today: Check Status on MUFG Intime & BSE - HDFC Sky",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9UaXF5WmdadGNGcnBuZ2k0SmxhMENaZGpTMzN0Sy1jZWhlWjFsUXdKMGtteks3dERrRXg2RUxWSVVXWkg1eVl1WkZfbktvZ1ZKRVJwVnZaU0h6aHRLNUN5ZEdnb0djeDBQcHNTYTdTNDYxQmdrSUtDV2RHQQ?oc=5",
+      "published": "Tue, 22 Sep 2026 04:29:56 GMT",
+      "source": "HDFC Sky",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT"
     },
     {
       "title": "Retail India News: Snapdeal Parent AceVector Opens Rs 420 Cr IPO on September 25 - Indian Retailer",
@@ -798,15 +789,6 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Liqvd Digital India IPO - Moneycontrol.com",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNd1NLY3hqaXpOUk15bWduc18zRk1YYmFvU2REOUI2bkdWb1VJRlZOODI4U3NSWmVMeWV5bUZySDlPYy1WaXFOeUNsM3pvNUpDVlQ3YjctY3pvTVdGX1JBLU1GZTlRd3BfZy1hM1hDT1lfNGt4?oc=5",
-      "published": "Tue, 22 Sep 2026 00:37:35 GMT",
-      "source": "Moneycontrol.com",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "IPO",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
       "title": "NSE IPO ends with 5.7x subscription - IndiaIPO",
       "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1LX2lmOW00eTRmX3J5VVVhdVMxcDVtRkJrQVZ6NXNObWZ5YUtjTXRYUXJwRVY1SUpQQW9JM19VYmlxU3VaV21uVTlWdTFtX2RrSVVQNThKcVBQMGcxR0IwUXUyQ3liRGR4MElreFk1bVk1cndLN25adTR3?oc=5",
       "published": "Mon, 21 Sep 2026 14:43:36 GMT",
@@ -816,10 +798,37 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
+      "title": "Liqvd Digital India IPO - Moneycontrol.com",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNd1NLY3hqaXpOUk15bWduc18zRk1YYmFvU2REOUI2bkdWb1VJRlZOODI4U3NSWmVMeWV5bUZySDlPYy1WaXFOeUNsM3pvNUpDVlQ3YjctY3pvTVdGX1JBLU1GZTlRd3BfZy1hM1hDT1lfNGt4?oc=5",
+      "published": "Tue, 22 Sep 2026 00:37:35 GMT",
+      "source": "Moneycontrol.com",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "Spinny files confidential IPO papers, eyes ₹2,500-3,000 crore issue - Fortune India",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPTlVPZlNFNWg1WVVLUGRJdklxRVpET1M1d20xMUFJcFJvLTlfY29LNmM3T2d3VWwzME5yREtaZFBnQUQ0UUd0ZHRDQ201SV95amVvdWtNdlRnNjgtNFY5OVNza0phTGFNRXNMdmRJbTNpdVdMV1BEdUxvX3dCbHFlV1BnWmFyVndJLW9LdlZLN0pSSUNsdHo2WXJVWk5OdU5TeWJnazAxcTBMYUVsN1NyQdIBvgFBVV95cUxPZ1VKY0RhYlpoSEZ6S2UzWUJIQ2tCVktoMG5CeXg5QzZtd19WYUV0VS05Qm5ta0E5XzdzaF9nRmp3cmUydEI3cG1UUHVyNndaV2NGOEo5Sldfdzh2VnAwODJWRlFDTDN1VDdvSGk4X2p4M2xZSHJVZXBhM283YlFxeW5vZGhObUs0cXZqQndYTHYzdVc4anJ0YlFmUDY4enFSUGxXRWZyQ2FGa05QZ2JJVzJzdUFMVkF3VzE1c0VB?oc=5",
+      "published": "Tue, 22 Sep 2026 05:07:49 GMT",
+      "source": "Fortune India",
+      "feed_source": "Google News · IPO India",
+      "tag": "IPO",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
       "title": "NSE IPO allotment: Status finalised; steps to check online on National Stock Exchange, BSE, MUFG Intime India; listing date, time revealed - upstox.com",
       "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOalJtQWJIWUM5S0phRDYzMFRVdFpoRGRmdlZWUXBYMjJfVHlIMDMxeDBEUmY4cXRkZGNqTUg1aUkzc08tMUNfSHl6MFg2Qmp1YnM4bkJsaUUwcEI0SENoOUtEWEY4aGtTaWYzR3o1TUlxYkNEeEJoNmxGNjRkVGp3a01SS0Fxa2M3N3Q0RHpvd2xFcVNqeVdpMGN1REV1dlp5elZwX0JaNENTckJPYXpnZXFTZHROWG9KQUx5X0RHOHRrS2I1ODl0VVRFblNrMDBFWGw4QkYyVU91ZE95ZExhRVpJeEdvbFJSRXhQalRTOG9uRTdKTVF1bWJTTm1pQkFoa05KUWV6bw?oc=5",
       "published": "Mon, 21 Sep 2026 18:55:46 GMT",
       "source": "upstox.com",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT",
+      "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "NSE IPO Allotment Status Check Online: Steps, GMP, Listing Date and Key Details - India Infoline",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOTmZrMWJDYy1GS05xekFVZ3dlcU50bHlsVzdFNXR6d21MdG56M2ZLc3BmRnVELVhDT1ZJbUkyWjNTaGl6UExoUDJWa3ZKWXZreFZ1ZlRKMTRvUENvM3czbURNelBIS1htS2hiZi1ELWxPMmNXNXhfUVV3aFhnQ3RmOTFkRHhXV25SaWwyRTFCRFpGTk45VlhWbmUweTBGWEJuNFdGTGxWcURQUDB5S1RuTFZaa3JPQQ?oc=5",
+      "published": "Tue, 22 Sep 2026 06:00:01 GMT",
+      "source": "India Infoline",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "A-One Steels India Ltd. Mainboard"
@@ -884,18 +893,18 @@
       "tag": "ALLOTMENT"
     },
     {
-      "title": "SpectraA Technology IPO Allotment Status Online - IPO Watch",
-      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fQTZpX3dzMThCcUhuaWFxam1tSG4yN01mT05JSDBBeUxpaXpsX0tvMFRkSmlsalJrN2NkYl9pVHMtdGpDQnU2Z1hYV25pN1dyYnFYcVJfY2RSd0txRFloSjBpX2Q3QlZyQS1kamV3?oc=5",
-      "published": "Tue, 22 Sep 2026 06:01:25 GMT",
-      "source": "IPO Watch",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT"
-    },
-    {
       "title": "NSE IPO subscribed 5.7 times by the end of Day 3: Check allotment date and steps - upstox.com",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOWE8wRnMwMjltZGQtNkcwdlNMWjBXWncxQ2hlWTQ4aFM3WjUwNVZqV19QUTZyYm1SY0xlQWx6T3pOUW93aWd5Z0l5UkxUQm5LTEtWaEl0RDE3RlQ4aUNWOWFTYWMwTGpPRjl3Z0lTYjBOOXJnWUlWN1JYYktlbHgwazEtZTFNM2hxZGNPekwyaFpzLXNYelpmQ0xDTVFETU5VTVRrb0hFTVNsTUZkUHJtSGk0SUJPMjhmLS1IVg?oc=5",
       "published": "Mon, 21 Sep 2026 04:46:51 GMT",
       "source": "upstox.com",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT"
+    },
+    {
+      "title": "SpectraA Technology IPO Allotment Status Online - IPO Watch",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1fQTZpX3dzMThCcUhuaWFxam1tSG4yN01mT05JSDBBeUxpaXpsX0tvMFRkSmlsalJrN2NkYl9pVHMtdGpDQnU2Z1hYV25pN1dyYnFYcVJfY2RSd0txRFloSjBpX2Q3QlZyQS1kamV3?oc=5",
+      "published": "Tue, 22 Sep 2026 06:01:25 GMT",
+      "source": "IPO Watch",
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT"
     },
@@ -1272,14 +1281,6 @@
       "ipo": "A-One Steels India Ltd. Mainboard"
     },
     {
-      "title": "Maharaja Speedex IPO Allotment Status: Check Shares Online - HDFC Sky",
-      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNU3NxZ3ZzNzFvWUNyeWM0Qk5pZ1pCNG9ETi11YTJac0tTMmsxelQ3cE1SRGRVbkJLNGtVV0RVUm5pTHltMnl5ZlItcVFXOGlqeTdzbnBiR0gwaWVVM3ctQ19wZVEzSWxTYTIxRGhObEJnZ3hCTXYxZzJ0QjVreW5vbll1dUJObUVWeFM2cXZuX0d0SjNTMU5DM3pqNks5aTlVZmEtOTlRMk40bHdfVldkQy13SEpDSHhwSUR1RnRJWGhmV0lJcTBpX0FkbVo0Yk5sOHVmSHFJbEhOYnQwbGVFV3d2dTk3dmRINzNVRE1td19vQQ?oc=5",
-      "published": "Wed, 16 Sep 2026 06:23:36 GMT",
-      "source": "HDFC Sky",
-      "feed_source": "Google News · IPO allotment",
-      "tag": "ALLOTMENT"
-    },
-    {
       "title": "Steamhouse India IPO allotment today: Check status on BSE, NSE and registrar; GMP at 30% - Moneycontrol.com",
       "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQOUZWTFNsS1lzcEpnNUNxeklFUXdoUVM3WXlzUU9mUlJDTjJoVC1DMDI5UXk0X3RIY2tlSnZfWkUwcDRDN0Y5b2QxOUlkdDlSNDV1SW5PeVZqNW4wbnB6X1BRNVpLNVQ2UnhWSXlXdzVPU2JrVFFVbW5ySmM3cWNCWnhhV0pjeEdReV9wRVpYT0prUXhkU2hYZHZNcUh3dV8xcld6SnpxUDFQcnctcWE0cHA3SzEyUE5wZHBqdGZkd1ROY1piTzZYbFBiZnhiTGx5TVBMMGJRRUtXLWtITDlGd0pSS3ZWVFY00gHuAUFVX3lxTFA4UU45WllMZjJzS1p2enBsaElXeHA2OWZpWGFHUWpvTm9Jd0Rack1xMDVoTHVMZVpqMzFqcDRjOHRaRHlFQ3FsTXdET3RoalNFV3J3aUM3U1haQWJ6eXljcGtqRTU2eHEzUHpzdHZzOTVubzZZVFZYaTRLT3JZZWU2aXZ0Tm53dkZIZ283UkNsbmtnTHdpZHZsWXBOX1RzWDA4akI0dkhEN0ZmX0hQVURuc2hFeXZpVUYwaW96dm1QTi1DS2d0SGp0S1oteW13X05RQnk2Wk9PaTRhTGtVMXFqUzJqMWYxTERhMExVVEE?oc=5",
       "published": "Tue, 15 Sep 2026 04:33:58 GMT",
@@ -1287,6 +1288,14 @@
       "feed_source": "Google News · IPO allotment",
       "tag": "ALLOTMENT",
       "ipo": "A-One Steels India Ltd. Mainboard"
+    },
+    {
+      "title": "Maharaja Speedex IPO Allotment Status: Check Shares Online - HDFC Sky",
+      "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNU3NxZ3ZzNzFvWUNyeWM0Qk5pZ1pCNG9ETi11YTJac0tTMmsxelQ3cE1SRGRVbkJLNGtVV0RVUm5pTHltMnl5ZlItcVFXOGlqeTdzbnBiR0gwaWVVM3ctQ19wZVEzSWxTYTIxRGhObEJnZ3hCTXYxZzJ0QjVreW5vbll1dUJObUVWeFM2cXZuX0d0SjNTMU5DM3pqNks5aTlVZmEtOTlRMk40bHdfVldkQy13SEpDSHhwSUR1RnRJWGhmV0lJcTBpX0FkbVo0Yk5sOHVmSHFJbEhOYnQwbGVFV3d2dTk3dmRINzNVRE1td19vQQ?oc=5",
+      "published": "Wed, 16 Sep 2026 06:23:36 GMT",
+      "source": "HDFC Sky",
+      "feed_source": "Google News · IPO allotment",
+      "tag": "ALLOTMENT"
     },
     {
       "title": "Maharaja and Speedex India IPO Allotment Status: 0.57x Subscribed, Check Online - Univest",
@@ -1704,6 +1713,15 @@
       "ipo": "Bench Mark Infotech Services Limited"
     },
     {
+      "title": "India's markets regulator approves Jio Platforms' $3.8 billion IPO - Reuters",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOaVpfMXktQU4wUXFHUVhTcnUxWkZWVnlDV1V6aGhFaC1tZ3Z2YnA2VGlDQTQta2NxdGtURTFWY1dpQXZrR1VVWlpxWGZLVW5tbU1qRGNVZmh0Sks5SXhUMXlSeGVZOG54YklIbS1ITTQ2ZnlTUUZzRG05eC1mN2loVENwZFltamRmeEVfTlBoZTFUYzI3NzJqSGRWUENFQ1JOUFhBZ0tyVVpaNDlPUGVJ?oc=5",
+      "published": "Fri, 28 Aug 2026 07:00:00 GMT",
+      "source": "Reuters",
+      "feed_source": "Google News · IPO upcoming/listing",
+      "tag": "IPO",
+      "ipo": "Bench Mark Infotech Services Limited"
+    },
+    {
       "title": "SEBI approves six IPOs, including India's largest, Jio Platforms' offering, on Friday - The New Indian Express",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPRGhiVEpFVmF2VTFNc0Z3NFhyNmJ6djR0M3JTN1BtLW9DaE56Vm9qNmVSUmIzaGR2MFNoSkl0UURJMDlDdEdJXzZzdVctTzBPZ09KRjJSZkF5cmZSZEdBNVNobzdPNFk0WFpEczdjXzgzSEFjYUpZd0lEQ0I4OXgwQUlCSVV1WkJ3TzBWeHNKZURFUk41Z1ZjblhMT2hoQnVpSGRkMVl0RXhFWmptaERjUGZQM21CMnVwSEdwSG1hY1JHZ0FjSUNkU0hsWWpJcG_SAdwBQVVfeXFMTUN3cjFwLU1VTkVxdFFrVW14SFJ0SDYxSm5pb0lzYmdDMDhGaWcxLVkydjJzVkxKN2Iyb2dBZ0IxTU1UcEszOVNMcDJlODRzRGtwYWdBUnNBaFFtV0JKZEVPckw0QmcyNjUzNzRNTWVueDRMcUwxbEZTY1RxVGkzLVNuRGx2OElhUzZwdzlDdE5EaW5fdkc0NXBEdDU4aFRJeVJ6Q1ptUHJRSXJOZ2t6a0tMbXFuTW5ZTEVnYXZoUl9adUNXbUVHcGdHZm5oT2x0a0E4bmpzLTcwc1NZRQ?oc=5",
       "published": "Fri, 28 Aug 2026 07:00:00 GMT",
@@ -1716,24 +1734,6 @@
       "title": "India's Yotta targets Jan-March 2027 IPO, seeks up to $1.5 billion amid AI boom - Reuters",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOM2JPZFMzeXRYUXlXV2tLb1JGMDNQU3c1N3BiU09HcTRrRTJncW12VEl3SUxOZlBLd3dLMFgxbklwX2ZtTDczVVF0TXR0TzZMdmttRFMxTF9KTFVRcWZMcUNTSmZoM200eFRFV2RZbHNNaHRqMkQtYVhNT1VrNU1mUE5sZnJEWk5xSW9hbi1WVUs3UDZ5ZEJWSFg5NmdtbC0xN3hwamthUGtjMFd5ZGY0TUJ3TUtqZmR4U3hjNQ?oc=5",
       "published": "Wed, 02 Sep 2026 07:00:00 GMT",
-      "source": "Reuters",
-      "feed_source": "Google News · IPO upcoming/listing",
-      "tag": "IPO",
-      "ipo": "A-One Steels India Ltd. Mainboard"
-    },
-    {
-      "title": "Temasek-backed Manipal Health rises in India market debut after $973m IPO - Nikkei Asia",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPTWY2aXkzamFrMmNVSjRqSlg4RXJFS2tUUEZodFFXUHduT0E4MkdEekx4VU1aQUpXbWNnYWtUV0UwNzl3V2JWaEFQbUg5T0hUMWUtU3JJdnlNREpON2xGT3B2SFFBa0pUdVFVRFRsWkxrazN3ZFowYWxLM1BTYUJzRjYxZXV2OHE3dGh1TVNfeVhzTDRWbEd4RWtUQTBiTWQ4TS14ZWljZjFpd3pDdk1hMTFRT0VtRlRD?oc=5",
-      "published": "Wed, 05 Aug 2026 07:00:00 GMT",
-      "source": "Nikkei Asia",
-      "feed_source": "Google News · IPO upcoming/listing",
-      "tag": "IPO",
-      "ipo": "Bench Mark Infotech Services Limited"
-    },
-    {
-      "title": "India's largest bourse NSE files for IPO after years of regulatory delays - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQMjNWN01mNXc1ODR1QzViR2gtZl9fdmRMSFFhTDlJQ25ZUDJyTGIyTUVKU09fQ0loQUtKS042a3FIdFExMWp0RnZ4STB0bXhQVF84Ykk1T0VWMFhoNzVGV0FWd3ViOVh2ZWJ2WkszQnpmSFFoWGlHS3pjZjRWaW9va090Rmo4WTgyaEpiU1R3UVRHYk1jU3JVWkQ0M0o0MlZfdjU0M3VudlAxZkZLR0dzMHlHMA?oc=5",
-      "published": "Wed, 17 Jun 2026 07:00:00 GMT",
       "source": "Reuters",
       "feed_source": "Google News · IPO upcoming/listing",
       "tag": "IPO",
