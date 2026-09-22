@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T16:44:58.702676+00:00",
+  "updated_at": "2026-09-22T16:54:20.737596+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,22 +100,7 @@
       "change_pct": 1.21
     }
   ],
-  "world": [
-    {
-      "price": 7760.86,
-      "change": -3.84,
-      "change_pct": -0.05,
-      "name": "S&P 500 (US)",
-      "symbol": "^GSPC"
-    },
-    {
-      "price": 7017.91,
-      "change": 10.19,
-      "change_pct": 0.15,
-      "name": "KOSPI (Korea)",
-      "symbol": "^KS11"
-    }
-  ],
+  "world": [],
   "commodities": [],
   "fx": [
     {
