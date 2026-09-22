@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T10:54:21.637952+00:00",
+  "updated_at": "2026-09-22T11:01:03.780823+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,7 +100,15 @@
       "change_pct": 1.21
     }
   ],
-  "world": [],
+  "world": [
+    {
+      "price": 27122.09,
+      "change": 599.55,
+      "change_pct": 2.26,
+      "name": "Nasdaq (US)",
+      "symbol": "^IXIC"
+    }
+  ],
   "commodities": [],
   "fx": [
     {
