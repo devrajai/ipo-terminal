@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T17:58:27.195707+00:00",
+  "generated_at": "2026-09-22T18:04:19.834373+00:00",
   "events": [
-    {
-      "date": "2026-09-22",
-      "type": "CLOSE",
-      "ipo_id": "axiom-gas-engineering-limited",
-      "name": "Axiom Gas Engineering Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-22",
       "type": "OPEN",
