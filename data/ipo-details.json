@@ -1,67 +1,63 @@
 {
- "updated_at": "2026-09-21T12:45:54.710999+00:00",
+ "updated_at": "2026-09-22T02:38:01.257335+00:00",
  "ipos": {
-  "National Stock Exchange of India Limited": {
-   "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
+  "Varmora Granito Limited": {
+   "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
    "subs": {
-    "rii": 30.0,
-    "nii": 31.0,
-    "qib": 31.0,
-    "total": 31.0
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
    },
    "anchor": {
-    "total_cr": 6746.18,
     "investors": 20
    },
    "fin": {
     "periods": [
-     "30 Jun 2026",
      "31 Mar 2026",
      "31 Mar 2025",
      "31 Mar 2024"
     ],
     "assets": [
-     91334.07,
-     87937.44,
-     69466.64,
-     65463.98
+     1509.87,
+     1589.8,
+     1476.16
     ],
     "income": [
-     5252.17,
-     18713.37,
-     19176.83,
-     16352.06
+     1562.53,
+     1492.68,
+     1472.58
     ],
     "pat": [
-     3120.08,
-     10302.06,
-     12187.69,
-     8305.74
+     55.09,
+     30.77,
+     44.94
     ],
     "ebitda": [
-     4332.04,
-     14519.09,
-     16021.36,
-     11623.83
+     221.56,
+     198.29,
+     150.33
     ],
     "networth": [
-     34983.74,
-     31869.72,
-     30165.05,
-     23833.1
+     796.88,
+     722.9,
+     678.59
+    ],
+    "borrowing": [
+     357.95,
+     505.16,
+     412.89
     ]
    },
-   "rev_growth": -2.4,
-   "pat_growth": -15.5,
+   "rev_growth": 4.7,
+   "pat_growth": 79.0,
    "kpi": {
-    "roe": "9.26%",
-    "roce": "11.55%",
-    "pat_margin": "58.78%",
-    "nav": "142.40"
-   }
-  },
-  "Sonaselection India Limited": {
-   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/"
+    "roe": "6.80%",
+    "roce": "9.89%",
+    "pat_margin": "3.53%",
+    "ebitda_margin": "14.18%",
+    "nav": "39.52"
+   },
+   "promoter_pct": 52.0
   },
   "Axiom Gas Engineering Limited": {
    "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
@@ -124,191 +120,16 @@
    },
    "promoter_pct": 98.28
   },
-  "Kheria Autocomp Limited": {
-   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-   "subs": {
-    "qib": 47.49,
-    "nii": 14.25,
-    "rii": 33.25,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 13.24,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
-    },
-    {
-     "name": "LAPL Automotive Ltd.",
-     "pe": "9.91"
-    },
-    {
-     "name": "Poojaa Precision Engg.Ltd.",
-     "pe": "14.25"
-    },
-    {
-     "name": "Happy Steels Ltd.",
-     "pe": "9.76"
-    },
-    {
-     "name": "Autofurnish Ltd.",
-     "pe": "11.64"
-    },
-    {
-     "name": "Gallard Steel Ltd.",
-     "pe": "17.31"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     106.23,
-     81.79,
-     53.14
-    ],
-    "income": [
-     120.3,
-     92.31,
-     62.4
-    ],
-    "pat": [
-     11.42,
-     8.24,
-     3.31
-    ],
-    "ebitda": [
-     22.9,
-     16.18,
-     9.76
-    ],
-    "networth": [
-     39.52,
-     28.24,
-     20.0
-    ],
-    "borrowing": [
-     35.03,
-     30.9,
-     18.83
-    ]
-   },
-   "rev_growth": 30.3,
-   "pat_growth": 38.6,
-   "kpi": {
-    "roe": "33.72%",
-    "roce": "26.89%",
-    "de": "0.89",
-    "pat_margin": "9.52%",
-    "ebitda_margin": "19.08%",
-    "nav": "35.13"
-   },
-   "promoter_pct": 100.0
-  },
-  "SpectraA Technology Solutions Limited": {
-   "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
-   "subs": {
-    "qib": 47.42,
-    "nii": 14.29,
-    "rii": 33.23,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 12.09,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Kwick Forensic Solutions Ltd.",
-     "pe": "11.25"
-    },
-    {
-     "name": "Skytech Infinite Platform Ltd.",
-     "pe": "null"
-    },
-    {
-     "name": "Merritronix Ltd.",
-     "pe": "11.83"
-    },
-    {
-     "name": "Adisoft Technologies Ltd.",
-     "pe": "12.82"
-    },
-    {
-     "name": "Highness Microelectronics Ltd.",
-     "pe": "16.7"
-    },
-    {
-     "name": "Tipco Engineering India Ltd.",
-     "pe": "8.73"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     106.29,
-     100.0,
-     66.64
-    ],
-    "income": [
-     103.05,
-     75.53,
-     89.68
-    ],
-    "pat": [
-     11.56,
-     4.91,
-     2.0
-    ],
-    "ebitda": [
-     19.26,
-     10.13,
-     4.48
-    ],
-    "networth": [
-     24.81,
-     13.12,
-     8.18
-    ],
-    "borrowing": [
-     26.96,
-     17.21,
-     14.19
-    ]
-   },
-   "rev_growth": 36.4,
-   "pat_growth": 135.4,
-   "kpi": {
-    "roe": "60.95%",
-    "roce": "37.61%",
-    "de": "1.09",
-    "pat_margin": "11.42%",
-    "ebitda_margin": "19.04%",
-    "nav": "24.58"
-   },
-   "promoter_pct": 96.04
-  },
-  "Coreintegra Consulting Services Limited": {},
-  "National Stock Exchange of India": {},
-  "Sonaselection India": {
+  "Sonaselection India Limited": {
    "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
     "qib": 50.0,
+    "nii": 15.0,
+    "rii": 35.0,
     "total": 100.0
    },
    "anchor": {
+    "total_cr": 42.47,
     "investors": 20
    },
    "peers": [
@@ -386,180 +207,66 @@
    },
    "promoter_pct": 86.21
   },
-  "SpectraA Technology Solutions": {
-   "url": "https://www.chittorgarh.com/ipo/spectraa-technology-solutions-ipo/2950/",
+  "National Stock Exchange of India Limited": {
+   "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
    "subs": {
-    "qib": 47.42,
-    "nii": 14.29,
-    "rii": 33.23,
-    "total": 100.0
+    "qib": 31.0,
+    "nii": 31.0,
+    "rii": 30.0,
+    "total": 31.0
    },
    "anchor": {
-    "total_cr": 12.09,
+    "total_cr": 6746.18,
     "investors": 20
    },
-   "peers": [
-    {
-     "name": "Kwick Forensic Solutions Ltd.",
-     "pe": "11.25"
-    },
-    {
-     "name": "Skytech Infinite Platform Ltd.",
-     "pe": "null"
-    },
-    {
-     "name": "Merritronix Ltd.",
-     "pe": "11.83"
-    },
-    {
-     "name": "Adisoft Technologies Ltd.",
-     "pe": "12.82"
-    },
-    {
-     "name": "Highness Microelectronics Ltd.",
-     "pe": "16.7"
-    },
-    {
-     "name": "Tipco Engineering India Ltd.",
-     "pe": "8.73"
-    }
-   ],
    "fin": {
     "periods": [
+     "30 Jun 2026",
      "31 Mar 2026",
      "31 Mar 2025",
      "31 Mar 2024"
     ],
     "assets": [
-     106.29,
-     100.0,
-     66.64
+     91334.07,
+     87937.44,
+     69466.64,
+     65463.98
     ],
     "income": [
-     103.05,
-     75.53,
-     89.68
+     5252.17,
+     18713.37,
+     19176.83,
+     16352.06
     ],
     "pat": [
-     11.56,
-     4.91,
-     2.0
+     3120.08,
+     10302.06,
+     12187.69,
+     8305.74
     ],
     "ebitda": [
-     19.26,
-     10.13,
-     4.48
+     4332.04,
+     14519.09,
+     16021.36,
+     11623.83
     ],
     "networth": [
-     24.81,
-     13.12,
-     8.18
-    ],
-    "borrowing": [
-     26.96,
-     17.21,
-     14.19
+     34983.74,
+     31869.72,
+     30165.05,
+     23833.1
     ]
    },
-   "rev_growth": 36.4,
-   "pat_growth": 135.4,
+   "rev_growth": -2.4,
+   "pat_growth": -15.5,
    "kpi": {
-    "roe": "60.95%",
-    "roce": "37.61%",
-    "de": "1.09",
-    "pat_margin": "11.42%",
-    "ebitda_margin": "19.04%",
-    "nav": "24.58"
-   },
-   "promoter_pct": 96.04
+    "roe": "9.26%",
+    "roce": "11.55%",
+    "pat_margin": "58.78%",
+    "nav": "142.40"
+   }
   },
-  "Kheria Autocomp": {
-   "url": "https://www.chittorgarh.com/ipo/kheria-autocomp-ipo/2760/",
-   "subs": {
-    "qib": 47.49,
-    "nii": 14.25,
-    "rii": 33.25,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 13.24,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
-    },
-    {
-     "name": "LAPL Automotive Ltd.",
-     "pe": "9.91"
-    },
-    {
-     "name": "Poojaa Precision Engg.Ltd.",
-     "pe": "14.25"
-    },
-    {
-     "name": "Happy Steels Ltd.",
-     "pe": "9.76"
-    },
-    {
-     "name": "Autofurnish Ltd.",
-     "pe": "11.64"
-    },
-    {
-     "name": "Gallard Steel Ltd.",
-     "pe": "17.31"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     106.23,
-     81.79,
-     53.14
-    ],
-    "income": [
-     120.3,
-     92.31,
-     62.4
-    ],
-    "pat": [
-     11.42,
-     8.24,
-     3.31
-    ],
-    "ebitda": [
-     22.9,
-     16.18,
-     9.76
-    ],
-    "networth": [
-     39.52,
-     28.24,
-     20.0
-    ],
-    "borrowing": [
-     35.03,
-     30.9,
-     18.83
-    ]
-   },
-   "rev_growth": 30.3,
-   "pat_growth": 38.6,
-   "kpi": {
-    "roe": "33.72%",
-    "roce": "26.89%",
-    "de": "0.89",
-    "pat_margin": "9.52%",
-    "ebitda_margin": "19.08%",
-    "nav": "35.13"
-   },
-   "promoter_pct": 100.0
-  },
+  "Coreintegra Consulting Services Limited": {},
   "Axiom Gas Engineering": {
    "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
    "subs": {
@@ -764,6 +471,10 @@
    },
    "peers": [
     {
+     "name": "Injecto Polymers Ltd.",
+     "pe": "9.48"
+    },
+    {
      "name": "Dhaval Packaging Ltd.",
      "pe": "12.05"
     },
@@ -780,8 +491,8 @@
      "pe": "12.12"
     },
     {
-     "name": "Knack Packaging Ltd.",
-     "pe": "18.33"
+     "name": "Manika Plastech Ltd.",
+     "pe": "18.22"
     }
    ],
    "fin": {
@@ -1127,7 +838,75 @@
    "promoter_pct": 72.33
   },
   "FX Multitech": {
-   "url": "https://www.chittorgarh.com/ipo/fx-multitech-ipo/2849/"
+   "url": "https://www.chittorgarh.com/ipo/fx-multitech-ipo/2849/",
+   "subs": {
+    "qib": 47.35,
+    "nii": 14.31,
+    "rii": 33.29,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 12.79,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Mopshop Distribution Ltd.",
+     "pe": "22.22"
+    },
+    {
+     "name": "Safecure Services Ltd.",
+     "pe": "11.66"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     73.05,
+     61.12,
+     32.66
+    ],
+    "income": [
+     111.9,
+     102.34,
+     68.74
+    ],
+    "pat": [
+     11.54,
+     9.64,
+     4.18
+    ],
+    "ebitda": [
+     19.37,
+     14.17,
+     6.95
+    ],
+    "networth": [
+     37.89,
+     26.35,
+     16.71
+    ],
+    "borrowing": [
+     18.42,
+     17.32,
+     11.24
+    ]
+   },
+   "rev_growth": 9.3,
+   "pat_growth": 19.7,
+   "kpi": {
+    "roe": "37.63%",
+    "roce": "28.93%",
+    "de": "0.49",
+    "pat_margin": "9.60%",
+    "ebitda_margin": "15.35%",
+    "nav": "35.22"
+   },
+   "promoter_pct": 100.0
   },
   "Vivekanand Cotspin": {
    "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/",
