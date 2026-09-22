@@ -18,6 +18,12 @@
     "gmp": 148.0,
     "gmp_pct": 8.3,
     "listing_est": 1933.0
+   },
+   {
+    "d": "2026-09-22",
+    "gmp": 26.0,
+    "gmp_pct": null,
+    "listing_est": null
    }
   ],
   "Sonaselection India Limited": [
@@ -38,6 +44,12 @@
     "gmp": 2.0,
     "gmp_pct": 2.0,
     "listing_est": 101.0
+   },
+   {
+    "d": "2026-09-22",
+    "gmp": 1.0,
+    "gmp_pct": 1.0,
+    "listing_est": 100.0
    }
   ],
   "Kheria Autocomp Limited": [
@@ -103,8 +115,16 @@
     "gmp_pct": 32.3,
     "listing_est": 561.0
    }
+  ],
+  "Axiom Gas Engineering Limited": [
+   {
+    "d": "2026-09-22",
+    "gmp": 17.0,
+    "gmp_pct": null,
+    "listing_est": null
+   }
   ]
  },
  "market": [],
- "updated": "2026-09-21T01:55:59.163914+00:00"
+ "updated": "2026-09-22T01:53:39.116783+00:00"
 }
