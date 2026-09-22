@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-22T02:38:01.257335+00:00",
+ "updated_at": "2026-09-22T04:17:04.076303+00:00",
  "ipos": {
   "Varmora Granito Limited": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
@@ -9,6 +9,7 @@
     "qib": 50.0
    },
    "anchor": {
+    "total_cr": 212.41,
     "investors": 20
    },
    "fin": {
@@ -408,6 +409,7 @@
     "qib": 50.0
    },
    "anchor": {
+    "total_cr": 212.41,
     "investors": 20
    },
    "fin": {
@@ -693,6 +695,7 @@
     "total": 100.0
    },
    "anchor": {
+    "total_cr": 7.53,
     "investors": 20
    },
    "peers": [
