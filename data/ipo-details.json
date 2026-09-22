@@ -1,11 +1,12 @@
 {
- "updated_at": "2026-09-22T05:16:35.735939+00:00",
+ "updated_at": "2026-09-22T05:43:15.606131+00:00",
  "ipos": {
   "Varmora Granito Limited": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
@@ -404,8 +405,9 @@
   "Varmora Granito": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
