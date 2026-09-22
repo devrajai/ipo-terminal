@@ -121,3 +121,11 @@
   setInterval(inject, 5000);                              // DOM-only re-inject, no network
   setInterval(() => { load().catch(() => {}); }, 900000); // refetch data every 15 min
 })();
+/* Research + Calendar modules loader (added 22 Sep). */
+(() => {
+  ['scripts/ipo-research.js', 'scripts/ipo-calendar.js'].forEach(s => {
+    const t = document.createElement('script');
+    t.src = s;
+    document.head.appendChild(t);
+  });
+})();

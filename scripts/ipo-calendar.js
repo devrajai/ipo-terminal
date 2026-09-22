@@ -1,16 +1,80 @@
-/* IPO Terminal automatic calendar — mobile-first, event-month navigation only. */
-(function(){
-'use strict';
-function esc(v){return String(v==null?'':v).replace(/[&<>\"']/g,function(x){return {'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[x];});}
-function dateOf(v){if(!v||v==='—')return null;var s=String(v).trim(),m=s.match(/^(\d{1,2})[\/-](\d{1,2})[\/-](\d{2,4})$/);if(m){var y=+m[3];if(y<100)y+=2000;return new Date(y,+m[2]-1,+m[1]);}var d=new Date(s);return isNaN(d)?null:d;}
-function key(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
-function monthKey(y,m){return y+'-'+String(m+1).padStart(2,'0');}
-function boardMatch(i,b){return b==='All'||String(i.type||'').toLowerCase().indexOf(b.toLowerCase())>=0;}
-function mapEvents(items,board){var out={};function add(v,name,k){var d=dateOf(v);if(!d)return;var z=key(d);(out[z]||(out[z]={open:[],close:[],allot:[],list:[]}))[k].push(name);} (items||[]).filter(function(i){return boardMatch(i,board);}).forEach(function(i){if(!i||!i.name)return;add(i.open,i.name,'open');add(i.close,i.name,'close');add(i.allotment||i.allot||i.allotment_date,i.name,'allot');add(i.listing||i.listing_date,i.name,'list');});return out;}
-function availableMonths(items,board){var set={};(items||[]).filter(function(i){return boardMatch(i,board);}).forEach(function(i){['open','close','allotment','allot','allotment_date','listing','listing_date'].forEach(function(k){var d=dateOf(i[k]);if(d)set[monthKey(d.getFullYear(),d.getMonth())]={y:d.getFullYear(),m:d.getMonth()};});});return Object.keys(set).map(function(k){return set[k];}).sort(function(a,b){return a.y-b.y||a.m-b.m;});}
-function monthView(y,m,items,board){var ev=mapEvents(items,board),f=new Date(y,m,1),days=new Date(y,m+1,0).getDate(),start=(f.getDay()+6)%7,t=new Date(),h='<div class="ipc-week">'+['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(function(x){return '<div>'+x+'</div>';}).join('')+'</div><div class="ipc-grid">';for(var i=0;i<start;i++)h+='<div class="ipc-day blank"></div>';for(var d=1;d<=days;d++){var k=y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0'),e=ev[k]||{open:[],close:[],allot:[],list:[]},today=t.getFullYear()===y&&t.getMonth()===m&&t.getDate()===d;h+='<div class="ipc-day'+(today?' today':'')+'"><b class="ipc-num">'+d+(today?' <small>Today</small>':'')+'</b>';[['open','OPEN','g'],['close','CLOSE','o'],['allot','ALLOT','b'],['list','LIST','y']].forEach(function(a){if(e[a[0]].length)h+='<div class="ipc-e '+a[2]+'"><strong>'+a[1]+'</strong> '+e[a[0]].slice(0,4).map(function(n){return '<span title="'+esc(n)+'">'+esc(n.replace(/ Limited| Ltd\.?/ig,''))+'</span>';}).join('')+(e[a[0]].length>4?' <span>+'+(e[a[0]].length-4)+' more</span>':'')+'</div>';});h+='</div>';}return h+'</div>';}
-function nearestMonth(months,y,m){if(!months.length)return {y:y,m:m,index:0};var idx=months.findIndex(function(x){return x.y===y&&x.m===m;});if(idx>=0)return {y:y,m:m,index:idx};var target=new Date(y,m,1).getTime(),best=0,diff=Infinity;months.forEach(function(x,i){var dd=Math.abs(new Date(x.y,x.m,1).getTime()-target);if(dd<diff){diff=dd;best=i;}});return {y:months[best].y,m:months[best].m,index:best};}
-function render(){var p=document.getElementById('ipo-calendar-panel');if(!p||typeof window.ALL_IPOS==='undefined')return;var s=window.__ipc||{y:new Date().getFullYear(),m:new Date().getMonth(),board:'All'},months=availableMonths(window.ALL_IPOS,s.board),near=nearestMonth(months,s.y,s.m);s.y=near.y;s.m=near.m;s.index=near.index;window.__ipc=s;var title=new Date(s.y,s.m,1).toLocaleString('en-IN',{month:'long',year:'numeric'}),hasData=months.length>0,prev=s.index>0,next=s.index<months.length-1;var h='<div class="panel-title">IPO Calendar <button class="close-x" id="ipc-close">Close</button></div><div class="ipc-bar"><button class="hb" id="ipc-prev" '+(!prev?'disabled':'')+'>‹ Prev</button><b>'+title+'</b><button class="hb" id="ipc-next" '+(!next?'disabled':'')+'>Next ›</button></div><div class="ipc-f"><button class="hb '+(s.board==='All'?'active':'')+'" data-b="All">All</button><button class="hb '+(s.board==='Mainboard'?'active':'')+'" data-b="Mainboard">Mainboard</button><button class="hb '+(s.board==='SME'?'active':'')+'" data-b="SME">SME</button></div><div class="ipc-leg"><span>🟢 Open</span><span>🟠 Close</span><span>🔵 Allotment</span><span>🟡 Listing</span></div>'+(hasData?'<div class="ipc-data-note">Showing only months with IPO events. Prev/Next skip months with no event data.</div><div class="ipc-wrap">'+monthView(s.y,s.m,window.ALL_IPOS,s.board)+'</div>':'<div class="news-item">No dated IPO events are available yet. The calendar will populate automatically when source dates arrive.</div>')+'<div class="tx3" style="padding:8px;font-size:9px">Automatic calendar from IPO Terminal source data. No copied third-party calendar feed.</div>';p.innerHTML=h;p.classList.add('show');var close=document.getElementById('ipc-close'),btn=document.getElementById('ipc-btn');close.onclick=function(){p.classList.remove('show');if(btn)btn.classList.remove('active');};document.getElementById('ipc-prev').onclick=function(){if(!prev)return;s.index--;s.y=months[s.index].y;s.m=months[s.index].m;render();};document.getElementById('ipc-next').onclick=function(){if(!next)return;s.index++;s.y=months[s.index].y;s.m=months[s.index].m;render();};p.querySelectorAll('[data-b]').forEach(function(b){b.onclick=function(){s.board=b.dataset.b;var a=availableMonths(window.ALL_IPOS,s.board),n=nearestMonth(a,s.y,s.m);s.index=n.index;s.y=n.y;s.m=n.m;render();};});if(btn)btn.classList.add('active');}
-function init(){if(document.getElementById('ipc-btn'))return;var box=document.querySelector('.hbtns');if(!box)return;var b=document.createElement('button');b.className='hb';b.id='ipc-btn';b.textContent='IPO Calendar';b.onclick=function(){var p=document.getElementById('ipo-calendar-panel');if(p&&p.classList.contains('show')){p.classList.remove('show');b.classList.remove('active');}else render();};box.appendChild(b);var p=document.createElement('div');p.className='panel';p.id='ipo-calendar-panel';document.body.appendChild(p);var st=document.createElement('style');st.textContent='.ipc-bar{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:8px 0}.ipc-f{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:7px}.ipc-f .hb.active{background:linear-gradient(135deg,var(--bl),var(--pp));color:#fff}.ipc-leg{font-size:9px;color:var(--tx3);display:flex;gap:10px;flex-wrap:wrap;padding:3px 0 6px}.ipc-data-note{font-size:9px;color:var(--tx3);padding:5px 0}.ipc-wrap{overflow:auto}.ipc-week,.ipc-grid{display:grid;grid-template-columns:repeat(7,minmax(95px,1fr));min-width:665px}.ipc-week>div{text-align:center;padding:6px;font-size:9px;color:var(--tx3);border-bottom:1px solid var(--bd)}.ipc-day{min-height:105px;padding:5px;background:var(--bg2);border-right:1px solid var(--bd);border-bottom:1px solid var(--bd)}.ipc-day.blank{background:transparent}.ipc-day.today{outline:2px solid var(--bl);outline-offset:-2px}.ipc-num{font-size:11px}.ipc-num small{color:var(--bl);font-size:7px}.ipc-e{font-size:7px;line-height:1.4;padding:2px 3px;margin:2px 0;border-left:3px solid;border-radius:3px}.ipc-e strong{font-size:6px;margin-right:2px}.ipc-e span{margin-right:3px}.ipc-e.g{border-color:var(--gn);background:rgba(34,197,94,.08)}.ipc-e.o{border-color:var(--or);background:rgba(249,115,22,.08)}.ipc-e.b{border-color:var(--bl);background:rgba(59,130,246,.08)}.ipc-e.y{border-color:var(--yl);background:rgba(234,179,8,.08)}.hb:disabled{opacity:.35;cursor:not-allowed}@media(max-width:700px){.ipc-wrap{overflow:visible}.ipc-week{display:none}.ipc-grid{display:block;min-width:0}.ipc-day{min-height:0;padding:8px;margin:4px 0;border:1px solid var(--bd);border-radius:8px}.ipc-day.blank{display:none}.ipc-e{font-size:9px;padding:4px}.ipc-e strong{font-size:8px}.ipc-e span{display:inline-block;margin:1px 5px 1px 0}.ipc-num{font-size:12px}.ipc-bar .hb{padding:6px 8px}.ipc-f .hb{flex:1;min-width:80px}}';document.head.appendChild(st);}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(init,100);});else setTimeout(init,100);
+/* IPO Terminal - IPO calendar module (added 22 Sep).
+   Standalone: adds a "Calendar" section listing every important IPO date
+   (opens, closes, allotment, listing) from the last 14 days to the next
+   90 days, grouped by date. Today is highlighted; past dates carry a
+   check mark. Pure static data - no external service needed. */
+(() => {
+  if (window.__IPOCAL) return;
+  window.__IPOCAL = 1;
+
+  const $ = s => document.querySelector(s);
+  const E = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&'+'amp;','<':'&'+'lt;','>':'&'+'gt;','"':'&'+'quot;',"'":'&'+'#39;'}[c]));
+  const parseD = v => { const s = String(v||'').trim(); if (!s) return null; const a = s.split(/[\\/-]/).map(Number); if (a.length !== 3 || a.some(isNaN)) return null; if (a[0] > 1900) return new Date(a[0], a[1]-1, a[2]); let y = a[2]; if (y < 100) y += 2000; return new Date(y, a[1]-1, a[0]); };
+  const fmtD = d => d.toLocaleDateString('en-IN', {day:'2-digit', month:'short', year:'numeric'});
+
+  let data = [];
+
+  function calendarView() {
+    const now = new Date(); now.setHours(0,0,0,0);
+    const lo = new Date(now); lo.setDate(lo.getDate() - 14);
+    const hi = new Date(now); hi.setDate(hi.getDate() + 90);
+    const map = {};
+    data.forEach(x => {
+      [['open_date','open','Opens'],['close_date','close','Closes'],['allotment_date','allotment','Allotment'],['listing_date','listing','Listing']].forEach(p => {
+        const d = parseD(x[p[0]] || x[p[1]]);
+        if (d && d >= lo && d <= hi) {
+          const k = String(d.getFullYear()) + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+          (map[k] = map[k] || []).push({d, n:x.name, t:p[2]});
+        }
+      });
+    });
+    const keys = Object.keys(map).sort();
+    if (!keys.length) return '<div class="cal-empty">No IPO dates found in the data yet.</div>';
+    let h = '<div class="cal-head"><b>IPO calendar</b><span>Important IPO dates - last 14 days and next 90 days: RHP, subscription, allotment and listing. Green row = today. Updates automatically.</span></div>';
+    keys.forEach(k => {
+      const d = map[k][0].d;
+      const today = d.getTime() === now.getTime();
+      const past = d.getTime() < now.getTime();
+      h += '<div class="' + (today ? 'cal-today' : 'cal-row') + '"><b>' + (today ? 'TODAY \u2014 ' : '') + (past ? '\u2713 ' : '') + fmtD(d) + '</b><span>' + map[k].map(e => '\u2022 ' + E(e.n) + ' \u2014 ' + e.t).join('<br>') + '</span></div>';
+    });
+    return h;
+  }
+
+  function ensure() {
+    let s = $('#section-calendar');
+    if (!s) {
+      s = document.createElement('section');
+      s.id = 'section-calendar';
+      s.className = 'section glass';
+      s.innerHTML = '<div class="section-title"><span>📅 IPO Calendar</span><button class="close" data-close="calendar">\u2715 Close</button></div><div id="ipo-calendar-content" class="content"></div>';
+      $('main')?.appendChild(s);
+    }
+    const nav = $('#nav-tools .nav');
+    if (nav && !nav.querySelector('[data-section="calendar"]')) {
+      const b = document.createElement('button');
+      b.dataset.section = 'calendar';
+      b.textContent = '📅 Calendar';
+      nav.appendChild(b);
+    }
+    const c = $('#ipo-calendar-content');
+    if (c) c.innerHTML = calendarView();
+  }
+
+  async function load() {
+    try {
+      const urls = ['data/ipos.json', 'data/ipo-data.json'];
+      const vals = await Promise.all(urls.map(u => fetch(u + '?d=' + Date.now(), {cache:'no-store'}).then(r => r.ok ? r.json() : null).catch(() => null)));
+      const arr = v => Array.isArray(v) ? v : (v && Array.isArray(v.data) ? v.data : []);
+      data = arr(vals[0]).concat(arr(vals[1]));
+      ensure();
+    } catch (e) { console.error('IPO Calendar module', e); }
+  }
+
+  const st = document.createElement('style');
+  st.textContent = '.cal-head{padding:10px 0}.cal-head span{display:block;color:var(--muted);font-size:11px;margin-top:4px}.cal-row{display:flex;justify-content:space-between;gap:8px;padding:10px;border-radius:12px;background:rgba(255,255,255,.045);border:1px solid var(--line);margin-bottom:7px}.cal-row span{color:var(--muted);font-size:11px;text-align:right}.cal-today{display:flex;justify-content:space-between;gap:8px;padding:12px;border-radius:14px;border:1px solid var(--line);background:rgba(34,197,94,.08);margin-bottom:8px}.cal-today span{color:var(--muted);font-size:11px;text-align:right}.cal-empty{text-align:center;padding:25px;color:var(--muted)}';
+  document.head.appendChild(st);
+
+  ensure();
+  load();
+  setInterval(load, 15 * 60 * 1000);
 })();
