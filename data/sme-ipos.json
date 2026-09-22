@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T16:33:11.075533+05:30",
+  "updated_at": "2026-09-22T17:03:11.907838+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -42,6 +42,14 @@
       "status": "upcoming"
     },
     {
+      "company": "Peshwa Wheat Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "24/09/26",
+      "close_date": "—",
+      "issue_size": "₹53.52 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Roopa Screen Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "24/09/26",
@@ -55,14 +63,6 @@
       "open_date": "23/09/26",
       "close_date": "—",
       "issue_size": "₹39.01 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Unitec Fibres Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "23/09/26",
-      "close_date": "—",
-      "issue_size": "₹34.47 Cr",
       "status": "upcoming"
     }
   ]

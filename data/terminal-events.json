@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T11:03:42.513038+00:00",
+  "generated_at": "2026-09-22T11:33:44.527647+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -73,13 +73,6 @@
       "source": "NSE"
     },
     {
-      "date": "2026-09-23",
-      "type": "OPEN",
-      "ipo_id": "unitec-fibres-ltd-sme",
-      "name": "Unitec Fibres Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-24",
       "type": "CLOSE",
       "ipo_id": "varmora-granito-limited",
@@ -98,6 +91,13 @@
       "type": "OPEN",
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "peshwa-wheat-ltd-sme",
+      "name": "Peshwa Wheat Ltd. SME",
       "source": "Economic Times"
     },
     {
