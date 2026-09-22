@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T21:44:14.889268+00:00",
+  "generated_at": "2026-09-22T21:53:05.231734+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -96,6 +96,20 @@
     {
       "date": "2026-09-25",
       "type": "CLOSE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
       "ipo_id": "coreintegra-consulting-services-limited",
       "name": "Coreintegra Consulting Services Limited",
       "source": "NSE"
@@ -103,8 +117,22 @@
     {
       "date": "2026-09-25",
       "type": "CLOSE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
       "ipo_id": "pooja-logistics-limited",
       "name": "Pooja Logistics Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
       "source": "NSE"
     },
     {
