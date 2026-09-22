@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T12:55:26.580765+05:30",
+  "updated_at": "2026-09-22T13:06:17.747141+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -10,11 +10,11 @@
       "status": "open"
     },
     {
-      "company": "Coreintegra Consulting Services Limited",
+      "company": "Bench Mark Infotech Services Limited",
       "exchange": "NSE",
-      "open_date": "23/09/26",
-      "close_date": "25/09/26",
-      "issue_size": "₹22 Cr",
+      "open_date": "25/09/26",
+      "close_date": "Sep 29, 2026",
+      "issue_size": "42.44",
       "status": "upcoming"
     },
     {
@@ -23,6 +23,14 @@
       "open_date": "23/09/26",
       "close_date": "Sep 25, 2026",
       "issue_size": "₹44.23 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Coreintegra Consulting Services Limited",
+      "exchange": "NSE",
+      "open_date": "23/09/26",
+      "close_date": "25/09/26",
+      "issue_size": "₹22 Cr",
       "status": "upcoming"
     },
     {

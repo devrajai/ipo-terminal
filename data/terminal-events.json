@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T07:25:59.352971+00:00",
+  "generated_at": "2026-09-22T07:36:46.885497+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -112,6 +112,13 @@
       "type": "CLOSE",
       "ipo_id": "coreintegra-consulting-services-limited",
       "name": "Coreintegra Consulting Services Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
       "source": "NSE"
     },
     {
