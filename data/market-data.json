@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T18:58:04.602012+00:00",
+  "updated_at": "2026-09-22T19:16:06.149920+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,15 +100,7 @@
       "change_pct": 1.21
     }
   ],
-  "world": [
-    {
-      "price": 25087.75,
-      "change": 336.95,
-      "change_pct": 1.36,
-      "name": "Hang Seng (HK)",
-      "symbol": "^HSI"
-    }
-  ],
+  "world": [],
   "commodities": [],
   "fx": [
     {
