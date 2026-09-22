@@ -1,14 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T12:30:36.882785+00:00",
+  "generated_at": "2026-09-22T12:46:07.624423+00:00",
   "events": [
-    {
-      "date": "2026-09-22",
-      "type": "ALLOTMENT",
-      "ipo_id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-22",
       "type": "CLOSE",
@@ -70,13 +63,6 @@
       "type": "CLOSE",
       "ipo_id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "LISTING",
-      "ipo_id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
       "source": "NSE"
     },
     {
