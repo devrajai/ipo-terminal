@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T08:58:51.694881+00:00",
+  "generated_at": "2026-09-22T09:09:46.560390+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T14:28:21.558551+05:30",
+  "data_updated_at": "2026-09-22T14:39:18.712322+05:30",
   "ipo_count": 16,
-  "field_coverage_pct": 23.8,
+  "field_coverage_pct": 22.6,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,7 +32,8 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found"
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: The read operation timed out"
       ]
     },
     "NEWS": {
@@ -49,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T08:57:49.673608+00:00",
+      "checked_at": "2026-09-22T09:08:46.624508+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +88,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T08:57:51.661676+00:00"
+      "checked_at": "2026-09-22T09:08:49.095282+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T08:58:09.050215+00:00",
+      "checked_at": "2026-09-22T09:09:05.374867+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T08:58:09.107152+00:00"
+      "checked_at": "2026-09-22T09:09:05.445846+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 1,
-      "checked_at": "2026-09-22T08:58:09.145270+00:00"
+      "checked_at": "2026-09-22T09:09:05.493253+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T08:58:09.263288+00:00",
+      "checked_at": "2026-09-22T09:09:05.642901+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T08:58:09.263288+00:00"
+      "checked_at": "2026-09-22T09:09:05.642901+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T14:28:21.558551+05:30",
+      "checked_at": "2026-09-22T14:39:18.712322+05:30",
       "status_repairs": 2,
       "sme_added": 0,
       "filings": {
@@ -189,7 +190,7 @@
     {
       "id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
-      "fingerprint": "296c1fe75fecfb52",
+      "fingerprint": "1d35fbc0304b2149",
       "fields": {
         "price": "—",
         "size": "—",
@@ -206,10 +207,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "28.40%",
-        "roce": "28.90%",
-        "growth": "12%",
-        "de": "0.48",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -771,6 +772,18 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T09:09:46.560390+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
     {
       "at": "2026-09-22T08:58:51.694881+00:00",
       "type": "DATA_CHANGE",
