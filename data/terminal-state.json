@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T12:58:25.063403+00:00",
+  "generated_at": "2026-09-22T13:09:31.947549+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T18:27:49.527753+05:30",
+  "data_updated_at": "2026-09-22T18:38:49.855894+05:30",
   "ipo_count": 14,
-  "field_coverage_pct": 28.2,
+  "field_coverage_pct": 22.1,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,6 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
         "LiveGMP: HTTP Error 503: Service Unavailable"
       ]
     },
@@ -49,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T12:57:29.004439+00:00",
+      "checked_at": "2026-09-22T13:07:24.702505+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +88,12 @@
       "records": 14,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T12:57:30.314179+00:00"
+      "checked_at": "2026-09-22T13:07:26.908424+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T12:57:34.784367+00:00",
+      "checked_at": "2026-09-22T13:08:22.838579+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T12:57:34.854141+00:00"
+      "checked_at": "2026-09-22T13:08:22.888401+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T12:57:34.899222+00:00"
+      "checked_at": "2026-09-22T13:08:22.925480+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T12:57:35.039325+00:00",
+      "checked_at": "2026-09-22T13:08:23.062862+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T12:57:35.039325+00:00"
+      "checked_at": "2026-09-22T13:08:23.062862+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T18:27:49.527753+05:30",
+      "checked_at": "2026-09-22T18:38:49.855894+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -161,7 +162,7 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "8a1fdbe6be572116",
+      "fingerprint": "72c49b44f1dcd83c",
       "fields": {
         "price": "₹140-148",
         "size": "₹0 Cr",
@@ -178,9 +179,9 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "6.80%",
-        "roce": "9.89%",
-        "growth": "5%",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -189,7 +190,7 @@
     {
       "id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
-      "fingerprint": "296c1fe75fecfb52",
+      "fingerprint": "1d35fbc0304b2149",
       "fields": {
         "price": "—",
         "size": "—",
@@ -206,10 +207,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "28.40%",
-        "roce": "28.90%",
-        "growth": "12%",
-        "de": "0.48",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -273,7 +274,7 @@
     {
       "id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fingerprint": "b54bcca36ffe1059",
+      "fingerprint": "ab9c956c9b341e83",
       "fields": {
         "price": "₹350 – ₹375",
         "size": "₹300 Cr",
@@ -290,10 +291,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "28.52%",
-        "roce": "24.10%",
-        "growth": "7%",
-        "de": "0.96",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -301,7 +302,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "8523f18c3c656796",
+      "fingerprint": "92980d1cedee55dc",
       "fields": {
         "price": "₹175 – ₹185",
         "size": "₹161.38 Cr",
@@ -318,10 +319,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "35.44%",
-        "roce": "25.76%",
-        "growth": "43%",
-        "de": "0.73",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -329,7 +330,7 @@
     {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "fingerprint": "ba6b59f0a5f98ac1",
+      "fingerprint": "794376ce9406b84f",
       "fields": {
         "price": "₹343 – ₹362",
         "size": "₹2,100 Cr",
@@ -347,9 +348,9 @@
         "est_list": "—",
         "pe": "—",
         "roe": "—",
-        "roce": "6.42%",
-        "growth": "53%",
-        "de": "4.98",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -687,6 +688,64 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T13:09:31.947549+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
+    {
+      "at": "2026-09-22T13:09:31.947549+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "axiom-gas-engineering-limited",
+      "name": "Axiom Gas Engineering Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-22T13:09:31.947549+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-22T13:09:31.947549+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-22T13:09:31.947549+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
     {
       "at": "2026-09-22T12:58:25.063403+00:00",
       "type": "DATA_CHANGE",
@@ -4054,69 +4113,6 @@
         "type": "OPEN",
         "ipo_id": "kheria-autocomp-limited",
         "name": "Kheria Autocomp Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-15T04:26:11.233307+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-17",
-        "type": "OPEN",
-        "ipo_id": "national-stock-exchange-of-india-limited",
-        "name": "National Stock Exchange of India Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-14T15:13:42.234650+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "fields": [
-        "allotment",
-        "listing",
-        "gmp",
-        "gmp_pct",
-        "est_list",
-        "pe"
-      ]
-    },
-    {
-      "at": "2026-09-14T15:13:42.234650+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
-      "fields": [
-        "allotment",
-        "listing",
-        "gmp",
-        "gmp_pct",
-        "est_list",
-        "pe",
-        "roe",
-        "roce"
-      ]
-    },
-    {
-      "at": "2026-09-14T15:13:42.234650+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-16",
-        "type": "ALLOTMENT",
-        "ipo_id": "veegaland-developers-limited",
-        "name": "Veegaland Developers Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-14T15:13:42.234650+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-17",
-        "type": "ALLOTMENT",
-        "ipo_id": "manika-plastech-limited",
-        "name": "Manika Plastech Limited",
         "source": "NSE"
       }
     }
