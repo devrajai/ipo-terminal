@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T13:49:43.326652+00:00",
+  "generated_at": "2026-09-22T14:01:06.710296+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T19:19:14.724633+05:30",
+  "data_updated_at": "2026-09-22T19:30:33.900899+05:30",
   "ipo_count": 14,
   "field_coverage_pct": 22.1,
   "sources": {
@@ -33,6 +33,8 @@
       ],
       "errors": [
         "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: HTTP Error 525: <none>",
+        "IPOGram: The read operation timed out",
         "LiveGMP: HTTP Error 503: Service Unavailable"
       ]
     },
@@ -50,7 +52,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T13:48:44.633642+00:00",
+      "checked_at": "2026-09-22T13:58:59.118392+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +90,12 @@
       "records": 14,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T13:48:46.583277+00:00"
+      "checked_at": "2026-09-22T13:59:01.202258+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T13:49:03.269656+00:00",
+      "checked_at": "2026-09-22T14:00:18.759716+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,21 +105,21 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T13:49:03.327752+00:00"
+      "checked_at": "2026-09-22T14:00:18.829442+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T13:49:03.367304+00:00"
+      "checked_at": "2026-09-22T14:00:18.875806+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T13:49:03.488355+00:00",
+      "checked_at": "2026-09-22T14:00:19.019476+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 104,
+          "records": 102,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -141,11 +143,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T13:49:03.488355+00:00"
+      "checked_at": "2026-09-22T14:00:19.019476+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T19:19:14.724633+05:30",
+      "checked_at": "2026-09-22T19:30:33.900899+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -468,6 +470,34 @@
       }
     },
     {
+      "id": "orient-cables-india-ltd-mainboard",
+      "name": "Orient Cables (India) Ltd. Mainboard",
+      "fingerprint": "29fc58864de08634",
+      "fields": {
+        "price": "₹258 – ₹272",
+        "size": "₹552 Cr",
+        "lot": "55",
+        "open": "25/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
       "fingerprint": "5b8e910a6997ce27",
@@ -503,34 +533,6 @@
         "price": "₹85 – ₹90",
         "size": "₹60.1 Cr",
         "lot": "1600",
-        "open": "24/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "fingerprint": "4ad1d800f85cb0d8",
-      "fields": {
-        "price": "₹95 – ₹101",
-        "size": "₹53.52 Cr",
-        "lot": "1200",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -645,13 +647,6 @@
       "source": "NSE"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "coreintegra-consulting-services-limited",
@@ -680,6 +675,13 @@
       "source": "NSE"
     },
     {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "orient-cables-india-ltd-mainboard",
+      "name": "Orient Cables (India) Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
       "date": "2026-09-28",
       "type": "CLOSE",
       "ipo_id": "moneyview-limited",
@@ -688,6 +690,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T14:01:06.710296+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "OPEN",
+        "ipo_id": "orient-cables-india-ltd-mainboard",
+        "name": "Orient Cables (India) Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-22T13:49:43.326652+00:00",
       "type": "NEW_EVENT",
@@ -4102,17 +4115,6 @@
         "type": "LISTING",
         "ipo_id": "national-stock-exchange-of-india-limited",
         "name": "National Stock Exchange of India Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-15T13:52:39.282264+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-17",
-        "type": "OPEN",
-        "ipo_id": "spectraa-technology-solutions-limited",
-        "name": "SpectraA Technology Solutions Limited",
         "source": "NSE"
       }
     }

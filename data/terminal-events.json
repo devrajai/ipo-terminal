@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T13:49:43.326652+00:00",
+  "generated_at": "2026-09-22T14:01:06.710296+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -87,13 +87,6 @@
       "source": "NSE"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "coreintegra-consulting-services-limited",
@@ -120,6 +113,13 @@
       "ipo_id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "orient-cables-india-ltd-mainboard",
+      "name": "Orient Cables (India) Ltd. Mainboard",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-28",

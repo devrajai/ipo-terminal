@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T19:19:14.724633+05:30",
+  "updated_at": "2026-09-22T19:30:33.900899+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -47,14 +47,6 @@
       "open_date": "24/09/26",
       "close_date": "—",
       "issue_size": "₹60.1 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Peshwa Wheat Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "24/09/26",
-      "close_date": "—",
-      "issue_size": "₹53.52 Cr",
       "status": "upcoming"
     }
   ]
