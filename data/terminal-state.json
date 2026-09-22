@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T13:37:23.594561+00:00",
+  "generated_at": "2026-09-22T13:49:43.326652+00:00",
   "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T19:06:50.953551+05:30",
+  "data_updated_at": "2026-09-22T19:19:14.724633+05:30",
   "ipo_count": 14,
   "field_coverage_pct": 22.1,
   "sources": {
@@ -32,7 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "IPODose: HTTP Error 525: <none>",
+        "Moneycontrol: HTTP Error 404: Not Found",
         "LiveGMP: HTTP Error 503: Service Unavailable"
       ]
     },
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T13:36:17.277185+00:00",
+      "checked_at": "2026-09-22T13:48:44.633642+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 14,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T13:36:21.877917+00:00"
+      "checked_at": "2026-09-22T13:48:46.583277+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T13:36:34.101097+00:00",
+      "checked_at": "2026-09-22T13:49:03.269656+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T13:36:34.168936+00:00"
+      "checked_at": "2026-09-22T13:49:03.327752+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T13:36:34.214951+00:00"
+      "checked_at": "2026-09-22T13:49:03.367304+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T13:36:34.355501+00:00",
+      "checked_at": "2026-09-22T13:49:03.488355+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T13:36:34.355501+00:00"
+      "checked_at": "2026-09-22T13:49:03.488355+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T19:06:50.953551+05:30",
+      "checked_at": "2026-09-22T19:19:14.724633+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -496,13 +496,13 @@
       }
     },
     {
-      "id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "fingerprint": "4ad1d800f85cb0d8",
+      "id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "fingerprint": "913ad1b3135ae860",
       "fields": {
-        "price": "₹95 – ₹101",
-        "size": "₹53.52 Cr",
-        "lot": "1200",
+        "price": "₹85 – ₹90",
+        "size": "₹60.1 Cr",
+        "lot": "1600",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -524,13 +524,13 @@
       }
     },
     {
-      "id": "roopa-screen-ltd-sme",
-      "name": "Roopa Screen Ltd. SME",
-      "fingerprint": "d1e1d64f4e3e0dd5",
+      "id": "peshwa-wheat-ltd-sme",
+      "name": "Peshwa Wheat Ltd. SME",
+      "fingerprint": "4ad1d800f85cb0d8",
       "fields": {
-        "price": "₹60 – ₹64",
-        "size": "₹19.2 Cr",
-        "lot": "2000",
+        "price": "₹95 – ₹101",
+        "size": "₹53.52 Cr",
+        "lot": "1200",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -633,6 +633,13 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
+      "ipo_id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
@@ -642,13 +649,6 @@
       "type": "OPEN",
       "ipo_id": "peshwa-wheat-ltd-sme",
       "name": "Peshwa Wheat Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "roopa-screen-ltd-sme",
-      "name": "Roopa Screen Ltd. SME",
       "source": "Economic Times"
     },
     {
@@ -688,6 +688,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T13:49:43.326652+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "green-asia-impex-ltd-sme",
+        "name": "Green Asia Impex Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-22T13:37:23.594561+00:00",
       "type": "DATA_CHANGE",
@@ -4103,17 +4114,6 @@
         "ipo_id": "spectraa-technology-solutions-limited",
         "name": "SpectraA Technology Solutions Limited",
         "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-15T08:27:29.195961+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-21",
-        "type": "OPEN",
-        "ipo_id": "robokidz-eduventures-ltd-sme",
-        "name": "Robokidz Eduventures Ltd. SME",
-        "source": "Economic Times"
       }
     }
   ]
