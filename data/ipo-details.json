@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-22T08:19:35.834844+00:00",
+ "updated_at": "2026-09-22T08:48:40.916056+00:00",
  "ipos": {
   "Varmora Granito Limited": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
@@ -122,152 +122,8 @@
    },
    "promoter_pct": 98.28
   },
-  "Sonaselection India Limited": {
-   "url": "https://www.chittorgarh.com/ipo/sonaselection-india-ipo/2805/",
-   "subs": {
-    "qib": 50.0,
-    "nii": 15.0,
-    "rii": 35.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 42.47,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Alpine Texworld Ltd.",
-     "pe": "12.68"
-    },
-    {
-     "name": "Kusumgar Ltd.",
-     "pe": "44.8"
-    },
-    {
-     "name": "Aastha Spintex Ltd.",
-     "pe": "18.78"
-    },
-    {
-     "name": "Shree Ram Twistex Ltd.",
-     "pe": "38.21"
-    },
-    {
-     "name": "Panchatv Bharat Ltd.",
-     "pe": "14.23"
-    },
-    {
-     "name": "Vinod Texworld Ltd.",
-     "pe": "10.48"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     474.99,
-     374.77,
-     203.5
-    ],
-    "income": [
-     517.6,
-     316.47,
-     121.31
-    ],
-    "pat": [
-     34.02,
-     18.56,
-     13.1
-    ],
-    "ebitda": [
-     84.77,
-     58.12,
-     28.49
-    ],
-    "networth": [
-     104.16,
-     70.07,
-     38.88
-    ],
-    "borrowing": [
-     258.24,
-     207.4,
-     144.6
-    ]
-   },
-   "rev_growth": 63.6,
-   "pat_growth": 83.3,
-   "kpi": {
-    "roe": "39.05%",
-    "roce": "19.69%",
-    "de": "2.48",
-    "pat_margin": "6.58%",
-    "ebitda_margin": "16.40%",
-    "nav": "24.78"
-   },
-   "promoter_pct": 86.21
-  },
-  "National Stock Exchange of India Limited": {
-   "url": "https://www.chittorgarh.com/ipo/nse-ipo/3151/",
-   "subs": {
-    "qib": 31.0,
-    "nii": 31.0,
-    "rii": 30.0,
-    "total": 31.0
-   },
-   "anchor": {
-    "total_cr": 6746.18,
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "30 Jun 2026",
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     91334.07,
-     87937.44,
-     69466.64,
-     65463.98
-    ],
-    "income": [
-     5252.17,
-     18713.37,
-     19176.83,
-     16352.06
-    ],
-    "pat": [
-     3120.08,
-     10302.06,
-     12187.69,
-     8305.74
-    ],
-    "ebitda": [
-     4332.04,
-     14519.09,
-     16021.36,
-     11623.83
-    ],
-    "networth": [
-     34983.74,
-     31869.72,
-     30165.05,
-     23833.1
-    ]
-   },
-   "rev_growth": -2.4,
-   "pat_growth": -15.5,
-   "kpi": {
-    "roe": "9.26%",
-    "roce": "11.55%",
-    "pat_margin": "58.78%",
-    "nav": "142.40"
-   }
-  },
+  "Sonaselection India Limited": {},
+  "National Stock Exchange of India Limited": {},
   "Coreintegra Consulting Services Limited": {},
   "Axiom Gas Engineering": {
    "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
@@ -330,138 +186,9 @@
    },
    "promoter_pct": 98.28
   },
-  "A-One Steels India": {
-   "url": "https://www.chittorgarh.com/ipo/a-one-steels-ipo/2000/"
-  },
-  "ArMee Infotech": {
-   "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
-   "subs": {
-    "rii": 52.5,
-    "nii": 22.5,
-    "qib": 25.0
-   },
-   "anchor": {
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Marushika Technology Ltd.",
-     "pe": "11.6"
-    },
-    {
-     "name": "EPW India Ltd.",
-     "pe": "18.36"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     958.87,
-     828.54,
-     673.5
-    ],
-    "income": [
-     1410.09,
-     1315.78,
-     1023.99
-    ],
-    "pat": [
-     45.47,
-     41.67,
-     50.13
-    ],
-    "ebitda": [
-     75.64,
-     58.64,
-     71.58
-    ],
-    "networth": [
-     182.18,
-     136.67,
-     95.18
-    ],
-    "borrowing": [
-     174.36,
-     48.1,
-     27.26
-    ]
-   },
-   "rev_growth": 7.2,
-   "pat_growth": 9.1,
-   "kpi": {
-    "roe": "28.52%",
-    "roce": "24.10%",
-    "de": "0.96",
-    "pat_margin": "3.26%",
-    "ebitda_margin": "5.42%",
-    "nav": "76.77"
-   },
-   "promoter_pct": 92.72
-  },
-  "Varmora Granito": {
-   "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
-   "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 212.41,
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     1509.87,
-     1589.8,
-     1476.16
-    ],
-    "income": [
-     1562.53,
-     1492.68,
-     1472.58
-    ],
-    "pat": [
-     55.09,
-     30.77,
-     44.94
-    ],
-    "ebitda": [
-     221.56,
-     198.29,
-     150.33
-    ],
-    "networth": [
-     796.88,
-     722.9,
-     678.59
-    ],
-    "borrowing": [
-     357.95,
-     505.16,
-     412.89
-    ]
-   },
-   "rev_growth": 4.7,
-   "pat_growth": 79.0,
-   "kpi": {
-    "roe": "6.80%",
-    "roce": "9.89%",
-    "pat_margin": "3.53%",
-    "ebitda_margin": "14.18%",
-    "nav": "39.52"
-   },
-   "promoter_pct": 52.0
-  },
+  "A-One Steels India": {},
+  "ArMee Infotech": {},
+  "Varmora Granito": {},
   "S.K.Offset": {
    "url": "https://www.chittorgarh.com/ipo/skoffset-ipo/3150/",
    "subs": {
@@ -604,7 +331,89 @@
   },
   "Sai Urja Indo Ventures": {},
   "Anand Seamless": {
-   "url": "https://www.chittorgarh.com/ipo/anand-seamless-ipo/3080/"
+   "url": "https://www.chittorgarh.com/ipo/anand-seamless-ipo/3080/",
+   "subs": {
+    "nii": 47.49,
+    "rii": 47.49,
+    "total": 100.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Anubhav Plast Ltd.",
+     "pe": "10.67"
+    },
+    {
+     "name": "Kasturi Metal Composite Ltd.",
+     "pe": "23.59"
+    },
+    {
+     "name": "Shri Kanha Stainless Ltd.",
+     "pe": "16.23"
+    },
+    {
+     "name": "Mittal Sections Ltd.",
+     "pe": "31.15"
+    },
+    {
+     "name": "M P K Steels (I) Ltd.",
+     "pe": "9.04"
+    },
+    {
+     "name": "Behari Lal Engineering Ltd.",
+     "pe": "17.21"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     67.58,
+     52.4,
+     35.55
+    ],
+    "income": [
+     56.17,
+     33.64,
+     37.0
+    ],
+    "pat": [
+     5.48,
+     2.65,
+     3.36
+    ],
+    "ebitda": [
+     10.22,
+     5.9,
+     6.51
+    ],
+    "networth": [
+     19.52,
+     14.05,
+     11.4
+    ],
+    "borrowing": [
+     28.21,
+     21.22,
+     14.21
+    ]
+   },
+   "rev_growth": 67.0,
+   "pat_growth": 106.8,
+   "kpi": {
+    "roe": "16.57%",
+    "roce": "11.65%",
+    "de": "1.38",
+    "pat_margin": "9.31%",
+    "ebitda_margin": "16.09%",
+    "nav": "19.98"
+   },
+   "promoter_pct": 100.0
   },
   "Himalaya Nutravedics India": {
    "url": "https://www.chittorgarh.com/ipo/himalaya-nutravedics-ipo/2970/",
@@ -832,42 +641,41 @@
    "promoter_pct": 100.0
   },
   "Vivekanand Cotspin": {
-   "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/"
-  },
-  "Adroit Industries (India)": {
-   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
+   "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "qib": 47.48,
+    "nii": 14.23,
+    "rii": 33.3,
+    "total": 100.0
    },
    "anchor": {
+    "total_cr": 6.29,
     "investors": 20
    },
    "peers": [
     {
-     "name": "Tempsens Instruments (India) Ltd.",
-     "pe": "34.05"
+     "name": "Panchatv Bharat Ltd.",
+     "pe": "14.23"
     },
     {
-     "name": "MV Electrosystems Ltd.",
-     "pe": "-68.88"
+     "name": "Vinod Texworld Ltd.",
+     "pe": "10.48"
     },
     {
-     "name": "Indo-MIM Ltd.",
-     "pe": "44.01"
+     "name": "Ashutosh Fibre Ltd.",
+     "pe": "9.03"
     },
     {
-     "name": "Lohia Corp Ltd.",
-     "pe": "23.21"
+     "name": "Fascinate Textiles Ltd.",
+     "pe": "10.33"
     },
     {
-     "name": "Omnitech Engineering Ltd.",
-     "pe": "54.47"
+     "name": "Shreedhar Spinners Ltd.",
+     "pe": "13.44"
     },
     {
-     "name": "Epack Prefab Technologies Ltd.",
-     "pe": "29.49"
+     "name": "Harikanta Overseas Ltd.",
+     "pe": "14.66"
     }
    ],
    "fin": {
@@ -877,175 +685,51 @@
      "31 Mar 2024"
     ],
     "assets": [
-     212.74,
-     187.01,
-     199.39
+     84.85,
+     87.53,
+     84.83
     ],
     "income": [
-     143.04,
-     136.61,
-     125.1
+     409.32,
+     290.94,
+     358.02
     ],
     "pat": [
-     26.16,
-     18.14,
-     14.53
+     3.69,
+     4.07,
+     3.35
     ],
     "ebitda": [
-     38.71,
-     31.02,
-     29.69
+     15.09,
+     14.59,
+     14.59
     ],
     "networth": [
-     128.63,
-     103.53,
-     87.82
+     28.94,
+     17.26,
+     20.62
     ],
     "borrowing": [
-     52.4,
-     8.32,
-     16.29
+     45.0,
+     54.76,
+     40.02
     ]
    },
-   "rev_growth": 4.7,
-   "pat_growth": 44.2,
+   "rev_growth": 40.7,
+   "pat_growth": -9.3,
    "kpi": {
-    "roe": "22.54%",
-    "roce": "19.01%",
-    "de": "0.41",
-    "pat_margin": "18.69%",
-    "ebitda_margin": "27.66%",
-    "nav": "36.84"
-   },
-   "promoter_pct": 96.1
-  },
-  "Elevate Campuses": {
-   "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
-   "subs": {
-    "rii": 10.0,
-    "nii": 15.0,
-    "qib": 75.0
-   },
-   "anchor": {
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Bagmane Prime Office REIT",
-     "pe": "null"
-    },
-    {
-     "name": "Property Share Investment Trust-Propshare Celestia",
-     "pe": "null"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     5773.35,
-     2421.2,
-     2104.74
-    ],
-    "income": [
-     603.39,
-     394.13,
-     362.61
-    ],
-    "pat": [
-     173.76,
-     49.74,
-     39.69
-    ],
-    "ebitda": [
-     545.0,
-     256.4,
-     220.13
-    ],
-    "networth": [
-     956.29,
-     699.78,
-     655.77
-    ],
-    "borrowing": [
-     4120.53,
-     1206.6,
-     984.71
-    ]
-   },
-   "rev_growth": 53.1,
-   "pat_growth": 249.3,
-   "kpi": {
-    "roce": "6.42%",
-    "de": "4.98",
-    "pat_margin": "28.80%",
-    "ebitda_margin": "90.32%",
-    "nav": "432.62"
+    "roe": "15.96%",
+    "roce": "13.14%",
+    "de": "1.56",
+    "pat_margin": "0.90%",
+    "ebitda_margin": "3.70%",
+    "nav": "17.81"
    },
    "promoter_pct": 100.0
   },
-  "Swastika Infra": {
-   "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
-   "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
-   },
-   "anchor": {
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     412.24,
-     258.54,
-     143.26
-    ],
-    "income": [
-     505.57,
-     352.6,
-     211.33
-    ],
-    "pat": [
-     41.43,
-     27.45,
-     13.98
-    ],
-    "ebitda": [
-     70.85,
-     43.89,
-     23.71
-    ],
-    "networth": [
-     156.78,
-     77.02,
-     49.57
-    ],
-    "borrowing": [
-     114.64,
-     111.02,
-     43.82
-    ]
-   },
-   "rev_growth": 43.4,
-   "pat_growth": 50.9,
-   "kpi": {
-    "roe": "35.44%",
-    "roce": "25.76%",
-    "de": "0.73",
-    "pat_margin": "8.23%",
-    "ebitda_margin": "14.07%",
-    "nav": "57.69"
-   },
-   "promoter_pct": 76.51
-  },
+  "Adroit Industries (India)": {},
+  "Elevate Campuses": {},
+  "Swastika Infra": {},
   "Unitec Fibres": {
    "url": "https://www.chittorgarh.com/ipo/unitec-fibres-ipo/3171/",
    "subs": {
