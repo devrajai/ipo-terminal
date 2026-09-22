@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T20:31:22.676414+05:30",
+  "generated_at": "2026-09-22T20:50:34.541948+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 12,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Adroit Industries (India) Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "ArMee Infotech Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Swastika Infra Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Elevate Campuses Limited",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Bench Mark Infotech Services Limited",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Himalayan Solar Limited",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Pooja Logistics Limited",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Coreintegra Consulting Services Limited",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Orient Cables (India) Ltd. Mainboard",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "Runwal Enterprises Ltd. Mainboard",
@@ -144,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     },
     {
       "ipo_name": "A-One Steels India Ltd. Mainboard",
@@ -157,7 +157,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-22T20:31:22.676414+05:30"
+      "checked_at": "2026-09-22T20:50:34.541948+05:30"
     }
   ]
 }
