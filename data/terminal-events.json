@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T07:10:36.563252+00:00",
+  "generated_at": "2026-09-22T07:25:59.352971+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -68,13 +68,6 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "s-k-offset-ltd-sme",
-      "name": "S. K. Offset Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "OPEN",
       "ipo_id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
       "source": "NSE"
@@ -105,6 +98,13 @@
       "type": "OPEN",
       "ipo_id": "a-one-steels-india-ltd-mainboard",
       "name": "A-One Steels India Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "roopa-screen-ltd-sme",
+      "name": "Roopa Screen Ltd. SME",
       "source": "Economic Times"
     },
     {

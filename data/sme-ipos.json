@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-22T12:40:10.480912+05:30",
+  "updated_at": "2026-09-22T12:55:26.580765+05:30",
   "data": [
     {
       "company": "Axiom Gas Engineering Limited",
@@ -34,6 +34,14 @@
       "status": "upcoming"
     },
     {
+      "company": "Roopa Screen Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "24/09/26",
+      "close_date": "—",
+      "issue_size": "₹19.2 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Liqvd Digital India Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "23/09/26",
@@ -47,14 +55,6 @@
       "open_date": "23/09/26",
       "close_date": "—",
       "issue_size": "₹34.47 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "S. K. Offset Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "23/09/26",
-      "close_date": "—",
-      "issue_size": "₹29.06 Cr",
       "status": "upcoming"
     }
   ]
