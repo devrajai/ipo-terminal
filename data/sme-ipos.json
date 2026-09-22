@@ -1,13 +1,21 @@
 {
-  "updated_at": "2026-09-22T23:55:07.274608+05:30",
+  "updated_at": "2026-09-23T00:09:17.363221+05:30",
   "data": [
     {
-      "company": "Bench Mark Infotech Services Limited",
-      "exchange": "NSE",
-      "open_date": "25/09/26",
-      "close_date": "Sep 29, 2026",
-      "issue_size": "₹42.44 Cr",
-      "status": "upcoming"
+      "company": "Pooja Logistics Limited",
+      "exchange": "BSE",
+      "open_date": "23/09/26",
+      "close_date": "25/09/26",
+      "issue_size": "—",
+      "status": "open"
+    },
+    {
+      "company": "Coreintegra Consulting Services Limited",
+      "exchange": "BSE",
+      "open_date": "23/09/26",
+      "close_date": "25/09/26",
+      "issue_size": "—",
+      "status": "open"
     },
     {
       "company": "Himalayan Solar Limited",
@@ -18,19 +26,35 @@
       "status": "upcoming"
     },
     {
-      "company": "Pooja Logistics Limited",
+      "company": "Bench Mark Infotech Services Limited",
       "exchange": "NSE",
-      "open_date": "23/09/26",
-      "close_date": "25/09/26",
-      "issue_size": "₹32 Cr",
+      "open_date": "25/09/26",
+      "close_date": "Sep 29, 2026",
+      "issue_size": "₹42.44 Cr",
       "status": "upcoming"
     },
     {
-      "company": "Coreintegra Consulting Services Limited",
-      "exchange": "NSE",
-      "open_date": "23/09/26",
-      "close_date": "25/09/26",
-      "issue_size": "₹22 Cr",
+      "company": "Green Asia Impex Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "24/09/26",
+      "close_date": "—",
+      "issue_size": "₹60.1 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Peshwa Wheat Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "24/09/26",
+      "close_date": "—",
+      "issue_size": "₹53.52 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Roopa Screen Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "24/09/26",
+      "close_date": "—",
+      "issue_size": "₹19.2 Cr",
       "status": "upcoming"
     }
   ]

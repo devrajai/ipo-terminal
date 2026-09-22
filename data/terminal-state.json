@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T18:25:35.420051+00:00",
-  "today_ist": "2026-09-22",
-  "data_updated_at": "2026-09-22T23:55:07.274608+05:30",
-  "ipo_count": 13,
-  "field_coverage_pct": 22.7,
+  "generated_at": "2026-09-22T18:40:31.940321+00:00",
+  "today_ist": "2026-09-23",
+  "data_updated_at": "2026-09-23T00:09:17.363221+05:30",
+  "ipo_count": 16,
+  "field_coverage_pct": 19.6,
   "sources": {
     "NSE": {
       "ok": true,
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-22T18:24:32.074597+00:00",
+      "checked_at": "2026-09-22T18:38:46.233672+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -67,9 +67,9 @@
         },
         "EconomicTimes": {
           "ok": true,
-          "records": 10,
-          "matched": 7,
-          "added": 3,
+          "records": 9,
+          "matched": 3,
+          "added": 6,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -84,15 +84,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 13,
+      "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-22T18:24:35.082415+00:00"
+      "checked_at": "2026-09-22T18:38:48.622268+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T18:24:53.799599+00:00",
+      "checked_at": "2026-09-22T18:39:01.615152+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-22T18:24:53.870699+00:00"
+      "checked_at": "2026-09-22T18:39:01.688451+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-22T18:24:53.920070+00:00"
+      "checked_at": "2026-09-22T18:39:01.738898+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-22T18:24:54.067988+00:00",
+      "checked_at": "2026-09-22T18:39:01.890000+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-22T18:24:54.067988+00:00"
+      "checked_at": "2026-09-22T18:39:01.890000+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-22T23:55:07.274608+05:30",
+      "checked_at": "2026-09-23T00:09:17.363221+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -152,12 +152,124 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 12,
+      "upcoming_filing_map": 9,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
   },
   "ipos": [
+    {
+      "id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fingerprint": "fd8cee26a70e602c",
+      "fields": {
+        "price": "₹343-362",
+        "size": "2100.00",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fingerprint": "08de3c244104b70c",
+      "fields": {
+        "price": "₹126-134",
+        "size": "150.71",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fingerprint": "737152f82c5f4494",
+      "fields": {
+        "price": "₹175-185",
+        "size": "160.88",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fingerprint": "ea3226c15ade7d35",
+      "fields": {
+        "price": "₹350-375",
+        "size": "300.00",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "Sep 25, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
@@ -187,6 +299,62 @@
       }
     },
     {
+      "id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
+      "fingerprint": "99cbf0f1cec6709e",
+      "fields": {
+        "price": "—",
+        "size": "—",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "25/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "coreintegra-consulting-services-limited",
+      "name": "Coreintegra Consulting Services Limited",
+      "fingerprint": "918a5f90e3b83cad",
+      "fields": {
+        "price": "—",
+        "size": "—",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "25/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "17.94%",
+        "roce": "20.19%",
+        "growth": "28%",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "moneyview-limited",
       "name": "Moneyview Limited",
       "fingerprint": "023a08e4daf8f462",
@@ -196,146 +364,6 @@
         "lot": "441",
         "open": "24/09/26",
         "close": "28/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fingerprint": "50c2e0850158fc3d",
-      "fields": {
-        "price": "₹126 – ₹134",
-        "size": "₹150.71 Cr",
-        "lot": "111",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fingerprint": "ab9c956c9b341e83",
-      "fields": {
-        "price": "₹350 – ₹375",
-        "size": "₹300 Cr",
-        "lot": "40",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fingerprint": "92980d1cedee55dc",
-      "fields": {
-        "price": "₹175 – ₹185",
-        "size": "₹161.38 Cr",
-        "lot": "81",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fingerprint": "794376ce9406b84f",
-      "fields": {
-        "price": "₹343 – ₹362",
-        "size": "₹2,100 Cr",
-        "lot": "41",
-        "open": "23/09/26",
-        "close": "Sep 25, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "bench-mark-infotech-services-limited",
-      "name": "Bench Mark Infotech Services Limited",
-      "fingerprint": "e3fc94cbbb8bb4d0",
-      "fields": {
-        "price": "₹104 – ₹110",
-        "size": "₹42.44 Cr",
-        "lot": "1200",
-        "open": "25/09/26",
-        "close": "Sep 29, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -383,15 +411,15 @@
       }
     },
     {
-      "id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
-      "fingerprint": "d694a671a6e09654",
+      "id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "fingerprint": "e3fc94cbbb8bb4d0",
       "fields": {
-        "price": "₹109-115",
-        "size": "₹32 Cr",
-        "lot": "—",
-        "open": "23/09/26",
-        "close": "25/09/26",
+        "price": "₹104 – ₹110",
+        "size": "₹42.44 Cr",
+        "lot": "1200",
+        "open": "25/09/26",
+        "close": "Sep 29, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -405,34 +433,6 @@
         "roe": "—",
         "roce": "—",
         "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "coreintegra-consulting-services-limited",
-      "name": "Coreintegra Consulting Services Limited",
-      "fingerprint": "06779e63a55eb504",
-      "fields": {
-        "price": "₹74-78",
-        "size": "₹22 Cr",
-        "lot": "—",
-        "open": "23/09/26",
-        "close": "25/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "17.94%",
-        "roce": "20.19%",
-        "growth": "28%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -521,6 +521,90 @@
         "fresh": "—",
         "ofs": "—"
       }
+    },
+    {
+      "id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "fingerprint": "913ad1b3135ae860",
+      "fields": {
+        "price": "₹85 – ₹90",
+        "size": "₹60.1 Cr",
+        "lot": "1600",
+        "open": "24/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "peshwa-wheat-ltd-sme",
+      "name": "Peshwa Wheat Ltd. SME",
+      "fingerprint": "4ad1d800f85cb0d8",
+      "fields": {
+        "price": "₹95 – ₹101",
+        "size": "₹53.52 Cr",
+        "lot": "1200",
+        "open": "24/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "roopa-screen-ltd-sme",
+      "name": "Roopa Screen Ltd. SME",
+      "fingerprint": "d1e1d64f4e3e0dd5",
+      "fields": {
+        "price": "₹60 – ₹64",
+        "size": "₹19.2 Cr",
+        "lot": "2000",
+        "open": "24/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
     }
   ],
   "events": [
@@ -590,9 +674,30 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
+      "ipo_id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "peshwa-wheat-ltd-sme",
+      "name": "Peshwa Wheat Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "roopa-screen-ltd-sme",
+      "name": "Roopa Screen Ltd. SME",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-25",
@@ -645,6 +750,103 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "coreintegra-consulting-services-limited",
+      "name": "Coreintegra Consulting Services Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "green-asia-impex-ltd-sme",
+        "name": "Green Asia Impex Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "peshwa-wheat-ltd-sme",
+        "name": "Peshwa Wheat Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
+    {
+      "at": "2026-09-22T18:40:31.940321+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "roopa-screen-ltd-sme",
+        "name": "Roopa Screen Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-22T14:27:01.714330+00:00",
       "type": "NEW_EVENT",
@@ -3980,98 +4182,6 @@
         "sub_nii",
         "sub_retail"
       ]
-    },
-    {
-      "at": "2026-09-16T07:25:16.365211+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "fields": [
-        "sub_qib",
-        "sub_nii",
-        "sub_retail"
-      ]
-    },
-    {
-      "at": "2026-09-16T07:25:16.365211+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "manika-plastech-limited",
-      "name": "Manika Plastech Limited",
-      "fields": [
-        "gmp",
-        "gmp_pct",
-        "est_list"
-      ]
-    },
-    {
-      "at": "2026-09-16T07:25:16.365211+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
-      "fields": [
-        "gmp",
-        "gmp_pct",
-        "est_list"
-      ]
-    },
-    {
-      "at": "2026-09-15T18:39:10.778822+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fields": [
-        "price",
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-15T18:39:10.778822+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "fields": [
-        "price",
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-15T18:39:10.778822+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "fields": [
-        "price"
-      ]
-    },
-    {
-      "at": "2026-09-15T18:39:10.778822+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "veegaland-developers-limited",
-      "name": "Veegaland Developers Limited",
-      "fields": [
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-15T14:27:16.535402+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "national-stock-exchange-of-india-limited",
-      "name": "National Stock Exchange of India Limited",
-      "fields": [
-        "allotment",
-        "listing"
-      ]
-    },
-    {
-      "at": "2026-09-15T14:27:16.535402+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-22",
-        "type": "ALLOTMENT",
-        "ipo_id": "national-stock-exchange-of-india-limited",
-        "name": "National Stock Exchange of India Limited",
-        "source": "NSE"
-      }
     }
   ]
 }

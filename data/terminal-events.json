@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T18:25:35.420051+00:00",
+  "generated_at": "2026-09-22T18:40:31.940321+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -68,9 +68,30 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
+      "ipo_id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "peshwa-wheat-ltd-sme",
+      "name": "Peshwa Wheat Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "roopa-screen-ltd-sme",
+      "name": "Roopa Screen Ltd. SME",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-25",
