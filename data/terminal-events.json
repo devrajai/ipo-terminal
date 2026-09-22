@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-22T10:48:08.040788+00:00",
+  "generated_at": "2026-09-22T10:57:10.140061+00:00",
   "events": [
     {
       "date": "2026-09-22",
@@ -112,6 +112,13 @@
       "type": "CLOSE",
       "ipo_id": "coreintegra-consulting-services-limited",
       "name": "Coreintegra Consulting Services Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "CLOSE",
+      "ipo_id": "pooja-logistics-limited",
+      "name": "Pooja Logistics Limited",
       "source": "NSE"
     },
     {
