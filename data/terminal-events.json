@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T12:42:14.694891+00:00",
+  "generated_at": "2026-09-23T12:57:16.634663+00:00",
   "events": [
     {
       "date": "2026-09-23",
@@ -138,6 +138,13 @@
     {
       "date": "2026-09-25",
       "type": "OPEN",
+      "ipo_id": "german-green-steel-and-power-limited",
+      "name": "German Green Steel and Power Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
       "ipo_id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
       "source": "NSE"
@@ -152,9 +159,9 @@
     {
       "date": "2026-09-25",
       "type": "OPEN",
-      "ipo_id": "runwal-enterprises-ltd-mainboard",
-      "name": "Runwal Enterprises Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-25",
@@ -175,6 +182,13 @@
       "type": "CLOSE",
       "ipo_id": "acevector-limited",
       "name": "AceVector Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "CLOSE",
+      "ipo_id": "german-green-steel-and-power-limited",
+      "name": "German Green Steel and Power Limited",
       "source": "NSE"
     }
   ]
