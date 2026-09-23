@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T09:17:21.664539+00:00",
+ "updated_at": "2026-09-23T09:44:34.897189+00:00",
  "ipos": {
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
@@ -1182,91 +1182,7 @@
    "promoter_pct": 100.0
   },
   "Vivekanand Cotspin": {
-   "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/",
-   "subs": {
-    "qib": 47.48,
-    "nii": 14.23,
-    "rii": 33.3,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 6.29,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Panchatv Bharat Ltd.",
-     "pe": "14.23"
-    },
-    {
-     "name": "Vinod Texworld Ltd.",
-     "pe": "10.48"
-    },
-    {
-     "name": "Ashutosh Fibre Ltd.",
-     "pe": "9.03"
-    },
-    {
-     "name": "Fascinate Textiles Ltd.",
-     "pe": "10.33"
-    },
-    {
-     "name": "Shreedhar Spinners Ltd.",
-     "pe": "13.44"
-    },
-    {
-     "name": "Harikanta Overseas Ltd.",
-     "pe": "14.66"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     84.85,
-     87.53,
-     84.83
-    ],
-    "income": [
-     409.32,
-     290.94,
-     358.02
-    ],
-    "pat": [
-     3.69,
-     4.07,
-     3.35
-    ],
-    "ebitda": [
-     15.09,
-     14.59,
-     14.59
-    ],
-    "networth": [
-     28.94,
-     17.26,
-     20.62
-    ],
-    "borrowing": [
-     45.0,
-     54.76,
-     40.02
-    ]
-   },
-   "rev_growth": 40.7,
-   "pat_growth": -9.3,
-   "kpi": {
-    "roe": "15.96%",
-    "roce": "13.14%",
-    "de": "1.56",
-    "pat_margin": "0.90%",
-    "ebitda_margin": "3.70%",
-    "nav": "17.81"
-   },
-   "promoter_pct": 100.0
+   "url": "https://www.chittorgarh.com/ipo/vivekanand-cotspin-ipo/2062/"
   },
   "Adroit Industries (India)": {
    "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
