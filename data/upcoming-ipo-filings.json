@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T12:29:31.311406+05:30",
+  "generated_at": "2026-09-23T12:41:44.122191+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 9,
   "ipos": [
@@ -14,7 +14,20 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
+    },
+    {
+      "ipo_name": "A-One Steels India Limited",
+      "id": "a-one-steels-india-limited",
+      "type": "Mainboard",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "24/09/26",
+      "close": "Sep 28, 2026",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Himalayan Solar Limited",
@@ -27,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Bench Mark Infotech Services Limited",
@@ -40,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Orient Cables (India) Ltd. Mainboard",
@@ -53,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Runwal Enterprises Ltd. Mainboard",
@@ -66,20 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
-    },
-    {
-      "ipo_name": "A-One Steels India Ltd. Mainboard",
-      "id": "a-one-steels-india-ltd-mainboard",
-      "type": "Mainboard",
-      "exchange": "NSE/BSE",
-      "status": "upcoming",
-      "open": "24/09/26",
-      "close": "—",
-      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "verified": true,
-      "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Green Asia Impex Ltd. SME",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Peshwa Wheat Ltd. SME",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     },
     {
       "ipo_name": "Roopa Screen Ltd. SME",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T12:29:31.311406+05:30"
+      "checked_at": "2026-09-23T12:41:44.122191+05:30"
     }
   ]
 }
