@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T19:06:24.941610+05:30",
+  "updated_at": "2026-09-23T19:23:34.875666+05:30",
   "data": [
     {
       "company": "Pooja Logistics Limited",
@@ -30,7 +30,7 @@
       "exchange": "NSE",
       "open_date": "25/09/26",
       "close_date": "Sep 29, 2026",
-      "issue_size": "₹68.03 Cr",
+      "issue_size": "68.03",
       "status": "upcoming"
     },
     {
@@ -39,6 +39,14 @@
       "open_date": "24/09/26",
       "close_date": "Sep 28, 2026",
       "issue_size": "60.10",
+      "status": "upcoming"
+    },
+    {
+      "company": "EverestIMS Technologies Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "29/09/26",
+      "close_date": "—",
+      "issue_size": "₹48.46 Cr",
       "status": "upcoming"
     },
     {

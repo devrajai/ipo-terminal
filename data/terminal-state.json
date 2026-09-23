@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T13:36:54.356624+00:00",
+  "generated_at": "2026-09-23T13:54:10.828716+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T19:06:24.941610+05:30",
-  "ipo_count": 20,
-  "field_coverage_pct": 21.2,
+  "data_updated_at": "2026-09-23T19:23:34.875666+05:30",
+  "ipo_count": 21,
+  "field_coverage_pct": 21.1,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,8 +32,10 @@
         "Moneycontrol"
       ],
       "errors": [
+        "Chittorgarh: The read operation timed out",
         "Moneycontrol: HTTP Error 404: Not Found",
-        "IPODose: HTTP Error 525: <none>",
+        "IPODose: The read operation timed out",
+        "IPOGram: The read operation timed out",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -51,7 +53,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T13:35:37.657715+00:00",
+      "checked_at": "2026-09-23T13:49:12.567493+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -70,8 +72,8 @@
         "EconomicTimes": {
           "ok": true,
           "records": 10,
-          "matched": 6,
-          "added": 4,
+          "matched": 5,
+          "added": 5,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -86,15 +88,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 20,
+      "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T13:35:39.585657+00:00"
+      "checked_at": "2026-09-23T13:49:16.503932+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T13:36:06.422347+00:00",
+      "checked_at": "2026-09-23T13:53:17.778991+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -104,17 +106,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T13:36:06.485175+00:00"
+      "checked_at": "2026-09-23T13:53:17.845294+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T13:36:06.527891+00:00"
+      "checked_at": "2026-09-23T13:53:17.888889+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T13:36:06.656641+00:00",
+      "checked_at": "2026-09-23T13:53:18.026285+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -142,11 +144,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T13:36:06.656641+00:00"
+      "checked_at": "2026-09-23T13:53:18.026285+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T19:06:24.941610+05:30",
+      "checked_at": "2026-09-23T19:23:34.875666+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -154,7 +156,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 13,
+      "upcoming_filing_map": 14,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -555,10 +557,10 @@
     {
       "id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
-      "fingerprint": "a7687437700e5101",
+      "fingerprint": "94f298b622c69ee9",
       "fields": {
-        "price": "₹98 – ₹103",
-        "size": "₹68.03 Cr",
+        "price": "₹98-103",
+        "size": "68.03",
         "lot": "1200",
         "open": "25/09/26",
         "close": "Sep 29, 2026",
@@ -673,6 +675,34 @@
         "size": "₹303.9 Cr",
         "lot": "107",
         "open": "25/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "everestims-technologies-ltd-sme",
+      "name": "EverestIMS Technologies Ltd. SME",
+      "fingerprint": "b7c90284e5a2a187",
+      "fields": {
+        "price": "₹80 – ₹85",
+        "size": "₹48.46 Cr",
+        "lot": "1600",
+        "open": "29/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -931,9 +961,37 @@
       "ipo_id": "orient-cables-india-limited",
       "name": "Orient Cables (India) Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "OPEN",
+      "ipo_id": "everestims-technologies-ltd-sme",
+      "name": "EverestIMS Technologies Ltd. SME",
+      "source": "Economic Times"
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T13:54:10.828716+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-23T13:54:10.828716+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-29",
+        "type": "OPEN",
+        "ipo_id": "everestims-technologies-ltd-sme",
+        "name": "EverestIMS Technologies Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-23T13:36:54.356624+00:00",
       "type": "DATA_CHANGE",
@@ -4335,29 +4393,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:25:59.352971+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:25:59.352971+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
       "fields": [
         "roe",
         "roce",
