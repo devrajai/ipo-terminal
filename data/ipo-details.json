@@ -1,6 +1,290 @@
 {
- "updated_at": "2026-09-22T12:48:47.264117+00:00",
+ "updated_at": "2026-09-23T02:38:11.527807+00:00",
  "ipos": {
+  "Elevate Campuses Limited": {
+   "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
+   "subs": {
+    "rii": 10.0,
+    "nii": 15.0,
+    "qib": 75.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Bagmane Prime Office REIT",
+     "pe": "null"
+    },
+    {
+     "name": "Property Share Investment Trust-Propshare Celestia",
+     "pe": "null"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     5773.35,
+     2421.2,
+     2104.74
+    ],
+    "income": [
+     603.39,
+     394.13,
+     362.61
+    ],
+    "pat": [
+     173.76,
+     49.74,
+     39.69
+    ],
+    "ebitda": [
+     545.0,
+     256.4,
+     220.13
+    ],
+    "networth": [
+     956.29,
+     699.78,
+     655.77
+    ],
+    "borrowing": [
+     4120.53,
+     1206.6,
+     984.71
+    ]
+   },
+   "rev_growth": 53.1,
+   "pat_growth": 249.3,
+   "kpi": {
+    "roce": "6.42%",
+    "de": "4.98",
+    "pat_margin": "28.80%",
+    "ebitda_margin": "90.32%",
+    "nav": "432.62"
+   },
+   "promoter_pct": 100.0
+  },
+  "Adroit Industries (India) Limited": {
+   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "total_cr": 45.21,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Tempsens Instruments (India) Ltd.",
+     "pe": "34.05"
+    },
+    {
+     "name": "MV Electrosystems Ltd.",
+     "pe": "-68.88"
+    },
+    {
+     "name": "Indo-MIM Ltd.",
+     "pe": "44.01"
+    },
+    {
+     "name": "Lohia Corp Ltd.",
+     "pe": "23.21"
+    },
+    {
+     "name": "Omnitech Engineering Ltd.",
+     "pe": "54.47"
+    },
+    {
+     "name": "Epack Prefab Technologies Ltd.",
+     "pe": "29.49"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     212.74,
+     187.01,
+     199.39
+    ],
+    "income": [
+     143.04,
+     136.61,
+     125.1
+    ],
+    "pat": [
+     26.16,
+     18.14,
+     14.53
+    ],
+    "ebitda": [
+     38.71,
+     31.02,
+     29.69
+    ],
+    "networth": [
+     128.63,
+     103.53,
+     87.82
+    ],
+    "borrowing": [
+     52.4,
+     8.32,
+     16.29
+    ]
+   },
+   "rev_growth": 4.7,
+   "pat_growth": 44.2,
+   "kpi": {
+    "roe": "22.54%",
+    "roce": "19.01%",
+    "de": "0.41",
+    "pat_margin": "18.69%",
+    "ebitda_margin": "27.66%",
+    "nav": "36.84"
+   },
+   "promoter_pct": 96.1
+  },
+  "Swastika Infra Limited": {
+   "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "total_cr": 48.26,
+    "investors": 20
+   },
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     412.24,
+     258.54,
+     143.26
+    ],
+    "income": [
+     505.57,
+     352.6,
+     211.33
+    ],
+    "pat": [
+     41.43,
+     27.45,
+     13.98
+    ],
+    "ebitda": [
+     70.85,
+     43.89,
+     23.71
+    ],
+    "networth": [
+     156.78,
+     77.02,
+     49.57
+    ],
+    "borrowing": [
+     114.64,
+     111.02,
+     43.82
+    ]
+   },
+   "rev_growth": 43.4,
+   "pat_growth": 50.9,
+   "kpi": {
+    "roe": "35.44%",
+    "roce": "25.76%",
+    "de": "0.73",
+    "pat_margin": "8.23%",
+    "ebitda_margin": "14.07%",
+    "nav": "57.69"
+   },
+   "promoter_pct": 76.51
+  },
+  "ArMee Infotech Limited": {
+   "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
+   "subs": {
+    "rii": 52.5,
+    "nii": 22.5,
+    "qib": 25.0
+   },
+   "anchor": {
+    "total_cr": 39.94,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Marushika Technology Ltd.",
+     "pe": "11.6"
+    },
+    {
+     "name": "EPW India Ltd.",
+     "pe": "18.36"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     958.87,
+     828.54,
+     673.5
+    ],
+    "income": [
+     1410.09,
+     1315.78,
+     1023.99
+    ],
+    "pat": [
+     45.47,
+     41.67,
+     50.13
+    ],
+    "ebitda": [
+     75.64,
+     58.64,
+     71.58
+    ],
+    "networth": [
+     182.18,
+     136.67,
+     95.18
+    ],
+    "borrowing": [
+     174.36,
+     48.1,
+     27.26
+    ]
+   },
+   "rev_growth": 7.2,
+   "pat_growth": 9.1,
+   "kpi": {
+    "roe": "28.52%",
+    "roce": "24.10%",
+    "de": "0.96",
+    "pat_margin": "3.26%",
+    "ebitda_margin": "5.42%",
+    "nav": "76.77"
+   },
+   "promoter_pct": 92.72
+  },
   "Varmora Granito Limited": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
    "subs": {
@@ -60,67 +344,6 @@
     "nav": "39.52"
    },
    "promoter_pct": 52.0
-  },
-  "Axiom Gas Engineering Limited": {
-   "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
-   "subs": {
-    "qib": 18.99,
-    "nii": 37.96,
-    "rii": 37.96,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 5.78,
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     69.38,
-     60.83,
-     52.37
-    ],
-    "income": [
-     100.78,
-     89.85,
-     74.54
-    ],
-    "pat": [
-     9.45,
-     7.75,
-     5.74
-    ],
-    "ebitda": [
-     15.48,
-     13.29,
-     10.01
-    ],
-    "networth": [
-     33.28,
-     23.83,
-     13.85
-    ],
-    "borrowing": [
-     16.06,
-     16.3,
-     20.12
-    ]
-   },
-   "rev_growth": 12.2,
-   "pat_growth": 21.9,
-   "kpi": {
-    "roe": "28.40%",
-    "roce": "28.90%",
-    "de": "0.48",
-    "pat_margin": "9.38%",
-    "ebitda_margin": "15.36%",
-    "nav": "12.83"
-   },
-   "promoter_pct": 98.28
   },
   "Pooja Logistics Limited": {
    "url": "https://www.chittorgarh.com/ipo/pooja-logistics-ipo/2724/"
@@ -185,66 +408,92 @@
    },
    "promoter_pct": 93.04
   },
-  "Axiom Gas Engineering": {
-   "url": "https://www.chittorgarh.com/ipo/axiom-gas-engineering-ipo/2193/",
+  "Moneyview Limited": {
+   "url": "https://www.chittorgarh.com/ipo/moneyview-ipo/2936/",
    "subs": {
-    "qib": 18.99,
-    "nii": 37.96,
-    "rii": 37.96,
-    "total": 100.0
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
    },
    "anchor": {
-    "total_cr": 5.78,
     "investors": 20
    },
+   "peers": [
+    {
+     "name": "Manipal Payment & Identity Solutions Ltd.",
+     "pe": "29.74"
+    },
+    {
+     "name": "Turtlemint Fintech Solutions Ltd.",
+     "pe": "-19.66"
+    },
+    {
+     "name": "Pine Labs Ltd.",
+     "pe": "-160.13"
+    },
+    {
+     "name": "Finbud Financial Services Ltd.",
+     "pe": "23.4"
+    }
+   ],
    "fin": {
     "periods": [
+     "30 Jun 2026",
      "31 Mar 2026",
+     "30 Jun 2025",
      "31 Mar 2025",
      "31 Mar 2024"
     ],
     "assets": [
-     69.38,
-     60.83,
-     52.37
+     8641.89,
+     8104.85,
+     6404.82,
+     5632.42,
+     3519.5
     ],
     "income": [
-     100.78,
-     89.85,
-     74.54
+     1065.09,
+     3404.27,
+     702.92,
+     2378.53,
+     1389.24
     ],
     "pat": [
-     9.45,
-     7.75,
-     5.74
+     173.8,
+     242.71,
+     67.15,
+     240.28,
+     171.15
     ],
     "ebitda": [
-     15.48,
-     13.29,
-     10.01
+     424.28,
+     968.92,
+     225.56,
+     697.98,
+     328.7
     ],
     "networth": [
-     33.28,
-     23.83,
-     13.85
+     2415.2,
+     2225.42,
+     1991.01,
+     1918.66,
+     1606.64
     ],
     "borrowing": [
-     16.06,
-     16.3,
-     20.12
+     5484.76,
+     5157.04,
+     4070.14,
+     3413.37,
+     1708.92
     ]
    },
-   "rev_growth": 12.2,
-   "pat_growth": 21.9,
+   "rev_growth": 43.1,
+   "pat_growth": 1.0,
    "kpi": {
-    "roe": "28.40%",
-    "roce": "28.90%",
-    "de": "0.48",
-    "pat_margin": "9.38%",
-    "ebitda_margin": "15.36%",
-    "nav": "12.83"
+    "roe": "15.98%",
+    "nav": "14.67"
    },
-   "promoter_pct": 98.28
+   "promoter_pct": 23.96
   },
   "A-One Steels India": {
    "url": "https://www.chittorgarh.com/ipo/a-one-steels-ipo/2000/"
@@ -257,6 +506,7 @@
     "qib": 25.0
    },
    "anchor": {
+    "total_cr": 39.94,
     "investors": 20
    },
    "peers": [
@@ -387,9 +637,14 @@
     "total": 100.0
    },
    "anchor": {
+    "total_cr": 6.75,
     "investors": 20
    },
    "peers": [
+    {
+     "name": "Shakti Polytarp Ltd.",
+     "pe": "7.38"
+    },
     {
      "name": "Injecto Polymers Ltd.",
      "pe": "9.48"
@@ -409,10 +664,6 @@
     {
      "name": "Ecoline Exim Ltd.",
      "pe": "12.12"
-    },
-    {
-     "name": "Manika Plastech Ltd.",
-     "pe": "18.22"
     }
    ],
    "fin": {
@@ -465,7 +716,58 @@
    "promoter_pct": 100.0
   },
   "Liqvd Digital India": {
-   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/"
+   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/",
+   "subs": {
+    "qib": 30.0,
+    "rii": 35.0,
+    "nii": 35.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "B.A.G.Convergence Ltd.",
+     "pe": "14.45"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     3333.45,
+     1382.56
+    ],
+    "income": [
+     2502.58,
+     1828.46
+    ],
+    "pat": [
+     224.82,
+     190.3
+    ],
+    "ebitda": [
+     393.13,
+     381.11
+    ],
+    "networth": [
+     1939.37,
+     209.68
+    ]
+   },
+   "rev_growth": 36.9,
+   "pat_growth": 18.1,
+   "kpi": {
+    "roe": "25.36%",
+    "roce": "44.05%",
+    "de": "0.29",
+    "pat_margin": "13.32%",
+    "ebitda_margin": "18.69%",
+    "nav": "21.45"
+   },
+   "promoter_pct": 79.61
   },
   "Sai Urja Indo Ventures": {},
   "Anand Seamless": {
@@ -866,7 +1168,90 @@
    "promoter_pct": 100.0
   },
   "Adroit Industries (India)": {
-   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/"
+   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "total_cr": 45.21,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Tempsens Instruments (India) Ltd.",
+     "pe": "34.05"
+    },
+    {
+     "name": "MV Electrosystems Ltd.",
+     "pe": "-68.88"
+    },
+    {
+     "name": "Indo-MIM Ltd.",
+     "pe": "44.01"
+    },
+    {
+     "name": "Lohia Corp Ltd.",
+     "pe": "23.21"
+    },
+    {
+     "name": "Omnitech Engineering Ltd.",
+     "pe": "54.47"
+    },
+    {
+     "name": "Epack Prefab Technologies Ltd.",
+     "pe": "29.49"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     212.74,
+     187.01,
+     199.39
+    ],
+    "income": [
+     143.04,
+     136.61,
+     125.1
+    ],
+    "pat": [
+     26.16,
+     18.14,
+     14.53
+    ],
+    "ebitda": [
+     38.71,
+     31.02,
+     29.69
+    ],
+    "networth": [
+     128.63,
+     103.53,
+     87.82
+    ],
+    "borrowing": [
+     52.4,
+     8.32,
+     16.29
+    ]
+   },
+   "rev_growth": 4.7,
+   "pat_growth": 44.2,
+   "kpi": {
+    "roe": "22.54%",
+    "roce": "19.01%",
+    "de": "0.41",
+    "pat_margin": "18.69%",
+    "ebitda_margin": "27.66%",
+    "nav": "36.84"
+   },
+   "promoter_pct": 96.1
   },
   "Elevate Campuses": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
@@ -944,6 +1329,7 @@
     "qib": 50.0
    },
    "anchor": {
+    "total_cr": 48.26,
     "investors": 20
    },
    "fin": {
@@ -996,7 +1382,71 @@
    "promoter_pct": 76.51
   },
   "Unitec Fibres": {
-   "url": "https://www.chittorgarh.com/ipo/unitec-fibres-ipo/3171/"
+   "url": "https://www.chittorgarh.com/ipo/unitec-fibres-ipo/3171/",
+   "subs": {
+    "qib": 47.18,
+    "nii": 14.38,
+    "rii": 33.33,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 9.74,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Amtech Esters Ltd.",
+     "pe": "null"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     169.35,
+     122.96,
+     90.46
+    ],
+    "income": [
+     224.86,
+     227.13,
+     204.99
+    ],
+    "pat": [
+     7.6,
+     8.22,
+     7.42
+    ],
+    "ebitda": [
+     15.77,
+     17.45,
+     16.78
+    ],
+    "networth": [
+     65.0,
+     57.4,
+     49.18
+    ],
+    "borrowing": [
+     77.19,
+     36.64,
+     15.72
+    ]
+   },
+   "rev_growth": -1.0,
+   "pat_growth": -7.5,
+   "kpi": {
+    "roe": "12.41%",
+    "roce": "9.05%",
+    "de": "1.19",
+    "pat_margin": "3.39%",
+    "ebitda_margin": "7.03%",
+    "nav": "61.89"
+   },
+   "promoter_pct": 94.2
   },
   "Pooja Logistics": {
    "url": "https://www.chittorgarh.com/ipo/pooja-logistics-ipo/2724/"
