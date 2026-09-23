@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T18:53:32.925594+05:30",
+  "updated_at": "2026-09-23T19:06:24.941610+05:30",
   "data": [
     {
       "company": "Pooja Logistics Limited",
@@ -22,7 +22,7 @@
       "exchange": "NSE",
       "open_date": "25/09/26",
       "close_date": "Sep 29, 2026",
-      "issue_size": "₹42.44 Cr",
+      "issue_size": "42.44",
       "status": "upcoming"
     },
     {
@@ -47,14 +47,6 @@
       "open_date": "28/09/26",
       "close_date": "—",
       "issue_size": "₹17.82 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Sai Urja Indo Ventures Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "25/09/26",
-      "close_date": "—",
-      "issue_size": "₹24.95 Cr",
       "status": "upcoming"
     }
   ]
