@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T04:03:24.453503+00:00",
+  "generated_at": "2026-09-23T04:21:42.627305+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T09:32:55.387847+05:30",
+  "data_updated_at": "2026-09-23T09:51:12.463263+05:30",
   "ipo_count": 16,
-  "field_coverage_pct": 19.0,
+  "field_coverage_pct": 24.4,
   "sources": {
     "NSE": {
       "ok": true,
@@ -31,7 +31,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "NEWS": {
       "ok": true,
@@ -47,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T04:02:22.912691+00:00",
+      "checked_at": "2026-09-23T04:20:33.514548+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -85,12 +87,12 @@
       "records": 16,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T04:02:24.941199+00:00"
+      "checked_at": "2026-09-23T04:20:36.488955+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T04:02:41.009556+00:00",
+      "checked_at": "2026-09-23T04:20:57.481670+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -100,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T04:02:41.077519+00:00"
+      "checked_at": "2026-09-23T04:20:57.530172+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T04:02:41.124819+00:00"
+      "checked_at": "2026-09-23T04:20:57.563207+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T04:02:41.266035+00:00",
+      "checked_at": "2026-09-23T04:20:57.664159+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -129,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 68,
+          "records": 69,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -138,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T04:02:41.266035+00:00"
+      "checked_at": "2026-09-23T04:20:57.664159+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T09:32:55.387847+05:30",
+      "checked_at": "2026-09-23T09:51:12.463263+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -159,7 +161,7 @@
     {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "fingerprint": "f889c1626702309b",
+      "fingerprint": "8963ff29f55ca923",
       "fields": {
         "price": "₹343-362",
         "size": "—",
@@ -177,9 +179,9 @@
         "est_list": "—",
         "pe": "—",
         "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roce": "6.42%",
+        "growth": "53%",
+        "de": "4.98",
         "fresh": "—",
         "ofs": "—"
       }
@@ -187,7 +189,7 @@
     {
       "id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fingerprint": "d73b43b3440ade29",
+      "fingerprint": "b7f5f187c88fdc6e",
       "fields": {
         "price": "₹126-134",
         "size": "—",
@@ -204,10 +206,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "22.54%",
+        "roce": "19.01%",
+        "growth": "5%",
+        "de": "0.41",
         "fresh": "—",
         "ofs": "—"
       }
@@ -215,7 +217,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "5e0cc0facbb5e0e6",
+      "fingerprint": "6df962742e293d21",
       "fields": {
         "price": "₹175-185",
         "size": "—",
@@ -232,10 +234,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "35.44%",
+        "roce": "25.76%",
+        "growth": "43%",
+        "de": "0.73",
         "fresh": "—",
         "ofs": "—"
       }
@@ -243,7 +245,7 @@
     {
       "id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fingerprint": "a7800f12697434ed",
+      "fingerprint": "d354790d33a6e93d",
       "fields": {
         "price": "₹350-375",
         "size": "—",
@@ -260,10 +262,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "28.52%",
+        "roce": "24.10%",
+        "growth": "7%",
+        "de": "0.96",
         "fresh": "—",
         "ofs": "—"
       }
@@ -271,7 +273,7 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "72c49b44f1dcd83c",
+      "fingerprint": "8a1fdbe6be572116",
       "fields": {
         "price": "₹140-148",
         "size": "₹0 Cr",
@@ -288,9 +290,9 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
+        "roe": "6.80%",
+        "roce": "9.89%",
+        "growth": "5%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -776,6 +778,64 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T04:21:42.627305+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-23T04:21:42.627305+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-23T04:21:42.627305+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-23T04:21:42.627305+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-23T04:21:42.627305+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
     {
       "at": "2026-09-23T02:56:02.265926+00:00",
       "type": "DATA_CHANGE",
@@ -4168,57 +4228,6 @@
       "name": "Manika Plastech Limited",
       "fields": [
         "size"
-      ]
-    },
-    {
-      "at": "2026-09-16T13:01:25.377108+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fields": [
-        "sub_nii",
-        "sub_retail"
-      ]
-    },
-    {
-      "at": "2026-09-16T13:01:25.377108+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "hero-motors-limited",
-      "name": "Hero Motors Limited",
-      "fields": [
-        "sub_nii",
-        "sub_retail"
-      ]
-    },
-    {
-      "at": "2026-09-16T13:01:25.377108+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "ss-retail-limited",
-      "name": "SS Retail Limited",
-      "fields": [
-        "sub_nii",
-        "sub_retail"
-      ]
-    },
-    {
-      "at": "2026-09-16T11:38:32.153108+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-21",
-        "type": "OPEN",
-        "ipo_id": "fx-multitech-ltd-sme",
-        "name": "FX Multitech Ltd. SME",
-        "source": "Economic Times"
-      }
-    },
-    {
-      "at": "2026-09-16T11:25:13.572681+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "jindal-supreme-india-limited",
-      "name": "Jindal Supreme (India) Limited",
-      "fields": [
-        "sub_nii",
-        "sub_retail"
       ]
     }
   ]
