@@ -1,6 +1,180 @@
 {
- "updated_at": "2026-09-23T06:49:21.543969+00:00",
+ "updated_at": "2026-09-23T07:18:04.796027+00:00",
  "ipos": {
+  "ArMee Infotech Limited": {
+   "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
+   "subs": {
+    "rii": 52.5,
+    "nii": 22.5,
+    "qib": 25.0,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 39.94,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "ESDS Software Solution Ltd.",
+     "pe": "35.66"
+    },
+    {
+     "name": "Xtranet Technologies Ltd.",
+     "pe": "12.21"
+    },
+    {
+     "name": "Amagi Media Labs Ltd.",
+     "pe": "-101.78"
+    },
+    {
+     "name": "Excelsoft Technologies Ltd.",
+     "pe": "34.62"
+    },
+    {
+     "name": "Prodocs Solutions Ltd.",
+     "pe": "14.72"
+    },
+    {
+     "name": "Exato Technologies Ltd.",
+     "pe": "11.19"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     958.87,
+     828.54,
+     673.5
+    ],
+    "income": [
+     1410.09,
+     1315.78,
+     1023.99
+    ],
+    "pat": [
+     45.47,
+     41.67,
+     50.13
+    ],
+    "ebitda": [
+     75.64,
+     58.64,
+     71.58
+    ],
+    "networth": [
+     182.18,
+     136.67,
+     95.18
+    ],
+    "borrowing": [
+     174.36,
+     48.1,
+     27.26
+    ]
+   },
+   "rev_growth": 7.2,
+   "pat_growth": 9.1,
+   "kpi": {
+    "roe": "28.52%",
+    "roce": "24.10%",
+    "de": "0.96",
+    "pat_margin": "3.26%",
+    "ebitda_margin": "5.42%",
+    "nav": "76.77"
+   },
+   "promoter_pct": 92.72
+  },
+  "Adroit Industries (India) Limited": {
+   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 45.21,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Dhoot Transmission Ltd.",
+     "pe": "41.36"
+    },
+    {
+     "name": "SEDEMAC Mechatronics Ltd.",
+     "pe": "126.91"
+    },
+    {
+     "name": "Tenneco Clean Air India Ltd.",
+     "pe": "28.97"
+    },
+    {
+     "name": "Studds Accessories Ltd.",
+     "pe": "33.06"
+    },
+    {
+     "name": "Sumax Engineering Ltd.",
+     "pe": "11.66"
+    },
+    {
+     "name": "LAPL Automotive Ltd.",
+     "pe": "9.91"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     212.74,
+     187.01,
+     199.39
+    ],
+    "income": [
+     143.04,
+     136.61,
+     125.1
+    ],
+    "pat": [
+     26.16,
+     18.14,
+     14.53
+    ],
+    "ebitda": [
+     38.71,
+     31.02,
+     29.69
+    ],
+    "networth": [
+     128.63,
+     103.53,
+     87.82
+    ],
+    "borrowing": [
+     52.4,
+     8.32,
+     16.29
+    ]
+   },
+   "rev_growth": 4.7,
+   "pat_growth": 44.2,
+   "kpi": {
+    "roe": "22.54%",
+    "roce": "19.01%",
+    "de": "0.41",
+    "pat_margin": "18.69%",
+    "ebitda_margin": "27.66%",
+    "nav": "36.84"
+   },
+   "promoter_pct": 96.1
+  },
   "Elevate Campuses Limited": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
    "subs": {
@@ -70,93 +244,6 @@
     "nav": "432.62"
    },
    "promoter_pct": 100.0
-  },
-  "Adroit Industries (India) Limited": {
-   "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
-   "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 45.21,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "Tempsens Instruments (India) Ltd.",
-     "pe": "34.05"
-    },
-    {
-     "name": "MV Electrosystems Ltd.",
-     "pe": "-68.88"
-    },
-    {
-     "name": "Indo-MIM Ltd.",
-     "pe": "44.01"
-    },
-    {
-     "name": "Lohia Corp Ltd.",
-     "pe": "23.21"
-    },
-    {
-     "name": "Omnitech Engineering Ltd.",
-     "pe": "54.47"
-    },
-    {
-     "name": "Epack Prefab Technologies Ltd.",
-     "pe": "29.49"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     212.74,
-     187.01,
-     199.39
-    ],
-    "income": [
-     143.04,
-     136.61,
-     125.1
-    ],
-    "pat": [
-     26.16,
-     18.14,
-     14.53
-    ],
-    "ebitda": [
-     38.71,
-     31.02,
-     29.69
-    ],
-    "networth": [
-     128.63,
-     103.53,
-     87.82
-    ],
-    "borrowing": [
-     52.4,
-     8.32,
-     16.29
-    ]
-   },
-   "rev_growth": 4.7,
-   "pat_growth": 44.2,
-   "kpi": {
-    "roe": "22.54%",
-    "roce": "19.01%",
-    "de": "0.41",
-    "pat_margin": "18.69%",
-    "ebitda_margin": "27.66%",
-    "nav": "36.84"
-   },
-   "promoter_pct": 96.1
   },
   "Swastika Infra Limited": {
    "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
@@ -244,93 +331,6 @@
     "nav": "57.69"
    },
    "promoter_pct": 76.51
-  },
-  "ArMee Infotech Limited": {
-   "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
-   "subs": {
-    "rii": 52.5,
-    "nii": 22.5,
-    "qib": 25.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 39.94,
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "ESDS Software Solution Ltd.",
-     "pe": "35.66"
-    },
-    {
-     "name": "Xtranet Technologies Ltd.",
-     "pe": "12.21"
-    },
-    {
-     "name": "Amagi Media Labs Ltd.",
-     "pe": "-101.78"
-    },
-    {
-     "name": "Excelsoft Technologies Ltd.",
-     "pe": "34.62"
-    },
-    {
-     "name": "Prodocs Solutions Ltd.",
-     "pe": "14.72"
-    },
-    {
-     "name": "Exato Technologies Ltd.",
-     "pe": "11.19"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     958.87,
-     828.54,
-     673.5
-    ],
-    "income": [
-     1410.09,
-     1315.78,
-     1023.99
-    ],
-    "pat": [
-     45.47,
-     41.67,
-     50.13
-    ],
-    "ebitda": [
-     75.64,
-     58.64,
-     71.58
-    ],
-    "networth": [
-     182.18,
-     136.67,
-     95.18
-    ],
-    "borrowing": [
-     174.36,
-     48.1,
-     27.26
-    ]
-   },
-   "rev_growth": 7.2,
-   "pat_growth": 9.1,
-   "kpi": {
-    "roe": "28.52%",
-    "roce": "24.10%",
-    "de": "0.96",
-    "pat_margin": "3.26%",
-    "ebitda_margin": "5.42%",
-    "nav": "76.77"
-   },
-   "promoter_pct": 92.72
   },
   "Varmora Granito Limited": {
    "url": "https://www.chittorgarh.com/ipo/varmora-granito-ipo/2563/",
@@ -800,7 +800,75 @@
    "promoter_pct": 100.0
   },
   "Liqvd Digital India": {
-   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/"
+   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/",
+   "subs": {
+    "qib": 28.47,
+    "nii": 19.28,
+    "rii": 52.25,
+    "total": 100.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Century Business Media Ltd.",
+     "pe": "8.59"
+    },
+    {
+     "name": "Simca Advertising Ltd.",
+     "pe": "16.14"
+    },
+    {
+     "name": "Value 360 Communications Ltd.",
+     "pe": "20.74"
+    },
+    {
+     "name": "Yaap Digital Ltd.",
+     "pe": "18.72"
+    },
+    {
+     "name": "Chatterbox Technologies Ltd.",
+     "pe": "13.53"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     3333.45,
+     1382.56
+    ],
+    "income": [
+     2502.58,
+     1828.46
+    ],
+    "pat": [
+     224.82,
+     190.3
+    ],
+    "ebitda": [
+     393.13,
+     381.11
+    ],
+    "networth": [
+     1939.37,
+     209.68
+    ]
+   },
+   "rev_growth": 36.9,
+   "pat_growth": 18.1,
+   "kpi": {
+    "roe": "25.36%",
+    "roce": "44.05%",
+    "de": "0.29",
+    "pat_margin": "13.32%",
+    "ebitda_margin": "18.69%",
+    "nav": "21.45"
+   },
+   "promoter_pct": 79.61
   },
   "Sai Urja Indo Ventures": {},
   "Anand Seamless": {
@@ -902,28 +970,28 @@
    },
    "peers": [
     {
-     "name": "Elfin Agro India Ltd.",
-     "pe": "13.05"
+     "name": "Bio Medica Laboratories Ltd.",
+     "pe": "13.03"
     },
     {
-     "name": "Shyam Dhani Industries Ltd.",
-     "pe": "13.19"
+     "name": "Goldline Pharmaceutical Ltd.",
+     "pe": "10.47"
     },
     {
-     "name": "Pajson Agro India Ltd.",
-     "pe": "10.11"
+     "name": "Speciality Medicines Ltd.",
+     "pe": "9.27"
     },
     {
-     "name": "Mother Nutri Foods Ltd.",
-     "pe": "17.78"
+     "name": "Accretion Nutraveda Ltd.",
+     "pe": "26.27"
     },
     {
-     "name": "Rukmani Devi Garg Agro Impex Ltd.",
-     "pe": "8.5"
+     "name": "KRM Ayurveda Ltd.",
+     "pe": "17.32"
     },
     {
-     "name": "Gujarat Peanut & Agri Products Ltd.",
-     "pe": "8.97"
+     "name": "Curis Lifesciences Ltd.",
+     "pe": "12.44"
     }
    ],
    "fin": {
@@ -1214,28 +1282,28 @@
    },
    "peers": [
     {
-     "name": "Tempsens Instruments (India) Ltd.",
-     "pe": "34.05"
+     "name": "Dhoot Transmission Ltd.",
+     "pe": "41.36"
     },
     {
-     "name": "MV Electrosystems Ltd.",
-     "pe": "-68.88"
+     "name": "SEDEMAC Mechatronics Ltd.",
+     "pe": "126.91"
     },
     {
-     "name": "Indo-MIM Ltd.",
-     "pe": "44.01"
+     "name": "Tenneco Clean Air India Ltd.",
+     "pe": "28.97"
     },
     {
-     "name": "Lohia Corp Ltd.",
-     "pe": "23.21"
+     "name": "Studds Accessories Ltd.",
+     "pe": "33.06"
     },
     {
-     "name": "Omnitech Engineering Ltd.",
-     "pe": "54.47"
+     "name": "Sumax Engineering Ltd.",
+     "pe": "11.66"
     },
     {
-     "name": "Epack Prefab Technologies Ltd.",
-     "pe": "29.49"
+     "name": "LAPL Automotive Ltd.",
+     "pe": "9.91"
     }
    ],
    "fin": {
