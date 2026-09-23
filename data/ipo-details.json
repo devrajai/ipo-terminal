@@ -1,14 +1,15 @@
 {
- "updated_at": "2026-09-23T04:17:55.522496+00:00",
+ "updated_at": "2026-09-23T04:44:09.351744+00:00",
  "ipos": {
   "Elevate Campuses Limited": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
    "subs": {
-    "rii": 10.0,
-    "nii": 15.0,
-    "qib": 75.0
+    "rii": 18.18,
+    "nii": 27.27,
+    "total": 100.0
    },
    "anchor": {
+    "total_cr": 945.0,
     "investors": 20
    },
    "peers": [
@@ -72,9 +73,9 @@
   "Adroit Industries (India) Limited": {
    "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 45.21,
@@ -158,9 +159,9 @@
   "Swastika Infra Limited": {
    "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 48.26,
@@ -218,9 +219,9 @@
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
    "subs": {
-    "rii": 52.5,
-    "nii": 22.5,
-    "qib": 25.0
+    "rii": 60.56,
+    "nii": 25.96,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 39.94,
@@ -348,66 +349,7 @@
   "Pooja Logistics Limited": {
    "url": "https://www.chittorgarh.com/ipo/pooja-logistics-ipo/2724/"
   },
-  "Coreintegra Consulting Services Limited": {
-   "url": "https://www.chittorgarh.com/ipo/core-integra-consulting-ipo/2605/",
-   "subs": {
-    "qib": 9.48,
-    "nii": 42.68,
-    "rii": 42.79,
-    "total": 100.0
-   },
-   "anchor": {
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "NSB BPO Solutions Ltd.",
-     "pe": "18.6"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     68.51,
-     56.8,
-     49.96
-    ],
-    "income": [
-     516.3,
-     404.39,
-     368.44
-    ],
-    "pat": [
-     4.51,
-     3.46,
-     4.94
-    ],
-    "ebitda": [
-     6.01,
-     4.2,
-     5.81
-    ],
-    "networth": [
-     27.41,
-     22.89,
-     19.43
-    ]
-   },
-   "rev_growth": 27.7,
-   "pat_growth": 30.3,
-   "kpi": {
-    "roe": "17.94%",
-    "roce": "20.19%",
-    "pat_margin": "0.87%",
-    "ebitda_margin": "1.17%",
-    "nav": "35.74"
-   },
-   "promoter_pct": 93.04
-  },
+  "Coreintegra Consulting Services Limited": {},
   "Moneyview Limited": {
    "url": "https://www.chittorgarh.com/ipo/moneyview-ipo/2936/",
    "subs": {
@@ -501,9 +443,9 @@
   "ArMee Infotech": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
    "subs": {
-    "rii": 52.5,
-    "nii": 22.5,
-    "qib": 25.0
+    "rii": 60.56,
+    "nii": 25.96,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 39.94,
@@ -718,9 +660,10 @@
   "Liqvd Digital India": {
    "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/",
    "subs": {
-    "qib": 30.0,
-    "rii": 35.0,
-    "nii": 35.0
+    "qib": 28.47,
+    "nii": 19.28,
+    "rii": 52.25,
+    "total": 100.0
    },
    "anchor": {
     "investors": 20
@@ -1170,9 +1113,9 @@
   "Adroit Industries (India)": {
    "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 45.21,
@@ -1256,11 +1199,12 @@
   "Elevate Campuses": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
    "subs": {
-    "rii": 10.0,
-    "nii": 15.0,
-    "qib": 75.0
+    "rii": 18.18,
+    "nii": 27.27,
+    "total": 100.0
    },
    "anchor": {
+    "total_cr": 945.0,
     "investors": 20
    },
    "peers": [
@@ -1324,9 +1268,9 @@
   "Swastika Infra": {
    "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 48.26,
