@@ -1,11 +1,12 @@
 {
- "updated_at": "2026-09-23T04:44:09.351744+00:00",
+ "updated_at": "2026-09-23T05:15:49.535577+00:00",
  "ipos": {
   "Elevate Campuses Limited": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
    "subs": {
-    "rii": 18.18,
-    "nii": 27.27,
+    "rii": 10.0,
+    "nii": 15.0,
+    "qib": 75.0,
     "total": 100.0
    },
    "anchor": {
@@ -73,8 +74,9 @@
   "Adroit Industries (India) Limited": {
    "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
@@ -159,8 +161,9 @@
   "Swastika Infra Limited": {
    "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
@@ -219,8 +222,9 @@
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
    "subs": {
-    "rii": 60.56,
-    "nii": 25.96,
+    "rii": 52.5,
+    "nii": 22.5,
+    "qib": 25.0,
     "total": 100.0
    },
    "anchor": {
@@ -349,7 +353,66 @@
   "Pooja Logistics Limited": {
    "url": "https://www.chittorgarh.com/ipo/pooja-logistics-ipo/2724/"
   },
-  "Coreintegra Consulting Services Limited": {},
+  "Coreintegra Consulting Services Limited": {
+   "url": "https://www.chittorgarh.com/ipo/core-integra-consulting-ipo/2605/",
+   "subs": {
+    "qib": 9.48,
+    "nii": 42.68,
+    "rii": 42.79,
+    "total": 100.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "NSB BPO Solutions Ltd.",
+     "pe": "18.6"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     68.51,
+     56.8,
+     49.96
+    ],
+    "income": [
+     516.3,
+     404.39,
+     368.44
+    ],
+    "pat": [
+     4.51,
+     3.46,
+     4.94
+    ],
+    "ebitda": [
+     6.01,
+     4.2,
+     5.81
+    ],
+    "networth": [
+     27.41,
+     22.89,
+     19.43
+    ]
+   },
+   "rev_growth": 27.7,
+   "pat_growth": 30.3,
+   "kpi": {
+    "roe": "17.94%",
+    "roce": "20.19%",
+    "pat_margin": "0.87%",
+    "ebitda_margin": "1.17%",
+    "nav": "35.74"
+   },
+   "promoter_pct": 93.04
+  },
   "Moneyview Limited": {
    "url": "https://www.chittorgarh.com/ipo/moneyview-ipo/2936/",
    "subs": {
@@ -443,8 +506,9 @@
   "ArMee Infotech": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
    "subs": {
-    "rii": 60.56,
-    "nii": 25.96,
+    "rii": 52.5,
+    "nii": 22.5,
+    "qib": 25.0,
     "total": 100.0
    },
    "anchor": {
@@ -712,7 +776,76 @@
    },
    "promoter_pct": 79.61
   },
-  "Sai Urja Indo Ventures": {},
+  "Sai Urja Indo Ventures": {
+   "url": "https://www.chittorgarh.com/ipo/sai-urja-indo-ipo/2655/",
+   "subs": {
+    "qib": 44.35,
+    "nii": 13.7,
+    "rii": 32.17,
+    "total": 100.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Mopshop Distribution Ltd.",
+     "pe": "22.22"
+    },
+    {
+     "name": "Safecure Services Ltd.",
+     "pe": "11.66"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     24.25,
+     21.11,
+     13.95
+    ],
+    "income": [
+     85.64,
+     65.82,
+     45.88
+    ],
+    "pat": [
+     4.19,
+     3.13,
+     1.39
+    ],
+    "ebitda": [
+     6.51,
+     5.14,
+     2.93
+    ],
+    "networth": [
+     12.2,
+     7.76,
+     4.72
+    ],
+    "borrowing": [
+     7.18,
+     5.35,
+     2.15
+    ]
+   },
+   "rev_growth": 30.1,
+   "pat_growth": 33.9,
+   "kpi": {
+    "roe": "42.44%",
+    "roce": "50.66%",
+    "de": "0.59",
+    "pat_margin": "4.98%",
+    "ebitda_margin": "7.65%",
+    "nav": "20.99"
+   },
+   "promoter_pct": 92.87
+  },
   "Anand Seamless": {
    "url": "https://www.chittorgarh.com/ipo/anand-seamless-ipo/3080/",
    "subs": {
@@ -1113,8 +1246,9 @@
   "Adroit Industries (India)": {
    "url": "https://www.chittorgarh.com/ipo/adroit-industries-ipo/3007/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
@@ -1199,8 +1333,9 @@
   "Elevate Campuses": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
    "subs": {
-    "rii": 18.18,
-    "nii": 27.27,
+    "rii": 10.0,
+    "nii": 15.0,
+    "qib": 75.0,
     "total": 100.0
    },
    "anchor": {
@@ -1268,8 +1403,9 @@
   "Swastika Infra": {
    "url": "https://www.chittorgarh.com/ipo/swastika-infra-ipo/2287/",
    "subs": {
-    "rii": 50.0,
-    "nii": 21.43,
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0,
     "total": 100.0
    },
    "anchor": {
