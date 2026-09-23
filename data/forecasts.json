@@ -1,17 +1,11 @@
 {
- "generated_at": "2026-09-22T01:54:18.114392+00:00",
+ "generated_at": "2026-09-23T01:54:26.918307+00:00",
  "model": "timesfm-3.0",
  "min_points_required": 3,
  "ipos": {
   "Kheria Autocomp Limited": {
    "horizon_days": 3,
    "points": [
-    {
-     "date": "2026-09-23",
-     "low": 10.0,
-     "mid": 10.0,
-     "high": 10.0
-    },
     {
      "date": "2026-09-24",
      "low": 10.0,
@@ -20,6 +14,12 @@
     },
     {
      "date": "2026-09-25",
+     "low": 10.0,
+     "mid": 10.0,
+     "high": 10.0
+    },
+    {
+     "date": "2026-09-26",
      "low": 10.0,
      "mid": 10.0,
      "high": 10.0
@@ -30,67 +30,51 @@
    "horizon_days": 3,
    "points": [
     {
-     "date": "2026-09-23",
+     "date": "2026-09-24",
      "low": 0.0,
      "mid": 64.5,
      "high": 175.5
     },
     {
-     "date": "2026-09-24",
+     "date": "2026-09-25",
      "low": 0.0,
      "mid": 64.5,
      "high": 195.0
     },
     {
-     "date": "2026-09-25",
+     "date": "2026-09-26",
      "low": 0.0,
      "mid": 71.1,
      "high": 204.6
     }
-   ],
-   "est_listing": {
-    "low": 1700.0,
-    "mid": 1771.1,
-    "high": 1904.6
-   }
+   ]
   },
   "Sonaselection India Limited": {
    "horizon_days": 3,
    "points": [
     {
-     "date": "2026-09-23",
+     "date": "2026-09-24",
      "low": 0.0,
      "mid": 1.3,
      "high": 2.2
     },
     {
-     "date": "2026-09-24",
+     "date": "2026-09-25",
      "low": 0.0,
      "mid": 1.3,
      "high": 2.4
     },
     {
-     "date": "2026-09-25",
+     "date": "2026-09-26",
      "low": 0.0,
      "mid": 1.4,
      "high": 2.5
     }
-   ],
-   "est_listing": {
-    "low": 94.0,
-    "mid": 95.4,
-    "high": 96.5
-   }
+   ]
   },
   "SpectraA Technology Solutions Limited": {
    "horizon_days": 3,
    "points": [
-    {
-     "date": "2026-09-23",
-     "low": 30.0,
-     "mid": 30.0,
-     "high": 30.0
-    },
     {
      "date": "2026-09-24",
      "low": 30.0,
@@ -99,6 +83,12 @@
     },
     {
      "date": "2026-09-25",
+     "low": 30.0,
+     "mid": 30.0,
+     "high": 30.0
+    },
+    {
+     "date": "2026-09-26",
      "low": 30.0,
      "mid": 30.0,
      "high": 30.0
