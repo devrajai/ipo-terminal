@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T14:29:29.410741+05:30",
+  "updated_at": "2026-09-23T14:39:40.423488+05:30",
   "data": [
     {
       "company": "Pooja Logistics Limited",
@@ -55,14 +55,6 @@
       "open_date": "24/09/26",
       "close_date": "—",
       "issue_size": "₹53.52 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Roopa Screen Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "24/09/26",
-      "close_date": "—",
-      "issue_size": "₹19.2 Cr",
       "status": "upcoming"
     }
   ]

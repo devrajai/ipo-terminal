@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T08:59:57.654878+00:00",
+  "generated_at": "2026-09-23T09:10:14.757247+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T14:29:29.410741+05:30",
+  "data_updated_at": "2026-09-23T14:39:40.423488+05:30",
   "ipo_count": 17,
   "field_coverage_pct": 20.4,
   "sources": {
@@ -49,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T08:58:50.976045+00:00",
+      "checked_at": "2026-09-23T09:08:58.112955+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +87,12 @@
       "records": 17,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T08:58:53.300662+00:00"
+      "checked_at": "2026-09-23T09:09:00.265063+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T08:59:14.335960+00:00",
+      "checked_at": "2026-09-23T09:09:23.239050+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T08:59:14.397001+00:00"
+      "checked_at": "2026-09-23T09:09:23.300465+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T08:59:14.437950+00:00"
+      "checked_at": "2026-09-23T09:09:23.342591+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T08:59:14.564387+00:00",
+      "checked_at": "2026-09-23T09:09:23.467854+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -131,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 69,
+          "records": 68,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -140,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T08:59:14.564387+00:00"
+      "checked_at": "2026-09-23T09:09:23.467854+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T14:29:29.410741+05:30",
+      "checked_at": "2026-09-23T14:39:40.423488+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -523,6 +523,34 @@
       }
     },
     {
+      "id": "german-green-steel-power-ltd-mainboard",
+      "name": "German Green Steel & Power Ltd. Mainboard",
+      "fingerprint": "dce4bffb07bd268d",
+      "fields": {
+        "price": "₹132 – ₹139",
+        "size": "₹303.9 Cr",
+        "lot": "107",
+        "open": "25/09/26",
+        "close": "—",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "pind-hospitality-ltd-sme",
       "name": "Pind Hospitality Ltd. SME",
       "fingerprint": "11e9a98c0b00ee40",
@@ -586,34 +614,6 @@
         "price": "₹95 – ₹101",
         "size": "₹53.52 Cr",
         "lot": "1200",
-        "open": "24/09/26",
-        "close": "—",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "roopa-screen-ltd-sme",
-      "name": "Roopa Screen Ltd. SME",
-      "fingerprint": "d1e1d64f4e3e0dd5",
-      "fields": {
-        "price": "₹60 – ₹64",
-        "size": "₹19.2 Cr",
-        "lot": "2000",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -721,13 +721,6 @@
       "source": "Economic Times"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "roopa-screen-ltd-sme",
-      "name": "Roopa Screen Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "adroit-industries-india-limited",
@@ -779,6 +772,13 @@
     {
       "date": "2026-09-25",
       "type": "OPEN",
+      "ipo_id": "german-green-steel-power-ltd-mainboard",
+      "name": "German Green Steel & Power Ltd. Mainboard",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
       "ipo_id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
       "source": "NSE"
@@ -813,6 +813,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T09:10:14.757247+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "OPEN",
+        "ipo_id": "german-green-steel-power-ltd-mainboard",
+        "name": "German Green Steel & Power Ltd. Mainboard",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-23T08:59:57.654878+00:00",
       "type": "DATA_CHANGE",
@@ -4229,18 +4240,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "spectraa-technology-solutions-limited",
       "name": "SpectraA Technology Solutions Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-21T12:25:26.449292+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
       "fields": [
         "roe",
         "roce",

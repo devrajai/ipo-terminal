@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T08:59:57.654878+00:00",
+  "generated_at": "2026-09-23T09:10:14.757247+00:00",
   "events": [
     {
       "date": "2026-09-23",
@@ -80,13 +80,6 @@
       "source": "Economic Times"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "roopa-screen-ltd-sme",
-      "name": "Roopa Screen Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "adroit-industries-india-limited",
@@ -134,6 +127,13 @@
       "ipo_id": "bench-mark-infotech-services-limited",
       "name": "Bench Mark Infotech Services Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "german-green-steel-power-ltd-mainboard",
+      "name": "German Green Steel & Power Ltd. Mainboard",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-25",
