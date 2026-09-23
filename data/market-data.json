@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T09:46:39.493473+00:00",
+  "updated_at": "2026-09-23T09:55:42.417813+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -18,30 +18,30 @@
     {
       "name": "Nifty Next 50",
       "symbol": "NIFTY NEXT 50",
-      "price": 72365.9,
-      "change": 561.85,
+      "price": 72362.6,
+      "change": 558.55,
       "change_pct": 0.78
     },
     {
       "name": "India VIX",
       "symbol": "INDIA VIX",
-      "price": 10.33,
-      "change": -0.67,
-      "change_pct": -6.11
+      "price": 10.36,
+      "change": -0.64,
+      "change_pct": -5.77
     },
     {
       "name": "Nifty Midcap 100",
       "symbol": "NIFTY MIDCAP 100",
-      "price": 62341,
-      "change": 377.85,
+      "price": 62339.85,
+      "change": 376.7,
       "change_pct": 0.61
     },
     {
       "name": "Nifty Smallcap 100",
       "symbol": "NIFTY SMALLCAP 100",
-      "price": 19988.55,
-      "change": 173.1,
-      "change_pct": 0.87
+      "price": 19982.1,
+      "change": 166.65,
+      "change_pct": 0.84
     },
     {
       "name": "Nifty It",
@@ -53,51 +53,51 @@
     {
       "name": "Nifty Auto",
       "symbol": "NIFTY AUTO",
-      "price": 27156,
-      "change": 69.7,
-      "change_pct": 0.26
+      "price": 27154.95,
+      "change": 68.65,
+      "change_pct": 0.25
     },
     {
       "name": "Nifty Pharma",
       "symbol": "NIFTY PHARMA",
-      "price": 27105.35,
-      "change": 195.75,
+      "price": 27105.2,
+      "change": 195.6,
       "change_pct": 0.73
     },
     {
       "name": "Nifty Fmcg",
       "symbol": "NIFTY FMCG",
-      "price": 46236.3,
-      "change": 578.55,
+      "price": 46236.6,
+      "change": 578.85,
       "change_pct": 1.27
     },
     {
       "name": "Nifty Metal",
       "symbol": "NIFTY METAL",
-      "price": 13287.25,
-      "change": 296.9,
+      "price": 13287.5,
+      "change": 297.15,
       "change_pct": 2.29
     },
     {
       "name": "Nifty Energy",
       "symbol": "NIFTY ENERGY",
-      "price": 37718.8,
-      "change": -8.2,
-      "change_pct": -0.02
+      "price": 37712.8,
+      "change": -14.2,
+      "change_pct": -0.04
     },
     {
       "name": "Nifty Realty",
       "symbol": "NIFTY REALTY",
-      "price": 870.55,
-      "change": 9.05,
-      "change_pct": 1.05
+      "price": 870.6,
+      "change": 9.1,
+      "change_pct": 1.06
     },
     {
       "name": "Nifty Media",
       "symbol": "NIFTY MEDIA",
-      "price": 1570.35,
-      "change": -4.35,
-      "change_pct": -0.28
+      "price": 1563.95,
+      "change": -10.75,
+      "change_pct": -0.68
     }
   ],
   "world": [],
