@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T13:59:42.181978+00:00",
+  "generated_at": "2026-09-23T14:06:37.068741+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T19:29:12.371589+05:30",
+  "data_updated_at": "2026-09-23T19:36:06.593568+05:30",
   "ipo_count": 21,
   "field_coverage_pct": 21.1,
   "sources": {
@@ -32,10 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Chittorgarh: The read operation timed out",
         "Moneycontrol: HTTP Error 404: Not Found",
-        "IPODose: The read operation timed out",
-        "IPOGram: The read operation timed out",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -53,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T13:58:50.422600+00:00",
+      "checked_at": "2026-09-23T14:05:46.105514+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -91,12 +88,12 @@
       "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T13:58:52.737994+00:00"
+      "checked_at": "2026-09-23T14:05:48.036108+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T13:58:56.037877+00:00",
+      "checked_at": "2026-09-23T14:05:54.031522+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -106,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T13:58:56.111990+00:00"
+      "checked_at": "2026-09-23T14:05:54.105551+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T13:58:56.162435+00:00"
+      "checked_at": "2026-09-23T14:05:54.155135+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T13:58:56.315994+00:00",
+      "checked_at": "2026-09-23T14:05:54.305857+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -144,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T13:58:56.315994+00:00"
+      "checked_at": "2026-09-23T14:05:54.305857+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T19:29:12.371589+05:30",
+      "checked_at": "2026-09-23T19:36:06.593568+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
