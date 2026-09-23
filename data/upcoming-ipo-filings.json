@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T21:26:57.252124+05:30",
+  "generated_at": "2026-09-23T21:36:33.989073+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 14,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "AceVector Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Orient Cables (India) Limited",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "German Green Steel and Power Limited",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "A-One Steels India Limited",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Moneyview Limited",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Bench Mark Infotech Services Limited",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Himalayan Solar Limited",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Green Asia Impex Limited",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "SRIT India Ltd. Mainboard",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Shah Investors Home Ltd. Mainboard",
@@ -144,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "German Green Steel & Power Ltd. Mainboard",
@@ -157,7 +157,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "EverestIMS Technologies Ltd. SME",
@@ -170,7 +170,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     },
     {
       "ipo_name": "Pind Hospitality Ltd. SME",
@@ -183,7 +183,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T21:26:57.252124+05:30"
+      "checked_at": "2026-09-23T21:36:33.989073+05:30"
     }
   ]
 }
