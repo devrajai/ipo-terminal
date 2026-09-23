@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T02:38:11.527807+00:00",
+ "updated_at": "2026-09-23T04:17:55.522496+00:00",
  "ipos": {
   "Elevate Campuses Limited": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
@@ -642,6 +642,10 @@
    },
    "peers": [
     {
+     "name": "Vama Wovenfab Ltd.",
+     "pe": "11.04"
+    },
+    {
      "name": "Shakti Polytarp Ltd.",
      "pe": "7.38"
     },
@@ -660,10 +664,6 @@
     {
      "name": "RFBL Flexi Pack Ltd.",
      "pe": "9.75"
-    },
-    {
-     "name": "Ecoline Exim Ltd.",
-     "pe": "12.12"
     }
    ],
    "fin": {
