@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T06:22:38.990291+00:00",
+ "updated_at": "2026-09-23T06:49:21.543969+00:00",
  "ipos": {
   "Elevate Campuses Limited": {
    "url": "https://www.chittorgarh.com/ipo/elevate-campuses-ipo/2647/",
@@ -170,6 +170,32 @@
     "total_cr": 48.26,
     "investors": 20
    },
+   "peers": [
+    {
+     "name": "LCC Projects Ltd.",
+     "pe": "13.87"
+    },
+    {
+     "name": "Annu Projects Ltd.",
+     "pe": "14.33"
+    },
+    {
+     "name": "Technocraft Ventures Ltd.",
+     "pe": "14.73"
+    },
+    {
+     "name": "Om Power Transmission Ltd.",
+     "pe": "21.13"
+    },
+    {
+     "name": "Solarworld Energy Solutions Ltd.",
+     "pe": "33.77"
+    },
+    {
+     "name": "Infrax Renewable Ltd.",
+     "pe": "11.19"
+    }
+   ],
    "fin": {
     "periods": [
      "31 Mar 2026",
@@ -233,12 +259,28 @@
    },
    "peers": [
     {
-     "name": "Marushika Technology Ltd.",
-     "pe": "11.6"
+     "name": "ESDS Software Solution Ltd.",
+     "pe": "35.66"
     },
     {
-     "name": "EPW India Ltd.",
-     "pe": "18.36"
+     "name": "Xtranet Technologies Ltd.",
+     "pe": "12.21"
+    },
+    {
+     "name": "Amagi Media Labs Ltd.",
+     "pe": "-101.78"
+    },
+    {
+     "name": "Excelsoft Technologies Ltd.",
+     "pe": "34.62"
+    },
+    {
+     "name": "Prodocs Solutions Ltd.",
+     "pe": "14.72"
+    },
+    {
+     "name": "Exato Technologies Ltd.",
+     "pe": "11.19"
     }
    ],
    "fin": {
@@ -366,8 +408,28 @@
    },
    "peers": [
     {
-     "name": "NSB BPO Solutions Ltd.",
-     "pe": "18.6"
+     "name": "Aegeus Technologies Ltd.",
+     "pe": "15.98"
+    },
+    {
+     "name": "Propshop Events & Exhibitions Ltd.",
+     "pe": "12.32"
+    },
+    {
+     "name": "PAN HR Solutions Ltd.",
+     "pe": "8.41"
+    },
+    {
+     "name": "Armour Security India Ltd.",
+     "pe": "17.53"
+    },
+    {
+     "name": "Dhara Rail Projects Ltd.",
+     "pe": "21.43"
+    },
+    {
+     "name": "Clear Secured Services Ltd.",
+     "pe": "23.36"
     }
    ],
    "fin": {
@@ -517,12 +579,28 @@
    },
    "peers": [
     {
-     "name": "Marushika Technology Ltd.",
-     "pe": "11.6"
+     "name": "ESDS Software Solution Ltd.",
+     "pe": "35.66"
     },
     {
-     "name": "EPW India Ltd.",
-     "pe": "18.36"
+     "name": "Xtranet Technologies Ltd.",
+     "pe": "12.21"
+    },
+    {
+     "name": "Amagi Media Labs Ltd.",
+     "pe": "-101.78"
+    },
+    {
+     "name": "Excelsoft Technologies Ltd.",
+     "pe": "34.62"
+    },
+    {
+     "name": "Prodocs Solutions Ltd.",
+     "pe": "14.72"
+    },
+    {
+     "name": "Exato Technologies Ltd.",
+     "pe": "11.19"
     }
    ],
    "fin": {
@@ -722,59 +800,7 @@
    "promoter_pct": 100.0
   },
   "Liqvd Digital India": {
-   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/",
-   "subs": {
-    "qib": 28.47,
-    "nii": 19.28,
-    "rii": 52.25,
-    "total": 100.0
-   },
-   "anchor": {
-    "investors": 20
-   },
-   "peers": [
-    {
-     "name": "B.A.G.Convergence Ltd.",
-     "pe": "14.45"
-    }
-   ],
-   "fin": {
-    "periods": [
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     3333.45,
-     1382.56
-    ],
-    "income": [
-     2502.58,
-     1828.46
-    ],
-    "pat": [
-     224.82,
-     190.3
-    ],
-    "ebitda": [
-     393.13,
-     381.11
-    ],
-    "networth": [
-     1939.37,
-     209.68
-    ]
-   },
-   "rev_growth": 36.9,
-   "pat_growth": 18.1,
-   "kpi": {
-    "roe": "25.36%",
-    "roce": "44.05%",
-    "de": "0.29",
-    "pat_margin": "13.32%",
-    "ebitda_margin": "18.69%",
-    "nav": "21.45"
-   },
-   "promoter_pct": 79.61
+   "url": "https://www.chittorgarh.com/ipo/liqvd-digital-ipo/2750/"
   },
   "Sai Urja Indo Ventures": {},
   "Anand Seamless": {
@@ -1343,6 +1369,32 @@
     "total_cr": 48.26,
     "investors": 20
    },
+   "peers": [
+    {
+     "name": "LCC Projects Ltd.",
+     "pe": "13.87"
+    },
+    {
+     "name": "Annu Projects Ltd.",
+     "pe": "14.33"
+    },
+    {
+     "name": "Technocraft Ventures Ltd.",
+     "pe": "14.73"
+    },
+    {
+     "name": "Om Power Transmission Ltd.",
+     "pe": "21.13"
+    },
+    {
+     "name": "Solarworld Energy Solutions Ltd.",
+     "pe": "33.77"
+    },
+    {
+     "name": "Infrax Renewable Ltd.",
+     "pe": "11.19"
+    }
+   ],
    "fin": {
     "periods": [
      "31 Mar 2026",
