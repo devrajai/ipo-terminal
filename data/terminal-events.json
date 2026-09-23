@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T09:58:22.986177+00:00",
+  "generated_at": "2026-09-23T10:07:13.326969+00:00",
   "events": [
     {
       "date": "2026-09-23",
@@ -73,13 +73,6 @@
       "source": "NSE"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "adroit-industries-india-limited",
@@ -127,6 +120,13 @@
       "ipo_id": "bench-mark-infotech-services-limited",
       "name": "Bench Mark Infotech Services Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
+      "ipo_id": "dudani-retail-ltd-sme",
+      "name": "Dudani Retail Ltd. SME",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-25",

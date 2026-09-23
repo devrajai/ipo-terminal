@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-23T15:27:53.929733+05:30",
+  "updated_at": "2026-09-23T15:36:44.969298+05:30",
   "data": [
     {
       "company": "Pooja Logistics Limited",
@@ -42,19 +42,19 @@
       "status": "upcoming"
     },
     {
+      "company": "Dudani Retail Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "25/09/26",
+      "close_date": "—",
+      "issue_size": "₹10.54 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Green Asia Impex Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "24/09/26",
       "close_date": "—",
       "issue_size": "₹60.1 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Peshwa Wheat Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "24/09/26",
-      "close_date": "—",
-      "issue_size": "₹53.52 Cr",
       "status": "upcoming"
     }
   ]

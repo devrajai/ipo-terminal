@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T09:58:22.986177+00:00",
+  "generated_at": "2026-09-23T10:07:13.326969+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T15:27:53.929733+05:30",
+  "data_updated_at": "2026-09-23T15:36:44.969298+05:30",
   "ipo_count": 17,
   "field_coverage_pct": 20.4,
   "sources": {
@@ -31,7 +31,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "NEWS": {
       "ok": true,
@@ -47,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T09:57:20.227569+00:00",
+      "checked_at": "2026-09-23T10:06:09.597666+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -85,12 +87,12 @@
       "records": 17,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T09:57:21.514399+00:00"
+      "checked_at": "2026-09-23T10:06:11.046203+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T09:57:36.768135+00:00",
+      "checked_at": "2026-09-23T10:06:32.270223+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -100,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T09:57:36.824462+00:00"
+      "checked_at": "2026-09-23T10:06:32.338751+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T09:57:36.862303+00:00"
+      "checked_at": "2026-09-23T10:06:32.383855+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T09:57:36.979200+00:00",
+      "checked_at": "2026-09-23T10:06:32.522536+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -129,7 +131,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 68,
+          "records": 69,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -138,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T09:57:36.979200+00:00"
+      "checked_at": "2026-09-23T10:06:32.522536+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T15:27:53.929733+05:30",
+      "checked_at": "2026-09-23T15:36:44.969298+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -577,14 +579,14 @@
       }
     },
     {
-      "id": "green-asia-impex-ltd-sme",
-      "name": "Green Asia Impex Ltd. SME",
-      "fingerprint": "913ad1b3135ae860",
+      "id": "dudani-retail-ltd-sme",
+      "name": "Dudani Retail Ltd. SME",
+      "fingerprint": "6731af39e1a5bf9a",
       "fields": {
-        "price": "₹85 – ₹90",
-        "size": "₹60.1 Cr",
-        "lot": "1600",
-        "open": "24/09/26",
+        "price": "₹29",
+        "size": "₹10.54 Cr",
+        "lot": "4000",
+        "open": "25/09/26",
         "close": "—",
         "allotment": null,
         "listing": "—",
@@ -605,13 +607,13 @@
       }
     },
     {
-      "id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "fingerprint": "4ad1d800f85cb0d8",
+      "id": "green-asia-impex-ltd-sme",
+      "name": "Green Asia Impex Ltd. SME",
+      "fingerprint": "913ad1b3135ae860",
       "fields": {
-        "price": "₹95 – ₹101",
-        "size": "₹53.52 Cr",
-        "lot": "1200",
+        "price": "₹85 – ₹90",
+        "size": "₹60.1 Cr",
+        "lot": "1600",
         "open": "24/09/26",
         "close": "—",
         "allotment": null,
@@ -712,13 +714,6 @@
       "source": "NSE"
     },
     {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "peshwa-wheat-ltd-sme",
-      "name": "Peshwa Wheat Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-25",
       "type": "CLOSE",
       "ipo_id": "adroit-industries-india-limited",
@@ -770,6 +765,13 @@
     {
       "date": "2026-09-25",
       "type": "OPEN",
+      "ipo_id": "dudani-retail-ltd-sme",
+      "name": "Dudani Retail Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-25",
+      "type": "OPEN",
       "ipo_id": "german-green-steel-power-ltd-mainboard",
       "name": "German Green Steel & Power Ltd. Mainboard",
       "source": "Economic Times"
@@ -811,6 +813,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T10:07:13.326969+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-25",
+        "type": "OPEN",
+        "ipo_id": "dudani-retail-ltd-sme",
+        "name": "Dudani Retail Ltd. SME",
+        "source": "Economic Times"
+      }
+    },
     {
       "at": "2026-09-23T09:58:22.986177+00:00",
       "type": "DATA_CHANGE",
@@ -4233,16 +4246,6 @@
     },
     {
       "at": "2026-09-21T20:07:38.272033+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "size",
-        "close"
-      ]
-    },
-    {
-      "at": "2026-09-21T19:57:26.070767+00:00",
       "type": "DATA_CHANGE",
       "ipo_id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
