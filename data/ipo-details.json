@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T12:22:12.277717+00:00",
+ "updated_at": "2026-09-23T12:48:53.273926+00:00",
  "ipos": {
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
@@ -474,6 +474,70 @@
     "nav": "35.74"
    },
    "promoter_pct": 93.04
+  },
+  "AceVector Limited": {
+   "url": "https://www.chittorgarh.com/ipo/acevector-ipo/2543/",
+   "subs": {
+    "rii": 10.0,
+    "nii": 15.0,
+    "qib": 75.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Rentomojo Ltd.",
+     "pe": "39.26"
+    },
+    {
+     "name": "Meesho Ltd.",
+     "pe": "-11.63"
+    },
+    {
+     "name": "Acetech E-Commerce Ltd.",
+     "pe": "19.56"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     575.28,
+     558.09,
+     410.5
+    ],
+    "income": [
+     537.67,
+     406.77,
+     384.74
+    ],
+    "pat": [
+     -45.51,
+     -126.31,
+     -51.3
+    ],
+    "ebitda": [
+     -22.17,
+     -107.79,
+     -35.77
+    ],
+    "networth": [
+     102.08,
+     126.33,
+     -142.09
+    ],
+    "borrowing": [
+     null,
+     0.45,
+     null
+    ]
+   },
+   "rev_growth": 32.2,
+   "promoter_pct": 65.9
   },
   "A-One Steels India": {
    "url": "https://www.chittorgarh.com/ipo/a-one-steels-ipo/2000/"
