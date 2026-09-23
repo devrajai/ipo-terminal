@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T10:17:17.619182+00:00",
+ "updated_at": "2026-09-23T10:44:19.573784+00:00",
  "ipos": {
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
@@ -957,7 +957,91 @@
    "promoter_pct": 100.0
   },
   "Himalaya Nutravedics India": {
-   "url": "https://www.chittorgarh.com/ipo/himalaya-nutravedics-ipo/2970/"
+   "url": "https://www.chittorgarh.com/ipo/himalaya-nutravedics-ipo/2970/",
+   "subs": {
+    "qib": 47.38,
+    "nii": 14.26,
+    "rii": 33.32,
+    "total": 100.0
+   },
+   "anchor": {
+    "total_cr": 7.53,
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Bio Medica Laboratories Ltd.",
+     "pe": "13.03"
+    },
+    {
+     "name": "Goldline Pharmaceutical Ltd.",
+     "pe": "10.47"
+    },
+    {
+     "name": "Speciality Medicines Ltd.",
+     "pe": "9.27"
+    },
+    {
+     "name": "Accretion Nutraveda Ltd.",
+     "pe": "26.27"
+    },
+    {
+     "name": "KRM Ayurveda Ltd.",
+     "pe": "17.32"
+    },
+    {
+     "name": "Curis Lifesciences Ltd.",
+     "pe": "12.44"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     24.42,
+     10.82,
+     6.09
+    ],
+    "income": [
+     43.12,
+     21.0,
+     14.43
+    ],
+    "pat": [
+     7.39,
+     2.23,
+     0.43
+    ],
+    "ebitda": [
+     8.1,
+     2.99,
+     0.94
+    ],
+    "networth": [
+     16.38,
+     6.75,
+     1.34
+    ],
+    "borrowing": [
+     5.13,
+     1.76,
+     3.24
+    ]
+   },
+   "rev_growth": 105.3,
+   "pat_growth": 231.4,
+   "kpi": {
+    "roe": "63.87%",
+    "roce": "36.41%",
+    "de": "0.31",
+    "pat_margin": "17.16%",
+    "ebitda_margin": "18.82%",
+    "nav": "26.70"
+   },
+   "promoter_pct": 95.14
   },
   "Robokidz Eduventures": {
    "url": "https://www.chittorgarh.com/ipo/robokidz-eduventures-ipo/3205/",
