@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T10:57:43.492375+00:00",
+  "generated_at": "2026-09-23T11:06:11.013961+00:00",
   "events": [
     {
       "date": "2026-09-23",
@@ -56,6 +56,13 @@
       "type": "OPEN",
       "ipo_id": "a-one-steels-india-limited",
       "name": "A-One Steels India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
       "source": "NSE"
     },
     {

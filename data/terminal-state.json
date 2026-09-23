@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T10:57:43.492375+00:00",
+  "generated_at": "2026-09-23T11:06:11.013961+00:00",
   "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T16:27:16.217421+05:30",
-  "ipo_count": 17,
+  "data_updated_at": "2026-09-23T16:35:42.460073+05:30",
+  "ipo_count": 18,
   "field_coverage_pct": 20.4,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 11,
+      "records": 12,
       "errors": []
     },
     "BSE": {
@@ -31,7 +31,9 @@
         "Chittorgarh",
         "Moneycontrol"
       ],
-      "errors": []
+      "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found"
+      ]
     },
     "NEWS": {
       "ok": true,
@@ -47,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T10:56:42.068185+00:00",
+      "checked_at": "2026-09-23T11:05:06.092559+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -59,7 +61,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 3,
+          "matched": 4,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -82,15 +84,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 17,
+      "records": 18,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T10:56:43.747466+00:00"
+      "checked_at": "2026-09-23T11:05:08.751957+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T10:57:00.781947+00:00",
+      "checked_at": "2026-09-23T11:05:29.047492+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -100,21 +102,21 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T10:57:00.855136+00:00"
+      "checked_at": "2026-09-23T11:05:29.095690+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T10:57:00.903551+00:00"
+      "checked_at": "2026-09-23T11:05:29.129821+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T10:57:01.056937+00:00",
+      "checked_at": "2026-09-23T11:05:29.228777+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
-          "records": 92,
+          "records": 100,
           "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
@@ -138,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T10:57:01.056937+00:00"
+      "checked_at": "2026-09-23T11:05:29.228777+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30",
+      "checked_at": "2026-09-23T16:35:42.460073+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -150,7 +152,7 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 10,
+      "upcoming_filing_map": 11,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
@@ -409,6 +411,34 @@
       }
     },
     {
+      "id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "fingerprint": "e3fc94cbbb8bb4d0",
+      "fields": {
+        "price": "₹104 – ₹110",
+        "size": "₹42.44 Cr",
+        "lot": "1200",
+        "open": "25/09/26",
+        "close": "Sep 29, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
       "fingerprint": "a7687437700e5101",
@@ -437,15 +467,15 @@
       }
     },
     {
-      "id": "bench-mark-infotech-services-limited",
-      "name": "Bench Mark Infotech Services Limited",
-      "fingerprint": "e3fc94cbbb8bb4d0",
+      "id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "fingerprint": "c8d5ffb7ae385c73",
       "fields": {
-        "price": "₹104 – ₹110",
-        "size": "₹42.44 Cr",
-        "lot": "1200",
-        "open": "25/09/26",
-        "close": "Sep 29, 2026",
+        "price": "₹85-90",
+        "size": "60.10",
+        "lot": "—",
+        "open": "24/09/26",
+        "close": "Sep 28, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -700,6 +730,13 @@
     {
       "date": "2026-09-24",
       "type": "OPEN",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-24",
+      "type": "OPEN",
       "ipo_id": "moneyview-limited",
       "name": "Moneyview Limited",
       "source": "NSE"
@@ -811,6 +848,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T11:06:11.013961+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-24",
+        "type": "OPEN",
+        "ipo_id": "green-asia-impex-limited",
+        "name": "Green Asia Impex Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-23T10:57:43.492375+00:00",
       "type": "DATA_CHANGE",
@@ -4235,18 +4283,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "axiom-gas-engineering-limited",
       "name": "Axiom Gas Engineering Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T02:55:09.867391+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
       "fields": [
         "roe",
         "roce",

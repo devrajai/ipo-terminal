@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-23T16:27:16.217421+05:30",
+  "generated_at": "2026-09-23T16:35:42.460073+05:30",
   "source": "IPO Terminal self-heal official-source checker",
-  "count": 10,
+  "count": 11,
   "ipos": [
     {
       "ipo_name": "Moneyview Limited",
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "A-One Steels India Limited",
@@ -27,20 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
-    },
-    {
-      "ipo_name": "Himalayan Solar Limited",
-      "id": "himalayan-solar-limited",
-      "type": "SME",
-      "exchange": "NSE",
-      "status": "upcoming",
-      "open": "25/09/26",
-      "close": "Sep 29, 2026",
-      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "verified": true,
-      "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "Bench Mark Infotech Services Limited",
@@ -53,7 +40,33 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
+    },
+    {
+      "ipo_name": "Himalayan Solar Limited",
+      "id": "himalayan-solar-limited",
+      "type": "SME",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "25/09/26",
+      "close": "Sep 29, 2026",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
+    },
+    {
+      "ipo_name": "Green Asia Impex Limited",
+      "id": "green-asia-impex-limited",
+      "type": "SME",
+      "exchange": "NSE",
+      "status": "upcoming",
+      "open": "24/09/26",
+      "close": "Sep 28, 2026",
+      "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "verified": true,
+      "http_status": 200,
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "Orient Cables (India) Ltd. Mainboard",
@@ -66,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "Runwal Enterprises Ltd. Mainboard",
@@ -79,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "AceVector Ltd. Mainboard",
@@ -92,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "German Green Steel & Power Ltd. Mainboard",
@@ -105,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "Pind Hospitality Ltd. SME",
@@ -118,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     },
     {
       "ipo_name": "Sai Urja Indo Ventures Ltd. SME",
@@ -131,7 +144,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-23T16:27:16.217421+05:30"
+      "checked_at": "2026-09-23T16:35:42.460073+05:30"
     }
   ]
 }
