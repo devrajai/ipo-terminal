@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T22:07:24.871083+00:00",
+  "generated_at": "2026-09-23T22:21:45.335015+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T03:36:54.034474+05:30",
+  "data_updated_at": "2026-09-24T03:51:19.682687+05:30",
   "ipo_count": 21,
-  "field_coverage_pct": 20.6,
+  "field_coverage_pct": 20.0,
   "sources": {
     "NSE": {
       "ok": true,
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T22:06:34.656794+00:00",
+      "checked_at": "2026-09-23T22:19:47.202773+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -62,7 +62,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 6,
+          "matched": 3,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -88,12 +88,12 @@
       "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T22:06:36.799234+00:00"
+      "checked_at": "2026-09-23T22:19:49.944699+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T22:06:39.540714+00:00",
+      "checked_at": "2026-09-23T22:21:07.789547+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T22:06:39.608549+00:00"
+      "checked_at": "2026-09-23T22:21:07.856886+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T22:06:39.654191+00:00"
+      "checked_at": "2026-09-23T22:21:07.902516+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T22:06:39.795465+00:00",
+      "checked_at": "2026-09-23T22:21:08.042257+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -132,7 +132,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 66,
+          "records": 67,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T22:06:39.795465+00:00"
+      "checked_at": "2026-09-23T22:21:08.042257+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T03:36:54.034474+05:30",
+      "checked_at": "2026-09-24T03:51:19.682687+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -162,13 +162,13 @@
     {
       "id": "moneyview-limited",
       "name": "Moneyview Limited",
-      "fingerprint": "ea28b88a79d5ce8a",
+      "fingerprint": "3b94a2bfa8f65452",
       "fields": {
         "price": "₹32-34",
-        "size": "1091.68",
+        "size": "—",
         "lot": "441",
         "open": "24/09/26",
-        "close": "Sep 28, 2026",
+        "close": "28/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -190,13 +190,13 @@
     {
       "id": "a-one-steels-india-limited",
       "name": "A-One Steels India Limited",
-      "fingerprint": "d440d3bab8951c26",
+      "fingerprint": "52744d3054751bb3",
       "fields": {
         "price": "₹385-405",
-        "size": "405.00",
+        "size": "—",
         "lot": "—",
         "open": "24/09/26",
-        "close": "Sep 28, 2026",
+        "close": "28/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -358,13 +358,13 @@
     {
       "id": "green-asia-impex-limited",
       "name": "Green Asia Impex Limited",
-      "fingerprint": "978c4dcaf1a7f4a9",
+      "fingerprint": "b41b8f73ce4302cc",
       "fields": {
         "price": "—",
-        "size": "60.10",
+        "size": "—",
         "lot": "—",
         "open": "24/09/26",
-        "close": "Sep 28, 2026",
+        "close": "28/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -919,6 +919,27 @@
     },
     {
       "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
       "type": "OPEN",
       "ipo_id": "pind-hospitality-ltd-sme",
       "name": "Pind Hospitality Ltd. SME",
@@ -968,6 +989,69 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-28",
+        "type": "CLOSE",
+        "ipo_id": "a-one-steels-india-limited",
+        "name": "A-One Steels India Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-28",
+        "type": "CLOSE",
+        "ipo_id": "green-asia-impex-limited",
+        "name": "Green Asia Impex Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-23T22:21:45.335015+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-28",
+        "type": "CLOSE",
+        "ipo_id": "moneyview-limited",
+        "name": "Moneyview Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-23T18:39:10.240413+00:00",
       "type": "DATA_CHANGE",
@@ -4309,76 +4393,6 @@
     },
     {
       "at": "2026-09-22T07:48:12.712121+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:48:12.712121+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "axiom-gas-engineering-limited",
-      "name": "Axiom Gas Engineering Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
       "type": "DATA_CHANGE",
       "ipo_id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",

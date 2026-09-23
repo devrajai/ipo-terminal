@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T22:07:24.871083+00:00",
+  "generated_at": "2026-09-23T22:21:45.335015+00:00",
   "events": [
     {
       "date": "2026-09-23",
@@ -161,6 +161,27 @@
       "type": "OPEN",
       "ipo_id": "runwal-enterprises-limited",
       "name": "Runwal Enterprises Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "CLOSE",
+      "ipo_id": "moneyview-limited",
+      "name": "Moneyview Limited",
       "source": "NSE"
     },
     {
