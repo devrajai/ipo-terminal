@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-23T07:18:04.796027+00:00",
+ "updated_at": "2026-09-23T07:44:38.801658+00:00",
  "ipos": {
   "ArMee Infotech Limited": {
    "url": "https://www.chittorgarh.com/ipo/armee-infotech-ipo/2140/",
@@ -870,7 +870,76 @@
    },
    "promoter_pct": 79.61
   },
-  "Sai Urja Indo Ventures": {},
+  "Sai Urja Indo Ventures": {
+   "url": "https://www.chittorgarh.com/ipo/sai-urja-indo-ipo/2655/",
+   "subs": {
+    "qib": 44.35,
+    "nii": 13.7,
+    "rii": 32.17,
+    "total": 100.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "Mopshop Distribution Ltd.",
+     "pe": "22.22"
+    },
+    {
+     "name": "Safecure Services Ltd.",
+     "pe": "11.66"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     24.25,
+     21.11,
+     13.95
+    ],
+    "income": [
+     85.64,
+     65.82,
+     45.88
+    ],
+    "pat": [
+     4.19,
+     3.13,
+     1.39
+    ],
+    "ebitda": [
+     6.51,
+     5.14,
+     2.93
+    ],
+    "networth": [
+     12.2,
+     7.76,
+     4.72
+    ],
+    "borrowing": [
+     7.18,
+     5.35,
+     2.15
+    ]
+   },
+   "rev_growth": 30.1,
+   "pat_growth": 33.9,
+   "kpi": {
+    "roe": "42.44%",
+    "roce": "50.66%",
+    "de": "0.59",
+    "pat_margin": "4.98%",
+    "ebitda_margin": "7.65%",
+    "nav": "20.99"
+   },
+   "promoter_pct": 92.87
+  },
   "Anand Seamless": {
    "url": "https://www.chittorgarh.com/ipo/anand-seamless-ipo/3080/",
    "subs": {
@@ -1057,8 +1126,12 @@
    },
    "peers": [
     {
-     "name": "Fusion Klassroom Edutech Ltd.",
-     "pe": "15.33"
+     "name": "PhysicsWallah Ltd.",
+     "pe": "-116.86"
+    },
+    {
+     "name": "Jaro Institute of Technology Management & Research Ltd.",
+     "pe": "34.88"
     }
    ],
    "fin": {
@@ -1124,12 +1197,8 @@
    },
    "peers": [
     {
-     "name": "Mopshop Distribution Ltd.",
-     "pe": "22.22"
-    },
-    {
-     "name": "Safecure Services Ltd.",
-     "pe": "11.66"
+     "name": "Encompass Design India Ltd.",
+     "pe": "10.33"
     }
    ],
    "fin": {
