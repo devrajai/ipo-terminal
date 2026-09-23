@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-23T18:25:22.131824+00:00",
-  "today_ist": "2026-09-23",
-  "data_updated_at": "2026-09-23T23:54:55.138351+05:30",
+  "generated_at": "2026-09-23T18:39:10.240413+00:00",
+  "today_ist": "2026-09-24",
+  "data_updated_at": "2026-09-24T00:08:40.586872+05:30",
   "ipo_count": 21,
-  "field_coverage_pct": 21.1,
+  "field_coverage_pct": 20.6,
   "sources": {
     "NSE": {
       "ok": true,
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-23T18:23:36.422571+00:00",
+      "checked_at": "2026-09-23T18:38:04.509614+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-23T18:23:39.247663+00:00"
+      "checked_at": "2026-09-23T18:38:06.658678+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T18:24:41.157262+00:00",
+      "checked_at": "2026-09-23T18:38:27.261925+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-23T18:24:41.214916+00:00"
+      "checked_at": "2026-09-23T18:38:27.341580+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-23T18:24:41.257331+00:00"
+      "checked_at": "2026-09-23T18:38:27.395432+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-23T18:24:41.375430+00:00",
+      "checked_at": "2026-09-23T18:38:27.559196+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-23T18:24:41.375430+00:00"
+      "checked_at": "2026-09-23T18:38:27.559196+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-23T23:54:55.138351+05:30",
+      "checked_at": "2026-09-24T00:08:40.586872+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -153,12 +153,96 @@
         "verified": 13,
         "repaired": 8
       },
-      "upcoming_filing_map": 14,
+      "upcoming_filing_map": 11,
       "schedule": "GitHub Actions every 15 minutes",
       "rule": "Open and Upcoming are mutually exclusive; opening date begins at 00:00 IST"
     }
   },
   "ipos": [
+    {
+      "id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "fingerprint": "ea28b88a79d5ce8a",
+      "fields": {
+        "price": "₹32-34",
+        "size": "1091.68",
+        "lot": "441",
+        "open": "24/09/26",
+        "close": "Sep 28, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "15.98%",
+        "roce": "—",
+        "growth": "43%",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "fingerprint": "d440d3bab8951c26",
+      "fields": {
+        "price": "₹385-405",
+        "size": "405.00",
+        "lot": "—",
+        "open": "24/09/26",
+        "close": "Sep 28, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fingerprint": "14f336eff48665df",
+      "fields": {
+        "price": "₹175-185",
+        "size": "₹117 Cr",
+        "lot": "—",
+        "open": "23/09/26",
+        "close": "25/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
     {
       "id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
@@ -244,15 +328,15 @@
       }
     },
     {
-      "id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fingerprint": "14f336eff48665df",
+      "id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fingerprint": "72c49b44f1dcd83c",
       "fields": {
-        "price": "₹175-185",
-        "size": "₹117 Cr",
+        "price": "₹140-148",
+        "size": "₹0 Cr",
         "lot": "—",
-        "open": "23/09/26",
-        "close": "25/09/26",
+        "open": "22/09/26",
+        "close": "24/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -272,15 +356,15 @@
       }
     },
     {
-      "id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fingerprint": "72c49b44f1dcd83c",
+      "id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "fingerprint": "978c4dcaf1a7f4a9",
       "fields": {
-        "price": "₹140-148",
-        "size": "₹0 Cr",
+        "price": "—",
+        "size": "60.10",
         "lot": "—",
-        "open": "22/09/26",
-        "close": "24/09/26",
+        "open": "24/09/26",
+        "close": "Sep 28, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -468,15 +552,15 @@
       }
     },
     {
-      "id": "a-one-steels-india-limited",
-      "name": "A-One Steels India Limited",
-      "fingerprint": "2ac7388ac57b5f0e",
+      "id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
+      "fingerprint": "a7687437700e5101",
       "fields": {
-        "price": "₹385 – ₹405",
-        "size": "₹405 Cr",
-        "lot": "37",
-        "open": "24/09/26",
-        "close": "Sep 28, 2026",
+        "price": "₹98 – ₹103",
+        "size": "₹68.03 Cr",
+        "lot": "1200",
+        "open": "25/09/26",
+        "close": "Sep 29, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -490,34 +574,6 @@
         "roe": "—",
         "roce": "—",
         "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "moneyview-limited",
-      "name": "Moneyview Limited",
-      "fingerprint": "a6a0c3f6d0cc613c",
-      "fields": {
-        "price": "₹32 – ₹34",
-        "size": "₹1,091 Cr",
-        "lot": "441",
-        "open": "24/09/26",
-        "close": "Sep 28, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "15.98%",
-        "roce": "—",
-        "growth": "43%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -526,69 +582,13 @@
     {
       "id": "bench-mark-infotech-services-limited",
       "name": "Bench Mark Infotech Services Limited",
-      "fingerprint": "48abd54986c13100",
+      "fingerprint": "e3fc94cbbb8bb4d0",
       "fields": {
-        "price": "₹104-110",
-        "size": "42.44",
+        "price": "₹104 – ₹110",
+        "size": "₹42.44 Cr",
         "lot": "1200",
         "open": "25/09/26",
         "close": "Sep 29, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "himalayan-solar-limited",
-      "name": "Himalayan Solar Limited",
-      "fingerprint": "94f298b622c69ee9",
-      "fields": {
-        "price": "₹98-103",
-        "size": "68.03",
-        "lot": "1200",
-        "open": "25/09/26",
-        "close": "Sep 29, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "green-asia-impex-limited",
-      "name": "Green Asia Impex Limited",
-      "fingerprint": "c8d5ffb7ae385c73",
-      "fields": {
-        "price": "₹85-90",
-        "size": "60.10",
-        "lot": "—",
-        "open": "24/09/26",
-        "close": "Sep 28, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -968,6 +968,56 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-23T18:39:10.240413+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-23T18:39:10.240413+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "fields": [
+        "price",
+        "size",
+        "lot"
+      ]
+    },
+    {
+      "at": "2026-09-23T18:39:10.240413+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "green-asia-impex-limited",
+      "name": "Green Asia Impex Limited",
+      "fields": [
+        "price"
+      ]
+    },
+    {
+      "at": "2026-09-23T18:39:10.240413+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-23T18:39:10.240413+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "fields": [
+        "price",
+        "size"
+      ]
+    },
     {
       "at": "2026-09-23T13:54:10.828716+00:00",
       "type": "DATA_CHANGE",
@@ -4332,64 +4382,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:36:46.885497+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-25",
-        "type": "OPEN",
-        "ipo_id": "bench-mark-infotech-services-limited",
-        "name": "Bench Mark Infotech Services Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-22T07:25:59.352971+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:25:59.352971+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "axiom-gas-engineering-limited",
-      "name": "Axiom Gas Engineering Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T07:25:59.352971+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
       "fields": [
         "roe",
         "roce",

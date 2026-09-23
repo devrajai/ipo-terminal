@@ -1,6 +1,14 @@
 {
-  "updated_at": "2026-09-23T23:54:55.138351+05:30",
+  "updated_at": "2026-09-24T00:08:40.586872+05:30",
   "data": [
+    {
+      "company": "Green Asia Impex Limited",
+      "exchange": "BSE",
+      "open_date": "24/09/26",
+      "close_date": "Sep 28, 2026",
+      "issue_size": "60.10",
+      "status": "open"
+    },
     {
       "company": "Pooja Logistics Limited",
       "exchange": "BSE",
@@ -18,27 +26,19 @@
       "status": "open"
     },
     {
-      "company": "Bench Mark Infotech Services Limited",
-      "exchange": "NSE",
-      "open_date": "25/09/26",
-      "close_date": "Sep 29, 2026",
-      "issue_size": "42.44",
-      "status": "upcoming"
-    },
-    {
       "company": "Himalayan Solar Limited",
       "exchange": "NSE",
       "open_date": "25/09/26",
       "close_date": "Sep 29, 2026",
-      "issue_size": "68.03",
+      "issue_size": "₹68.03 Cr",
       "status": "upcoming"
     },
     {
-      "company": "Green Asia Impex Limited",
+      "company": "Bench Mark Infotech Services Limited",
       "exchange": "NSE",
-      "open_date": "24/09/26",
-      "close_date": "Sep 28, 2026",
-      "issue_size": "60.10",
+      "open_date": "25/09/26",
+      "close_date": "Sep 29, 2026",
+      "issue_size": "₹42.44 Cr",
       "status": "upcoming"
     },
     {
