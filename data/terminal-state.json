@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T10:28:17.187708+00:00",
+  "generated_at": "2026-09-24T11:02:50.683491+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T15:57:46.803668+05:30",
+  "data_updated_at": "2026-09-24T16:32:19.228863+05:30",
   "ipo_count": 23,
-  "field_coverage_pct": 26.5,
+  "field_coverage_pct": 24.2,
   "sources": {
     "NSE": {
       "ok": true,
@@ -41,7 +41,13 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": []
+      "errors": [
+        "\"Moneyview Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"A-One Steels India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Swastika Infra Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Adroit Industries (India) Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"ArMee Infotech Limited\" IPO India: HTTP Error 503: Service Unavailable"
+      ]
     },
     "LISTED": {
       "ok": true,
@@ -50,7 +56,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T10:25:18.348952+00:00",
+      "checked_at": "2026-09-24T11:00:13.229754+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +94,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T10:25:20.767104+00:00"
+      "checked_at": "2026-09-24T11:00:31.957776+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T10:27:29.702195+00:00",
+      "checked_at": "2026-09-24T11:01:33.114023+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,37 +109,41 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T10:27:29.769103+00:00"
+      "checked_at": "2026-09-24T11:01:33.184355+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T10:27:29.813351+00:00"
+      "checked_at": "2026-09-24T11:01:33.232396+00:00"
     },
     "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-24T10:27:29.950877+00:00",
+      "ok": false,
+      "records": 0,
+      "checked_at": "2026-09-24T11:01:33.376754+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": true,
-          "records": 92,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 65,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         }
       }
     },
@@ -141,11 +151,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T10:27:29.950877+00:00"
+      "checked_at": "2026-09-24T11:01:33.376754+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T15:57:46.803668+05:30",
+      "checked_at": "2026-09-24T16:32:19.228863+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -246,7 +256,7 @@
     {
       "id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fingerprint": "cdcacd72980f055f",
+      "fingerprint": "1bc16c4c40f9d338",
       "fields": {
         "price": "₹126-134",
         "size": "₹105 Cr",
@@ -263,10 +273,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "22.54%",
-        "roce": "19.01%",
-        "growth": "5%",
-        "de": "0.41",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -274,7 +284,7 @@
     {
       "id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fingerprint": "9b8c2fc93b649a8d",
+      "fingerprint": "79287a15ef718770",
       "fields": {
         "price": "₹350-375",
         "size": "₹279 Cr",
@@ -291,10 +301,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "28.52%",
-        "roce": "24.10%",
-        "growth": "7%",
-        "de": "0.96",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -302,7 +312,7 @@
     {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "fingerprint": "622822c5fcbd9de9",
+      "fingerprint": "a2095d8e486cc146",
       "fields": {
         "price": "₹343-362",
         "size": "₹0 Cr",
@@ -320,9 +330,9 @@
         "est_list": "—",
         "pe": "—",
         "roe": "—",
-        "roce": "6.42%",
-        "growth": "53%",
-        "de": "4.98",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -1059,6 +1069,41 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T11:02:50.683491+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T11:02:50.683491+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T11:02:50.683491+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
     {
       "at": "2026-09-24T10:28:17.187708+00:00",
       "type": "DATA_CHANGE",
@@ -4429,40 +4474,6 @@
         "roce",
         "growth",
         "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T13:09:31.947549+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T13:09:31.947549+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T12:58:25.063403+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
       ]
     }
   ]
