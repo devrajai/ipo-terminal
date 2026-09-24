@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T04:21:54.404147+00:00",
+  "generated_at": "2026-09-24T04:57:23.354415+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T09:51:25.054293+05:30",
+  "data_updated_at": "2026-09-24T10:26:51.401600+05:30",
   "ipo_count": 21,
-  "field_coverage_pct": 25.9,
+  "field_coverage_pct": 26.3,
   "sources": {
     "NSE": {
       "ok": true,
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T04:19:58.758902+00:00",
+      "checked_at": "2026-09-24T04:56:10.895402+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T04:20:00.720160+00:00"
+      "checked_at": "2026-09-24T04:56:13.314447+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T04:21:10.744382+00:00",
+      "checked_at": "2026-09-24T04:56:36.823269+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T04:21:10.800440+00:00"
+      "checked_at": "2026-09-24T04:56:36.887764+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T04:21:10.989436+00:00"
+      "checked_at": "2026-09-24T04:56:36.931963+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-24T04:21:11.116685+00:00",
+      "checked_at": "2026-09-24T04:56:37.067975+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T04:21:11.116685+00:00"
+      "checked_at": "2026-09-24T04:56:37.067975+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T09:51:25.054293+05:30",
+      "checked_at": "2026-09-24T10:26:51.401600+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -162,10 +162,10 @@
     {
       "id": "moneyview-limited",
       "name": "Moneyview Limited",
-      "fingerprint": "3b94a2bfa8f65452",
+      "fingerprint": "63db845240887f88",
       "fields": {
         "price": "₹32-34",
-        "size": "—",
+        "size": "₹0 Cr",
         "lot": "441",
         "open": "24/09/26",
         "close": "28/09/26",
@@ -190,10 +190,10 @@
     {
       "id": "a-one-steels-india-limited",
       "name": "A-One Steels India Limited",
-      "fingerprint": "52744d3054751bb3",
+      "fingerprint": "2102c841abc08cd2",
       "fields": {
         "price": "₹385-405",
-        "size": "—",
+        "size": "₹299 Cr",
         "lot": "—",
         "open": "24/09/26",
         "close": "28/09/26",
@@ -989,6 +989,24 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T04:57:23.354415+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "fields": [
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-24T04:57:23.354415+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "a-one-steels-india-limited",
+      "name": "A-One Steels India Limited",
+      "fields": [
+        "size"
+      ]
+    },
     {
       "at": "2026-09-24T04:21:54.404147+00:00",
       "type": "DATA_CHANGE",
@@ -4372,29 +4390,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T09:22:27.441785+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
-      ]
-    },
-    {
-      "at": "2026-09-22T09:22:27.441785+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "axiom-gas-engineering-limited",
-      "name": "Axiom Gas Engineering Limited",
       "fields": [
         "roe",
         "roce",
