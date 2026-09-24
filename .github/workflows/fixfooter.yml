@@ -1,0 +1,18 @@
+name: Remove footer attribution
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/scripts/fix_footer.py
+      - run: |
+          git config user.name devrajai
+          git config user.email devraj.resume@gmail.com
+          git add index.html
+          git commit -m 'remove footer attribution' || echo 'no change'
+          git pull --rebase || true
+          git push
