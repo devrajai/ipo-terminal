@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T00:34:11.155855+00:00",
+  "updated_at": "2026-09-24T06:32:59.970912+00:00",
   "changed": false,
   "brokers": {
     "Zerodha": {
@@ -16,7 +16,7 @@
         "options": "₹20/order",
         "open": "₹0"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Groww": {
@@ -32,7 +32,7 @@
         "open": "₹0",
         "amc": "₹0"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Upstox": {
@@ -50,7 +50,7 @@
         "open": "₹0",
         "amc": "₹0 first year; then applicable AMC"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Angel One": {
@@ -68,7 +68,7 @@
         "open": "₹0",
         "amc": "₹0 first year; then applicable AMC"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "ICICI Direct": {
@@ -82,7 +82,7 @@
         "delivery": "From 0.07% on Prime plans",
         "futures": "₹20/order on iValue; plan dependent"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "HDFC SKY": {
@@ -100,7 +100,7 @@
         "futures": "₹20/order or 2.5% lower",
         "options": "₹20/order"
       },
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "5paisa": {
@@ -111,7 +111,7 @@
       "pricing_url": "https://www.5paisa.com/",
       "pricing_status": 0,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": [
         "https://www.5paisa.com/stock-market-guide/brokerage-charges: HTTP Error 404: Not Found"
       ]
@@ -124,7 +124,7 @@
       "pricing_url": "https://www.kotakneo.com/pricing/",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Motilal Oswal": {
@@ -135,7 +135,7 @@
       "pricing_url": "https://www.motilaloswal.com/",
       "pricing_status": 0,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": [
         "https://www.motilaloswal.com/charges: HTTP Error 404: Not Found"
       ]
@@ -148,7 +148,7 @@
       "pricing_url": "https://www.sharekhan.com/",
       "pricing_status": 0,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": [
         "https://www.sharekhan.com/charges: HTTP Error 404: Not Found"
       ]
@@ -161,7 +161,7 @@
       "pricing_url": "https://dhan.co/pricing/",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "FYERS": {
@@ -172,7 +172,7 @@
       "pricing_url": "https://fyers.in/pricing",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "SBI Securities": {
@@ -183,7 +183,7 @@
       "pricing_url": "https://www.sbisecurities.in/pricing",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Axis Direct": {
@@ -194,7 +194,7 @@
       "pricing_url": "https://simplehai.axisdirect.in/error",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "IIFL Securities": {
@@ -205,7 +205,7 @@
       "pricing_url": "https://www.indiainfoline.com/",
       "pricing_status": 0,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": [
         "https://www.indiainfoline.com/charges: HTTP Error 404: Not Found"
       ]
@@ -218,7 +218,7 @@
       "pricing_url": "https://aliceblueonline.com/pricing",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "m.Stock": {
@@ -229,7 +229,7 @@
       "pricing_url": "https://www.mstock.com/pricing",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     },
     "Paytm Money": {
@@ -240,7 +240,7 @@
       "pricing_url": "https://www.paytmmoney.com/mutual-funds/pricing",
       "pricing_status": 200,
       "parsed": {},
-      "checked_at": "2026-09-24T00:34:11.155855+00:00",
+      "checked_at": "2026-09-24T06:32:59.970912+00:00",
       "errors": []
     }
   },
