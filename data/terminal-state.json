@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T12:03:29.264856+00:00",
+  "generated_at": "2026-09-24T12:29:10.944495+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T17:33:00.615994+05:30",
+  "data_updated_at": "2026-09-24T17:58:38.560914+05:30",
   "ipo_count": 23,
-  "field_coverage_pct": 22.8,
+  "field_coverage_pct": 26.5,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,6 +32,9 @@
         "Moneycontrol"
       ],
       "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: The read operation timed out",
+        "IPOGram: The read operation timed out",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -49,7 +52,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T12:02:18.194362+00:00",
+      "checked_at": "2026-09-24T12:25:35.693132+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +90,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T12:02:20.583395+00:00"
+      "checked_at": "2026-09-24T12:25:39.071287+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T12:02:46.222354+00:00",
+      "checked_at": "2026-09-24T12:28:24.434339+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +105,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T12:02:46.297047+00:00"
+      "checked_at": "2026-09-24T12:28:24.507263+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T12:02:46.346570+00:00"
+      "checked_at": "2026-09-24T12:28:24.557518+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-24T12:02:46.508710+00:00",
+      "checked_at": "2026-09-24T12:28:24.721080+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +143,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T12:02:46.508710+00:00"
+      "checked_at": "2026-09-24T12:28:24.721080+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T17:33:00.615994+05:30",
+      "checked_at": "2026-09-24T17:58:38.560914+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -217,7 +220,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "14f336eff48665df",
+      "fingerprint": "49b0953a1e3e60fe",
       "fields": {
         "price": "₹175-185",
         "size": "₹117 Cr",
@@ -234,10 +237,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "35.44%",
+        "roce": "25.76%",
+        "growth": "43%",
+        "de": "0.73",
         "fresh": "—",
         "ofs": "—"
       }
@@ -245,7 +248,7 @@
     {
       "id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fingerprint": "1bc16c4c40f9d338",
+      "fingerprint": "cdcacd72980f055f",
       "fields": {
         "price": "₹126-134",
         "size": "₹105 Cr",
@@ -262,10 +265,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "22.54%",
+        "roce": "19.01%",
+        "growth": "5%",
+        "de": "0.41",
         "fresh": "—",
         "ofs": "—"
       }
@@ -273,7 +276,7 @@
     {
       "id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fingerprint": "79287a15ef718770",
+      "fingerprint": "9b8c2fc93b649a8d",
       "fields": {
         "price": "₹350-375",
         "size": "₹279 Cr",
@@ -290,10 +293,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roe": "28.52%",
+        "roce": "24.10%",
+        "growth": "7%",
+        "de": "0.96",
         "fresh": "—",
         "ofs": "—"
       }
@@ -301,7 +304,7 @@
     {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "fingerprint": "a2095d8e486cc146",
+      "fingerprint": "622822c5fcbd9de9",
       "fields": {
         "price": "₹343-362",
         "size": "₹0 Cr",
@@ -319,9 +322,9 @@
         "est_list": "—",
         "pe": "—",
         "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
+        "roce": "6.42%",
+        "growth": "53%",
+        "de": "4.98",
         "fresh": "—",
         "ofs": "—"
       }
@@ -329,7 +332,7 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "72c49b44f1dcd83c",
+      "fingerprint": "8a1fdbe6be572116",
       "fields": {
         "price": "₹140-148",
         "size": "₹0 Cr",
@@ -346,9 +349,9 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
+        "roe": "6.80%",
+        "roce": "9.89%",
+        "growth": "5%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -1058,6 +1061,64 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T12:29:10.944495+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T12:29:10.944495+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T12:29:10.944495+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T12:29:10.944495+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T12:29:10.944495+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
     {
       "at": "2026-09-24T11:35:20.558719+00:00",
       "type": "DATA_CHANGE",
@@ -4416,61 +4477,6 @@
         "name": "Elevate Campuses Limited",
         "source": "NSE"
       }
-    },
-    {
-      "at": "2026-09-22T21:53:05.231734+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-25",
-        "type": "CLOSE",
-        "ipo_id": "swastika-infra-limited",
-        "name": "Swastika Infra Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-22T18:40:31.940321+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "price",
-        "size",
-        "lot"
-      ]
-    },
-    {
-      "at": "2026-09-22T18:40:31.940321+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "price",
-        "size",
-        "lot"
-      ]
-    },
-    {
-      "at": "2026-09-22T18:40:31.940321+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "price",
-        "size",
-        "lot"
-      ]
-    },
-    {
-      "at": "2026-09-22T18:40:31.940321+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fields": [
-        "price",
-        "size",
-        "lot"
-      ]
     }
   ]
 }
