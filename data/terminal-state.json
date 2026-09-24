@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T13:37:35.018503+00:00",
+  "generated_at": "2026-09-24T13:50:54.526129+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T19:07:03.614924+05:30",
+  "data_updated_at": "2026-09-24T19:20:26.420185+05:30",
   "ipo_count": 23,
-  "field_coverage_pct": 23.0,
+  "field_coverage_pct": 23.2,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 17,
+      "records": 18,
       "errors": []
     },
     "BSE": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T13:36:27.036316+00:00",
+      "checked_at": "2026-09-24T13:50:00.760271+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -62,15 +62,15 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 4,
+          "matched": 5,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
         "EconomicTimes": {
           "ok": true,
           "records": 10,
-          "matched": 4,
-          "added": 6,
+          "matched": 5,
+          "added": 5,
           "url": "https://economictimes.indiatimes.com/markets/ipo/upcoming"
         },
         "EconomicTimesListed": {
@@ -88,12 +88,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T13:36:29.273103+00:00"
+      "checked_at": "2026-09-24T13:50:02.919439+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T13:36:49.121354+00:00",
+      "checked_at": "2026-09-24T13:50:08.841631+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T13:36:49.194714+00:00"
+      "checked_at": "2026-09-24T13:50:08.913391+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T13:36:49.245888+00:00"
+      "checked_at": "2026-09-24T13:50:08.962942+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-24T13:36:49.398430+00:00",
+      "checked_at": "2026-09-24T13:50:09.113216+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T13:36:49.398430+00:00"
+      "checked_at": "2026-09-24T13:50:09.113216+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T19:07:03.614924+05:30",
+      "checked_at": "2026-09-24T19:20:26.420185+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -159,34 +159,6 @@
     }
   },
   "ipos": [
-    {
-      "id": "moneyview-limited",
-      "name": "Moneyview Limited",
-      "fingerprint": "63db845240887f88",
-      "fields": {
-        "price": "₹32-34",
-        "size": "₹0 Cr",
-        "lot": "441",
-        "open": "24/09/26",
-        "close": "28/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "15.98%",
-        "roce": "—",
-        "growth": "43%",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
     {
       "id": "a-one-steels-india-limited",
       "name": "A-One Steels India Limited",
@@ -210,6 +182,34 @@
         "roe": "—",
         "roce": "—",
         "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "moneyview-limited",
+      "name": "Moneyview Limited",
+      "fingerprint": "63db845240887f88",
+      "fields": {
+        "price": "₹32-34",
+        "size": "₹0 Cr",
+        "lot": "441",
+        "open": "24/09/26",
+        "close": "28/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "15.98%",
+        "roce": "—",
+        "growth": "43%",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -468,6 +468,62 @@
       }
     },
     {
+      "id": "srit-india-limited",
+      "name": "Srit India Limited",
+      "fingerprint": "0d4f1c02512e90e7",
+      "fields": {
+        "price": "₹123 – ₹130",
+        "size": "₹218.4 Cr",
+        "lot": "115",
+        "open": "28/09/26",
+        "close": "Sep 30, 2026",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
+      "id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "fingerprint": "32142f058b669eb6",
+      "fields": {
+        "price": "₹258 – ₹272",
+        "size": "₹552 Cr",
+        "lot": "55",
+        "open": "25/09/26",
+        "close": "29/09/26",
+        "allotment": null,
+        "listing": "—",
+        "sub": "—",
+        "sub_qib": null,
+        "sub_nii": null,
+        "sub_retail": null,
+        "gmp": "—",
+        "gmp_pct": "—",
+        "est_list": "—",
+        "pe": "—",
+        "roe": "13.17%",
+        "roce": "10.36%",
+        "growth": "42%",
+        "de": "0.95",
+        "fresh": "—",
+        "ofs": "—"
+      }
+    },
+    {
       "id": "german-green-steel-and-power-limited",
       "name": "German Green Steel and Power Limited",
       "fingerprint": "5bd1b5ad445b4a60",
@@ -552,34 +608,6 @@
       }
     },
     {
-      "id": "orient-cables-india-limited",
-      "name": "Orient Cables (India) Limited",
-      "fingerprint": "32142f058b669eb6",
-      "fields": {
-        "price": "₹258 – ₹272",
-        "size": "₹552 Cr",
-        "lot": "55",
-        "open": "25/09/26",
-        "close": "29/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "13.17%",
-        "roce": "10.36%",
-        "growth": "42%",
-        "de": "0.95",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
       "id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
       "fingerprint": "94f298b622c69ee9",
@@ -617,34 +645,6 @@
         "lot": "1200",
         "open": "25/09/26",
         "close": "Sep 29, 2026",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "srit-india-ltd-mainboard",
-      "name": "SRIT India Ltd. Mainboard",
-      "fingerprint": "f276f2c08293bc72",
-      "fields": {
-        "price": "₹123 – ₹130",
-        "size": "₹218.4 Cr",
-        "lot": "115",
-        "open": "28/09/26",
-        "close": "—",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -1004,15 +1004,15 @@
     {
       "date": "2026-09-28",
       "type": "OPEN",
-      "ipo_id": "srit-india-ltd-mainboard",
-      "name": "SRIT India Ltd. Mainboard",
-      "source": "Economic Times"
+      "ipo_id": "shah-investor-s-home-limited",
+      "name": "Shah Investor's Home Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-28",
       "type": "OPEN",
-      "ipo_id": "shah-investor-s-home-limited",
-      "name": "Shah Investor's Home Limited",
+      "ipo_id": "srit-india-limited",
+      "name": "Srit India Limited",
       "source": "NSE"
     },
     {
@@ -1059,6 +1059,17 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T13:50:54.526129+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-28",
+        "type": "OPEN",
+        "ipo_id": "srit-india-limited",
+        "name": "Srit India Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-24T13:23:01.120988+00:00",
       "type": "DATA_CHANGE",
@@ -4470,17 +4481,6 @@
         "roe",
         "roce",
         "growth"
-      ]
-    },
-    {
-      "at": "2026-09-23T02:46:04.507695+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
       ]
     }
   ]
