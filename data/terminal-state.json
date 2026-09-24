@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T17:11:01.234034+00:00",
+  "generated_at": "2026-09-24T17:26:12.562966+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T22:40:27.267693+05:30",
+  "data_updated_at": "2026-09-24T22:55:41.145497+05:30",
   "ipo_count": 23,
   "field_coverage_pct": 23.2,
   "sources": {
@@ -41,7 +41,13 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": []
+      "errors": [
+        "\"A-One Steels India Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Moneyview Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Swastika Infra Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"Adroit Industries (India) Limited\" IPO India: HTTP Error 503: Service Unavailable",
+        "\"ArMee Infotech Limited\" IPO India: HTTP Error 503: Service Unavailable"
+      ]
     },
     "LISTED": {
       "ok": true,
@@ -50,7 +56,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T17:07:34.520916+00:00",
+      "checked_at": "2026-09-24T17:24:36.852370+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +94,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T17:07:37.911206+00:00"
+      "checked_at": "2026-09-24T17:24:38.972426+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T17:10:10.179621+00:00",
+      "checked_at": "2026-09-24T17:25:03.581563+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,37 +109,41 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T17:10:10.259922+00:00"
+      "checked_at": "2026-09-24T17:25:03.659943+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T17:10:10.315694+00:00"
+      "checked_at": "2026-09-24T17:25:03.715145+00:00"
     },
     "LiveNews": {
-      "ok": true,
-      "records": 200,
-      "checked_at": "2026-09-24T17:10:10.482160+00:00",
+      "ok": false,
+      "records": 0,
+      "checked_at": "2026-09-24T17:25:03.876654+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO allotment": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": true,
-          "records": 100,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         },
         "Google News · RHP DRHP": {
-          "ok": true,
-          "records": 69,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
+          "ok": false,
+          "records": 0,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
+          "error": "HTTP Error 503: Service Unavailable"
         }
       }
     },
@@ -141,11 +151,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T17:10:10.482160+00:00"
+      "checked_at": "2026-09-24T17:25:03.876654+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T22:40:27.267693+05:30",
+      "checked_at": "2026-09-24T22:55:41.145497+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
