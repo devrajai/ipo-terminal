@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T15:38:45.049303+05:30",
+  "updated_at": "2026-09-24T15:57:46.803668+05:30",
   "data": [
     {
       "company": "Green Asia Impex Limited",
@@ -42,6 +42,14 @@
       "status": "upcoming"
     },
     {
+      "company": "Omara Ventures India Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "30/09/26",
+      "close_date": "—",
+      "issue_size": "₹41.99 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Black Opal Consultants Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "29/09/26",
@@ -63,14 +71,6 @@
       "open_date": "28/09/26",
       "close_date": "—",
       "issue_size": "₹17.82 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Shivchem Agro Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "28/09/26",
-      "close_date": "—",
-      "issue_size": "₹14.01 Cr",
       "status": "upcoming"
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T10:09:19.010918+00:00",
+  "generated_at": "2026-09-24T10:28:17.187708+00:00",
   "events": [
     {
       "date": "2026-09-24",
@@ -164,13 +164,6 @@
       "source": "Economic Times"
     },
     {
-      "date": "2026-09-28",
-      "type": "OPEN",
-      "ipo_id": "shivchem-agro-ltd-sme",
-      "name": "Shivchem Agro Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
       "date": "2026-09-29",
       "type": "CLOSE",
       "ipo_id": "acevector-limited",
@@ -203,6 +196,13 @@
       "type": "OPEN",
       "ipo_id": "everestims-technologies-ltd-sme",
       "name": "EverestIMS Technologies Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "OPEN",
+      "ipo_id": "omara-ventures-india-ltd-sme",
+      "name": "Omara Ventures India Ltd. SME",
       "source": "Economic Times"
     }
   ]

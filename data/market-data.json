@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T10:06:50.739787+00:00",
+  "updated_at": "2026-09-24T10:22:18.288115+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -25,9 +25,9 @@
     {
       "name": "India VIX",
       "symbol": "INDIA VIX",
-      "price": 12.74,
-      "change": 2.39,
-      "change_pct": 23.15
+      "price": 12.7,
+      "change": 2.35,
+      "change_pct": 22.76
     },
     {
       "name": "Nifty Midcap 100",
@@ -130,8 +130,8 @@
       "19/10/22",
       "212",
       "-10.17",
-      "1857.95",
-      "687.27"
+      "1858",
+      "687.29"
     ],
     [
       "Tata Technologies",
