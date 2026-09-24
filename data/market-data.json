@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T19:28:01.967325+00:00",
+  "updated_at": "2026-09-24T19:37:56.105872+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -102,9 +102,9 @@
   ],
   "world": [
     {
-      "price": 7707.28,
-      "change": 1.25,
-      "change_pct": 0.02,
+      "price": 7704.73,
+      "change": -1.3,
+      "change_pct": -0.02,
       "name": "S&P 500 (US)",
       "symbol": "^GSPC"
     }
