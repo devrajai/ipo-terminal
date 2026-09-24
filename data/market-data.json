@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T16:35:22.709991+00:00",
+  "updated_at": "2026-09-24T16:47:05.907161+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,16 +100,23 @@
       "change_pct": -0.8
     }
   ],
-  "world": [],
-  "commodities": [
+  "world": [
     {
-      "price": 4308.7,
-      "change": -9.7,
-      "change_pct": -0.22,
-      "name": "Gold ($/oz)",
-      "symbol": "GC=F"
+      "price": 7705.43,
+      "change": -0.6,
+      "change_pct": -0.01,
+      "name": "S&P 500 (US)",
+      "symbol": "^GSPC"
+    },
+    {
+      "price": 26915.13,
+      "change": -20.91,
+      "change_pct": -0.08,
+      "name": "Nasdaq (US)",
+      "symbol": "^IXIC"
     }
   ],
+  "commodities": [],
   "fx": [
     {
       "name": "USD/INR",
@@ -119,9 +126,7 @@
       "change_pct": null
     }
   ],
-  "derived": {
-    "gold_inr_per_10g": 132931.29
-  },
+  "derived": {},
   "sheet_listed_ipos": [
     [
       "IPO Name",
