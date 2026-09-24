@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T18:24:50.156280+00:00",
+  "generated_at": "2026-09-24T18:51:59.906101+00:00",
   "events": [
     {
       "date": "2026-09-24",
@@ -89,13 +89,6 @@
     {
       "date": "2026-09-25",
       "type": "OPEN",
-      "ipo_id": "german-green-steel-power-ltd-mainboard",
-      "name": "German Green Steel & Power Ltd. Mainboard",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
       "ipo_id": "german-green-steel-and-power-limited",
       "name": "German Green Steel and Power Limited",
       "source": "NSE"
@@ -152,9 +145,23 @@
     {
       "date": "2026-09-28",
       "type": "OPEN",
+      "ipo_id": "pind-hospitality-ltd-sme",
+      "name": "Pind Hospitality Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "OPEN",
       "ipo_id": "shah-investor-s-home-limited",
       "name": "Shah Investor's Home Limited",
       "source": "NSE"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "OPEN",
+      "ipo_id": "shivchem-agro-ltd-sme",
+      "name": "Shivchem Agro Ltd. SME",
+      "source": "Economic Times"
     },
     {
       "date": "2026-09-28",
