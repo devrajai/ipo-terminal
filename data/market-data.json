@@ -1,103 +1,103 @@
 {
-  "updated_at": "2026-09-24T06:40:04.875334+00:00",
+  "updated_at": "2026-09-24T07:02:39.068084+00:00",
   "india": [
     {
       "name": "Nifty 50",
       "symbol": "NIFTY 50",
-      "price": 23206.35,
-      "change": -240.45,
-      "change_pct": -1.03
+      "price": 23190.5,
+      "change": -256.3,
+      "change_pct": -1.09
     },
     {
       "name": "Nifty Bank",
       "symbol": "NIFTY BANK",
-      "price": 55591.85,
-      "change": -957.05,
-      "change_pct": -1.69
+      "price": 55615.55,
+      "change": -933.35,
+      "change_pct": -1.65
     },
     {
       "name": "Nifty Next 50",
       "symbol": "NIFTY NEXT 50",
-      "price": 71857.7,
-      "change": -604.7,
-      "change_pct": -0.83
+      "price": 71840,
+      "change": -622.4,
+      "change_pct": -0.86
     },
     {
       "name": "India VIX",
       "symbol": "INDIA VIX",
-      "price": 11.39,
-      "change": 1.04,
-      "change_pct": 10.07
+      "price": 11.48,
+      "change": 1.13,
+      "change_pct": 10.97
     },
     {
       "name": "Nifty Midcap 100",
       "symbol": "NIFTY MIDCAP 100",
-      "price": 61576.25,
-      "change": -820.2,
-      "change_pct": -1.31
+      "price": 61587.45,
+      "change": -809,
+      "change_pct": -1.3
     },
     {
       "name": "Nifty Smallcap 100",
       "symbol": "NIFTY SMALLCAP 100",
-      "price": 19822.4,
-      "change": -169.1,
-      "change_pct": -0.85
+      "price": 19816.5,
+      "change": -175,
+      "change_pct": -0.88
     },
     {
       "name": "Nifty It",
       "symbol": "NIFTY IT",
-      "price": 28347.2,
-      "change": 13.15,
-      "change_pct": 0.05
+      "price": 28330.35,
+      "change": -3.7,
+      "change_pct": -0.01
     },
     {
       "name": "Nifty Auto",
       "symbol": "NIFTY AUTO",
-      "price": 27008.95,
-      "change": -148.6,
-      "change_pct": -0.55
+      "price": 27010.2,
+      "change": -147.35,
+      "change_pct": -0.54
     },
     {
       "name": "Nifty Pharma",
       "symbol": "NIFTY PHARMA",
-      "price": 27226.05,
-      "change": 73.95,
-      "change_pct": 0.27
+      "price": 27222.3,
+      "change": 70.2,
+      "change_pct": 0.26
     },
     {
       "name": "Nifty Fmcg",
       "symbol": "NIFTY FMCG",
-      "price": 45926.8,
-      "change": -332.55,
-      "change_pct": -0.72
+      "price": 45939.55,
+      "change": -319.8,
+      "change_pct": -0.69
     },
     {
       "name": "Nifty Metal",
       "symbol": "NIFTY METAL",
-      "price": 13150.9,
-      "change": -151.45,
-      "change_pct": -1.14
+      "price": 13132.65,
+      "change": -169.7,
+      "change_pct": -1.28
     },
     {
       "name": "Nifty Energy",
       "symbol": "NIFTY ENERGY",
-      "price": 37466.9,
-      "change": -292.85,
-      "change_pct": -0.78
+      "price": 37460.6,
+      "change": -299.15,
+      "change_pct": -0.79
     },
     {
       "name": "Nifty Realty",
       "symbol": "NIFTY REALTY",
-      "price": 872.1,
-      "change": 1.1,
-      "change_pct": 0.13
+      "price": 871.45,
+      "change": 0.45,
+      "change_pct": 0.05
     },
     {
       "name": "Nifty Media",
       "symbol": "NIFTY MEDIA",
-      "price": 1571.85,
-      "change": 5,
-      "change_pct": 0.32
+      "price": 1572.3,
+      "change": 5.45,
+      "change_pct": 0.35
     }
   ],
   "world": [],
@@ -140,8 +140,8 @@
       "30/11/23",
       "1200",
       "140",
-      "725",
-      "45"
+      "722.15",
+      "44.43"
     ],
     [
       "Manika Plastech",
