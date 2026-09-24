@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T13:02:20.811270+00:00",
+  "updated_at": "2026-09-24T13:20:10.024062+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,22 +100,7 @@
       "change_pct": -0.8
     }
   ],
-  "world": [
-    {
-      "price": 65513.99,
-      "change": 495.04,
-      "change_pct": 0.76,
-      "name": "Nikkei 225 (Japan)",
-      "symbol": "^N225"
-    },
-    {
-      "price": 6289.52,
-      "change": -10.3,
-      "change_pct": -0.16,
-      "name": "Euro Stoxx 50",
-      "symbol": "^STOXX50E"
-    }
-  ],
+  "world": [],
   "commodities": [],
   "fx": [
     {
