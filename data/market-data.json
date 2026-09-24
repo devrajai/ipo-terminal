@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T10:58:36.290543+00:00",
+  "updated_at": "2026-09-24T11:04:38.893985+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -101,15 +101,7 @@
     }
   ],
   "world": [],
-  "commodities": [
-    {
-      "price": 4296.2,
-      "change": -22.2,
-      "change_pct": -0.51,
-      "name": "Gold ($/oz)",
-      "symbol": "GC=F"
-    }
-  ],
+  "commodities": [],
   "fx": [
     {
       "name": "USD/INR",
@@ -119,9 +111,7 @@
       "change_pct": null
     }
   ],
-  "derived": {
-    "gold_inr_per_10g": 132241.77
-  },
+  "derived": {},
   "sheet_listed_ipos": [
     [
       "IPO Name",

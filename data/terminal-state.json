@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T11:02:50.683491+00:00",
+  "generated_at": "2026-09-24T11:07:24.677747+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T16:32:19.228863+05:30",
+  "data_updated_at": "2026-09-24T16:36:51.726459+05:30",
   "ipo_count": 23,
-  "field_coverage_pct": 24.2,
+  "field_coverage_pct": 22.8,
   "sources": {
     "NSE": {
       "ok": true,
@@ -41,13 +41,7 @@
       "records": 6,
       "source": "Google News RSS public feeds",
       "window_days": 5,
-      "errors": [
-        "\"Moneyview Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"A-One Steels India Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Swastika Infra Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"Adroit Industries (India) Limited\" IPO India: HTTP Error 503: Service Unavailable",
-        "\"ArMee Infotech Limited\" IPO India: HTTP Error 503: Service Unavailable"
-      ]
+      "errors": []
     },
     "LISTED": {
       "ok": true,
@@ -56,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T11:00:13.229754+00:00",
+      "checked_at": "2026-09-24T11:06:15.931885+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -94,12 +88,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T11:00:31.957776+00:00"
+      "checked_at": "2026-09-24T11:06:18.226324+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T11:01:33.114023+00:00",
+      "checked_at": "2026-09-24T11:06:37.684276+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -109,41 +103,37 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T11:01:33.184355+00:00"
+      "checked_at": "2026-09-24T11:06:37.754607+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T11:01:33.232396+00:00"
+      "checked_at": "2026-09-24T11:06:37.802947+00:00"
     },
     "LiveNews": {
-      "ok": false,
-      "records": 0,
-      "checked_at": "2026-09-24T11:01:33.376754+00:00",
+      "ok": true,
+      "records": 200,
+      "checked_at": "2026-09-24T11:06:37.947492+00:00",
       "feeds": {
         "Google News · IPO India": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 92,
+          "url": "https://news.google.com/rss/search?q=IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO allotment": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+allotment+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · IPO upcoming/listing": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 100,
+          "url": "https://news.google.com/rss/search?q=IPO+upcoming+listing+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         },
         "Google News · RHP DRHP": {
-          "ok": false,
-          "records": 0,
-          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen",
-          "error": "HTTP Error 503: Service Unavailable"
+          "ok": true,
+          "records": 65,
+          "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
     },
@@ -151,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T11:01:33.376754+00:00"
+      "checked_at": "2026-09-24T11:06:37.947492+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T16:32:19.228863+05:30",
+      "checked_at": "2026-09-24T16:36:51.726459+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
@@ -228,7 +218,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "49b0953a1e3e60fe",
+      "fingerprint": "14f336eff48665df",
       "fields": {
         "price": "₹175-185",
         "size": "₹117 Cr",
@@ -245,10 +235,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "35.44%",
-        "roce": "25.76%",
-        "growth": "43%",
-        "de": "0.73",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -340,7 +330,7 @@
     {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
-      "fingerprint": "8a1fdbe6be572116",
+      "fingerprint": "72c49b44f1dcd83c",
       "fields": {
         "price": "₹140-148",
         "size": "₹0 Cr",
@@ -357,9 +347,9 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "6.80%",
-        "roce": "9.89%",
-        "growth": "5%",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
         "de": "—",
         "fresh": "—",
         "ofs": "—"
@@ -1069,6 +1059,29 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T11:07:24.677747+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-24T11:07:24.677747+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "varmora-granito-limited",
+      "name": "Varmora Granito Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth"
+      ]
+    },
     {
       "at": "2026-09-24T11:02:50.683491+00:00",
       "type": "DATA_CHANGE",
@@ -4450,30 +4463,6 @@
         "roe",
         "roce",
         "growth"
-      ]
-    },
-    {
-      "at": "2026-09-22T13:09:31.947549+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "axiom-gas-engineering-limited",
-      "name": "Axiom Gas Engineering Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-22T13:09:31.947549+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
       ]
     }
   ]
