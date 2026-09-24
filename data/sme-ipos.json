@@ -1,20 +1,20 @@
 {
-  "updated_at": "2026-09-25T03:03:52.274318+05:30",
+  "updated_at": "2026-09-25T03:14:13.830610+05:30",
   "data": [
     {
       "company": "Bench Mark Infotech Services Limited",
       "exchange": "BSE",
       "open_date": "25/09/26",
-      "close_date": "Sep 29, 2026",
-      "issue_size": "42.44",
+      "close_date": "29/09/26",
+      "issue_size": "—",
       "status": "open"
     },
     {
       "company": "Himalayan Solar Limited",
       "exchange": "BSE",
       "open_date": "25/09/26",
-      "close_date": "Sep 29, 2026",
-      "issue_size": "68.03",
+      "close_date": "29/09/26",
+      "issue_size": "—",
       "status": "open"
     },
     {

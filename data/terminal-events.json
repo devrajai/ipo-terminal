@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T21:34:21.470522+00:00",
+  "generated_at": "2026-09-24T21:44:39.593876+00:00",
   "events": [
     {
       "date": "2026-09-24",
@@ -180,6 +180,13 @@
     {
       "date": "2026-09-29",
       "type": "CLOSE",
+      "ipo_id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "CLOSE",
       "ipo_id": "german-green-steel-and-power-limited",
       "name": "German Green Steel and Power Limited",
       "source": "NSE"
@@ -187,8 +194,8 @@
     {
       "date": "2026-09-29",
       "type": "CLOSE",
-      "ipo_id": "orient-cables-india-limited",
-      "name": "Orient Cables (India) Limited",
+      "ipo_id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
       "source": "NSE"
     },
     {

@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T21:34:21.470522+00:00",
+  "generated_at": "2026-09-24T21:44:39.593876+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T03:03:52.274318+05:30",
+  "data_updated_at": "2026-09-25T03:14:13.830610+05:30",
   "ipo_count": 24,
-  "field_coverage_pct": 22.0,
+  "field_coverage_pct": 21.8,
   "sources": {
     "NSE": {
       "ok": true,
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T21:33:07.556018+00:00",
+      "checked_at": "2026-09-24T21:43:33.849651+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -62,7 +62,7 @@
         "Mint": {
           "ok": true,
           "records": 10,
-          "matched": 5,
+          "matched": 4,
           "added": 0,
           "url": "https://www.livemint.com/market/ipo/subscription-status"
         },
@@ -88,12 +88,12 @@
       "records": 24,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T21:33:09.719746+00:00"
+      "checked_at": "2026-09-24T21:43:37.005777+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T21:33:37.000648+00:00",
+      "checked_at": "2026-09-24T21:44:00.464647+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T21:33:37.060170+00:00"
+      "checked_at": "2026-09-24T21:44:00.513809+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T21:33:37.102786+00:00"
+      "checked_at": "2026-09-24T21:44:00.549597+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-24T21:33:37.224959+00:00",
+      "checked_at": "2026-09-24T21:44:00.656952+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -132,7 +132,7 @@
         },
         "Google News · RHP DRHP": {
           "ok": true,
-          "records": 71,
+          "records": 70,
           "url": "https://news.google.com/rss/search?q=RHP+DRHP+IPO+India&hl=en-IN&gl=IN&ceid=IN%3Aen"
         }
       }
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T21:33:37.224959+00:00"
+      "checked_at": "2026-09-24T21:44:00.656952+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T03:03:52.274318+05:30",
+      "checked_at": "2026-09-25T03:14:13.830610+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -162,13 +162,13 @@
     {
       "id": "orient-cables-india-limited",
       "name": "Orient Cables (India) Limited",
-      "fingerprint": "3d1ba3a24d631b02",
+      "fingerprint": "55ab2c8917077a95",
       "fields": {
         "price": "₹258-272",
-        "size": "—",
+        "size": "552.00",
         "lot": "55",
         "open": "25/09/26",
-        "close": "29/09/26",
+        "close": "Sep 29, 2026",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -442,13 +442,13 @@
     {
       "id": "bench-mark-infotech-services-limited",
       "name": "Bench Mark Infotech Services Limited",
-      "fingerprint": "ac8298933feb20c7",
+      "fingerprint": "806860aaaea61728",
       "fields": {
         "price": "—",
-        "size": "42.44",
+        "size": "—",
         "lot": "1200",
         "open": "25/09/26",
-        "close": "Sep 29, 2026",
+        "close": "29/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -470,13 +470,13 @@
     {
       "id": "himalayan-solar-limited",
       "name": "Himalayan Solar Limited",
-      "fingerprint": "c37f28b736238a30",
+      "fingerprint": "806860aaaea61728",
       "fields": {
         "price": "—",
-        "size": "68.03",
+        "size": "—",
         "lot": "1200",
         "open": "25/09/26",
-        "close": "Sep 29, 2026",
+        "close": "29/09/26",
         "allotment": null,
         "listing": "—",
         "sub": "—",
@@ -1060,6 +1060,13 @@
     {
       "date": "2026-09-29",
       "type": "CLOSE",
+      "ipo_id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "CLOSE",
       "ipo_id": "german-green-steel-and-power-limited",
       "name": "German Green Steel and Power Limited",
       "source": "NSE"
@@ -1067,8 +1074,8 @@
     {
       "date": "2026-09-29",
       "type": "CLOSE",
-      "ipo_id": "orient-cables-india-limited",
-      "name": "Orient Cables (India) Limited",
+      "ipo_id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
       "source": "NSE"
     },
     {
@@ -1094,6 +1101,58 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-24T21:44:39.593876+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-24T21:44:39.593876+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "bench-mark-infotech-services-limited",
+      "name": "Bench Mark Infotech Services Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-24T21:44:39.593876+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "himalayan-solar-limited",
+      "name": "Himalayan Solar Limited",
+      "fields": [
+        "size",
+        "close"
+      ]
+    },
+    {
+      "at": "2026-09-24T21:44:39.593876+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-29",
+        "type": "CLOSE",
+        "ipo_id": "bench-mark-infotech-services-limited",
+        "name": "Bench Mark Infotech Services Limited",
+        "source": "NSE"
+      }
+    },
+    {
+      "at": "2026-09-24T21:44:39.593876+00:00",
+      "type": "NEW_EVENT",
+      "event": {
+        "date": "2026-09-29",
+        "type": "CLOSE",
+        "ipo_id": "himalayan-solar-limited",
+        "name": "Himalayan Solar Limited",
+        "source": "NSE"
+      }
+    },
     {
       "at": "2026-09-24T18:51:59.906101+00:00",
       "type": "DATA_CHANGE",
@@ -4450,53 +4509,6 @@
         "roce",
         "growth",
         "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T05:05:29.279572+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
-      ]
-    },
-    {
-      "at": "2026-09-23T04:57:18.339158+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-23T04:57:18.339158+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-23T04:57:18.339158+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "size"
-      ]
-    },
-    {
-      "at": "2026-09-23T04:57:18.339158+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fields": [
-        "size"
       ]
     }
   ]
