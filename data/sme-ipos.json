@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-24T16:36:51.726459+05:30",
+  "updated_at": "2026-09-24T16:51:54.071549+05:30",
   "data": [
     {
       "company": "Green Asia Impex Limited",
@@ -66,11 +66,11 @@
       "status": "upcoming"
     },
     {
-      "company": "Pind Hospitality Ltd. SME",
+      "company": "Acme Universal Safezone 9 Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "28/09/26",
       "close_date": "—",
-      "issue_size": "₹17.82 Cr",
+      "issue_size": "₹35.93 Cr",
       "status": "upcoming"
     }
   ]
