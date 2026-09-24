@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T02:03:46.726080+00:00",
+  "generated_at": "2026-09-24T02:21:38.934981+00:00",
   "today_ist": "2026-09-24",
-  "data_updated_at": "2026-09-24T07:33:03.108478+05:30",
+  "data_updated_at": "2026-09-24T07:51:06.929434+05:30",
   "ipo_count": 21,
   "field_coverage_pct": 20.0,
   "sources": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-24T02:01:32.430433+00:00",
+      "checked_at": "2026-09-24T02:19:38.745069+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 21,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-24T02:01:34.339238+00:00"
+      "checked_at": "2026-09-24T02:19:40.583483+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T02:02:46.537557+00:00",
+      "checked_at": "2026-09-24T02:20:52.691468+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-24T02:02:46.603817+00:00"
+      "checked_at": "2026-09-24T02:20:52.762808+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-24T02:02:46.647175+00:00"
+      "checked_at": "2026-09-24T02:20:52.810501+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-24T02:02:46.786401+00:00",
+      "checked_at": "2026-09-24T02:20:52.955644+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-24T02:02:46.786401+00:00"
+      "checked_at": "2026-09-24T02:20:52.955644+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-24T07:33:03.108478+05:30",
+      "checked_at": "2026-09-24T07:51:06.929434+05:30",
       "status_repairs": 0,
       "sme_added": 0,
       "filings": {
