@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T23:36:28.327041+05:30",
+  "generated_at": "2026-09-25T23:53:35.161189+05:30",
   "source": "IPO Terminal self-heal official-source checker",
   "count": 10,
   "ipos": [
@@ -14,7 +14,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Shah Investor's Home Limited",
@@ -27,7 +27,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Paramount Syntex Ltd. SME",
@@ -40,7 +40,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Dove Soft Ltd. SME",
@@ -53,7 +53,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Omara Ventures India Ltd. SME",
@@ -66,7 +66,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Black Opal Consultants Ltd. SME",
@@ -79,7 +79,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "EverestIMS Technologies Ltd. SME",
@@ -92,7 +92,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "VANS Electroengineerings Ltd. SME",
@@ -105,7 +105,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Papadmalji Agro Foods Ltd. SME",
@@ -118,7 +118,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     },
     {
       "ipo_name": "Acme Universal Safezone 9 Ltd. SME",
@@ -131,7 +131,7 @@
       "filing_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "verified": true,
       "http_status": 200,
-      "checked_at": "2026-09-25T23:36:28.327041+05:30"
+      "checked_at": "2026-09-25T23:53:35.161189+05:30"
     }
   ]
 }
