@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T19:00:27.835432+00:00",
+  "generated_at": "2026-09-25T19:19:04.653863+00:00",
   "today_ist": "2026-09-26",
-  "data_updated_at": "2026-09-26T00:29:53.742019+05:30",
+  "data_updated_at": "2026-09-26T00:48:33.047985+05:30",
   "ipo_count": 23,
   "field_coverage_pct": 25.9,
   "sources": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T18:59:33.180216+00:00",
+      "checked_at": "2026-09-25T19:17:44.300057+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 23,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T18:59:35.382017+00:00"
+      "checked_at": "2026-09-25T19:17:47.653335+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T18:59:40.001632+00:00",
+      "checked_at": "2026-09-25T19:18:16.749800+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T18:59:40.078131+00:00"
+      "checked_at": "2026-09-25T19:18:16.833265+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T18:59:40.135127+00:00"
+      "checked_at": "2026-09-25T19:18:16.890996+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T18:59:40.282501+00:00",
+      "checked_at": "2026-09-25T19:18:17.061009+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T18:59:40.282501+00:00"
+      "checked_at": "2026-09-25T19:18:17.061009+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-26T00:29:53.742019+05:30",
+      "checked_at": "2026-09-26T00:48:33.047985+05:30",
       "status_repairs": 4,
       "sme_added": 0,
       "filings": {
@@ -162,7 +162,7 @@
     {
       "id": "orient-cables-india-limited",
       "name": "Orient Cables (India) Limited",
-      "fingerprint": "d14d0ef7ea969140",
+      "fingerprint": "d728d63541cb3873",
       "fields": {
         "price": "₹258-272",
         "size": "552.00",
@@ -173,8 +173,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.01",
-        "sub_nii": "2.44",
-        "sub_retail": "2.06",
+        "sub_nii": "3.48",
+        "sub_retail": "2.43",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -218,7 +218,7 @@
     {
       "id": "runwal-enterprises-limited",
       "name": "Runwal Enterprises Limited",
-      "fingerprint": "21a9b9957e7c50c4",
+      "fingerprint": "f004bda60a3d0a88",
       "fields": {
         "price": "₹290-302",
         "size": "500.00",
@@ -228,9 +228,9 @@
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "0.48",
-        "sub_nii": "0.20",
-        "sub_retail": "0.15",
+        "sub_qib": "0.96",
+        "sub_nii": "0.28",
+        "sub_retail": "0.18",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -1045,6 +1045,27 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-25T19:19:04.653863+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-25T19:19:04.653863+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "fields": [
+        "sub_qib",
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
     {
       "at": "2026-09-25T18:38:57.947176+00:00",
       "type": "DATA_CHANGE",
@@ -4427,28 +4448,6 @@
       "event": {
         "date": "2026-09-25",
         "type": "OPEN",
-        "ipo_id": "german-green-steel-and-power-limited",
-        "name": "German Green Steel and Power Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-23T12:57:16.634663+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-25",
-        "type": "OPEN",
-        "ipo_id": "runwal-enterprises-limited",
-        "name": "Runwal Enterprises Limited",
-        "source": "NSE"
-      }
-    },
-    {
-      "at": "2026-09-23T12:57:16.634663+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-29",
-        "type": "CLOSE",
         "ipo_id": "german-green-steel-and-power-limited",
         "name": "German Green Steel and Power Limited",
         "source": "NSE"
