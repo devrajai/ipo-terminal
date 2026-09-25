@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T07:54:41.929590+00:00",
+  "generated_at": "2026-09-25T08:04:39.656701+00:00",
   "events": [
     {
       "date": "2026-09-25",
@@ -117,23 +117,9 @@
     {
       "date": "2026-09-28",
       "type": "OPEN",
-      "ipo_id": "pind-hospitality-ltd-sme",
-      "name": "Pind Hospitality Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "OPEN",
       "ipo_id": "shah-investor-s-home-limited",
       "name": "Shah Investor's Home Limited",
       "source": "NSE"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "OPEN",
-      "ipo_id": "shree-tnb-polymers-ltd-sme",
-      "name": "Shree TNB Polymers Ltd. SME",
-      "source": "Economic Times"
     },
     {
       "date": "2026-09-28",
@@ -201,8 +187,22 @@
     {
       "date": "2026-09-30",
       "type": "OPEN",
+      "ipo_id": "dove-soft-ltd-sme",
+      "name": "Dove Soft Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "OPEN",
       "ipo_id": "omara-ventures-india-ltd-sme",
       "name": "Omara Ventures India Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "OPEN",
+      "ipo_id": "paramount-syntex-ltd-sme",
+      "name": "Paramount Syntex Ltd. SME",
       "source": "Economic Times"
     }
   ]
