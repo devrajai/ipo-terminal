@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T21:32:37.596421+00:00",
+  "generated_at": "2026-09-25T21:45:07.581325+00:00",
   "events": [
     {
       "date": "2026-09-25",
@@ -144,6 +144,20 @@
     },
     {
       "date": "2026-09-29",
+      "type": "CLOSE",
+      "ipo_id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "CLOSE",
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "source": "NSE"
+    },
+    {
+      "date": "2026-09-29",
       "type": "OPEN",
       "ipo_id": "black-opal-consultants-ltd-sme",
       "name": "Black Opal Consultants Ltd. SME",
@@ -169,6 +183,13 @@
       "ipo_id": "vans-electroengineerings-ltd-sme",
       "name": "VANS Electroengineerings Ltd. SME",
       "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-30",
+      "type": "CLOSE",
+      "ipo_id": "shah-investor-s-home-limited",
+      "name": "Shah Investor's Home Limited",
+      "source": "NSE"
     },
     {
       "date": "2026-09-30",
