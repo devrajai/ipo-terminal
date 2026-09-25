@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-25T11:44:34.152012+00:00",
+ "updated_at": "2026-09-25T12:22:13.933963+00:00",
  "ipos": {
   "Orient Cables (India) Limited": {
    "url": "https://www.chittorgarh.com/ipo/orient-cables-ipo/2532/",
@@ -69,67 +69,7 @@
    },
    "promoter_pct": 100.0
   },
-  "German Green Steel and Power Limited": {
-   "url": "https://www.chittorgarh.com/ipo/german-green-steel-and-power-ipo/2497/",
-   "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0,
-    "total": 100.0
-   },
-   "anchor": {
-    "total_cr": 91.17,
-    "investors": 20
-   },
-   "fin": {
-    "periods": [
-     "31 Mar 2026",
-     "31 Mar 2025",
-     "31 Mar 2024"
-    ],
-    "assets": [
-     1220.24,
-     1015.2,
-     559.73
-    ],
-    "income": [
-     1685.38,
-     1517.21,
-     1137.54
-    ],
-    "pat": [
-     79.89,
-     59.94,
-     41.67
-    ],
-    "ebitda": [
-     166.96,
-     116.81,
-     80.11
-    ],
-    "networth": [
-     421.55,
-     292.55,
-     176.06
-    ],
-    "borrowing": [
-     334.37,
-     347.86,
-     198.39
-    ]
-   },
-   "rev_growth": 11.1,
-   "pat_growth": 33.3,
-   "kpi": {
-    "roe": "18.86%",
-    "roce": "19.31%",
-    "de": "0.79",
-    "pat_margin": "4.76%",
-    "ebitda_margin": "9.94%",
-    "nav": "77.76"
-   },
-   "promoter_pct": 96.63
-  },
+  "German Green Steel and Power Limited": {},
   "Runwal Enterprises Limited": {
    "url": "https://www.chittorgarh.com/ipo/runwal-enterprises-ipo/2298/",
    "subs": {
