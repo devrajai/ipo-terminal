@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T10:28:41.044277+00:00",
+  "generated_at": "2026-09-25T10:48:56.279857+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T15:58:12.656831+05:30",
+  "data_updated_at": "2026-09-25T16:18:23.661830+05:30",
   "ipo_count": 26,
   "field_coverage_pct": 27.7,
   "sources": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T10:23:42.905341+00:00",
+      "checked_at": "2026-09-25T10:47:42.859557+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +88,12 @@
       "records": 26,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T10:23:45.004856+00:00"
+      "checked_at": "2026-09-25T10:47:45.382729+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T10:27:58.587095+00:00",
+      "checked_at": "2026-09-25T10:48:10.817371+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T10:27:58.663268+00:00"
+      "checked_at": "2026-09-25T10:48:10.899541+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T10:27:58.716145+00:00"
+      "checked_at": "2026-09-25T10:48:10.954403+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T10:27:58.871403+00:00",
+      "checked_at": "2026-09-25T10:48:11.126019+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T10:27:58.871403+00:00"
+      "checked_at": "2026-09-25T10:48:11.126019+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T15:58:12.656831+05:30",
+      "checked_at": "2026-09-25T16:18:23.661830+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -218,7 +218,7 @@
     {
       "id": "runwal-enterprises-limited",
       "name": "Runwal Enterprises Limited",
-      "fingerprint": "d0f759a394c32609",
+      "fingerprint": "fca61df3fbb000d3",
       "fields": {
         "price": "₹290-302",
         "size": "500.00",
@@ -229,8 +229,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.48",
-        "sub_nii": "0.08",
-        "sub_retail": "0.12",
+        "sub_nii": "0.16",
+        "sub_retail": "0.14",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -1171,6 +1171,16 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-25T10:48:56.279857+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
     {
       "at": "2026-09-25T10:28:41.044277+00:00",
       "type": "DATA_CHANGE",
@@ -4560,17 +4570,6 @@
       "name": "Adroit Industries (India) Limited",
       "fields": [
         "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:58:22.986177+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
         "roce",
         "growth",
         "de"
