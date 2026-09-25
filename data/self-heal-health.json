@@ -1,12 +1,12 @@
 {
   "ok": true,
-  "checked_at": "2026-09-25T22:22:19.555682+05:30",
+  "checked_at": "2026-09-25T22:29:15.272254+05:30",
   "status_repairs": 1,
   "sme_added": 0,
   "filings": {
-    "checked": 25,
-    "verified": 12,
-    "repaired": 7
+    "checked": 21,
+    "verified": 13,
+    "repaired": 8
   },
   "upcoming_filing_map": 10,
   "schedule": "every 15 minutes",

@@ -1,6 +1,6 @@
 {
   "version": "1.1.0",
-  "generated_at": "2026-09-25T22:22:19.555682+05:30",
+  "generated_at": "2026-09-25T22:29:15.272254+05:30",
   "documents": [
     {
       "name": "Kanohar Electricals",
@@ -10,9 +10,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/kanohar-electricals-limited-rhp_104224.html",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -23,9 +23,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/glass-wall-systems-india-limited-rhp_104226.html",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -36,35 +36,35 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.sebi.gov.in/sebi_data/commondocs/apr-2026/Rentomojo%20Limited-Draft%20Abridged%20Prospectus_p.pdf",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
       "name": "Karamtara Engineering",
       "type": "RHP",
-      "url": "https://www.sebi.gov.in/filings/public-issues/sep-2026/",
-      "date": "03/09/26",
-      "source": "SEBI",
-      "verified": false,
-      "http_status": null,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
-      "verified_url": "https://www.nseindia.com/companies-listing/corporate-filings-offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
-      "link_source": "official-alternate-failed"
-    },
-    {
-      "name": "Steamhouse India",
-      "type": "RHP",
-      "url": "https://www.nseindia.com/companies-listing/corporate-filings-offer-documents",
+      "url": "https://www.nseindia.com/static/investor-relations/offer-documents",
       "date": "03/09/26",
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
-      "verified_url": "https://www.nseindia.com/companies-listing/corporate-filings-offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
+      "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
+      "link_source": "official-alternate"
+    },
+    {
+      "name": "Steamhouse India",
+      "type": "RHP",
+      "url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "date": "03/09/26",
+      "source": "SEBI",
+      "verified": true,
+      "http_status": 200,
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
+      "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -75,9 +75,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -88,9 +88,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -101,9 +101,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -114,9 +114,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -127,9 +127,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -140,9 +140,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -153,9 +153,9 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.nseindia.com/static/investor-relations/offer-documents",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     },
     {
@@ -166,11 +166,11 @@
       "source": "SEBI",
       "verified": true,
       "http_status": 200,
-      "verified_at": "2026-09-25T16:51:56.591942+00:00",
+      "verified_at": "2026-09-25T16:58:57.635681+00:00",
       "verified_url": "https://www.ril.com/investor/resource-center/corporate-announcements",
-      "self_healed_at": "2026-09-25T22:22:19.555682+05:30",
+      "self_healed_at": "2026-09-25T22:29:15.272254+05:30",
       "link_source": "official-alternate"
     }
   ],
-  "verified_count": 12
+  "verified_count": 13
 }
