@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T07:06:25.909302+00:00",
+  "generated_at": "2026-09-25T07:24:04.641162+00:00",
   "events": [
     {
       "date": "2026-09-25",
@@ -133,6 +133,13 @@
       "type": "OPEN",
       "ipo_id": "shivchem-agro-ltd-sme",
       "name": "Shivchem Agro Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-28",
+      "type": "OPEN",
+      "ipo_id": "shree-tnb-polymers-ltd-sme",
+      "name": "Shree TNB Polymers Ltd. SME",
       "source": "Economic Times"
     },
     {
