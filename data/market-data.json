@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T01:03:27.804620+00:00",
+  "updated_at": "2026-09-25T01:17:39.460909+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -101,7 +101,15 @@
     }
   ],
   "world": [],
-  "commodities": [],
+  "commodities": [
+    {
+      "price": 93.66,
+      "change": -0.95,
+      "change_pct": -1.0,
+      "name": "Crude WTI ($/bbl)",
+      "symbol": "CL=F"
+    }
+  ],
   "fx": [
     {
       "name": "USD/INR",
