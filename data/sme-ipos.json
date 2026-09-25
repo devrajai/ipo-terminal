@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T23:27:49.830154+05:30",
+  "updated_at": "2026-09-25T23:36:28.327041+05:30",
   "data": [
     {
       "company": "Bench Mark Infotech Services Limited",
@@ -22,22 +22,6 @@
       "exchange": "BSE",
       "open_date": "24/09/26",
       "close_date": "28/09/26",
-      "issue_size": "—",
-      "status": "open"
-    },
-    {
-      "company": "Coreintegra Consulting Services Limited",
-      "exchange": "BSE",
-      "open_date": "23/09/26",
-      "close_date": "25/09/26",
-      "issue_size": "—",
-      "status": "open"
-    },
-    {
-      "company": "Pooja Logistics Limited",
-      "exchange": "BSE",
-      "open_date": "23/09/26",
-      "close_date": "25/09/26",
       "issue_size": "—",
       "status": "open"
     },

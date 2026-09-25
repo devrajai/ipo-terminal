@@ -1,14 +1,14 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T17:58:18.477548+00:00",
+  "generated_at": "2026-09-25T18:07:00.253958+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T23:27:49.830154+05:30",
-  "ipo_count": 26,
-  "field_coverage_pct": 24.9,
+  "data_updated_at": "2026-09-25T23:36:28.327041+05:30",
+  "ipo_count": 24,
+  "field_coverage_pct": 25.6,
   "sources": {
     "NSE": {
       "ok": true,
-      "records": 18,
+      "records": 16,
       "errors": []
     },
     "BSE": {
@@ -50,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T17:57:00.186545+00:00",
+      "checked_at": "2026-09-25T18:05:59.087204+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -85,15 +85,15 @@
     },
     "ProspectusResearch": {
       "ok": false,
-      "records": 26,
+      "records": 24,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T17:57:03.518230+00:00"
+      "checked_at": "2026-09-25T18:06:01.118218+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T17:57:28.989610+00:00",
+      "checked_at": "2026-09-25T18:06:14.182909+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T17:57:29.039837+00:00"
+      "checked_at": "2026-09-25T18:06:14.255224+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T17:57:29.075678+00:00"
+      "checked_at": "2026-09-25T18:06:14.304425+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T17:57:29.183152+00:00",
+      "checked_at": "2026-09-25T18:06:14.454873+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T17:57:29.183152+00:00"
+      "checked_at": "2026-09-25T18:06:14.454873+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T23:27:49.830154+05:30",
+      "checked_at": "2026-09-25T23:36:28.327041+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -524,62 +524,6 @@
       }
     },
     {
-      "id": "coreintegra-consulting-services-limited",
-      "name": "Coreintegra Consulting Services Limited",
-      "fingerprint": "918a5f90e3b83cad",
-      "fields": {
-        "price": "—",
-        "size": "—",
-        "lot": "—",
-        "open": "23/09/26",
-        "close": "25/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "17.94%",
-        "roce": "20.19%",
-        "growth": "28%",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
-      "id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
-      "fingerprint": "99cbf0f1cec6709e",
-      "fields": {
-        "price": "—",
-        "size": "—",
-        "lot": "—",
-        "open": "23/09/26",
-        "close": "25/09/26",
-        "allotment": null,
-        "listing": "—",
-        "sub": "—",
-        "sub_qib": null,
-        "sub_nii": null,
-        "sub_retail": null,
-        "gmp": "—",
-        "gmp_pct": "—",
-        "est_list": "—",
-        "pe": "—",
-        "roe": "—",
-        "roce": "—",
-        "growth": "—",
-        "de": "—",
-        "fresh": "—",
-        "ofs": "—"
-      }
-    },
-    {
       "id": "varmora-granito-limited",
       "name": "Varmora Granito Limited",
       "fingerprint": "e2a5d60aa55e7216",
@@ -913,22 +857,8 @@
     {
       "date": "2026-09-23",
       "type": "OPEN",
-      "ipo_id": "coreintegra-consulting-services-limited",
-      "name": "Coreintegra Consulting Services Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "OPEN",
       "ipo_id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-23",
-      "type": "OPEN",
-      "ipo_id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
       "source": "NSE"
     },
     {
@@ -983,22 +913,8 @@
     {
       "date": "2026-09-25",
       "type": "CLOSE",
-      "ipo_id": "coreintegra-consulting-services-limited",
-      "name": "Coreintegra Consulting Services Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
       "ipo_id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "pooja-logistics-limited",
-      "name": "Pooja Logistics Limited",
       "source": "NSE"
     },
     {
