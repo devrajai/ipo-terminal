@@ -1,14 +1,15 @@
 {
- "updated_at": "2026-09-25T04:17:44.567737+00:00",
+ "updated_at": "2026-09-25T04:45:40.930401+00:00",
  "ipos": {
   "Orient Cables (India) Limited": {
    "url": "https://www.chittorgarh.com/ipo/orient-cables-ipo/2532/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
+    "total_cr": 165.6,
     "investors": 20
    },
    "fin": {
@@ -70,9 +71,9 @@
   "German Green Steel and Power Limited": {
    "url": "https://www.chittorgarh.com/ipo/german-green-steel-and-power-ipo/2497/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 50.0,
+    "nii": 21.43,
+    "total": 100.0
    },
    "anchor": {
     "total_cr": 91.17,
@@ -130,11 +131,12 @@
   "Runwal Enterprises Limited": {
    "url": "https://www.chittorgarh.com/ipo/runwal-enterprises-ipo/2298/",
    "subs": {
-    "rii": 35.0,
-    "nii": 15.0,
-    "qib": 50.0
+    "rii": 49.48,
+    "nii": 21.2,
+    "total": 100.0
    },
    "anchor": {
+    "total_cr": 148.95,
     "investors": 20
    },
    "fin": {
@@ -554,8 +556,8 @@
      "pe": "33.06"
     },
     {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
+     "name": "Kheria Autocomp Ltd.",
+     "pe": "9.95"
     }
    ],
    "fin": {
@@ -759,7 +761,7 @@
    "url": "https://www.chittorgarh.com/ipo/green-asia-impex-ipo/2963/",
    "subs": {
     "qib": 28.34,
-    "nii": 38.49,
+    "nii": 33.16,
     "rii": 33.17,
     "total": 100.0
    },
@@ -1103,8 +1105,8 @@
      "pe": "33.06"
     },
     {
-     "name": "Sumax Engineering Ltd.",
-     "pe": "11.66"
+     "name": "Kheria Autocomp Ltd.",
+     "pe": "9.95"
     }
    ],
    "fin": {
