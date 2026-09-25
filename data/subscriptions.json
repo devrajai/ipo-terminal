@@ -1,4 +1,19 @@
 {
-  "updated_at": "2026-09-25T11:34:21.265778+05:30",
-  "data": []
+  "updated_at": "2026-09-25T12:15:01.728399+05:30",
+  "data": [
+    {
+      "name": "Orient Cables (India) Limited",
+      "qib": "0.00",
+      "nii": "0.28",
+      "rii": "0.28",
+      "total": "—"
+    },
+    {
+      "name": "Runwal Enterprises Limited",
+      "qib": "0.00",
+      "nii": "0.02",
+      "rii": "0.04",
+      "total": "—"
+    }
+  ]
 }
