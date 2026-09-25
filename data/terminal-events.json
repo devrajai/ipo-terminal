@@ -1,35 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-24T23:55:37.305002+00:00",
+  "generated_at": "2026-09-25T00:03:44.846180+00:00",
   "events": [
-    {
-      "date": "2026-09-24",
-      "type": "CLOSE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "a-one-steels-india-limited",
-      "name": "A-One Steels India Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "green-asia-impex-limited",
-      "name": "Green Asia Impex Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-24",
-      "type": "OPEN",
-      "ipo_id": "moneyview-limited",
-      "name": "Moneyview Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-25",
       "type": "CLOSE",
