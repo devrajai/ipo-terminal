@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T08:12:23.572893+00:00",
+  "generated_at": "2026-09-25T08:26:33.054890+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T13:41:48.037981+05:30",
+  "data_updated_at": "2026-09-25T13:55:59.723626+05:30",
   "ipo_count": 26,
   "field_coverage_pct": 24.9,
   "sources": {
@@ -33,7 +33,8 @@
       ],
       "errors": [
         "Moneycontrol: HTTP Error 404: Not Found",
-        "IPODose: HTTP Error 520: <none>",
+        "IPODose: HTTP Error 525: <none>",
+        "IPOGram: The read operation timed out",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -51,7 +52,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T08:07:00.814197+00:00",
+      "checked_at": "2026-09-25T08:24:59.009411+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -89,12 +90,12 @@
       "records": 26,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T08:07:03.073215+00:00"
+      "checked_at": "2026-09-25T08:25:01.098864+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T08:11:26.624764+00:00",
+      "checked_at": "2026-09-25T08:25:33.796408+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -104,17 +105,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T08:11:26.708693+00:00"
+      "checked_at": "2026-09-25T08:25:33.864748+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T08:11:26.763886+00:00"
+      "checked_at": "2026-09-25T08:25:33.912442+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T08:11:26.926127+00:00",
+      "checked_at": "2026-09-25T08:25:34.055924+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -142,11 +143,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T08:11:26.926127+00:00"
+      "checked_at": "2026-09-25T08:25:34.055924+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T13:41:48.037981+05:30",
+      "checked_at": "2026-09-25T13:55:59.723626+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -163,7 +164,7 @@
     {
       "id": "orient-cables-india-limited",
       "name": "Orient Cables (India) Limited",
-      "fingerprint": "3942f9346d3bcbff",
+      "fingerprint": "29564f93561aa5e8",
       "fields": {
         "price": "₹258-272",
         "size": "552.00",
@@ -174,8 +175,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.00",
-        "sub_nii": "0.58",
-        "sub_retail": "0.64",
+        "sub_nii": "1.22",
+        "sub_retail": "1.18",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -219,7 +220,7 @@
     {
       "id": "runwal-enterprises-limited",
       "name": "Runwal Enterprises Limited",
-      "fingerprint": "3acb6276897087ff",
+      "fingerprint": "98806ea718b16575",
       "fields": {
         "price": "₹290-302",
         "size": "500.00",
@@ -229,9 +230,9 @@
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "0.00",
-        "sub_nii": "0.03",
-        "sub_retail": "0.07",
+        "sub_qib": "0.48",
+        "sub_nii": "0.06",
+        "sub_retail": "0.10",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -1172,6 +1173,27 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-25T08:26:33.054890+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-25T08:26:33.054890+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "fields": [
+        "sub_qib",
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
     {
       "at": "2026-09-25T08:04:39.656701+00:00",
       "type": "DATA_CHANGE",
@@ -4547,29 +4569,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T08:38:07.319560+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T08:38:07.319560+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
       "fields": [
         "roe",
         "roce",
