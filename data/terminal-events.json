@@ -1,6 +1,6 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T07:36:39.664925+00:00",
+  "generated_at": "2026-09-25T07:54:41.929590+00:00",
   "events": [
     {
       "date": "2026-09-25",
@@ -131,13 +131,6 @@
     {
       "date": "2026-09-28",
       "type": "OPEN",
-      "ipo_id": "shivchem-agro-ltd-sme",
-      "name": "Shivchem Agro Ltd. SME",
-      "source": "Economic Times"
-    },
-    {
-      "date": "2026-09-28",
-      "type": "OPEN",
       "ipo_id": "shree-tnb-polymers-ltd-sme",
       "name": "Shree TNB Polymers Ltd. SME",
       "source": "Economic Times"
@@ -189,6 +182,20 @@
       "type": "OPEN",
       "ipo_id": "everestims-technologies-ltd-sme",
       "name": "EverestIMS Technologies Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "OPEN",
+      "ipo_id": "papadmalji-agro-foods-ltd-sme",
+      "name": "Papadmalji Agro Foods Ltd. SME",
+      "source": "Economic Times"
+    },
+    {
+      "date": "2026-09-29",
+      "type": "OPEN",
+      "ipo_id": "vans-electroengineerings-ltd-sme",
+      "name": "VANS Electroengineerings Ltd. SME",
       "source": "Economic Times"
     },
     {

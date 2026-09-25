@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "checked_at": "2026-09-25T13:06:11.916138+05:30",
+  "checked_at": "2026-09-25T13:24:10.998235+05:30",
   "status_repairs": 1,
   "sme_added": 0,
   "filings": {
@@ -8,7 +8,7 @@
     "verified": 13,
     "repaired": 8
   },
-  "upcoming_filing_map": 9,
+  "upcoming_filing_map": 10,
   "schedule": "every 15 minutes",
   "open_upcoming_exclusive": true
 }

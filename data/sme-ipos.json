@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T13:06:11.916138+05:30",
+  "updated_at": "2026-09-25T13:24:10.998235+05:30",
   "data": [
     {
       "company": "Bench Mark Infotech Services Limited",
@@ -66,6 +66,22 @@
       "status": "upcoming"
     },
     {
+      "company": "VANS Electroengineerings Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "29/09/26",
+      "close_date": "—",
+      "issue_size": "₹33.98 Cr",
+      "status": "upcoming"
+    },
+    {
+      "company": "Papadmalji Agro Foods Ltd. SME",
+      "exchange": "NSE/BSE",
+      "open_date": "29/09/26",
+      "close_date": "—",
+      "issue_size": "₹20.18 Cr",
+      "status": "upcoming"
+    },
+    {
       "company": "Acme Universal Safezone 9 Ltd. SME",
       "exchange": "NSE/BSE",
       "open_date": "28/09/26",
@@ -87,14 +103,6 @@
       "open_date": "28/09/26",
       "close_date": "—",
       "issue_size": "₹17.82 Cr",
-      "status": "upcoming"
-    },
-    {
-      "company": "Shivchem Agro Ltd. SME",
-      "exchange": "NSE/BSE",
-      "open_date": "28/09/26",
-      "close_date": "—",
-      "issue_size": "₹14.01 Cr",
       "status": "upcoming"
     }
   ]
