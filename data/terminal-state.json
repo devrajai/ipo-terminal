@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T04:21:29.028324+00:00",
+  "generated_at": "2026-09-25T04:59:36.832947+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T09:50:59.392570+05:30",
+  "data_updated_at": "2026-09-25T10:29:09.873508+05:30",
   "ipo_count": 24,
-  "field_coverage_pct": 26.8,
+  "field_coverage_pct": 27.2,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,6 +32,7 @@
         "Moneycontrol"
       ],
       "errors": [
+        "Moneycontrol: HTTP Error 404: Not Found",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -49,7 +50,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T04:20:18.709004+00:00",
+      "checked_at": "2026-09-25T04:57:59.649549+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -87,12 +88,12 @@
       "records": 24,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T04:20:19.993021+00:00"
+      "checked_at": "2026-09-25T04:58:01.383800+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T04:20:43.910988+00:00",
+      "checked_at": "2026-09-25T04:58:54.640809+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -102,17 +103,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T04:20:43.972409+00:00"
+      "checked_at": "2026-09-25T04:58:54.713940+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T04:20:44.016153+00:00"
+      "checked_at": "2026-09-25T04:58:54.764762+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T04:20:44.146230+00:00",
+      "checked_at": "2026-09-25T04:58:54.920717+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -140,11 +141,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T04:20:44.146230+00:00"
+      "checked_at": "2026-09-25T04:58:54.920717+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T09:50:59.392570+05:30",
+      "checked_at": "2026-09-25T10:29:09.873508+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -189,10 +190,10 @@
     {
       "id": "german-green-steel-and-power-limited",
       "name": "German Green Steel and Power Limited",
-      "fingerprint": "1567eb8155e6fbd0",
+      "fingerprint": "921c6eb6dc390097",
       "fields": {
         "price": "₹132-139",
-        "size": "—",
+        "size": "₹0 Cr",
         "lot": "—",
         "open": "25/09/26",
         "close": "29/09/26",
@@ -245,10 +246,10 @@
     {
       "id": "acevector-limited",
       "name": "AceVector Limited",
-      "fingerprint": "9aeb9f05015bdd9f",
+      "fingerprint": "81e3d28eb6d44d59",
       "fields": {
         "price": "₹30-32",
-        "size": "—",
+        "size": "₹0 Cr",
         "lot": "468",
         "open": "25/09/26",
         "close": "29/09/26",
@@ -1100,6 +1101,24 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-25T04:59:36.832947+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "german-green-steel-and-power-limited",
+      "name": "German Green Steel and Power Limited",
+      "fields": [
+        "size"
+      ]
+    },
+    {
+      "at": "2026-09-25T04:59:36.832947+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "acevector-limited",
+      "name": "AceVector Limited",
+      "fields": [
+        "size"
+      ]
+    },
     {
       "at": "2026-09-25T04:21:29.028324+00:00",
       "type": "DATA_CHANGE",
@@ -4480,30 +4499,6 @@
       "type": "DATA_CHANGE",
       "ipo_id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T06:32:27.113263+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T06:32:27.113263+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
       "fields": [
         "roe",
         "roce",
