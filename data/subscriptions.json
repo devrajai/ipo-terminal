@@ -1,4 +1,45 @@
 {
-  "updated_at": "2026-09-25T09:02:15.901494+05:30",
-  "data": []
+  "updated_at": "2026-09-25T09:11:18.320964+05:30",
+  "data": [
+    {
+      "name": "National Stock Exchange of India",
+      "qib": "",
+      "nii": "",
+      "rii": "",
+      "total": "0.43x",
+      "applications": ""
+    },
+    {
+      "name": "Sonaselection India",
+      "qib": "",
+      "nii": "",
+      "rii": "",
+      "total": "0.47x",
+      "applications": ""
+    },
+    {
+      "name": "Hero Motors",
+      "qib": "",
+      "nii": "",
+      "rii": "",
+      "total": "3.58x",
+      "applications": ""
+    },
+    {
+      "name": "Jindal Supreme (India)",
+      "qib": "",
+      "nii": "",
+      "rii": "",
+      "total": "31.54x",
+      "applications": ""
+    },
+    {
+      "name": "SS Retail",
+      "qib": "",
+      "nii": "",
+      "rii": "",
+      "total": "6.10x",
+      "applications": ""
+    }
+  ]
 }
