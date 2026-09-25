@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T10:05:06.369597+00:00",
+  "updated_at": "2026-09-25T10:20:47.232877+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -25,9 +25,9 @@
     {
       "name": "India VIX",
       "symbol": "INDIA VIX",
-      "price": 12.16,
-      "change": -0.53,
-      "change_pct": -4.17
+      "price": 12.18,
+      "change": -0.51,
+      "change_pct": -4
     },
     {
       "name": "Nifty Midcap 100",
@@ -140,8 +140,8 @@
       "30/11/23",
       "1200",
       "140",
-      "702.5",
-      "40.5"
+      "704.45",
+      "40.89"
     ],
     [
       "Manika Plastech",
