@@ -1,10 +1,10 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T09:21:38.084200+00:00",
+  "generated_at": "2026-09-25T09:36:08.559447+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T14:51:08.955513+05:30",
+  "data_updated_at": "2026-09-25T15:05:32.940011+05:30",
   "ipo_count": 26,
-  "field_coverage_pct": 27.7,
+  "field_coverage_pct": 24.9,
   "sources": {
     "NSE": {
       "ok": true,
@@ -32,7 +32,6 @@
         "Moneycontrol"
       ],
       "errors": [
-        "Moneycontrol: HTTP Error 404: Not Found",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -50,7 +49,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T09:20:24.191280+00:00",
+      "checked_at": "2026-09-25T09:34:58.572825+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +87,12 @@
       "records": 26,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T09:20:26.229850+00:00"
+      "checked_at": "2026-09-25T09:34:59.970329+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T09:20:53.483203+00:00",
+      "checked_at": "2026-09-25T09:35:02.460590+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +102,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T09:20:53.558172+00:00"
+      "checked_at": "2026-09-25T09:35:02.536192+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T09:20:53.611133+00:00"
+      "checked_at": "2026-09-25T09:35:02.587398+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T09:20:53.765482+00:00",
+      "checked_at": "2026-09-25T09:35:02.741719+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +140,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T09:20:53.765482+00:00"
+      "checked_at": "2026-09-25T09:35:02.741719+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T14:51:08.955513+05:30",
+      "checked_at": "2026-09-25T15:05:32.940011+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
@@ -162,7 +161,7 @@
     {
       "id": "orient-cables-india-limited",
       "name": "Orient Cables (India) Limited",
-      "fingerprint": "29564f93561aa5e8",
+      "fingerprint": "b4457ef1a5e8f642",
       "fields": {
         "price": "₹258-272",
         "size": "552.00",
@@ -172,9 +171,9 @@
         "allotment": null,
         "listing": "—",
         "sub": "—",
-        "sub_qib": "0.00",
-        "sub_nii": "1.22",
-        "sub_retail": "1.18",
+        "sub_qib": "0.01",
+        "sub_nii": "1.80",
+        "sub_retail": "1.58",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -218,7 +217,7 @@
     {
       "id": "runwal-enterprises-limited",
       "name": "Runwal Enterprises Limited",
-      "fingerprint": "98806ea718b16575",
+      "fingerprint": "d0f759a394c32609",
       "fields": {
         "price": "₹290-302",
         "size": "500.00",
@@ -229,8 +228,8 @@
         "listing": "—",
         "sub": "—",
         "sub_qib": "0.48",
-        "sub_nii": "0.06",
-        "sub_retail": "0.10",
+        "sub_nii": "0.08",
+        "sub_retail": "0.12",
         "gmp": "—",
         "gmp_pct": "—",
         "est_list": "—",
@@ -330,7 +329,7 @@
     {
       "id": "armee-infotech-limited",
       "name": "ArMee Infotech Limited",
-      "fingerprint": "9b8c2fc93b649a8d",
+      "fingerprint": "79287a15ef718770",
       "fields": {
         "price": "₹350-375",
         "size": "₹279 Cr",
@@ -347,10 +346,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "28.52%",
-        "roce": "24.10%",
-        "growth": "7%",
-        "de": "0.96",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -358,7 +357,7 @@
     {
       "id": "elevate-campuses-limited",
       "name": "Elevate Campuses Limited",
-      "fingerprint": "622822c5fcbd9de9",
+      "fingerprint": "a2095d8e486cc146",
       "fields": {
         "price": "₹343-362",
         "size": "₹0 Cr",
@@ -376,9 +375,9 @@
         "est_list": "—",
         "pe": "—",
         "roe": "—",
-        "roce": "6.42%",
-        "growth": "53%",
-        "de": "4.98",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -386,7 +385,7 @@
     {
       "id": "swastika-infra-limited",
       "name": "Swastika Infra Limited",
-      "fingerprint": "49b0953a1e3e60fe",
+      "fingerprint": "14f336eff48665df",
       "fields": {
         "price": "₹175-185",
         "size": "₹117 Cr",
@@ -403,10 +402,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "35.44%",
-        "roce": "25.76%",
-        "growth": "43%",
-        "de": "0.73",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -414,7 +413,7 @@
     {
       "id": "adroit-industries-india-limited",
       "name": "Adroit Industries (India) Limited",
-      "fingerprint": "cdcacd72980f055f",
+      "fingerprint": "1bc16c4c40f9d338",
       "fields": {
         "price": "₹126-134",
         "size": "₹105 Cr",
@@ -431,10 +430,10 @@
         "gmp_pct": "—",
         "est_list": "—",
         "pe": "—",
-        "roe": "22.54%",
-        "roce": "19.01%",
-        "growth": "5%",
-        "de": "0.41",
+        "roe": "—",
+        "roce": "—",
+        "growth": "—",
+        "de": "—",
         "fresh": "—",
         "ofs": "—"
       }
@@ -1171,6 +1170,74 @@
     }
   ],
   "changes": [
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "orient-cables-india-limited",
+      "name": "Orient Cables (India) Limited",
+      "fields": [
+        "sub_qib",
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "runwal-enterprises-limited",
+      "name": "Runwal Enterprises Limited",
+      "fields": [
+        "sub_nii",
+        "sub_retail"
+      ]
+    },
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "armee-infotech-limited",
+      "name": "ArMee Infotech Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "elevate-campuses-limited",
+      "name": "Elevate Campuses Limited",
+      "fields": [
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "swastika-infra-limited",
+      "name": "Swastika Infra Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
+    {
+      "at": "2026-09-25T09:36:08.559447+00:00",
+      "type": "DATA_CHANGE",
+      "ipo_id": "adroit-industries-india-limited",
+      "name": "Adroit Industries (India) Limited",
+      "fields": [
+        "roe",
+        "roce",
+        "growth",
+        "de"
+      ]
+    },
     {
       "at": "2026-09-25T09:21:38.084200+00:00",
       "type": "DATA_CHANGE",
@@ -4505,75 +4572,6 @@
         "roce",
         "growth"
       ]
-    },
-    {
-      "at": "2026-09-23T09:24:48.024455+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:24:48.024455+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:24:48.024455+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "fields": [
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:24:48.024455+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth",
-        "de"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:24:48.024455+00:00",
-      "type": "DATA_CHANGE",
-      "ipo_id": "varmora-granito-limited",
-      "name": "Varmora Granito Limited",
-      "fields": [
-        "roe",
-        "roce",
-        "growth"
-      ]
-    },
-    {
-      "at": "2026-09-23T09:10:14.757247+00:00",
-      "type": "NEW_EVENT",
-      "event": {
-        "date": "2026-09-25",
-        "type": "OPEN",
-        "ipo_id": "german-green-steel-power-ltd-mainboard",
-        "name": "German Green Steel & Power Ltd. Mainboard",
-        "source": "Economic Times"
-      }
     }
   ]
 }
