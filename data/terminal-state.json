@@ -1,8 +1,8 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T14:50:20.293482+00:00",
+  "generated_at": "2026-09-25T15:02:07.024429+00:00",
   "today_ist": "2026-09-25",
-  "data_updated_at": "2026-09-25T20:19:55.387577+05:30",
+  "data_updated_at": "2026-09-25T20:31:28.811360+05:30",
   "ipo_count": 26,
   "field_coverage_pct": 24.9,
   "sources": {
@@ -33,6 +33,7 @@
       ],
       "errors": [
         "Moneycontrol: HTTP Error 404: Not Found",
+        "IPODose: The read operation timed out",
         "LiveGMP: HTTP Error 404: Not Found"
       ]
     },
@@ -50,7 +51,7 @@
       "errors": []
     },
     "PublicAggregators": {
-      "checked_at": "2026-09-25T14:49:12.245712+00:00",
+      "checked_at": "2026-09-25T14:59:55.784178+00:00",
       "sources": {
         "Groww": {
           "ok": false,
@@ -88,12 +89,12 @@
       "records": 26,
       "matched": 0,
       "errors": [],
-      "checked_at": "2026-09-25T14:49:14.506655+00:00"
+      "checked_at": "2026-09-25T14:59:58.100414+00:00"
     },
     "SeedFallback": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T14:49:42.037852+00:00",
+      "checked_at": "2026-09-25T15:01:07.471376+00:00",
       "seed_fundamentals": 32,
       "seed_documents": 13
     },
@@ -103,17 +104,17 @@
       "changed_fields": 0,
       "live_gmp_records": 0,
       "rejected_gmp_records": 0,
-      "checked_at": "2026-09-25T14:49:42.112243+00:00"
+      "checked_at": "2026-09-25T15:01:07.542980+00:00"
     },
     "TranscriptEvidence": {
       "ok": true,
       "records": 0,
-      "checked_at": "2026-09-25T14:49:42.164067+00:00"
+      "checked_at": "2026-09-25T15:01:07.591530+00:00"
     },
     "LiveNews": {
       "ok": true,
       "records": 200,
-      "checked_at": "2026-09-25T14:49:42.315337+00:00",
+      "checked_at": "2026-09-25T15:01:07.738934+00:00",
       "feeds": {
         "Google News · IPO India": {
           "ok": true,
@@ -141,11 +142,11 @@
       "ok": true,
       "records": 13,
       "verified": 5,
-      "checked_at": "2026-09-25T14:49:42.315337+00:00"
+      "checked_at": "2026-09-25T15:01:07.738934+00:00"
     },
     "SelfHeal": {
       "ok": true,
-      "checked_at": "2026-09-25T20:19:55.387577+05:30",
+      "checked_at": "2026-09-25T20:31:28.811360+05:30",
       "status_repairs": 1,
       "sme_added": 0,
       "filings": {
