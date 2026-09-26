@@ -1,77 +1,7 @@
 {
   "version": "2.0.0",
-  "generated_at": "2026-09-25T23:56:01.599532+00:00",
+  "generated_at": "2026-09-26T00:03:13.523542+00:00",
   "events": [
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "adroit-industries-india-limited",
-      "name": "Adroit Industries (India) Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "armee-infotech-limited",
-      "name": "ArMee Infotech Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "elevate-campuses-limited",
-      "name": "Elevate Campuses Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "CLOSE",
-      "ipo_id": "swastika-infra-limited",
-      "name": "Swastika Infra Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "acevector-limited",
-      "name": "AceVector Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "bench-mark-infotech-services-limited",
-      "name": "Bench Mark Infotech Services Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "german-green-steel-and-power-limited",
-      "name": "German Green Steel and Power Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "himalayan-solar-limited",
-      "name": "Himalayan Solar Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "orient-cables-india-limited",
-      "name": "Orient Cables (India) Limited",
-      "source": "NSE"
-    },
-    {
-      "date": "2026-09-25",
-      "type": "OPEN",
-      "ipo_id": "runwal-enterprises-limited",
-      "name": "Runwal Enterprises Limited",
-      "source": "NSE"
-    },
     {
       "date": "2026-09-28",
       "type": "CLOSE",
