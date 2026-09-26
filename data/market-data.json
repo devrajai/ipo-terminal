@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-26T02:05:43.116173+00:00",
+  "updated_at": "2026-09-26T02:19:50.641815+00:00",
   "india": [
     {
       "name": "Nifty 50",
@@ -100,7 +100,15 @@
       "change_pct": -0.23
     }
   ],
-  "world": [],
+  "world": [
+    {
+      "price": 6302.82,
+      "change": 30.32,
+      "change_pct": 0.48,
+      "name": "Euro Stoxx 50",
+      "symbol": "^STOXX50E"
+    }
+  ],
   "commodities": [],
   "fx": [
     {
