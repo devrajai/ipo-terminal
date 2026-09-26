@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-26T10:42:35.240817+00:00",
+ "updated_at": "2026-09-26T11:15:25.674427+00:00",
  "ipos": {
   "Orient Cables (India) Limited": {
    "url": "https://www.chittorgarh.com/ipo/orient-cables-ipo/2532/",
@@ -557,6 +557,91 @@
     "nav": "114.07"
    },
    "promoter_pct": 84.34
+  },
+  "Srit India Limited": {
+   "url": "https://www.chittorgarh.com/ipo/srit-india-ipo/2858/",
+   "subs": {
+    "rii": 35.0,
+    "nii": 15.0,
+    "qib": 50.0
+   },
+   "anchor": {
+    "investors": 20
+   },
+   "peers": [
+    {
+     "name": "CSM Technologies Ltd.",
+     "pe": "31.05"
+    },
+    {
+     "name": "Fractal Analytics Ltd.",
+     "pe": "65.5"
+    },
+    {
+     "name": "ENS Enterprises Ltd.",
+     "pe": "10.95"
+    },
+    {
+     "name": "Kratikal Tech Ltd.",
+     "pe": "17.94"
+    },
+    {
+     "name": "Genxai Analytics Ltd.",
+     "pe": "23.41"
+    },
+    {
+     "name": "Methodhub Software Ltd.",
+     "pe": "24.19"
+    }
+   ],
+   "fin": {
+    "periods": [
+     "31 Mar 2026",
+     "31 Mar 2025",
+     "31 Mar 2024"
+    ],
+    "assets": [
+     614.16,
+     496.64,
+     428.96
+    ],
+    "income": [
+     462.54,
+     400.5,
+     282.22
+    ],
+    "pat": [
+     43.29,
+     33.6,
+     29.08
+    ],
+    "ebitda": [
+     64.77,
+     49.81,
+     40.99
+    ],
+    "networth": [
+     193.27,
+     93.17,
+     80.47
+    ],
+    "borrowing": [
+     36.15,
+     51.3,
+     22.28
+    ]
+   },
+   "rev_growth": 15.5,
+   "pat_growth": 28.8,
+   "kpi": {
+    "roe": "30.23%",
+    "roce": "28.79%",
+    "de": "0.23",
+    "pat_margin": "9.62%",
+    "ebitda_margin": "14.39%",
+    "nav": "40.71"
+   },
+   "promoter_pct": 84.91
   },
   "A-One Steels India": {
    "url": "https://www.chittorgarh.com/ipo/a-one-steels-ipo/2000/"
